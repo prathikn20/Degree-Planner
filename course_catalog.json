@@ -1,0 +1,210 @@
+{
+  "COMP110": {
+    "name": "Introduction to Programming",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP210": {
+    "name": "Data Structures and Analysis",
+    "credits": 3,
+    "prerequisites": [["COMP110"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP211": {
+    "name": "Systems Fundamentals",
+    "credits": 3,
+    "prerequisites": [["COMP210"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP283": {
+    "name": "Discrete Structures",
+    "credits": 3,
+    "prerequisites": [["Math 231", "Math 241"]],
+    "corequisites": [],
+    "cross_listed": ["MATH381", "STOR315"]
+  },
+  "COMP301": {
+    "name": "Foundations of Programming",
+    "credits": 3,
+    "prerequisites": [["COMP210"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP311": {
+    "name": "Computer Organization",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP211"],
+      ["COMP283", "MATH381", "STOR315"]
+    ],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP455": {
+    "name": "Models of Languages and Computation",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP301"],
+      ["COMP283", "MATH381", "STOR315"]
+    ],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP550": {
+    "name": "Algorithms and Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP301"],
+      ["COMP283", "MATH381", "STOR315"]
+    ],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP560": {
+    "name": "Artificial Intelligence",
+    "credits": 3,
+    "prerequisites": [["COMP301"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP562": {
+    "name": "Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP301"],
+      ["MATH347", "MATH577"]
+    ],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP586": {
+    "name": "Natural Language Processing",
+    "credits": 3,
+    "prerequisites": [["COMP301"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "COMP664": {
+    "name": "Deep Learning",
+    "credits": 3,
+    "prerequisites": [["COMP562"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "MATH231": {
+    "name": "Calculus of Functions of One Variable I",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "MATH232": {
+    "name": "Calculus of Functions of One Variable II",
+    "credits": 4,
+    "prerequisites": [["MATH231"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "MATH233": {
+    "name": "Calculus of Functions of Several Variables",
+    "credits": 4,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "MATH235": {
+    "name": "Mathematics for Data Science",
+    "credits": 4,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": ["STOR235"]
+  },
+  "MATH347": {
+    "name": "Linear Algebra for Applications",
+    "credits": 3,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": ["MATH577"]
+  },
+  "MATH381": {
+    "name": "Discrete Mathematics",
+    "credits": 3,
+    "prerequisites": [["MATH231"]],
+    "corequisites": [],
+    "cross_listed": ["COMP283", "STOR315"]
+  },
+  "MATH577": {
+    "name": "Linear Algebra",
+    "credits": 3,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": ["MATH347"]
+  },
+  "STOR235": {
+    "name": "Mathematics for Data Science",
+    "credits": 4,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": ["MATH235"]
+  },
+  "STOR315": {
+    "name": "Discrete Mathematics for Data Science",
+    "credits": 3,
+    "prerequisites": [["MATH231"]],
+    "corequisites": [],
+    "cross_listed": ["COMP283", "MATH381"]
+  },
+  "STOR435": {
+    "name": "Introduction to Probability",
+    "credits": 3,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "STOR535": {
+    "name": "Probability for Data Science",
+    "credits": 3,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "BIOS650": {
+    "name": "Basic Elements of Probability and Statistical Inference I",
+    "credits": 3,
+    "prerequisites": [["MATH232"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "ENEC202": {
+    "name": "Introduction to the Environmental Sciences",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "ASTR103": {
+    "name": "Alien Life",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "PHYS118": {
+    "name": "Introductory Calculus-based Mechanics and Relativity",
+    "credits": 4,
+    "prerequisites": [["MATH231"]],
+    "corequisites": [],
+    "cross_listed": []
+  },
+  "PHYS119": {
+    "name": "Introductory Calculus-based Electromagnetism and Quanta",
+    "credits": 4,
+    "prerequisites": [["PHYS118"]],
+    "corequisites": [],
+    "cross_listed": []
+  }
+}
