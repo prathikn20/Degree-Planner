@@ -73,7 +73,7 @@
           "department": "COMP",
           "min_number": 420,
           "min_credits": 3,
-          "exclude": ["COMP496", "COMP690", "COMP692H"]
+          "exclude": ["COMP455", "COMP550", "COMP496", "COMP690", "COMP692H"]
         }
       }
     ]

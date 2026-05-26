@@ -44,6 +44,17 @@
     "corequisites": [],
     "cross_listed": []
   },
+  "COMP421": {
+    "name": "Files and Databases",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP301"],
+      ["COMP210"],
+      ["COMP211"]
+    ],
+    "corequisites": [],
+    "cross_listed": []
+  },
   "COMP455": {
     "name": "Models of Languages and Computation",
     "credits": 3,
