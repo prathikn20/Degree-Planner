@@ -36,11 +36,16 @@ def check_requirements(requirements, catalog, completed):
             results["unsatisfied"].append(course)
             results["missing_courses"][course] = [course]
 
+    required_set = set(program["required_courses"])
+
     for group in program["choice_groups"]:
         if group.get("type") == "rule_based":
             options = get_rule_based_options(group["rule"], catalog)
         else:
             options = group["options"]
+    
+        options = [o for o in options if o not in required_set]
+
 
         satisfied_options = []
         for option in options:
