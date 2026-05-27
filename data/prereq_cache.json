@@ -1,0 +1,649 @@
+{
+  "8c7051bd8eca5e5fdc707a13e56dcb70": [
+    [
+      "MATH130",
+      "MATH152",
+      "MATH210",
+      "MATH231",
+      "MATH129P",
+      "PHIL155",
+      "STOR120",
+      "STOR151",
+      "STOR155"
+    ]
+  ],
+  "91108fc3f6285d1e813cd18b6f405f39": [
+    [
+      "MATH130",
+      "MATH152",
+      "MATH210",
+      "MATH231",
+      "MATH129P",
+      "PHIL155",
+      "STOR120",
+      "STOR151",
+      "STOR155"
+    ]
+  ],
+  "47e2db067f02deb67776c13043e193e9": [
+    [
+      "COMP110",
+      "MATH231"
+    ],
+    [
+      "COMP283",
+      "MATH381",
+      "STOR315"
+    ]
+  ],
+  "aeb1a0a79b4a9744a50bd7c6e75e8da4": [
+    [
+      "COMP210"
+    ],
+    [
+      "COMP283",
+      "MATH381",
+      "STOR315"
+    ]
+  ],
+  "6c7774b67187c9f9368dbb7ad45365ad": [
+    [
+      "COMP210",
+      "COMP401"
+    ]
+  ],
+  "923cbe6098375ea97696e531591cfa3c": [
+    [
+      "MATH231",
+      "MATH241"
+    ]
+  ],
+  "e1f444db3c6b2b3a73ae2c86648958eb": [
+    [
+      "MATH231",
+      "MATH241"
+    ],
+    [
+      "COMP210",
+      "COMP211",
+      "COMP301"
+    ]
+  ],
+  "d73a68d2bd0caa011b636c09b0b92fa9": [
+    [
+      "COMP211"
+    ]
+  ],
+  "36c093a33b7edcc0e97faacb32074a52": [
+    [
+      "COMP380"
+    ]
+  ],
+  "65ba40aeb11307ba5c281f3a133449ac": [
+    [
+      "MATH231",
+      "MATH241"
+    ],
+    [
+      "COMP401"
+    ]
+  ],
+  "d715a4b573eb42168634fd1f6dc0d711": [
+    [
+      "MATH231",
+      "MATH241"
+    ],
+    [
+      "COMP401"
+    ]
+  ],
+  "7fe1cd0e004fd4a5fbddef4eb7ca906c": [
+    [
+      "COMP211"
+    ],
+    [
+      "COMP301"
+    ]
+  ],
+  "a26846f53ccecc264cc29abbd57793cf": [
+    [
+      "COMP211",
+      "COMP301"
+    ],
+    [
+      "COMP401",
+      "COMP410"
+    ]
+  ],
+  "4ef0dfca90bdd5ea99638678fa33cd6e": [
+    [
+      "MATH232"
+    ],
+    [
+      "PHYS116",
+      "PHYS118"
+    ]
+  ],
+  "b8c01f355c0bf17e93b46bdf0d89e355": [
+    [
+      "COMP301",
+      "COMP311"
+    ],
+    [
+      "COMP401",
+      "COMP410",
+      "COMP411"
+    ],
+    [
+      "COMP421",
+      "COMP426",
+      "COMP431",
+      "COMP433",
+      "COMP520",
+      "COMP530",
+      "COMP535",
+      "COMP575",
+      "COMP580",
+      "COMP590"
+    ]
+  ],
+  "f2f8de95772b8067496fad10f278c4a6": [
+    [
+      "COMP301",
+      "COMP401"
+    ]
+  ],
+  "4216701f664e64de046a5e89cec49577": [
+    [
+      "COMP301",
+      "COMP311"
+    ],
+    [
+      "COMP401",
+      "COMP410",
+      "COMP411"
+    ]
+  ],
+  "74049793246f1b1b46752a539db78350": [
+    [
+      "COMP301"
+    ]
+  ],
+  "8e62d154b0cce7e30fed524db672aac3": [
+    [
+      "COMP301",
+      "COMP311"
+    ],
+    [
+      "COMP401",
+      "COMP410",
+      "COMP411"
+    ],
+    [
+      "COMP550"
+    ],
+    [
+      "COMP283",
+      "MATH381",
+      "STOR315"
+    ]
+  ],
+  "b19fdde33abe46ee371f8c01576a7f86": [
+    [
+      "COMP211",
+      "COMP301"
+    ]
+  ],
+  "3d43f3cffaaadbb5d31142d648b871c5": [
+    [
+      "COMP301",
+      "COMP311"
+    ],
+    [
+      "COMP411"
+    ]
+  ],
+  "fd46fb9fc0cb7b249cfabff2c2026fca": [
+    [
+      "COMP211",
+      "COMP301"
+    ],
+    [
+      "COMP410"
+    ]
+  ],
+  "83708f84feff5228137f523ac1472da4": [
+    [
+      "COMP210",
+      "COMP211"
+    ],
+    [
+      "COMP401",
+      "COMP410"
+    ],
+    [
+      "MATH231",
+      "MATH241"
+    ],
+    [
+      "BIOL452"
+    ],
+    [
+      "MATH553"
+    ],
+    [
+      "BIOL525"
+    ]
+  ],
+  "4aa7ce655bfc39056c5ce2ea2b52f3f7": [
+    [
+      "COMP211",
+      "COMP301"
+    ],
+    [
+      "COMP401",
+      "COMP410"
+    ],
+    [
+      "MATH231"
+    ]
+  ],
+  "067fef47f5488d2eb04ce1fb4131fb44": [
+    [
+      "COMP211",
+      "COMP301"
+    ],
+    [
+      "COMP401",
+      "COMP410"
+    ],
+    [
+      "MATH233",
+      "MATH347",
+      "STOR435",
+      "STOR535",
+      "BIOS650"
+    ]
+  ],
+  "ab3d4d808e1c47844ca3f59e0f298834": [
+    [
+      "COMP301"
+    ],
+    [
+      "COMP401",
+      "COMP410"
+    ],
+    [
+      "MATH347",
+      "MATH577"
+    ]
+  ],
+  "b8bcfc2b41b08345657d2b565886fd33": [
+    [
+      "COMP301",
+      "COMP311"
+    ],
+    [
+      "COMP401",
+      "COMP410",
+      "COMP411"
+    ],
+    [
+      "MATH347",
+      "MATH577"
+    ]
+  ],
+  "6e66f66df63e0e1986bd404988687407": [
+    [
+      "COMP116",
+      "COMP210",
+      "COMP401"
+    ],
+    [
+      "MATH233"
+    ]
+  ],
+  "4666173a0d9264ad4fa10372bd92f2f7": [
+    [
+      "COMP211",
+      "COMP301",
+      "MATH347"
+    ]
+  ],
+  "673dd94a6c2f753611e6b78e4482a060": [
+    [
+      "COMP301",
+      "COMP311",
+      "COMP562"
+    ],
+    [
+      "COMP755",
+      "STOR565"
+    ]
+  ],
+  "0ceda750eeff4ca44bcfe3241913e55d": [
+    [
+      "COMP211",
+      "COMP301"
+    ]
+  ],
+  "96fe70aad9ea704581358c254d268a5b": [
+    [
+      "COMP530"
+    ]
+  ],
+  "243032b63cda24852fbd284970d75496": [
+    [
+      "COMP431",
+      "COMP530"
+    ]
+  ],
+  "88e638fb5f8eb31a7e7a57439a5eb0d3": [
+    [
+      "COMP431"
+    ]
+  ],
+  "8fd8b15062f8501a03745a24f2077ded": [
+    [
+      "COMP431",
+      "COMP530"
+    ]
+  ],
+  "a5d99b4753a82d8dee5c7b74a88f8c3e": [
+    [
+      "COMP311",
+      "COMP455"
+    ]
+  ],
+  "46c31b2d9bb9ca8f7e0c92db16230bfc": [
+    [
+      "COMP550"
+    ]
+  ],
+  "33a6c1d21cd761805c3f05112a24742b": [
+    [
+      "MATH661"
+    ]
+  ],
+  "ecb9b33cda7483605458cc294084f171": [
+    [
+      "COMP562",
+      "COMP755",
+      "STOR565"
+    ],
+    [
+      "MATH201",
+      "MATH347",
+      "MATH577"
+    ],
+    [
+      "MATH233",
+      "MATH522"
+    ]
+  ],
+  "48a60d600340d280b0ffebfca62247f8": [
+    [
+      "COMP560",
+      "COMP562",
+      "STOR565",
+      "COMP664",
+      "COMP755",
+      "COMP776"
+    ]
+  ],
+  "a3fd7a67566191b9e746c4b4bb554ca5": [
+    [
+      "STOR555",
+      "STOR641"
+    ]
+  ],
+  "74e77569a3dfdcd16d0b49fe829e7e83": [
+    [
+      "MATH577",
+      "MATH347"
+    ],
+    [
+      "COMP562",
+      "STOR520",
+      "STOR565"
+    ]
+  ],
+  "8cb06d71bf854797e04bca8e2e7d1579": [
+    [
+      "COMP455",
+      "COMP520",
+      "COMP524"
+    ]
+  ],
+  "128dacf7141cdce0421ef51dbe3816de": [
+    [
+      "COMP521",
+      "COMP550"
+    ]
+  ],
+  "df93b958b0432ff3bdfbc5efba29fa58": [
+    [
+      "COMP524",
+      "COMP550"
+    ]
+  ],
+  "51e83bcc381aa00400fde91fca7a37e6": [
+    [
+      "COMP530"
+    ]
+  ],
+  "b90669b0270d779fbf3f200322f0f9bd": [
+    [
+      "COMP431"
+    ]
+  ],
+  "45ae0fb2da08fedd0e6c006695399bb4": [
+    [
+      "COMP530",
+      "COMP550"
+    ]
+  ],
+  "8dc4805a72292ef828174f9b8e392712": [
+    [
+      "COMP411"
+    ],
+    [
+      "PHYS352"
+    ]
+  ],
+  "6a5495c0c542be8f66cc57c8a3c0c666": [
+    [
+      "COMP455",
+      "COMP550"
+    ]
+  ],
+  "6dde006bc5752ec5247b033bd444ad7e": [
+    [
+      "MATH347",
+      "MATH547",
+      "MATH577"
+    ],
+    [
+      "STOR435"
+    ]
+  ],
+  "cafef4c0e4a8d11b4c90f8959b853614": [
+    [
+      "COMP724"
+    ]
+  ],
+  "42b86e1bb1fd13f1268e869f8513e7ce": [
+    [
+      "MATH233"
+    ]
+  ],
+  "d49a595cc8893ca4695b7f214166eaf8": [
+    [
+      "COMP665",
+      "COMP761"
+    ]
+  ],
+  "43992942719e5d653708aae3fd5e2532": [
+    [
+      "MATH233"
+    ],
+    [
+      "MATH547",
+      "MATH347"
+    ],
+    [
+      "STOR435"
+    ]
+  ],
+  "f1fbb1cff0c7b006b8f78482c2a1b22c": [
+    [
+      "MATH566",
+      "COMP550",
+      "COMP665",
+      "COMP775"
+    ]
+  ],
+  "26a4b5198cf30c0291fb0cbc15559902": [
+    [
+      "MATH233"
+    ],
+    [
+      "MATH347",
+      "MATH547"
+    ],
+    [
+      "MATH535",
+      "STOR435"
+    ]
+  ],
+  "dce21ec40c7c81c30fa8981e3e30ea12": [
+    [
+      "COMP550"
+    ],
+    [
+      "MATH347",
+      "MATH547"
+    ]
+  ],
+  "344a123d3b81270d2e65ed1bdf76c20e": [
+    [
+      "COMP550"
+    ]
+  ],
+  "7fe1f9e4c61d33e0338e8f995768df57": [
+    [
+      "COMP562"
+    ]
+  ],
+  "c0ea82c8582f02d30abb658bd7676922": [
+    [
+      "COMP211",
+      "COMP401"
+    ],
+    [
+      "COMP211",
+      "COMP410"
+    ],
+    [
+      "COMP211",
+      "COMP411"
+    ],
+    [
+      "COMP301",
+      "COMP401"
+    ],
+    [
+      "COMP301",
+      "COMP410"
+    ],
+    [
+      "COMP301",
+      "COMP411"
+    ]
+  ],
+  "388ba5058c64c387357013ea93d942d8": [
+    [
+      "COMP210",
+      "COMP401"
+    ],
+    [
+      "COMP210",
+      "COMP410"
+    ],
+    [
+      "COMP210",
+      "COMP411"
+    ],
+    [
+      "COMP211",
+      "COMP401"
+    ],
+    [
+      "COMP211",
+      "COMP410"
+    ],
+    [
+      "COMP211",
+      "COMP411"
+    ],
+    [
+      "COMP301",
+      "COMP401"
+    ],
+    [
+      "COMP301",
+      "COMP410"
+    ],
+    [
+      "COMP301",
+      "COMP411"
+    ]
+  ],
+  "b05eb8d963f309808ecf2ae1ddc20e14": [
+    [
+      "COMP210",
+      "COMP283"
+    ],
+    [
+      "COMP210",
+      "MATH381"
+    ],
+    [
+      "COMP210",
+      "STOR315"
+    ],
+    [
+      "COMP410",
+      "COMP283"
+    ],
+    [
+      "COMP410",
+      "MATH381"
+    ],
+    [
+      "COMP410",
+      "STOR315"
+    ]
+  ],
+  "8ec659bfffd6daa0abcd71b82d9e82ad": [
+    [
+      "COMP301",
+      "COMP311",
+      "COMP455"
+    ],
+    [
+      "COMP410",
+      "COMP411",
+      "COMP455"
+    ]
+  ],
+  "20e3e97ad547a2167e87076d292366aa": [
+    [
+      "COMP283",
+      "COMP210",
+      "COMP211",
+      "COMP301",
+      "COMP455"
+    ]
+  ]
+}
