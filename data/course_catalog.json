@@ -1,221 +1,1909 @@
 {
-  "COMP110": {
-    "name": "Introduction to Programming",
+  "COMP50": {
+    "name": "First-Year Seminar: Everyday Computing",
     "credits": 3,
     "prerequisites": [],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": [
+      "FY-SEMINAR"
+    ]
+  },
+  "COMP60": {
+    "name": "First-Year Seminar: Robotics with LEGO\u00ae",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FY-SEMINAR"
+    ]
+  },
+  "COMP65": {
+    "name": "First-Year Seminar: Folding, from Paper to Proteins",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FY-SEMINAR"
+    ]
+  },
+  "COMP89": {
+    "name": "First -Year Seminar: Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FY-SEMINAR"
+    ]
+  },
+  "COMP110": {
+    "name": "Introduction to Programming",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH130"
+      ],
+      [
+        "MATH152"
+      ],
+      [
+        "MATH210"
+      ],
+      [
+        "MATH231"
+      ],
+      [
+        "MATH129P"
+      ],
+      [
+        "PHIL155"
+      ],
+      [
+        "STOR120"
+      ],
+      [
+        "STOR151"
+      ],
+      [
+        "STOR155"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-QUANT"
+    ]
+  },
+  "COMP116": {
+    "name": "Introduction to Scientific Programming",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH130"
+      ],
+      [
+        "MATH152"
+      ],
+      [
+        "MATH210"
+      ],
+      [
+        "MATH231"
+      ],
+      [
+        "MATH129P"
+      ],
+      [
+        "PHIL155"
+      ],
+      [
+        "STOR120"
+      ],
+      [
+        "STOR151"
+      ],
+      [
+        "STOR155"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP126": {
+    "name": "Practical Web Design and Development for Everyone",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-CREATE"
+    ]
+  },
+  "COMP190": {
+    "name": "Topics in Computing",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP210": {
     "name": "Data Structures and Analysis",
     "credits": 3,
-    "prerequisites": [["COMP110"]],
+    "prerequisites": [
+      [
+        "COMP110",
+        "MATH231"
+      ],
+      []
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP211": {
     "name": "Systems Fundamentals",
     "credits": 3,
-    "prerequisites": [["COMP210"]],
+    "prerequisites": [
+      [
+        "COMP210"
+      ],
+      [
+        "COMP283",
+        "MATH381"
+      ],
+      [
+        "COMP283",
+        "STOR315"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP222": {
+    "name": "ACM Programming Competition Practice",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP227": {
+    "name": "Effective Peer Teaching in Computer Science",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210"
+      ],
+      [
+        "COMP401"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "HI-LEARNTA"
+    ]
   },
   "COMP283": {
     "name": "Discrete Structures",
     "credits": 3,
-    "prerequisites": [["Math 231", "Math 241"]],
+    "prerequisites": [
+      [
+        "['MATH231']",
+        "['MATH241']"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": ["MATH381", "STOR315"]
+    "cross_listed": [],
+    "attributes": [
+      "FC-QUANT"
+    ]
+  },
+  "COMP290": {
+    "name": "Special Topics in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP293": {
+    "name": "Internship in Computer Science",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH231",
+        "MATH241"
+      ],
+      [
+        "COMP210",
+        "COMP211",
+        "COMP301"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "HI-INTERN"
+    ]
   },
   "COMP301": {
     "name": "Foundations of Programming",
     "credits": 3,
-    "prerequisites": [["COMP210"]],
+    "prerequisites": [
+      [
+        "COMP210"
+      ],
+      [
+        "['COMP283']",
+        "['MATH381']",
+        "['STOR315']"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP311": {
     "name": "Computer Organization",
     "credits": 3,
     "prerequisites": [
-      ["COMP211"],
-      ["COMP283", "MATH381", "STOR315"]
+      [
+        "COMP211"
+      ]
     ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP380": {
+    "name": "Technology, Ethics, & Culture",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-VALUES"
+    ]
+  },
+  "COMP388": {
+    "name": "The Internet: Studies and Stories",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP380"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-VALUES"
+    ]
+  },
+  "COMP390": {
+    "name": "Computer Science Elective Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP393": {
+    "name": "Software Engineering Practicum",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP211",
+        "COMP401"
+      ],
+      [
+        "COMP211",
+        "COMP410"
+      ],
+      [
+        "COMP211",
+        "COMP411"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP411"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "COMP401",
+        "COMP411"
+      ],
+      [
+        "COMP410",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP401": {
+    "name": "Foundation of Programming",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH231"
+      ],
+      [
+        "MATH241"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP410": {
+    "name": "Data Structures",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH231",
+        "MATH241"
+      ],
+      [
+        "COMP401"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP411": {
+    "name": "Computer Organization",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH231"
+      ],
+      [
+        "MATH241"
+      ],
+      [
+        "COMP401"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP421": {
     "name": "Files and Databases",
     "credits": 3,
     "prerequisites": [
-      ["COMP301"],
-      ["COMP210"],
-      ["COMP211"]
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "COMP401",
+        "COMP411"
+      ],
+      [
+        "COMP210",
+        "COMP401"
+      ],
+      [
+        "COMP210",
+        "COMP410"
+      ],
+      [
+        "COMP210",
+        "COMP411"
+      ],
+      [
+        "COMP211",
+        "COMP410"
+      ],
+      [
+        "COMP211",
+        "COMP411"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP411"
+      ]
     ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP423": {
+    "name": "Foundations of Software Engineering",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-CREATE"
+    ]
+  },
+  "COMP426": {
+    "name": "Modern Web Programming",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP431": {
+    "name": "Internet Services and Protocols",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210"
+      ],
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP210",
+        "COMP301"
+      ],
+      [
+        "['COMP401']",
+        "['COMP410']",
+        "['COMP411']"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP433": {
+    "name": "Mobile Computing Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP435": {
+    "name": "Computer Security Concepts",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP210",
+        "COMP301"
+      ],
+      [
+        "COMP211",
+        "COMP401"
+      ],
+      [
+        "COMP211",
+        "COMP410"
+      ],
+      [
+        "COMP211",
+        "COMP411"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP447": {
+    "name": "Quantum Computing",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "PHYS116"
+      ],
+      [
+        "PHYS118"
+      ],
+      [
+        "MATH232",
+        "PHYS116"
+      ],
+      [
+        "MATH232",
+        "PHYS118"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP455": {
     "name": "Models of Languages and Computation",
     "credits": 3,
     "prerequisites": [
-      ["COMP301"],
-      ["COMP283", "MATH381", "STOR315"]
+      [
+        "COMP210",
+        "COMP283"
+      ],
+      [
+        "COMP210",
+        "MATH381"
+      ],
+      [
+        "COMP210",
+        "STOR315"
+      ],
+      [
+        "COMP410",
+        "COMP283"
+      ],
+      [
+        "COMP410",
+        "MATH381"
+      ],
+      [
+        "COMP410",
+        "STOR315"
+      ],
+      [
+        "COMP283",
+        "MATH381"
+      ],
+      [
+        "COMP283",
+        "STOR315"
+      ],
+      [
+        "MATH381",
+        "STOR315"
+      ]
     ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP475": {
+    "name": "2D Computer Graphics",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP486": {
+    "name": "Applications of Natural Language Processing",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP487": {
+    "name": "Information Retrieval",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP488": {
+    "name": "Data Science in the Business World",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP495": {
+    "name": "Mentored Research in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "RESEARCH"
+    ]
+  },
+  "COMP496": {
+    "name": "Independent Study in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP520": {
+    "name": "Compilers",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "COMP311"
+      ],
+      [
+        "COMP455"
+      ],
+      [
+        "['COMP410','COMP411']",
+        "['COMP410','COMP455']",
+        "['COMP411','COMP455']"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP523": {
+    "name": "Software Engineering Laboratory",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "COMP311"
+      ],
+      [
+        "COMP401",
+        "COMP410",
+        "COMP411"
+      ],
+      [
+        "COMP421",
+        "COMP426",
+        "COMP431",
+        "COMP433",
+        "COMP520",
+        "COMP530",
+        "COMP535",
+        "COMP575",
+        "COMP580",
+        "COMP590"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-CREATE"
+    ]
+  },
+  "COMP524": {
+    "name": "Programming Language Concepts",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "COMP401"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP530": {
+    "name": "Operating Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "COMP311"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "COMP401",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP533": {
+    "name": "Distributed Systems and Concurrent Programming",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP535": {
+    "name": "Introduction to Computer Security",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MANUAL_REVIEW_NEEDED"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP537": {
+    "name": "Cryptography",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP541": {
+    "name": "Digital Logic and Computer Design",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301",
+        "COMP311"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "COMP401",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": [
+      "FC-CREATE"
+    ]
+  },
+  "COMP545": {
+    "name": "Programming Intelligent Physical Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301",
+        "COMP311"
+      ],
+      [
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP550": {
     "name": "Algorithms and Analysis",
     "credits": 3,
     "prerequisites": [
-      ["COMP301"],
-      ["COMP283", "MATH381", "STOR315"]
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP211",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ]
     ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": [
+      "FC-QUANT"
+    ]
+  },
+  "COMP555": {
+    "name": "Bioalgorithms",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP210",
+        "COMP211"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "['MATH231']",
+        "['MATH241']"
+      ],
+      [
+        "BIOL452"
+      ],
+      [
+        "MATH553"
+      ],
+      [
+        "BIOL525"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP560": {
     "name": "Artificial Intelligence",
     "credits": 3,
-    "prerequisites": [["COMP301"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "COMP562": {
-    "name": "Machine Learning",
-    "credits": 3,
     "prerequisites": [
-      ["COMP301"],
-      ["MATH347", "MATH577"]
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP211",
+        "COMP401"
+      ],
+      [
+        "COMP211",
+        "COMP410"
+      ],
+      [
+        "COMP301",
+        "COMP401"
+      ],
+      [
+        "COMP301",
+        "COMP410"
+      ]
     ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP562": {
+    "name": "Introduction to Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "MATH233"
+      ],
+      [
+        "MATH347"
+      ],
+      [
+        "STOR435",
+        "STOR535"
+      ],
+      [
+        "BIOS650"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP572": {
+    "name": "Computational Photography",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "['COMP401','COMP410']"
+      ],
+      [
+        "['MATH347']",
+        "['MATH577']"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP575": {
+    "name": "Introduction to Computer Graphics",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301"
+      ],
+      [
+        "COMP311"
+      ],
+      [
+        "['COMP401','COMP410']",
+        "['COMP401','COMP411']"
+      ],
+      [
+        "['MATH347']",
+        "['MATH577']"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP576": {
+    "name": "Mathematics for Image Computing",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP116",
+        "MATH233"
+      ],
+      [
+        "COMP116",
+        "MATH233"
+      ],
+      [
+        "COMP210",
+        "MATH233"
+      ],
+      [
+        "COMP210",
+        "MATH233"
+      ],
+      [
+        "COMP401",
+        "MATH233"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP577": {
+    "name": "Introduction to Computer Vision",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ],
+      [
+        "MATH347"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP581": {
+    "name": "Introduction to Robotics",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP301",
+        "COMP311"
+      ],
+      [
+        "COMP401",
+        "COMP410"
+      ],
+      [
+        "COMP401",
+        "COMP411"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP586": {
     "name": "Natural Language Processing",
     "credits": 3,
-    "prerequisites": [["COMP301"]],
+    "prerequisites": [
+      [
+        "MANUAL_REVIEW_NEEDED"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP590": {
+    "name": "Topics in Computer Science",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP211",
+        "COMP301"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP616": {
+    "name": "Information Visualization",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP617": {
+    "name": "Visualization Design Methods",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP630": {
+    "name": "Operating System Implementation",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP631": {
+    "name": "Networked and Distributed Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP431",
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP633": {
+    "name": "Parallel and Distributed Computing",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP635": {
+    "name": "Wireless and Mobile Communications",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP431"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP636": {
+    "name": "Distributed Collaborative Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP431",
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP637": {
+    "name": "Formal Methods for System Security",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "['COMP311']",
+        "['COMP455']"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP651": {
+    "name": "Computational Geometry",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP652": {
+    "name": "Logical Foundations of Program Correctness",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "[\"COMP283\",\"COMP210\"]"
+      ],
+      [
+        "[\"COMP283\",\"COMP211\"]"
+      ],
+      [
+        "[\"COMP283\",\"COMP301\"]"
+      ],
+      [
+        "[\"COMP283\",\"COMP455\"]"
+      ],
+      [
+        "[\"COMP210\",\"COMP211\"]"
+      ],
+      [
+        "[\"COMP210\",\"COMP301\"]"
+      ],
+      [
+        "[\"COMP210\",\"COMP455\"]"
+      ],
+      [
+        "[\"COMP211\",\"COMP301\"]"
+      ],
+      [
+        "[\"COMP211\",\"COMP455\"]"
+      ],
+      [
+        "[\"COMP301\",\"COMP455\"]"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP662": {
+    "name": "Scientific Computation II",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH661"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   },
   "COMP664": {
     "name": "Deep Learning",
     "credits": 3,
-    "prerequisites": [["COMP562"]],
+    "prerequisites": [
+      [
+        "COMP755",
+        "STOR565"
+      ],
+      [
+        "COMP755",
+        "MATH233"
+      ],
+      [
+        "COMP755",
+        "MATH522"
+      ],
+      [
+        "COMP562",
+        "STOR565"
+      ],
+      [
+        "COMP562",
+        "MATH233"
+      ],
+      [
+        "COMP562",
+        "MATH522"
+      ],
+      [
+        "STOR565",
+        "MATH201"
+      ],
+      [
+        "STOR565",
+        "MATH347"
+      ],
+      [
+        "STOR565",
+        "MATH577"
+      ],
+      [
+        "STOR565",
+        "MATH233"
+      ],
+      [
+        "STOR565",
+        "MATH522"
+      ],
+      [
+        "COMP755",
+        "MATH201"
+      ],
+      [
+        "COMP755",
+        "MATH347"
+      ],
+      [
+        "COMP755",
+        "MATH577"
+      ],
+      [
+        "COMP562",
+        "MATH201"
+      ],
+      [
+        "COMP562",
+        "MATH347"
+      ],
+      [
+        "COMP562",
+        "MATH577"
+      ],
+      [
+        "MATH233",
+        "MATH201"
+      ],
+      [
+        "MATH233",
+        "MATH347"
+      ],
+      [
+        "MATH233",
+        "MATH577"
+      ],
+      [
+        "MATH522",
+        "MATH201"
+      ],
+      [
+        "MATH522",
+        "MATH347"
+      ],
+      [
+        "MATH522",
+        "MATH577"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
   },
-  "MATH231": {
-    "name": "Calculus of Functions of One Variable I",
-    "credits": 4,
+  "COMP667": {
+    "name": "Video Analysis with Deep Learning",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP\u00a0560",
+        "COMP\u00a0562",
+        "STOR\u00a0565",
+        "COMP\u00a0664",
+        "COMP\u00a0755"
+      ],
+      [
+        "COMP\u00a0560",
+        "COMP\u00a0562",
+        "STOR\u00a0565",
+        "COMP\u00a0664",
+        "COMP\u00a0776"
+      ],
+      [
+        "COMP\u00a0560",
+        "COMP\u00a0562",
+        "STOR\u00a0565",
+        "COMP\u00a0755",
+        "COMP\u00a0776"
+      ],
+      [
+        "COMP\u00a0560",
+        "COMP\u00a0562",
+        "STOR\u00a0565",
+        "COMP\u00a0664",
+        "COMP\u00a0755",
+        "COMP\u00a0776"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP672": {
+    "name": "Simulation Modeling and Analysis",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "STOR555"
+      ],
+      [
+        "STOR641"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP683": {
+    "name": "Computational Biology",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH577",
+        "MATH347"
+      ],
+      [
+        "COMP562",
+        "STOR520",
+        "STOR565"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP690": {
+    "name": "Special Topics in Computer Science",
+    "credits": 3,
     "prerequisites": [],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
   },
-  "MATH232": {
-    "name": "Calculus of Functions of One Variable II",
-    "credits": 4,
-    "prerequisites": [["MATH231"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "MATH233": {
-    "name": "Calculus of Functions of Several Variables",
-    "credits": 4,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "MATH235": {
-    "name": "Mathematics for Data Science",
-    "credits": 4,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": ["STOR235"]
-  },
-  "MATH347": {
-    "name": "Linear Algebra for Applications",
-    "credits": 3,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": ["MATH577"]
-  },
-  "MATH381": {
-    "name": "Discrete Mathematics",
-    "credits": 3,
-    "prerequisites": [["MATH231"]],
-    "corequisites": [],
-    "cross_listed": ["COMP283", "STOR315"]
-  },
-  "MATH577": {
-    "name": "Linear Algebra",
-    "credits": 3,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": ["MATH347"]
-  },
-  "STOR235": {
-    "name": "Mathematics for Data Science",
-    "credits": 4,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": ["MATH235"]
-  },
-  "STOR315": {
-    "name": "Discrete Mathematics for Data Science",
-    "credits": 3,
-    "prerequisites": [["MATH231"]],
-    "corequisites": [],
-    "cross_listed": ["COMP283", "MATH381"]
-  },
-  "STOR435": {
-    "name": "Introduction to Probability",
-    "credits": 3,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "STOR535": {
-    "name": "Probability for Data Science",
-    "credits": 3,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "BIOS650": {
-    "name": "Basic Elements of Probability and Statistical Inference I",
-    "credits": 3,
-    "prerequisites": [["MATH232"]],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "ENEC202": {
-    "name": "Introduction to the Environmental Sciences",
-    "credits": 4,
-    "prerequisites": [],
-    "corequisites": [],
-    "cross_listed": []
-  },
-  "ASTR103": {
-    "name": "Alien Life",
+  "COMP691H": {
+    "name": "Honors Thesis in Computer Science",
     "credits": 3,
     "prerequisites": [],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": [
+      "RESEARCH"
+    ]
   },
-  "PHYS118": {
-    "name": "Introductory Calculus-based Mechanics and Relativity",
-    "credits": 4,
-    "prerequisites": [["MATH231"]],
+  "COMP692H": {
+    "name": "Honors Thesis in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": [
+      "RESEARCH"
+    ]
   },
-  "PHYS119": {
-    "name": "Introductory Calculus-based Electromagnetism and Quanta",
-    "credits": 4,
-    "prerequisites": [["PHYS118"]],
+  "COMP720": {
+    "name": "Compilers",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP455"
+      ],
+      [
+        "COMP520"
+      ],
+      [
+        "COMP524"
+      ]
+    ],
     "corequisites": [],
-    "cross_listed": []
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP721": {
+    "name": "Database Management Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP521"
+      ],
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP723": {
+    "name": "Software Design and Implementation",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP524"
+      ],
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP724": {
+    "name": "Programming Languages",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "[\"COMP455\",\"COMP520\"]"
+      ],
+      [
+        "[\"COMP455\",\"COMP524\"]"
+      ],
+      [
+        "[\"COMP520\",\"COMP524\"]"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP730": {
+    "name": "Operating Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP734": {
+    "name": "Distributed Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP431"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP735": {
+    "name": "Distributed and Concurrent Algorithms",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP530"
+      ],
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP737": {
+    "name": "Real-Time Systems",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP740": {
+    "name": "Computer Architecture and Implementation",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP411"
+      ],
+      [
+        "PHYS352"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP750": {
+    "name": "Algorithm Analysis",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP455"
+      ],
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP755": {
+    "name": "Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH347",
+        "STOR435"
+      ],
+      [
+        "MATH577",
+        "STOR435"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP763": {
+    "name": "Semantics and Program Correctness",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP724"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP766": {
+    "name": "Visual Solid Shape",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH233"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP770": {
+    "name": "Computer Graphics",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP665"
+      ],
+      [
+        "COMP761"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP775": {
+    "name": "Image Processing and Analysis",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH233"
+      ],
+      [
+        "MATH547",
+        "MATH347"
+      ],
+      [
+        "STOR435"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP776": {
+    "name": "Computer Vision in our 3D World",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH566"
+      ],
+      [
+        "COMP550"
+      ],
+      [
+        "COMP665"
+      ],
+      [
+        "COMP775"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP777": {
+    "name": "Optimal Estimation in Image Analysis",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "MATH233"
+      ],
+      [
+        "MATH347",
+        "MATH547"
+      ],
+      [
+        "COMP535",
+        "STOR435"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP781": {
+    "name": "Robotics",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP550"
+      ],
+      [
+        "MATH347"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP782": {
+    "name": "Motion Planning in Physical and Virtual Worlds",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP550"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP786": {
+    "name": "Natural Language Processing",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP562"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP790": {
+    "name": "Topics in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP822": {
+    "name": "Topics in Discrete Optimization",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "STOR712"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP832": {
+    "name": "Multimedia Networking",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP431"
+      ],
+      [
+        "COMP530"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP872": {
+    "name": "Exploring Virtual Worlds",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP870"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP875": {
+    "name": "Recent Advances in Image Analysis",
+    "credits": 3,
+    "prerequisites": [
+      [
+        "COMP775"
+      ]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP892": {
+    "name": "Practicum",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP910": {
+    "name": "Computer Science Module",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP915": {
+    "name": "Technical Communication in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP990": {
+    "name": "Research Seminar in Computer Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP991": {
+    "name": "Reading and Research",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP992": {
+    "name": "Master's (Non-Thesis)",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP993": {
+    "name": "Master's Research and Thesis",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "COMP994": {
+    "name": "Doctoral Research and Dissertation",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   }
 }
