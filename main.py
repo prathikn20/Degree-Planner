@@ -11,16 +11,13 @@ COMPLETED = [
 
 IN_PROGRESS = ["COMP211", "COMP301", "DATA215", "MATH347", "BUSI100"]
 
-
 def print_requirement_status(results):
     print("=" * 50)
     print("REQUIREMENT STATUS")
     print("=" * 50)
-
     print("\nSATISFIED:")
     for req in results["satisfied"]:
         print(f"  + {req}")
-
     print("\nUNSATISFIED:")
     for req_id, details in results["missing_courses"].items():
         if isinstance(details, list):
@@ -28,7 +25,6 @@ def print_requirement_status(results):
         else:
             print(f"  - {req_id}: need {details['still_needed']} more")
             print(f"    options: {details['options']}")
-
 
 def print_path(path, catalog):
     print("\n" + "=" * 50)
@@ -41,7 +37,6 @@ def print_path(path, catalog):
 
     total = sum(catalog.get(c, {}).get("credits", 0) for c in path)
     print(f"\n  Total remaining credits in path: {total}")
-
 
 def main():
     catalog = load_catalog("data/course_catalog.json")
@@ -59,7 +54,6 @@ def main():
 
     path = kahns_algorithm(graph, catalog, COMPLETED, remaining)
     print_path(path, catalog)
-
 
 if __name__ == "__main__":
     main()

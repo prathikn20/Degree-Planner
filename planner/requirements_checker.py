@@ -3,10 +3,8 @@ def get_rule_based_options(rule, catalog):
     for course_id, data in catalog.items():
         dept = ''.join(filter(str.isalpha, course_id))
         number_str = ''.join(filter(str.isdigit, course_id))
-
         if not number_str:
             continue
-
         number = int(number_str)
 
         if (dept == rule["department"] and
@@ -14,19 +12,11 @@ def get_rule_based_options(rule, catalog):
             course_id not in rule["exclude"] and
             data["credits"] >= rule["min_credits"]):
             valid.append(course_id)
-
     return valid
-
 
 def check_requirements(requirements, catalog, completed):
     completed_set = set(completed)
-
-    results = {
-        "satisfied": [],
-        "unsatisfied": [],
-        "missing_courses": {}
-    }
-
+    results = {"satisfied": [], "unsatisfied": [], "missing_courses": {}}
     program = requirements["CS_major"]
 
     for course in program["required_courses"]:
@@ -45,8 +35,6 @@ def check_requirements(requirements, catalog, completed):
             options = group["options"]
     
         options = [o for o in options if o not in required_set]
-
-
         satisfied_options = []
         for option in options:
             if _is_satisfied(option, catalog, completed_set):
@@ -65,13 +53,10 @@ def check_requirements(requirements, catalog, completed):
                 "still_needed": still_needed,
                 "options": remaining_options
             }
-
     return results
-
 
 def _is_satisfied(course, catalog, completed_set):
     if course in completed_set:
         return True
-
     cross_listed = catalog.get(course, {}).get('cross_listed', [])
     return any(equiv in completed_set for equiv in cross_listed)
