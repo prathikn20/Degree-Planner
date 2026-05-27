@@ -1,0 +1,76 @@
+{
+  "COMP523": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          { "operator": "AND", "operands": ["COMP301", "COMP311"] },
+          { "operator": "AND", "operands": ["COMP401", "COMP410", "COMP411"] }
+        ]
+      },
+      {
+        "operator": "CHOOSE",
+        "amount": 2,
+        "operands": ["COMP421", "COMP426", "COMP431", "COMP433", "COMP520", "COMP530", "COMP535", "COMP575", "COMP580", "COMP590"]
+      }
+    ]
+  },
+  "COMP555": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          { "operator": "AND", "operands": ["COMP210", "COMP211"] },
+          { "operator": "AND", "operands": ["COMP401", "COMP410"] }
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": ["MATH231", "MATH241"]
+      },
+      {
+        "operator": "OR",
+        "operands": ["BIOL452", "MATH553", "BIOL525"]
+      }
+    ]
+  },
+  "COMP535": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          { "operator": "AND", "operands": ["COMP301", "COMP311"] },
+          { "operator": "AND", "operands": ["COMP401", "COMP410", "COMP411"] }
+        ]
+      },
+      "COMP550",
+      {
+        "operator": "OR",
+        "operands": ["COMP283", "MATH381", "STOR315"]
+      }
+    ]
+  },
+  "COMP211": {
+    "operator": "AND",
+    "operands": [
+      "COMP210",
+      {
+        "operator": "OR",
+        "operands": ["COMP283", "MATH381", "STOR315"]
+      }
+    ]
+  },
+  "COMP301": {
+    "operator": "AND",
+    "operands": [
+      "COMP210",
+      {
+        "operator": "OR",
+        "operands": ["COMP283", "MATH381", "STOR315"]
+      }
+    ]
+  }
+}
