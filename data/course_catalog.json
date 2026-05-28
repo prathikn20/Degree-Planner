@@ -87,8 +87,8 @@
     "name": "Data Structures and Analysis",
     "credits": 3,
     "prerequisites": [
-      ["MATH231", "COMP283", "COMP110"],
-      ["MATH381", "MATH231", "COMP110"],
+      ["COMP283", "MATH231", "COMP110"],
+      ["MATH231", "COMP110", "MATH381"],
       ["STOR315", "MATH231", "COMP110"]
     ],
     "corequisites": [],
@@ -99,8 +99,8 @@
     "name": "Systems Fundamentals",
     "credits": 3,
     "prerequisites": [
-      ["COMP210", "COMP283"],
-      ["MATH381", "COMP210"],
+      ["COMP283", "COMP210"],
+      ["COMP210", "MATH381"],
       ["STOR315", "COMP210"]
     ],
     "corequisites": [],
@@ -149,8 +149,8 @@
     "name": "Internship in Computer Science",
     "credits": 3,
     "prerequisites": [
-      ["COMP210", "COMP301", "COMP211", "MATH231"],
-      ["COMP210", "COMP301", "COMP211", "MATH241"]
+      ["MATH231", "COMP210", "COMP301", "COMP211"],
+      ["MATH241", "COMP211", "COMP210", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -160,8 +160,8 @@
     "name": "Foundations of Programming",
     "credits": 3,
     "prerequisites": [
-      ["COMP210", "COMP283"],
-      ["MATH381", "COMP210"],
+      ["COMP283", "COMP210"],
+      ["COMP210", "MATH381"],
       ["STOR315", "COMP210"]
     ],
     "corequisites": [],
@@ -208,8 +208,8 @@
     "name": "Software Engineering Practicum",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -252,8 +252,8 @@
     "name": "Files and Databases",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211", "COMP210"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP210", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": ["COMP521"],
@@ -263,7 +263,7 @@
     "name": "Foundations of Software Engineering",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"]
+      ["COMP211", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -273,8 +273,8 @@
     "name": "Modern Web Programming",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"],
-      ["COMP401", "COMP410"]
+      ["COMP211", "COMP301"],
+      ["COMP410", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -284,8 +284,8 @@
     "name": "Internet Services and Protocols",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211", "COMP210"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP210", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -295,8 +295,8 @@
     "name": "Mobile Computing Systems",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211", "COMP210"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP210", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -306,8 +306,8 @@
     "name": "Computer Security Concepts",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211", "COMP210"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP210", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -328,11 +328,11 @@
     "name": "Models of Languages and Computation",
     "credits": 3,
     "prerequisites": [
-      ["COMP210", "COMP283"],
-      ["MATH381", "COMP210"],
+      ["COMP283", "COMP210"],
+      ["COMP210", "MATH381"],
       ["STOR315", "COMP210"],
       ["COMP283", "COMP410"],
-      ["MATH381", "COMP410"],
+      ["COMP410", "MATH381"],
       ["STOR315", "COMP410"]
     ],
     "corequisites": [],
@@ -343,8 +343,8 @@
     "name": "2D Computer Graphics",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211", "COMP210"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP211", "COMP210", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -394,8 +394,8 @@
     "name": "Compilers",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311", "COMP455"],
-      ["COMP455", "COMP411", "COMP410"]
+      ["COMP455", "COMP311", "COMP301"],
+      ["COMP410", "COMP411", "COMP455"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -405,96 +405,96 @@
     "name": "Software Engineering Laboratory",
     "credits": 4,
     "prerequisites": [
-      ["COMP301", "COMP311", "COMP421", "COMP426"],
-      ["COMP301", "COMP311", "COMP421", "COMP431"],
-      ["COMP301", "COMP311", "COMP421", "COMP433"],
-      ["COMP301", "COMP311", "COMP421", "COMP520"],
-      ["COMP301", "COMP311", "COMP421", "COMP530"],
-      ["COMP301", "COMP311", "COMP421", "COMP535"],
-      ["COMP301", "COMP311", "COMP421", "COMP575"],
-      ["COMP301", "COMP311", "COMP421", "COMP580"],
-      ["COMP301", "COMP311", "COMP421", "COMP590"],
-      ["COMP301", "COMP311", "COMP426", "COMP431"],
-      ["COMP301", "COMP311", "COMP433", "COMP426"],
-      ["COMP301", "COMP311", "COMP426", "COMP520"],
-      ["COMP301", "COMP311", "COMP426", "COMP530"],
-      ["COMP301", "COMP311", "COMP426", "COMP535"],
-      ["COMP301", "COMP311", "COMP426", "COMP575"],
-      ["COMP301", "COMP311", "COMP426", "COMP580"],
-      ["COMP301", "COMP311", "COMP426", "COMP590"],
-      ["COMP301", "COMP311", "COMP433", "COMP431"],
-      ["COMP301", "COMP311", "COMP431", "COMP520"],
-      ["COMP301", "COMP311", "COMP530", "COMP431"],
-      ["COMP301", "COMP311", "COMP431", "COMP535"],
-      ["COMP301", "COMP311", "COMP575", "COMP431"],
-      ["COMP301", "COMP311", "COMP580", "COMP431"],
-      ["COMP301", "COMP311", "COMP590", "COMP431"],
-      ["COMP301", "COMP311", "COMP433", "COMP520"],
-      ["COMP301", "COMP311", "COMP433", "COMP530"],
-      ["COMP301", "COMP311", "COMP433", "COMP535"],
-      ["COMP301", "COMP311", "COMP433", "COMP575"],
-      ["COMP301", "COMP311", "COMP433", "COMP580"],
-      ["COMP301", "COMP311", "COMP433", "COMP590"],
-      ["COMP301", "COMP311", "COMP530", "COMP520"],
-      ["COMP301", "COMP311", "COMP535", "COMP520"],
-      ["COMP301", "COMP311", "COMP575", "COMP520"],
-      ["COMP301", "COMP311", "COMP580", "COMP520"],
-      ["COMP301", "COMP311", "COMP590", "COMP520"],
-      ["COMP301", "COMP311", "COMP530", "COMP535"],
-      ["COMP301", "COMP311", "COMP575", "COMP530"],
-      ["COMP301", "COMP311", "COMP580", "COMP530"],
-      ["COMP301", "COMP311", "COMP530", "COMP590"],
-      ["COMP301", "COMP311", "COMP575", "COMP535"],
-      ["COMP301", "COMP311", "COMP580", "COMP535"],
-      ["COMP301", "COMP311", "COMP590", "COMP535"],
-      ["COMP301", "COMP311", "COMP575", "COMP580"],
-      ["COMP301", "COMP311", "COMP575", "COMP590"],
-      ["COMP301", "COMP311", "COMP580", "COMP590"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP426"],
-      ["COMP421", "COMP431", "COMP411", "COMP401", "COMP410"],
-      ["COMP433", "COMP421", "COMP411", "COMP401", "COMP410"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP520"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP530"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP535"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP575"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP580"],
-      ["COMP421", "COMP411", "COMP401", "COMP410", "COMP590"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP426"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP426"],
-      ["COMP411", "COMP401", "COMP410", "COMP520", "COMP426"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP426"],
-      ["COMP411", "COMP401", "COMP410", "COMP426", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP426", "COMP575"],
-      ["COMP411", "COMP401", "COMP410", "COMP580", "COMP426"],
-      ["COMP411", "COMP401", "COMP410", "COMP590", "COMP426"],
-      ["COMP433", "COMP431", "COMP411", "COMP401", "COMP410"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP520"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP530"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP535"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP575"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP580"],
-      ["COMP431", "COMP411", "COMP401", "COMP410", "COMP590"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP520"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP530"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP535"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP575"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP580"],
-      ["COMP433", "COMP411", "COMP401", "COMP410", "COMP590"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP520"],
-      ["COMP411", "COMP401", "COMP410", "COMP520", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP520", "COMP575"],
-      ["COMP411", "COMP401", "COMP410", "COMP520", "COMP580"],
-      ["COMP411", "COMP401", "COMP410", "COMP520", "COMP590"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP575"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP580"],
-      ["COMP411", "COMP401", "COMP410", "COMP530", "COMP590"],
-      ["COMP411", "COMP401", "COMP410", "COMP575", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP580", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP590", "COMP535"],
-      ["COMP411", "COMP401", "COMP410", "COMP580", "COMP575"],
-      ["COMP411", "COMP401", "COMP410", "COMP590", "COMP575"],
-      ["COMP411", "COMP401", "COMP410", "COMP580", "COMP590"]
+      ["COMP421", "COMP426", "COMP311", "COMP301"],
+      ["COMP421", "COMP311", "COMP301", "COMP431"],
+      ["COMP421", "COMP311", "COMP301", "COMP433"],
+      ["COMP421", "COMP311", "COMP520", "COMP301"],
+      ["COMP421", "COMP530", "COMP311", "COMP301"],
+      ["COMP421", "COMP311", "COMP535", "COMP301"],
+      ["COMP421", "COMP575", "COMP311", "COMP301"],
+      ["COMP421", "COMP580", "COMP311", "COMP301"],
+      ["COMP421", "COMP590", "COMP311", "COMP301"],
+      ["COMP426", "COMP311", "COMP301", "COMP431"],
+      ["COMP426", "COMP311", "COMP301", "COMP433"],
+      ["COMP426", "COMP311", "COMP520", "COMP301"],
+      ["COMP426", "COMP530", "COMP311", "COMP301"],
+      ["COMP426", "COMP311", "COMP535", "COMP301"],
+      ["COMP426", "COMP575", "COMP311", "COMP301"],
+      ["COMP426", "COMP580", "COMP311", "COMP301"],
+      ["COMP426", "COMP590", "COMP311", "COMP301"],
+      ["COMP311", "COMP431", "COMP301", "COMP433"],
+      ["COMP311", "COMP520", "COMP301", "COMP431"],
+      ["COMP530", "COMP311", "COMP301", "COMP431"],
+      ["COMP311", "COMP535", "COMP301", "COMP431"],
+      ["COMP575", "COMP311", "COMP301", "COMP431"],
+      ["COMP580", "COMP311", "COMP301", "COMP431"],
+      ["COMP590", "COMP311", "COMP301", "COMP431"],
+      ["COMP311", "COMP520", "COMP301", "COMP433"],
+      ["COMP530", "COMP311", "COMP301", "COMP433"],
+      ["COMP311", "COMP535", "COMP301", "COMP433"],
+      ["COMP575", "COMP311", "COMP301", "COMP433"],
+      ["COMP580", "COMP311", "COMP301", "COMP433"],
+      ["COMP590", "COMP311", "COMP301", "COMP433"],
+      ["COMP530", "COMP311", "COMP520", "COMP301"],
+      ["COMP520", "COMP311", "COMP535", "COMP301"],
+      ["COMP575", "COMP311", "COMP520", "COMP301"],
+      ["COMP580", "COMP311", "COMP520", "COMP301"],
+      ["COMP590", "COMP311", "COMP520", "COMP301"],
+      ["COMP530", "COMP311", "COMP535", "COMP301"],
+      ["COMP575", "COMP530", "COMP311", "COMP301"],
+      ["COMP530", "COMP580", "COMP311", "COMP301"],
+      ["COMP590", "COMP530", "COMP311", "COMP301"],
+      ["COMP575", "COMP311", "COMP535", "COMP301"],
+      ["COMP580", "COMP311", "COMP535", "COMP301"],
+      ["COMP590", "COMP311", "COMP535", "COMP301"],
+      ["COMP575", "COMP580", "COMP311", "COMP301"],
+      ["COMP575", "COMP590", "COMP311", "COMP301"],
+      ["COMP590", "COMP580", "COMP311", "COMP301"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP431", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP433", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP421", "COMP520"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP535", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP421", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP421"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP421"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP431"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP433"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP520"],
+      ["COMP410", "COMP401", "COMP426", "COMP530", "COMP411"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP535"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP575"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP580"],
+      ["COMP410", "COMP401", "COMP426", "COMP411", "COMP590"],
+      ["COMP410", "COMP401", "COMP411", "COMP433", "COMP431"],
+      ["COMP410", "COMP401", "COMP411", "COMP431", "COMP520"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP431"],
+      ["COMP410", "COMP401", "COMP411", "COMP535", "COMP431"],
+      ["COMP410", "COMP401", "COMP411", "COMP431", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP431"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP431"],
+      ["COMP410", "COMP401", "COMP411", "COMP433", "COMP520"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP433"],
+      ["COMP410", "COMP401", "COMP411", "COMP433", "COMP535"],
+      ["COMP410", "COMP401", "COMP411", "COMP433", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP433"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP433"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP520"],
+      ["COMP410", "COMP401", "COMP411", "COMP535", "COMP520"],
+      ["COMP410", "COMP401", "COMP411", "COMP575", "COMP520"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP520"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP520"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP535"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP575"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP580"],
+      ["COMP410", "COMP401", "COMP530", "COMP411", "COMP590"],
+      ["COMP410", "COMP401", "COMP411", "COMP535", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP535"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP535"],
+      ["COMP410", "COMP401", "COMP411", "COMP580", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP575"],
+      ["COMP410", "COMP401", "COMP411", "COMP590", "COMP580"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -515,8 +515,8 @@
     "name": "Operating Systems",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP311", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -536,12 +536,12 @@
     "name": "Introduction to Computer Security",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311", "COMP550", "COMP283"],
-      ["COMP301", "COMP311", "MATH381", "COMP550"],
-      ["COMP301", "COMP311", "STOR315", "COMP550"],
-      ["COMP411", "COMP401", "COMP410", "COMP550", "COMP283"],
-      ["COMP411", "COMP401", "COMP410", "MATH381", "COMP550"],
-      ["COMP411", "COMP401", "COMP410", "STOR315", "COMP550"]
+      ["COMP283", "COMP311", "COMP301", "COMP550"],
+      ["COMP311", "MATH381", "COMP301", "COMP550"],
+      ["STOR315", "COMP311", "COMP301", "COMP550"],
+      ["COMP410", "COMP401", "COMP283", "COMP411", "COMP550"],
+      ["COMP410", "COMP401", "MATH381", "COMP411", "COMP550"],
+      ["COMP410", "COMP401", "COMP411", "STOR315", "COMP550"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -551,7 +551,7 @@
     "name": "Cryptography",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"]
+      ["COMP211", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -561,8 +561,8 @@
     "name": "Digital Logic and Computer Design",
     "credits": 4,
     "prerequisites": [
-      ["COMP301", "COMP311"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP311", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -572,7 +572,7 @@
     "name": "Programming Intelligent Physical Systems",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311"],
+      ["COMP311", "COMP301"],
       ["COMP411"]
     ],
     "corequisites": [],
@@ -583,7 +583,7 @@
     "name": "Algorithms and Analysis",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"],
+      ["COMP211", "COMP301"],
       ["COMP410"]
     ],
     "corequisites": [],
@@ -594,18 +594,18 @@
     "name": "Bioalgorithms",
     "credits": 3,
     "prerequisites": [
-      ["COMP210", "BIOL452", "COMP211", "MATH231"],
-      ["COMP210", "COMP211", "MATH231", "MATH553"],
-      ["COMP210", "BIOL525", "COMP211", "MATH231"],
-      ["COMP210", "BIOL452", "COMP211", "MATH241"],
-      ["COMP210", "COMP211", "MATH241", "MATH553"],
-      ["COMP210", "BIOL525", "COMP211", "MATH241"],
-      ["BIOL452", "MATH231", "COMP401", "COMP410"],
-      ["MATH553", "MATH231", "COMP401", "COMP410"],
-      ["BIOL525", "MATH231", "COMP401", "COMP410"],
-      ["BIOL452", "MATH241", "COMP401", "COMP410"],
-      ["MATH553", "MATH241", "COMP401", "COMP410"],
-      ["BIOL525", "MATH241", "COMP401", "COMP410"]
+      ["BIOL452", "COMP211", "COMP210", "MATH231"],
+      ["COMP211", "COMP210", "MATH553", "MATH231"],
+      ["BIOL525", "COMP211", "COMP210", "MATH231"],
+      ["MATH241", "COMP211", "COMP210", "BIOL452"],
+      ["MATH241", "COMP211", "COMP210", "MATH553"],
+      ["MATH241", "BIOL525", "COMP211", "COMP210"],
+      ["BIOL452", "COMP410", "MATH231", "COMP401"],
+      ["COMP410", "MATH231", "COMP401", "MATH553"],
+      ["BIOL525", "COMP410", "MATH231", "COMP401"],
+      ["MATH241", "COMP410", "BIOL452", "COMP401"],
+      ["MATH241", "COMP410", "COMP401", "MATH553"],
+      ["MATH241", "COMP410", "BIOL525", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": ["BCB555"],
@@ -615,8 +615,8 @@
     "name": "Artificial Intelligence",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"],
-      ["COMP401", "COMP410"]
+      ["COMP211", "COMP301"],
+      ["COMP410", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -626,8 +626,8 @@
     "name": "Introduction to Machine Learning",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"],
-      ["COMP401", "COMP410"]
+      ["COMP211", "COMP301"],
+      ["COMP410", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -638,7 +638,7 @@
     "credits": 3,
     "prerequisites": [
       ["COMP301"],
-      ["COMP401", "COMP410"],
+      ["COMP410", "COMP401"],
       ["MATH347"],
       ["MATH577"]
     ],
@@ -650,8 +650,8 @@
     "name": "Introduction to Computer Graphics",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP311", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -674,7 +674,7 @@
     "credits": 3,
     "prerequisites": [
       ["MATH347", "COMP211"],
-      ["COMP301", "MATH347"]
+      ["MATH347", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -684,8 +684,8 @@
     "name": "Introduction to Robotics",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311"],
-      ["COMP411", "COMP401", "COMP410"]
+      ["COMP311", "COMP301"],
+      ["COMP410", "COMP411", "COMP401"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -695,8 +695,8 @@
     "name": "Natural Language Processing",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP311", "COMP562", "COMP755"],
-      ["COMP301", "COMP311", "STOR565", "COMP562"]
+      ["COMP755", "COMP311", "COMP562", "COMP301"],
+      ["STOR565", "COMP311", "COMP562", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -706,7 +706,7 @@
     "name": "Topics in Computer Science",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP211"]
+      ["COMP211", "COMP301"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -781,7 +781,7 @@
     "name": "Formal Methods for System Security",
     "credits": 3,
     "prerequisites": [
-      ["COMP455", "COMP311"]
+      ["COMP311", "COMP455"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -801,7 +801,7 @@
     "name": "Logical Foundations of Program Correctness",
     "credits": 3,
     "prerequisites": [
-      ["COMP301", "COMP455", "COMP211", "COMP210", "COMP283"]
+      ["COMP211", "COMP283", "COMP210", "COMP301", "COMP455"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -823,22 +823,22 @@
     "prerequisites": [
       ["MATH233", "MATH201", "COMP562"],
       ["MATH522", "MATH201", "COMP562"],
-      ["MATH233", "MATH347", "COMP562"],
+      ["MATH347", "MATH233", "COMP562"],
       ["MATH522", "MATH347", "COMP562"],
       ["COMP562", "MATH233", "MATH577"],
-      ["COMP562", "MATH522", "MATH577"],
-      ["MATH233", "MATH201", "COMP755"],
-      ["MATH201", "MATH522", "COMP755"],
-      ["MATH233", "MATH347", "COMP755"],
-      ["MATH347", "MATH522", "COMP755"],
-      ["MATH233", "MATH577", "COMP755"],
-      ["MATH522", "MATH577", "COMP755"],
-      ["MATH233", "STOR565", "MATH201"],
-      ["STOR565", "MATH201", "MATH522"],
-      ["MATH233", "STOR565", "MATH347"],
-      ["STOR565", "MATH347", "MATH522"],
-      ["MATH233", "STOR565", "MATH577"],
-      ["STOR565", "MATH522", "MATH577"]
+      ["COMP562", "MATH577", "MATH522"],
+      ["COMP755", "MATH201", "MATH233"],
+      ["MATH522", "COMP755", "MATH201"],
+      ["COMP755", "MATH347", "MATH233"],
+      ["MATH522", "COMP755", "MATH347"],
+      ["COMP755", "MATH233", "MATH577"],
+      ["MATH522", "COMP755", "MATH577"],
+      ["MATH233", "MATH201", "STOR565"],
+      ["MATH522", "MATH201", "STOR565"],
+      ["MATH347", "MATH233", "STOR565"],
+      ["MATH522", "MATH347", "STOR565"],
+      ["MATH233", "MATH577", "STOR565"],
+      ["MATH522", "MATH577", "STOR565"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -874,11 +874,11 @@
     "credits": 3,
     "prerequisites": [
       ["COMP562", "MATH577"],
-      ["MATH577", "STOR520"],
-      ["STOR565", "MATH577"],
+      ["STOR520", "MATH577"],
+      ["MATH577", "STOR565"],
       ["MATH347", "COMP562"],
       ["MATH347", "STOR520"],
-      ["STOR565", "MATH347"]
+      ["MATH347", "STOR565"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -912,7 +912,7 @@
     "name": "Compilers",
     "credits": 3,
     "prerequisites": [
-      ["COMP455", "COMP524", "COMP520"]
+      ["COMP524", "COMP455", "COMP520"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -932,7 +932,7 @@
     "name": "Software Design and Implementation",
     "credits": 3,
     "prerequisites": [
-      ["COMP550", "COMP524"]
+      ["COMP524", "COMP550"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -942,7 +942,7 @@
     "name": "Programming Languages",
     "credits": 3,
     "prerequisites": [
-      ["COMP455", "COMP524", "COMP520"]
+      ["COMP524", "COMP455", "COMP520"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -992,7 +992,7 @@
     "name": "Computer Architecture and Implementation",
     "credits": 3,
     "prerequisites": [
-      ["COMP411", "PHYS352"]
+      ["PHYS352", "COMP411"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1012,9 +1012,9 @@
     "name": "Machine Learning",
     "credits": 3,
     "prerequisites": [
-      ["STOR435", "MATH347"],
-      ["STOR435", "MATH547"],
-      ["STOR435", "MATH577"]
+      ["MATH347", "STOR435"],
+      ["MATH547", "STOR435"],
+      ["MATH577", "STOR435"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1044,7 +1044,7 @@
     "name": "Computer Graphics",
     "credits": 3,
     "prerequisites": [
-      ["COMP761", "COMP665"]
+      ["COMP665", "COMP761"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1054,7 +1054,7 @@
     "name": "Image Processing and Analysis",
     "credits": 3,
     "prerequisites": [
-      ["MATH233", "STOR435", "MATH347", "MATH547"]
+      ["MATH547", "MATH233", "MATH347", "STOR435"]
     ],
     "corequisites": [],
     "cross_listed": ["BMME775"],
@@ -1064,7 +1064,7 @@
     "name": "Computer Vision in our 3D World",
     "credits": 3,
     "prerequisites": [
-      ["COMP550", "COMP775", "MATH566", "COMP665"]
+      ["COMP775", "MATH566", "COMP665", "COMP550"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1074,8 +1074,8 @@
     "name": "Optimal Estimation in Image Analysis",
     "credits": 3,
     "prerequisites": [
-      ["MATH233", "MATH347", "MATH547", "MATH535"],
-      ["MATH233", "STOR435", "MATH347", "MATH547"]
+      ["MATH547", "MATH233", "MATH347", "MATH535"],
+      ["MATH547", "MATH233", "MATH347", "STOR435"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1085,7 +1085,7 @@
     "name": "Robotics",
     "credits": 3,
     "prerequisites": [
-      ["MATH347", "MATH547", "COMP550"]
+      ["MATH547", "MATH347", "COMP550"]
     ],
     "corequisites": [],
     "cross_listed": [],
@@ -1117,6 +1117,3011 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
+    "attributes": []
+  },
+  "DATA110": {
+    "name": "Introduction to Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "DATA120": {
+    "name": "Ethics of AI and Societal Decision Making",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-VALUES"]
+  },
+  "DATA130": {
+    "name": "Critical Data Literacy",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-KNOWING"]
+  },
+  "DATA140": {
+    "name": "Introduction to Data Structures and Management",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA150": {
+    "name": "Communication for Data Scientists",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["COMMBEYOND"]
+  },
+  "DATA395": {
+    "name": "Mentored Research in Data Science",
+    "credits": 1,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "DATA481": {
+    "name": "Data Science Practicum",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH347", "STOR120", "STOR455"],
+      ["STOR320"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-GENERAL"]
+  },
+  "DATA493": {
+    "name": "Internship in Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-INTERN"]
+  },
+  "DATA495": {
+    "name": "Mentored Research in Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "DATA496": {
+    "name": "Directed Exploration in Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA520": {
+    "name": "Research-Methods for Socially Responsible AI:  An Ethical Expedition",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA120"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-VALUES", "RESEARCH"]
+  },
+  "DATA521": {
+    "name": "Foundations in Artificial Intelligence",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR315", "MATH347", "BIOS635", "COMP110", "STOR435"],
+      ["COMP283", "MATH347", "BIOS635", "COMP110", "STOR435"],
+      ["MATH381", "MATH347", "BIOS635", "COMP110", "STOR435"],
+      ["MATH535", "STOR315", "MATH347", "BIOS635", "COMP110"],
+      ["COMP283", "MATH535", "MATH347", "BIOS635", "COMP110"],
+      ["MATH381", "MATH535", "MATH347", "BIOS635", "COMP110"],
+      ["STOR535", "STOR315", "MATH347", "BIOS635", "COMP110"],
+      ["STOR535", "COMP283", "MATH347", "BIOS635", "COMP110"],
+      ["STOR535", "MATH381", "MATH347", "BIOS635", "COMP110"],
+      ["STOR315", "MATH347", "STOR634", "BIOS635", "COMP110"],
+      ["COMP283", "MATH347", "STOR634", "BIOS635", "COMP110"],
+      ["MATH381", "MATH347", "STOR634", "BIOS635", "COMP110"],
+      ["STOR315", "MATH347", "COMP110", "COMP562", "STOR435"],
+      ["COMP283", "MATH347", "COMP110", "COMP562", "STOR435"],
+      ["MATH381", "MATH347", "COMP110", "COMP562", "STOR435"],
+      ["MATH535", "STOR315", "MATH347", "COMP110", "COMP562"],
+      ["COMP283", "MATH535", "MATH347", "COMP110", "COMP562"],
+      ["MATH381", "MATH535", "MATH347", "COMP110", "COMP562"],
+      ["STOR535", "STOR315", "MATH347", "COMP110", "COMP562"],
+      ["STOR535", "COMP283", "MATH347", "COMP110", "COMP562"],
+      ["STOR535", "MATH381", "MATH347", "COMP110", "COMP562"],
+      ["STOR315", "MATH347", "STOR634", "COMP110", "COMP562"],
+      ["COMP283", "MATH347", "STOR634", "COMP110", "COMP562"],
+      ["MATH381", "MATH347", "STOR634", "COMP110", "COMP562"],
+      ["STOR565", "STOR315", "MATH347", "COMP110", "STOR435"],
+      ["COMP283", "STOR565", "MATH347", "COMP110", "STOR435"],
+      ["MATH381", "STOR565", "MATH347", "COMP110", "STOR435"],
+      ["MATH535", "STOR565", "STOR315", "MATH347", "COMP110"],
+      ["COMP283", "MATH535", "STOR565", "MATH347", "COMP110"],
+      ["MATH381", "MATH535", "STOR565", "MATH347", "COMP110"],
+      ["STOR535", "STOR565", "STOR315", "MATH347", "COMP110"],
+      ["STOR535", "COMP283", "STOR565", "MATH347", "COMP110"],
+      ["STOR535", "MATH381", "STOR565", "MATH347", "COMP110"],
+      ["STOR565", "STOR315", "MATH347", "STOR634", "COMP110"],
+      ["COMP283", "STOR565", "MATH347", "STOR634", "COMP110"],
+      ["MATH381", "STOR565", "MATH347", "STOR634", "COMP110"],
+      ["STOR566", "STOR315", "MATH347", "COMP110", "STOR435"],
+      ["STOR566", "COMP283", "MATH347", "COMP110", "STOR435"],
+      ["STOR566", "MATH381", "MATH347", "COMP110", "STOR435"],
+      ["STOR566", "MATH535", "STOR315", "MATH347", "COMP110"],
+      ["STOR566", "COMP283", "MATH535", "MATH347", "COMP110"],
+      ["STOR566", "MATH381", "MATH535", "MATH347", "COMP110"],
+      ["STOR535", "STOR566", "STOR315", "MATH347", "COMP110"],
+      ["STOR535", "STOR566", "COMP283", "MATH347", "COMP110"],
+      ["STOR535", "STOR566", "MATH381", "MATH347", "COMP110"],
+      ["STOR566", "STOR315", "MATH347", "STOR634", "COMP110"],
+      ["STOR566", "COMP283", "MATH347", "STOR634", "COMP110"],
+      ["STOR566", "MATH381", "MATH347", "STOR634", "COMP110"],
+      ["MATH560", "STOR315", "MATH347", "COMP110", "STOR435"],
+      ["MATH560", "COMP283", "MATH347", "COMP110", "STOR435"],
+      ["MATH560", "MATH381", "MATH347", "COMP110", "STOR435"],
+      ["MATH560", "MATH535", "STOR315", "MATH347", "COMP110"],
+      ["MATH560", "COMP283", "MATH535", "MATH347", "COMP110"],
+      ["MATH560", "MATH381", "MATH535", "MATH347", "COMP110"],
+      ["STOR535", "MATH560", "STOR315", "MATH347", "COMP110"],
+      ["STOR535", "MATH560", "COMP283", "MATH347", "COMP110"],
+      ["STOR535", "MATH560", "MATH381", "MATH347", "COMP110"],
+      ["MATH560", "STOR315", "MATH347", "STOR634", "COMP110"],
+      ["MATH560", "COMP283", "MATH347", "STOR634", "COMP110"],
+      ["MATH560", "MATH381", "MATH347", "STOR634", "COMP110"],
+      ["COMP116", "STOR315", "MATH347", "BIOS635", "STOR435"],
+      ["COMP283", "COMP116", "MATH347", "BIOS635", "STOR435"],
+      ["MATH381", "COMP116", "MATH347", "BIOS635", "STOR435"],
+      ["COMP116", "MATH535", "STOR315", "MATH347", "BIOS635"],
+      ["COMP283", "COMP116", "MATH535", "MATH347", "BIOS635"],
+      ["MATH381", "COMP116", "MATH535", "MATH347", "BIOS635"],
+      ["STOR535", "COMP116", "STOR315", "MATH347", "BIOS635"],
+      ["STOR535", "COMP283", "COMP116", "MATH347", "BIOS635"],
+      ["STOR535", "MATH381", "COMP116", "MATH347", "BIOS635"],
+      ["COMP116", "STOR315", "MATH347", "STOR634", "BIOS635"],
+      ["COMP283", "COMP116", "MATH347", "STOR634", "BIOS635"],
+      ["MATH381", "COMP116", "MATH347", "STOR634", "BIOS635"],
+      ["COMP116", "STOR315", "MATH347", "COMP562", "STOR435"],
+      ["COMP283", "COMP116", "MATH347", "COMP562", "STOR435"],
+      ["MATH381", "COMP116", "MATH347", "COMP562", "STOR435"],
+      ["COMP116", "MATH535", "STOR315", "MATH347", "COMP562"],
+      ["COMP283", "COMP116", "MATH535", "MATH347", "COMP562"],
+      ["MATH381", "COMP116", "MATH535", "MATH347", "COMP562"],
+      ["STOR535", "COMP116", "STOR315", "MATH347", "COMP562"],
+      ["STOR535", "COMP283", "COMP116", "MATH347", "COMP562"],
+      ["STOR535", "MATH381", "COMP116", "MATH347", "COMP562"],
+      ["COMP116", "STOR315", "MATH347", "STOR634", "COMP562"],
+      ["COMP283", "COMP116", "MATH347", "STOR634", "COMP562"],
+      ["MATH381", "COMP116", "MATH347", "STOR634", "COMP562"],
+      ["COMP116", "STOR565", "STOR315", "MATH347", "STOR435"],
+      ["COMP283", "COMP116", "STOR565", "MATH347", "STOR435"],
+      ["MATH381", "COMP116", "STOR565", "MATH347", "STOR435"],
+      ["COMP116", "MATH535", "STOR565", "STOR315", "MATH347"],
+      ["COMP283", "COMP116", "MATH535", "STOR565", "MATH347"],
+      ["MATH381", "COMP116", "MATH535", "STOR565", "MATH347"],
+      ["STOR535", "COMP116", "STOR565", "STOR315", "MATH347"],
+      ["STOR535", "COMP283", "COMP116", "STOR565", "MATH347"],
+      ["STOR535", "MATH381", "COMP116", "STOR565", "MATH347"],
+      ["COMP116", "STOR565", "STOR315", "MATH347", "STOR634"],
+      ["COMP283", "COMP116", "STOR565", "MATH347", "STOR634"],
+      ["MATH381", "COMP116", "STOR565", "MATH347", "STOR634"],
+      ["STOR566", "COMP116", "STOR315", "MATH347", "STOR435"],
+      ["STOR566", "COMP283", "COMP116", "MATH347", "STOR435"],
+      ["STOR566", "MATH381", "COMP116", "MATH347", "STOR435"],
+      ["STOR566", "COMP116", "MATH535", "STOR315", "MATH347"],
+      ["STOR566", "COMP283", "COMP116", "MATH535", "MATH347"],
+      ["STOR566", "MATH381", "COMP116", "MATH535", "MATH347"],
+      ["STOR535", "STOR566", "COMP116", "STOR315", "MATH347"],
+      ["STOR535", "STOR566", "COMP283", "COMP116", "MATH347"],
+      ["STOR535", "STOR566", "MATH381", "COMP116", "MATH347"],
+      ["STOR566", "COMP116", "STOR315", "MATH347", "STOR634"],
+      ["STOR566", "COMP283", "COMP116", "MATH347", "STOR634"],
+      ["STOR566", "MATH381", "COMP116", "MATH347", "STOR634"],
+      ["MATH560", "COMP116", "STOR315", "MATH347", "STOR435"],
+      ["MATH560", "COMP283", "COMP116", "MATH347", "STOR435"],
+      ["MATH560", "MATH381", "COMP116", "MATH347", "STOR435"],
+      ["MATH560", "COMP116", "MATH535", "STOR315", "MATH347"],
+      ["MATH560", "COMP283", "COMP116", "MATH535", "MATH347"],
+      ["MATH560", "MATH381", "COMP116", "MATH535", "MATH347"],
+      ["STOR535", "MATH560", "COMP116", "STOR315", "MATH347"],
+      ["STOR535", "MATH560", "COMP283", "COMP116", "MATH347"],
+      ["STOR535", "MATH560", "MATH381", "COMP116", "MATH347"],
+      ["MATH560", "COMP116", "STOR315", "MATH347", "STOR634"],
+      ["MATH560", "COMP283", "COMP116", "MATH347", "STOR634"],
+      ["MATH560", "MATH381", "COMP116", "MATH347", "STOR634"],
+      ["STOR315", "MATH347", "BIOS635", "STOR120", "STOR435"],
+      ["COMP283", "MATH347", "BIOS635", "STOR120", "STOR435"],
+      ["MATH381", "MATH347", "BIOS635", "STOR120", "STOR435"],
+      ["MATH535", "STOR315", "MATH347", "BIOS635", "STOR120"],
+      ["COMP283", "MATH535", "MATH347", "BIOS635", "STOR120"],
+      ["MATH381", "MATH535", "MATH347", "BIOS635", "STOR120"],
+      ["STOR535", "STOR315", "MATH347", "BIOS635", "STOR120"],
+      ["STOR535", "COMP283", "MATH347", "BIOS635", "STOR120"],
+      ["STOR535", "MATH381", "MATH347", "BIOS635", "STOR120"],
+      ["STOR315", "MATH347", "STOR634", "BIOS635", "STOR120"],
+      ["COMP283", "MATH347", "STOR634", "BIOS635", "STOR120"],
+      ["MATH381", "MATH347", "STOR634", "BIOS635", "STOR120"],
+      ["STOR315", "MATH347", "STOR120", "COMP562", "STOR435"],
+      ["COMP283", "MATH347", "STOR120", "COMP562", "STOR435"],
+      ["MATH381", "MATH347", "STOR120", "COMP562", "STOR435"],
+      ["MATH535", "STOR315", "MATH347", "STOR120", "COMP562"],
+      ["COMP283", "MATH535", "MATH347", "STOR120", "COMP562"],
+      ["MATH381", "MATH535", "MATH347", "STOR120", "COMP562"],
+      ["STOR535", "STOR315", "MATH347", "STOR120", "COMP562"],
+      ["STOR535", "COMP283", "MATH347", "STOR120", "COMP562"],
+      ["STOR535", "MATH381", "MATH347", "STOR120", "COMP562"],
+      ["STOR315", "MATH347", "STOR634", "STOR120", "COMP562"],
+      ["COMP283", "MATH347", "STOR634", "STOR120", "COMP562"],
+      ["MATH381", "MATH347", "STOR634", "STOR120", "COMP562"],
+      ["STOR565", "STOR315", "MATH347", "STOR120", "STOR435"],
+      ["COMP283", "STOR565", "MATH347", "STOR120", "STOR435"],
+      ["MATH381", "STOR565", "MATH347", "STOR120", "STOR435"],
+      ["MATH535", "STOR565", "STOR315", "MATH347", "STOR120"],
+      ["COMP283", "MATH535", "STOR565", "MATH347", "STOR120"],
+      ["MATH381", "MATH535", "STOR565", "MATH347", "STOR120"],
+      ["STOR535", "STOR565", "STOR315", "MATH347", "STOR120"],
+      ["STOR535", "COMP283", "STOR565", "MATH347", "STOR120"],
+      ["STOR535", "MATH381", "STOR565", "MATH347", "STOR120"],
+      ["STOR565", "STOR315", "MATH347", "STOR634", "STOR120"],
+      ["COMP283", "STOR565", "MATH347", "STOR634", "STOR120"],
+      ["MATH381", "STOR565", "MATH347", "STOR634", "STOR120"],
+      ["STOR566", "STOR315", "MATH347", "STOR120", "STOR435"],
+      ["STOR566", "COMP283", "MATH347", "STOR120", "STOR435"],
+      ["STOR566", "MATH381", "MATH347", "STOR120", "STOR435"],
+      ["STOR566", "MATH535", "STOR315", "MATH347", "STOR120"],
+      ["STOR566", "COMP283", "MATH535", "MATH347", "STOR120"],
+      ["STOR566", "MATH381", "MATH535", "MATH347", "STOR120"],
+      ["STOR535", "STOR566", "STOR315", "MATH347", "STOR120"],
+      ["STOR535", "STOR566", "COMP283", "MATH347", "STOR120"],
+      ["STOR535", "STOR566", "MATH381", "MATH347", "STOR120"],
+      ["STOR566", "STOR315", "MATH347", "STOR634", "STOR120"],
+      ["STOR566", "COMP283", "MATH347", "STOR634", "STOR120"],
+      ["STOR566", "MATH381", "MATH347", "STOR634", "STOR120"],
+      ["MATH560", "STOR315", "MATH347", "STOR120", "STOR435"],
+      ["MATH560", "COMP283", "MATH347", "STOR120", "STOR435"],
+      ["MATH560", "MATH381", "MATH347", "STOR120", "STOR435"],
+      ["MATH560", "MATH535", "STOR315", "MATH347", "STOR120"],
+      ["MATH560", "COMP283", "MATH535", "MATH347", "STOR120"],
+      ["MATH560", "MATH381", "MATH535", "MATH347", "STOR120"],
+      ["STOR535", "MATH560", "STOR315", "MATH347", "STOR120"],
+      ["STOR535", "MATH560", "COMP283", "MATH347", "STOR120"],
+      ["STOR535", "MATH560", "MATH381", "MATH347", "STOR120"],
+      ["MATH560", "STOR315", "MATH347", "STOR634", "STOR120"],
+      ["MATH560", "COMP283", "MATH347", "STOR634", "STOR120"],
+      ["MATH560", "MATH381", "MATH347", "STOR634", "STOR120"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA522": {
+    "name": "Practical Deep Learning Systems",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP211", "COMP562"],
+      ["COMP211", "STOR565"],
+      ["BIOS635", "COMP211"],
+      ["COMP211", "STOR566"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA523": {
+    "name": "Modeling and Data Mining For Artificial Intelligence",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP560", "COMP562"],
+      ["COMP560", "STOR565"],
+      ["BIOS635", "COMP560"],
+      ["COMP560", "STOR566"],
+      ["DATA521", "COMP562"],
+      ["DATA521", "STOR565"],
+      ["BIOS635", "DATA521"],
+      ["DATA521", "STOR566"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA540": {
+    "name": "Introduction to Risk Management and Insurance",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH231", "MATH232"],
+      ["STOR151", "STOR155"],
+      ["BIOS511", "BIOS512"],
+      ["ECON400", "BIOS600"],
+      ["BIOL562", "ENEC562"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENEC540", "ENVR540"],
+    "attributes": []
+  },
+  "DATA541": {
+    "name": "Natural Hazards and Financial Risk",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH231", "MATH232"],
+      ["STOR151", "STOR155"],
+      ["BIOS511", "BIOS512"],
+      ["ECON400", "BIOS600"],
+      ["BIOL562", "ENEC562"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENEC541", "ENVR541"],
+    "attributes": []
+  },
+  "DATA542": {
+    "name": "Insurance: Balancing Risk and Return",
+    "credits": 5,
+    "prerequisites": [
+      ["MATH231", "MATH232"],
+      ["STOR151", "STOR155"],
+      ["BIOS511", "BIOS512"],
+      ["ECON400", "BIOS600"],
+      ["BIOL562", "ENEC562"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENEC542", "ENVR542"],
+    "attributes": []
+  },
+  "DATA543": {
+    "name": "Risk, Data Science and AI",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH231", "MATH232"],
+      ["STOR151", "STOR155"],
+      ["BIOS511", "BIOS512"],
+      ["ECON400", "BIOS600"],
+      ["BIOL562", "ENEC562"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENEC543", "ENVR543"],
+    "attributes": []
+  },
+  "DATA590": {
+    "name": "Special Topics in Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA110", "MATH347"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA593": {
+    "name": "Internship in Data Science",
+    "credits": 12,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-INTERN"]
+  },
+  "DATA693H": {
+    "name": "Honors Thesis in Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "DATA694H": {
+    "name": "Honors Thesis in Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "DATA710": {
+    "name": "Introduction to Applied Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA715": {
+    "name": "Advanced Databases for Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA720": {
+    "name": "Programming Methods for Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA730": {
+    "name": "Statistical Modeling and Inference for Data Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA735": {
+    "name": "Applied Causal Inference Methods in Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA730", "DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA740": {
+    "name": "Governance, Bias, and Ethics in Data Science and Artificial Intelligence",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA750": {
+    "name": "Mathematical Tools for Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA760": {
+    "name": "Visualization and Communication in Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA766": {
+    "name": "Leading Research Teams",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR665", "STOR765", "STOR664"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["STOR766"],
+    "attributes": []
+  },
+  "DATA780": {
+    "name": "Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA730", "DATA720", "DATA710"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "DATA785": {
+    "name": "Deep Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["DATA720", "DATA780", "DATA730"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR52": {
+    "name": "First-Year Seminar: Decisions, Decisions, Decisions",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR53": {
+    "name": "FYS: Networks: Degrees of Separation and Other Phenomena Relating to Connected Systems",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR54": {
+    "name": "First-Year Seminar: Adventures in Statistics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR55": {
+    "name": "First-Year Seminar: Risk and Uncertainty in the Real World",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR56": {
+    "name": "First-Year Seminar: The Art and Science of Decision Making in War and Peace",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR60": {
+    "name": "First-Year Seminar: Statistical Decision-Making Concepts",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR61": {
+    "name": "First-Year Seminar: Statistics for Environmental Change",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR62": {
+    "name": "First-Year Seminar: Probability and Paradoxes",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR63": {
+    "name": "FYS: Statistics, Biostatistics, and Bioinformatics: An Introduction to the Ongoing Evolution",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR64": {
+    "name": "First-Year Seminar: A Random Walk down Wall Street",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR66": {
+    "name": "First-Year Seminar: Visualizing Data",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR72": {
+    "name": "First-Year Seminar: Unlocking the Genetic Code",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR89": {
+    "name": "First-Year Seminar: Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "STOR113": {
+    "name": "Decision Models for Business and Economics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR115": {
+    "name": "Reasoning with Data: Navigating a Quantitative World",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["MATH115", "BIOL115", "PSYC115"],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR120": {
+    "name": "Foundations of Statistics and Data Science",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "STOR151": {
+    "name": "Introduction to Data Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR155": {
+    "name": "Introduction to Data Models and Inference",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "STOR190": {
+    "name": "Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR215": {
+    "name": "Foundations of Decision Sciences",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR235": {
+    "name": "Mathematics for Data Science",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH231", "MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["MATH235"],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR290": {
+    "name": "Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR291": {
+    "name": "Undergraduate Learning Assistantship",
+    "credits": 1,
+    "prerequisites": [
+      ["STOR120"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-LEARNTA"]
+  },
+  "STOR305": {
+    "name": "Introduction to Decision Analytics",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR120"],
+      ["STOR155"],
+      ["MATH152"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR315": {
+    "name": "Discrete Mathematics for Data Science",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "STOR320": {
+    "name": "Methods and Models of Data Science",
+    "credits": 4,
+    "prerequisites": [
+      ["STOR120"],
+      ["STOR155"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT", "FC-LAB"]
+  },
+  "STOR323": {
+    "name": "Ethics of Machine Learning in Society",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR120"],
+      ["STOR320"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-VALUES"]
+  },
+  "STOR358": {
+    "name": "Sample Survey Methodology",
+    "credits": 4,
+    "prerequisites": [
+      ["BIOS650"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["BIOS664"],
+    "attributes": []
+  },
+  "STOR390": {
+    "name": "Special Topics in Statistics and Operations Research",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR415": {
+    "name": "Introduction to Optimization",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR315", "MATH347"],
+      ["MATH347", "STOR215"],
+      ["COMP283", "MATH347"],
+      ["MATH347", "MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR435": {
+    "name": "Introduction to Probability",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH235", "STOR215"],
+      ["MATH235", "STOR315"],
+      ["MATH235", "MATH381"],
+      ["MATH235", "COMP283"],
+      ["MATH233", "STOR215"],
+      ["STOR315", "MATH233"],
+      ["MATH233", "MATH381"],
+      ["COMP283", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["MATH535"],
+    "attributes": []
+  },
+  "STOR445": {
+    "name": "Stochastic Modeling",
+    "credits": 3,
+    "prerequisites": [
+      ["BIOS660"],
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR455": {
+    "name": "Methods of Data Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR120"],
+      ["STOR155"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR471": {
+    "name": "Long-Term Actuarial Models",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR472": {
+    "name": "Short Term Actuarial Models",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR475": {
+    "name": "Healthcare Risk Analytics",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR490": {
+    "name": "Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR493": {
+    "name": "Internship in Statistics and Operations Research",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-INTERN"]
+  },
+  "STOR496": {
+    "name": "Undergraduate Reading and Research in Statistics and Operations Research",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "STOR512": {
+    "name": "Optimization for Machine Learning and Neural Networks",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR415"],
+      ["STOR612"],
+      ["MATH233", "MATH347"],
+      ["MATH235"],
+      ["COMP116", "COMP110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR520": {
+    "name": "Statistical Computing for Data Science",
+    "credits": 4,
+    "prerequisites": [
+      ["STOR455", "STOR435"],
+      ["STOR535", "STOR455"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR535": {
+    "name": "Probability for Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH235", "STOR215"],
+      ["MATH235", "STOR315"],
+      ["MATH235", "MATH381"],
+      ["MATH235", "COMP283"],
+      ["MATH233", "STOR215"],
+      ["STOR315", "MATH233"],
+      ["MATH233", "MATH381"],
+      ["COMP283", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR538": {
+    "name": "Sports Analytics",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR320"],
+      ["STOR455"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR543": {
+    "name": "Dynamic Decision Analytics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH347", "STOR435"],
+      ["MATH347", "MATH535"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["STOR515"],
+    "attributes": []
+  },
+  "STOR545": {
+    "name": "Stochastic Models and their Applications",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR445"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR555": {
+    "name": "Mathematical Statistics",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR556": {
+    "name": "Time Series Data Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR455", "STOR435"],
+      ["STOR535", "STOR455"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR557": {
+    "name": "Advanced Methods of Data Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR455", "STOR435"],
+      ["STOR535", "STOR455"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR565": {
+    "name": "Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR215", "STOR435"],
+      ["STOR535", "STOR215"],
+      ["STOR315", "STOR435"],
+      ["STOR315", "STOR535"],
+      ["STOR435", "MATH381"],
+      ["STOR535", "MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR566": {
+    "name": "Introduction to Deep Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["COMP116", "COMP110", "STOR415"],
+      ["STOR512", "COMP116", "COMP110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR572": {
+    "name": "Simulation for Analytics",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR120", "STOR435"],
+      ["STOR535", "STOR120"],
+      ["STOR155", "STOR435"],
+      ["STOR155", "STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR590": {
+    "name": "Special Topics in Statistics and Operations Research",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR612": {
+    "name": "Foundations of Optimization",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH347"],
+      ["MATH521"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR614": {
+    "name": "Advanced Optimization",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR612"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR634": {
+    "name": "Probability I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR635": {
+    "name": "Probability II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR634"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["MATH635"],
+    "attributes": []
+  },
+  "STOR641": {
+    "name": "Stochastic Modeling I",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"],
+      ["STOR535"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR642": {
+    "name": "Stochastic Modeling II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR641"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR654": {
+    "name": "Statistical Theory I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR655": {
+    "name": "Statistical Theory II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR654"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR664": {
+    "name": "Applied Statistics I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR665": {
+    "name": "Applied Statistics II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR664"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR672": {
+    "name": "Simulation Modeling and Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR555", "STOR641"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["COMP672"],
+    "attributes": []
+  },
+  "STOR674": {
+    "name": "Statistical and Computational Tools for Reproducible Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR320"],
+      ["STOR664"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR690": {
+    "name": "Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR691H": {
+    "name": "Honors in Statistics and Analytics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "STOR692H": {
+    "name": "Honors in Statistics and Analytics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "STOR697": {
+    "name": "Capstone",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["COMMBEYOND"]
+  },
+  "STOR701": {
+    "name": "Statistics and Operations Research Colloquium",
+    "credits": 1,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR702": {
+    "name": "Seminar in Teaching",
+    "credits": 1,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR712": {
+    "name": "Optimization for Machine Learning and Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR612"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR713": {
+    "name": "Mathematical Programming II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR712"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR722": {
+    "name": "Integer Programming",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR614"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR734": {
+    "name": "Stochastic Processes",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR435"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR743": {
+    "name": "Reinforcement Learning and Markov Decision Processes",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR641"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR754": {
+    "name": "Time Series and Multivariate Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR555", "STOR435"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR755": {
+    "name": "Estimation, Hypothesis Testing, and Statistical Decision",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR635", "STOR655"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR757": {
+    "name": "Bayesian Statistics and Generalized Linear Models",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR555"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR765": {
+    "name": "Statistical Consulting",
+    "credits": 5,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR766": {
+    "name": "Leading Research Teams",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR665", "STOR765", "STOR664"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["DATA766"],
+    "attributes": []
+  },
+  "STOR767": {
+    "name": "Advanced Statistical Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR665", "STOR655", "STOR654", "STOR664"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "STOR790": {
+    "name": "Operations Research and Systems Analysis Student Seminar",
+    "credits": 1,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH10": {
+    "name": "Review of Basic Algebra",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH51": {
+    "name": "First-Year Seminar: 'Fish Gotta Swim, Birds Gotta Fly': The Mathematics and the Mechanics of Moving",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH62": {
+    "name": "First-Year Seminar: Combinatorics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH65": {
+    "name": "First-Year Seminar: Colliding Balls and Springs: The Microstructure of How Materials Behave",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH68": {
+    "name": "First-Year Seminar: The Mathematics of Voting",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH69": {
+    "name": "First-Year Seminar: Unfolding Infinity: Mathematical Origami and Fractal Symmetry",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH70": {
+    "name": "First-Year Seminar: Topology and Symmetry",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH89": {
+    "name": "First-Year Seminar: Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "MATH110": {
+    "name": "Algebra",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH110L": {
+    "name": "Algebra Corequisite",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH115": {
+    "name": "Reasoning with Data: Navigating a Quantitative World",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["BIOL115", "PSYC115", "STOR115"],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH116": {
+    "name": "Intuitive Calculus",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH117": {
+    "name": "Aspects of Finite Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH118": {
+    "name": "Aspects of Modern Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH119": {
+    "name": "Introduction to Mathematical Modeling",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH129P": {
+    "name": "Precalculus Mathematics",
+    "credits": 0,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH130": {
+    "name": "Precalculus Mathematics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "MATH152": {
+    "name": "Calculus for Business and Social Sciences",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "MATH190": {
+    "name": "Special Topics in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH210": {
+    "name": "Mathematical Tools for Data Science",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH110"],
+      ["MATH110P"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH231": {
+    "name": "Calculus of Functions of One Variable I",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH130", "MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "MATH231L": {
+    "name": "Calculus I Corequisite",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH130", "MATH110"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH232": {
+    "name": "Calculus of Functions of One Variable II",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH231"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "MATH233": {
+    "name": "Calculus of Functions of Several Variables",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-QUANT"]
+  },
+  "MATH235": {
+    "name": "Mathematics for Data Science",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH231", "MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["STOR235"],
+    "attributes": ["FC-QUANT"]
+  },
+  "MATH290": {
+    "name": "Special Topics in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH291": {
+    "name": "Undergraduate Learning Assistantships",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH231"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-LEARNTA"]
+  },
+  "MATH294": {
+    "name": "Undergraduate Seminar in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH296": {
+    "name": "Directed Exploration in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "MATH307": {
+    "name": "Revisiting Real Numbers and Algebra",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH347": {
+    "name": "Linear Algebra for Applications",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH210", "MATH232"],
+      ["MATH231", "MATH381"],
+      ["COMP283"],
+      ["STOR315"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["MATH547"],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)"]
+  },
+  "MATH381": {
+    "name": "Discrete Mathematics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH232"],
+      ["MATH231"],
+      ["MATH210"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH383": {
+    "name": "First Course in Differential Equations",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233"],
+      ["MATH235"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH383L": {
+    "name": "First Course in Differential Equations Laboratory",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH383", "MATH233"],
+      ["MATH383", "MATH235"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH396": {
+    "name": "Undergraduate Reading and Research in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "MATH410": {
+    "name": "Teaching and Learning Mathematics",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["COMMBEYOND"]
+  },
+  "MATH435H": {
+    "name": "Introduction to Probability",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH235", "STOR215"],
+      ["MATH235", "STOR315"],
+      ["MATH235", "MATH381"],
+      ["MATH235", "COMP283"],
+      ["MATH233", "STOR215"],
+      ["STOR315", "MATH233"],
+      ["MATH233", "MATH381"],
+      ["COMP283", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH521": {
+    "name": "Advanced Calculus I",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "MATH381"],
+      ["MATH233", "STOR215"],
+      ["MATH235", "MATH381"],
+      ["MATH235", "STOR215"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH522": {
+    "name": "Advanced Calculus II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "MATH521"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH523": {
+    "name": "Functions of a Complex Variable with Applications",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH524": {
+    "name": "Elementary Differential Equations",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH528": {
+    "name": "Mathematical Methods for the Physical Sciences I",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH528L": {
+    "name": "Laboratory for Mathematical Methods for the Physical Sciences I",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH383", "MATH528"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH529": {
+    "name": "Mathematical Methods for the Physical Sciences II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH521"],
+      ["MATH524"],
+      ["MATH528"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH529L": {
+    "name": "Laboratory for Mathematical Methods for the Physical Sciences II",
+    "credits": 1,
+    "prerequisites": [
+      ["MATH383", "MATH529"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH533": {
+    "name": "Elementary Theory of Numbers",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH534": {
+    "name": "Elements of Modern Algebra",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH535": {
+    "name": "Introduction to Probability",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH235", "STOR215"],
+      ["MATH235", "STOR315"],
+      ["MATH235", "MATH381"],
+      ["MATH235", "COMP283"],
+      ["MATH233", "STOR215"],
+      ["STOR315", "MATH233"],
+      ["MATH233", "MATH381"],
+      ["COMP283", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["STOR435"],
+    "attributes": []
+  },
+  "MATH548": {
+    "name": "Combinatorial Mathematics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH550": {
+    "name": "Topology",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "MATH381"],
+      ["MATH235", "MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH551": {
+    "name": "Euclidean and Non-Euclidean Geometries",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH555": {
+    "name": "Introduction to Dynamics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH560": {
+    "name": "Optimization with Applications in Machine Learning",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "MATH347", "COMP110"],
+      ["MATH233", "MATH347", "COMP116"],
+      ["MATH233", "COMP110", "MATH577"],
+      ["MATH233", "COMP116", "MATH577"],
+      ["MATH235", "MATH347", "COMP110"],
+      ["MATH235", "MATH347", "COMP116"],
+      ["MATH235", "COMP110", "MATH577"],
+      ["MATH235", "COMP116", "MATH577"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH563": {
+    "name": "Introduction to Fluid Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH528"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "MATH564": {
+    "name": "Mathematical Modeling in the Life Sciences",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "MATH347"],
+      ["MATH383", "MATH577"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["BIOL534"],
+    "attributes": []
+  },
+  "MATH566": {
+    "name": "Introduction to Numerical Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "MATH577"],
+      ["MATH383", "MATH347"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH577": {
+    "name": "Linear Algebra",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "MATH381"],
+      ["MATH383", "STOR215"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH578": {
+    "name": "Algebraic Structures",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH347", "MATH381"],
+      ["MATH577", "MATH381"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH590": {
+    "name": "Topics in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH594": {
+    "name": "Nonlinear Dynamics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS594"],
+    "attributes": []
+  },
+  "MATH635": {
+    "name": "Probability II",
+    "credits": 3,
+    "prerequisites": [
+      ["STOR634"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["STOR635"],
+    "attributes": []
+  },
+  "MATH641": {
+    "name": "Enumerative Combinatorics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH578"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH643": {
+    "name": "Combinatorial Structures",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH578"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH653": {
+    "name": "Introductory Analysis",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH656": {
+    "name": "Complex Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH657": {
+    "name": "Qualitative Theory of Differential Equations",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH661": {
+    "name": "Scientific Computation I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["ENVR661"],
+    "attributes": []
+  },
+  "MATH662": {
+    "name": "Scientific Computation II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH661"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["COMP662", "ENVR662"],
+    "attributes": []
+  },
+  "MATH668": {
+    "name": "Methods of Applied Mathematics I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["ENVR668"],
+    "attributes": []
+  },
+  "MATH669": {
+    "name": "Methods of Applied Mathematics II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH668"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENVR669"],
+    "attributes": []
+  },
+  "MATH676": {
+    "name": "Modules, Linear Algebra, and Groups",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH677": {
+    "name": "Groups, Representations, and Fields",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH676"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH680": {
+    "name": "Differentiable Manifolds",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH681"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH681": {
+    "name": "Introductory Topology",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH690": {
+    "name": "Topics In Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH691H": {
+    "name": "Honors Research in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "MATH692H": {
+    "name": "Honors Thesis in Mathematics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "MATH751": {
+    "name": "Introduction to Partial Differential Equations",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH753": {
+    "name": "Measure and Integration",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH754": {
+    "name": "Introductory Functional Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH753"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH755": {
+    "name": "Advanced Complex Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH656"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH756": {
+    "name": "Several Complex Variables",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH656"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH757": {
+    "name": "Spectral Theory",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH758": {
+    "name": "Semiclassical Analysis",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH653"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH761": {
+    "name": "Numerical ODE/PDE, I",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH661", "MATH662"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENVR761", "MASC781"],
+    "attributes": []
+  },
+  "MATH762": {
+    "name": "Numerical ODE/PDE, II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH761"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENVR762", "EMES782"],
+    "attributes": []
+  },
+  "MATH768": {
+    "name": "Mathematical Modeling I",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH668", "MATH661", "MATH669", "MATH662"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENVR763", "MASC783"],
+    "attributes": []
+  },
+  "MATH769": {
+    "name": "Mathematical Modeling II",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH668", "MATH661", "MATH669", "MATH662"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ENVR764", "EMES784"],
+    "attributes": []
+  },
+  "MATH771": {
+    "name": "Commutative Algebra",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH677"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH773": {
+    "name": "Lie Groups",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH781", "MATH676"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH774": {
+    "name": "Lie Algebras",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH676"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH775": {
+    "name": "Algebraic Geometry",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH771"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH776": {
+    "name": "Algebraic Topology",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH681", "MATH676"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH782": {
+    "name": "Differential Geometry",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH680"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "MATH783": {
+    "name": "Symplectic Geometry",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH680"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS50": {
+    "name": "First-Year Seminar: Time and the Medieval Cosmos",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "PHYS51": {
+    "name": "First-Year Seminar: The Interplay of Music and Physics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR", "FC-AESTH", "or", "FC-NATSCI"]
+  },
+  "PHYS53": {
+    "name": "First-Year Seminar: Handcrafting in the Nanoworld: Building Models and Manipulating Molecules",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "PHYS54": {
+    "name": "First-Year Seminar: Physics of Movies",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "PHYS55": {
+    "name": "First-Year Seminar: Introduction to Mechatronics",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR", "FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS63": {
+    "name": "First-Year Seminar: Catastrophe and Chaos: Unpredictable Physics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "PHYS89": {
+    "name": "First-Year Seminar: Special Topics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-SEMINAR"]
+  },
+  "PHYS100": {
+    "name": "How Things Work",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-CREATE", "or", "FC-NATSCI", "FC-LAB"]
+  },
+  "PHYS101": {
+    "name": "Basic Concepts of Physics",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS108": {
+    "name": "Climate and Energy Transitions: Understanding the Forecasts",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["GEOL108", "EMES108"],
+    "attributes": []
+  },
+  "PHYS114": {
+    "name": "General Physics I: For Students of the Life Sciences",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH129P"],
+      ["MATH130"],
+      ["MATH231"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS115": {
+    "name": "General Physics II: For Students of the Life Sciences",
+    "credits": 4,
+    "prerequisites": [
+      ["PHYS104"],
+      ["PHYS114"],
+      ["PHYS116"],
+      ["PHYS118"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS118": {
+    "name": "Introductory Calculus-based Mechanics and Relativity",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH231", "MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS119": {
+    "name": "Introductory Calculus-based Electromagnetism and Quanta",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH233", "PHYS118"],
+      ["PHYS118H", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FY-LAUNCH", "(only", "designated", "sections)", "FC-NATSCI", "or", "FC-QUANT", "FC-LAB"]
+  },
+  "PHYS128": {
+    "name": "Modern Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS117"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS128L": {
+    "name": "Modern Physics Laboratory",
+    "credits": 1,
+    "prerequisites": [
+      ["PHYS128"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS131": {
+    "name": "Energy: Physical Principles and the Quest for Alternatives to Dwindling Oil and Gas",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS131L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS131L": {
+    "name": "Energy: Physical Principles and the Quest for Alternatives to Dwindling Oil and Gas",
+    "credits": 1,
+    "prerequisites": [
+      ["PHYS131"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS201": {
+    "name": "Basic Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS211": {
+    "name": "Intermediate Electromagnetism",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "PHYS117"],
+      ["MATH233", "PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS231": {
+    "name": "Physical Computing",
+    "credits": 4,
+    "prerequisites": [
+      ["PHYS114"],
+      ["PHYS118"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-CREATE", "or", "FC-QUANT", "FC-LAB", "RESEARCH"]
+  },
+  "PHYS281L": {
+    "name": "Experimental Techniques in Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS117"],
+      ["PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["FC-NATSCI", "FC-LAB", "COMMBEYOND"]
+  },
+  "PHYS290": {
+    "name": "Special Topics in Physics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS293": {
+    "name": "Internship In Physics and Astronomy",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS331"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-INTERN"]
+  },
+  "PHYS295": {
+    "name": "Research with Faculty Mentor I",
+    "credits": 12,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "PHYS311": {
+    "name": "Electromagnetism I",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS117", "PHYS331"],
+      ["PHYS331", "PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS331": {
+    "name": "Numerical Techniques for the Sciences I",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH383", "PHYS104"],
+      ["MATH383", "PHYS114"],
+      ["MATH383", "PHYS116"],
+      ["MATH383", "PHYS118"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS332": {
+    "name": "Numerical Techniques for the Sciences II",
+    "credits": 4,
+    "prerequisites": [
+      ["PHYS331"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS358"],
+    "attributes": []
+  },
+  "PHYS354": {
+    "name": "Quantum Mechanics, Weirdness, and Reality",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH231", "PHYS100"],
+      ["PHYS101", "MATH231"],
+      ["MATH231", "PHYS102"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHIL354"],
+    "attributes": []
+  },
+  "PHYS381": {
+    "name": "Renewable Electric Power Systems",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "PHYS119"],
+      ["PHYS115", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS581"],
+    "attributes": []
+  },
+  "PHYS390": {
+    "name": "Special Topics in Physics and Astronomy",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS391": {
+    "name": "Senior Seminar",
+    "credits": 15,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS395": {
+    "name": "Research with Faculty Mentor II",
+    "credits": 12,
+    "prerequisites": [
+      ["PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "PHYS401": {
+    "name": "Mechanics I",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "PHYS331", "PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS405": {
+    "name": "Biological Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS116", "PHYS117"],
+      ["PHYS118", "PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["BIOL431", "BMME435"],
+    "attributes": []
+  },
+  "PHYS410": {
+    "name": "Teaching and Learning Physics",
+    "credits": 4,
+    "prerequisites": [
+      ["PHYS117"],
+      ["PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-LEARNTA"]
+  },
+  "PHYS412": {
+    "name": "Electromagnetism II",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS332", "PHYS311", "PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS421": {
+    "name": "Introduction to Quantum Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "MATH347", "PHYS117"],
+      ["MATH383", "MATH347", "PHYS119"],
+      ["MATH383", "PHYS117", "PHYS331"],
+      ["MATH383", "PHYS331", "PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS321"],
+    "attributes": []
+  },
+  "PHYS422": {
+    "name": "Physics of the Earth's Interior",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383", "PHYS211", "PHYS201"],
+      ["MATH383", "PHYS401", "PHYS311"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["EMES422"],
+    "attributes": []
+  },
+  "PHYS441": {
+    "name": "Thermal Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "PHYS117"],
+      ["MATH233", "PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["BMME441"],
+    "attributes": []
+  },
+  "PHYS447": {
+    "name": "Quantum Computing",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS116", "MATH232"],
+      ["PHYS118", "MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["COMP447"],
+    "attributes": []
+  },
+  "PHYS448": {
+    "name": "Machine Learning in Physics and Astronomy",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS114", "MATH232"],
+      ["PHYS118", "MATH232"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["ASTR448"],
+    "attributes": []
+  },
+  "PHYS451": {
+    "name": "Electronics I",
+    "credits": 4,
+    "prerequisites": [
+      ["MATH383", "PHYS115", "PHYS331"],
+      ["MATH383", "PHYS119", "PHYS331"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS351"],
+    "attributes": []
+  },
+  "PHYS452": {
+    "name": "Electronics II",
+    "credits": 4,
+    "prerequisites": [
+      ["PHYS451"],
+      ["BMME207", "BMME365"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS352"],
+    "attributes": []
+  },
+  "PHYS461": {
+    "name": "Introduction to Medical Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH233", "PHYS119"],
+      ["PHYS115", "MATH233"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS471": {
+    "name": "Physics of Solid State Electronic Devices",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS117"],
+      ["PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS472": {
+    "name": "Chemistry and Physics of Electronic Materials Processing",
+    "credits": 3,
+    "prerequisites": [
+      ["CHEM482"],
+      ["PHYS117"],
+      ["PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["APPL472", "CHEM472"],
+    "attributes": []
+  },
+  "PHYS481L": {
+    "name": "Advanced Laboratory I",
+    "credits": 2,
+    "prerequisites": [
+      ["PHYS451", "PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH", "COMMBEYOND"]
+  },
+  "PHYS491L": {
+    "name": "Materials Laboratory I",
+    "credits": 2,
+    "prerequisites": [
+      ["APPL470", "PHYS351"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS492L": {
+    "name": "Materials Laboratory II",
+    "credits": 2,
+    "prerequisites": [
+      ["APPL491L"],
+      ["PHYS491L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS510": {
+    "name": "Seminar for Physics and Astronomy Teaching Assistants",
+    "credits": 1,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-LEARNTA"]
+  },
+  "PHYS510L": {
+    "name": "Practicum for Physics and Astronomy Undergraduate Teaching and Learning Assistants",
+    "credits": 1,
+    "prerequisites": [
+      ["PHYS510"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["HI-LEARNTA"]
+  },
+  "PHYS515": {
+    "name": "Optics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS211"],
+      ["PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["PHYS415"],
+    "attributes": []
+  },
+  "PHYS521": {
+    "name": "Applications of Quantum Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS529": {
+    "name": "Introduction to Magnetic Resonance",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"],
+      ["CHEM486"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS543": {
+    "name": "Nuclear Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS545": {
+    "name": "Introductory Elementary Particle Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421", "PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS573": {
+    "name": "Introductory Solid State Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["APPL573"],
+    "attributes": []
+  },
+  "PHYS586": {
+    "name": "Introduction to Biomedical Imaging Science",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS119"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS594": {
+    "name": "Nonlinear Dynamics",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH383"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["MATH594"],
+    "attributes": []
+  },
+  "PHYS631": {
+    "name": "Mathematical Methods of Theoretical Physics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS332", "PHYS281L"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS632": {
+    "name": "Advanced Research Analytics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS633": {
+    "name": "Scientific Programming",
+    "credits": 3,
+    "prerequisites": [
+      ["MATH528"],
+      ["MATH529"],
+      ["PHYS631"],
+      ["PHYS632"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS660": {
+    "name": "Fluid Dynamics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS401"]
+    ],
+    "corequisites": [],
+    "cross_listed": ["GEOL560", "EMES560", "ENVR452"],
+    "attributes": []
+  },
+  "PHYS671L": {
+    "name": "Independent Laboratory I",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS401", "PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS672L": {
+    "name": "Independent Laboratory II",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS401", "PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS691H": {
+    "name": "Senior Honor Thesis Research I",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "PHYS692H": {
+    "name": "Senior Honor Thesis Research II",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS691H"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": ["RESEARCH"]
+  },
+  "PHYS701": {
+    "name": "Classical Dynamics",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS711": {
+    "name": "Electromagnetic Theory I",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS631", "PHYS632"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS712": {
+    "name": "Electromagnetic Theory",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS721": {
+    "name": "Quantum Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS722": {
+    "name": "Quantum Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS421"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS741": {
+    "name": "Statistical Mechanics",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS701", "PHYS721"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS771L": {
+    "name": "Advanced Spectroscopic Techniques",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS401"],
+      ["PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS772L": {
+    "name": "Advanced Spectroscopic Techniques",
+    "credits": 3,
+    "prerequisites": [
+      ["PHYS401"],
+      ["PHYS412"]
+    ],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
+  },
+  "PHYS780": {
+    "name": "Advanced Materials Science",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": ["MTSC780", "BMME780", "CHEM780"],
     "attributes": []
   }
 }
