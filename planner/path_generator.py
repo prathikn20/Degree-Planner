@@ -83,8 +83,9 @@ def expand_prerequisites(courses, catalog, completed_set):
 
     return all_needed
 
-def get_remaining_courses(results, requirements, catalog, completed, track_id="COMP_BS", concentration_id="None"):
+def get_remaining_courses(results, requirements, catalog, completed, avoid_courses=None, track_id="COMP_BS", concentration_id="None"):
     completed_set = set(completed)
+    avoid_set     = set(avoid_courses) if avoid_courses else set()
     remaining = []
 
     track_data = requirements.get(track_id, {})
@@ -93,7 +94,7 @@ def get_remaining_courses(results, requirements, catalog, completed, track_id="C
 
     base = track_data.get("base_requirements", {})
     conc = track_data.get("concentrations", {}).get(concentration_id, {})
-    
+
     program = {
         "required_courses": base.get("required_courses", []) + conc.get("required_courses", []),
         "choice_groups": base.get("choice_groups", []) + conc.get("choice_groups", [])
@@ -111,7 +112,7 @@ def get_remaining_courses(results, requirements, catalog, completed, track_id="C
         options = group_info["options"]
 
         sorted_options = sorted(
-            options,
+            [c for c in options if c not in avoid_set],
             key=lambda c: get_prereq_depth(c, catalog, completed_set)
         )
 

@@ -18,13 +18,25 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
         return []
 
     valid = []
-    rule_dept = rule.get("department")
-    rule_min_num = rule.get("min_number", 0)
-    rule_exclude = set(rule.get("exclude", []))
-    rule_min_cred = rule.get("min_credits", 0)
+    rule_attribute = rule.get("attribute")
+    rule_dept      = rule.get("department")
+    rule_min_num   = rule.get("min_number", 0)
+    rule_exclude   = set(rule.get("exclude", []))
+    rule_min_cred  = rule.get("min_credits", 0)
 
     for course_id, data in catalog.items():
-        dept = ''.join(filter(str.isalpha, course_id))
+        if course_id in rule_exclude:
+            continue
+
+        # Attribute-based rule: match any course whose attributes list contains the tag.
+        # Dept/number filters are ignored when an attribute key is present.
+        if rule_attribute:
+            if rule_attribute in data.get("attributes", []):
+                valid.append(course_id)
+            continue
+
+        # Department / number-range rule (original behaviour)
+        dept       = ''.join(filter(str.isalpha, course_id))
         number_str = ''.join(filter(str.isdigit, course_id))
         if not number_str:
             continue
@@ -32,20 +44,17 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
 
         if ((not rule_dept or dept == rule_dept) and
                 number >= rule_min_num and
-                course_id not in rule_exclude and
                 data.get("credits", 0) >= rule_min_cred):
             valid.append(course_id)
 
-    # Also include virtual cross-listed IDs (from completed courses) that match the rule.
-    # E.g., if a student took STOR565 (cross_listed: ["COMP565"]), COMP565 gets added here
-    # so _get_satisfying_course can resolve it back to STOR565.
-    if virtual_courses:
+    # Virtual cross-listed IDs only apply to dept/number rules, not attribute rules.
+    if virtual_courses and not rule_attribute:
         valid_set = set(valid)
         for virtual_id in virtual_courses:
             if virtual_id in rule_exclude or virtual_id in valid_set:
                 continue
-            v_dept = ''.join(filter(str.isalpha, virtual_id))
-            v_num_str = ''.join(filter(str.isdigit, virtual_id))
+            v_dept     = ''.join(filter(str.isalpha, virtual_id))
+            v_num_str  = ''.join(filter(str.isdigit, virtual_id))
             if not v_num_str:
                 continue
             v_num = int(v_num_str)
@@ -56,11 +65,13 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
 
 
 def check_requirements(requirements, catalog, completed, other_majors_courses=None,
-                        other_required_courses=None, track_id="COMP_BS", concentration_id="None"):
+                        other_required_courses=None, avoid_courses=None,
+                        track_id="COMP_BS", concentration_id="None"):
     if other_majors_courses is None:
         other_majors_courses = set()
     if other_required_courses is None:
         other_required_courses = set()
+    avoid_set = set(avoid_courses) if avoid_courses else set()
 
     available_completed = set(completed)
     original_completed = set(completed)
@@ -152,7 +163,7 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
         else:
             options = []
 
-        options = [o for o in options if o not in required_set]
+        options = [o for o in options if o not in required_set and o not in avoid_set]
 
         courses_needed = group.get("courses_required", 1)
         credits_needed = group.get("credits_required")
