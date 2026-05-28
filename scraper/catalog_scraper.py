@@ -6,6 +6,45 @@ import re
 from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 
+# All raw tag strings that may appear in the UNC catalog's "Gen Ed:" field.
+# Longer strings must come first in the alternation so the regex engine is greedy-correct.
+_IEA_RAW_TAGS = frozenset({
+    # First-Year Foundations
+    "FY-SEMINAR", "FY-LAUNCH",
+    # Focus Capacities (canonical)
+    "FC-AESTH", "FC-CREATE", "FC-PAST", "FC-VALUES", "FC-GLOBAL",
+    "FC-NATSCI", "FC-LAB", "FC-POWER", "FC-QUANT",
+    # FC-KNOW: catalog prints "FC-KNOWING"; normalize below
+    "FC-KNOW", "FC-KNOWING",
+    # Communication Beyond: catalog uses "COMMBEYOND"; normalize to "COMM"
+    "COMM", "COMMBEYOND",
+    # Lifetime Fitness: catalog uses "LIFE-FIT"; normalize to "LFIT"
+    "LFIT", "LIFE-FIT",
+    # Reflection & Integration
+    "RESEARCH", "IMPACT",
+    # High-Impact Experiences: catalog uses several HI-* variants; normalize to "HI-EXP"
+    "HI-EXP", "HI-SERVICE", "HI-PERFORM", "HI-LEARNTA", "HI-INTERN", "HI-GENERAL",
+})
+
+# Maps catalog variant → canonical name stored in course_catalog.json
+_IEA_NORMALIZE: dict[str, str] = {
+    "FC-KNOWING": "FC-KNOW",
+    "LIFE-FIT":   "LFIT",
+    "COMMBEYOND": "COMM",
+    "HI-SERVICE": "HI-EXP",
+    "HI-PERFORM": "HI-EXP",
+    "HI-LEARNTA": "HI-EXP",
+    "HI-INTERN":  "HI-EXP",
+    "HI-GENERAL": "HI-EXP",
+}
+
+# Exported frozenset of canonical tag names for external validation
+_IEA_TAGS = frozenset(_IEA_NORMALIZE.get(t, t) for t in _IEA_RAW_TAGS)
+
+_IEA_RE = re.compile(
+    r'\b(' + '|'.join(re.escape(t) for t in sorted(_IEA_RAW_TAGS, key=len, reverse=True)) + r')\b'
+)
+
 def fetch_html(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -72,13 +111,11 @@ def extract_course_info(block):
             raw_prereq = text
             
         elif 'Gen Ed:' in text:
-            parts = text.split('Gen Ed:')
-            if len(parts) > 1:
-                tag_name = parts[-1].split('.')[0].strip(': ')
-                for token in re.split(r'[\s,]+', tag_name):
-                    token = token.strip()
-                    if token and token not in attributes and len(token) >= 2:
-                        attributes.append(token)
+            gen_ed_section = text.split('Gen Ed:', 1)[-1]
+            for m in _IEA_RE.finditer(gen_ed_section):
+                tag = _IEA_NORMALIZE.get(m.group(1), m.group(1))
+                if tag not in attributes:
+                    attributes.append(tag)
 
     course_data = {
         "name": title_text,
