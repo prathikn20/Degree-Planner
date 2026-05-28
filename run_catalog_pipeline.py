@@ -6,14 +6,14 @@ import os
 import hashlib
 import itertools
 from scraper.catalog_scraper import scrape_department
-from scraper.llm_parser import parse_prerequisites_with_llm
+from scraper.llm_catalog_parser import parse_prerequisites_with_llm
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 TARGET_URL = "https://catalog.unc.edu/courses/comp/"
 OUTPUT_PATH = "data/course_catalog.json"
-CACHE_PATH = "data/prereq_cache.json"
+CACHE_PATH = "data/course_cache.json"
 OVERRIDES_PATH = "data/overrides.json"
 LOG_PATH = "data/needs_review.log"
 MODEL_NAME = "qwen2.5:14b"
@@ -116,7 +116,7 @@ def run_ingestion_pipeline():
     if os.path.exists(LOG_PATH):
         os.remove(LOG_PATH)
     
-    prereq_cache = load_json_file(CACHE_PATH)
+    course_cache = load_json_file(CACHE_PATH)
     manual_overrides = load_json_file(OVERRIDES_PATH)
     
     try:
@@ -147,8 +147,8 @@ def run_ingestion_pipeline():
             text_hash = hashlib.md5(raw_text.encode('utf-8')).hexdigest()
             
             # 2. CHECK CACHE SECOND
-            if text_hash in prereq_cache:
-                ast_prereqs = prereq_cache[text_hash]
+            if text_hash in course_cache:
+                ast_prereqs = course_cache[text_hash]
                 
             # 3. FALLBACK TO LLM
             else:
@@ -156,8 +156,8 @@ def run_ingestion_pipeline():
                 ast_prereqs = parse_prerequisites_with_llm(raw_text, model_name=MODEL_NAME)
                 
                 if ast_prereqs and ast_prereqs != {"operator": "AND", "operands": ["MANUAL_REVIEW_NEEDED"]}:
-                    prereq_cache[text_hash] = ast_prereqs
-                    save_cache(prereq_cache)
+                    course_cache[text_hash] = ast_prereqs
+                    save_cache(course_cache)
                     
         # 4. COMPILE AST INTO 2D SOLVER MATRIX
         clean_prereqs = compile_ast_to_2d_array(ast_prereqs) if ast_prereqs else []
