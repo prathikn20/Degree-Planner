@@ -4,6 +4,9 @@ import re
 from planner.graph import is_available
 
 def get_prereq_depth(course, catalog, completed_set):
+    if course not in catalog:
+        return float('inf')
+
     if is_available(course, catalog, completed_set):
         return 0
 
@@ -80,13 +83,21 @@ def expand_prerequisites(courses, catalog, completed_set):
 
     return all_needed
 
-def get_remaining_courses(results, requirements, catalog, completed, track_id="COMP_BS"):
+def get_remaining_courses(results, requirements, catalog, completed, track_id="COMP_BS", concentration_id="None"):
     completed_set = set(completed)
     remaining = []
 
-    program = requirements.get(track_id, {})
-    if not program:
+    track_data = requirements.get(track_id, {})
+    if not track_data:
         return remaining
+
+    base = track_data.get("base_requirements", {})
+    conc = track_data.get("concentrations", {}).get(concentration_id, {})
+    
+    program = {
+        "required_courses": base.get("required_courses", []) + conc.get("required_courses", []),
+        "choice_groups": base.get("choice_groups", []) + conc.get("choice_groups", [])
+    }
 
     for course in program.get("required_courses", []):
         if course in results["unsatisfied"]:
@@ -104,7 +115,6 @@ def get_remaining_courses(results, requirements, catalog, completed, track_id="C
             key=lambda c: get_prereq_depth(c, catalog, completed_set)
         )
 
-        # Handle Credit-Based Groups
         if "credits_required" in group and group["credits_required"]:
             credits_needed = group_info.get("credits_still_needed", group["credits_required"])
             current_credits = 0
@@ -114,14 +124,12 @@ def get_remaining_courses(results, requirements, catalog, completed, track_id="C
                 remaining.append(opt)
                 current_credits += catalog.get(opt, {}).get("credits", 3)
                 
-        # Handle Course-Based Groups
         else:
             courses_needed = group_info.get("still_needed", group.get("courses_required", 1))
             chosen = sorted_options[:courses_needed]
             remaining.extend(chosen)
 
     return remaining
-
 def compute_in_degrees(graph):
     in_degree = {course: 0 for course in graph}
     for course in graph:

@@ -11,7 +11,14 @@ from scraper.llm_catalog_parser import parse_prerequisites_with_llm
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-TARGET_URL = "https://catalog.unc.edu/courses/comp/"
+# Renamed to plural for clarity
+TARGET_URLS = [
+    "https://catalog.unc.edu/courses/comp/", 
+    "https://catalog.unc.edu/courses/data/", 
+    "https://catalog.unc.edu/courses/stor/", 
+    "https://catalog.unc.edu/courses/math/",
+    "https://catalog.unc.edu/courses/phys/"
+]
 OUTPUT_PATH = "data/course_catalog.json"
 CACHE_PATH = "data/course_cache.json"
 OVERRIDES_PATH = "data/overrides.json"
@@ -110,7 +117,7 @@ def flag_anomalies(course_id, prereq_array):
             logger.warning(f"FLAG on {course_id}: {flag_reason}")
 
 def run_ingestion_pipeline():
-    logger.info(f"Scraping {TARGET_URL}")
+    logger.info("Starting ingestion pipeline...")
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     
     if os.path.exists(LOG_PATH):
@@ -119,13 +126,23 @@ def run_ingestion_pipeline():
     course_cache = load_json_file(CACHE_PATH)
     manual_overrides = load_json_file(OVERRIDES_PATH)
     
-    try:
-        raw_scraped_data = scrape_department(TARGET_URL)
-    except Exception as e:
-        logger.critical(f"Scraper failed: {e}")
+    # --- BUG FIX: Loop through URLs and merge dictionaries ---
+    raw_scraped_data = {}
+    for url in TARGET_URLS:
+        logger.info(f"Scraping {url}")
+        try:
+            dept_data = scrape_department(url)
+            raw_scraped_data.update(dept_data)
+        except Exception as e:
+            logger.error(f"Scraper failed for {url}: {e}")
+            
+    if not raw_scraped_data:
+        logger.critical("No data scraped from any URL. Exiting.")
         return
+    # ---------------------------------------------------------
 
     normalized_catalog = {}
+    cache_updated = False
     
     for course_id, data in raw_scraped_data.items():
         clean_id = course_id.strip('.')
@@ -140,7 +157,6 @@ def run_ingestion_pipeline():
         # 1. CHECK MANUAL OVERRIDES FIRST
         if clean_id in manual_overrides:
             logger.info(f"Override Engaged: Injecting manual data for {clean_id}")
-            # Ensure override routes to AST parser, not bypass
             ast_prereqs = manual_overrides[clean_id]
             
         elif raw_text and raw_text != "Requisites:":
@@ -157,7 +173,7 @@ def run_ingestion_pipeline():
                 
                 if ast_prereqs and ast_prereqs != {"operator": "AND", "operands": ["MANUAL_REVIEW_NEEDED"]}:
                     course_cache[text_hash] = ast_prereqs
-                    save_cache(course_cache)
+                    cache_updated = True # Mark for saving later instead of every loop
                     
         # 4. COMPILE AST INTO 2D SOLVER MATRIX
         clean_prereqs = compile_ast_to_2d_array(ast_prereqs) if ast_prereqs else []
@@ -172,6 +188,11 @@ def run_ingestion_pipeline():
             "attributes": data.get("attributes", [])
         }
         
+    # --- BUG FIX: Save cache only once at the end ---
+    if cache_updated:
+        logger.info("Saving updated cache to disk...")
+        save_cache(course_cache)
+
     try:
         raw_json_str = json.dumps(normalized_catalog, indent=2)
         compact_json = re.sub(
@@ -184,7 +205,7 @@ def run_ingestion_pipeline():
         with open(OUTPUT_PATH, 'w') as f:
             f.write(compact_json)
     except Exception as e:
-        logger.error(f"Failed to save checkpoint for {clean_id}: {e}")
+        logger.error(f"Failed to save final catalog JSON: {e}")
 
     logger.info(f"Pipeline complete! Saved to {OUTPUT_PATH}")
     if os.path.exists(LOG_PATH):

@@ -10,10 +10,11 @@ COMPLETED = [
 ]
 
 IN_PROGRESS = ["COMP211", "COMP301", "DATA215", "MATH347", "BUSI100"]
+PLANNED_COURSES = ["COMP421", "STOR435"] 
 
-def print_requirement_status(results):
-    print("=" * 50)
-    print("REQUIREMENT STATUS")
+def print_requirement_status(results, title):
+    print("\n" + "=" * 50)
+    print(f"REQUIREMENT STATUS: {title}")
     print("=" * 50)
     print("\nSATISFIED:")
     for req in results["satisfied"]:
@@ -23,12 +24,13 @@ def print_requirement_status(results):
         if isinstance(details, list):
             print(f"  - {req_id}")
         else:
-            print(f"  - {req_id}: need {details['still_needed']} more")
-            print(f"    options: {details['options']}")
+            needed = details.get('still_needed') or details.get('credits_still_needed')
+            suffix = "credits" if 'credits_still_needed' in details else "courses"
+            print(f"  - {req_id}: need {needed} more {suffix}")
 
 def print_path(path, catalog):
     print("\n" + "=" * 50)
-    print("SUGGESTED PATH TO GRADUATION")
+    print("SUGGESTED PATH TO GRADUATION (DUAL DEGREE)")
     print("=" * 50)
     for i, course in enumerate(path, 1):
         name = catalog.get(course, {}).get("name", "Unknown")
@@ -43,16 +45,53 @@ def main():
     requirements = load_requirements("data/degree_requirements.json")
     graph = build_graph(catalog)
 
-    results = check_requirements(requirements, catalog, COMPLETED)
-    print_requirement_status(results)
+    assumed_completed = COMPLETED + IN_PROGRESS + PLANNED_COURSES
+    
+    majors_to_check = [
+        {"track": "Data_Science_BS", "concentration": "None"},
+        {"track": "Computer_Science_BS", "concentration": "None"}
+    ]
 
-    remaining = get_remaining_courses(results, requirements, catalog, COMPLETED)
+    baseline_courses = {}
+    for program in majors_to_check:
+        track = program["track"]
+        conc = program["concentration"]
+        res = check_requirements(
+            requirements, catalog, assumed_completed, 
+            other_majors_courses=set(), 
+            track_id=track, concentration_id=conc
+        )
+        baseline_courses[track] = res.get("courses_used", set())
 
-    print("\nIN PROGRESS (not counted as complete):")
-    for c in IN_PROGRESS:
-        print(f"  ~ {c}")
+    all_remaining_courses = set()
 
-    path = kahns_algorithm(graph, catalog, COMPLETED, remaining)
+    for program in majors_to_check:
+        track = program["track"]
+        conc = program["concentration"]
+        
+        other_majors_pool = set()
+        for other_track, courses in baseline_courses.items():
+            if other_track != track:
+                other_majors_pool.update(courses)
+        
+        results = check_requirements(
+            requirements, catalog, assumed_completed, 
+            other_majors_courses=other_majors_pool, 
+            track_id=track, concentration_id=conc
+        )
+        print_requirement_status(results, f"{track} (Concentration: {conc})")
+
+        remaining = get_remaining_courses(
+            results, requirements, catalog, assumed_completed, 
+            track_id=track, concentration_id=conc
+        )
+        all_remaining_courses.update(remaining)
+
+    print("\nSIMULATING WITH FUTURE CLASSES:")
+    for c in PLANNED_COURSES:
+        print(f"  * {c}")
+
+    path = kahns_algorithm(graph, catalog, assumed_completed, list(all_remaining_courses))
     print_path(path, catalog)
 
 if __name__ == "__main__":

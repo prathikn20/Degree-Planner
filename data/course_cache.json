@@ -1,0 +1,2134 @@
+{
+  "8c7051bd8eca5e5fdc707a13e56dcb70": {
+    "operator": "OR",
+    "operands": [
+      "MATH130",
+      "MATH152",
+      "MATH210",
+      "MATH231",
+      "MATH129P",
+      "PHIL155",
+      "STOR120",
+      "STOR151",
+      "STOR155"
+    ]
+  },
+  "91108fc3f6285d1e813cd18b6f405f39": {
+    "operator": "OR",
+    "operands": [
+      "MATH130",
+      "MATH152",
+      "MATH210",
+      "MATH231",
+      "MATH129P",
+      "PHIL155",
+      "STOR120",
+      "STOR151",
+      "STOR155"
+    ]
+  },
+  "47e2db067f02deb67776c13043e193e9": {
+    "operator": "AND",
+    "operands": [
+      "COMP110",
+      "MATH231",
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP283",
+          "MATH381",
+          "STOR315"
+        ]
+      }
+    ]
+  },
+  "6c7774b67187c9f9368dbb7ad45365ad": {
+    "operator": "OR",
+    "operands": [
+      "COMP210",
+      "COMP401"
+    ]
+  },
+  "923cbe6098375ea97696e531591cfa3c": {
+    "operator": "OR",
+    "operands": [
+      "MATH231",
+      "MATH241"
+    ]
+  },
+  "e1f444db3c6b2b3a73ae2c86648958eb": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH231",
+          "MATH241"
+        ]
+      },
+      "COMP210",
+      "COMP211",
+      "COMP301"
+    ]
+  },
+  "d73a68d2bd0caa011b636c09b0b92fa9": {
+    "operator": "AND",
+    "operands": [
+      "COMP211"
+    ]
+  },
+  "36c093a33b7edcc0e97faacb32074a52": {
+    "operator": "AND",
+    "operands": [
+      "COMP380"
+    ]
+  },
+  "c0ea82c8582f02d30abb658bd7676922": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410",
+          "COMP411"
+        ]
+      }
+    ]
+  },
+  "65ba40aeb11307ba5c281f3a133449ac": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH231",
+          "MATH241"
+        ]
+      },
+      "COMP401"
+    ]
+  },
+  "d715a4b573eb42168634fd1f6dc0d711": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH231",
+          "MATH241"
+        ]
+      },
+      "COMP401"
+    ]
+  },
+  "388ba5058c64c387357013ea93d942d8": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP210",
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410",
+          "COMP411"
+        ]
+      }
+    ]
+  },
+  "7fe1cd0e004fd4a5fbddef4eb7ca906c": {
+    "operator": "AND",
+    "operands": [
+      "COMP211",
+      "COMP301"
+    ]
+  },
+  "a26846f53ccecc264cc29abbd57793cf": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410"
+        ]
+      }
+    ]
+  },
+  "4ef0dfca90bdd5ea99638678fa33cd6e": {
+    "operator": "AND",
+    "operands": [
+      "MATH232",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS116",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "b05eb8d963f309808ecf2ae1ddc20e14": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP210",
+          "COMP410"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP283",
+          "MATH381",
+          "STOR315"
+        ]
+      }
+    ]
+  },
+  "8ec659bfffd6daa0abcd71b82d9e82ad": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP301",
+          "COMP311",
+          "COMP455"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP410",
+          "COMP411",
+          "COMP455"
+        ]
+      }
+    ]
+  },
+  "f2f8de95772b8067496fad10f278c4a6": {
+    "operator": "OR",
+    "operands": [
+      "COMP301",
+      "COMP401"
+    ]
+  },
+  "4216701f664e64de046a5e89cec49577": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP301",
+          "COMP311"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410",
+          "COMP411"
+        ]
+      }
+    ]
+  },
+  "74049793246f1b1b46752a539db78350": {
+    "operator": "AND",
+    "operands": [
+      "COMP301"
+    ]
+  },
+  "b19fdde33abe46ee371f8c01576a7f86": {
+    "operator": "AND",
+    "operands": [
+      "COMP211",
+      "COMP301"
+    ]
+  },
+  "3d43f3cffaaadbb5d31142d648b871c5": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP301",
+          "COMP311"
+        ]
+      },
+      "COMP411"
+    ]
+  },
+  "fd46fb9fc0cb7b249cfabff2c2026fca": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      "COMP410"
+    ]
+  },
+  "4aa7ce655bfc39056c5ce2ea2b52f3f7": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410"
+        ]
+      }
+    ]
+  },
+  "067fef47f5488d2eb04ce1fb4131fb44": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410"
+        ]
+      }
+    ]
+  },
+  "ab3d4d808e1c47844ca3f59e0f298834": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP301"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH577"
+        ]
+      }
+    ]
+  },
+  "b8bcfc2b41b08345657d2b565886fd33": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP301",
+          "COMP311"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP401",
+          "COMP410",
+          "COMP411"
+        ]
+      }
+    ]
+  },
+  "6e66f66df63e0e1986bd404988687407": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP116",
+          "COMP210",
+          "COMP401"
+        ]
+      },
+      "MATH233"
+    ]
+  },
+  "4666173a0d9264ad4fa10372bd92f2f7": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP211",
+          "COMP301"
+        ]
+      },
+      "MATH347"
+    ]
+  },
+  "673dd94a6c2f753611e6b78e4482a060": {
+    "operator": "AND",
+    "operands": [
+      "COMP301",
+      "COMP311",
+      "COMP562",
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP755",
+          "STOR565"
+        ]
+      }
+    ]
+  },
+  "0ceda750eeff4ca44bcfe3241913e55d": {
+    "operator": "AND",
+    "operands": [
+      "COMP211",
+      "COMP301"
+    ]
+  },
+  "96fe70aad9ea704581358c254d268a5b": {
+    "operator": "AND",
+    "operands": [
+      "COMP530"
+    ]
+  },
+  "243032b63cda24852fbd284970d75496": {
+    "operator": "AND",
+    "operands": [
+      "COMP431",
+      "COMP530"
+    ]
+  },
+  "88e638fb5f8eb31a7e7a57439a5eb0d3": {
+    "operator": "AND",
+    "operands": [
+      "COMP431"
+    ]
+  },
+  "8fd8b15062f8501a03745a24f2077ded": {
+    "operator": "OR",
+    "operands": [
+      "COMP431",
+      "COMP530"
+    ]
+  },
+  "a5d99b4753a82d8dee5c7b74a88f8c3e": {
+    "operator": "AND",
+    "operands": [
+      "COMP311",
+      "COMP455"
+    ]
+  },
+  "46c31b2d9bb9ca8f7e0c92db16230bfc": {
+    "operator": "AND",
+    "operands": [
+      "COMP550"
+    ]
+  },
+  "20e3e97ad547a2167e87076d292366aa": {
+    "operator": "AND",
+    "operands": [
+      "COMP283",
+      "COMP210",
+      "COMP211",
+      "COMP301",
+      "COMP455"
+    ]
+  },
+  "33a6c1d21cd761805c3f05112a24742b": {
+    "operator": "AND",
+    "operands": [
+      "MATH661"
+    ]
+  },
+  "ecb9b33cda7483605458cc294084f171": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP562",
+          "COMP755",
+          "STOR565"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH201",
+          "MATH347",
+          "MATH577"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "MATH522"
+        ]
+      }
+    ]
+  },
+  "48a60d600340d280b0ffebfca62247f8": {
+    "operator": "OR",
+    "operands": [
+      "COMP560",
+      "COMP562",
+      "STOR565",
+      "COMP664",
+      "COMP755",
+      "COMP776"
+    ]
+  },
+  "a3fd7a67566191b9e746c4b4bb554ca5": {
+    "operator": "AND",
+    "operands": [
+      "STOR555",
+      "STOR641"
+    ]
+  },
+  "74e77569a3dfdcd16d0b49fe829e7e83": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH577",
+          "MATH347"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP562",
+          "STOR520",
+          "STOR565"
+        ]
+      }
+    ]
+  },
+  "8cb06d71bf854797e04bca8e2e7d1579": {
+    "operator": "AND",
+    "operands": [
+      "COMP455",
+      "CSC520",
+      "CSC524"
+    ]
+  },
+  "128dacf7141cdce0421ef51dbe3816de": {
+    "operator": "AND",
+    "operands": [
+      "COMP521",
+      "COMP550"
+    ]
+  },
+  "df93b958b0432ff3bdfbc5efba29fa58": {
+    "operator": "AND",
+    "operands": [
+      "COMP524",
+      "COMP550"
+    ]
+  },
+  "51e83bcc381aa00400fde91fca7a37e6": {
+    "operator": "AND",
+    "operands": [
+      "COMP530"
+    ]
+  },
+  "b90669b0270d779fbf3f200322f0f9bd": {
+    "operator": "AND",
+    "operands": [
+      "COMP431"
+    ]
+  },
+  "45ae0fb2da08fedd0e6c006695399bb4": {
+    "operator": "AND",
+    "operands": [
+      "COMP530",
+      "COMP550"
+    ]
+  },
+  "8dc4805a72292ef828174f9b8e392712": {
+    "operator": "AND",
+    "operands": [
+      "COMP411",
+      "PHYS352"
+    ]
+  },
+  "6a5495c0c542be8f66cc57c8a3c0c666": {
+    "operator": "AND",
+    "operands": [
+      "COMP455",
+      "COMP550"
+    ]
+  },
+  "6dde006bc5752ec5247b033bd444ad7e": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH547",
+          "MATH577"
+        ]
+      },
+      "STOR435"
+    ]
+  },
+  "cafef4c0e4a8d11b4c90f8959b853614": {
+    "operator": "AND",
+    "operands": [
+      "COMP724"
+    ]
+  },
+  "42b86e1bb1fd13f1268e869f8513e7ce": {
+    "operator": "AND",
+    "operands": [
+      "MATH233"
+    ]
+  },
+  "d49a595cc8893ca4695b7f214166eaf8": {
+    "operator": "AND",
+    "operands": [
+      "COMP665",
+      "COMP761"
+    ]
+  },
+  "43992942719e5d653708aae3fd5e2532": {
+    "operator": "AND",
+    "operands": [
+      "MATH233",
+      "MATH547",
+      "MATH347",
+      "STOR435"
+    ]
+  },
+  "f1fbb1cff0c7b006b8f78482c2a1b22c": {
+    "operator": "AND",
+    "operands": [
+      "MATH566",
+      "COMP550",
+      "COMP665",
+      "COMP775"
+    ]
+  },
+  "26a4b5198cf30c0291fb0cbc15559902": {
+    "operator": "AND",
+    "operands": [
+      "MATH233",
+      "MATH347",
+      "MATH547",
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH535",
+          "STOR435"
+        ]
+      }
+    ]
+  },
+  "dce21ec40c7c81c30fa8981e3e30ea12": {
+    "operator": "AND",
+    "operands": [
+      "COMP550",
+      "MATH347",
+      "MATH547"
+    ]
+  },
+  "344a123d3b81270d2e65ed1bdf76c20e": {
+    "operator": "AND",
+    "operands": [
+      "COMP550"
+    ]
+  },
+  "7fe1f9e4c61d33e0338e8f995768df57": {
+    "operator": "AND",
+    "operands": [
+      "COMP562"
+    ]
+  },
+  "9699af652341eb03faa52e477b262873": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH347",
+          "STOR455",
+          "STOR120"
+        ]
+      },
+      "STOR320"
+    ]
+  },
+  "8c66388317eb05d4346241c408352640": {
+    "operator": "AND",
+    "operands": [
+      "DATA120"
+    ]
+  },
+  "a4f1f9b8d8a15b2fee68383aadb4e1ad": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP110",
+          "COMP116",
+          "STOR120"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "BIOS635",
+          "COMP562",
+          "STOR565",
+          "STOR566",
+          "MATH560"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR435",
+          "MATH535",
+          "STOR535",
+          "STOR634"
+        ]
+      },
+      "MATH347",
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR315",
+          "COMP283",
+          "MATH381"
+        ]
+      }
+    ]
+  },
+  "bf48d5e5e4fc4d5087081a7ae9a7b2bc": {
+    "operator": "AND",
+    "operands": [
+      "COMP211",
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP562",
+          "STOR565",
+          "BIOS635",
+          "STOR566"
+        ]
+      }
+    ]
+  },
+  "3b81c8d3281b6e2fba3f1c78620c2695": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP560",
+          "DATA521"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP562",
+          "STOR565",
+          "BIOS635",
+          "STOR566"
+        ]
+      }
+    ]
+  },
+  "cc13ab3dc253e8ff40bf72f7147bab98": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH231",
+          "MATH232"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "STOR151",
+          "STOR155"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS511",
+          "BIOS512"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS600",
+          "ECON400"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL562",
+          "ENEC562"
+        ]
+      }
+    ]
+  },
+  "765ce1bb3f31ffcc1881dc083929ea00": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH231",
+          "MATH232"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "STOR151",
+          "STOR155"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS511",
+          "BIOS512"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS600",
+          "ECON400"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL562",
+          "ENEC562"
+        ]
+      }
+    ]
+  },
+  "fef2e4ef46d69d71dbc55d95a72ca57c": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH231",
+          "MATH232"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "STOR151",
+          "STOR155"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS511",
+          "BIOS512"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOS600",
+          "ECON400"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL562",
+          "ENEC562"
+        ]
+      }
+    ]
+  },
+  "6448f69a4d8fd7e099fdd2b6b9e621cc": {
+    "operator": "AND",
+    "operands": [
+      "DATA110",
+      "MATH347"
+    ]
+  },
+  "32cfc744b8ecca45dc72ee7fc784a987": {
+    "operator": "",
+    "operands": []
+  },
+  "2f4e6a926761acb1f4a518fdce882c1e": {
+    "operator": "AND",
+    "operands": [
+      "DATA710"
+    ]
+  },
+  "c8d24c49b4a66cdd5e29fda8ddf77836": {
+    "operator": "AND",
+    "operands": [
+      "DATA710",
+      "DATA730"
+    ]
+  },
+  "edabe08df2df9ef5a36700f11def9721": {
+    "operator": "AND",
+    "operands": [
+      "STOR664",
+      "STOR665",
+      "STOR765"
+    ]
+  },
+  "63cb29d81d74ed835e4eedd8a9f844c5": {
+    "operator": "AND",
+    "operands": [
+      "DATA710",
+      "DATA720",
+      "DATA730"
+    ]
+  },
+  "57fa3658a9327b1b7ddd954b722b98d1": {
+    "operator": "AND",
+    "operands": [
+      "DATA720",
+      "DATA730",
+      "DATA780"
+    ]
+  },
+  "c6279a96c90196b0f5b632f40f6ec1eb": {
+    "operator": "AND",
+    "operands": [
+      "MATH110"
+    ]
+  },
+  "f3dcb021d39f75b7a4c5efc00f67dde6": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      "MATH232"
+    ]
+  },
+  "ad9c20653fbe241d937f72c6e1fc7277": {
+    "operator": "AND",
+    "operands": [
+      "STOR120"
+    ]
+  },
+  "5024598ce4cbc3bc53e9cea2ebc85fb0": {
+    "operator": "OR",
+    "operands": [
+      "STOR120",
+      "STOR155",
+      "MATH152"
+    ]
+  },
+  "71c70f0bf2419364862c7ead5e26b0c5": {
+    "operator": "AND",
+    "operands": [
+      "MATH232"
+    ]
+  },
+  "a86a5712d9a9eef60a24c0acef7ab051": {
+    "operator": "OR",
+    "operands": [
+      "STOR120",
+      "STOR155"
+    ]
+  },
+  "518d74a1f397cf0479492a39d89c5b73": {
+    "operator": "OR",
+    "operands": [
+      "STOR120",
+      "STOR320"
+    ]
+  },
+  "115e964c4b6bb5681d8e99c43d67a686": {
+    "operator": "AND",
+    "operands": [
+      "BIOS650"
+    ]
+  },
+  "09f5ac0d687d336950e034b18c541cac": {
+    "operator": "AND",
+    "operands": [
+      "MATH347",
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR315",
+          "STOR215",
+          "COMP283",
+          "MATH381"
+        ]
+      }
+    ]
+  },
+  "03a209bf99f4774cc327a8bae985e008": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH235",
+          "MATH233"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR215",
+          "STOR315",
+          "MATH381",
+          "COMP283"
+        ]
+      }
+    ]
+  },
+  "2f0f0dbfda4b7c2aafc73db5bc0affb3": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "BIOS660",
+          "STOR435",
+          "STOR535"
+        ]
+      }
+    ]
+  },
+  "94aed37615cbf90f6b830bf11c7f68a4": {
+    "operator": "OR",
+    "operands": [
+      "STOR120",
+      "STOR155"
+    ]
+  },
+  "71f0d8e053d1e93147218a08854dd54c": {
+    "operator": "OR",
+    "operands": [
+      "STOR435",
+      "STOR535"
+    ]
+  },
+  "02649ef1cd1d77e793aa71f8623e6755": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "STOR415"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "STOR612"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH233",
+          "MATH347"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH235"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "COMP110",
+          "COMP116"
+        ]
+      }
+    ]
+  },
+  "6466ada149ba32ea198461eff14259cf": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR435",
+          "STOR535"
+        ]
+      },
+      "STOR455"
+    ]
+  },
+  "7b23843b36c99b1cc800baab1ec79848": {
+    "operator": "OR",
+    "operands": [
+      "STOR320",
+      "STOR455"
+    ]
+  },
+  "662c097f9340b3c648d0521135654a3d": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR435",
+          "MATH535"
+        ]
+      },
+      "MATH347"
+    ]
+  },
+  "eaa0ffdb7c25cd4dae38f7045621113a": {
+    "operator": "AND",
+    "operands": [
+      "STOR445"
+    ]
+  },
+  "1a6981f029b333be892ba675b9732837": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR215",
+          "STOR315",
+          "MATH381"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR435",
+          "STOR535"
+        ]
+      }
+    ]
+  },
+  "005f7c3711f46da13d706d673f4d5e29": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR415",
+          "STOR512"
+        ]
+      },
+      "COMP110",
+      "COMP116"
+    ]
+  },
+  "14a480a84ed54eb7c7b1b3ea7dc1a2db": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR120",
+          "STOR155"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "STOR435",
+          "STOR535"
+        ]
+      }
+    ]
+  },
+  "30eec256b8f18f9aeaa1b5ce629f94ec": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH521"
+        ]
+      }
+    ]
+  },
+  "5a0d716e7241205188b8273c635a9723": {
+    "operator": "AND",
+    "operands": [
+      "STOR612"
+    ]
+  },
+  "2de562db879bc3880ef87c8567c9aaf6": {
+    "operator": "AND",
+    "operands": [
+      "STOR634"
+    ]
+  },
+  "a289a4d5df0666a8bedc929244cd88d3": {
+    "operator": "OR",
+    "operands": [
+      "STOR435",
+      "STOR535"
+    ]
+  },
+  "c7a38f595eef35abd015daa832c7200b": {
+    "operator": "AND",
+    "operands": [
+      "STOR641"
+    ]
+  },
+  "ad6d4388072fab14681f0ef222221bae": {
+    "operator": "AND",
+    "operands": [
+      "STOR654"
+    ]
+  },
+  "643deb26b8514d93e82a04ca1c06f8f2": {
+    "operator": "AND",
+    "operands": [
+      "STOR664"
+    ]
+  },
+  "df696f01b89f6990db859f6c1dbb313e": {
+    "operator": "OR",
+    "operands": [
+      "STOR320",
+      "STOR664"
+    ]
+  },
+  "ecf43bbf341169db54a905fbfd162a30": {
+    "operator": "AND",
+    "operands": [
+      "STOR612"
+    ]
+  },
+  "52a047c90dc7e5004f16e46f4e9c885f": {
+    "operator": "AND",
+    "operands": [
+      "STOR712"
+    ]
+  },
+  "62939f74282c3fcbcafd63c6cf8d2457": {
+    "operator": "AND",
+    "operands": [
+      "STOR614"
+    ]
+  },
+  "e3a8965bbc7291539b031095a722ad9c": {
+    "operator": "AND",
+    "operands": [
+      "STOR435"
+    ]
+  },
+  "e6e7fac02de9ffba55b95b1ab1c5ceb9": {
+    "operator": "AND",
+    "operands": [
+      "STOR641"
+    ]
+  },
+  "fedbc504551298306d62d50426467b25": {
+    "operator": "AND",
+    "operands": [
+      "STOR435",
+      "STOR555"
+    ]
+  },
+  "81f4f504cde3ab73dcc989d379dcedb9": {
+    "operator": "AND",
+    "operands": [
+      "STOR635",
+      "STOR655"
+    ]
+  },
+  "7d69b37922787a7e2eb31997c64599d0": {
+    "operator": "AND",
+    "operands": [
+      "STOR555"
+    ]
+  },
+  "4ab4844bed899f4cd8663468c9e1ccc5": {
+    "operator": "AND",
+    "operands": [
+      "STOR654",
+      "STOR655",
+      "STOR664",
+      "STOR665"
+    ]
+  },
+  "5a5c522bd2ecadec21efe19fbd10560b": {
+    "operator": "AND",
+    "operands": [
+      "MATH110"
+    ]
+  },
+  "4e0db3788ec0c2cf76fbc84a898f3780": {
+    "operator": "AND",
+    "operands": [
+      "MATH110"
+    ]
+  },
+  "6eebf40dba51cc5fd8ad6a30dcfe3337": {
+    "operator": "OR",
+    "operands": [
+      "MATH110",
+      "MATH110P"
+    ]
+  },
+  "233959025a2bb2d7740d001431e8ebc8": {
+    "operator": "AND",
+    "operands": [
+      "MATH110",
+      "MATH130"
+    ]
+  },
+  "9611e4c54b9c1b468acf942b63136a16": {
+    "operator": "AND",
+    "operands": [
+      "MATH110",
+      "MATH130"
+    ]
+  },
+  "999e22a4f4f8daf78a1b890fda2aa967": {
+    "operator": "AND",
+    "operands": [
+      "MATH231"
+    ]
+  },
+  "8bf2e9a4a85056a43ebbb781e7bc4e71": {
+    "operator": "AND",
+    "operands": [
+      "MATH231"
+    ]
+  },
+  "d0609da36de7feb8e4b7ff32007e8717": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH232",
+          "MATH210"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH231",
+          "MATH381"
+        ]
+      },
+      "COMP283",
+      "STOR315"
+    ]
+  },
+  "eb572caddedb04fdcd2021429e4a0dc8": {
+    "operator": "OR",
+    "operands": [
+      "MATH232",
+      "MATH231",
+      "MATH210"
+    ]
+  },
+  "f525e28a152f5b0aaa7884078651a664": {
+    "operator": "OR",
+    "operands": [
+      "MATH233",
+      "MATH235"
+    ]
+  },
+  "e44d36b0f62a676059258601c7cb0cbe": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "MATH235"
+        ]
+      },
+      "MATH383"
+    ]
+  },
+  "2638ce86a42c2779fa54e36930694bd5": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "MATH235"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH381",
+          "STOR215"
+        ]
+      }
+    ]
+  },
+  "0f1811d36c4f781e060d353d2e23b830": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      "MATH521"
+    ]
+  },
+  "3effb246f33200d17f2a4e9cd514f00c": {
+    "operator": "AND",
+    "operands": [
+      "MATH383"
+    ]
+  },
+  "3f6801bb28a21bb17f27ea2faeb209f6": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      "MATH528"
+    ]
+  },
+  "ab75b955a47eb68e07d7c7acae416417": {
+    "operator": "OR",
+    "operands": [
+      "MATH521",
+      "MATH524",
+      "MATH528"
+    ]
+  },
+  "1f16e6a1fa1e8e17c6c22fc7f308fab2": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      "MATH529"
+    ]
+  },
+  "40b497935a5890f473a950d55582ef70": {
+    "operator": "AND",
+    "operands": [
+      "MATH381"
+    ]
+  },
+  "d620e2c42d2ceffb6744fb61b30ca9d1": {
+    "operator": "AND",
+    "operands": [
+      "MATH381"
+    ]
+  },
+  "627eec60c549a5050f0d644bdd443675": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "MATH235"
+        ]
+      },
+      "MATH381"
+    ]
+  },
+  "314cde29db849ae4db7d8e1c25d55f00": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "MATH235"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH577"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP110",
+          "COMP116"
+        ]
+      }
+    ]
+  },
+  "876f45a381083433fd58fa86e161d000": {
+    "operator": "AND",
+    "operands": [
+      "MATH528"
+    ]
+  },
+  "89ee34dae846af549bf8e38c5529cd85": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH577"
+        ]
+      }
+    ]
+  },
+  "c740c147f805d02707e409360a4e184a": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH577",
+          "MATH347"
+        ]
+      }
+    ]
+  },
+  "0a39e7661b590037d0abac4548cdc782": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH381",
+          "STOR215"
+        ]
+      },
+      "MATH383"
+    ]
+  },
+  "4ae6983a69087533202ed1069b3bafd5": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "MATH577"
+        ]
+      },
+      "MATH381"
+    ]
+  },
+  "20ea0d8a2b4992c445cea218e3d09ce5": {
+    "operator": "AND",
+    "operands": [
+      "MATH383"
+    ]
+  },
+  "2dc0c5228d8f5509e5d7dc7e0a02031b": {
+    "operator": "AND",
+    "operands": [
+      "MATH578"
+    ]
+  },
+  "4915e3c5039d29a975fa60f9bee74d80": {
+    "operator": "AND",
+    "operands": [
+      "MATH653"
+    ]
+  },
+  "4c74a01a0bc785bf61c01521e64268fb": {
+    "operator": "AND",
+    "operands": [
+      "MATH668"
+    ]
+  },
+  "0aa77ee5e537db3ca79ebe21b25cabce": {
+    "operator": "AND",
+    "operands": [
+      "MATH676"
+    ]
+  },
+  "6fbb90d43f93e97f69e8ad4abf9cb777": {
+    "operator": "AND",
+    "operands": [
+      "MATH681"
+    ]
+  },
+  "207dc9855cdafe50ee986054b5db463d": {
+    "operator": "AND",
+    "operands": [
+      "MATH653"
+    ]
+  },
+  "e8b6e747ab0fe1891adc03158ce1c44f": {
+    "operator": "AND",
+    "operands": [
+      "MATH753"
+    ]
+  },
+  "aa16752a19bee9a7337a1a23fa3bc418": {
+    "operator": "AND",
+    "operands": [
+      "MATH656"
+    ]
+  },
+  "549d318218088fe6f672cebfdf4504ef": {
+    "operator": "AND",
+    "operands": [
+      "MATH661",
+      "MATH662"
+    ]
+  },
+  "06db3660323ae8f3af43ccb6ac8ea61d": {
+    "operator": "AND",
+    "operands": [
+      "MATH761"
+    ]
+  },
+  "8b6d594d6717a7f6e08ef80346b9b1de": {
+    "operator": "AND",
+    "operands": [
+      "MATH661",
+      "MATH662",
+      "MATH668",
+      "MATH669"
+    ]
+  },
+  "cced087e46347559fece6d1f5677fdce": {
+    "operator": "AND",
+    "operands": [
+      "MATH677"
+    ]
+  },
+  "4c70521ba1b120365763f3e41d76063f": {
+    "operator": "AND",
+    "operands": [
+      "MATH676",
+      "MATH781"
+    ]
+  },
+  "bbe3d329b382a9431515237be99ca47c": {
+    "operator": "AND",
+    "operands": [
+      "MATH771"
+    ]
+  },
+  "bff0a08310b5a2accf11a118061921e3": {
+    "operator": "AND",
+    "operands": [
+      "MATH676",
+      "MATH681"
+    ]
+  },
+  "e2f3f841ae9f639c15e571429b574770": {
+    "operator": "AND",
+    "operands": [
+      "MATH680"
+    ]
+  },
+  "c4bfa9a163efd3612b5ad011df6aaebc": {
+    "operator": "OR",
+    "operands": [
+      "MATH129P",
+      "MATH130",
+      "MATH231"
+    ]
+  },
+  "59cdf92741f38980697895891cdfcee8": {
+    "operator": "OR",
+    "operands": [
+      "PHYS104",
+      "PHYS114",
+      "PHYS116",
+      "PHYS118"
+    ]
+  },
+  "d2867207215e5b8fca749357d3c2883a": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      "MATH232"
+    ]
+  },
+  "f9d7d7f62904ec97c8d04127e7528123": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS118",
+          "PHYS118H"
+        ]
+      },
+      "MATH233"
+    ]
+  },
+  "8c9343ee5be66a9c2d14adf09a7ae59d": {
+    "operator": "AND",
+    "operands": [
+      "PHYS117"
+    ]
+  },
+  "01e523e2166eb5e49593e0857dfde32a": {
+    "operator": "AND",
+    "operands": [
+      "PHYS128"
+    ]
+  },
+  "772d09c200ba40d65508736721292167": {
+    "operator": "AND",
+    "operands": [
+      "PHYS131L"
+    ]
+  },
+  "0da5d41a205da8d1d39d56370212e7e5": {
+    "operator": "AND",
+    "operands": [
+      "PHYS131"
+    ]
+  },
+  "80746858c78881b0b082d26ebf9e9027": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      "PHYS281L"
+    ]
+  },
+  "08af7c10686a6528e17f83a4d2b375c0": {
+    "operator": "AND",
+    "operands": [
+      "MATH233",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS117",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "49233b91e0596e421dc2703fe8343d85": {
+    "operator": "OR",
+    "operands": [
+      "PHYS114",
+      "PHYS118"
+    ]
+  },
+  "b71a7a0f7c172f4959f62b2ae3266e65": {
+    "operator": "OR",
+    "operands": [
+      "PHYS117",
+      "PHYS119"
+    ]
+  },
+  "4b6f193172d9cce924b92dce991e79c3": {
+    "operator": "AND",
+    "operands": [
+      "PHYS331"
+    ]
+  },
+  "f1b7a71379524158d0c2125b91a2c05f": {
+    "operator": "AND",
+    "operands": [
+      "PHYS331",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS117",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "57b2a2c4fd05649fce93338c699c7dfd": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS104",
+          "PHYS114",
+          "PHYS116",
+          "PHYS118"
+        ]
+      },
+      "MATH383"
+    ]
+  },
+  "12c3cbae2d6c4319a8427e5bc3ecf63d": {
+    "operator": "AND",
+    "operands": [
+      "PHYS331"
+    ]
+  },
+  "53d0566978a79eb343b0dd989a687b75": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS100",
+          "PHYS101",
+          "PHYS102",
+          "..."
+        ]
+      }
+    ]
+  },
+  "6ccb7772e48d99a1e9d341453001bc9c": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS119",
+          "PHYS115"
+        ]
+      },
+      "MATH233"
+    ]
+  },
+  "12c5818fee06ae4200a42ebc67b80751": {
+    "operator": "AND",
+    "operands": [
+      "PHYS281L"
+    ]
+  },
+  "6bc0bacbebae232c1538d313c2413715": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      "PHYS281L",
+      "PHYS331"
+    ]
+  },
+  "e22417fd3ee7e5743f54646254da3146": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "PHYS116",
+          "PHYS117"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "PHYS118",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "fccb0f66295988c5a01fb24f8e3126d6": {
+    "operator": "OR",
+    "operands": [
+      "PHYS117",
+      "PHYS119"
+    ]
+  },
+  "5370db74d042171671b3bc2dfc76d2dc": {
+    "operator": "AND",
+    "operands": [
+      "PHYS281L",
+      "PHYS311",
+      "PHYS332"
+    ]
+  },
+  "c94a0e973461ae0a385f06a6b433992e": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH347",
+          "PHYS331"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS117",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "11947b4bd043b9ebda9d099da3d48ca4": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      {
+        "operator": "OR",
+        "operands": [
+          {
+            "operator": "AND",
+            "operands": [
+              "PHYS201",
+              "PHYS211"
+            ]
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              "PHYS311",
+              "PHYS401"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "15ba487d002122b53391b779a60b86c5": {
+    "operator": "AND",
+    "operands": [
+      "MATH233",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS117",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "3466984ad21fd62c0761d6419064a61a": {
+    "operator": "AND",
+    "operands": [
+      "MATH232",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "cc4404ec8840402c6246b0e05ca0fc6b": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS115",
+          "PHYS119"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "MATH383",
+          "PHYS331"
+        ]
+      }
+    ]
+  },
+  "0c65197915fbd831c9e4dbe66445b0cc": {
+    "operator": "OR",
+    "operands": [
+      "PHYS451",
+      {
+        "operator": "AND",
+        "operands": [
+          "BMME207",
+          "BMME365"
+        ]
+      }
+    ]
+  },
+  "336e1660d4fd5c05b6a70fbaccd04d34": {
+    "operator": "OR",
+    "operands": [
+      "PHYS117",
+      "PHYS119"
+    ]
+  },
+  "7cb141590d5608c398a0c7e11034d9f2": {
+    "operator": "OR",
+    "operands": [
+      "CHEM482",
+      "PHYS117",
+      "PHYS119"
+    ]
+  },
+  "7cb9504529db2dcb96f94d3c46c4095b": {
+    "operator": "AND",
+    "operands": [
+      "PHYS281L",
+      "PHYS451"
+    ]
+  },
+  "335aaa1df44c5dd4a7522b79ee5aef31": {
+    "operator": "AND",
+    "operands": [
+      "APPL470",
+      "PHYS351"
+    ]
+  },
+  "97f8f7263e275e1860613e2a5ec435a8": {
+    "operator": "OR",
+    "operands": [
+      "APPL491L",
+      "PHYS491L"
+    ]
+  },
+  "ffaaad9faa5fe20fa6e2691b5101abd2": {
+    "operator": "AND",
+    "operands": [
+      "PHYS510"
+    ]
+  },
+  "f41188d2b164cf29e6d575cc081ecc8c": {
+    "operator": "OR",
+    "operands": [
+      "PHYS211",
+      "PHYS412"
+    ]
+  },
+  "200bff6589d46b0c928b144a87aec4b6": {
+    "operator": "AND",
+    "operands": [
+      "PHYS421"
+    ]
+  },
+  "022e7d366fa0d0dc74b05d9d3b9b4aa4": {
+    "operator": "OR",
+    "operands": [
+      "PHYS421",
+      "CHEM486"
+    ]
+  },
+  "95fa5c8c4ff2ca05271f715696cf900d": {
+    "operator": "AND",
+    "operands": [
+      "PHYS421"
+    ]
+  },
+  "910312fa446f3d5c749afb65af53380f": {
+    "operator": "AND",
+    "operands": [
+      "PHYS412",
+      "PHYS421"
+    ]
+  },
+  "2f13d9ec10302c2637a2f93775706d57": {
+    "operator": "AND",
+    "operands": [
+      "PHYS119"
+    ]
+  },
+  "d5d521fef7b8161174bd93e3328b8bb5": {
+    "operator": "AND",
+    "operands": [
+      "PHYS281L",
+      "PHYS332"
+    ]
+  },
+  "db781724a95fb066f970410a0425b698": {
+    "operator": "OR",
+    "operands": [
+      "MATH528",
+      "MATH529",
+      "PHYS631",
+      "PHYS632"
+    ]
+  },
+  "c98354b3edc3bafb7320a1ad44b1c7f2": {
+    "operator": "AND",
+    "operands": [
+      "PHYS401"
+    ]
+  },
+  "4997a15d10b9ddb0f0d4ede9dd2e8576": {
+    "operator": "AND",
+    "operands": [
+      "PHYS401",
+      "PHYS412"
+    ]
+  },
+  "6f409ff92066ea9ef6ab162c9a3e0a0d": {
+    "operator": "AND",
+    "operands": [
+      "PHYS691H"
+    ]
+  },
+  "b9e2c307dad43a6bb1fd21f41ed97c60": {
+    "operator": "AND",
+    "operands": [
+      "PHYS631",
+      "PHYS632"
+    ]
+  },
+  "74c4efd1e936a48278e52f9be27086d3": {
+    "operator": "AND",
+    "operands": [
+      "PHYS701",
+      "PHYS721"
+    ]
+  },
+  "286dd95f224105d7b8ede5fcd6cb5446": {
+    "operator": "OR",
+    "operands": [
+      "PHYS401",
+      "PHYS412"
+    ]
+  }
+}
