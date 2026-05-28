@@ -4,7 +4,6 @@ import re
 from planner.graph import is_available
 
 def get_prereq_depth(course, catalog, completed_set):
-    """BFS to count how many prerequisites deep a course is."""
     if is_available(course, catalog, completed_set):
         return 0
 
@@ -22,7 +21,7 @@ def get_prereq_depth(course, catalog, completed_set):
         if current not in catalog:
             continue
 
-        pathways = catalog[current]['prerequisites']
+        pathways = catalog[current].get('prerequisites', [])
         if not pathways:
             continue
 
@@ -34,11 +33,6 @@ def get_prereq_depth(course, catalog, completed_set):
     return max_depth
 
 def expand_prerequisites(courses, catalog, completed_set):
-    """
-    BFS from required courses outward, evaluating DNF tracks.
-    Picks the shallowest entire pathway to avoid hybrid tracks.
-    Returns the full set of courses needed.
-    """
     all_needed = set()
     queue = deque(courses)
 
@@ -53,11 +47,10 @@ def expand_prerequisites(courses, catalog, completed_set):
         if course not in catalog:
             continue
 
-        pathways = catalog[course]['prerequisites']
+        pathways = catalog[course].get('prerequisites', [])
         if not pathways:
             continue
 
-        # Check if an ENTIRE pathway is already satisfied by completed or needed courses
         path_satisfied = False
         for path in pathways:
             components_satisfied = True
@@ -77,7 +70,6 @@ def expand_prerequisites(courses, catalog, completed_set):
         if path_satisfied:
             continue
 
-        # If no pathway is satisfied, pick the easiest ENTIRE pathway track
         best_path = min(
             pathways,
             key=lambda path: sum(get_prereq_depth(c, catalog, completed_set) for c in path)
@@ -88,27 +80,23 @@ def expand_prerequisites(courses, catalog, completed_set):
 
     return all_needed
 
-def get_remaining_courses(results, requirements, catalog, completed):
-    """
-    Reads requirements checker output.
-    Returns flat list of courses still needed.
-    For choice groups, picks the N shallowest options.
-    """
+def get_remaining_courses(results, requirements, catalog, completed, track_id="COMP_BS"):
     completed_set = set(completed)
     remaining = []
 
-    program = requirements["CS_major"]
+    program = requirements.get(track_id, {})
+    if not program:
+        return remaining
 
-    for course in program["required_courses"]:
+    for course in program.get("required_courses", []):
         if course in results["unsatisfied"]:
             remaining.append(course)
 
-    for group in program["choice_groups"]:
+    for group in program.get("choice_groups", []):
         if group["id"] not in results["unsatisfied"]:
             continue
 
         group_info = results["missing_courses"][group["id"]]
-        still_needed = group_info["still_needed"]
         options = group_info["options"]
 
         sorted_options = sorted(
@@ -116,8 +104,21 @@ def get_remaining_courses(results, requirements, catalog, completed):
             key=lambda c: get_prereq_depth(c, catalog, completed_set)
         )
 
-        chosen = sorted_options[:still_needed]
-        remaining.extend(chosen)
+        # Handle Credit-Based Groups
+        if "credits_required" in group and group["credits_required"]:
+            credits_needed = group_info.get("credits_still_needed", group["credits_required"])
+            current_credits = 0
+            for opt in sorted_options:
+                if current_credits >= credits_needed:
+                    break
+                remaining.append(opt)
+                current_credits += catalog.get(opt, {}).get("credits", 3)
+                
+        # Handle Course-Based Groups
+        else:
+            courses_needed = group_info.get("still_needed", group.get("courses_required", 1))
+            chosen = sorted_options[:courses_needed]
+            remaining.extend(chosen)
 
     return remaining
 
@@ -131,17 +132,14 @@ def compute_in_degrees(graph):
 def kahns_algorithm(graph, catalog, completed, required_courses):
     completed_set = set(completed)
 
-    # Expand to include all transitive prerequisites using DNF tracking
     all_needed = expand_prerequisites(required_courses, catalog, completed_set)
 
-    # Filter graph to only relevant courses
     filtered_graph = {
         course: [n for n in neighbors if n in all_needed]
         for course, neighbors in graph.items()
         if course in all_needed
     }
 
-    # Seed queue with a Min-Heap Priority Queue for course-level sorting
     topo_queue = []
     enqueued = set()
     
@@ -166,9 +164,8 @@ def kahns_algorithm(graph, catalog, completed, required_courses):
                 heapq.heappush(topo_queue, (n_priority, neighbor))
                 enqueued.add(neighbor)
 
-    # Cycle detection
     if len(result) < len(all_needed):
         unresolved = all_needed - set(result)
-        print(f"Warning: unresolved prerequisites: {unresolved}")
+        print(f"Warning: unresolvable prerequisites: {unresolved}")
 
     return result
