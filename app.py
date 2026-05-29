@@ -1,4 +1,6 @@
+import datetime
 import io
+import json
 import os
 import re as _re
 import tempfile
@@ -7,10 +9,10 @@ from collections import Counter
 import pandas as pd
 import streamlit as st
 
-from planner.graph import build_graph, load_catalog, load_requirements
-from planner.path_generator import get_remaining_courses, kahns_algorithm
-from planner.requirements_checker import check_requirements
-from planner.tracker_parser import parse_tarheel_tracker
+from src.planner.graph import build_graph, load_catalog, load_requirements
+from src.planner.path_generator import get_remaining_courses, kahns_algorithm
+from src.planner.requirements_checker import check_requirements
+from src.planner.tracker_parser import parse_tarheel_tracker
 
 CATALOG_PATH      = "data/course_catalog.json"
 REQUIREMENTS_PATH = "data/degree_requirements.json"
@@ -119,6 +121,19 @@ def run_pipeline(
         audit[track] = {"results": results, "remaining": remaining}
         all_remaining.update(remaining)
 
+    # UNC rule: a student may only enroll in 1 FY-SEMINAR course ever.
+    # Because many FY-SEMINAR courses carry additional gen-ed attributes
+    # (e.g. FC-NATSCI), the sequential requirements checker can consume one
+    # for FC-NATSCI and then demand a second for the FY-SEMINAR group.
+    # Keep only the most attribute-rich FY-SEMINAR (maximises gen-ed overlap),
+    # drop the rest before handing off to the path generator.
+    _fy_in_remaining = sorted(
+        [c for c in all_remaining if "FY-SEMINAR" in catalog.get(c, {}).get("attributes", [])],
+        key=lambda c: -len(catalog.get(c, {}).get("attributes", [])),
+    )
+    for _extra_fy in _fy_in_remaining[1:]:
+        all_remaining.discard(_extra_fy)
+
     path = kahns_algorithm(graph, catalog, assumed, list(all_remaining))
 
     return {
@@ -141,23 +156,28 @@ def build_prereq_dot(
     completed_set = set(assumed_completed)
     in_prog_set   = set(in_progress)
 
-    visible: set[str] = set(path)
     edges: list[tuple[str, str]] = []
 
     for course in path:
         pathways = catalog.get(course, {}).get("prerequisites", [])
         if not pathways:
             continue
-        # Pick the shortest prereq pathway, preferring those with already-completed courses
         completed_paths = [p for p in pathways if any(c in completed_set for c in p)]
         best = min(completed_paths or pathways, key=len)
         for prereq in best:
-            visible.add(prereq)   # include even if outside path — shows full context
             edges.append((prereq, course))
+
+    # Only show nodes that participate in at least one edge — this prevents
+    # isolated no-prereq courses from stretching the top rank.
+    nodes_with_edges: set[str] = set()
+    for src, dst in edges:
+        nodes_with_edges.add(src)
+        nodes_with_edges.add(dst)
 
     def _node(c: str) -> str:
         name  = catalog.get(c, {}).get("name", "")
-        short = (name[:28] + "…") if len(name) > 28 else name
+        short = (name[:26] + "…") if len(name) > 26 else name
+        # Use \n between code and name so boxes grow tall, not wide
         label = f"{c}\\n{short}" if short else c
         label = label.replace('"', '\\"')
         if c in in_prog_set:
@@ -168,17 +188,17 @@ def build_prereq_dot(
             fill, border = "#6FA8DC", "#1a4a6b"
         return (
             f'    "{c}" [label="{label}", fillcolor="{fill}", '
-            f'color="{border}", penwidth=1.8, width=2.2, height=0.7];'
+            f'color="{border}", penwidth=1.6];'
         )
 
     lines = [
         "digraph {",
         '    rankdir=TB;',
-        '    graph [bgcolor="transparent", pad="0.8", nodesep="1.0", ranksep="1.6"];',
-        '    node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=12];',
-        '    edge [color="#555555", arrowsize=1.0, penwidth=1.4];',
+        '    graph [bgcolor="transparent", pad="0.4", nodesep="0.5", ranksep="1.0", splines="ortho"];',
+        '    node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=11];',
+        '    edge [color="#555555", arrowsize=0.8, penwidth=1.2];',
     ]
-    for node in sorted(visible):
+    for node in sorted(nodes_with_edges):
         lines.append(_node(node))
     for src, dst in edges:
         lines.append(f'    "{src}" -> "{dst}";')
@@ -397,6 +417,55 @@ with st.sidebar:
     n_majors = 1 + (1 if dual and major2 else 0)
     n_minors = (1 if add_minor1 and minor1 else 0) + (1 if add_minor2 and minor2 else 0)
     st.caption(f"📋 **{n_majors}** major(s) + **{n_minors}** minor(s) + General Education (always)")
+
+    st.divider()
+
+    # ─── Feedback ─────────────────────────────────────────────────────────────
+    with st.expander("💬 Suggest a Feature / Report a Bug", expanded=False):
+        fb_type = st.radio(
+            "Type", ["Feature Request", "Bug Report"],
+            horizontal=True, key="fb_type",
+            label_visibility="collapsed",
+        )
+        fb_title = st.text_input(
+            "Brief title", placeholder="One-line summary…", key="fb_title"
+        )
+        fb_desc = st.text_area(
+            "Details", placeholder="Describe the feature or bug…",
+            height=110, key="fb_desc",
+        )
+        fb_email = st.text_input(
+            "Email (optional)", placeholder="so I can follow up",
+            key="fb_email",
+        )
+        if st.button("Submit", key="fb_submit", use_container_width=True):
+            if fb_title.strip() and fb_desc.strip():
+                entry = {
+                    "type": fb_type,
+                    "title": fb_title.strip(),
+                    "description": fb_desc.strip(),
+                    "email": fb_email.strip() or None,
+                    "timestamp": datetime.datetime.now().isoformat(),
+                }
+                _fb_path = "data/feedback.json"
+                _existing: list = []
+                if os.path.exists(_fb_path):
+                    try:
+                        with open(_fb_path) as _f:
+                            _existing = json.load(_f)
+                    except Exception:
+                        _existing = []
+                _existing.append(entry)
+                _tmp = _fb_path + ".tmp"
+                with open(_tmp, "w") as _f:
+                    json.dump(_existing, _f, indent=2)
+                os.replace(_tmp, _fb_path)
+                st.success("✅ Thanks! Your feedback has been submitted.")
+                st.session_state["fb_title"] = ""
+                st.session_state["fb_desc"] = ""
+                st.session_state["fb_email"] = ""
+            else:
+                st.warning("Please fill in both the title and description.")
 
 
 # ── Build generic majors_to_check list (drives all pipeline + UI) ─────────────

@@ -3,10 +3,15 @@ import logging
 import time
 import re
 import os
+import sys
 import hashlib
 import itertools
-from scraper.catalog_scraper import scrape_department
-from scraper.llm_catalog_parser import parse_prerequisites_with_llm
+
+# Allow running as `python scripts/run_catalog_pipeline.py` from the project root
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.scraper.catalog_scraper import scrape_department
+from src.scraper.llm_catalog_parser import parse_prerequisites_with_llm
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -66,7 +71,7 @@ TARGET_URLS = [
 OUTPUT_PATH = "data/course_catalog.json"
 CACHE_PATH = "data/course_cache.json"
 OVERRIDES_PATH = "data/overrides.json"
-LOG_PATH = "data/needs_review.log"
+LOG_PATH = "logs/needs_review.log"
 MODEL_NAME = "qwen2.5:14b"
 
 def load_json_file(filepath):

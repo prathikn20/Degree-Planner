@@ -1,9 +1,9 @@
 import argparse
 
-from planner.graph import load_catalog, load_requirements, build_graph
-from planner.requirements_checker import check_requirements
-from planner.path_generator import get_remaining_courses, kahns_algorithm
-from planner.tracker_parser import parse_tarheel_tracker
+from src.planner.graph import load_catalog, load_requirements, build_graph
+from src.planner.requirements_checker import check_requirements
+from src.planner.path_generator import get_remaining_courses, kahns_algorithm
+from src.planner.tracker_parser import parse_tarheel_tracker
 
 _COMPLETED = [
     "COMP110", "COMP210",
