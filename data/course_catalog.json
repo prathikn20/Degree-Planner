@@ -92172,5 +92172,13 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": []
+  },
+  "BUSI102": {
+    "name": "Intro Financial Accounting (Transfer)",
+    "credits": 1.5,
+    "prerequisites": [],
+    "corequisites": [],
+    "cross_listed": [],
+    "attributes": []
   }
 }

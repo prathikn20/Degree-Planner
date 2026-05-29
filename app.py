@@ -668,6 +668,70 @@ if uploaded is not None:
     )
     mc4.metric("Total Credits (Parsed)", total_parsed_credits)
 
+    # ── Completed courses — build requirement satisfaction map ─────────────────
+    # Covers both fully-satisfied requirements (via satisfied_map) and partial
+    # credit contributions to unsatisfied credit-based choice groups.
+    _completed_satisfies: dict[str, list[str]] = {}
+    for _m in majors_to_check:
+        _tr = _m["track"]
+        if _tr not in audit:
+            continue
+        _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
+        _prog_reqs = requirements.get(_tr, {})
+        _base_reqs = _prog_reqs.get("base_requirements", {})
+        _conc_reqs = _prog_reqs.get("concentrations", {}).get(_m["concentration"], {})
+        _req_names: dict[str, str] = {}
+        for _cid in _base_reqs.get("required_courses", []) + _conc_reqs.get("required_courses", []):
+            _req_names[_cid] = catalog.get(_cid, {}).get("name", "") or _cid
+        for _grp in _base_reqs.get("choice_groups", []) + _conc_reqs.get("choice_groups", []):
+            _req_names[_grp["id"]] = _grp.get("description", "") or _grp["id"]
+        # Fully satisfied requirements
+        for _req_id, _courses_list in audit[_tr]["results"].get("satisfied_map", {}).items():
+            _req_label = _req_names.get(_req_id, _req_id)
+            for _c in _courses_list:
+                _entry = f"{_plbl}: {_req_label}"
+                if _entry not in _completed_satisfies.get(_c, []):
+                    _completed_satisfies.setdefault(_c, []).append(_entry)
+        # Partial contributions for credit-based unsatisfied groups:
+        # A course contributed iff it is in the full option set but NOT in the
+        # remaining-options list (which only contains options not yet completed).
+        from src.planner.requirements_checker import get_rule_based_options as _grbo
+        for _grp in _base_reqs.get("choice_groups", []) + _conc_reqs.get("choice_groups", []):
+            _gid = _grp["id"]
+            if _gid not in audit[_tr]["results"].get("unsatisfied", []):
+                continue
+            _credits_req = _grp.get("credits_required")
+            if not _credits_req:
+                continue  # count-based groups: partial not meaningful for single-course slots
+            _full_opts   = set(_grp.get("options") or _grbo(_grp.get("rule") or {}, catalog))
+            _missing     = audit[_tr]["results"].get("missing_courses", {}).get(_gid, {})
+            _remain_opts = set(_missing.get("options", []))
+            _still_needed = _missing.get("credits_still_needed", _credits_req)
+            _counted      = _credits_req - _still_needed
+            if _counted <= 0:
+                continue
+            _req_label = _req_names.get(_gid, _gid)
+            # Courses that were in options AND completed (not in remaining) contributed
+            _contributed = _full_opts - _remain_opts
+            for _c in _contributed:
+                _cr = catalog.get(_c, {}).get("credits", 0)
+                _entry = f"{_plbl}: {_req_label} (partial — {_cr:.4g} cr of {_credits_req:.4g} cr needed)"
+                if _entry not in _completed_satisfies.get(_c, []):
+                    _completed_satisfies.setdefault(_c, []).append(_entry)
+
+    with st.expander(f"✅ Completed Courses ({len(completed)})", expanded=False):
+        st.caption("Every course on your transcript and what requirement(s) it satisfies across your selected programs.")
+        for c in completed:
+            name     = catalog.get(c, {}).get("name", "Unknown course")
+            cr       = catalog.get(c, {}).get("credits", "?")
+            satisfies = _completed_satisfies.get(c, [])
+            spaced_c  = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', c)
+            if satisfies:
+                reqs_str = " &nbsp;·&nbsp; ".join(satisfies)
+                st.markdown(f"- **{spaced_c}** — {name} ({cr} cr) → {reqs_str}")
+            else:
+                st.markdown(f"- **{spaced_c}** — {name} ({cr} cr) → _Not counted toward selected programs_")
+
     if in_progress:
         with st.expander(f"📘 In-Progress Courses ({len(in_progress)}) — counted as satisfied", expanded=True):
             st.caption(
