@@ -3851,5 +3851,57 @@
         "choice_groups": []
       }
     }
+  },
+  "Business_Administration_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "BUSI403",
+        "BUSI406",
+        "BUSI408",
+        "BUSI411"
+      ],
+      "choice_groups": [
+        {
+          "id": "prereq_busi100",
+          "description": "Introduction to Business: People, Profits, Planet",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["BUSI100"]
+        },
+        {
+          "id": "prereq_econ101",
+          "description": "Introduction to Economics",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["ECON101"]
+        },
+        {
+          "id": "prereq_data_inference",
+          "description": "One data models and inference course",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["STOR155", "DATA110", "STOR120"]
+        },
+        {
+          "id": "busi_additional_electives",
+          "description": "Additional BUSI courses to reach the minimum 15 core credit hours",
+          "credits_required": 4.5,
+          "type": "rule_based",
+          "rule": {
+            "department": "BUSI",
+            "exclude": ["BUSI100", "BUSI403", "BUSI406", "BUSI408", "BUSI411"]
+          }
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
   }
 }
