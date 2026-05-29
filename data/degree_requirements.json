@@ -1,4 +1,56 @@
-{
+{"Business_Administration_BSBA": {
+    "base_requirements": {
+      "required_courses": [
+        "BUSI401",
+        "BUSI403",
+        "BUSI404",
+        "BUSI405",
+        "BUSI406",
+        "BUSI407",
+        "BUSI408",
+        "BUSI410",
+        "BUSI411",
+        "BUSI412"
+      ],
+      "choice_groups": [
+        {
+          "id": "business_microeconomics",
+          "description": "Applied Microeconomics for Business or Intermediate Microeconomics",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["BUSI402", "ECON410"]
+        },
+        {
+          "id": "business_electives_track",
+          "description": "19.5 credit hours of business electives",
+          "credits_required": 19.5,
+          "type": "rule_based",
+          "rule": {
+            "department": "BUSI",
+            "min_number": 400,
+            "exclude": ["BUSI401", "BUSI402", "BUSI403", "BUSI404", "BUSI405", "BUSI406", "BUSI407", "BUSI408", "BUSI410", "BUSI411", "BUSI412"]
+          }
+        },
+        {
+          "id": "non_business_breadth",
+          "description": "At least five courses outside the Kenan-Flagler Business School",
+          "courses_required": 5,
+          "is_core": false,
+          "type": "rule_based",
+          "rule": {
+            "exclude_department": "BUSI",
+            "min_number": 100
+          }
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
   "Computer_Science_BS": {
     "base_requirements": {
       "required_courses": [
@@ -3196,17 +3248,541 @@
         {
           "id": "FAD",
           "description": "Foundations of American Democracy (NC system requirement; list may be incomplete)",
+          "type": "rule_based",
           "courses_required": 1,
           "is_core": false,
-          "type": "options",
+          "rule": {
+            "attribute": "FAD"
+          }
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Neuroscience_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "NSCI175"
+      ],
+      "choice_groups": [
+        {
+          "id": "nsci_statistics",
+          "description": "Select one statistics course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["PSYC210", "STOR120", "STOR155"]
+        },
+        {
+          "id": "nsci_research_methods",
+          "description": "Select one research methods course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["NSCI271", "NSCI273", "NSCI274", "NSCI277", "NSCI278", "NSCI279", "PSYC270"]
+        },
+        {
+          "id": "nsci_two_courses",
+          "description": "Select two courses from the core options",
+          "courses_required": 2,
+          "type": "explicit",
+          "options": ["NSCI221", "NSCI222", "NSCI225"]
+        },
+        {
+          "id": "knowledge_electives",
+          "description": "Select at least six credit hours from the Knowledge Electives list",
+          "credits_required": 6,
+          "type": "explicit",
           "options": [
-            "POLI100",
-            "HIST126",
-            "HIST127",
-            "HIST128",
-            "HIST237",
-            "HIST238",
-            "POLI200"
+            "BIOL205", "BIOL240", "BIOL425", "BIOL431", "BIOL440", "BIOL450", "BIOL453", "BIOL455", "BIOL458", "BIOL523", "BIOL542", "BIOL544L", "BIOL545", "BIOL547", "BIOL552", "BIOL635", 
+            "CHEM430", 
+            "COMP210", "COMP211", "COMP301", "COMP311", "COMP555", "COMP560", "COMP562", "COMP576", "COMP581", "COMP631", "COMP633", "COMP651", 
+            "EXSS155", "EXSS175", "EXSS256", "EXSS275L", "EXSS276", "EXSS380", "EXSS580", "EXSS581", 
+            "NDSS401", "NDSS420", 
+            "PHYS405", "PHYS461", 
+            "PSYC245", "PSYC404", "PSYC469", "PSYC517", "PSYC559", "PSYC602", 
+            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI418", "NSCI419", "NSCI421", "NSCI422", "NSCI423", "NSCI439", "NSCI440", "NSCI493", "NSCI507", "NSCI693H", "NSCI694H"
+          ]
+        },
+        {
+          "id": "math_methods_stats_electives",
+          "description": "Select at least six credit hours from the Mathematics, Methods, Statistics Electives list",
+          "credits_required": 6,
+          "type": "explicit",
+          "options": [
+            "APPL101", "APPL240", "APPL350", "APPL430", "APPL435", 
+            "BIOL224H", "BIOL224L", "BIOL226", "BIOL226L", "BIOL553", "BIOL554", 
+            "BMME207", "BMME301", "BMME550", 
+            "COMP283", 
+            "MATH210", "MATH233", "MATH235", "STOR235", "MATH347", "MATH381", "MATH383", "MATH383L", "MATH523", "MATH528", "MATH528L", "MATH529", "MATH529L", "MATH535", "MATH555", "MATH560", "MATH564", "MATH566", "MATH577", "MATH594", "MATH661", "MATH662", "MATH668", "MATH669", 
+            "NDSS410", "NDSS430", 
+            "NSCI395", "NSCI405", "NSCI418", "NSCI419", "NSCI423", "NSCI439", "NSCI440", "NSCI493", "NSCI693H", "NSCI694H", 
+            "PSYC533", 
+            "STOR215", "STOR320", "STOR415", "STOR435", "STOR445", "STOR455", "STOR535", "STOR555", "STOR556", "STOR565"
+          ]
+        },
+        {
+          "id": "add_biol_101",
+          "description": "Principles of Biology and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["BIOL101", "BIOL101L"]
+        },
+        {
+          "id": "add_biol_103",
+          "description": "How Cells Function",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["BIOL103"]
+        },
+        {
+          "id": "add_biol_220",
+          "description": "Molecular Genetics",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["BIOL220"]
+        },
+        {
+          "id": "add_chem_101",
+          "description": "General Descriptive Chemistry I and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM101", "CHEM101L"]
+        },
+        {
+          "id": "add_chem_102",
+          "description": "General Descriptive Chemistry II and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM102", "CHEM102L"]
+        },
+        {
+          "id": "add_chem_241",
+          "description": "Modern Analytical Methods and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM241", "CHEM241L"]
+        },
+        {
+          "id": "add_chem_261",
+          "description": "Introduction to Organic Chemistry I",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM261"]
+        },
+        {
+          "id": "add_chem_262",
+          "description": "Introduction to Organic Chemistry II and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM262", "CHEM262L"]
+        },
+        {
+          "id": "add_comp",
+          "description": "Introduction to Programming",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["COMP110", "COMP116"]
+        },
+        {
+          "id": "add_math_231",
+          "description": "Calculus of Functions of One Variable I",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH231"]
+        },
+        {
+          "id": "add_math_232",
+          "description": "Calculus of Functions of One Variable II",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH232"]
+        },
+        {
+          "id": "add_phys_1",
+          "description": "General Physics I or Introductory Calculus-based Mechanics",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS114", "PHYS118"]
+        },
+        {
+          "id": "add_phys_2",
+          "description": "General Physics II or Introductory Calculus-based Electromagnetism",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS115", "PHYS119"]
+        },
+        {
+          "id": "add_psyc_101",
+          "description": "General Psychology",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PSYC101"]
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Physics_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "PHYS281L",
+        "PHYS331",
+        "PHYS332",
+        "PHYS401",
+        "PHYS311",
+        "PHYS412",
+        "PHYS421",
+        "PHYS451",
+        "PHYS521",
+        "PHYS441",
+        "PHYS481L"
+      ],
+      "choice_groups": [
+        {
+          "id": "phys_research",
+          "description": "Research with Faculty Mentor II or Senior Honor Thesis Research II",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["PHYS395", "PHYS692H"]
+        },
+        {
+          "id": "phys_upper_electives",
+          "description": "Six additional credit hours of approved upper-level electives",
+          "credits_required": 6,
+          "type": "explicit",
+          "options": [
+            "ASTR202", "ASTR301", "ASTR431", "ASTR501", "ASTR502", "ASTR503", "ASTR504", "ASTR505", "ASTR519", "ASTR701",
+            "MATH528", "MATH529", 
+            "PHYS231", "PHYS358", "PHYS405", "PHYS410", "PHYS515", "PHYS543", "PHYS631", "PHYS632", "PHYS633"
+          ]
+        },
+        {
+          "id": "add_phys_118",
+          "description": "Introductory Calculus-based Mechanics and Relativity",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS118"]
+        },
+        {
+          "id": "add_phys_119",
+          "description": "Introductory Calculus-based Electromagnetism and Quanta",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS119"]
+        },
+        {
+          "id": "add_math_231",
+          "description": "Calculus of Functions of One Variable I",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH231"]
+        },
+        {
+          "id": "add_math_232",
+          "description": "Calculus of Functions of One Variable II",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH232"]
+        },
+        {
+          "id": "add_math_233",
+          "description": "Calculus of Functions of Several Variables",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH233"]
+        },
+        {
+          "id": "add_math_383",
+          "description": "First Course in Differential Equations",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH383"]
+        },
+        {
+          "id": "add_chem_101",
+          "description": "General Descriptive Chemistry I and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM101", "CHEM101L"]
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+
+  "Physics_BS_Astrophysics": {
+    "base_requirements": {
+      "required_courses": [
+        "PHYS281L",
+        "PHYS331",
+        "PHYS332",
+        "PHYS401",
+        "PHYS311",
+        "PHYS412",
+        "PHYS421",
+        "PHYS521",
+        "PHYS441",
+        "ASTR519"
+      ],
+      "choice_groups": [
+        {
+          "id": "phys_research",
+          "description": "Research with Faculty Mentor II or Senior Honor Thesis Research II",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["PHYS395", "PHYS692H"]
+        },
+        {
+          "id": "astr_upper_elective",
+          "description": "One additional course chosen from ASTR numbered above 300",
+          "courses_required": 1,
+          "type": "rule_based",
+          "rule": {
+            "department": "ASTR",
+            "min_number": 300
+          }
+        },
+        {
+          "id": "astro_upper_electives_6_credits",
+          "description": "Six or more additional credit hours of approved electives",
+          "credits_required": 6,
+          "type": "explicit",
+          "options": [
+            "ASTR301", "ASTR431", "ASTR501", "ASTR502", "ASTR503", "ASTR504", "ASTR505", "ASTR519", "ASTR701",
+            "MATH528", "MATH529", 
+            "PHYS231", "PHYS451", "PHYS632"
+          ]
+        },
+        {
+          "id": "add_phys_118",
+          "description": "Introductory Calculus-based Mechanics and Relativity",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS118"]
+        },
+        {
+          "id": "add_phys_119",
+          "description": "Introductory Calculus-based Electromagnetism and Quanta",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PHYS119"]
+        },
+        {
+          "id": "add_astr_202",
+          "description": "Introduction to Astrophysics",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["ASTR202"]
+        },
+        {
+          "id": "add_math_231",
+          "description": "Calculus of Functions of One Variable I",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH231"]
+        },
+        {
+          "id": "add_math_232",
+          "description": "Calculus of Functions of One Variable II",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH232"]
+        },
+        {
+          "id": "add_math_233",
+          "description": "Calculus of Functions of Several Variables",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH233"]
+        },
+        {
+          "id": "add_math_383",
+          "description": "First Course in Differential Equations",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["MATH383"]
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Psychology_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "PSYC210",
+        "PSYC270"
+      ],
+      "choice_groups": [
+        {
+          "id": "gateway_psyc",
+          "description": "General Psychology",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["PSYC101"]
+        },
+        {
+          "id": "psyc_behavioral_neuro_area",
+          "description": "Behavioral Integrative Neuroscience Area",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["NSCI222", "NSCI225", "NSCI221", "PSYC220"]
+        },
+        {
+          "id": "psyc_cognitive_area",
+          "description": "Cognitive Area",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["NSCI225", "PSYC230"]
+        },
+        {
+          "id": "psyc_clin_dev_soc_areas",
+          "description": "Two courses from Clinical, Development, or Social Areas",
+          "courses_required": 2,
+          "type": "explicit",
+          "options": ["PSYC242", "PSYC245", "PSYC250", "PSYC260"]
+        },
+        {
+          "id": "psyc_special_requirement",
+          "description": "One upper-level Special Requirement course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "PSYC395", "PSYC404", "PSYC430", "PSYC433", "PSYC438", "PSYC469", "PSYC504", 
+            "PSYC517", "PSYC525", "PSYC528", "PSYC530", "PSYC531", "PSYC532", "PSYC533", 
+            "PSYC534", "PSYC559", "PSYC693H", "PSYC694H", 
+            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI421", "NSCI422", 
+            "NSCI423", "NSCI507", "NSCI693H", "NSCI694H"
+          ]
+        },
+        {
+          "id": "psyc_upper_elective",
+          "description": "One additional PSYC and/or NSCI course numbered between 395 and 699",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "PSYC395", "PSYC404", "PSYC430", "PSYC434", "PSYC467", "PSYC469", "PSYC471", 
+            "PSYC490", "PSYC500", "PSYC501", "PSYC502", "PSYC504", "PSYC514", "PSYC530", 
+            "PSYC531", "PSYC532", "PSYC565", "PSYC601", "PSYC693H", "PSYC694H",
+            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI421", "NSCI422", 
+            "NSCI423", "NSCI507", "NSCI693H", "NSCI694H"
+          ]
+        },
+        {
+          "id": "psyc_additional_elective",
+          "description": "One additional PSYC and/or NSCI course above 101",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "NSCI175", "NSCI221", "NSCI222", "NSCI225", "PSYC220", "PSYC242", "PSYC245", 
+            "PSYC230", "PSYC250", "PSYC260", "PSYC395", "PSYC404", "PSYC430", "PSYC467", 
+            "PSYC469", "PSYC471", "PSYC500", "PSYC502", "PSYC504", "PSYC514", "PSYC530", 
+            "PSYC531", "PSYC532", "PSYC565", "PSYC601", "NSCI401", "NSCI403", "NSCI405", 
+            "NSCI421", "NSCI422"
+          ]
+        },
+        {
+          "id": "add_biol_101",
+          "description": "Principles of Biology and Laboratory",
+          "courses_required": 2,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["BIOL101", "BIOL101L"]
+        },
+        {
+          "id": "add_physical_science",
+          "description": "Physical Science Requirement",
+          "credits_required": 4,
+          "is_core": false,
+          "type": "explicit",
+          "options": ["CHEM101", "CHEM101L", "PHYS114", "PHYS118", "MATH231"]
+        },
+        {
+          "id": "quant_reasoning_elective",
+          "description": "One additional non-Psychology/Neuroscience quantitative reasoning course",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "explicit",
+          "options": [
+            "COMP110", "COMP116", "COMP210", "COMP211", "COMP283", "COMP301", 
+            "MATH110", "MATH130", "MATH152", "MATH210", "MATH231", "MATH232", "MATH233", "MATH381", 
+            "STOR113", "STOR120", "STOR151", "STOR155", "STOR215", "STOR315", "STOR435",
+            "PHIL155"
+          ]
+        },
+        {
+          "id": "allied_science_electives",
+          "description": "13 credit hours of non-Psychology/Neuroscience courses from the Allied Science list",
+          "credits_required": 13,
+          "is_core": false,
+          "type": "explicit",
+          "options": [
+            "ANTH143", "ANTH148", "ANTH217", "ANTH298", "ANTH315", "ANTH318", "ANTH412", 
+            "ANTH413", "ANTH414", "ANTH415", "ANTH416", "ANTH423", "ANTH437", "ANTH471",
+            "ASTR101", "ASTR102", "ASTR103",
+            "BIOC107", "BIOC108",
+            "BIOL103", "BIOL104", "BIOL202", "BIOL205", "BIOL220", "BIOL240", "BIOL250", 
+            "BIOL260", "BIOL271", "BIOL272", "BIOL278", "BIOL422", "BIOL451", "BIOL471",
+            "BMME150", "BMME207", "BMME301", "BMME315", "BMME335", "BMME385", "BMME405", "BMME420",
+            "CHEM102", "CHEM241", "CHEM241L", "CHEM245L", "CHEM251", "CHEM261", "CHEM262", "CHEM262L", "CHEM263L", "CHEM430", "CHEM481",
+            "COMP110", "COMP116", "COMP210", "COMP211", "COMP283", "COMP301", "COMP401", "COMP410",
+            "EMES101", "EMES101L", "EMES103", "EMES202", "EMES220", 
+            "ENEC108", "ENEC202", "ENEC220", "ENEC256", "ENEC304", "ENEC324", "ENEC403", "ENEC406",
+            "ENVR205", "ENVR403", "ENVR411", "ENVR412", "ENVR416", "ENVR421", "ENVR430", "ENVR451",
+            "EXSS175", "EXSS275L", "EXSS276", "EXSS376", "EXSS380", "EXSS385", "EXSS475", "EXSS576", "EXSS580",
+            "GEOG110", "GEOG111", "GEOG212", "GEOG253", "GEOG391", "GEOG412", "GEOG414", "GEOG416",
+            "MATH232", "MATH233", "MATH347", "MATH381", "MATH383", "MATH521", "MATH528",
+            "MCRO251", "NUTR240", "NUTR400", "NUTR600", "NUTR620",
+            "PHIL155", "PHIL455",
+            "PHYS101", "PHYS115", "PHYS119", "PHYS211", "PHYS281L", "PHYS331",
+            "STOR120", "STOR155", "STOR215", "STOR315", "STOR320", "STOR415", "STOR435", "STOR445", "STOR455"
           ]
         }
       ]

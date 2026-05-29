@@ -24,6 +24,8 @@ _IEA_RAW_TAGS = frozenset({
     "RESEARCH", "IMPACT",
     # High-Impact Experiences: catalog uses several HI-* variants; normalize to "HI-EXP"
     "HI-EXP", "HI-SERVICE", "HI-PERFORM", "HI-LEARNTA", "HI-INTERN", "HI-GENERAL",
+    # Foundations of American Democracy (NC system requirement)
+    "FAD",
 })
 
 # Maps catalog variant → canonical name stored in course_catalog.json
@@ -44,6 +46,9 @@ _IEA_TAGS = frozenset(_IEA_NORMALIZE.get(t, t) for t in _IEA_RAW_TAGS)
 _IEA_RE = re.compile(
     r'\b(' + '|'.join(re.escape(t) for t in sorted(_IEA_RAW_TAGS, key=len, reverse=True)) + r')\b'
 )
+
+# UNC sometimes prints the full NC-system name rather than the short code.
+_FAD_FULL_RE = re.compile(r'Foundations\s+of\s+American\s+Democracy', re.IGNORECASE)
 
 def fetch_html(url):
     headers = {
@@ -118,6 +123,10 @@ def extract_course_info(block):
                 tag = _IEA_NORMALIZE.get(m.group(1), m.group(1))
                 if tag not in attributes:
                     attributes.append(tag)
+            # Catch the long-form NC system name ("Foundations of American Democracy")
+            # which the catalog sometimes prints instead of the short code "FAD".
+            if _FAD_FULL_RE.search(gen_ed_section) and "FAD" not in attributes:
+                attributes.append("FAD")
 
     course_data = {
         "name": title_text,

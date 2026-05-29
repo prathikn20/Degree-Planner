@@ -29,6 +29,49 @@ def load_static_data():
     return catalog, requirements, graph
 
 
+# ── Feedback persistence ───────────────────────────────────────────────────────
+
+@st.cache_resource
+def _get_feedback_sheet():
+    """Return the first worksheet of the feedback Google Sheet.
+    Cached for the lifetime of the server process so we only authenticate once.
+    Raises if gcp_service_account secrets are not configured."""
+    import gspread
+    gc = gspread.service_account_from_dict(dict(st.secrets["gcp_service_account"]))
+    ws = gc.open_by_key(st.secrets["FEEDBACK_SHEET_ID"]).sheet1
+    if not ws.get_all_values():
+        ws.append_row(["Timestamp", "Type", "Title", "Description", "Email"])
+    return ws
+
+
+def _write_feedback(entry: dict) -> None:
+    """Write one feedback entry to Google Sheets when secrets are present,
+    otherwise fall back to logs/feedback.json for local development."""
+    if "gcp_service_account" in st.secrets:
+        ws = _get_feedback_sheet()
+        ws.append_row([
+            entry["timestamp"],
+            entry["type"],
+            entry["title"],
+            entry["description"],
+            entry.get("email") or "",
+        ])
+    else:
+        _fb_path = "logs/feedback.json"
+        _existing: list = []
+        if os.path.exists(_fb_path):
+            try:
+                with open(_fb_path) as _f:
+                    _existing = json.load(_f)
+            except Exception:
+                _existing = []
+        _existing.append(entry)
+        _tmp = _fb_path + ".tmp"
+        with open(_tmp, "w") as _f:
+            json.dump(_existing, _f, indent=2)
+        os.replace(_tmp, _fb_path)
+
+
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 def fmt(key: str) -> str:
@@ -66,8 +109,9 @@ def run_pipeline(
     catalog: dict,
     requirements: dict,
     graph: dict,
-    planned_courses: list[str] | None = None,
-    avoid_courses:   list[str] | None = None,
+    planned_courses:      list[str] | None = None,
+    avoid_courses:        list[str] | None = None,
+    explicitly_requested: list[str] | None = None,
 ) -> dict:
     parsed      = parse_tarheel_tracker(pdf_path)
     completed   = parsed["completed"]
@@ -96,6 +140,7 @@ def run_pipeline(
     selections = select_courses_globally(
         results_by_track, requirements, catalog, assumed,
         majors_to_check, avoid_courses=avoid,
+        explicitly_requested=explicitly_requested,
     )
 
     audit: dict[str, dict] = {}
@@ -366,6 +411,10 @@ st.set_page_config(
 )
 
 catalog, requirements, graph = load_static_data()
+
+if "user_swaps" not in st.session_state:
+    st.session_state.user_swaps = set()
+
 all_tracks    = list(requirements.keys())
 # Gen ed is always checked automatically — exclude from selectable program dropdowns
 GEN_ED_TRACK  = "UNC_General_Education"
@@ -499,23 +548,28 @@ with st.sidebar:
 
     # ─── Feedback ─────────────────────────────────────────────────────────────
     with st.expander("💬 Suggest a Feature / Report a Bug", expanded=False):
-        fb_type = st.radio(
-            "Type", ["Feature Request", "Bug Report"],
-            horizontal=True, key="fb_type",
-            label_visibility="collapsed",
-        )
-        fb_title = st.text_input(
-            "Brief title", placeholder="One-line summary…", key="fb_title"
-        )
-        fb_desc = st.text_area(
-            "Details", placeholder="Describe the feature or bug…",
-            height=110, key="fb_desc",
-        )
-        fb_email = st.text_input(
-            "Email (optional)", placeholder="so I can follow up",
-            key="fb_email",
-        )
-        if st.button("Submit", key="fb_submit", use_container_width=True):
+        # st.form with clear_on_submit=True resets all inputs automatically on
+        # submission, avoiding the StreamlitAPIException that occurs when you
+        # write to a widget-bound session-state key after the widget renders.
+        with st.form(key="feedback_form", clear_on_submit=True):
+            fb_type = st.radio(
+                "Type", ["Feature Request", "Bug Report"],
+                horizontal=True,
+                label_visibility="collapsed",
+            )
+            fb_title = st.text_input(
+                "Brief title", placeholder="One-line summary…"
+            )
+            fb_desc = st.text_area(
+                "Details", placeholder="Describe the feature or bug…",
+                height=110,
+            )
+            fb_email = st.text_input(
+                "Email (optional)", placeholder="so I can follow up",
+            )
+            _fb_submitted = st.form_submit_button("Submit", use_container_width=True)
+
+        if _fb_submitted:
             if fb_title.strip() and fb_desc.strip():
                 entry = {
                     "type": fb_type,
@@ -524,23 +578,11 @@ with st.sidebar:
                     "email": fb_email.strip() or None,
                     "timestamp": datetime.datetime.now().isoformat(),
                 }
-                _fb_path = "data/feedback.json"
-                _existing: list = []
-                if os.path.exists(_fb_path):
-                    try:
-                        with open(_fb_path) as _f:
-                            _existing = json.load(_f)
-                    except Exception:
-                        _existing = []
-                _existing.append(entry)
-                _tmp = _fb_path + ".tmp"
-                with open(_tmp, "w") as _f:
-                    json.dump(_existing, _f, indent=2)
-                os.replace(_tmp, _fb_path)
-                st.success("✅ Thanks! Your feedback has been submitted.")
-                st.session_state["fb_title"] = ""
-                st.session_state["fb_desc"] = ""
-                st.session_state["fb_email"] = ""
+                try:
+                    _write_feedback(entry)
+                    st.success("✅ Thanks! Your feedback has been submitted.")
+                except Exception as _fb_err:
+                    st.error(f"Submission failed: {_fb_err}")
             else:
                 st.warning("Please fill in both the title and description.")
 
@@ -590,6 +632,7 @@ if uploaded is not None:
                 tmp_path, majors_to_check, catalog, requirements, graph,
                 planned_courses=planned_courses,
                 avoid_courses=avoid_courses,
+                explicitly_requested=list(st.session_state.get("user_swaps", set())),
             )
     except Exception as exc:
         st.error(f"Pipeline error: {exc}")
@@ -783,10 +826,11 @@ if uploaded is not None:
                 return f"Prereq → {targets}"
             return "—"
 
+        _user_swaps = st.session_state.get("user_swaps", set())
         rows = [
             {
                 "#":       i,
-                "Course":  course,
+                "Course":  f"🔄 {course}" if course in _user_swaps else course,
                 "Name":    catalog.get(course, {}).get("name", "—"),
                 "Credits": catalog.get(course, {}).get("credits", 3),
                 "Fulfills": _fulfills_label(course),
@@ -855,7 +899,7 @@ if uploaded is not None:
             st.caption(
                 "Replace a recommended course with a valid alternative that satisfies the same "
                 "requirement. The swapped-out course is blocked from future recommendations; "
-                "the replacement is treated as a planned course."
+                "the replacement will be marked 🔄 in the graduation path above."
             )
             if not _swappable:
                 st.info("Every course in the current path is required with no valid alternatives.")
@@ -866,35 +910,34 @@ if uploaded is not None:
                     spaced = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', c)
                     return f"{spaced} ({cr} cr) — {name[:40]}" if name else f"{spaced} ({cr} cr)"
 
-                _sc1, _sc2 = st.columns(2)
-                with _sc1:
-                    _swap_out = st.selectbox(
-                        "Course to swap out",
-                        options=_swappable,
+                # Step A — pick the course to remove; options come directly from the
+                # most recently generated path so ghost courses are impossible.
+                _swap_out = st.selectbox(
+                    "Step 1 — Select a course to replace",
+                    options=_swappable,
+                    format_func=_clabel,
+                    key="swap_remove_selectbox",
+                    index=None,
+                    placeholder="Choose a course to swap out…",
+                )
+
+                # Step B — show alternatives for that exact slot (only after step A)
+                _swap_in: str | None = None
+                if _swap_out is not None:
+                    _alternatives = _alt_map.get(_swap_out, {}).get("alternatives", [])
+                    _req_desc     = _alt_map.get(_swap_out, {}).get("desc", "")
+
+                    _swap_in = st.selectbox(
+                        "Step 2 — Choose replacement",
+                        options=_alternatives,
                         format_func=_clabel,
-                        key="swap_out_select",
+                        key="swap_add_selectbox",
                         index=None,
-                        placeholder="Choose a course to swap out…",
+                        placeholder="Choose a replacement…",
+                        help=f"Satisfies: {_req_desc}",
                     )
 
-                _alternatives = _alt_map.get(_swap_out, {}).get("alternatives", []) if _swap_out else []
-                _req_desc     = _alt_map.get(_swap_out, {}).get("desc", "")           if _swap_out else ""
-
-                with _sc2:
-                    if _swap_out is not None and _alternatives:
-                        _swap_in = st.selectbox(
-                            "Replace with",
-                            options=_alternatives,
-                            format_func=_clabel,
-                            key="swap_in_select",
-                            index=None,
-                            placeholder="Choose a replacement…",
-                            help=f"Satisfies: {_req_desc}",
-                        )
-                    else:
-                        st.selectbox("Replace with", options=[], key="swap_in_select", disabled=True)
-                        _swap_in = None
-
+                # Step C — preview + confirm (only after both selections are made)
                 if _swap_out is not None and _swap_in is not None:
                     _out_cr   = catalog.get(_swap_out, {}).get("credits", 3)
                     _in_cr    = catalog.get(_swap_in,  {}).get("credits", 3)
@@ -904,8 +947,7 @@ if uploaded is not None:
                         + (f"(+{_cr_delta})" if _cr_delta > 0 else f"({_cr_delta})")
                     ) if _cr_delta != 0 else ""
 
-                    # Prerequisite check for the incoming course
-                    _in_prereqs     = catalog.get(_swap_in, {}).get("prerequisites", [])
+                    _in_prereqs      = catalog.get(_swap_in, {}).get("prerequisites", [])
                     _missing_prereqs: list[str] = []
                     if _in_prereqs:
                         _best_pp = min(_in_prereqs, key=len)
@@ -921,25 +963,50 @@ if uploaded is not None:
                             f"— these will be added to your graduation path automatically."
                         )
 
-                    def _do_swap(swap_out: str, swap_in: str) -> None:
-                        if not swap_out or not swap_in:
+                    def _do_swap() -> None:
+                        # Atomic transaction: read both values from session state with
+                        # strict type guards so a stale or unexpected widget value
+                        # cannot crash the rerun cycle.
+                        old_course_val = st.session_state.get("swap_remove_selectbox")
+                        new_course_val = st.session_state.get("swap_add_selectbox")
+
+                        if not old_course_val or not new_course_val:
                             return
-                        cur_avoid   = list(st.session_state.get("avoid_courses",   []))
-                        cur_planned = list(st.session_state.get("planned_courses", []))
-                        if swap_out not in cur_avoid:
-                            cur_avoid.append(swap_out)
-                        if swap_in not in cur_planned:
-                            cur_planned.append(swap_in)
-                        st.session_state["avoid_courses"]   = cur_avoid
-                        st.session_state["planned_courses"] = cur_planned
-                        st.session_state.pop("swap_out_select", None)
-                        st.session_state.pop("swap_in_select",  None)
+
+                        old_course_id = (
+                            old_course_val if isinstance(old_course_val, str)
+                            else old_course_val.get("Course")
+                        )
+                        new_course_id = (
+                            new_course_val if isinstance(new_course_val, str)
+                            else new_course_val.get("Course")
+                        )
+
+                        if not old_course_id or not new_course_id:
+                            return
+
+                        # Block the removed course from future recommendations.
+                        cur_avoid = list(st.session_state.get("avoid_courses", []))
+                        if old_course_id not in cur_avoid:
+                            cur_avoid.append(old_course_id)
+                        st.session_state["avoid_courses"] = cur_avoid
+
+                        # Mark the replacement as explicitly requested so the greedy
+                        # selector strongly prefers it and it appears in the path.
+                        # Do NOT add to planned_courses — that would treat it as
+                        # already completed and erase it from the generated path.
+                        _swaps = set(st.session_state.get("user_swaps", set()))
+                        _swaps.add(new_course_id)
+                        st.session_state["user_swaps"] = _swaps
+
+                        # Clear both selectboxes so the next render starts clean.
+                        st.session_state.pop("swap_remove_selectbox", None)
+                        st.session_state.pop("swap_add_selectbox",    None)
 
                     st.button(
-                        "🔄 Execute Swap", key="execute_swap_btn",
+                        "✅ Confirm Swap", key="execute_swap_btn",
                         type="primary", use_container_width=True,
                         on_click=_do_swap,
-                        args=(_swap_out, _swap_in),
                     )
 
             if _non_swappable:
@@ -955,7 +1022,8 @@ if uploaded is not None:
         for row in rows:
             name_escaped     = row["Name"].replace('"', '""')
             fulfills_escaped = row["Fulfills"].replace('"', '""')
-            csv_buf.write(f'"{row["Course"]}","{name_escaped}",{row["Credits"]},"{fulfills_escaped}"\n')
+            raw_code = row["Course"].lstrip("🔄 ")
+            csv_buf.write(f'"{raw_code}","{name_escaped}",{row["Credits"]},"{fulfills_escaped}"\n')
 
         st.download_button(
             label="📥 Download Graduation Plan",
