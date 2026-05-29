@@ -6687,5 +6687,6610 @@
       "MATH383",
       "PHYS331"
     ]
+  },
+  "32b3d8481d5b0c9104d26b573f70a2f7": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "ASTR202",
+          "ASTR301"
+        ]
+      },
+      "PHYS401"
+    ]
+  },
+  "a02910481cb4478f62a7c43d880481df": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "ASTR202",
+          "ASTR301"
+        ]
+      },
+      "PHYS331"
+    ]
+  },
+  "66231097aa4cc3eda369f326c481e8d6": {
+    "operator": "AND",
+    "operands": [
+      "ASTR202",
+      "PHYS412"
+    ]
+  },
+  "61362dcc69162d67d330bdf41fdc785c": {
+    "operator": "AND",
+    "operands": [
+      "ASTR202",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS201",
+          "PHYS401"
+        ]
+      }
+    ]
+  },
+  "8a616361f597e10d84c415daf0d2e22d": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101"
+    ]
+  },
+  "aac463adbe3ed976a734e30ea949112b": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101"
+    ]
+  },
+  "077253874e27a7248c016a205db38425": {
+    "operator": "OR",
+    "operands": [
+      "PSYC210",
+      "PSYC215",
+      "SOCI252",
+      "STOR155"
+    ]
+  },
+  "2521ebebd67f0ba58bea5fba00b229de": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC2XX",
+          "PSYC3XX",
+          "PSYC4XX"
+        ]
+      }
+    ]
+  },
+  "9238eba12e3e7410d09254bccf597737": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC222",
+          "PSYC230"
+        ]
+      }
+    ]
+  },
+  "0104f511c49b724c665e2fb337e42a44": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101"
+    ]
+  },
+  "d617d12a2bc1bd89859b3c48b6bfc40a": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "fcd9c5fea694037edf7a3d39d705caac": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC250"
+    ]
+  },
+  "9486f7f52675e8ac10ba5d7c1dfb8d8a": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC250",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "e112d456c21fdb710edccf26785b17a9": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC101",
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "7ff8614442922c14215a589f8363f5db": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC270"
+        ]
+      }
+    ]
+  },
+  "99d159056de9abf6716fef2906b07355": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC245",
+      "PSYC250"
+    ]
+  },
+  "c9c784bd7d85d6d750f191ef1b785bb2": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC245"
+    ]
+  },
+  "f10296958dceead04c6dcab18780fc32": {
+    "operator": "OR",
+    "operands": [
+      "PSYC101",
+      "PSYC242",
+      "PSYC245"
+    ]
+  },
+  "70eddbda6b188f1b05c0e706c584bbdf": {
+    "operator": "AND",
+    "operands": [
+      "PSYC250"
+    ]
+  },
+  "bd95df70833621eaf5a1269654ab41c4": {
+    "operator": "AND",
+    "operands": [
+      "PSYC270",
+      "PSYC245"
+    ]
+  },
+  "4fbe1d54cd386ddab56ef101bcb3eb2f": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "4fd659db090dbba766952a74d7ea2037": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC270"
+    ]
+  },
+  "580c1fd02d0dcf0a95a3c8b813b8df17": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "0acc92bf52a72750faeb74c9f010f455": {
+    "operator": "OR",
+    "operands": [
+      "PSYC210",
+      "PSYC215",
+      "SOCI252",
+      "STOR155"
+    ]
+  },
+  "5b668195132aa04354c9e55edb6c1b34": {
+    "operator": "AND",
+    "operands": [
+      "ECON400",
+      "PSYC210",
+      "PSYC215",
+      {
+        "operator": "OR",
+        "operands": [
+          "SOCI252",
+          "STOR155"
+        ]
+      }
+    ]
+  },
+  "e44c3f68dd5852e1dab6c752c994a262": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC210"
+    ]
+  },
+  "e9368d7f51cfaf66974ce81f49666072": {
+    "operator": "AND",
+    "operands": [
+      "PSYC210"
+    ]
+  },
+  "2248eb389b73698ff4ed13e1eb925efd": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC260",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "db412eb157f392f737f2544a926f8db4": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC260",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "1ab76fc6a168b4d94a5e0f841bf9bd9a": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC260",
+      "PSYC270"
+    ]
+  },
+  "f9f93ee1cbd3e5fba75e10b32aad8b87": {
+    "operator": "OR",
+    "operands": [
+      "PSYC220",
+      "NSCI175"
+    ]
+  },
+  "75a98b58a7e6e082ada74da9a2bc07a3": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC260"
+    ]
+  },
+  "3a14e96f6feda3890103d0da7874dc86": {
+    "operator": "OR",
+    "operands": [
+      "PSYC101",
+      "WGST101"
+    ]
+  },
+  "808bed596ec11f60670d877efd1096c0": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      "PSYC260"
+    ]
+  },
+  "27c45b15e8dbf2036bcb7c742251c6cc": {
+    "operator": "AND",
+    "operands": [
+      "PSYC101",
+      {
+        "operator": "OR",
+        "operands": [
+          "PSYC210",
+          "PSYC215"
+        ]
+      }
+    ]
+  },
+  "c46cfe78d73fdf8a0292b1d14cd94769": {
+    "operator": "AND",
+    "operands": [
+      "PSYC402"
+    ]
+  },
+  "d4070877babed28b0d1c3976fcf5e478": {
+    "operator": "AND",
+    "operands": [
+      "PSYC404"
+    ]
+  },
+  "9c6480a4bacbd0dedc09cb0355052467": {
+    "operator": "AND",
+    "operands": [
+      "EXSS11"
+    ]
+  },
+  "1c408e3f57dfde5d35d7b9c26be4fafc": {
+    "operator": "AND",
+    "operands": [
+      "EXSS155"
+    ]
+  },
+  "a07f4fd55d9689944332cb13022eb6c0": {
+    "operator": "OR",
+    "operands": [
+      "EXSS155",
+      "EXSS175"
+    ]
+  },
+  "23f022966b6e8b0420ed73e49a19ce10": {
+    "operator": "OR",
+    "operands": [
+      "EXSS155",
+      "EXSS175"
+    ]
+  },
+  "19b46379a6e25bcb1081aef3f67e7efe": {
+    "operator": "AND",
+    "operands": [
+      "EXSS175"
+    ]
+  },
+  "2142342d3806cb7bf8f6dfb75459bd03": {
+    "operator": "AND",
+    "operands": [
+      "EXSS191"
+    ]
+  },
+  "02db051bad0382d0976a90ae20a33bf2": {
+    "operator": "AND",
+    "operands": [
+      "EXSS221"
+    ]
+  },
+  "f8b5db3fe8f3b15c3efee398cf16bb47": {
+    "operator": "AND",
+    "operands": [
+      "ECON101",
+      "EXSS221"
+    ]
+  },
+  "553b5ed1c07272add7bd00f10599b4fb": {
+    "operator": "OR",
+    "operands": [
+      "STOR151",
+      "STOR155"
+    ]
+  },
+  "d01058c7056e11746adb1519d3fff418": {
+    "operator": "OR",
+    "operands": [
+      "EXSS256",
+      "EXSS276",
+      "NUTR240"
+    ]
+  },
+  "241b869f939ef37c96f9547d2f784fdb": {
+    "operator": "AND",
+    "operands": [
+      "EXSS265"
+    ]
+  },
+  "8d185c05e616b4d23ff6f01f62a532be": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS155",
+          "EXSS175"
+        ]
+      },
+      "EXSS265",
+      "EXSS288",
+      "EXSS366"
+    ]
+  },
+  "541167e5a0674b36daea6a182e9d5e53": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS155",
+          "EXSS175"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS265",
+          "EXSS288",
+          "EXSS366",
+          "EXSS367"
+        ]
+      }
+    ]
+  },
+  "c5dc135a0372b298a3729c843aec1be9": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS155",
+          "EXSS175"
+        ]
+      },
+      "EXSS288"
+    ]
+  },
+  "4b88f9de7ee97b85a394c96d2ab722db": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS155",
+              "EXSS256"
+            ]
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS175",
+              "EXSS276"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS265",
+          "EXSS288"
+        ]
+      }
+    ]
+  },
+  "ca3241bc2c57f93f640455eb92461034": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS155",
+          "EXSS256"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS175",
+          "EXSS276"
+        ]
+      }
+    ]
+  },
+  "75f9767f418c39f2b236e4c7ed364f42": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS155",
+          "EXSS175"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS265",
+          "EXSS288"
+        ]
+      }
+    ]
+  },
+  "69499e70fc192d2c326dc4665a4cbd6f": {
+    "operator": "AND",
+    "operands": [
+      "EXSS181"
+    ]
+  },
+  "b7a1ae8b287eb56d6ff3417c046a5d74": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS155",
+              "EXSS256"
+            ]
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS175",
+              "EXSS276"
+            ]
+          }
+        ]
+      },
+      "EXSS376"
+    ]
+  },
+  "c9989e7e3e779af7a095983e6041d8d6": {
+    "operator": "AND",
+    "operands": [
+      "EXSS221",
+      "EXSS322"
+    ]
+  },
+  "87ddc49ce329837b67e07ac7e1ba57c4": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS155",
+              "EXSS256"
+            ]
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              "EXSS175",
+              "EXSS276"
+            ]
+          }
+        ]
+      },
+      "EXSS385"
+    ]
+  },
+  "6b1a52fa16c54e30ffcb4020af39828d": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS155",
+          "EXSS256"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS175",
+          "EXSS276"
+        ]
+      }
+    ]
+  },
+  "fefccb0eb589f1e8b0f29efb50ce87c8": {
+    "operator": "AND",
+    "operands": [
+      "EXSS221",
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS322",
+          "EXSS323",
+          "EXSS324",
+          "EXSS326"
+        ]
+      }
+    ]
+  },
+  "fda781c2494e5f048ef3ffa24c9aea90": {
+    "operator": "OR",
+    "operands": [
+      "EXSS273",
+      "PSYC210"
+    ]
+  },
+  "06b8b188ff3f952eb6f7a3c698fe8fe7": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS155",
+          "EXSS175"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "EXSS380",
+          "EXSS385"
+        ]
+      }
+    ]
+  },
+  "8062721cb413f434598db6030ccad415": {
+    "operator": "AND",
+    "operands": [
+      "EXSS220",
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS380",
+          "EXSS385"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "EXSS408",
+          "EXSS478"
+        ]
+      },
+      "EXSS410"
+    ]
+  },
+  "89867b8edee006089cd3e40d77e62324": {
+    "operator": "AND",
+    "operands": [
+      "EXSS273"
+    ]
+  },
+  "cab8b5c52b9c7fccbb3ad8d0ae8d9c77": {
+    "operator": "AND",
+    "operands": [
+      "EXSS730"
+    ]
+  },
+  "e78a82dc3f7e6ec2c13df9ad6a5d1f99": {
+    "operator": "AND",
+    "operands": [
+      "EXSS730",
+      "EXSS732",
+      "EXSS736"
+    ]
+  },
+  "d0138f6dcc6eee48880ccbf08b0a52cf": {
+    "operator": "AND",
+    "operands": [
+      "EXSS740"
+    ]
+  },
+  "c4efb15bb4547c45cadc441c19146794": {
+    "operator": "AND",
+    "operands": [
+      "EXSS380"
+    ]
+  },
+  "facb36aa48794ba5f37939096009258d": {
+    "operator": "OR",
+    "operands": [
+      "EXSS256",
+      "EXSS276",
+      "EXSS376"
+    ]
+  },
+  "c0a814ea0d2fb217816531e09e1601a7": {
+    "operator": "AND",
+    "operands": [
+      "EXSS376"
+    ]
+  },
+  "cc46ad053960f3f3f53a3364b1279bff": {
+    "operator": "AND",
+    "operands": [
+      "EXSS780"
+    ]
+  },
+  "41af80f355aef414d2422f24d7c5d228": {
+    "operator": "OR",
+    "operands": [
+      "EXSS410L",
+      "780",
+      "781"
+    ]
+  },
+  "052bb5031ee3e224635ca59f209511f9": {
+    "operator": "AND",
+    "operands": [
+      "MEJO153"
+    ]
+  },
+  "9e42e5c156f6f6d1c53f4401c0ad4915": {
+    "operator": "AND",
+    "operands": [
+      "MEJO137",
+      "MEJO153"
+    ]
+  },
+  "12e5df641fea5db64eb988ad5856e796": {
+    "operator": "AND",
+    "operands": [
+      "MEJO121"
+    ]
+  },
+  "a0f88ce2079408c575bc13821f9fd995": {
+    "operator": "AND",
+    "operands": [
+      "MEJO137"
+    ]
+  },
+  "876225f5949a65037a098bb837fa26cd": {
+    "operator": "AND",
+    "operands": [
+      "MEJO153"
+    ]
+  },
+  "cbe2a5bfa0a018933a5e1dfe2ecfe8d8": {
+    "operator": "AND",
+    "operands": [
+      "MEJO121",
+      "MEJO252"
+    ]
+  },
+  "e44de8ebbb85c4a7794fd7dcb7a73f71": {
+    "operator": "AND",
+    "operands": [
+      "MEJO252"
+    ]
+  },
+  "0f153f505590e6b1e5b52981129f2060": {
+    "operator": "OR",
+    "operands": [
+      "MEJO137",
+      "MEJO153"
+    ]
+  },
+  "4c5689129ff1e9b0f9587796e2691e28": {
+    "operator": "AND",
+    "operands": [
+      "MEJO340"
+    ]
+  },
+  "a5f8f1ef781cbeaa401a0e010459c206": {
+    "operator": "AND",
+    "operands": [
+      "MEJO153",
+      "MEJO356"
+    ]
+  },
+  "a6197957d7900f1f25b5e9bcac135d38": {
+    "operator": "AND",
+    "operands": [
+      "MEJO182"
+    ]
+  },
+  "7de42be5624c20e44af9bfa8556242b0": {
+    "operator": "AND",
+    "operands": [
+      "MEJO182"
+    ]
+  },
+  "c8ef4333c07123f400317f62435510fc": {
+    "operator": "AND",
+    "operands": [
+      "MEJO182",
+      "MEJO153"
+    ]
+  },
+  "950515d00255c5675a7227a80fabd417": {
+    "operator": "AND",
+    "operands": [
+      "MEJO187"
+    ]
+  },
+  "ccb265ff7a34e4ffc9b87bc01c1927d4": {
+    "operator": "AND",
+    "operands": [
+      "MEJO180"
+    ]
+  },
+  "3b581bbf628f245a1ac49c8ea08acb15": {
+    "operator": "AND",
+    "operands": [
+      "MEJO421"
+    ]
+  },
+  "8f227fc20901ead53523ddc06487ddbf": {
+    "operator": "AND",
+    "operands": [
+      "MEJO467"
+    ]
+  },
+  "5e8bd806163a190bfe2fa06207e81194": {
+    "operator": "AND",
+    "operands": [
+      "MEJO153",
+      "MEJO253"
+    ]
+  },
+  "15e9339bdc04b7180625b7d3921c581d": {
+    "operator": "AND",
+    "operands": [
+      "MEJO253"
+    ]
+  },
+  "3e311ea59ad8532c8309654bb8dae571": {
+    "operator": "AND",
+    "operands": [
+      "MEJO121",
+      "MEJO180"
+    ]
+  },
+  "2f51817079429e780f2ba2401c09559d": {
+    "operator": "AND",
+    "operands": [
+      "MEJO487"
+    ]
+  },
+  "0ca14583325beb86a46073ab836f7059": {
+    "operator": "AND",
+    "operands": [
+      "MEJO253"
+    ]
+  },
+  "9c82083da20c027fccbeab2f634ae3a9": {
+    "operator": "AND",
+    "operands": [
+      "MEJO630"
+    ]
+  },
+  "5f7101eea1367138656fc87f74085460": {
+    "operator": "AND",
+    "operands": [
+      "MEJO332",
+      "MEJO379"
+    ]
+  },
+  "612cb5ab1debfef443d51472cdc57fff": {
+    "operator": "OR",
+    "operands": [
+      "MEJO452",
+      "MEJO475",
+      "MEJO652"
+    ]
+  },
+  "a1c3972d6f9f14d5b5c2210bdeeb684a": {
+    "operator": "AND",
+    "operands": [
+      "MEJO469",
+      "MEJO569"
+    ]
+  },
+  "825ffaa1c7715005044c6d3b9480b26a": {
+    "operator": "AND",
+    "operands": [
+      "MEJO379"
+    ]
+  },
+  "092c6330c7f3244c0fab711d7f4d9aa0": {
+    "operator": "OR",
+    "operands": [
+      "MEJO371",
+      "MEJO372"
+    ]
+  },
+  "0fc75a874379647a117b5440a1496ef7": {
+    "operator": "AND",
+    "operands": [
+      "MEJO477"
+    ]
+  },
+  "cd0b09e56ef0a2fc3bdc61b1b77a8350": {
+    "operator": "AND",
+    "operands": [
+      "MEJO580"
+    ]
+  },
+  "f79b7585e7087c21d2cf69fbf4e08207": {
+    "operator": "AND",
+    "operands": [
+      "MEJO482"
+    ]
+  },
+  "d37730f7bc0e2c01bd537919164dbcb8": {
+    "operator": "AND",
+    "operands": [
+      "MEJO701"
+    ]
+  },
+  "af50b0e5b3190e113134b0f54b44cf02": {
+    "operator": "OR",
+    "operands": [
+      "COMM140",
+      "COMM249"
+    ]
+  },
+  "27784651c802e4092d7f8092af69759b": {
+    "operator": "AND",
+    "operands": [
+      "COMM130"
+    ]
+  },
+  "02af6f73ce824ede80056f2fd0edafa4": {
+    "operator": "AND",
+    "operands": [
+      "COMM130",
+      "COMM230"
+    ]
+  },
+  "030e19bd4ad6301b33b55a4aa7ea3516": {
+    "operator": "OR",
+    "operands": [
+      "COMM120",
+      "COMM170"
+    ]
+  },
+  "e0c12c135865bd1f1dbfd1a98c5b984b": {
+    "operator": "AND",
+    "operands": [
+      "COMM330"
+    ]
+  },
+  "2de0a1124d3b7764504739411c937a6a": {
+    "operator": "AND",
+    "operands": [
+      "COMM130"
+    ]
+  },
+  "30eb6e7ca990fe742b33381b5546cda1": {
+    "operator": "AND",
+    "operands": [
+      "COMM120"
+    ]
+  },
+  "37879fe6a2b2dbcd3252667ac4f8884f": {
+    "operator": "OR",
+    "operands": [
+      "COMM130",
+      "COMM150"
+    ]
+  },
+  "22ccdc5b6ab43aa613903a92eed87973": {
+    "operator": "OR",
+    "operands": [
+      "COMM140",
+      "COMM249"
+    ]
+  },
+  "5300c73c9a6ea7b5bcb9be484f95d2c6": {
+    "operator": "AND",
+    "operands": [
+      "COMM131"
+    ]
+  },
+  "95066be443bedd8171b00f67316f1546": {
+    "operator": "AND",
+    "operands": [
+      "COMM160"
+    ]
+  },
+  "2ffe5db0697c4f3c02be048e672d6fed": {
+    "operator": "OR",
+    "operands": [
+      "COMM160",
+      "DRAM120",
+      "ENGL206",
+      "ENGL207",
+      "ENGL208"
+    ]
+  },
+  "a7c9e93560a645bbf456f72dbe8fe01f": {
+    "operator": "OR",
+    "operands": [
+      "COMM160",
+      "COMM260"
+    ]
+  },
+  "ec802fc8ad7bcf0a017d6db6c72e8262": {
+    "operator": "AND",
+    "operands": [
+      "COMM170"
+    ]
+  },
+  "a5ee9b30976a060812bc0d337235d838": {
+    "operator": "OR",
+    "operands": [
+      "COMM113",
+      "COMM223"
+    ]
+  },
+  "a525aaceddc7e90ff5119f18370508f2": {
+    "operator": "AND",
+    "operands": [
+      "COMM170"
+    ]
+  },
+  "7f4a3cb0305acfe1e7de661097d5532f": {
+    "operator": "AND",
+    "operands": [
+      "COMM224"
+    ]
+  },
+  "e15f7fcb4969fff1d49180e494b06a9a": {
+    "operator": "AND",
+    "operands": [
+      "COMM120",
+      "COMM325"
+    ]
+  },
+  "f8418023042ece01b55ee288aa81f0af": {
+    "operator": "AND",
+    "operands": [
+      "COMM325"
+    ]
+  },
+  "a1ee6b6517ba78f63f5208d191c7b416": {
+    "operator": "AND",
+    "operands": [
+      "COMM325"
+    ]
+  },
+  "0620563c4be7c33476bbbc017d4bcfe0": {
+    "operator": "AND",
+    "operands": [
+      "COMM230"
+    ]
+  },
+  "8884f462b4b55199b2f01c219c73351d": {
+    "operator": "OR",
+    "operands": [
+      "COMM131",
+      "COMM330",
+      "ENGL130",
+      "ENGL132H"
+    ]
+  },
+  "b350ec4ace1e8646080fcbf97e2731ad": {
+    "operator": "AND",
+    "operands": [
+      "COMM433"
+    ]
+  },
+  "47d9a1481399cac4416a2d92be6f00f6": {
+    "operator": "OR",
+    "operands": [
+      "COMM160",
+      "COMM260",
+      "COMM263"
+    ]
+  },
+  "4c15815633d5fb462a8a68afc86a6a0e": {
+    "operator": "AND",
+    "operands": [
+      "COMM537"
+    ]
+  },
+  "ecb169694b35a45f38fc762399c9eb35": {
+    "operator": "AND",
+    "operands": [
+      "COMM150"
+    ]
+  },
+  "5413c7625e7ded5358122ab081d248d2": {
+    "operator": "AND",
+    "operands": [
+      "COMM638"
+    ]
+  },
+  "e0927f5aaea383651ac7c10a605fdf41": {
+    "operator": "AND",
+    "operands": [
+      "COMM350"
+    ]
+  },
+  "1d2faba249683e63e47189ed6cf85420": {
+    "operator": "AND",
+    "operands": [
+      "COMM230"
+    ]
+  },
+  "9fb16eca6fb0da81a76116384fa683a5": {
+    "operator": "OR",
+    "operands": [
+      "COMM130",
+      "COMM150"
+    ]
+  },
+  "ed20e400d7ad82fa3c305b059bf7f399": {
+    "operator": "AND",
+    "operands": [
+      "COMM230",
+      {
+        "operator": "OR",
+        "operands": [
+          "COMM534",
+          "COMM635",
+          "COMM646",
+          "COMM653",
+          "COMM654"
+        ]
+      }
+    ]
+  },
+  "5618dd64a07ca9468abceff89eec117d": {
+    "operator": "AND",
+    "operands": [
+      "COMM130"
+    ]
+  },
+  "a43684b03c42da85404139d16305459b": {
+    "operator": "OR",
+    "operands": [
+      "ARTS105",
+      "ARTS106",
+      "ARTS209",
+      "COMM130"
+    ]
+  },
+  "6be92df03fe5c46039a9ad4b0d8885dc": {
+    "operator": "OR",
+    "operands": [
+      "COMM160",
+      "COMM260",
+      "COMM262",
+      "COMM263"
+    ]
+  },
+  "6782fa3bc11c783319f7bd06ae8ed564": {
+    "operator": "OR",
+    "operands": [
+      "ARTH159",
+      "COMM140",
+      "ENGL142"
+    ]
+  },
+  "9604eb9920abf768ced2deaeb8cfc823": {
+    "operator": "AND",
+    "operands": [
+      "COMM525"
+    ]
+  },
+  "3dc9e5b0f7a9f261b60eeb5031eaf214": {
+    "operator": "AND",
+    "operands": [
+      "COMM700"
+    ]
+  },
+  "672656fae9720177e9e6a636484ef128": {
+    "operator": "AND",
+    "operands": []
+  },
+  "302e2c83369e74e15cf97371f4c776ed": {
+    "operator": "AND",
+    "operands": [
+      "SOCI251",
+      "SOCI252"
+    ]
+  },
+  "9dc8adbe8da2cc6be3c0a76bbc1b33db": {
+    "operator": "AND",
+    "operands": [
+      "SOCI250"
+    ]
+  },
+  "e9a7b0216ad34edb1f6c9040a29d3f42": {
+    "operator": "AND",
+    "operands": [
+      "SOCI691H"
+    ]
+  },
+  "7a02328b6127c861b042e4b23e8d0de2": {
+    "operator": "AND",
+    "operands": [
+      "SOCI708"
+    ]
+  },
+  "ec2c8dcf288e67280a0c569a880e7ec6": {
+    "operator": "OR",
+    "operands": [
+      "SOCI709",
+      "SOCI711"
+    ]
+  },
+  "16fc190c272c3721db10b1303d16833e": {
+    "operator": "AND",
+    "operands": [
+      "PWAD691H"
+    ]
+  },
+  "fc7561350939f23ab54d5798b647affd": {
+    "operator": "OR",
+    "operands": [
+      "PHIL56",
+      "PHIL57",
+      "PHIL58",
+      "PHIL66",
+      "PHIL67",
+      "PHIL68",
+      "PHIL70",
+      "PHIL77",
+      "PHIL78",
+      "PHIL160",
+      "PHIL163",
+      "PHIL164",
+      "PHIL165",
+      "PHIL170",
+      "PHIL261",
+      "PHIL266",
+      "PHIL272",
+      "PHIL273",
+      "PHIL274",
+      "PHIL275",
+      "PHIL280",
+      "PHIL282",
+      "PHIL285",
+      "PHIL360",
+      "PHIL362",
+      "PHIL364",
+      "PHIL368",
+      "PHIL370",
+      "PHIL384",
+      "PHIL460",
+      "PHIL463",
+      "PHIL465",
+      "PHIL468",
+      "PHIL471",
+      "PHIL473",
+      "PHIL474",
+      "PHIL475",
+      "PHIL476",
+      "PHIL480",
+      "PHIL485"
+    ]
+  },
+  "c3c4cb4cc82c7f27605af16999f48358": {
+    "operator": "OR",
+    "operands": [
+      "PHIL101",
+      "PHIL102",
+      "PHIL203",
+      "PHIL204",
+      "PHIL205",
+      "PHIL206"
+    ]
+  },
+  "d17730f146d942414e39345c2a1fe07d": {
+    "operator": "AND",
+    "operands": [
+      "PHIL101"
+    ]
+  },
+  "300ad3f1e80aa4a9013ce167cc12e2b3": {
+    "operator": "AND",
+    "operands": [
+      "PHIL"
+    ]
+  },
+  "48bff1129e8a5e7030c25a1875d0c45e": {
+    "operator": "AND",
+    "operands": [
+      "PHIL155"
+    ]
+  },
+  "c0a6ba295cca19a40d744f191b8d6b56": {
+    "operator": "AND",
+    "operands": [
+      "PHIL100"
+    ]
+  },
+  "e12ee750565581d85e4f55249535087e": {
+    "operator": "AND",
+    "operands": [
+      "PHIL155"
+    ]
+  },
+  "5010b02d8f3a9d12c029b718a2f938c2": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "PHIL143",
+          "PHIL300PLUS"
+        ]
+      },
+      "CSCIML"
+    ]
+  },
+  "3d0dd3ed128dbc38e8150d2ad5b7e154": {
+    "operator": "AND",
+    "operands": [
+      "PHIL155"
+    ]
+  },
+  "48040b9f74afea47ac21a369ed7d0b35": {
+    "operator": "AND",
+    "operands": [
+      "PHIL455"
+    ]
+  },
+  "bc3e3ea1b326cd5ab69be7036a8a69f2": {
+    "operator": "AND",
+    "operands": [
+      "PHIL455"
+    ]
+  },
+  "fe2a1de96cd532cf4c67f1da6a8bc331": {
+    "operator": "AND",
+    "operands": [
+      "PHIL155"
+    ]
+  },
+  "1bef8070eb62bfcc6df54d90af55fc16": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "PHILXXX",
+          "PHILXXX"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "PHILXXX",
+          "PHIL360"
+        ]
+      }
+    ]
+  },
+  "f8d9876c8fa167beab3ba75cd12293ba": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHIL101",
+          "PHIL202",
+          "PHIL303"
+        ]
+      },
+      "><!-- Assume these are example philosophy courses. Replace with actual course codes as needed. --><!-- The specific value theory course is assumed to be one of the above or another PHIL code. Adjust accordingly. -->      {",
+      ": "
+    ]
+  },
+  "597578f321084df0b108c2b8f438d510": {
+    "operator": "AND",
+    "operands": [
+      "PHIL101"
+    ]
+  },
+  "629a7891888638359e71f540cda19ae6": {
+    "operator": "AND",
+    "operands": [
+      "PHIL170"
+    ]
+  },
+  "ccbe0f94a0178e214eba92a2086615ad": {
+    "operator": "OR",
+    "operands": [
+      "PHIL275",
+      "WGST101"
+    ]
+  },
+  "fe043bd48802b97ea62638a3264486b2": {
+    "operator": "OR",
+    "operands": [
+      "PLCY101",
+      "PLCY201",
+      "PLCY301",
+      "PLCY401"
+    ]
+  },
+  "0ab9479b2050b4c31417f89fbc635496": {
+    "operator": "AND",
+    "operands": [
+      "PLCY460"
+    ]
+  },
+  "9e7632aa8fb3e12f161f679916ea0c81": {
+    "operator": "OR",
+    "operands": [
+      "ECON310",
+      "ECON410",
+      "PLCY410",
+      "PLCY788"
+    ]
+  },
+  "4e8ca5df8bc03a25b12a6697f0d2dd18": {
+    "operator": "AND",
+    "operands": [
+      "PLCY460"
+    ]
+  },
+  "a35ce4c1175fa82f45bae83fda8076d5": {
+    "operator": "AND",
+    "operands": [
+      "PLCY460",
+      "PLCY581"
+    ]
+  },
+  "416f864478444766984142dc738037e5": {
+    "operator": "AND",
+    "operands": [
+      "PLCY691H"
+    ]
+  },
+  "ff10f1a57a1a5cbde5d3a3533680657c": {
+    "operator": "AND",
+    "operands": [
+      "PLCY460",
+      {
+        "operator": "OR",
+        "operands": [
+          "PLCY581"
+        ]
+      }
+    ]
+  },
+  "711c4238b21d17bb5957214668ce4aaf": {
+    "operator": "AND",
+    "operands": [
+      "PLCY460"
+    ]
+  },
+  "f5c146d6abc104d1cb29549cd3cef4f0": {
+    "operator": "AND",
+    "operands": [
+      "EDUC401"
+    ]
+  },
+  "30325e2f2a8f73d48d4c0c56dda196b2": {
+    "operator": "AND",
+    "operands": [
+      "EDUC421"
+    ]
+  },
+  "d7b56402fa4311d66aad55b9101d0eb2": {
+    "operator": "AND",
+    "operands": [
+      "EDUC465",
+      "EDUC466"
+    ]
+  },
+  "8a52e1bcac6d8c61b0ccc5f54689a007": {
+    "operator": "AND",
+    "operands": [
+      "EDUC257"
+    ]
+  },
+  "aba5490458165d7023368bcd8b27d6e4": {
+    "operator": "AND",
+    "operands": [
+      "EDUC593"
+    ]
+  },
+  "7936857606dfed79138753cdc949946e": {
+    "operator": "AND",
+    "operands": [
+      "EDUC465",
+      "EDUC466",
+      "EDUC469"
+    ]
+  },
+  "04c159a4030743033f565bb5d34f7894": {
+    "operator": "AND",
+    "operands": [
+      "EDUC575"
+    ]
+  },
+  "b066ba8fb863d6d25e4bbe2fa7bc2817": {
+    "operator": "AND",
+    "operands": [
+      "EDUC408"
+    ]
+  },
+  "590f61c43500f73d433c5bef7446302f": {
+    "operator": "AND",
+    "operands": [
+      "EDUC309"
+    ]
+  },
+  "bbdb7515b8636fd177a1be65468d0d20": {
+    "operator": "AND",
+    "operands": [
+      "EDUC408"
+    ]
+  },
+  "9510c6c48b5fa3dd0482df00537a3d80": {
+    "operator": "AND",
+    "operands": [
+      "EDUC691H"
+    ]
+  },
+  "ca366a78f02323d146e3bbf85e54d6c9": {
+    "operator": "AND",
+    "operands": [
+      "EDUC257",
+      "EDUC309",
+      "EDUC357",
+      "EDUC505",
+      "EDUC508",
+      "EDUC585"
+    ]
+  },
+  "aa05e7a5883ea973eaeb12677f6ee38e": {
+    "operator": "AND",
+    "operands": [
+      "EDUC181",
+      "EDUC408",
+      "EDUC583"
+    ]
+  },
+  "395d56b33306c8aff101c0cb6014a1b6": {
+    "operator": "AND",
+    "operands": [
+      "EDUC703",
+      "EDUC712"
+    ]
+  },
+  "4370d246c82d54811d011c8305925e19": {
+    "operator": "AND",
+    "operands": [
+      "EDUC702",
+      "EDUC703"
+    ]
+  },
+  "22d49cefde577ec8a10ddb289fbeea60": {
+    "operator": "AND",
+    "operands": [
+      "EDUC702"
+    ]
+  },
+  "aeeba5c1b42211b84eab32a8412a6426": {
+    "operator": "AND",
+    "operands": [
+      "EDUC721"
+    ]
+  },
+  "bd133f4dbb93d7c1cd8e61dd44bd7f35": {
+    "operator": "AND",
+    "operands": [
+      "MEITEPROGRAM"
+    ]
+  },
+  "a2f450993ff7ba7f6835b6988a6b6fbe": {
+    "operator": "AND",
+    "operands": [
+      "EDUC628"
+    ]
+  },
+  "d01425f399f88d11fdf8af93051b3c20": {
+    "operator": "AND",
+    "operands": [
+      "EDUC834"
+    ]
+  },
+  "ae035afb1236188c355eda738aa5ee34": {
+    "operator": "AND",
+    "operands": [
+      "EDUC759"
+    ]
+  },
+  "9a5c8812a0ac5e56df0aed6e9943e388": {
+    "operator": "AND",
+    "operands": [
+      "EDUC710"
+    ]
+  },
+  "2cfddac4a085a196d2b6f0d85b4d2ffd": {
+    "operator": "AND",
+    "operands": [
+      "EDUC710"
+    ]
+  },
+  "bb89e98840388ede9a6a457aa56d20ae": {
+    "operator": "AND",
+    "operands": [
+      "EDUC710",
+      "EDUC829"
+    ]
+  },
+  "5ebf3b79dc7999d165f48836aec0d446": {
+    "operator": "AND",
+    "operands": [
+      "EDUC744"
+    ]
+  },
+  "3cb1a655ec58d4e9035842c2857d0ef8": {
+    "operator": "AND",
+    "operands": [
+      "GLBL381"
+    ]
+  },
+  "fcb5096d41286a6d1d5ffe91b7c06cf5": {
+    "operator": "AND",
+    "operands": [
+      "GLBL210"
+    ]
+  },
+  "8758a8b6bcf505ce0991c5238b330de7": {
+    "operator": "AND",
+    "operands": [
+      "WGST101"
+    ]
+  },
+  "c22b91899c22df8d061ca2e3b24c5d36": {
+    "operator": "AND",
+    "operands": [
+      "AAAD101",
+      "AAAD130"
+    ]
+  },
+  "d588ac1cac3e46f2e74b123811c2036c": {
+    "operator": "AND",
+    "operands": [
+      "WGST202"
+    ]
+  },
+  "94aee54ae8781cb17b6253f7cbfa4ed0": {
+    "operator": "OR",
+    "operands": [
+      "WGST101",
+      "WGST111"
+    ]
+  },
+  "272b412d4eae4da873c49cdd49fcd49b": {
+    "operator": "AND",
+    "operands": [
+      "WGST101",
+      "WGST202"
+    ]
+  },
+  "52560774fbf053c44317f662446809c1": {
+    "operator": "AND",
+    "operands": [
+      "SPAN371",
+      "SPAN373"
+    ]
+  },
+  "09f3db4901c652febcfa29f66b6fb74a": {
+    "operator": "AND",
+    "operands": [
+      "WGST101",
+      "WGST202"
+    ]
+  },
+  "1a992f3e6fd9c592cf4aa118f4b67bd3": {
+    "operator": "AND",
+    "operands": [
+      "WGST691H"
+    ]
+  },
+  "ad2cc633d91a77058be51a649083d172": {
+    "operator": "AND",
+    "operands": [
+      "MATH231"
+    ]
+  },
+  "e187a07cb80ab99983ab78264cb8cb93": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      {
+        "operator": "OR",
+        "operands": [
+          "CHEM101",
+          "PHYS114"
+        ]
+      }
+    ]
+  },
+  "5647855240fdd89e26ea0fba10866c14": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      {
+        "operator": "OR",
+        "operands": [
+          "CHEM102",
+          "PHYS114"
+        ]
+      }
+    ]
+  },
+  "805376f54626f4cf5ecfa02b392c48dc": {
+    "operator": "AND",
+    "operands": [
+      "ENEC201"
+    ]
+  },
+  "2495b35bf515ea75322ba4096ca996e5": {
+    "operator": "OR",
+    "operands": [
+      "BIOL201",
+      "ENEC202"
+    ]
+  },
+  "4b3438fdf40849de4b31e24a3f717e5f": {
+    "operator": "OR",
+    "operands": [
+      "ECON400",
+      "ENEC201",
+      "MATH231",
+      "STOR155"
+    ]
+  },
+  "434558edeab3e855cda0e77b8b4182d7": {
+    "operator": "AND",
+    "operands": [
+      "ENEC201",
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH231",
+          "MATH152"
+        ]
+      }
+    ]
+  },
+  "794dd7139f7f3bd2bc9924667a95b365": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES103",
+      "EMES200",
+      "EMES201",
+      "EMES401"
+    ]
+  },
+  "ef0c872044bf419521a7da63b222f787": {
+    "operator": "AND",
+    "operands": [
+      "ENEC324"
+    ]
+  },
+  "c3723869fea551607bf13967d9211195": {
+    "operator": "OR",
+    "operands": [
+      "EMES103",
+      "EMES401",
+      "ENEC202"
+    ]
+  },
+  "9213b9bae30df8c4176ccfc53a03edb6": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      "GEOL200",
+      "MATH231",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS115",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "21c3d130f2a312ab3af877839cccebef": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL101",
+          "CHEM102",
+          "ENEC222",
+          "MATH231",
+          "PHYS115"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL101",
+          "CHEM102",
+          "ENEC222",
+          "MATH231",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "5718b3ce35faee7ed516450ef25b886c": {
+    "operator": "AND",
+    "operands": [
+      "MATH383",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS115",
+          "PHYS118"
+        ]
+      },
+      "COMP116"
+    ]
+  },
+  "0f2faaddd6d58f203fbc679c50be9b65": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "EMES200",
+          "EMES201"
+        ]
+      }
+    ]
+  },
+  "bdcd8266707516afe74344ed64034016": {
+    "operator": "OR",
+    "operands": [
+      "ENEC201",
+      "ENEC202"
+    ]
+  },
+  "430f9dd9bb1300f762210f7d2df47e11": {
+    "operator": "AND",
+    "operands": [
+      "EMES324",
+      "MATH232",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "60891017e7561a4af6551fb97fb6d3be": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      "MATH231"
+    ]
+  },
+  "2036152e75d04a7bea794ba40d9dd2d8": {
+    "operator": "AND",
+    "operands": [
+      "CHEM101"
+    ]
+  },
+  "93d36a3d524db0186eee555fa5147ebe": {
+    "operator": "AND",
+    "operands": [
+      "MATH232"
+    ]
+  },
+  "9a18d52800374256dcff1ab26cb1db1a": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102"
+    ]
+  },
+  "9842f4dc1ad6269aa6e57a744752c618": {
+    "operator": "OR",
+    "operands": [
+      "EMES303",
+      "EMES310",
+      "EMES410",
+      "EMES417",
+      "EMES503"
+    ]
+  },
+  "7a021eb905ead91528a351554e973d20": {
+    "operator": "AND",
+    "operands": [
+      "EMES201",
+      "EMES324",
+      "MATH232",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "9b7c835d1642b399a105d9eaf18ad8f2": {
+    "operator": "OR",
+    "operands": [
+      "ENEC201",
+      "ENEC202"
+    ]
+  },
+  "e9098ffdefd056322d3e8acfc0d20b9a": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      "MATH232",
+      "MATH233",
+      "PHYS118",
+      "PHYS119"
+    ]
+  },
+  "b8785e959d3e1a95499f9ddb74160236": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101",
+      "MATH231"
+    ]
+  },
+  "dc7f00e7b442343804f2809375eb1c43": {
+    "operator": "AND",
+    "operands": [
+      "EMES302",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "aa0eef5d96d0d0f25365f3ce87f970ec": {
+    "operator": "AND",
+    "operands": [
+      "ECON310"
+    ]
+  },
+  "40cac6791a400ee07ee725bfb149f748": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "MATH233",
+          "ENVR205"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "COMP110",
+          "COMP116"
+        ]
+      }
+    ]
+  },
+  "c3d5d515f83d6453abd585d0db37791d": {
+    "operator": "OR",
+    "operands": [
+      "ENVR89",
+      "ENVR135"
+    ]
+  },
+  "d643a2e9c9d44b38736cd0a5f9d6955d": {
+    "operator": "AND",
+    "operands": [
+      "ENVR430"
+    ]
+  },
+  "7ac4febc7f30f612ad3d9ea4b273266e": {
+    "operator": "AND",
+    "operands": [
+      "CHEM261"
+    ]
+  },
+  "aaa33d8b1633545570c6bbb1217c46ed": {
+    "operator": "AND",
+    "operands": [
+      "COMP116",
+      "MATH383"
+    ]
+  },
+  "362b72c3dfa95b0234d7e34397492f29": {
+    "operator": "AND",
+    "operands": [
+      "ENVR671"
+    ]
+  },
+  "1288f4e858850de6d8ec006bc5ba1d6c": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      "PHYS114"
+    ]
+  },
+  "26fbe267346306ec444596d2503355f6": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101",
+      {
+        "operator": "AND",
+        "operands": [
+          "CHEM101",
+          "CHEM102"
+        ]
+      }
+    ]
+  },
+  "ae43c7122a65f6b0383f98ec45a3458b": {
+    "operator": "AND",
+    "operands": [
+      "PHCO702"
+    ]
+  },
+  "8a1be41ee2bfbce164bc93250f283927": {
+    "operator": "AND",
+    "operands": []
+  },
+  "14251dc64a38126538da1d9a8885a2a5": {
+    "operator": "OR",
+    "operands": [
+      "ENVR442",
+      "TOXC442",
+      "BIOC442",
+      "ENVR430"
+    ]
+  },
+  "e013238d791c2d8f3b4ebe90cac1083d": {
+    "operator": "AND",
+    "operands": [
+      "ENVR755"
+    ]
+  },
+  "752412c717fa4a20ae099d011b230441": {
+    "operator": "AND",
+    "operands": [
+      "ENVR710",
+      "ENVR756"
+    ]
+  },
+  "5c079c4c2a9f22c6f3416b2505b97b96": {
+    "operator": "AND",
+    "operands": [
+      "ENVR453"
+    ]
+  },
+  "5b60e9b886fe3d7dea8b42752234aa58": {
+    "operator": "AND",
+    "operands": [
+      "ENVR470"
+    ]
+  },
+  "fccb89f6eaefc3945849631686b22aa0": {
+    "operator": "AND",
+    "operands": [
+      "BIOS511"
+    ]
+  },
+  "6adf6e914f9d15a3e362e3efaaff104d": {
+    "operator": "AND",
+    "operands": [
+      "ENVR430"
+    ]
+  },
+  "6d1fc99dd2d68aff172833f82e9a4c25": {
+    "operator": "AND",
+    "operands": [
+      "ENVR673"
+    ]
+  },
+  "34e88643a3e6e5864ce87422797e3df6": {
+    "operator": "AND",
+    "operands": [
+      "ENVR791"
+    ]
+  },
+  "8a40d6560c820af234c66448cc785d1b": {
+    "operator": "AND",
+    "operands": [
+      "PLAN710"
+    ]
+  },
+  "8d25c2fd6ac0a783ac2139e2a1bfb1c4": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "52d4d42a599f5f8058fe68e148c22644": {
+    "operator": "AND",
+    "operands": [
+      "EMES103"
+    ]
+  },
+  "408e513b95b44ca76cec444be7690f86": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200"
+    ]
+  },
+  "ee36e82d1f0e2964c9ac60e190a72139": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200"
+    ]
+  },
+  "4e36a234cff6c5075a919744d6906fba": {
+    "operator": "AND",
+    "operands": [
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "b1c6c7827cb18511a170b1d3d5daf042": {
+    "operator": "AND",
+    "operands": [
+      "EMES200",
+      "EMES301"
+    ]
+  },
+  "03ef48248834a2b7b895c59f54e725e9": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "6efb53267a81c05ebb9284fab5d25af0": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      },
+      "MATH231"
+    ]
+  },
+  "d795b93275249356820eeea5dbc5b7ea": {
+    "operator": "OR",
+    "operands": [
+      "EMES72H",
+      "101",
+      "200",
+      "201"
+    ]
+  },
+  "57841c8ce0e9e67b18402aa068e7160a": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "7e74e8eb3c7256db1091963450de4ebd": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS115",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "87848e8f31162f5a92d245c83b1bd46e": {
+    "operator": "AND",
+    "operands": [
+      "GEOL200",
+      "GEOL201"
+    ]
+  },
+  "d33142d865b6d204ce2e773a2615ec55": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      "MATH231"
+    ]
+  },
+  "87dc2da572ab05bf3a14056fcc0b9a25": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EMES200",
+          "EMES302"
+        ]
+      },
+      "MATH231"
+    ]
+  },
+  "fbd0c1096f358c0876f83917a4f26b4d": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "f0c217cca4fecebbe4aa175c510f1954": {
+    "operator": "AND",
+    "operands": [
+      "EMES302",
+      "EMES303",
+      "EMES304"
+    ]
+  },
+  "c78aa9ac1b44db4089c0a2970f1c5ba9": {
+    "operator": "AND",
+    "operands": [
+      "GEOG110"
+    ]
+  },
+  "8551efeb3c054025735673169519e003": {
+    "operator": "AND",
+    "operands": [
+      "EMES304"
+    ]
+  },
+  "d0944e4c20377bcff783557ca7d45c63": {
+    "operator": "AND",
+    "operands": [
+      "ENEC324",
+      "EMES324",
+      "MATH231"
+    ]
+  },
+  "9908c7255dc8e4c4c642f572415b0b61": {
+    "operator": "AND",
+    "operands": [
+      "MATH231",
+      "MATH232"
+    ]
+  },
+  "48e18a30ba34fe5279e76ee66c17b6ff": {
+    "operator": "AND",
+    "operands": [
+      "MATH233"
+    ]
+  },
+  "6e335b8b34e356b1c54a1ba896d86f0c": {
+    "operator": "OR",
+    "operands": [
+      "EMES101",
+      "EMES200",
+      "EMES201"
+    ]
+  },
+  "b6a1923bdca29914bfe6cf2f16fcef09": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      "EMES301",
+      "EMES303",
+      "EMES304"
+    ]
+  },
+  "2d6876df754614c93972e6ebbba0fe6c": {
+    "operator": "AND",
+    "operands": [
+      "EMES691H"
+    ]
+  },
+  "662dac56e9a23c33f6cd2f6c1c553ce9": {
+    "operator": "AND",
+    "operands": [
+      "EMES303"
+    ]
+  },
+  "de8f629fc432d893cb1e3bbaa71e9a31": {
+    "operator": "AND",
+    "operands": [
+      "EMES703"
+    ]
+  },
+  "a97a98abd3b473129b8b81b7b6b2c0df": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      "EMES304",
+      "MATH233"
+    ]
+  },
+  "10e1ebabc64c07b7c35ab22dac52405f": {
+    "operator": "AND",
+    "operands": [
+      "EMES705"
+    ]
+  },
+  "3a0476e0d919310b5139728b40d05bc6": {
+    "operator": "AND",
+    "operands": [
+      "MASC480"
+    ]
+  },
+  "39ba8341c3a00eb86a14c8328ba09974": {
+    "operator": "OR",
+    "operands": [
+      "MASC560",
+      "MATH528"
+    ]
+  },
+  "be61adf562ca39a32a9839d1b0e0bea7": {
+    "operator": "AND",
+    "operands": [
+      "MASC503",
+      "MASC506"
+    ]
+  },
+  "f4b6b8afe97ca0a3f72c69897fbb93f8": {
+    "operator": "OR",
+    "operands": [
+      "GEOG110",
+      "GEOG111"
+    ]
+  },
+  "1f73c1dce2baf943b588f19e4fc40c9b": {
+    "operator": "OR",
+    "operands": [
+      "GEOG110",
+      "GEOG111",
+      "EMES201",
+      "ENEC201"
+    ]
+  },
+  "544438e7b90273021338f2256b838392": {
+    "operator": "OR",
+    "operands": [
+      "ENEC202",
+      "GEOG110"
+    ]
+  },
+  "a36a0d2a6879299d7de8054112789e66": {
+    "operator": "AND",
+    "operands": [
+      "GEOG370"
+    ]
+  },
+  "9b1a70429013ab92d13083276a5d859e": {
+    "operator": "AND",
+    "operands": [
+      "GEOG259"
+    ]
+  },
+  "c4968beda4d96e6ccd6160dfbc8f73f2": {
+    "operator": "AND",
+    "operands": [
+      "GEOG370"
+    ]
+  },
+  "df9ebdd574e3d429816ed39050179693": {
+    "operator": "AND",
+    "operands": [
+      "GEOG215",
+      "GEOG370"
+    ]
+  },
+  "efaea71df1eb66e334d600529b06b8c8": {
+    "operator": "AND",
+    "operands": [
+      "GEOG370"
+    ]
+  },
+  "d1c90de79c440841c8ba8c5c444f4add": {
+    "operator": "AND",
+    "operands": [
+      "GEOG391",
+      "GEOG491"
+    ]
+  },
+  "f6ec28925e36602f60505c60d0817c8f": {
+    "operator": "OR",
+    "operands": [
+      "GEOG370",
+      "GEOG477"
+    ]
+  },
+  "9ae4294945586f06128a0f759a181ca9": {
+    "operator": "OR",
+    "operands": [
+      "GEOG370",
+      "GEOG491"
+    ]
+  },
+  "72835af3ec058e535e7361a092baf749": {
+    "operator": "OR",
+    "operands": [
+      "GEOG370",
+      "GEOG491"
+    ]
+  },
+  "2bf2eff86231ba7ac05ea01e3630f3a4": {
+    "operator": "OR",
+    "operands": [
+      "BIOL561",
+      "STOR455"
+    ]
+  },
+  "cec3f84301182adfa390b8b174241a00": {
+    "operator": "AND",
+    "operands": [
+      "GEOG691H"
+    ]
+  },
+  "17064d923caa155df0bbf60d12d2e943": {
+    "operator": "AND",
+    "operands": [
+      "APPL114"
+    ]
+  },
+  "f69b38ccc30520fbd296b96d263a6d35": {
+    "operator": "AND",
+    "operands": [
+      "APPL112"
+    ]
+  },
+  "fa8190ae8774a7b7a124c5df40bdbeef": {
+    "operator": "OR",
+    "operands": [
+      "PHYS105",
+      "PHYS115",
+      "PHYS117",
+      "PHYS119"
+    ]
+  },
+  "53403efa478a3afa4d0e1f65489d324e": {
+    "operator": "AND",
+    "operands": [
+      "CHEM102",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS116",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "7636a0f0d5d090c9f9bfd8591c6a2c5d": {
+    "operator": "AND",
+    "operands": [
+      "APPL101",
+      "APPL110",
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS114",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "93f5f6f86787639cdee948afa85b8838": {
+    "operator": "AND",
+    "operands": [
+      "APPL101",
+      "APPL285",
+      "MATH233",
+      "PHYS118"
+    ]
+  },
+  "0a905c6032554539cdedfdfe2b97ab2f": {
+    "operator": "AND",
+    "operands": [
+      "APPL110"
+    ]
+  },
+  "64dc9599d95465dea96687f15ad084dd": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "CHEM102"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "PHYS116",
+          "PHYS118"
+        ]
+      }
+    ]
+  },
+  "bffea16ccd88e1228a97bb72bd2c4671": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "BMME209",
+          "APPL260",
+          "CHEM102"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "PHYS115",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "86b5a7f4f598561c5a403a9728f28317": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "BMME209",
+          "APPL260"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "CHEM102",
+          "PHYS115",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "cadb892b36a33e53b8d1c017f9252b43": {
+    "operator": "AND",
+    "operands": [
+      "MNGT691H"
+    ]
+  },
+  "4b33b455461796933875c9fd9c1104a0": {
+    "operator": "AND",
+    "operands": []
+  },
+  "a11ab9c1c293699886bd34440cde226a": {
+    "operator": "OR",
+    "operands": [
+      "PLAN720",
+      "ECON400",
+      "BIOS600",
+      "ENEC562",
+      "STOR155",
+      "PLCY460"
+    ]
+  },
+  "58046547888b1491adee80795705b0c2": {
+    "operator": "AND",
+    "operands": [
+      "PLAN636"
+    ]
+  },
+  "ee4f50aca8bdfdce512032bea28eef37": {
+    "operator": "AND",
+    "operands": [
+      "PLCY800"
+    ]
+  },
+  "9609b16cd119b5ec80a706adb8a1061b": {
+    "operator": "AND",
+    "operands": [
+      "PLCY888"
+    ]
+  },
+  "6a602bc304e2022b629c31c386446e13": {
+    "operator": "AND",
+    "operands": [
+      "INLS201"
+    ]
+  },
+  "995327667a3704a96848eeb20a021677": {
+    "operator": "AND",
+    "operands": [
+      "INLS382"
+    ]
+  },
+  "a38ef16d25e490c0ec06b856f7d1c191": {
+    "operator": "AND",
+    "operands": [
+      "INLS161"
+    ]
+  },
+  "48880a62fc33f504cdb663ec78da9445": {
+    "operator": "AND",
+    "operands": [
+      "INLS161"
+    ]
+  },
+  "d2a0ed8fdc854f9ca49364eb7f12c92d": {
+    "operator": "AND",
+    "operands": [
+      "INLS393"
+    ]
+  },
+  "3355ef83ffd171ead50c4be4aec232d8": {
+    "operator": "AND",
+    "operands": [
+      "INLS203"
+    ]
+  },
+  "d146ae8378aea2d819fe7e783c4ee8b4": {
+    "operator": "AND",
+    "operands": [
+      "INLS560"
+    ]
+  },
+  "1b9909af38c989d837aa53e92820af2d": {
+    "operator": "AND",
+    "operands": [
+      "INLS382"
+    ]
+  },
+  "894b8b0fb443c983ec4b4a61509dec42": {
+    "operator": "AND",
+    "operands": [
+      "INLS509"
+    ]
+  },
+  "d2e8eb79a05468e8df812eb8ca29b942": {
+    "operator": "OR",
+    "operands": [
+      "INLS520",
+      "INLS560"
+    ]
+  },
+  "a4d38a647f0d024d4aedb339f42a437e": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "INLS382",
+          "INLS582"
+        ]
+      },
+      "INLS523"
+    ]
+  },
+  "cfb768ffe929e07508c20e7d2b2faf46": {
+    "operator": "AND",
+    "operands": [
+      "INLS560"
+    ]
+  },
+  "fdccd49f9f9778b4b885394a1148fc4a": {
+    "operator": "AND",
+    "operands": [
+      "INLS572"
+    ]
+  },
+  "9e40c733046b956c5dd8a6c59bd32ed7": {
+    "operator": "AND",
+    "operands": [
+      "INLS501"
+    ]
+  },
+  "23f03e4882fa3cda44fceacefb840cd8": {
+    "operator": "AND",
+    "operands": [
+      "INLS582"
+    ]
+  },
+  "be6ca7ac896cc74703f708e080450f62": {
+    "operator": "OR",
+    "operands": [
+      "INLS382",
+      "INLS582"
+    ]
+  },
+  "fde0dd22582202555203ff47a53a9fdc": {
+    "operator": "AND",
+    "operands": [
+      "INLS523"
+    ]
+  },
+  "4a6e80d8191a6d525efb81b5a9e236e7": {
+    "operator": "AND",
+    "operands": [
+      "INLS556"
+    ]
+  },
+  "43a57d06bca4f743c31d7a2bd6f8a555": {
+    "operator": "AND",
+    "operands": [
+      "INLS572",
+      "INLS623"
+    ]
+  },
+  "52c78592e544c774a2e1d7212938dc41": {
+    "operator": "OR",
+    "operands": [
+      "COMP110",
+      "INLS560"
+    ]
+  },
+  "588eec6eb3edeb93b2d26fe1e670233b": {
+    "operator": "AND",
+    "operands": [
+      "COMP110",
+      "INLS560",
+      "INLS761",
+      "INLS773"
+    ]
+  },
+  "3498ff3faed3ed05ca91bbd246d23741": {
+    "operator": "AND",
+    "operands": [
+      "INLS776",
+      "INLS777"
+    ]
+  },
+  "17edf155ad97e5dc0d089196a4790066": {
+    "operator": "AND",
+    "operands": [
+      "INLS776",
+      "INLS777"
+    ]
+  },
+  "2e5c00a0500ddb33d684e254379c202e": {
+    "operator": "AND",
+    "operands": [
+      "INLS384"
+    ]
+  },
+  "a04dc27c129b1112cad180b05f367f60": {
+    "operator": "AND",
+    "operands": [
+      "INLS795"
+    ]
+  },
+  "3fd8094098d60642fe73bbf7afcf8c29": {
+    "operator": "",
+    "operands": []
+  },
+  "e735201dd831542811885df0c5e51c11": {
+    "operator": "AND",
+    "operands": [
+      "AMST225"
+    ]
+  },
+  "6e17649ddb0455beac303ec052517891": {
+    "operator": "OR",
+    "operands": [
+      "AMST275",
+      "NUTR175"
+    ]
+  },
+  "4859969b15fa2985124e18d5d69de68f": {
+    "operator": "OR",
+    "operands": [
+      "AMST375",
+      "AMST275"
+    ]
+  },
+  "624a552144b54b88b8ce82d9111f8776": {
+    "operator": "OR",
+    "operands": [
+      "AAAD101",
+      "ARTH152",
+      "ARTH155"
+    ]
+  },
+  "33359fb5f44e027e31b4251c68a25e86": {
+    "operator": "AND",
+    "operands": [
+      "AAAD101",
+      "AAAD130"
+    ]
+  },
+  "8f5a4403e09a5ced63f02d54224123d1": {
+    "operator": "AND",
+    "operands": []
+  },
+  "5a85577a6d1dcd09e9c42768834fd317": {
+    "operator": "OR",
+    "operands": [
+      "AFAM101",
+      "LAMS101",
+      "LATI101"
+    ]
+  },
+  "e5803268f114ea2e1bab8839090f56cf": {
+    "operator": "AND",
+    "operands": []
+  },
+  "8396e90dedf14ddeb956214a83f612f5": {
+    "operator": "AND",
+    "operands": [
+      "LTAM411"
+    ]
+  },
+  "9a86135c4883397628ce6c1ec903b266": {
+    "operator": "AND",
+    "operands": [
+      "HEBR101"
+    ]
+  },
+  "e61957b3cadfa073d966dcfd5bf30451": {
+    "operator": "AND",
+    "operands": [
+      "HEBR102"
+    ]
+  },
+  "1a0f0e326a50a9d04f76f4ca8fef1e98": {
+    "operator": "AND",
+    "operands": [
+      "HEBR203"
+    ]
+  },
+  "1ef406830700fb2f2e0b3e25080b1e96": {
+    "operator": "AND",
+    "operands": [
+      "RELI211"
+    ]
+  },
+  "5a8dd684f0e2e3e058fcb7d0c8bc2c16": {
+    "operator": "AND",
+    "operands": [
+      "HEBR204"
+    ]
+  },
+  "6566551a63106f517d4ef4968c7e0bcf": {
+    "operator": "OR",
+    "operands": [
+      "SPAN301",
+      "SPAN302"
+    ]
+  },
+  "ebc118333a60f1936ff22818c9c14f73": {
+    "operator": "AND",
+    "operands": [
+      "SPAN371",
+      "SPAN373"
+    ]
+  },
+  "2fb3f7eb8c71e5ff92b64f61fd73eeea": {
+    "operator": "AND",
+    "operands": [
+      "ARTS105"
+    ]
+  },
+  "2928cdc2e558183cb31bcecc0babfb4c": {
+    "operator": "AND",
+    "operands": [
+      "ARTS106"
+    ]
+  },
+  "d4e791fe4e609c77f24d1065c53ff95c": {
+    "operator": "AND",
+    "operands": [
+      "ARTS104"
+    ]
+  },
+  "64a27fe6ab103576ca5a7c4d195c9812": {
+    "operator": "AND",
+    "operands": [
+      "ARTS104"
+    ]
+  },
+  "8d9072b5f9630f5047657f0aab38586a": {
+    "operator": "AND",
+    "operands": [
+      "ARTS115"
+    ]
+  },
+  "9cba3f1c8a73f0622ce59543100fccaf": {
+    "operator": "AND",
+    "operands": [
+      "ARTS202"
+    ]
+  },
+  "980ffb10e210ee470d79a377631d9ccd": {
+    "operator": "AND",
+    "operands": [
+      "ARTS209"
+    ]
+  },
+  "7fc36b2ab29d1d097348059606e02af4": {
+    "operator": "AND",
+    "operands": [
+      "ARTS213"
+    ]
+  },
+  "b1f6b6f71fb35007b87688b348274182": {
+    "operator": "AND",
+    "operands": [
+      "ARTS208"
+    ]
+  },
+  "108510abed35e501587ee5ab208f1327": {
+    "operator": "OR",
+    "operands": [
+      "ARTS302",
+      "ARTS322",
+      "ARTS352"
+    ]
+  },
+  "b74d01b7c91602f33aeb3886e67258b2": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "BIOL2XX",
+          "ARTS2XX"
+        ]
+      },
+      "BIOL409L"
+    ]
+  },
+  "7fb641dae37533ff8402e0d0e93edd0a": {
+    "operator": "OR",
+    "operands": [
+      "ARTS302",
+      "ARTS303",
+      "ARTS305"
+    ]
+  },
+  "8f1695ab49e2e8244de83db177771970": {
+    "operator": "AND",
+    "operands": [
+      "ARTS313"
+    ]
+  },
+  "92162b3157c4ad998efbb7cb037c0a0d": {
+    "operator": "AND",
+    "operands": [
+      "ARTS106",
+      "ARTS206"
+    ]
+  },
+  "b3f0418f10622be6e8bf057a945d1f8e": {
+    "operator": "AND",
+    "operands": [
+      "ARTS208",
+      {
+        "operator": "OR",
+        "operands": [
+          "ARTS238",
+          "ARTS338",
+          "ARTS348"
+        ]
+      }
+    ]
+  },
+  "d2f09c7793a2077bb5cfc4726b687f1f": {
+    "operator": "AND",
+    "operands": [
+      "ARTS102"
+    ]
+  },
+  "c1bbda4a434a1eed3946830d22b650e3": {
+    "operator": "AND",
+    "operands": [
+      "ARTS105",
+      "ARTS208"
+    ]
+  },
+  "4a032e35f39bfcb387b9b9533ea4dafa": {
+    "operator": "OR",
+    "operands": [
+      "ARTS205",
+      "ARTS215"
+    ]
+  },
+  "82a66f1c24148d4611c45eb345ef14c0": {
+    "operator": "AND",
+    "operands": [
+      "ARTS691H"
+    ]
+  },
+  "97c198763b7157d636c801e73a03d8ce": {
+    "operator": "AND",
+    "operands": [
+      "ARTH151"
+    ]
+  },
+  "40afae980dbdaa37030d649eb54f72ff": {
+    "operator": "AND",
+    "operands": [
+      "CLAR244"
+    ]
+  },
+  "9664dad32740c453ea4e48dd5c06b3e0": {
+    "operator": "OR",
+    "operands": [
+      "CLAR245",
+      "CLAR247",
+      "CLARARTH263"
+    ]
+  },
+  "a75f154c7a14744dfd7ff7a0103c5aa9": {
+    "operator": "OR",
+    "operands": [
+      "CLAR245",
+      "CLAR247",
+      "CLARARTH263"
+    ]
+  },
+  "a40bd4afe1221dd3fc34a13d9ebc2745": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "CLAR2XX",
+          "ARTH2XX"
+        ]
+      },
+      "CLAR245",
+      "CLAR247",
+      "CLARARTH263"
+    ]
+  },
+  "5855ba149b1cf40da06023b5ec715d14": {
+    "operator": "OR",
+    "operands": [
+      "ARTH551",
+      "ARTH592"
+    ]
+  },
+  "b6670e878a30816937ba2c0c0f43f965": {
+    "operator": "AND",
+    "operands": [
+      "DRAM120"
+    ]
+  },
+  "951bf308bfe327f33242a49810a30bf2": {
+    "operator": "AND",
+    "operands": [
+      "DRAM140"
+    ]
+  },
+  "dbe96981c49ed27e9a486c4c2a7ed349": {
+    "operator": "OR",
+    "operands": [
+      "DRAM135",
+      "DRAM150"
+    ]
+  },
+  "3302c83d56e4f2e82f90c72e98e8fb04": {
+    "operator": "AND",
+    "operands": [
+      "DRAM150"
+    ]
+  },
+  "9ed7405276e24bec49163bac5841bb84": {
+    "operator": "AND",
+    "operands": [
+      "DRAM155"
+    ]
+  },
+  "11fe8caad4dd0f24853a003a45ca232f": {
+    "operator": "AND",
+    "operands": [
+      "DRAM160"
+    ]
+  },
+  "f1f3da4385e8b7fa3d7e68c10e80dbfa": {
+    "operator": "AND",
+    "operands": [
+      "DRAM120"
+    ]
+  },
+  "8cccf420a897fe0305636866db713e2f": {
+    "operator": "AND",
+    "operands": [
+      "DRAM231"
+    ]
+  },
+  "7f55bbdb20ce36ea60d758c74bc62d4c": {
+    "operator": "AND",
+    "operands": [
+      "DRAM144"
+    ]
+  },
+  "451af06a7aeee110c4fc78451a50bfc9": {
+    "operator": "AND",
+    "operands": [
+      "DRAM250"
+    ]
+  },
+  "6be7c6048ce84c8a86b0d763decdf181": {
+    "operator": "AND",
+    "operands": [
+      "DRAM231",
+      "DRAM331"
+    ]
+  },
+  "1954834da40c33f6c0f9dd44eb1b8393": {
+    "operator": "AND",
+    "operands": [
+      "DRAM192"
+    ]
+  },
+  "077a877b31fc47ec29480913f52707df": {
+    "operator": "AND",
+    "operands": [
+      "DRAM192"
+    ]
+  },
+  "8d3c654423fa13fc528a2a89d369ed19": {
+    "operator": "AND",
+    "operands": [
+      "DRAM691H"
+    ]
+  },
+  "45942efc4fa63535b3260ad8ae0bfd5d": {
+    "operator": "AND",
+    "operands": [
+      "DRAM192"
+    ]
+  },
+  "d16ed2d76dad450da6ec9d56b9069773": {
+    "operator": "AND",
+    "operands": [
+      "DRAM473"
+    ]
+  },
+  "3b079fa57c515a5fd5d5360c6f47eef0": {
+    "operator": "AND",
+    "operands": [
+      "DRAM473",
+      "DRAM474",
+      "DRAM760",
+      "DRAM762"
+    ]
+  },
+  "cd8b0f7d14b649402f9518d658bdc14a": {
+    "operator": "AND",
+    "operands": [
+      "DRAM473"
+    ]
+  },
+  "5bd3db6cb2f4933abbf0a01a28471422": {
+    "operator": "AND",
+    "operands": [
+      "MUSC121"
+    ]
+  },
+  "16ab35815ae551b21335d54f938c6710": {
+    "operator": "AND",
+    "operands": [
+      "MUSC202"
+    ]
+  },
+  "cb99c118b37dc3ce4c37f8ca8aa5e7ac": {
+    "operator": "AND",
+    "operands": [
+      "MUSC123"
+    ]
+  },
+  "05728e349a59af3354b903765bc6b728": {
+    "operator": "AND",
+    "operands": [
+      "MUSC137"
+    ]
+  },
+  "98e832b881c219d2db6ca481e54d1f15": {
+    "operator": "AND",
+    "operands": [
+      "MUSC128",
+      "MUSC131"
+    ]
+  },
+  "71c8c00f36b52ec2e60bd690bd7ae92a": {
+    "operator": "AND",
+    "operands": [
+      "MUSC130"
+    ]
+  },
+  "0f0c4a5a596bab2ac486f96f7de8c597": {
+    "operator": "AND",
+    "operands": [
+      "MUSC131"
+    ]
+  },
+  "3523738be28f6b601bb2df456d7f7e55": {
+    "operator": "AND",
+    "operands": [
+      "MUSC130",
+      "MUSC131"
+    ]
+  },
+  "2e56f17d434b43390326d3d789b74f2b": {
+    "operator": "AND",
+    "operands": [
+      "MUSC135"
+    ]
+  },
+  "00d0d2201591dea168d08b86727046df": {
+    "operator": "AND",
+    "operands": [
+      "MUSC131"
+    ]
+  },
+  "639234984cc74cff43f35382e17ab7b4": {
+    "operator": "OR",
+    "operands": [
+      "MUSC121",
+      "MUSC131"
+    ]
+  },
+  "56bad8d16ee2b0a2a34617bbf0837cec": {
+    "operator": "OR",
+    "operands": [
+      "MUSC100",
+      "MUSC200"
+    ]
+  },
+  "926871848dd1cddd6f591b5935d4f6f3": {
+    "operator": "OR",
+    "operands": [
+      "MUSC102",
+      "MUSC202"
+    ]
+  },
+  "a7d2e04e96ca47d10ce4da24ee9e949a": {
+    "operator": "AND",
+    "operands": [
+      "MUSC226",
+      "MUSC227"
+    ]
+  },
+  "d466f7b7d43e133e80c8aab81b0070da": {
+    "operator": "AND",
+    "operands": [
+      "MUSC132",
+      "MUSC133"
+    ]
+  },
+  "aa989462b290a589d1a5162e7d308f4f": {
+    "operator": "AND",
+    "operands": [
+      "MUSC132"
+    ]
+  },
+  "c8ca21f4621f91ba2decc0254bb04fa4": {
+    "operator": "AND",
+    "operands": [
+      "MUSC254"
+    ]
+  },
+  "bf75da828b1d7dd02efb6fcd71aa7a32": {
+    "operator": "OR",
+    "operands": [
+      "MUSC131",
+      "MUSC135",
+      "MUSC137"
+    ]
+  },
+  "36f74ad51e213e4ab5d5907ce5a142ad": {
+    "operator": "AND",
+    "operands": [
+      "MUSC136"
+    ]
+  },
+  "32b082402eeff8d6a5e792004db232e2": {
+    "operator": "AND",
+    "operands": [
+      "MUSC146"
+    ]
+  },
+  "973e0f5774af608884be7536fb87931a": {
+    "operator": "AND",
+    "operands": [
+      "MUSC131"
+    ]
+  },
+  "6bc24e94a5283871cf91816767534b4a": {
+    "operator": "AND",
+    "operands": [
+      "MUSC132",
+      "MUSC254"
+    ]
+  },
+  "42d0535af15c06024b9036417f26073d": {
+    "operator": "AND",
+    "operands": [
+      "MUSC156"
+    ]
+  },
+  "8504524b691c9ea422169de192458ad9": {
+    "operator": "AND",
+    "operands": [
+      "MUSC163"
+    ]
+  },
+  "18a446489c461278d004b4b83e9bba12": {
+    "operator": "AND",
+    "operands": [
+      "MUSC135",
+      "MUSC163"
+    ]
+  },
+  "b4b5650efd6843d91b0ad235936ddcc0": {
+    "operator": "AND",
+    "operands": [
+      "MUSC166"
+    ]
+  },
+  "7d242b25fe29b9d0d404fe3cb55f9084": {
+    "operator": "AND",
+    "operands": [
+      "MUSC167"
+    ]
+  },
+  "f320d3d1cff7f6b425a1c04d007af48a": {
+    "operator": "AND",
+    "operands": [
+      "MUSC120"
+    ]
+  },
+  "8d35c9f5e315c47d0f626c19d08d7665": {
+    "operator": "AND",
+    "operands": [
+      "MUSC120",
+      "MUSC270"
+    ]
+  },
+  "606f065c22e95bc59ecd154ac483c271": {
+    "operator": "AND",
+    "operands": [
+      "MUSC200"
+    ]
+  },
+  "25d79a647453ad55e7c42a91af50d75f": {
+    "operator": "AND",
+    "operands": [
+      "MUSC202"
+    ]
+  },
+  "771dd19ef96c6eef5f162bd674f02363": {
+    "operator": "AND",
+    "operands": [
+      "MUSC203"
+    ]
+  },
+  "4d355f8377a2882bc732a6b9be5e8bba": {
+    "operator": "AND",
+    "operands": [
+      "MUSC204"
+    ]
+  },
+  "e0450ca494a80a1f02654f5d0018fada": {
+    "operator": "AND",
+    "operands": [
+      "MUSC205"
+    ]
+  },
+  "dbf91bb10cf29902a5d9c13c1dbcae90": {
+    "operator": "AND",
+    "operands": [
+      "MUSC206"
+    ]
+  },
+  "41689dc86b4fad84f1a9a82d906d4e42": {
+    "operator": "AND",
+    "operands": [
+      "MUSC266"
+    ]
+  },
+  "09ccded6fee4b7382ddd86eec8256a47": {
+    "operator": "AND",
+    "operands": [
+      "MUSC168"
+    ]
+  },
+  "b7189c38c31c9bc4201b9176f428c8f1": {
+    "operator": "AND",
+    "operands": [
+      "MUSC308"
+    ]
+  },
+  "59f2287a946233beff8fe0822825e924": {
+    "operator": "AND",
+    "operands": [
+      "MUSC232"
+    ]
+  },
+  "650daf12d67011ddd666eed590479dc0": {
+    "operator": "AND",
+    "operands": [
+      "MUSC120",
+      "MUSC270",
+      "MUSC271"
+    ]
+  },
+  "0f04fb67db45696e92922d1bfd29d19d": {
+    "operator": "AND",
+    "operands": [
+      "MUSC161"
+    ]
+  },
+  "9d783530d30cf42c3348f9501e8e22d0": {
+    "operator": "AND",
+    "operands": [
+      "MUSC166"
+    ]
+  },
+  "6939becfa8b99f52568b62547d552089": {
+    "operator": "AND",
+    "operands": [
+      "MUSC691H"
+    ]
+  },
+  "8c72611a1d083bb1460636bcfbbc8a58": {
+    "operator": "AND",
+    "operands": [
+      "ENGL105"
+    ]
+  },
+  "f7cc4bae7d13194cb0d87905aec687d7": {
+    "operator": "AND",
+    "operands": [
+      "CMPL691H"
+    ]
+  },
+  "6684116000016b9c436e1c450fc3322a": {
+    "operator": "AND",
+    "operands": [
+      "FOLK691H"
+    ]
+  },
+  "102776892c7554d70c6255b450f82725": {
+    "operator": "AND",
+    "operands": [
+      "RELI401"
+    ]
+  },
+  "23c4d1105dff09cce93852c5903d550e": {
+    "operator": "AND",
+    "operands": [
+      "RELI402"
+    ]
+  },
+  "167bc0e145daaa49c67359ac992193ec": {
+    "operator": "AND",
+    "operands": [
+      "RELI403"
+    ]
+  },
+  "5302b7d57162148c6d6552ac787b1789": {
+    "operator": "AND",
+    "operands": [
+      "GREK222"
+    ]
+  },
+  "78c5e377c0e0fdd50ee013dc771860f7": {
+    "operator": "AND",
+    "operands": [
+      "RELI403",
+      "RELI404"
+    ]
+  },
+  "13e0e6aaf464148f5c14227492c31612": {
+    "operator": "AND",
+    "operands": [
+      "RELI403",
+      "RELI404"
+    ]
+  },
+  "6734613fb33d219df50ef91cdc4cf3e1": {
+    "operator": "AND",
+    "operands": [
+      "RELI140"
+    ]
+  },
+  "dbc9aed29e14a7d66e4335e221346c6a": {
+    "operator": "OR",
+    "operands": [
+      "RELI104",
+      "RELI207",
+      "RELI208",
+      "RELI209",
+      "RELI217",
+      "RELI413"
+    ]
+  },
+  "0d9eae21b894a6e7a7929af41e86a376": {
+    "operator": "OR",
+    "operands": [
+      "RELI104",
+      "RELI209",
+      "RELI217"
+    ]
+  },
+  "89988b7a01dca0bb2acf141b228330d1": {
+    "operator": "AND",
+    "operands": []
+  },
+  "8dce8fdf9362732ce0d415065d6cdcd0": {
+    "operator": "AND",
+    "operands": [
+      "PHYA227"
+    ]
+  },
+  "7121efa9242d3d1d3a1feda77851c749": {
+    "operator": "AND",
+    "operands": [
+      "IDST112"
+    ]
+  },
+  "4e8b06f934adfb93d032bc6baa2e26bd": {
+    "operator": "AND",
+    "operands": [
+      "IDST113"
+    ]
+  },
+  "c412dff2be72c0f9f13fab4102db4872": {
+    "operator": "AND",
+    "operands": [
+      "IDST114"
+    ]
+  },
+  "5b37fdc79cf9b97e23440918fb4ae7d2": {
+    "operator": "AND",
+    "operands": [
+      "IDST115"
+    ]
+  },
+  "f8e7ade19300420001fa101544ff8a33": {
+    "operator": "AND",
+    "operands": [
+      "IDST116"
+    ]
+  },
+  "77bd63c80f3269dac0317d7070736ab6": {
+    "operator": "AND",
+    "operands": [
+      "IDST117"
+    ]
+  },
+  "10d65a471a60f93f6982621783435984": {
+    "operator": "AND",
+    "operands": [
+      "IDST118"
+    ]
+  },
+  "0d1da24a3c70ac2e13b702f111489ded": {
+    "operator": "AND",
+    "operands": [
+      "IDST119"
+    ]
+  },
+  "b38a6daebc63371bcc0e6b4777efa750": {
+    "operator": "AND",
+    "operands": [
+      "IDST120"
+    ]
+  },
+  "bcda053aab72dcbdab567683dfef4829": {
+    "operator": "AND",
+    "operands": [
+      "IDST121"
+    ]
+  },
+  "6d66e2e1ecf865932560bff39c3eb847": {
+    "operator": "AND",
+    "operands": [
+      "IDST122"
+    ]
+  },
+  "f60319177e371d0aeb52ef0e676655fe": {
+    "operator": "AND",
+    "operands": [
+      "IDST123"
+    ]
+  },
+  "4af451105245f3b9df85e8c0417e128b": {
+    "operator": "AND",
+    "operands": [
+      "IDST124"
+    ]
+  },
+  "2f9bd1c7f36fdf1ca63577c364c0bc30": {
+    "operator": "AND",
+    "operands": [
+      "IDST125"
+    ]
+  },
+  "93f1ad7f09a3089bd12469b3a8b84fe1": {
+    "operator": "AND",
+    "operands": [
+      "IDST126"
+    ]
+  },
+  "d1c0ecacb865b5f69b6f32ebef5c3114": {
+    "operator": "AND",
+    "operands": [
+      "IDST127"
+    ]
+  },
+  "44c578ad2fd8ac27e42fa615f0d4dd35": {
+    "operator": "AND",
+    "operands": [
+      "IDST128"
+    ]
+  },
+  "a8bcc5f407b3d177d922f53d7d7a924e": {
+    "operator": "AND",
+    "operands": [
+      "IDST129"
+    ]
+  },
+  "29ec5fb9e1c66ce534ceb2d93a5d39d8": {
+    "operator": "AND",
+    "operands": [
+      "IDST130"
+    ]
+  },
+  "eb7ffa144ea3b60bd43589a6f573e7e7": {
+    "operator": "AND",
+    "operands": [
+      "IDST131"
+    ]
+  },
+  "02dc171a1fa5de201c561b9b6c3eb90f": {
+    "operator": "AND",
+    "operands": [
+      "IDST132"
+    ]
+  },
+  "594f8017bd1b29de9608b5ce5964c929": {
+    "operator": "AND",
+    "operands": [
+      "IDST133"
+    ]
+  },
+  "8ef7a3d40e1847900ff34fa76436d331": {
+    "operator": "AND",
+    "operands": [
+      "IDST134"
+    ]
+  },
+  "81023a1be6354d1bd96bd85a5983c775": {
+    "operator": "AND",
+    "operands": [
+      "IDST190L"
+    ]
+  },
+  "ec347356342b2481745d6210e29d8adf": {
+    "operator": "OR",
+    "operands": [
+      "IDST116",
+      "IDST118",
+      "IDST119",
+      "IDST190"
+    ]
+  },
+  "52d9d7d43396dd22a9b594170068bbc1": {
+    "operator": "AND",
+    "operands": [
+      "AERO101",
+      "AERO102",
+      "AERO201",
+      "AERO202"
+    ]
+  },
+  "16194bacfdd76aad066456facf9137d6": {
+    "operator": "AND",
+    "operands": [
+      "AERO101",
+      "AERO102",
+      "AERO201",
+      "AERO202",
+      "AERO301",
+      "AERO302"
+    ]
+  },
+  "3d5e029c915c8689955dff21860a6443": {
+    "operator": "AND",
+    "operands": [
+      "ARMY101",
+      "ARMY102",
+      "ARMY201",
+      "ARMY202"
+    ]
+  },
+  "5eaa8dc22ed7230d0d709fd05bb09868": {
+    "operator": "AND",
+    "operands": [
+      "ARMY101",
+      "ARMY102",
+      "ARMY201",
+      "ARMY202"
+    ]
+  },
+  "bdfd88f4938dfd8a0d51b299fa8833eb": {
+    "operator": "AND",
+    "operands": [
+      "ARMY301",
+      "ARMY302"
+    ]
+  },
+  "62466e768f58e07b49e7856ccde7519e": {
+    "operator": "AND",
+    "operands": [
+      "ARMY301",
+      "ARMY302",
+      "ARMY401"
+    ]
+  },
+  "2305758d3c67a444e78d08d65af5c4d3": {
+    "operator": "AND",
+    "operands": [
+      "NAVS202L"
+    ]
+  },
+  "5d2d0ff583a9b3693e224b95e70965e0": {
+    "operator": "AND",
+    "operands": [
+      "NAVS202"
+    ]
+  },
+  "ee675b472e935eb2b546bd725b5f69bc": {
+    "operator": "AND",
+    "operands": [
+      "SPHG351"
+    ]
+  },
+  "9630bbf8b8284278fa32299b8e5d2d6e": {
+    "operator": "AND",
+    "operands": [
+      "SPHG711",
+      "SPHG712",
+      "SPHG713",
+      "SPHG721",
+      "SPHG722"
+    ]
+  },
+  "a63042c233a06e85c7c8f7d3377bb16b": {
+    "operator": "AND",
+    "operands": [
+      "SPHG701"
+    ]
+  },
+  "faad14334363686f8e53e78f27d56853": {
+    "operator": "OR",
+    "operands": [
+      "SPHG711",
+      "SPHG712",
+      "SPHG713",
+      "SPHG701",
+      "SPHG721",
+      "SPHG722"
+    ]
+  },
+  "f5695defc8a93ec9f55474d32591d444": {
+    "operator": "AND",
+    "operands": [
+      "PUBH706",
+      "PUBH746",
+      "PUBH749",
+      "PUBH750",
+      "PUBH751",
+      "PUBH760",
+      "PUBH890",
+      "BIOS641"
+    ]
+  },
+  "9f9c0f0cc1911b3c2541a9697fe83e24": {
+    "operator": "AND",
+    "operands": [
+      "SPHG703"
+    ]
+  },
+  "df37ce42f2c207d80dba9afba27f7e8c": {
+    "operator": "AND",
+    "operands": [
+      "SPHG713"
+    ]
+  },
+  "1c8986e861fa2f3027805a3724c0865b": {
+    "operator": "AND",
+    "operands": [
+      "SPHG712"
+    ]
+  },
+  "4325385e41a2ed34d4fc483f3209b794": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "SPHG711",
+          "BIOS600"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "SPHG712",
+          "EPID600"
+        ]
+      }
+    ]
+  },
+  "1025b9eb6495e59327e8dc06e21c8ba1": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPHG711",
+          "BIOS600"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "SPHG712",
+          "EPID600"
+        ]
+      },
+      "SPHG713"
+    ]
+  },
+  "3a99bb99dc0daeceee40c5eb99e464ac": {
+    "operator": "AND",
+    "operands": [
+      "EPID600"
+    ]
+  },
+  "bc26ed74c2e8e9c94661ee9dddcf4a33": {
+    "operator": "OR",
+    "operands": [
+      "BIOS600",
+      "BIOS662",
+      "SPHG712"
+    ]
+  },
+  "0afe7cd2645ecfb94319326331c4c3a6": {
+    "operator": "AND",
+    "operands": [
+      "EPID710"
+    ]
+  },
+  "0029de6676b1d188615deed371981958": {
+    "operator": "AND",
+    "operands": [
+      "EPID705",
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID711",
+          {
+            "operator": "AND",
+            "operands": [
+              "EPID710",
+              "EPID712"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "abdc5f011348b504ec0b526aac1349ce": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID710",
+          "EPID711"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID700",
+          "EPID795",
+          "BIOS511"
+        ]
+      }
+    ]
+  },
+  "61bf6997bad7fbc70f0b82da7bc85953": {
+    "operator": "OR",
+    "operands": [
+      "EPID705",
+      "EPID710",
+      "EPID712",
+      "EPID715",
+      "EPID716"
+    ]
+  },
+  "0b1a37191e3096bed02d6e4941d40018": {
+    "operator": "OR",
+    "operands": [
+      "EPID705",
+      "EPID710",
+      "EPID712",
+      "EPID715",
+      "EPID716",
+      "EPID717"
+    ]
+  },
+  "36ba83a01b26c6dc6e420dd62d9f56c1": {
+    "operator": "OR",
+    "operands": [
+      "EPID715",
+      "EPID804"
+    ]
+  },
+  "720cf10719b549baab7e182d5d85148b": {
+    "operator": "AND",
+    "operands": [
+      "EPID735"
+    ]
+  },
+  "a2ddb1eb92b97eab3e52d1ccee9307d2": {
+    "operator": "AND",
+    "operands": [
+      "BIOS545",
+      "EPID715"
+    ]
+  },
+  "e084b12033e32a15d6d93a746681ba96": {
+    "operator": "AND",
+    "operands": [
+      "EPID715",
+      "EPID716"
+    ]
+  },
+  "7d63e29c82a8d671ea31c3dd6863acc6": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID600",
+          "EPID710",
+          "SPHG712"
+        ]
+      },
+      "EPID751"
+    ]
+  },
+  "41ea90d9b95099f9977b624ef8fb786c": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID751",
+          "EPID799B",
+          "EPID799C"
+        ]
+      },
+      "EPID755"
+    ]
+  },
+  "147ea484b801d3a5551336c3690d7843": {
+    "operator": "AND",
+    "operands": [
+      "EPID751",
+      "EPID755",
+      "EPID799A"
+    ]
+  },
+  "75e96e1612f783466492be747eb1adb0": {
+    "operator": "AND",
+    "operands": [
+      "EPID710"
+    ]
+  },
+  "c92c87d6c50dc942dffdb569805f65c6": {
+    "operator": "OR",
+    "operands": [
+      "EPID710",
+      "EPID600"
+    ]
+  },
+  "ae66fc2441c27882462d944249c65ba9": {
+    "operator": "AND",
+    "operands": [
+      "BIOS600",
+      "EPID710"
+    ]
+  },
+  "b19156c25f4c0cb8f46217dccf3b254d": {
+    "operator": "OR",
+    "operands": [
+      "EPID710",
+      "EPID711"
+    ]
+  },
+  "9c63e5115c44ed2eaa7cadc111e8a566": {
+    "operator": "AND",
+    "operands": [
+      "EPID715",
+      {
+        "operator": "OR",
+        "operands": [
+          "EPID770",
+          "EPID771"
+        ]
+      }
+    ]
+  },
+  "aeb335ad5cda503d0865bbe6853ac984": {
+    "operator": "AND",
+    "operands": [
+      "EPID710",
+      "BIOS600"
+    ]
+  },
+  "28e965531fa656301aa583d8703c77f2": {
+    "operator": "AND",
+    "operands": [
+      "EPID705",
+      "EPID710"
+    ]
+  },
+  "b566358fe5cacdd0fad752b790bdb12d": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101",
+      "CHEM102"
+    ]
+  },
+  "e965c15a2eec745736ee168438865b0a": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101",
+      "CHEM101",
+      "CHEM102",
+      "NUTR240"
+    ]
+  },
+  "c794285ee96d4898b37854716db5204e": {
+    "operator": "AND",
+    "operands": [
+      "NUTR400"
+    ]
+  },
+  "0ef2afcd03b4bd8e1973bc3a11772615": {
+    "operator": "AND",
+    "operands": [
+      "NUTR240"
+    ]
+  },
+  "512de6a8ad07561d9c849e3fe0cffc74": {
+    "operator": "AND",
+    "operands": [
+      "NUTR400",
+      "NUTR600"
+    ]
+  },
+  "9a83fbb2ee69acd913c9f108a2bf8e8a": {
+    "operator": "AND",
+    "operands": [
+      "NUTR240"
+    ]
+  },
+  "fbde4c0ebc60bafafccc8f6acec7de74": {
+    "operator": "AND",
+    "operands": [
+      "NUTR660"
+    ]
+  },
+  "1922fdd641ecb1da10f7a3ae30bcac33": {
+    "operator": "AND",
+    "operands": [
+      "NUTR295"
+    ]
+  },
+  "5529efcd0cafe1c48c8fbc3162f3196a": {
+    "operator": "AND",
+    "operands": [
+      "SPHG711",
+      "SPHG712",
+      "SPHG713"
+    ]
+  },
+  "bb17e4608acf3d331b4ac897b8d0b6f4": {
+    "operator": "AND",
+    "operands": [
+      "NUTR240"
+    ]
+  },
+  "5be6e09610c388343b8f173944a7921c": {
+    "operator": "AND",
+    "operands": [
+      "NUTR705"
+    ]
+  },
+  "ee9dc877102cd19cac9b2dd2d05c5363": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL252",
+          "BIOL252L"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "BIOL422",
+          "BIOL422L"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "NUTR240"
+        ]
+      },
+      {
+        "operator": "AND",
+        "operands": [
+          "CHEM261",
+          "CHEM430"
+        ]
+      }
+    ]
+  },
+  "22c16ba68475cdbdfcac2c8f6d6522ec": {
+    "operator": "AND",
+    "operands": [
+      "NUTR709",
+      "NUTR711",
+      "NUTR712"
+    ]
+  },
+  "b8495d0980fadf5d69e872608a058154": {
+    "operator": "OR",
+    "operands": [
+      "NUTR761L",
+      "NUTR760L"
+    ]
+  },
+  "90cad7fc383a237ece73a72f1b88d3ad": {
+    "operator": "AND",
+    "operands": [
+      "NUTR760"
+    ]
+  },
+  "2e2e4f1f2aa8fb00fc8784fa5ac55dd1": {
+    "operator": "AND",
+    "operands": [
+      "SPHG711",
+      "SPHG712",
+      "SPHG713",
+      "SPHG721",
+      "SPHG722"
+    ]
+  },
+  "080341f0a03e80b586af7c32244ec74d": {
+    "operator": "AND",
+    "operands": [
+      "NURS330",
+      "NURS351"
+    ]
+  },
+  "4371aed3be8c2834d1f87b62e76fd725": {
+    "operator": "AND",
+    "operands": [
+      "NURS310",
+      "NURS330"
+    ]
+  },
+  "10fe7e2a2350a4614e0681c5e9f38460": {
+    "operator": "AND",
+    "operands": [
+      "NURS316"
+    ]
+  },
+  "8cf9702c7d157c4234d9a59de8888937": {
+    "operator": "AND",
+    "operands": [
+      "NURS316",
+      "NURS317"
+    ]
+  },
+  "40edbd20b81726e727c1fa163e03d2b1": {
+    "operator": "AND",
+    "operands": [
+      "NURS320"
+    ]
+  },
+  "b426a7c319731e9693b86e0ad76e0482": {
+    "operator": "AND",
+    "operands": [
+      "NURS310",
+      "NURS351"
+    ]
+  },
+  "cecbc48ca799436c8c9f968548fa05f9": {
+    "operator": "AND",
+    "operands": [
+      "NURS330"
+    ]
+  },
+  "85d245a5605b4bb41d83c25291e3bd92": {
+    "operator": "AND",
+    "operands": [
+      "NURS351"
+    ]
+  },
+  "2b1225f2b690c5c774957e14a2fb5a46": {
+    "operator": "AND",
+    "operands": [
+      "NURS310",
+      "NURS311",
+      "NURS352"
+    ]
+  },
+  "5ad112a132efe686d37c42db0a8459ad": {
+    "operator": "AND",
+    "operands": [
+      "NURS310",
+      "NURS311",
+      "NURS352",
+      "NURS410"
+    ]
+  },
+  "0d827689b0684c87d1d18d254d4cecaa": {
+    "operator": "AND",
+    "operands": [
+      "NURS310",
+      "NURS311",
+      "NURS330",
+      "NURS352"
+    ]
+  },
+  "03790a5ac1dd463cfcbc0dd10f6511ed": {
+    "operator": "AND",
+    "operands": [
+      "NURS330",
+      "NURS351"
+    ]
+  },
+  "1d8b96aab6233c59bbf1afb36f12dda0": {
+    "operator": "AND",
+    "operands": [
+      "NURS351",
+      "NURS330"
+    ]
+  },
+  "edaf9be146445d3c5ceb37c3f58abaae": {
+    "operator": "AND",
+    "operands": [
+      "NURS311",
+      "NURS330",
+      "NURS352"
+    ]
+  },
+  "4deb93df922ee9157f0d70f5dd009365": {
+    "operator": "AND",
+    "operands": [
+      "NURS311",
+      "NURS330",
+      "NURS352"
+    ]
+  },
+  "3dc21ef75a0718e57a15dbfef9afa40d": {
+    "operator": "AND",
+    "operands": [
+      "NURS430"
+    ]
+  },
+  "6c91a8851ffee867dc8e7c0b8a23468e": {
+    "operator": "AND",
+    "operands": [
+      "NURS301",
+      "NURS330",
+      "NURS352"
+    ]
+  },
+  "629491343af2bdc505f54f373a740f4b": {
+    "operator": "AND",
+    "operands": [
+      "NURS483"
+    ]
+  },
+  "47b95f53e2c530a8f36632dc9a5009a8": {
+    "operator": "AND",
+    "operands": [
+      "NURS330",
+      "NURS351"
+    ]
+  },
+  "6b9742b957e8ada8890f7b833a80a0f0": {
+    "operator": "AND",
+    "operands": [
+      "NURS430"
+    ]
+  },
+  "1c3d090d7a7a58c8cd04b8674b7d9729": {
+    "operator": "AND",
+    "operands": [
+      "NURS330",
+      "NURS430",
+      "NURS481",
+      "NURS482",
+      "NURS483"
+    ]
+  },
+  "ab91266ad8a2eb2f3fa7732748b12a34": {
+    "operator": "AND",
+    "operands": [
+      "NURS750",
+      "NURS752"
+    ]
+  },
+  "a647de6c346045848fac83a851fbcae8": {
+    "operator": "AND",
+    "operands": [
+      "NURS715"
+    ]
+  },
+  "468d9ddb4b1334785e121d2ccca8c23e": {
+    "operator": "AND",
+    "operands": [
+      "NURS715",
+      "NURS720"
+    ]
+  },
+  "8e5cac4977f643bbb4755ab7fc02ac02": {
+    "operator": "AND",
+    "operands": [
+      "NURS715",
+      "NURS726",
+      "NURS727",
+      "NURS720"
+    ]
+  },
+  "6d72d4f9defa025e4c18a0b8ac273a38": {
+    "operator": "AND",
+    "operands": [
+      "NURS715",
+      "NURS720",
+      "NURS750",
+      "NURS752"
+    ]
+  },
+  "de0108f8773288049cb2bf3897d29dee": {
+    "operator": "AND",
+    "operands": [
+      "NURS710"
+    ]
+  },
+  "621a250aa8781883eb3274045e164209": {
+    "operator": "AND",
+    "operands": [
+      "NURS715"
+    ]
+  },
+  "bd0ca493fa54fabef93948bb6fbb9068": {
+    "operator": "AND",
+    "operands": [
+      "NURS715",
+      "NURS726"
+    ]
+  },
+  "834d321fec28845c345243c664e40bb8": {
+    "operator": "AND",
+    "operands": [
+      "NURS750",
+      "NURS715"
+    ]
+  },
+  "2d221ac105f8ad6b9f05b94459e474cb": {
+    "operator": "AND",
+    "operands": [
+      "NURS778"
+    ]
+  },
+  "91f6d87abfc7645d6fde58283b357e5f": {
+    "operator": "AND",
+    "operands": [
+      "MCRO251"
+    ]
+  },
+  "9ad5eaf321ae71c5585abb10eac2f72c": {
+    "operator": "AND",
+    "operands": [
+      "INTRODUCTORYBIOCHEMISTRY",
+      "MOLECULARBIOLOGY"
+    ]
+  },
+  "626643fe06fff684ff3f0d409c100eee": {
+    "operator": "AND",
+    "operands": [
+      "SPHS401"
+    ]
+  },
+  "13c6663a060e1c834b9583b9202cb2e9": {
+    "operator": "AND",
+    "operands": [
+      "SPHS715",
+      "SPHS811"
+    ]
+  },
+  "8aa00b26a1b68bb0fd696c78c4273e1a": {
+    "operator": "AND",
+    "operands": [
+      "SPHS582"
+    ]
+  },
+  "3793b5037c5338cbb84ffd5e99f1f263": {
+    "operator": "AND",
+    "operands": [
+      "SPHS582"
+    ]
+  },
+  "79eae15c9367b281d608c18af6138262": {
+    "operator": "AND",
+    "operands": [
+      "SPHS570"
+    ]
+  },
+  "a5c3461fa03d10b3c181b6eeaf55ce73": {
+    "operator": "AND",
+    "operands": [
+      "SPHS530"
+    ]
+  },
+  "3a5c1cb9164678bc3797c58bd21020a9": {
+    "operator": "AND",
+    "operands": [
+      "SPHS540",
+      "SPHS570"
+    ]
+  },
+  "bf72504ef8a9423088ec61d0f078c1bb": {
+    "operator": "AND",
+    "operands": [
+      "SPHS741"
+    ]
+  },
+  "ab5e5df4251d8f1986966b04acbbf461": {
+    "operator": "AND",
+    "operands": [
+      "SPHS776"
+    ]
+  },
+  "02115ff54f14aa4d979e23655ea28993": {
+    "operator": "AND",
+    "operands": [
+      "SPHS776",
+      "SPHS777",
+      "SPHS778"
+    ]
+  },
+  "6e85985e9d6f94ba0e4f5e1b166776d4": {
+    "operator": "AND",
+    "operands": [
+      "SPHS754"
+    ]
+  },
+  "733d7ed7ed6ca4f419df946cb10406fa": {
+    "operator": "AND",
+    "operands": [
+      "CLSC440"
+    ]
+  },
+  "55f8ba5f8d2bff9eb69b9ecb14f9b973": {
+    "operator": "AND",
+    "operands": [
+      "CLSC450"
+    ]
+  },
+  "76b483cb9002a7fa641989c04a2ba4c6": {
+    "operator": "AND",
+    "operands": [
+      "CLSC462"
+    ]
+  },
+  "ed4d182518dd3d716481d73e90f7445b": {
+    "operator": "AND",
+    "operands": [
+      "CLSC470"
+    ]
+  },
+  "42660f90b4c41094a669ff3c13ef1882": {
+    "operator": "AND",
+    "operands": [
+      "CLSC480",
+      "CLSC480L"
+    ]
+  },
+  "21fa3808806c1808cbb8971ddd3a49b9": {
+    "operator": "AND",
+    "operands": [
+      "CLSC480"
+    ]
+  },
+  "72f552e278f34a505136df67dd831c33": {
+    "operator": "OR",
+    "operands": [
+      "CLSC630",
+      "CLSC730"
+    ]
+  },
+  "886bc59f5fdcea0831b5f38dfc853bfa": {
+    "operator": "AND",
+    "operands": [
+      "CLSC710"
+    ]
+  },
+  "87a8b4c0ce6b11e3851120b56f63960a": {
+    "operator": "AND",
+    "operands": [
+      "CLSC708"
+    ]
+  },
+  "54ce0d296347018dab2baa7c9967abef": {
+    "operator": "OR",
+    "operands": [
+      "CLSC730",
+      "CLSC772"
+    ]
+  },
+  "e53f083b15fd0d522248e5dbd36ca38a": {
+    "operator": "OR",
+    "operands": [
+      "CLSC770",
+      "CLSC772"
+    ]
+  },
+  "0dba2f862b36ffbe31451e8427c9ff68": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "AND",
+        "operands": [
+          "CLSC730",
+          "CLSC750",
+          "CLSC770"
+        ]
+      },
+      "CLSC772"
+    ]
+  },
+  "ec7704fee4fb030f02fb9ecb1a54dc4a": {
+    "operator": "AND",
+    "operands": [
+      "CLSC780"
+    ]
+  },
+  "fdead5842a0ea1333a14c993b4b4c78d": {
+    "operator": "AND",
+    "operands": [
+      "BIOL252",
+      "BIOL252L"
+    ]
+  },
+  "15d07d468510c7dcf8b0887cc2af9c1e": {
+    "operator": "AND",
+    "operands": [
+      "HSCI440",
+      "RADI442"
+    ]
+  },
+  "bdec582a1fe76f3d4c45fc6290f2175d": {
+    "operator": "AND",
+    "operands": [
+      "RADI440",
+      "RADI442"
+    ]
+  },
+  "a54e8f3848db9cb42f5c7ec97a747e35": {
+    "operator": "AND",
+    "operands": [
+      "RADI461"
+    ]
+  },
+  "5231f055d54292c2b30bc29c154e6ae6": {
+    "operator": "AND",
+    "operands": [
+      "RADI462"
+    ]
+  },
+  "c85d3a2003146bd7fbc97c717dc1d49b": {
+    "operator": "AND",
+    "operands": [
+      "RADI463"
+    ]
+  },
+  "6206e2b49b5d263c2d6bcb86a78ad859": {
+    "operator": "AND",
+    "operands": [
+      "RADI466",
+      "RADI467"
+    ]
+  },
+  "c3576f128808aaa938362dc4414684c2": {
+    "operator": "AND",
+    "operands": [
+      "RADI466",
+      "RADI467",
+      "RADI474",
+      "RADI478"
+    ]
+  },
+  "8baa330ba9d943deb0c6782d892943f7": {
+    "operator": "AND",
+    "operands": [
+      "RADI473"
+    ]
+  },
+  "723c9aafbac0b1be06479d6fcf0db15c": {
+    "operator": "AND",
+    "operands": [
+      "RADI574"
+    ]
+  },
+  "3804ed8aaa4d1d4163d4fb6c978283be": {
+    "operator": "AND",
+    "operands": [
+      "RADI574",
+      "RADI575"
+    ]
+  },
+  "d0c5f802c4612e97d2e3b28f62cdf00d": {
+    "operator": "AND",
+    "operands": [
+      "RADI583"
+    ]
+  },
+  "391936117a7d16d2cbca49e43a4cde36": {
+    "operator": "AND",
+    "operands": [
+      "RADI472"
+    ]
+  },
+  "66d20384569184c6bcc9644bfe5b2c3a": {
+    "operator": "AND",
+    "operands": [
+      "RADI584"
+    ]
+  },
+  "56246d042dd04c461279499f278e40ac": {
+    "operator": "AND",
+    "operands": [
+      "RADI660"
+    ]
+  },
+  "8c4869ee27d4f3149630dea7e7d4deba": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG253"
+    ]
+  },
+  "29297c894e53e723eee0389c00e2f31f": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG253"
+    ]
+  },
+  "1803b9737c020c38e2f2de4c13060cb2": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG267",
+      "DHYG267L"
+    ]
+  },
+  "718af32e5b5489f6fa805406119093e2": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG267",
+      "DHYG267L"
+    ]
+  },
+  "a0601dfa3d22a635c586bf125c4180e8": {
+    "operator": "AND",
+    "operands": [
+      "DHYG352"
+    ]
+  },
+  "24838336e5fc095da6238deb8521285a": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG267",
+      "DHYG267L",
+      "DHYG357",
+      "DHYG357L"
+    ]
+  },
+  "c01d6493ec5006ebde63b53f61a96ea7": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG267",
+      "DHYG267L",
+      "DHYG357",
+      "DHYG357L"
+    ]
+  },
+  "8e7759983e0c15d706c17e22ec32f584": {
+    "operator": "AND",
+    "operands": [
+      "DHYG257",
+      "DHYG257L",
+      "DHYG267",
+      "DHYG267L",
+      "DHYG357",
+      "DHYG357L",
+      "DHYG367",
+      "DHYG367L"
+    ]
+  },
+  "17cdc75eb101e69e51547954fa4fb392": {
+    "operator": "AND",
+    "operands": [
+      "DHYG269"
+    ]
+  },
+  "333361fedec6c15ce8868d8219a86e72": {
+    "operator": "AND",
+    "operands": [
+      "DHYG495"
+    ]
+  },
+  "f4ab0d550fa81ad9ffdca3dd56fa0632": {
+    "operator": "AND",
+    "operands": [
+      "DHYG495",
+      "DHYG691H"
+    ]
+  },
+  "4336c2d1cfaa6f0b650dcf00d2313c23": {
+    "operator": "AND",
+    "operands": [
+      "NDSS415L"
+    ]
+  },
+  "f722350cac0db0e010491ead9410d707": {
+    "operator": "AND",
+    "operands": [
+      "BIOL101"
+    ]
+  },
+  "5e795bfab5b76513c053c11b745200fc": {
+    "operator": "AND",
+    "operands": [
+      "NDSS410"
+    ]
+  },
+  "670e10ee35599c2d382ed43b400a857f": {
+    "operator": "AND",
+    "operands": [
+      "NDSS420",
+      "NDSS430"
+    ]
+  },
+  "f0e6ffb5c9639506170d68abb53fbe68": {
+    "operator": "AND",
+    "operands": [
+      "NDSS500",
+      "NDSS510"
+    ]
+  },
+  "c3faae8d92c22a17728d992c5b98345a": {
+    "operator": "AND",
+    "operands": [
+      "NDSS440",
+      "NDSS493"
+    ]
+  },
+  "4229c3d33114a3cc346dd60fdae4a012": {
+    "operator": "AND",
+    "operands": [
+      "NDSS697"
+    ]
+  },
+  "d3cc3c8de6bb682f4c94fcecd514c49c": {
+    "operator": "AND",
+    "operands": [
+      "LING101"
+    ]
+  },
+  "aecaf83f796620b17bcbb0042421a352": {
+    "operator": "OR",
+    "operands": [
+      "SPAN300",
+      "SPAN301"
+    ]
+  },
+  "fcad6678ecbdae1f29086c29617f5aa8": {
+    "operator": "OR",
+    "operands": [
+      "SPAN261",
+      "SPAN267"
+    ]
+  },
+  "ae7f7cc521ce368729ae3bfe99cc2661": {
+    "operator": "OR",
+    "operands": [
+      "SPAN360",
+      "SPAN376"
+    ]
+  },
+  "8532fac2443bd03d10c7d795c1e47628": {
+    "operator": "OR",
+    "operands": [
+      "LING200",
+      "LING520",
+      "LING523",
+      "SPHS540"
+    ]
+  },
+  "934fd4ace286f7df428109c5f249781f": {
+    "operator": "AND",
+    "operands": [
+      "LING101"
+    ]
+  },
+  "063bb44350437f544dfdffd92785eb2f": {
+    "operator": "AND",
+    "operands": [
+      "SPHS402"
+    ]
+  },
+  "f07a7d0cdf53d1863a11e95664f61e97": {
+    "operator": "AND",
+    "operands": [
+      "LING520",
+      {
+        "operator": "OR",
+        "operands": [
+          "200",
+          "523"
+        ]
+      }
+    ]
+  },
+  "283b9a4f094035aca751a4bdeea5a85d": {
+    "operator": "OR",
+    "operands": [
+      "LING200",
+      "LING523"
+    ]
+  },
+  "e853fa1bd61bfead825953b6d49f8e06": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "LING203",
+          "LING528"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "LING201",
+          "LING530"
+        ]
+      }
+    ]
+  },
+  "10bb9a7f99e7b149c23f865636f0be14": {
+    "operator": "AND",
+    "operands": [
+      "LING530"
+    ]
+  },
+  "366c8e23bb2e3f397453507b4517ce2c": {
+    "operator": "AND",
+    "operands": [
+      "LING537"
+    ]
+  },
+  "66447006856ef64d875f03e34bca69b2": {
+    "operator": "OR",
+    "operands": [
+      "ENGL213",
+      "LING101",
+      "LING400",
+      "PHIL145"
+    ]
+  },
+  "e70f128bf532912ffe217c199d629314": {
+    "operator": "AND",
+    "operands": [
+      "LING550"
+    ]
+  },
+  "7bebe9b514a38b872d98d5388ffea8b5": {
+    "operator": "OR",
+    "operands": [
+      "LING101",
+      "RUSS102"
+    ]
+  },
+  "62a2b65d44b910f4fa12319c9d69df59": {
+    "operator": "OR",
+    "operands": [
+      "JAPN102",
+      "LING101"
+    ]
+  },
+  "cf376252fd5e068d0133c643f1d0bb01": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN331",
+          "FREN332",
+          "FREN333",
+          "FREN334",
+          "FREN335",
+          "FREN336",
+          "FREN337",
+          "FREN338",
+          "FREN339",
+          "FREN340",
+          "FREN341",
+          "FREN342",
+          "FREN343",
+          "FREN344",
+          "FREN345",
+          "FREN346",
+          "FREN347",
+          "FREN348",
+          "FREN349"
+        ]
+      }
+    ]
+  },
+  "0d87b334705963cfbcf6bfd9b1427889": {
+    "operator": "OR",
+    "operands": [
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "5bc4373d3172e8242a19bc5d94120f08": {
+    "operator": "AND",
+    "operands": [
+      "GERM302",
+      "GERM303"
+    ]
+  },
+  "3437db4d6444959d1905a8571eb6baa6": {
+    "operator": "AND",
+    "operands": [
+      "LING101",
+      {
+        "operator": "OR",
+        "operands": [
+          "LING200",
+          "LING376",
+          "LING422"
+        ]
+      }
+    ]
+  },
+  "138d538bc0f7d982edfc7cd80a93ec8d": {
+    "operator": "OR",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN300",
+          "ITAL300",
+          "PORT310",
+          "SPAN300"
+        ]
+      }
+    ]
+  },
+  "8f52e5fc511f53d741d292b193289ed4": {
+    "operator": "AND",
+    "operands": [
+      "SPAN376"
+    ]
+  },
+  "6c1744d037719efb4779f13cce890276": {
+    "operator": "AND",
+    "operands": [
+      "SPAN360"
+    ]
+  },
+  "ab269d51264ada5302f2d54481d59331": {
+    "operator": "AND",
+    "operands": [
+      "SPAN360"
+    ]
+  },
+  "203725abcf4d3c2dff2280b4a52cae73": {
+    "operator": "AND",
+    "operands": [
+      "LING524"
+    ]
+  },
+  "3e35d3774a5aa644dcc2781bb8bcce10": {
+    "operator": "AND",
+    "operands": [
+      "LING533"
+    ]
+  },
+  "d8b904c9822ec7dd49067f9009d30ddf": {
+    "operator": "OR",
+    "operands": [
+      "SPAN100",
+      "SPAN101"
+    ]
+  },
+  "48252175360c3743998881d216c91cde": {
+    "operator": "OR",
+    "operands": [
+      "SPAN102",
+      "SPAN105",
+      "SPAN111",
+      "SPAN401"
+    ]
+  },
+  "7dc9595c6152ff4cde9c6a7f753f2f6a": {
+    "operator": "AND",
+    "operands": [
+      "SPAN203"
+    ]
+  },
+  "c6be0ecd5e155558b226516563227fac": {
+    "operator": "AND",
+    "operands": [
+      "SPAN203"
+    ]
+  },
+  "84108fe1c80d8b4574026d8e4d4d5829": {
+    "operator": "AND",
+    "operands": [
+      "SPAN111"
+    ]
+  },
+  "721bbec7d645997f4d9b91693bac3274": {
+    "operator": "OR",
+    "operands": [
+      "SPAN204",
+      "SPAN212",
+      "SPAN402"
+    ]
+  },
+  "a3cbf8e71a725ca8a04b2fe66dace8c8": {
+    "operator": "AND",
+    "operands": [
+      "SPAN204"
+    ]
+  },
+  "05e91479e163102331b9071971ebe3f9": {
+    "operator": "OR",
+    "operands": [
+      "SPAN204",
+      "SPAN205"
+    ]
+  },
+  "4816a56882107372f533e9b025dc60f9": {
+    "operator": "OR",
+    "operands": [
+      "SPAN204",
+      "SPAN205"
+    ]
+  },
+  "f102419461e792153e7d0fe7d90d444a": {
+    "operator": "OR",
+    "operands": [
+      "SPAN261",
+      "SPAN267"
+    ]
+  },
+  "31aecb45a6f6b0ea17340d8844bdb372": {
+    "operator": "OR",
+    "operands": [
+      "SPAN261",
+      "SPAN267"
+    ]
+  },
+  "70d0d1ba222d6ca0d2ac352309e2a107": {
+    "operator": "AND",
+    "operands": [
+      "SPAN204"
+    ]
+  },
+  "700e426a380bde68e0ed111b61f053bd": {
+    "operator": "OR",
+    "operands": [
+      "SPAN261",
+      "SPAN267"
+    ]
+  },
+  "8e98c49f0bfc486c549d3cf8d2e8f0b5": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN261",
+          "SPAN267"
+        ]
+      },
+      "SPAN323"
+    ]
+  },
+  "0b7cf94f907126678638f90ec717696b": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN261",
+          "SPAN267"
+        ]
+      },
+      "SPAN320"
+    ]
+  },
+  "594b6116525b6e4453a216fe70c086f9": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN261",
+          "SPAN267"
+        ]
+      },
+      "SPAN321"
+    ]
+  },
+  "e34422bb805bcbd6a55951ec0857c499": {
+    "operator": "OR",
+    "operands": [
+      "SPAN324",
+      "SPAN325",
+      "SPAN328"
+    ]
+  },
+  "eb34d022389de060986ed4a82bc20df8": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN261",
+          "SPAN267"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN300",
+          "SPAN301",
+          "SPAN302"
+        ]
+      }
+    ]
+  },
+  "fa7fff63fdc71f4b7f04e015cee23b5f": {
+    "operator": "AND",
+    "operands": [
+      "SPAN351"
+    ]
+  },
+  "929abcfcb4e3c6e30baee7cfe8e1119c": {
+    "operator": "OR",
+    "operands": [
+      "SPAN255",
+      "SPAN261",
+      "SPAN267"
+    ]
+  },
+  "286916adc03c2eda9cf85e551011a9c2": {
+    "operator": "OR",
+    "operands": [
+      "SPAN301",
+      "SPAN302"
+    ]
+  },
+  "487dbb0fe977dc7ea82dd706e1ba2e88": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN261",
+          "SPAN267"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN300",
+          "SPAN301",
+          "SPAN302"
+        ]
+      }
+    ]
+  },
+  "c45aa3b8af6ba46fdec6234185abc61c": {
+    "operator": "AND",
+    "operands": [
+      "SPAN369"
+    ]
+  },
+  "f3974c7b9c4d0003fe70f60773b1d1de": {
+    "operator": "OR",
+    "operands": [
+      "SPAN301",
+      "SPAN302"
+    ]
+  },
+  "6eb8ec19b9d4ee8538854d97cfb796d6": {
+    "operator": "OR",
+    "operands": [
+      "SPAN301",
+      "SPAN302"
+    ]
+  },
+  "7e610d677bc7899eaabf4b070571cba2": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN301",
+          "SPAN302"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN371",
+          "SPAN373"
+        ]
+      }
+    ]
+  },
+  "90c38c875ce9c4f0dae0032713f3f471": {
+    "operator": "OR",
+    "operands": [
+      "SPAN371",
+      "SPAN373"
+    ]
+  },
+  "f6b84d98bcbfaaf98def535e4ecfcb16": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN301",
+          "SPAN302"
+        ]
+      },
+      {
+        "operator": "OR",
+        "operands": [
+          "SPAN371",
+          "SPAN373"
+        ]
+      }
+    ]
+  },
+  "df05c90c70dc39b1501263a916b237a7": {
+    "operator": "OR",
+    "operands": [
+      "SPAN338",
+      "SPAN340",
+      "SPAN344",
+      "SPAN371",
+      "SPAN373"
+    ]
+  },
+  "5f78b9161fd34966ffb645efe78cbaa2": {
+    "operator": "AND",
+    "operands": [
+      "SPAN371",
+      "SPAN373"
+    ]
+  },
+  "4316b0a06519f24fde5ebab7fdc1e195": {
+    "operator": "OR",
+    "operands": [
+      "SPAN102",
+      "SPAN404"
+    ]
+  },
+  "745ab2ac1b9aa4ca00cb6fb4abbb5740": {
+    "operator": "AND",
+    "operands": [
+      "SPAN414"
+    ]
+  },
+  "88f1bb1f553af00a211a4c202f6d1e23": {
+    "operator": "AND",
+    "operands": [
+      "SPAN416"
+    ]
+  },
+  "2c2a30339dae49d3e26e727cc65b8036": {
+    "operator": "AND",
+    "operands": [
+      "SPAN300"
+    ]
+  },
+  "bee50fc3d40a8a98b57305af5cba7676": {
+    "operator": "AND",
+    "operands": [
+      "SPAN361"
+    ]
+  },
+  "cc547fb64d1ef5b2c7bd4d4e9dacaec8": {
+    "operator": "OR",
+    "operands": [
+      "SPAN360",
+      "SPAN376",
+      "SPAN378"
+    ]
+  },
+  "4fae2b7adbbb9deb46f9441ef664bdb3": {
+    "operator": "AND",
+    "operands": [
+      "FREN101"
+    ]
+  },
+  "1e41762ef30e389c938c933834c4fda8": {
+    "operator": "OR",
+    "operands": [
+      "FREN102",
+      "FREN105",
+      "FREN401"
+    ]
+  },
+  "bb5c899379a8f357019e36a2e2750fdd": {
+    "operator": "AND",
+    "operands": [
+      "FREN203"
+    ]
+  },
+  "5991a6669ded8786a153f8e1e81a1dfd": {
+    "operator": "OR",
+    "operands": [
+      "FREN204",
+      "FREN402"
+    ]
+  },
+  "0155856ad49965f6a7d3978b0bd983ea": {
+    "operator": "OR",
+    "operands": [
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "014dff9aa524987ae30b34c43737f2f7": {
+    "operator": "AND",
+    "operands": [
+      "FREN204"
+    ]
+  },
+  "f1987d08560188c79b641b8f388520f3": {
+    "operator": "OR",
+    "operands": [
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "63857dc96646cd60d2760432c160e3b5": {
+    "operator": "AND",
+    "operands": [
+      "FREN300"
+    ]
+  },
+  "3f913c0062ba3c5891925009d0aa6689": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN255",
+          "FREN260",
+          "FREN262"
+        ]
+      },
+      "FREN300"
+    ]
+  },
+  "55f9155c5513cae21c6b16aac204ee81": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN255",
+          "FREN260",
+          "FREN262"
+        ]
+      },
+      "FREN300"
+    ]
+  },
+  "58c067ee19d042b3796d34b775e0e5f0": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN255",
+          "FREN260",
+          "FREN262"
+        ]
+      }
+    ]
+  },
+  "380516d9963fcfd04115c65277d45276": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN255",
+          "FREN260",
+          "FREN262"
+        ]
+      }
+    ]
+  },
+  "a314fcf785689b4cc28c290d63d5e1c0": {
+    "operator": "AND",
+    "operands": [
+      "FREN300"
+    ]
+  },
+  "d4bfa48dfa3917782ee08f902a19aa27": {
+    "operator": "OR",
+    "operands": [
+      "FREN300",
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "8564fa866d5497cf2ee692e90ef481b5": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN255",
+          "FREN260",
+          "FREN262"
+        ]
+      }
+    ]
+  },
+  "000b0b2ab280cb78fc896a18bb82b38a": {
+    "operator": "OR",
+    "operands": [
+      "FREN300",
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "9b57940300398200376d2d7a180cb633": {
+    "operator": "OR",
+    "operands": [
+      "FREN300",
+      "FREN255",
+      "FREN260",
+      "FREN262"
+    ]
+  },
+  "6531caaa8f224150b1355deaa8eb2d30": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN331",
+          "FREN332",
+          "FREN333",
+          "FREN334",
+          "FREN335",
+          "FREN336",
+          "FREN337",
+          "FREN338",
+          "FREN339",
+          "FREN340",
+          "FREN341",
+          "FREN342",
+          "FREN343",
+          "FREN344",
+          "FREN345",
+          "FREN346",
+          "FREN347",
+          "FREN348",
+          "FREN349",
+          "FREN350"
+        ]
+      }
+    ]
+  },
+  "1adfcd5d01397c8cd801b90df75d293b": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN331",
+          "FREN332",
+          "FREN333",
+          "FREN334",
+          "FREN335",
+          "FREN336",
+          "FREN337",
+          "FREN338",
+          "FREN339",
+          "FREN340",
+          "FREN341",
+          "FREN342",
+          "FREN343",
+          "FREN344",
+          "FREN345",
+          "FREN346",
+          "FREN347",
+          "FREN348",
+          "FREN349",
+          "FREN350"
+        ]
+      }
+    ]
+  },
+  "69359352a297c872cf5e164f19c07e59": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN340",
+          "FREN350",
+          "FREN360",
+          "FREN370",
+          "FREN380",
+          "FREN390"
+        ]
+      }
+    ]
+  },
+  "5941b9980cf290cef25959aa9bf2b4bd": {
+    "operator": "AND",
+    "operands": [
+      "FREN300",
+      {
+        "operator": "OR",
+        "operands": [
+          "FREN370",
+          "FREN372"
+        ]
+      }
+    ]
+  },
+  "79c083663c6c9a1efc8ce814c331daa9": {
+    "operator": "AND",
+    "operands": [
+      "CHIN101"
+    ]
+  },
+  "2f70ac62ef7e318ecb861e1889889bc2": {
+    "operator": "AND",
+    "operands": [
+      "CHIN102"
+    ]
+  },
+  "7cb67d697b668349174a7e971833dd92": {
+    "operator": "AND",
+    "operands": [
+      "CHIN203"
+    ]
+  },
+  "456098e5dc7c2cc432ccdc119bb29153": {
+    "operator": "AND",
+    "operands": [
+      "CHIN111"
+    ]
+  },
+  "5bb8d3633a77086165d28ebad2369678": {
+    "operator": "OR",
+    "operands": [
+      "CHIN102",
+      "CHIN111"
+    ]
+  },
+  "a5d5c2c37257c6a1463d91acec4a8de6": {
+    "operator": "AND",
+    "operands": [
+      "CHIN204"
+    ]
+  },
+  "3665724c09134701e27031c6f9038ff1": {
+    "operator": "AND",
+    "operands": [
+      "CHIN305"
+    ]
+  },
+  "0bd39d227684e64d4f38201b2aaf18c6": {
+    "operator": "OR",
+    "operands": [
+      "CHIN212",
+      "CHIN305"
+    ]
+  },
+  "93e3dce3a62f0dfd103ac5288a619408": {
+    "operator": "AND",
+    "operands": [
+      "CHIN212"
+    ]
+  },
+  "171e325c4dbc64a6b15a2e41cad48cb4": {
+    "operator": "AND",
+    "operands": [
+      "CHIN306"
+    ]
+  },
+  "21bc067684d4b843885f9e1cff409c51": {
+    "operator": "AND",
+    "operands": [
+      "CHIN407"
+    ]
+  },
+  "5928a0b3643e35ff9aba90d61f7d16bd": {
+    "operator": "OR",
+    "operands": [
+      "CHIN407",
+      "CHIN313"
+    ]
+  },
+  "768359693bf98bc5a3bb0f357b66444d": {
+    "operator": "OR",
+    "operands": [
+      "CHIN408",
+      "CHIN313"
+    ]
+  },
+  "4be2e887e4673dc64bd2cf5783a89f0d": {
+    "operator": "OR",
+    "operands": [
+      "CHIN408",
+      "CHIN313"
+    ]
+  },
+  "05021d302d8794f2d89123ea32082fb5": {
+    "operator": "OR",
+    "operands": [
+      "CHIN408",
+      "CHIN313"
+    ]
+  },
+  "1f6e1a2f2e9b2d6cb8d2493d1c78524f": {
+    "operator": "OR",
+    "operands": [
+      "CHIN313",
+      "CHIN408"
+    ]
+  },
+  "ff4a15fc8e61db0a4a8359c96dec30e8": {
+    "operator": "AND",
+    "operands": [
+      "JAPN101"
+    ]
+  },
+  "eab978b890b6fafff52536d41617fa88": {
+    "operator": "AND",
+    "operands": [
+      "JAPN102"
+    ]
+  },
+  "f11ff68181ca180565c301848c12e191": {
+    "operator": "AND",
+    "operands": [
+      "JAPN203"
+    ]
+  },
+  "9b4e614f2c36b2b063e3bda46cd8dfe8": {
+    "operator": "AND",
+    "operands": [
+      "JAPN204"
+    ]
+  },
+  "a469f356fe42aee3c68e0326d6852915": {
+    "operator": "AND",
+    "operands": [
+      "JAPN305"
+    ]
+  },
+  "30b9009a7888aa3f6a1fb4081827a7b4": {
+    "operator": "AND",
+    "operands": [
+      "JAPN306"
+    ]
+  },
+  "ddee247b4aaa16a37fc61682cc9b16ac": {
+    "operator": "AND",
+    "operands": [
+      "KOR101"
+    ]
+  },
+  "1536ecde44ffef2c94e155b347c29d01": {
+    "operator": "AND",
+    "operands": [
+      "KOR102"
+    ]
+  },
+  "d4757f3a41b485bf614a4c53c2f64151": {
+    "operator": "AND",
+    "operands": [
+      "KOR203"
+    ]
+  },
+  "84dfa17bbea9d0c420d7dc0bb80ebe1b": {
+    "operator": "AND",
+    "operands": [
+      "KOR204"
+    ]
+  },
+  "a5a2dc10fd0b6443f2bedc9f1b878f67": {
+    "operator": "AND",
+    "operands": [
+      "KOR305"
+    ]
+  },
+  "790a258873b55561815a6f35c11cd1cc": {
+    "operator": "AND",
+    "operands": [
+      "KOR306"
+    ]
+  },
+  "6f50078ca546f5b063ee2c7f944cb52b": {
+    "operator": "AND",
+    "operands": [
+      "GERM101"
+    ]
+  },
+  "7ff022c8f51d25cdafe6bfecafc00c51": {
+    "operator": "AND",
+    "operands": [
+      "GERM102"
+    ]
+  },
+  "f427d6e48fb9d90b775862a878574584": {
+    "operator": "AND",
+    "operands": [
+      "GERM203"
+    ]
+  },
+  "8dfa4d4ed973184a0e2f76e9b003cc08": {
+    "operator": "OR",
+    "operands": [
+      "GERM301",
+      "GERM302"
+    ]
+  },
+  "6e6037f93535fb7d5d61049df6b1b592": {
+    "operator": "AND",
+    "operands": [
+      "GERM303"
+    ]
+  },
+  "f459b8d696e101ea5a718e92bb20cdde": {
+    "operator": "AND",
+    "operands": [
+      "GERM204"
+    ]
+  },
+  "1eb58b0794042bda17186fc234c6715d": {
+    "operator": "AND",
+    "operands": [
+      "GERM303"
+    ]
+  },
+  "4a970e1926a09d3659c61943de91df59": {
+    "operator": "AND",
+    "operands": [
+      "GERM700"
+    ]
+  },
+  "919f5ed98426923c31b696e95d0d6004": {
+    "operator": "AND",
+    "operands": [
+      "ITAL101"
+    ]
+  },
+  "5ecb9d906573a4b2c6b5198c6f47f691": {
+    "operator": "OR",
+    "operands": [
+      "ITAL102",
+      "ITAL401"
+    ]
+  },
+  "889838acf835c602b1f2bbb3c43917c1": {
+    "operator": "AND",
+    "operands": [
+      "ITAL203"
+    ]
+  },
+  "ae47c6f41bfca1ee51656c0023288969": {
+    "operator": "OR",
+    "operands": [
+      "ITAL204",
+      "ITAL402"
+    ]
+  },
+  "b66d9ab330bff5993253807fd18317e7": {
+    "operator": "AND",
+    "operands": [
+      "ITAL203"
+    ]
+  },
+  "a773e3d813de4dab080e477818eae069": {
+    "operator": "OR",
+    "operands": [
+      "ITAL204",
+      "ITAL402"
+    ]
+  },
+  "139a322fe9357ef00e5d375feb0ae6d3": {
+    "operator": "AND",
+    "operands": [
+      "ITAL300"
+    ]
+  },
+  "7ef66aadd7f59fc5c62bc766cc5c32d5": {
+    "operator": "AND",
+    "operands": [
+      "ITAL204"
+    ]
+  },
+  "e569f48bc2734609419cf5c9801447b6": {
+    "operator": "OR",
+    "operands": [
+      "ITAL204",
+      "ITAL402"
+    ]
+  },
+  "1e6c5456a7a49e73dfdabe09ef565475": {
+    "operator": "AND",
+    "operands": [
+      "LATN203"
+    ]
+  },
+  "58ee2e55ddff90488b303fac05634df6": {
+    "operator": "OR",
+    "operands": [
+      "LATN204",
+      "LATN205"
+    ]
+  },
+  "1a3871fbe4d2244ed82447db44108e1b": {
+    "operator": "OR",
+    "operands": [
+      "LATN220",
+      "LATN230",
+      "LATN240",
+      "LATN250",
+      "LATN260",
+      "LATN270",
+      "LATN280",
+      "LATN290",
+      "LATN300",
+      "LATN310",
+      "LATN320",
+      "LATN330",
+      "LATN340",
+      "LATN350",
+      "LATN360",
+      "LATN370",
+      "LATN380",
+      "LATN390",
+      "LATN400",
+      "LATN410",
+      "LATN420",
+      "LATN430",
+      "LATN440",
+      "LATN450",
+      "LATN460",
+      "LATN470",
+      "LATN480",
+      "LATN490"
+    ]
+  },
+  "9d360a2b41e16c97bb0fd2194e8a675d": {
+    "operator": "AND",
+    "operands": [
+      "LATN221"
+    ]
+  },
+  "58b4dd0e2cfe92cc2362b6cba09ffbe1": {
+    "operator": "AND",
+    "operands": [
+      "GREK101",
+      "GREK102"
+    ]
+  },
+  "5b0e3b8a632b9c77956caf55c92f63a0": {
+    "operator": "AND",
+    "operands": [
+      "GREK203"
+    ]
+  },
+  "4c184bf4509504c73cd0ce05b719c499": {
+    "operator": "OR",
+    "operands": [
+      "GREK204",
+      "GREK205"
+    ]
+  },
+  "8e30be0a94023dd2205e125e1b99d535": {
+    "operator": "AND",
+    "operands": [
+      "GREK221"
+    ]
+  },
+  "2b91ad59bb7dfffeedf8daba1d5590da": {
+    "operator": "OR",
+    "operands": [
+      "GREK221",
+      "GREK222"
+    ]
+  },
+  "b63bb81570ebbd331de781ad2da75470": {
+    "operator": "AND",
+    "operands": [
+      "GREK222"
+    ]
+  },
+  "f4b8ed17a9f68c72041a7daaca4cbbfb": {
+    "operator": "AND",
+    "operands": [
+      "ARAB101"
+    ]
+  },
+  "bdbe125ef795b569dab997756bd1a636": {
+    "operator": "AND",
+    "operands": [
+      "ARAB102"
+    ]
+  },
+  "28ce4259af82ac1eb26674a76e9254f7": {
+    "operator": "AND",
+    "operands": [
+      "ARAB203"
+    ]
+  },
+  "2101a654e5ebf79b92d01157cdb20db3": {
+    "operator": "AND",
+    "operands": [
+      "ARAB204"
+    ]
+  },
+  "0f643107428e7c544cdd7aeaa2f4563b": {
+    "operator": "AND",
+    "operands": [
+      "ARAB305"
+    ]
+  },
+  "f4f3a637cd45208ca84d4125119b8756": {
+    "operator": "AND",
+    "operands": [
+      "ARAB306"
+    ]
+  },
+  "52f2d3026903c3887da0f16700343225": {
+    "operator": "AND",
+    "operands": [
+      "RUSS101"
+    ]
+  },
+  "2470cb353d851cfea2e2c7c3a72bce39": {
+    "operator": "AND",
+    "operands": [
+      "RUSS102"
+    ]
+  },
+  "eb9ae678ca0b4a9e8f8693869298d8b0": {
+    "operator": "AND",
+    "operands": [
+      "RUSS203"
+    ]
+  },
+  "08ae7e28c7e532e810cca684644c10b6": {
+    "operator": "AND",
+    "operands": [
+      "RUSS204"
+    ]
+  },
+  "6caf2cc2cc125f68e8883439a34ea538": {
+    "operator": "AND",
+    "operands": [
+      "RUSS409"
+    ]
+  },
+  "2258d2f2c57c5c771091b8adcd318209": {
+    "operator": "AND",
+    "operands": [
+      "RUSS410"
+    ]
+  },
+  "6b9e45db90f585a24a6d768a5b871cb8": {
+    "operator": "AND",
+    "operands": [
+      "RUSS411"
+    ]
+  },
+  "b5c5998c37287ef86f8c60a2b6f6a64c": {
+    "operator": "AND",
+    "operands": [
+      "RUSS412"
+    ]
+  },
+  "799686a2b29bd0a7d20214ffeb8b5df7": {
+    "operator": "AND",
+    "operands": [
+      "RUSS515"
+    ]
+  },
+  "dd19d525fb4e74cbe98240aa537734ab": {
+    "operator": "AND",
+    "operands": [
+      "HNUR101"
+    ]
+  },
+  "d497116f64d0dc55e8b09b9509596f95": {
+    "operator": "AND",
+    "operands": [
+      "HNUR102"
+    ]
+  },
+  "db8aa3e643d13a1c733111c2c2b27126": {
+    "operator": "AND",
+    "operands": [
+      "HNUR203"
+    ]
+  },
+  "0287f3022784dfe861da0e6216fb649b": {
+    "operator": "AND",
+    "operands": [
+      "HNUR204"
+    ]
+  },
+  "9473d3f8abd88984785e95fc4ac09deb": {
+    "operator": "AND",
+    "operands": [
+      "HNUR305",
+      "HNUR306"
+    ]
+  },
+  "a64ee5908cdfd876574c467b85f22cae": {
+    "operator": "AND",
+    "operands": [
+      "HNUR305",
+      "HNUR306"
+    ]
+  },
+  "cb3b30c86a22257209ff23ecf70324c7": {
+    "operator": "AND",
+    "operands": [
+      "PRSN101"
+    ]
+  },
+  "e52e865d38ac2d3a5514551a1b927bc2": {
+    "operator": "AND",
+    "operands": [
+      "PRSN102"
+    ]
+  },
+  "93220fda8f6977bc279b237351ba29d5": {
+    "operator": "AND",
+    "operands": [
+      "PRSN203"
+    ]
+  },
+  "bc368e2e26f6bd876113fdd8b209460b": {
+    "operator": "AND",
+    "operands": [
+      "PRSN204"
+    ]
+  },
+  "239b2d711d60f2845ba9c62fb515ac2f": {
+    "operator": "AND",
+    "operands": [
+      "PORT101"
+    ]
+  },
+  "10e8d656f5cae136532fbe450a450371": {
+    "operator": "OR",
+    "operands": [
+      "PORT102",
+      "PORT111",
+      "PORT401"
+    ]
+  },
+  "9b581eb94d5af6496749bb9942288c22": {
+    "operator": "AND",
+    "operands": [
+      "PORT203"
+    ]
+  },
+  "846b8f1d7611dc42924f317297f7ecb6": {
+    "operator": "OR",
+    "operands": [
+      "PORT204",
+      "PORT402"
+    ]
+  },
+  "0e0acbdfd1cad3a41e346b82986e603e": {
+    "operator": "OR",
+    "operands": [
+      "PORT204",
+      "PORT402"
+    ]
+  },
+  "4b071f94088b9fb36c01938890e57f33": {
+    "operator": "OR",
+    "operands": [
+      "PORT310",
+      "PORT388"
+    ]
+  },
+  "610bf1791910368424e4d9b2d5a39afb": {
+    "operator": "AND",
+    "operands": [
+      "PORT351"
+    ]
+  },
+  "62e1dfd900859e1d91b1f9a47854b119": {
+    "operator": "OR",
+    "operands": [
+      "PORT323",
+      "PORT385"
+    ]
+  },
+  "59e3310210eb84f1f83d43eab62f6c1e": {
+    "operator": "AND",
+    "operands": [
+      "PORT354"
+    ]
+  },
+  "c0d5356c86f22ef5103f50e28120137b": {
+    "operator": "OR",
+    "operands": [
+      "PORT310",
+      "PORT323"
+    ]
+  },
+  "3b1785efc51e96857eed320504e31eeb": {
+    "operator": "OR",
+    "operands": [
+      "PORT310",
+      "PORT323"
+    ]
+  },
+  "7aac2fde2a783cd9987ded823ea97c76": {
+    "operator": "AND",
+    "operands": [
+      "PORT402"
+    ]
+  },
+  "f3df3312c0ec53c2464625dbf2785971": {
+    "operator": "AND",
+    "operands": [
+      "VIET101"
+    ]
+  },
+  "9eda34ec76a2c470a42ec0c4752804d3": {
+    "operator": "AND",
+    "operands": [
+      "VIET102"
+    ]
+  },
+  "087925f5b94c0e2c2c9dbb0a8bf7a529": {
+    "operator": "AND",
+    "operands": [
+      "VIET203"
+    ]
+  },
+  "9bbed294f18b8cf26c515b45d610e490": {
+    "operator": "AND",
+    "operands": [
+      "VIET204"
+    ]
+  },
+  "d56943a3d88d369e2afe551c4b799031": {
+    "operator": "OR",
+    "operands": [
+      "SWAH112",
+      "SWAH402"
+    ]
+  },
+  "31ee2cca9dee5a51e8859a7b726ff917": {
+    "operator": "AND",
+    "operands": [
+      "SWAH401"
+    ]
+  },
+  "982a51e9e8ddb9209e056685c86c73dc": {
+    "operator": "AND",
+    "operands": [
+      "SWAH403"
+    ]
+  },
+  "12fc0b524de8cd1b074f11e1c47bcc50": {
+    "operator": "AND",
+    "operands": [
+      "SWAH404"
+    ]
+  },
+  "e01e64b4bcd820340206cbf0fbc0acf2": {
+    "operator": "AND",
+    "operands": [
+      "SWAH405"
+    ]
+  },
+  "2421aa5ad8d31dd26defdad6237db07c": {
+    "operator": "AND",
+    "operands": [
+      "SWAH403"
+    ]
+  },
+  "54dada798d254dcc5607bd613cb9d332": {
+    "operator": "AND",
+    "operands": [
+      "YORU401"
+    ]
+  },
+  "e3b7a86511cbe6994b63a8a5701eb7ef": {
+    "operator": "AND",
+    "operands": [
+      "WOLO401"
+    ]
+  },
+  "95990a7f64fd7b0dae4acf6ed6987a7a": {
+    "operator": "AND",
+    "operands": [
+      "WOLO402"
+    ]
+  },
+  "e49d8c83a2a22100dfd27ad33b78417b": {
+    "operator": "AND",
+    "operands": [
+      "WOLO403"
+    ]
+  },
+  "f8c9d107cff70c59018243d463d6c40e": {
+    "operator": "AND",
+    "operands": [
+      "WOLO404"
+    ]
+  },
+  "b7e4936ad4137a8ad082fa123a6f7c8d": {
+    "operator": "AND",
+    "operands": [
+      "WOLO405"
+    ]
+  },
+  "ea2efebbca7f6d86b2ddb22e3689ef75": {
+    "operator": "AND",
+    "operands": [
+      "LGLA401"
+    ]
+  },
+  "ed011b9406636d8a34be34bbf6d5322b": {
+    "operator": "AND",
+    "operands": [
+      "CHER101"
+    ]
+  },
+  "20f249eb695306ac20fdb1d7edde602e": {
+    "operator": "AND",
+    "operands": [
+      "CHER102"
+    ]
+  },
+  "dc1e99bef80345787d952afb27c9aebf": {
+    "operator": "AND",
+    "operands": [
+      "CHER203"
+    ]
+  },
+  "9b4b635adea184d5c4fd715f1b94c29a": {
+    "operator": "AND",
+    "operands": [
+      "CHER204"
+    ]
+  },
+  "329000f1e86d6bf3950c6b68e9b9d65e": {
+    "operator": "AND",
+    "operands": [
+      "CHWA401"
+    ]
+  },
+  "67122bea793f8aea701907265c030591": {
+    "operator": "AND",
+    "operands": [
+      "CHWA402"
+    ]
+  },
+  "dcc5b6f717bb2e4527014ef2acb01006": {
+    "operator": "AND",
+    "operands": [
+      "DTCH402"
+    ]
+  },
+  "441f1fb5a7d2f7381d0202913e008a8d": {
+    "operator": "AND",
+    "operands": [
+      "DTCH403"
+    ]
+  },
+  "a79bf2e7596d555b682d979d073dc261": {
+    "operator": "AND",
+    "operands": [
+      "DTCH404"
+    ]
+  },
+  "2d7574b7e1805b45e616ff1ed843a146": {
+    "operator": "AND",
+    "operands": [
+      "CZCH401"
+    ]
+  },
+  "7109800489236d721a8639458439ef13": {
+    "operator": "AND",
+    "operands": [
+      "CZCH402"
+    ]
+  },
+  "bf5970cc7f7289ca0d42fab34032c2cd": {
+    "operator": "AND",
+    "operands": [
+      "CZCH403"
+    ]
+  },
+  "f5b6a0379a4903839f01a4039e7bc520": {
+    "operator": "AND",
+    "operands": [
+      "CZCH404"
+    ]
+  },
+  "73a90b1511796b6cfe749105f3eedbb8": {
+    "operator": "AND",
+    "operands": [
+      "CZCH405"
+    ]
+  },
+  "59ac3775612295b0091945225edddcb5": {
+    "operator": "AND",
+    "operands": [
+      "BCS401"
+    ]
+  },
+  "dd6dbb7ee2da95519df5553fef9cc650": {
+    "operator": "AND",
+    "operands": [
+      "BCS402"
+    ]
+  },
+  "45997a50720224fdf19ac6aab890d051": {
+    "operator": "AND",
+    "operands": [
+      "BCS403"
+    ]
+  },
+  "22b487a118291f923761e2498a27fd9e": {
+    "operator": "AND",
+    "operands": [
+      "BCS404"
+    ]
+  },
+  "699c3238229510587d8c1fe529bd03ba": {
+    "operator": "AND",
+    "operands": [
+      "BCS405"
+    ]
+  },
+  "c77944b385b1498b90544d90718a6b8f": {
+    "operator": "AND",
+    "operands": [
+      "PLSH401"
+    ]
+  },
+  "d30469fec90ea9895b8456ce2bacb9a4": {
+    "operator": "AND",
+    "operands": [
+      "PLSH402"
+    ]
+  },
+  "59d8c376f7e78f8bbf1c401500ea1770": {
+    "operator": "AND",
+    "operands": [
+      "PLSH403"
+    ]
+  },
+  "d9df84f213cc0d608fa2aec90312fd63": {
+    "operator": "AND",
+    "operands": [
+      "PLSH404"
+    ]
+  },
+  "aeeb3125fe43d615115dc4623a1817d0": {
+    "operator": "AND",
+    "operands": [
+      "PLSH405"
+    ]
+  },
+  "582d305e18e78c00ea08c384f873eb05": {
+    "operator": "AND",
+    "operands": [
+      "HUNG404"
+    ]
+  },
+  "108a695f15a8404f76abaeb8c25393f5": {
+    "operator": "OR",
+    "operands": [
+      "HUNG401",
+      "LING101"
+    ]
+  },
+  "2eab634f591985f09588ade4af0b98e9": {
+    "operator": "AND",
+    "operands": [
+      "TURK101"
+    ]
+  },
+  "4a700b4a908cc069c11ff2726dc51c61": {
+    "operator": "AND",
+    "operands": [
+      "TURK102"
+    ]
+  },
+  "512460d5995917c8572a34bf6c61672e": {
+    "operator": "AND",
+    "operands": [
+      "TURK203"
+    ]
+  },
+  "cdee1ef98d0ac9ff9e3429bd4a6a12c9": {
+    "operator": "AND",
+    "operands": [
+      "TURK204"
+    ]
+  },
+  "b290e3b2bbe27f2fb88bee03431ccb90": {
+    "operator": "AND",
+    "operands": [
+      "UKRN401"
+    ]
+  },
+  "252147306d0ce852354e0e315226263d": {
+    "operator": "OR",
+    "operands": [
+      "GREK204",
+      "LATN204"
+    ]
+  },
+  "09e88830e0553643d74bf717730960f1": {
+    "operator": "OR",
+    "operands": [
+      "CLAR242",
+      "CLAR247"
+    ]
+  },
+  "ca3b24967f1d0c301a3d0c1f26b982f2": {
+    "operator": "OR",
+    "operands": [
+      "CLAR243",
+      "CLAR244"
+    ]
+  },
+  "1921bf653ec8ee9b4501a3541a381f44": {
+    "operator": "OR",
+    "operands": [
+      "CLAR2XX",
+      "CLAS2XX"
+    ]
+  },
+  "4b63a4e41e76df9236f3195609766d07": {
+    "operator": "OR",
+    "operands": [
+      "BCS404",
+      "CZCH404",
+      "DTCH404",
+      "GERM204",
+      "HUNG404",
+      "KAZH404",
+      "PLSH404",
+      "RUSS204",
+      "UKRN404"
+    ]
+  },
+  "09a8c567b41a2af73287a62784be24ea": {
+    "operator": "AND",
+    "operands": [
+      "ROML461"
+    ]
+  },
+  "52b21b1c159732e8f5e0fb33fd8bf0f8": {
+    "operator": "OR",
+    "operands": [
+      "BULG404",
+      "CZCH404",
+      "HUNG404",
+      "MACD404",
+      "PLSH404",
+      "BCS404"
+    ]
   }
 }
