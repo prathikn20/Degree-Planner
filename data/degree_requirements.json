@@ -3793,5 +3793,63 @@
         "choice_groups": []
       }
     }
+  },
+  "Philosophy_Politics_and_Economics_Minor": {
+    "base_requirements": {
+      "required_courses": [],
+      "choice_groups": [
+        {
+          "id": "ppe_gateway",
+          "description": "Gateway to Philosophy, Politics, and Economics",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["PHIL384", "POLI384", "ECON384"]
+        },
+        {
+          "id": "ppe_capstone",
+          "description": "Philosophy, Politics, and Economics: Capstone Course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["PHIL698", "POLI698", "ECON698"]
+        },
+        {
+          "id": "ppe_philosophy",
+          "description": "One philosophy course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "PHIL140", "PHIL157", "PHIL160", "PHIL163", "PHIL164", "PHIL165", 
+            "PHIL170", "PHIL265", "PHIL272", "PHIL273", "PHIL274", "PHIL276", 
+            "PHIL280", "PHIL364", "PHIL368", "PHIL370", "PLCY71", "PLCY340"
+          ]
+        },
+        {
+          "id": "ppe_political_science",
+          "description": "One political science course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "PLCY101", "PWAD101", "PLCY220", "PWAD220", "PLCY352H", 
+            "POLI130", "POLI270", "POLI271", "POLI280", "POLI288", 
+            "POLI401", "POLI442", "POLI470", "POLI472", "POLI474", "POLI478"
+          ]
+        },
+        {
+          "id": "ppe_economics",
+          "description": "One economics course",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "ECON101", "ECON411", "ECON434", "ECON460", "ECON510", "ECON511"
+          ]
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
   }
 }
