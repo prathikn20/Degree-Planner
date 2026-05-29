@@ -119,9 +119,12 @@ def run_pipeline(
 
     planned  = list(planned_courses or [])
     avoid    = list(avoid_courses   or [])
-    # Deduplicate while preserving order; planned courses sit at the end so they
-    # are clearly distinguishable from the transcript in the returned data.
-    assumed  = list(dict.fromkeys(completed + in_progress + planned))
+    assumed  = list(dict.fromkeys(completed + in_progress))
+
+    # Planned courses are treated like explicit swap requests: they are
+    # prioritised by the greedy selector and appear in the graduation path
+    # rather than being counted as already completed.
+    _all_requested = list(dict.fromkeys(list(explicitly_requested or []) + planned))
 
     # Pass 1 — requirements audit (each program uses its own consumption pool so
     # cross-program double-dipping is structurally allowed at the checker level).
@@ -140,7 +143,7 @@ def run_pipeline(
     selections = select_courses_globally(
         results_by_track, requirements, catalog, assumed,
         majors_to_check, avoid_courses=avoid,
-        explicitly_requested=explicitly_requested,
+        explicitly_requested=_all_requested,
     )
 
     audit: dict[str, dict] = {}
@@ -477,6 +480,8 @@ with st.sidebar:
                 options=minor_tracks,
                 format_func=fmt,
                 key="minor1",
+                index=None,
+                placeholder="Choose your minor…",
                 label_visibility="collapsed",
             )
 
@@ -494,12 +499,12 @@ with st.sidebar:
             add_minor2 = add_minor2_raw and not second_minor_blocked
 
             if add_minor2:
-                default_m2 = 1 if len(minor_tracks) > 1 else 0
                 minor2 = st.selectbox(
                     "Second Minor",
                     options=minor_tracks,
                     format_func=fmt,
-                    index=default_m2,
+                    index=None,
+                    placeholder="Choose your minor…",
                     key="minor2",
                     label_visibility="collapsed",
                 )
@@ -656,7 +661,7 @@ if uploaded is not None:
     mc1.metric("Courses Completed",   len(completed))
     mc2.metric("Courses In-Progress", len(in_progress))
     mc3.metric(
-        "Planned (What-If)",
+        "Planned (Pinned to Path)",
         len(planned),
         delta=f"+{planned_credits} cr" if planned else None,
         delta_color="normal",
@@ -675,33 +680,34 @@ if uploaded is not None:
                 st.markdown(f"- **{c}** — {name} ({cr} cr)")
 
     if planned:
-        # Build impact map: which requirements does each planned course fulfill?
-        planned_impact: dict[str, list[tuple[str, str]]] = {}
+        # Build impact map from the audit fulfillment maps (available here before path table).
+        _planned_impact: dict[str, list[str]] = {}
         for m in majors_to_check:
-            if m["track"] not in audit:
+            _tr = m["track"]
+            if _tr not in audit:
                 continue
-            sat_map = audit[m["track"]]["results"].get("satisfied_map", {})
-            for req_id, courses in sat_map.items():
-                for c in courses:
-                    if c in set(planned):
-                        planned_impact.setdefault(c, []).append((fmt(m["track"]), req_id))
+            _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
+            for _c, _desc in audit[_tr].get("fulfillment_map", {}).items():
+                if _c in set(planned):
+                    _planned_impact.setdefault(_c, []).append(f"{_plbl}: {_desc}")
 
-        with st.expander(f"🔮 Planned Courses Impact ({len(planned)})", expanded=True):
-            st.caption("Simulated as completed. Shows which requirements each planned course fulfills.")
+        with st.expander(f"📌 Planned Courses in Path ({len(planned)})", expanded=True):
+            st.caption(
+                "These courses are prioritised in your graduation path and marked 📌. "
+                "They will appear in the route above."
+            )
+            _path_planned_set = set(path)
             for c in planned:
                 name    = catalog.get(c, {}).get("name", "Unknown course")
                 cr      = catalog.get(c, {}).get("credits", "?")
-                impacts = planned_impact.get(c, [])
+                in_path = c in _path_planned_set
+                impacts = _planned_impact.get(c, [])
+                status  = "✅ in path" if in_path else "⚠️ not schedulable yet (prereqs missing)"
                 if impacts:
-                    impact_str = " &nbsp;·&nbsp; ".join(
-                        f"**{track}** → `{req}`" for track, req in impacts
-                    )
-                    st.markdown(f"- **{c}** — {name} ({cr} cr) → {impact_str}")
+                    impact_str = " &nbsp;·&nbsp; ".join(impacts)
+                    st.markdown(f"- **{c}** — {name} ({cr} cr) · {status} → {impact_str}")
                 else:
-                    st.markdown(
-                        f"- **{c}** — {name} ({cr} cr) "
-                        f"_(satisfies no currently-tracked requirement)_"
-                    )
+                    st.markdown(f"- **{c}** — {name} ({cr} cr) · {status}")
 
     st.divider()
 
@@ -787,7 +793,7 @@ if uploaded is not None:
     st.subheader("📅 Suggested Graduation Path")
 
     path_credits    = sum(catalog.get(c, {}).get("credits", 3) for c in path)
-    total_projected = total_parsed_credits + planned_credits + path_credits
+    total_projected = total_parsed_credits + path_credits
 
     if path:
         unknown_in_path = [c for c in path if c not in catalog]
@@ -807,7 +813,8 @@ if uploaded is not None:
                     _course_fulfillment.setdefault(_c, []).append(f"{_plabel}: {_desc}")
 
         # For prerequisites that unlock path courses, label them accordingly
-        _assumed_set = set(completed + in_progress + planned)
+        _assumed_set = set(completed + in_progress)
+        _planned_set = set(planned)
         _prereq_for: dict[str, list[str]] = {}
         for _course in path:
             _pathways = catalog.get(_course, {}).get("prerequisites", [])
@@ -830,7 +837,11 @@ if uploaded is not None:
         rows = [
             {
                 "#":       i,
-                "Course":  f"🔄 {course}" if course in _user_swaps else course,
+                "Course":  (
+                    f"🔄 {course}" if course in _user_swaps
+                    else f"📌 {course}" if course in _planned_set
+                    else course
+                ),
                 "Name":    catalog.get(course, {}).get("name", "—"),
                 "Credits": catalog.get(course, {}).get("credits", 3),
                 "Fulfills": _fulfills_label(course),
@@ -1016,13 +1027,59 @@ if uploaded is not None:
                     f"🔒 **No alternatives:** {', '.join(_ns_items)}{_ns_more}"
                 )
 
+        # ── Exclude a Course ───────────────────────────────────────────────────
+        with st.expander("⛔ Exclude a Course", expanded=False):
+            st.caption(
+                "Remove a course from the path entirely. The path will recalculate without it. "
+                "To undo, remove it from **Courses to Avoid** in the sidebar."
+            )
+
+            def _excl_label(c: str) -> str:
+                name   = catalog.get(c, {}).get("name", "")
+                cr     = catalog.get(c, {}).get("credits", 3)
+                spaced = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', c)
+                return f"{spaced} ({cr} cr) — {name[:40]}" if name else f"{spaced} ({cr} cr)"
+
+            _excludable = [c for c in path if c not in set(avoid_courses)]
+            _excl_pick = st.selectbox(
+                "Select a course to exclude",
+                options=_excludable,
+                format_func=_excl_label,
+                key="excl_selectbox",
+                index=None,
+                placeholder="Choose a course to exclude…",
+            )
+
+            if _excl_pick is not None:
+                _excl_name = catalog.get(_excl_pick, {}).get("name", "")
+                st.info(f"**{_excl_pick}** — {_excl_name} will be removed from the path.")
+
+                def _do_exclude() -> None:
+                    val = st.session_state.get("excl_selectbox")
+                    if not val:
+                        return
+                    course_id = val if isinstance(val, str) else val.get("Course")
+                    if not course_id:
+                        return
+                    cur_avoid = list(st.session_state.get("avoid_courses", []))
+                    if course_id not in cur_avoid:
+                        cur_avoid.append(course_id)
+                    st.session_state["avoid_courses"] = cur_avoid
+                    st.session_state.pop("excl_selectbox", None)
+
+                st.button(
+                    "⛔ Confirm Exclude", key="execute_excl_btn",
+                    type="primary", use_container_width=True,
+                    on_click=_do_exclude,
+                )
+
         # ── Export CSV ─────────────────────────────────────────────────────────
         csv_buf = io.StringIO()
         csv_buf.write("Course Code,Course Name,Credits,Fulfills\n")
         for row in rows:
             name_escaped     = row["Name"].replace('"', '""')
             fulfills_escaped = row["Fulfills"].replace('"', '""')
-            raw_code = row["Course"].lstrip("🔄 ")
+            raw_code = _re.sub(r'^[🔄📌]\s*', '', row["Course"])
             csv_buf.write(f'"{raw_code}","{name_escaped}",{row["Credits"]},"{fulfills_escaped}"\n')
 
         st.download_button(
@@ -1064,7 +1121,6 @@ if uploaded is not None:
     st.caption(
         f"Parsed: **{total_parsed_credits}** cr &nbsp;·&nbsp; "
         f"Path: **{path_credits}** cr &nbsp;·&nbsp; "
-        f"Planned (What-If): **{planned_credits}** cr &nbsp;·&nbsp; "
         f"Projected total: **{total_projected}** cr"
     )
     if total_projected < UNC_MIN_CREDITS:
