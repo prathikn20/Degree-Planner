@@ -87,6 +87,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
     completed_set    = set(completed)
     avoid_set        = set(avoid_courses) if avoid_courses else set()
     remaining        = []
+    fulfillment_map: dict[str, str] = {}
     # Tracks courses already assigned to a group within this program so the
     # same course cannot fill two choice-group slots in the same major.
     # Scoped per call, so inter-major double-dipping (e.g. STOR415 counting
@@ -95,7 +96,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
 
     track_data = requirements.get(track_id, {})
     if not track_data:
-        return remaining
+        return remaining, fulfillment_map
 
     base = track_data.get("base_requirements", {})
     conc = track_data.get("concentrations", {}).get(concentration_id, {})
@@ -109,6 +110,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
         if course in results["unsatisfied"]:
             remaining.append(course)
             consumed_by_path.add(course)
+            fulfillment_map[course] = "Required Course"
 
     for group in program.get("choice_groups", []):
         if group["id"] not in results["unsatisfied"]:
@@ -116,6 +118,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
 
         group_info = results["missing_courses"][group["id"]]
         options = group_info["options"]
+        group_desc = group.get("description") or group["id"]
 
         sorted_options = sorted(
             [c for c in options if c not in avoid_set and c not in consumed_by_path],
@@ -130,6 +133,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
                     break
                 remaining.append(opt)
                 consumed_by_path.add(opt)
+                fulfillment_map[opt] = group_desc
                 current_credits += catalog.get(opt, {}).get("credits", 3)
 
         else:
@@ -137,8 +141,10 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
             chosen = sorted_options[:courses_needed]
             remaining.extend(chosen)
             consumed_by_path.update(chosen)
+            for c in chosen:
+                fulfillment_map[c] = group_desc
 
-    return remaining
+    return remaining, fulfillment_map
 def compute_in_degrees(graph):
     in_degree = {course: 0 for course in graph}
     for course in graph:
@@ -146,8 +152,20 @@ def compute_in_degrees(graph):
             in_degree[neighbor] += 1
     return in_degree
 
-def kahns_algorithm(graph, catalog, completed, required_courses):
-    completed_set = set(completed)
+def kahns_algorithm(graph, catalog, completed, required_courses, remaining_per_track=None):
+    """
+    Topological sort with two-level priority:
+      1. Courses satisfying more distinct programs are processed first (inter-major
+         overlaps get scheduled early, minimising total courses needed).
+      2. Among equal program-count ties, lower course number wins (lower-level
+         courses tend to be prerequisites and should come first).
+
+    *remaining_per_track* maps track_id → set(course_ids) as returned by the
+    path-generation loop in run_pipeline.  Pass None to fall back to number-only
+    ordering (used by the CLI in main.py).
+    """
+    completed_set   = set(completed)
+    _track_sets     = list((remaining_per_track or {}).values())
 
     all_needed = expand_prerequisites(required_courses, catalog, completed_set)
 
@@ -157,28 +175,31 @@ def kahns_algorithm(graph, catalog, completed, required_courses):
         if course in all_needed
     }
 
-    topo_queue = []
-    enqueued = set()
-    
+    def _key(course: str) -> tuple:
+        match   = re.search(r'\d+', course)
+        num     = int(match.group()) if match else 9999
+        n_progs = sum(1 for s in _track_sets if course in s)
+        # Negate so more programs → lower heap value → higher priority
+        return (-n_progs, num, course)
+
+    topo_queue: list = []
+    enqueued:   set  = set()
+
     for course in all_needed:
         if is_available(course, catalog, completed_set):
-            match = re.search(r'\d+', course)
-            priority = int(match.group()) if match else 999
-            heapq.heappush(topo_queue, (priority, course))
+            heapq.heappush(topo_queue, _key(course))
             enqueued.add(course)
 
-    result = []
+    result: list[str] = []
 
     while topo_queue:
-        priority, course = heapq.heappop(topo_queue)
+        _, _, course = heapq.heappop(topo_queue)
         result.append(course)
         completed_set.add(course)
 
         for neighbor in filtered_graph.get(course, []):
             if neighbor not in result and neighbor not in enqueued and is_available(neighbor, catalog, completed_set):
-                match = re.search(r'\d+', neighbor)
-                n_priority = int(match.group()) if match else 999
-                heapq.heappush(topo_queue, (n_priority, neighbor))
+                heapq.heappush(topo_queue, _key(neighbor))
                 enqueued.add(neighbor)
 
     if len(result) < len(all_needed):
