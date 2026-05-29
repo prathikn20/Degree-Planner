@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from planner.requirements_checker import check_requirements
+from src.planner.requirements_checker import check_requirements
 
 CATALOG = {
     "STOR120": {"name": "Chance and Data", "credits": 3, "prerequisites": [], "cross_listed": [], "attributes": []},

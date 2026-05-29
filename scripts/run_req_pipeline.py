@@ -1,13 +1,17 @@
 import json
 import logging
 import os
+import sys
 import time
 import hashlib
 import re
 
-from scraper.req_scraper import scrape_major_requirements
-from scraper.req_assembler import assemble_section
-from scraper.llm_req_parser import parse_rule_text
+# Allow running as `python scripts/run_req_pipeline.py` from the project root
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.scraper.req_scraper import scrape_major_requirements
+from src.scraper.req_assembler import assemble_section
+from src.scraper.llm_req_parser import parse_rule_text
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -20,7 +24,7 @@ TARGET_TRACKS = {
 
 OUTPUT_PATH = "data/degree_requirements.json"
 req_cache_PATH = "data/req_cache.json"
-REVIEW_LOG_PATH = "data/req_review.log"
+REVIEW_LOG_PATH = "logs/req_review.log"
 MODEL_NAME = "qwen2.5:14b"
 
 

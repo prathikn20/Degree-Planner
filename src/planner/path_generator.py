@@ -1,7 +1,7 @@
 from collections import deque
 import heapq
 import re
-from planner.graph import is_available
+from src.planner.graph import is_available
 
 def get_prereq_depth(course, catalog, completed_set):
     if course not in catalog:
