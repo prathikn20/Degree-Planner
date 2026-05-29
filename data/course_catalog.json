@@ -1605,7 +1605,6 @@
     "credits": 3.0,
     "prerequisites": [
       [
-        "COMP755",
         "COMP311",
         "COMP562",
         "COMP301"
@@ -1613,7 +1612,6 @@
       [
         "COMP311",
         "STOR565",
-        "COMP562",
         "COMP301"
       ]
     ],
