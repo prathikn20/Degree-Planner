@@ -28732,7 +28732,23 @@
   "BUSI403": {
     "name": "Operations Management",
     "credits": 3.0,
-    "prerequisites": [],
+    "prerequisites": [
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR155"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "DATA110"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR120"
+      ]
+    ],
     "corequisites": [],
     "cross_listed": [],
     "attributes": []
@@ -28758,7 +28774,23 @@
   "BUSI406": {
     "name": "Marketing",
     "credits": 3.0,
-    "prerequisites": [],
+    "prerequisites": [
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR155"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "DATA110"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR120"
+      ]
+    ],
     "corequisites": [],
     "cross_listed": [],
     "attributes": []
@@ -28776,7 +28808,19 @@
     "credits": 3.0,
     "prerequisites": [
       [
-        "ECON101"
+        "BUSI100",
+        "ECON101",
+        "STOR155"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "DATA110"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR120"
       ]
     ],
     "corequisites": [],
@@ -28810,7 +28854,23 @@
   "BUSI411": {
     "name": "Strategy I: Competitive Strategy",
     "credits": 1.5,
-    "prerequisites": [],
+    "prerequisites": [
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR155"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "DATA110"
+      ],
+      [
+        "BUSI100",
+        "ECON101",
+        "STOR120"
+      ]
+    ],
     "corequisites": [],
     "cross_listed": [],
     "attributes": []
