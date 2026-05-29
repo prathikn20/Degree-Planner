@@ -386,23 +386,25 @@ with st.sidebar:
         options=major_tracks,
         format_func=fmt,
         key="major1",
+        index=None,
+        placeholder="Choose your major…",
         label_visibility="collapsed",
     )
-    conc1 = _concentration_widget(requirements, major1, key="conc1")
+    conc1 = _concentration_widget(requirements, major1, key="conc1") if major1 else "None"
 
     dual = st.toggle("Add Second Major", key="dual")
     major2, conc2 = None, None
     if dual:
-        default_idx = 1 if len(major_tracks) > 1 else 0
         major2 = st.selectbox(
             "Second Major",
             options=major_tracks,
             format_func=fmt,
-            index=default_idx,
+            index=None,
+            placeholder="Choose your second major…",
             key="major2",
             label_visibility="collapsed",
         )
-        conc2 = _concentration_widget(requirements, major2, key="conc2")
+        conc2 = _concentration_widget(requirements, major2, key="conc2") if major2 else "None"
         if major2 == major1 and conc2 == conc1:
             st.warning("Primary and second major are identical — select different programs.")
             dual, major2, conc2 = False, None, None
@@ -544,7 +546,9 @@ with st.sidebar:
 
 
 # ── Build generic majors_to_check list (drives all pipeline + UI) ─────────────
-majors_to_check: list[dict] = [{"track": major1, "concentration": conc1}]
+majors_to_check: list[dict] = []
+if major1:
+    majors_to_check.append({"track": major1, "concentration": conc1})
 if dual and major2:
     majors_to_check.append({"track": major2, "concentration": conc2})
 if add_minor1 and minor1:
@@ -557,8 +561,16 @@ majors_to_check.append({"track": GEN_ED_TRACK, "concentration": "None"})
 
 # ── Main area ──────────────────────────────────────────────────────────────────
 st.title("🐏 UNC Tar Heel Tracker Degree Planner")
-degree_label = " + ".join(fmt(m["track"]) for m in majors_to_check if m["track"] != GEN_ED_TRACK)
-st.caption(f"Auditing: **{degree_label}** + UNC General Education — upload your Tar Heel Tracker PDF below.")
+_real_majors = [m for m in majors_to_check if m["track"] != GEN_ED_TRACK]
+degree_label = " + ".join(fmt(m["track"]) for m in _real_majors)
+if degree_label:
+    st.caption(f"Auditing: **{degree_label}** + UNC General Education — upload your Tar Heel Tracker PDF below.")
+else:
+    st.caption("Select a major in the sidebar to get started.")
+
+if not _real_majors:
+    st.info("👈 Choose at least one major in the sidebar, then upload your Tar Heel Tracker PDF.")
+    st.stop()
 
 uploaded = st.file_uploader(
     "Upload Tar Heel Tracker PDF",
@@ -568,6 +580,7 @@ uploaded = st.file_uploader(
 
 if uploaded is not None:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+        uploaded.seek(0)
         tmp.write(uploaded.read())
         tmp_path = tmp.name
 
@@ -780,7 +793,48 @@ if uploaded is not None:
             }
             for i, course in enumerate(path, 1)
         ]
-        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        _path_df = pd.DataFrame(rows)
+        _html_table = _path_df.to_html(index=False, escape=False)
+        # Replace the plain <table> tag with our styled class
+        _html_table = _html_table.replace('<table border="1" class="dataframe">', '<table class="grad-table">')
+        st.markdown(
+            f"""
+<div style="overflow-x: auto; max-width: 100%;">
+  <style>
+    .grad-table {{
+      width: max-content;
+      min-width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }}
+    .grad-table th {{
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 2px solid rgba(128,128,128,0.3);
+      white-space: nowrap;
+    }}
+    .grad-table td {{
+      text-align: left;
+      padding: 8px 14px;
+      border-bottom: 1px solid rgba(128,128,128,0.15);
+      word-wrap: break-word;
+      white-space: normal;
+      max-width: 480px;
+    }}
+    .grad-table td:nth-child(1),
+    .grad-table td:nth-child(3),
+    .grad-table td:nth-child(4) {{
+      white-space: nowrap;
+    }}
+    .grad-table tr:hover td {{
+      background: rgba(128,128,128,0.08);
+    }}
+  </style>
+  {_html_table}
+</div>
+""",
+            unsafe_allow_html=True,
+        )
         st.caption(f"Remaining path credits: **{path_credits}**")
         if unknown_in_path:
             st.warning(
@@ -819,25 +873,29 @@ if uploaded is not None:
                         options=_swappable,
                         format_func=_clabel,
                         key="swap_out_select",
+                        index=None,
+                        placeholder="Choose a course to swap out…",
                     )
 
                 _alternatives = _alt_map.get(_swap_out, {}).get("alternatives", []) if _swap_out else []
                 _req_desc     = _alt_map.get(_swap_out, {}).get("desc", "")           if _swap_out else ""
 
                 with _sc2:
-                    if _swap_out and _alternatives:
+                    if _swap_out is not None and _alternatives:
                         _swap_in = st.selectbox(
                             "Replace with",
                             options=_alternatives,
                             format_func=_clabel,
                             key="swap_in_select",
+                            index=None,
+                            placeholder="Choose a replacement…",
                             help=f"Satisfies: {_req_desc}",
                         )
                     else:
                         st.selectbox("Replace with", options=[], key="swap_in_select", disabled=True)
                         _swap_in = None
 
-                if _swap_out and _swap_in:
+                if _swap_out is not None and _swap_in is not None:
                     _out_cr   = catalog.get(_swap_out, {}).get("credits", 3)
                     _in_cr    = catalog.get(_swap_in,  {}).get("credits", 3)
                     _cr_delta = _in_cr - _out_cr
@@ -863,22 +921,26 @@ if uploaded is not None:
                             f"— these will be added to your graduation path automatically."
                         )
 
-                    if st.button(
-                        "🔄 Execute Swap", key="execute_swap_btn",
-                        type="primary", use_container_width=True,
-                    ):
-                        _cur_avoid   = list(st.session_state.get("avoid_courses",   []))
-                        _cur_planned = list(st.session_state.get("planned_courses", []))
-                        if _swap_out not in _cur_avoid:
-                            _cur_avoid.append(_swap_out)
-                        if _swap_in not in _cur_planned:
-                            _cur_planned.append(_swap_in)
-                        st.session_state["avoid_courses"]   = _cur_avoid
-                        st.session_state["planned_courses"] = _cur_planned
-                        # Reset selectboxes so they don't hold stale values after rerun
+                    def _do_swap(swap_out: str, swap_in: str) -> None:
+                        if not swap_out or not swap_in:
+                            return
+                        cur_avoid   = list(st.session_state.get("avoid_courses",   []))
+                        cur_planned = list(st.session_state.get("planned_courses", []))
+                        if swap_out not in cur_avoid:
+                            cur_avoid.append(swap_out)
+                        if swap_in not in cur_planned:
+                            cur_planned.append(swap_in)
+                        st.session_state["avoid_courses"]   = cur_avoid
+                        st.session_state["planned_courses"] = cur_planned
                         st.session_state.pop("swap_out_select", None)
                         st.session_state.pop("swap_in_select",  None)
-                        st.rerun()
+
+                    st.button(
+                        "🔄 Execute Swap", key="execute_swap_btn",
+                        type="primary", use_container_width=True,
+                        on_click=_do_swap,
+                        args=(_swap_out, _swap_in),
+                    )
 
             if _non_swappable:
                 _ns_items = _non_swappable[:10]
