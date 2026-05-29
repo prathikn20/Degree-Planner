@@ -102,7 +102,7 @@ def main():
         )
         print_requirement_status(results, f"{track} (Concentration: {conc})")
 
-        remaining = get_remaining_courses(
+        remaining, _ = get_remaining_courses(
             results, requirements, catalog, assumed_completed,
             track_id=track, concentration_id=conc
         )

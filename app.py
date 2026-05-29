@@ -11,7 +11,7 @@ import streamlit as st
 
 from src.planner.graph import build_graph, load_catalog, load_requirements
 from src.planner.path_generator import get_remaining_courses, kahns_algorithm
-from src.planner.requirements_checker import check_requirements
+from src.planner.requirements_checker import check_requirements, get_rule_based_options
 from src.planner.tracker_parser import parse_tarheel_tracker
 
 CATALOG_PATH      = "data/course_catalog.json"
@@ -79,46 +79,29 @@ def run_pipeline(
     # are clearly distinguishable from the transcript in the returned data.
     assumed  = list(dict.fromkeys(completed + in_progress + planned))
 
-    # Pass 1 — each program in isolation to establish its course footprint
-    baseline: dict[str, set] = {}
-    for m in majors_to_check:
-        res = check_requirements(
-            requirements, catalog, assumed,
-            other_majors_courses=set(),
-            avoid_courses=avoid,
-            track_id=m["track"], concentration_id=m["concentration"],
-        )
-        baseline[m["track"]] = res.get("courses_used", set())
-
-    # Pass 2 — full cross-dip / pre-flight / deficit-routing audit
+    # Single pass per program — cross-program double-dipping is fully allowed.
+    # Each check_requirements call gets its own consumption pool (available_completed),
+    # so a course can satisfy requirements in CS BS AND Data BS simultaneously.
+    # Intra-program dedup is handled inside check_requirements (discard) and
+    # get_remaining_courses (consumed_by_path).
     audit: dict[str, dict] = {}
     all_remaining: set[str] = set()
 
     for m in majors_to_check:
         track, conc = m["track"], m["concentration"]
 
-        other_pool:     set[str] = set()
-        other_required: set[str] = set()
-        for other_track, courses in baseline.items():
-            if other_track != track:
-                other_pool.update(courses)
-                other_base = requirements.get(other_track, {}).get("base_requirements", {})
-                other_required.update(other_base.get("required_courses", []))
-
         results = check_requirements(
             requirements, catalog, assumed,
-            other_majors_courses=other_pool,
-            other_required_courses=other_required,
             avoid_courses=avoid,
             track_id=track, concentration_id=conc,
         )
-        remaining = get_remaining_courses(
+        remaining, fulfillment_map = get_remaining_courses(
             results, requirements, catalog, assumed,
             avoid_courses=avoid,
             track_id=track, concentration_id=conc,
         )
 
-        audit[track] = {"results": results, "remaining": remaining}
+        audit[track] = {"results": results, "remaining": remaining, "fulfillment_map": fulfillment_map}
         all_remaining.update(remaining)
 
     # UNC rule: a student may only enroll in 1 FY-SEMINAR course ever.
@@ -134,7 +117,10 @@ def run_pipeline(
     for _extra_fy in _fy_in_remaining[1:]:
         all_remaining.discard(_extra_fy)
 
-    path = kahns_algorithm(graph, catalog, assumed, list(all_remaining))
+    # Build per-track sets so Kahn's can prioritise courses that satisfy the
+    # most distinct programs (inter-major overlaps get scheduled first).
+    remaining_per_track = {track: set(data["remaining"]) for track, data in audit.items()}
+    path = kahns_algorithm(graph, catalog, assumed, list(all_remaining), remaining_per_track=remaining_per_track)
 
     return {
         "completed":   completed,
@@ -278,6 +264,89 @@ def render_audit(
                     st.markdown(f"- ❌ {_req_header(req_id)}{rec_part}{alt_part}")
         else:
             st.success("All requirements are satisfied!")
+
+
+# ── Swap-course alternatives builder ──────────────────────────────────────────
+
+def build_alternatives_map(
+    path: list[str],
+    audit: dict,
+    requirements: dict,
+    majors_to_check: list[dict],
+    catalog: dict,
+    assumed_set: set[str],
+    avoid_set: set[str],
+) -> dict[str, dict]:
+    """
+    For every course in *path*, return a dict:
+      course → {
+          "desc":         human requirement label (or "Required Course" / "Prerequisite"),
+          "track":        track_id that owns this slot (str | None),
+          "alternatives": [course_id, ...] — valid swaps (empty if non-swappable),
+      }
+
+    A course is swappable iff it fills a *choice group* slot and at least one
+    other option in that group is not already assumed, avoided, or in the path.
+    """
+    path_set = set(path)
+    result: dict[str, dict] = {}
+
+    for course in path:
+        if course in result:
+            continue
+
+        found = False
+        for m in majors_to_check:
+            track = m["track"]
+            conc  = m["concentration"]
+            fm    = audit.get(track, {}).get("fulfillment_map", {})
+            if course not in fm:
+                continue
+
+            desc = fm[course]
+            found = True
+
+            if desc == "Required Course":
+                result[course] = {"desc": desc, "track": track, "alternatives": []}
+                break
+
+            # Locate the choice group by matching its description/id label
+            track_req  = requirements.get(track, {})
+            base       = track_req.get("base_requirements", {})
+            conc_data  = track_req.get("concentrations", {}).get(conc, {})
+            all_groups = base.get("choice_groups", []) + conc_data.get("choice_groups", [])
+
+            for group in all_groups:
+                g_desc = group.get("description") or group["id"]
+                if g_desc != desc:
+                    continue
+
+                if group.get("options"):
+                    full_options = list(group["options"])
+                elif group.get("type") == "rule_based":
+                    full_options = get_rule_based_options(group.get("rule", {}), catalog)
+                else:
+                    full_options = []
+
+                alternatives = [
+                    o for o in full_options
+                    if o not in assumed_set
+                    and o not in avoid_set
+                    and o not in path_set
+                    and o != course
+                    and o in catalog
+                ]
+                result[course] = {
+                    "desc": desc, "track": track, "alternatives": alternatives,
+                }
+                break
+            break
+
+        if not found:
+            # Pure prerequisite — mechanically required, no swap concept
+            result[course] = {"desc": "Prerequisite", "track": None, "alternatives": []}
+
+    return result
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -662,7 +731,7 @@ if uploaded is not None:
         unknown_in_path = [c for c in path if c not in catalog]
 
         # ── Course table ───────────────────────────────────────────────────────
-        # Build course → fulfillment label (which requirement it satisfies)
+        # Build course → fulfillment label using the map returned by get_remaining_courses
         _path_set = set(path)
         _course_fulfillment: dict[str, list[str]] = {}
 
@@ -670,30 +739,10 @@ if uploaded is not None:
             _track = _m["track"]
             if _track not in audit:
                 continue
-            _missing = audit[_track]["results"].get("missing_courses", {})
-            _mprog   = requirements.get(_track, {})
-            _mbase   = _mprog.get("base_requirements", {})
-            _mconc   = _mprog.get("concentrations", {}).get(_m["concentration"], {})
-            _req_desc: dict[str, str] = {}
-            for _grp in _mbase.get("choice_groups", []) + _mconc.get("choice_groups", []):
-                _req_desc[_grp["id"]] = _grp.get("description", _grp["id"])
-
             _plabel = "Gen Ed" if _track == GEN_ED_TRACK else fmt(_track)
-
-            for _req_id, _details in _missing.items():
-                if isinstance(_details, list):
-                    for _c in _details:
-                        if _c in _path_set:
-                            _course_fulfillment.setdefault(_c, []).append(
-                                f"{_plabel}: Required Course"
-                            )
-                else:
-                    _desc = _req_desc.get(_req_id, _req_id)
-                    for _c in _details.get("options", []):
-                        if _c in _path_set:
-                            _course_fulfillment.setdefault(_c, []).append(
-                                f"{_plabel}: {_desc}"
-                            )
+            for _c, _desc in audit[_track].get("fulfillment_map", {}).items():
+                if _c in _path_set:
+                    _course_fulfillment.setdefault(_c, []).append(f"{_plabel}: {_desc}")
 
         # For prerequisites that unlock path courses, label them accordingly
         _assumed_set = set(completed + in_progress + planned)
@@ -732,6 +781,105 @@ if uploaded is not None:
                 f"⚠️ {len(unknown_in_path)} course(s) in the path are not in the catalog "
                 f"and assumed 3 credits: {', '.join(unknown_in_path)}"
             )
+
+        # ── Swap a Course ──────────────────────────────────────────────────────
+        _avoid_set_swap = set(avoid_courses)
+        _alt_map = build_alternatives_map(
+            path, audit, requirements, majors_to_check,
+            catalog, _assumed_set, _avoid_set_swap,
+        )
+        _swappable     = [c for c in path if _alt_map.get(c, {}).get("alternatives")]
+        _non_swappable = [c for c in path if not _alt_map.get(c, {}).get("alternatives")]
+
+        with st.expander("🔄 Swap a Course", expanded=False):
+            st.caption(
+                "Replace a recommended course with a valid alternative that satisfies the same "
+                "requirement. The swapped-out course is blocked from future recommendations; "
+                "the replacement is treated as a planned course."
+            )
+            if not _swappable:
+                st.info("Every course in the current path is required with no valid alternatives.")
+            else:
+                def _clabel(c: str) -> str:
+                    name   = catalog.get(c, {}).get("name", "")
+                    cr     = catalog.get(c, {}).get("credits", 3)
+                    spaced = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', c)
+                    return f"{spaced} ({cr} cr) — {name[:40]}" if name else f"{spaced} ({cr} cr)"
+
+                _sc1, _sc2 = st.columns(2)
+                with _sc1:
+                    _swap_out = st.selectbox(
+                        "Course to swap out",
+                        options=_swappable,
+                        format_func=_clabel,
+                        key="swap_out_select",
+                    )
+
+                _alternatives = _alt_map.get(_swap_out, {}).get("alternatives", []) if _swap_out else []
+                _req_desc     = _alt_map.get(_swap_out, {}).get("desc", "")           if _swap_out else ""
+
+                with _sc2:
+                    if _swap_out and _alternatives:
+                        _swap_in = st.selectbox(
+                            "Replace with",
+                            options=_alternatives,
+                            format_func=_clabel,
+                            key="swap_in_select",
+                            help=f"Satisfies: {_req_desc}",
+                        )
+                    else:
+                        st.selectbox("Replace with", options=[], key="swap_in_select", disabled=True)
+                        _swap_in = None
+
+                if _swap_out and _swap_in:
+                    _out_cr   = catalog.get(_swap_out, {}).get("credits", 3)
+                    _in_cr    = catalog.get(_swap_in,  {}).get("credits", 3)
+                    _cr_delta = _in_cr - _out_cr
+                    _cr_note  = (
+                        f" &nbsp;·&nbsp; Credits: {_out_cr} → {_in_cr} "
+                        + (f"(+{_cr_delta})" if _cr_delta > 0 else f"({_cr_delta})")
+                    ) if _cr_delta != 0 else ""
+
+                    # Prerequisite check for the incoming course
+                    _in_prereqs     = catalog.get(_swap_in, {}).get("prerequisites", [])
+                    _missing_prereqs: list[str] = []
+                    if _in_prereqs:
+                        _best_pp = min(_in_prereqs, key=len)
+                        _missing_prereqs = [p for p in _best_pp if p not in _assumed_set]
+
+                    st.info(
+                        f"**{_swap_out}** → **{_swap_in}** &nbsp;·&nbsp; "
+                        f"Satisfies: *{_req_desc}*{_cr_note}"
+                    )
+                    if _missing_prereqs:
+                        st.warning(
+                            f"⚠️ **{_swap_in}** requires {', '.join(_missing_prereqs)} "
+                            f"— these will be added to your graduation path automatically."
+                        )
+
+                    if st.button(
+                        "🔄 Execute Swap", key="execute_swap_btn",
+                        type="primary", use_container_width=True,
+                    ):
+                        _cur_avoid   = list(st.session_state.get("avoid_courses",   []))
+                        _cur_planned = list(st.session_state.get("planned_courses", []))
+                        if _swap_out not in _cur_avoid:
+                            _cur_avoid.append(_swap_out)
+                        if _swap_in not in _cur_planned:
+                            _cur_planned.append(_swap_in)
+                        st.session_state["avoid_courses"]   = _cur_avoid
+                        st.session_state["planned_courses"] = _cur_planned
+                        # Reset selectboxes so they don't hold stale values after rerun
+                        st.session_state.pop("swap_out_select", None)
+                        st.session_state.pop("swap_in_select",  None)
+                        st.rerun()
+
+            if _non_swappable:
+                _ns_items = _non_swappable[:10]
+                _ns_more  = f" (+{len(_non_swappable) - 10} more)" if len(_non_swappable) > 10 else ""
+                st.caption(
+                    f"🔒 **No alternatives:** {', '.join(_ns_items)}{_ns_more}"
+                )
 
         # ── Export CSV ─────────────────────────────────────────────────────────
         csv_buf = io.StringIO()
