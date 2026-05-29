@@ -6824,7 +6824,7 @@
   "BIOL692H": {
     "name": "Senior Honors Thesis in Biology",
     "credits": 3,
-    "prerequisites": [],
+    "prerequisites": ["BIOL701"],
     "corequisites": [],
     "cross_listed": [],
     "attributes": ["RESEARCH", "COMM"]
