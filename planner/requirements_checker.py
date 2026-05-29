@@ -85,7 +85,16 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
             if equiv not in original_completed:
                 virtual_to_real[equiv] = c
 
-    results = {"satisfied": [], "unsatisfied": [], "missing_courses": {}, "courses_used": set()}
+    results = {
+        "satisfied": [],
+        "unsatisfied": [],
+        "missing_courses": {},
+        "courses_used": set(),
+        "completion_pct": 0.0,
+        "satisfied_map": {},       # req_id → [course_code, ...]
+        "total_requirements": 0,
+        "total_satisfied": 0,
+    }
 
     track_data = requirements.get(track_id, {})
     if not track_data:
@@ -134,6 +143,7 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                         # Task 1.3: deficit routing — mark satisfied, defer to elective pool
                         core_deficit_count += 1
                         results["satisfied"].append(course)
+                        results["satisfied_map"][course] = [sat_course]
                         results["courses_used"].add(sat_course)
                         available_completed.discard(sat_course)
                         continue
@@ -142,6 +152,7 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
             available_completed.discard(sat_course)
             results["courses_used"].add(sat_course)
             results["satisfied"].append(course)
+            results["satisfied_map"][course] = [sat_course]
         else:
             results["unsatisfied"].append(course)
             results["missing_courses"][course] = [course]
@@ -210,6 +221,7 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
         if is_group_satisfied:
             results["satisfied"].append(group["id"])
+            results["satisfied_map"][group["id"]] = [opt for opt, _ in used_course_mappings]
         else:
             results["unsatisfied"].append(group["id"])
 
@@ -225,5 +237,10 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 results["missing_courses"][group["id"]]["credits_still_needed"] = still_needed_val
             else:
                 results["missing_courses"][group["id"]]["still_needed"] = still_needed_val
+
+    total_items = len(program["required_courses"]) + len(program["choice_groups"])
+    results["completion_pct"]      = len(results["satisfied"]) / total_items if total_items else 1.0
+    results["total_requirements"]  = total_items
+    results["total_satisfied"]     = len(results["satisfied"])
 
     return results
