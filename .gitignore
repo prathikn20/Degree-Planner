@@ -1,3 +1,10 @@
+# macOS
+.DS_Store
+
+# Runtime data — ephemeral on Streamlit Cloud, may contain user submissions
+logs/feedback.json
+data/req_cache.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
