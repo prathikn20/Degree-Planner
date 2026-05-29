@@ -37,8 +37,10 @@ def load_json_file(filepath):
 def save_json_file(data, filepath):
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     try:
-        with open(filepath, 'w') as f:
+        tmp_path = filepath + '.tmp'
+        with open(tmp_path, 'w') as f:
             json.dump(data, f, indent=2)
+        os.replace(tmp_path, filepath)
     except Exception as e:
         logger.error(f"Failed to write to {filepath}: {e}")
 

@@ -71,8 +71,10 @@ def extract_course_info(block):
     block_text = block.get_text(separator=' ', strip=True)
     
     # Dynamic credit count isolation
-    credit_match = re.search(r'(\d+)\s*Credit', block_text, re.IGNORECASE)
-    credits = int(credit_match.group(1)) if credit_match else 3
+    # Use \d+(?:\.\d+)? to capture decimals like "1.5" — without this, "1.5 Credits"
+    # matches the "5" in "1.5" and records the course as 5 credits.
+    credit_match = re.search(r'(\d+(?:\.\d+)?)\s*Credit', block_text, re.IGNORECASE)
+    credits = float(credit_match.group(1)) if credit_match else 3
 
     raw_prereq = ""
     attributes = []

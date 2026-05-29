@@ -3044,7 +3044,7 @@
       ],
       "choice_groups": [
         {
-          "id": "fy_experience",
+          "id": "FY-SEMINAR",
           "description": "First-Year Seminar (one FY seminar course)",
           "courses_required": 1,
           "is_core": false,
@@ -3054,7 +3054,7 @@
           }
         },
         {
-          "id": "aesthetic_interpretive",
+          "id": "FC-AESTH",
           "description": "Aesthetic and Interpretive Analysis",
           "courses_required": 1,
           "is_core": false,
@@ -3064,7 +3064,7 @@
           }
         },
         {
-          "id": "creative_expression",
+          "id": "FC-CREATE",
           "description": "Creative Expression",
           "courses_required": 1,
           "is_core": false,
@@ -3074,7 +3074,7 @@
           }
         },
         {
-          "id": "historical_analysis",
+          "id": "FC-PAST",
           "description": "Engagement with the Human Past",
           "courses_required": 1,
           "is_core": false,
@@ -3084,7 +3084,7 @@
           }
         },
         {
-          "id": "ethical_reasoning",
+          "id": "FC-VALUES",
           "description": "Ethical and Civic Values",
           "courses_required": 1,
           "is_core": false,
@@ -3094,7 +3094,7 @@
           }
         },
         {
-          "id": "global_awareness",
+          "id": "FC-GLOBAL",
           "description": "Global Understanding and Engagement",
           "courses_required": 1,
           "is_core": false,
@@ -3104,7 +3104,7 @@
           }
         },
         {
-          "id": "natural_sciences",
+          "id": "FC-NATSCI",
           "description": "Natural Scientific Investigation",
           "courses_required": 1,
           "is_core": false,
@@ -3114,7 +3114,7 @@
           }
         },
         {
-          "id": "empirical_lab",
+          "id": "FC-LAB",
           "description": "Empirical Investigation Lab (FC-LAB \u2014 one FC course must include lab)",
           "courses_required": 1,
           "is_core": false,
@@ -3124,7 +3124,7 @@
           }
         },
         {
-          "id": "power_and_society",
+          "id": "FC-POWER",
           "description": "Power and Society",
           "courses_required": 1,
           "is_core": false,
@@ -3134,7 +3134,7 @@
           }
         },
         {
-          "id": "quantitative_reasoning",
+          "id": "FC-QUANT",
           "description": "Quantitative Reasoning",
           "courses_required": 1,
           "is_core": false,
@@ -3144,7 +3144,7 @@
           }
         },
         {
-          "id": "ways_of_knowing",
+          "id": "FC-KNOW",
           "description": "Ways of Knowing",
           "courses_required": 1,
           "is_core": false,
@@ -3154,7 +3154,7 @@
           }
         },
         {
-          "id": "research_and_discovery",
+          "id": "RESEARCH",
           "description": "Research and Discovery",
           "courses_required": 1,
           "is_core": false,
@@ -3164,7 +3164,7 @@
           }
         },
         {
-          "id": "high_impact",
+          "id": "HI-EXP",
           "description": "High-Impact Experience (internship, research, service-learning, etc.)",
           "courses_required": 1,
           "is_core": false,
@@ -3174,7 +3174,7 @@
           }
         },
         {
-          "id": "comm_beyond",
+          "id": "COMM",
           "description": "Communication Beyond Carolina",
           "courses_required": 1,
           "is_core": false,
@@ -3184,7 +3184,7 @@
           }
         },
         {
-          "id": "lifetime_fitness",
+          "id": "LFIT",
           "description": "Lifetime Fitness",
           "courses_required": 1,
           "is_core": false,
@@ -3194,7 +3194,7 @@
           }
         },
         {
-          "id": "fad",
+          "id": "FAD",
           "description": "Foundations of American Democracy (NC system requirement; list may be incomplete)",
           "courses_required": 1,
           "is_core": false,

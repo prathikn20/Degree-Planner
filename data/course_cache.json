@@ -6616,5 +6616,76 @@
     "operands": [
       "HPM772"
     ]
+  },
+  "42ac0196135d58036c95851c4f989d9c": {
+    "operator": "OR",
+    "operands": [
+      "ASTR100",
+      "ASTR101",
+      "ASTR102",
+      "ASTR103"
+    ]
+  },
+  "094acf2a9b81d5b48b6d04a56d73751b": {
+    "operator": "AND",
+    "operands": [
+      "ASTR101"
+    ]
+  },
+  "e3582b99f9238848ed43d6d7005cc6c8": {
+    "operator": "OR",
+    "operands": [
+      "ASTR101",
+      "PHYS101",
+      "ASTR202",
+      "PHYS202"
+    ]
+  },
+  "b6e85d1a042bc9d3b28eaecd44b6653f": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "ASTR102",
+          "PHYS117",
+          "PHYS119"
+        ]
+      }
+    ]
+  },
+  "68017ae48b457243222f2c75ec2040ae": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "ASTR202",
+          "ASTR301"
+        ]
+      },
+      "MATH383",
+      "PHYS331"
+    ]
+  },
+  "01ba7efbfbf4f960fcf6fc9fd1a75777": {
+    "operator": "AND",
+    "operands": [
+      "ASTR202"
+    ]
+  },
+  "5a8bd5acab9faaabf13a4a83b56ef9c0": {
+    "operator": "AND",
+    "operands": [
+      {
+        "operator": "OR",
+        "operands": [
+          "ASTR202",
+          "ASTR301"
+        ]
+      },
+      "MATH383",
+      "PHYS331"
+    ]
   }
 }

@@ -17,51 +17,51 @@ TARGET_URLS = [
     "https://catalog.unc.edu/courses/stor/", 
     "https://catalog.unc.edu/courses/math/",
     "https://catalog.unc.edu/courses/phys/",
-    #"https://catalog.unc.edu/courses/astr/",
+    "https://catalog.unc.edu/courses/astr/",
     "https://catalog.unc.edu/courses/bioc/",
     "https://catalog.unc.edu/courses/biol/",
     "https://catalog.unc.edu/courses/bios/",
     "https://catalog.unc.edu/courses/bmme/",
     "https://catalog.unc.edu/courses/chem/",
-    #"https://catalog.unc.edu/courses/chip/",
-    #"https://catalog.unc.edu/courses/emes/",
-    #"https://catalog.unc.edu/courses/enec/",
-    #"https://catalog.unc.edu/courses/envr/",
-    #"https://catalog.unc.edu/courses/epid/",
-    #"https://catalog.unc.edu/courses/exss/",
-    #"https://catalog.unc.edu/courses/mcro/",
+    "https://catalog.unc.edu/courses/chip/",
+    "https://catalog.unc.edu/courses/emes/",
+    "https://catalog.unc.edu/courses/enec/",
+    "https://catalog.unc.edu/courses/envr/",
+    "https://catalog.unc.edu/courses/epid/",
+    "https://catalog.unc.edu/courses/exss/",
+    "https://catalog.unc.edu/courses/mcro/",
     "https://catalog.unc.edu/courses/nsci/",
-    #"https://catalog.unc.edu/courses/nutr/",
-    #"https://catalog.unc.edu/courses/sphg/",
-    #"https://catalog.unc.edu/courses/sphs/",
+    "https://catalog.unc.edu/courses/nutr/",
+    "https://catalog.unc.edu/courses/sphg/",
+    "https://catalog.unc.edu/courses/sphs/",
 
-    #"https://catalog.unc.edu/courses/aaad/",
-    #"https://catalog.unc.edu/courses/amst/",
+    "https://catalog.unc.edu/courses/aaad/",
+    "https://catalog.unc.edu/courses/amst/",
     "https://catalog.unc.edu/courses/anth/",
-    #"https://catalog.unc.edu/courses/comm/",
+    "https://catalog.unc.edu/courses/comm/",
     "https://catalog.unc.edu/courses/econ/",
-    #"https://catalog.unc.edu/courses/educ/",
+    "https://catalog.unc.edu/courses/educ/",
     "https://catalog.unc.edu/courses/engl/",
-    #"https://catalog.unc.edu/courses/geog/",
-    #"https://catalog.unc.edu/courses/glbl/",
+    "https://catalog.unc.edu/courses/geog/",
+    "https://catalog.unc.edu/courses/glbl/",
     "https://catalog.unc.edu/courses/hist/",
-    #"https://catalog.unc.edu/courses/ling/",
-    #"https://catalog.unc.edu/courses/phil/",
-    #"https://catalog.unc.edu/courses/plcy/",
+    "https://catalog.unc.edu/courses/ling/",
+    "https://catalog.unc.edu/courses/phil/",
+    "https://catalog.unc.edu/courses/plcy/",
     "https://catalog.unc.edu/courses/poli/",
-    #"https://catalog.unc.edu/courses/psyc/",
-    #"https://catalog.unc.edu/courses/pwad/",
-    #"https://catalog.unc.edu/courses/reli/",
-    #"https://catalog.unc.edu/courses/soci/",
-    #"https://catalog.unc.edu/courses/wgst/",
+    "https://catalog.unc.edu/courses/psyc/",
+    "https://catalog.unc.edu/courses/pwad/",
+    "https://catalog.unc.edu/courses/reli/",
+    "https://catalog.unc.edu/courses/soci/",
+    "https://catalog.unc.edu/courses/wgst/",
 
-    #"https://catalog.unc.edu/courses/appl/",
+    "https://catalog.unc.edu/courses/appl/",
     "https://catalog.unc.edu/courses/busi/",
     "https://catalog.unc.edu/courses/hpm/",
-    #"https://catalog.unc.edu/courses/inls/",
-    #"https://catalog.unc.edu/courses/mejo/",
-    #"https://catalog.unc.edu/courses/mngt/",
-    #"https://catalog.unc.edu/courses/plan/"
+    "https://catalog.unc.edu/courses/inls/",
+    "https://catalog.unc.edu/courses/mejo/",
+    "https://catalog.unc.edu/courses/mngt/",
+    "https://catalog.unc.edu/courses/plan/"
 ]
 OUTPUT_PATH = "data/course_catalog.json"
 CACHE_PATH = "data/course_cache.json"
@@ -80,8 +80,10 @@ def load_json_file(filepath):
 
 def save_cache(cache_dict):
     try:
-        with open(CACHE_PATH, 'w') as f:
+        tmp_path = CACHE_PATH + '.tmp'
+        with open(tmp_path, 'w') as f:
             json.dump(cache_dict, f, indent=2)
+        os.replace(tmp_path, CACHE_PATH)
     except Exception as e:
         logger.error(f"Failed to write out cache file updates: {e}")
 
@@ -207,7 +209,9 @@ def run_ingestion_pipeline():
         return
     # ---------------------------------------------------------
 
-    normalized_catalog = {}
+    # Seed with existing catalog so a partial re-run never erases previously
+    # scraped departments that aren't included in this run's TARGET_URLS.
+    normalized_catalog = load_json_file(OUTPUT_PATH)
     courses_since_checkpoint = 0
 
     for course_id, data in raw_scraped_data.items():
