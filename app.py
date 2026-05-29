@@ -512,6 +512,8 @@ with st.sidebar:
                     st.warning("Both minors are identical — select different programs.")
                     add_minor2, minor2 = False, None
 
+    st.caption("Don't see your program? Request it in the feedback section below ↓")
+
     st.divider()
 
     # ─── What-If Scenarios ────────────────────────────────────────────────────
@@ -553,12 +555,13 @@ with st.sidebar:
 
     # ─── Feedback ─────────────────────────────────────────────────────────────
     with st.expander("💬 Suggest a Feature / Report a Bug", expanded=False):
+        st.caption("Don't see your major or minor? Use **Request a Major/Minor** below.")
         # st.form with clear_on_submit=True resets all inputs automatically on
         # submission, avoiding the StreamlitAPIException that occurs when you
         # write to a widget-bound session-state key after the widget renders.
         with st.form(key="feedback_form", clear_on_submit=True):
             fb_type = st.radio(
-                "Type", ["Feature Request", "Bug Report"],
+                "Type", ["Request a Major/Minor", "Feature Request", "Bug Report"],
                 horizontal=True,
                 label_visibility="collapsed",
             )
@@ -667,6 +670,13 @@ if uploaded is not None:
         delta_color="normal",
     )
     mc4.metric("Total Credits (Parsed)", total_parsed_credits)
+
+    st.warning(
+        "⚠️ **Always cross-check with your academic advisor and the official Tar Heel Tracker.** "
+        "This planner is a planning aid — it may not reflect catalog-year exceptions, "
+        "transfer credit evaluations, or policy changes. Do not rely on it as the sole "
+        "source of truth for graduation clearance."
+    )
 
     # ── Completed courses — build requirement satisfaction map ─────────────────
     # Covers both fully-satisfied requirements (via satisfied_map) and partial
