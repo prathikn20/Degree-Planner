@@ -1,3 +1,4 @@
+import io
 import os
 import tempfile
 
@@ -127,31 +128,125 @@ def run_pipeline(
     }
 
 
+# ── Prerequisite graph builder ────────────────────────────────────────────────
+
+def build_prereq_dot(
+    path: list[str],
+    catalog: dict,
+    assumed_completed: list[str],
+    in_progress: list[str],
+) -> str:
+    import re as _re
+
+    completed_set = set(assumed_completed)
+    in_prog_set   = set(in_progress)
+    remaining_set = set(path)
+
+    visible: set[str] = set(path)
+    edges: list[tuple[str, str]] = []
+
+    for course in path:
+        pathways = catalog.get(course, {}).get("prerequisites", [])
+        if not pathways:
+            continue
+        # Prefer the prereq pathway that overlaps most with what the student already has
+        completed_paths = [p for p in pathways if any(c in completed_set for c in p)]
+        best = min(completed_paths or pathways, key=len)
+        for prereq in best:
+            if prereq in completed_set or prereq in remaining_set:
+                visible.add(prereq)
+                edges.append((prereq, course))
+
+    def _node(c: str) -> str:
+        name = catalog.get(c, {}).get("name", "")
+        short = (name[:20] + "…") if len(name) > 20 else name
+        label = f"{c}\\n{short}" if short else c
+        # Escape any double-quotes inside the label
+        label = label.replace('"', '\\"')
+        if c in in_prog_set:
+            fill, border = "#FFD966", "#7d6608"   # amber  – in progress
+        elif c in completed_set:
+            fill, border = "#93C47D", "#2d5f2d"   # green  – completed
+        else:
+            fill, border = "#6FA8DC", "#1a4a6b"   # blue   – still needed
+        return (
+            f'    "{c}" [label="{label}", fillcolor="{fill}", '
+            f'color="{border}", penwidth=1.5];'
+        )
+
+    lines = [
+        "digraph {",
+        '    rankdir=LR;',
+        '    graph [bgcolor="transparent", pad="0.3", nodesep="0.4", ranksep="0.7"];',
+        '    node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=9];',
+        '    edge [color="#666666", arrowsize=0.7];',
+    ]
+    for node in sorted(visible):
+        lines.append(_node(node))
+    for src, dst in edges:
+        lines.append(f'    "{src}" -> "{dst}";')
+    lines.append("}")
+    return "\n".join(lines)
+
+
 # ── Per-program audit renderer ─────────────────────────────────────────────────
 
-def render_audit(results: dict, double_dipped: set | None = None) -> None:
-    satisfied   = results.get("satisfied", [])
-    missing     = results.get("missing_courses", {})
-    unsatisfied = results.get("unsatisfied", [])
+def render_audit(
+    results: dict,
+    double_dipped: set | None = None,
+    path: list | None = None,
+    catalog: dict | None = None,
+    planned: list | None = None,
+) -> None:
+    satisfied     = results.get("satisfied", [])
+    missing       = results.get("missing_courses", {})
+    unsatisfied   = results.get("unsatisfied", [])
+    satisfied_map = results.get("satisfied_map", {})
     double_dipped = double_dipped or set()
+    path_set      = set(path or [])
+    planned_set   = set(planned or [])
+    catalog       = catalog or {}
+
+    def _course_chip(code: str) -> str:
+        name = catalog.get(code, {}).get("name", "")
+        suffix = " _(planned)_" if code in planned_set else ""
+        return f"**{code}**" + (f" — {name}" if name else "") + suffix
 
     with st.expander(f"✅ Satisfied Requirements ({len(satisfied)})", expanded=False):
         if satisfied:
             for req in satisfied:
-                badge = " `[Double-Dipped]`" if req in double_dipped else ""
-                st.markdown(f"- ✅ **{req}**{badge}")
+                courses_used = satisfied_map.get(req, [])
+                is_dipped    = any(c in double_dipped for c in courses_used)
+                badge        = " `[Double-Dipped]`" if is_dipped else ""
+                if courses_used:
+                    fulfilled = ", ".join(_course_chip(c) for c in courses_used)
+                    st.markdown(f"- ✅ **{req}** — Fulfilled by: {fulfilled}{badge}")
+                else:
+                    st.markdown(f"- ✅ **{req}**{badge}")
         else:
             st.write("No requirements satisfied yet.")
 
-    with st.expander(f"⚠️ Unsatisfied Requirements ({len(unsatisfied)})", expanded=True):
+    with st.expander(f"❌ Unsatisfied Requirements ({len(unsatisfied)})", expanded=True):
         if missing:
             for req_id, details in missing.items():
                 if isinstance(details, list):
-                    st.markdown(f"- ⚠️ **{req_id}** – course not completed")
+                    # Required course — no alternatives, must take this specific one
+                    st.markdown(f"- ❌ **{req_id}** — Required but not yet completed")
                 else:
-                    needed = details.get("still_needed") or details.get("credits_still_needed", 0)
-                    suffix = "credits" if "credits_still_needed" in details else "courses"
-                    st.markdown(f"- ⚠️ **{req_id}** – need **{needed}** more {suffix}")
+                    needed  = details.get("still_needed") or details.get("credits_still_needed", 0)
+                    suffix  = "credits" if "credits_still_needed" in details else "course(s)"
+                    options = details.get("options", [])
+
+                    # Recommended = first option already in Kahn's path
+                    recommended  = next((o for o in options if o in path_set), None)
+                    alternatives = [o for o in options if o != recommended][:3]
+
+                    rec_part = f" — Recommended: **{recommended}**" if recommended else f" — Need **{needed}** more {suffix}"
+                    alt_part = (
+                        f" *(Alternatives: {', '.join(alternatives)})*"
+                        if alternatives and recommended else ""
+                    )
+                    st.markdown(f"- ❌ **{req_id}**{rec_part}{alt_part}")
         else:
             st.success("All requirements are satisfied!")
 
@@ -371,12 +466,55 @@ if uploaded is not None:
                 st.markdown(f"- **{c}** — {name} ({cr} cr)")
 
     if planned:
-        with st.expander(f"🔮 What-If: Planned Courses ({len(planned)})", expanded=False):
-            st.caption("Simulated as completed. Reduces remaining requirements and graduation path.")
+        # Build impact map: which requirements does each planned course fulfill?
+        planned_impact: dict[str, list[tuple[str, str]]] = {}
+        for m in majors_to_check:
+            if m["track"] not in audit:
+                continue
+            sat_map = audit[m["track"]]["results"].get("satisfied_map", {})
+            for req_id, courses in sat_map.items():
+                for c in courses:
+                    if c in set(planned):
+                        planned_impact.setdefault(c, []).append((fmt(m["track"]), req_id))
+
+        with st.expander(f"🔮 Planned Courses Impact ({len(planned)})", expanded=True):
+            st.caption("Simulated as completed. Shows which requirements each planned course fulfills.")
             for c in planned:
-                name = catalog.get(c, {}).get("name", "Unknown course")
-                cr   = catalog.get(c, {}).get("credits", "?")
-                st.markdown(f"- **{c}** — {name} ({cr} cr)")
+                name    = catalog.get(c, {}).get("name", "Unknown course")
+                cr      = catalog.get(c, {}).get("credits", "?")
+                impacts = planned_impact.get(c, [])
+                if impacts:
+                    impact_str = " &nbsp;·&nbsp; ".join(
+                        f"**{track}** → `{req}`" for track, req in impacts
+                    )
+                    st.markdown(f"- **{c}** — {name} ({cr} cr) → {impact_str}")
+                else:
+                    st.markdown(
+                        f"- **{c}** — {name} ({cr} cr) "
+                        f"_(satisfies no currently-tracked requirement)_"
+                    )
+
+    st.divider()
+
+    # ── Global progress bar (all programs combined) ────────────────────────────
+    total_req_all = sum(
+        audit[m["track"]]["results"].get("total_requirements", 0)
+        for m in majors_to_check if m["track"] in audit
+    )
+    total_sat_all = sum(
+        audit[m["track"]]["results"].get("total_satisfied", 0)
+        for m in majors_to_check if m["track"] in audit
+    )
+    global_pct = total_sat_all / total_req_all if total_req_all else 0.0
+    st.subheader("📊 Overall Degree Progress")
+    gcol1, gcol2 = st.columns([5, 1])
+    with gcol1:
+        st.progress(min(global_pct, 1.0))
+    with gcol2:
+        st.metric("Overall", f"{global_pct:.0%}")
+    st.caption(
+        f"{total_sat_all} of {total_req_all} requirements satisfied across all programs"
+    )
 
     st.divider()
 
@@ -408,7 +546,22 @@ if uploaded is not None:
         with tab:
             track_data = audit.get(program["track"])
             if track_data:
-                render_audit(track_data["results"], double_dipped=_double_dipped_for(program["track"]))
+                pct = track_data["results"].get("completion_pct", 0.0)
+                satisfied_n = len(track_data["results"].get("satisfied", []))
+                total_n     = satisfied_n + len(track_data["results"].get("unsatisfied", []))
+                pcol1, pcol2 = st.columns([5, 1])
+                with pcol1:
+                    st.progress(min(pct, 1.0))
+                with pcol2:
+                    st.metric("Complete", f"{pct:.0%}")
+                st.caption(f"{satisfied_n} of {total_n} requirements satisfied")
+                render_audit(
+                    track_data["results"],
+                    double_dipped=_double_dipped_for(program["track"]),
+                    path=path,
+                    catalog=catalog,
+                    planned=planned,
+                )
             else:
                 st.warning(f"No audit data found for {fmt(program['track'])}.")
 
@@ -422,6 +575,20 @@ if uploaded is not None:
 
     if path:
         unknown_in_path = [c for c in path if c not in catalog]
+
+        # ── Prerequisite graph ─────────────────────────────────────────────────
+        assumed_for_graph = list(dict.fromkeys(completed + in_progress + planned))
+        with st.expander("🕸️ Visualize Prerequisite Path", expanded=False):
+            st.caption(
+                "🟢 **Green** = already completed &nbsp;|&nbsp; "
+                "🟡 **Amber** = in-progress this semester &nbsp;|&nbsp; "
+                "🔵 **Blue** = still needed &nbsp;|&nbsp; "
+                "Arrows show prerequisite dependencies."
+            )
+            dot_src = build_prereq_dot(path, catalog, assumed_for_graph, in_progress)
+            st.graphviz_chart(dot_src, use_container_width=True)
+
+        # ── Course table ───────────────────────────────────────────────────────
         rows = [
             {
                 "#":       i,
@@ -438,25 +605,47 @@ if uploaded is not None:
                 f"⚠️ {len(unknown_in_path)} course(s) in the path are not in the catalog "
                 f"and assumed 3 credits: {', '.join(unknown_in_path)}"
             )
+
+        # ── Export CSV ─────────────────────────────────────────────────────────
+        csv_buf = io.StringIO()
+        csv_buf.write("Course Code,Course Name,Credits\n")
+        for row in rows:
+            name_escaped = row["Name"].replace('"', '""')
+            csv_buf.write(f'"{row["Course"]}","{name_escaped}",{row["Credits"]}\n')
+
+        st.download_button(
+            label="📥 Download Graduation Plan",
+            data=csv_buf.getvalue().encode("utf-8"),
+            file_name="graduation_plan.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
     else:
         st.success("No remaining required courses — all requirements are covered by your transcript!")
 
     # ── 120-hour graduation check ──────────────────────────────────────────────
     st.divider()
+    st.subheader("🎓 Credit Progress")
+    credit_pct = min(total_projected / UNC_MIN_CREDITS, 1.0)
+    ccol1, ccol2 = st.columns([5, 1])
+    with ccol1:
+        st.progress(credit_pct)
+    with ccol2:
+        st.metric("Credits", f"{total_projected} / {UNC_MIN_CREDITS}")
+    st.caption(
+        f"Parsed: **{total_parsed_credits}** cr &nbsp;·&nbsp; "
+        f"Path: **{path_credits}** cr &nbsp;·&nbsp; "
+        f"Planned (What-If): **{planned_credits}** cr &nbsp;·&nbsp; "
+        f"Projected total: **{total_projected}** cr"
+    )
     if total_projected < UNC_MIN_CREDITS:
         deficit = UNC_MIN_CREDITS - total_projected
         st.warning(
-            f"**Graduation Credit Check ⚠️** — All major requirements checked, but total credit "
-            f"volume falls short of graduation minimums. Student must complete **{deficit}** "
-            f"additional general elective credits to hit the UNC {UNC_MIN_CREDITS}-hour degree minimum.\n\n"
-            f"*(Parsed: {total_parsed_credits} cr · Planned: {planned_credits} cr · "
-            f"Path: {path_credits} cr · Projected total: {total_projected} cr)*"
+            f"**{deficit} credits short** of the UNC {UNC_MIN_CREDITS}-hour graduation minimum. "
+            f"Complete additional general electives to close the gap."
         )
     else:
-        st.success(
-            f"✅ Projected total credits: **{total_projected}** — meets the UNC "
-            f"{UNC_MIN_CREDITS}-hour graduation minimum."
-        )
+        st.success(f"✅ Projected total meets the UNC {UNC_MIN_CREDITS}-hour graduation minimum.")
 
     # ── Developer Audit Log ────────────────────────────────────────────────────
     import json as _json
