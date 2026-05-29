@@ -10,7 +10,7 @@ import pandas as pd
 import streamlit as st
 
 from src.planner.graph import build_graph, load_catalog, load_requirements
-from src.planner.path_generator import get_remaining_courses, kahns_algorithm
+from src.planner.path_generator import kahns_algorithm, select_courses_globally
 from src.planner.requirements_checker import check_requirements, get_rule_based_options
 from src.planner.tracker_parser import parse_tarheel_tracker
 
@@ -79,29 +79,35 @@ def run_pipeline(
     # are clearly distinguishable from the transcript in the returned data.
     assumed  = list(dict.fromkeys(completed + in_progress + planned))
 
-    # Single pass per program — cross-program double-dipping is fully allowed.
-    # Each check_requirements call gets its own consumption pool (available_completed),
-    # so a course can satisfy requirements in CS BS AND Data BS simultaneously.
-    # Intra-program dedup is handled inside check_requirements (discard) and
-    # get_remaining_courses (consumed_by_path).
-    audit: dict[str, dict] = {}
-    all_remaining: set[str] = set()
-
+    # Pass 1 — requirements audit (each program uses its own consumption pool so
+    # cross-program double-dipping is structurally allowed at the checker level).
+    results_by_track: dict[str, dict] = {}
     for m in majors_to_check:
         track, conc = m["track"], m["concentration"]
-
-        results = check_requirements(
+        results_by_track[track] = check_requirements(
             requirements, catalog, assumed,
             avoid_courses=avoid,
             track_id=track, concentration_id=conc,
         )
-        remaining, fulfillment_map = get_remaining_courses(
-            results, requirements, catalog, assumed,
-            avoid_courses=avoid,
-            track_id=track, concentration_id=conc,
-        )
 
-        audit[track] = {"results": results, "remaining": remaining, "fulfillment_map": fulfillment_map}
+    # Pass 2 — global cross-program course selection with Lazy Exclusivity.
+    # Greedily maximises inter-program double-dipping while ensuring each
+    # program retains a strict majority (>50%) of exclusive slots/credits.
+    selections = select_courses_globally(
+        results_by_track, requirements, catalog, assumed,
+        majors_to_check, avoid_courses=avoid,
+    )
+
+    audit: dict[str, dict] = {}
+    all_remaining: set[str] = set()
+    for m in majors_to_check:
+        track = m["track"]
+        remaining, fulfillment_map = selections[track]
+        audit[track] = {
+            "results":         results_by_track[track],
+            "remaining":       remaining,
+            "fulfillment_map": fulfillment_map,
+        }
         all_remaining.update(remaining)
 
     # UNC rule: a student may only enroll in 1 FY-SEMINAR course ever.
