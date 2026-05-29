@@ -1,0 +1,16 @@
+[
+  {
+    "type": "Bug Report",
+    "title": "Incorrect FAD",
+    "description": "The wrong courses are being shown for the FAD requirement",
+    "email": null,
+    "timestamp": "2026-05-29T12:19:37.379814"
+  },
+  {
+    "type": "Bug Report",
+    "title": "The bug report isnt working",
+    "description": "It goes to an error screen",
+    "email": null,
+    "timestamp": "2026-05-29T12:27:02.068406"
+  }
+]

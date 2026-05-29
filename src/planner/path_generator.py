@@ -83,9 +83,21 @@ def expand_prerequisites(courses, catalog, completed_set):
 
     return all_needed
 
-def get_remaining_courses(results, requirements, catalog, completed, avoid_courses=None, track_id="COMP_BS", concentration_id="None"):
-    completed_set    = set(completed)
-    avoid_set        = set(avoid_courses) if avoid_courses else set()
+def _is_restricted_pseudo_leaf(course: str, catalog: dict) -> bool:
+    """True when a course is >= 400-level with no prerequisites defined.
+    The engine must never spontaneously recommend these for open elective slots;
+    they behave like sinks that absorb a slot without requiring any prior work."""
+    match = re.search(r'\d+', course)
+    if not match or int(match.group()) < 400:
+        return False
+    prereqs = catalog.get(course, {}).get('prerequisites', [])
+    return not prereqs
+
+
+def get_remaining_courses(results, requirements, catalog, completed, avoid_courses=None, track_id="COMP_BS", concentration_id="None", explicitly_requested=None):
+    completed_set          = set(completed)
+    avoid_set              = set(avoid_courses) if avoid_courses else set()
+    explicitly_requested_set = set(explicitly_requested) if explicitly_requested else set()
     remaining        = []
     fulfillment_map: dict[str, str] = {}
     # Tracks courses already assigned to a group within this program so the
@@ -121,8 +133,10 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
         group_desc = group.get("description") or group["id"]
 
         sorted_options = sorted(
-            [c for c in options if c not in avoid_set and c not in consumed_by_path],
-            key=lambda c: get_prereq_depth(c, catalog, completed_set)
+            [c for c in options if c not in avoid_set and c not in consumed_by_path
+             and (c in explicitly_requested_set or not _is_restricted_pseudo_leaf(c, catalog))],
+            key=lambda c: (0 if c in explicitly_requested_set else 1,
+                           get_prereq_depth(c, catalog, completed_set))
         )
 
         if "credits_required" in group and group["credits_required"]:
@@ -172,12 +186,13 @@ def _program_total_size(track: str, conc: str, requirements: dict, catalog: dict
 
 
 def select_courses_globally(
-    audit_by_track:  dict,
-    requirements:    dict,
-    catalog:         dict,
-    completed:       list,
-    majors_to_check: list,
-    avoid_courses:   list | None = None,
+    audit_by_track:    dict,
+    requirements:      dict,
+    catalog:           dict,
+    completed:         list,
+    majors_to_check:   list,
+    avoid_courses:     list | None = None,
+    explicitly_requested: list | None = None,
 ) -> dict:
     """
     Cross-program greedy selector with Lazy Exclusivity enforcement.
@@ -195,8 +210,9 @@ def select_courses_globally(
 
     Returns: track_id → (remaining_courses: list[str], fulfillment_map: dict[str,str])
     """
-    completed_set = set(completed)
-    avoid_set     = set(avoid_courses) if avoid_courses else set()
+    completed_set            = set(completed)
+    avoid_set                = set(avoid_courses) if avoid_courses else set()
+    explicitly_requested_set = set(explicitly_requested) if explicitly_requested else set()
 
     # ── Per-program mutable state ─────────────────────────────────────────────
     class _PS:
@@ -238,8 +254,15 @@ def select_courses_globally(
             if gid not in results["unsatisfied"]:
                 continue
             info    = results["missing_courses"].get(gid, {})
-            options = [o for o in info.get("options", []) if o not in avoid_set]
-            desc    = group.get("description") or gid
+            options = [o for o in info.get("options", [])
+                       if o not in avoid_set
+                       and (o in explicitly_requested_set or not _is_restricted_pseudo_leaf(o, catalog))]
+            desc = group.get("description") or gid
+            if not options:
+                print(
+                    f"Warning: requirement '{gid}' ({desc}) for track '{track}' has no valid "
+                    "course options after filtering — it will remain Unsatisfied in the path."
+                )
             if group.get("credits_required"):
                 slots.append({
                     "track": track, "gid": gid, "desc": desc, "options": options,
@@ -298,9 +321,10 @@ def select_courses_globally(
         # Score: prioritise courses satisfying more distinct programs;
         # break ties by lower prerequisite depth then lexicographic code.
         def _score(c: str) -> tuple:
-            n_tracks = len({open_s[i]["track"] for i in c2si[c]})
-            depth    = get_prereq_depth(c, catalog, completed_set)
-            return (-n_tracks, depth, c)
+            n_tracks  = len({open_s[i]["track"] for i in c2si[c]})
+            depth     = get_prereq_depth(c, catalog, completed_set)
+            requested = 0 if c in explicitly_requested_set else 1
+            return (-n_tracks, requested, depth, c)
 
         best = min(c2si, key=_score)
         cr   = catalog.get(best, {}).get("credits", 3)
