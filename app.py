@@ -1027,52 +1027,6 @@ if uploaded is not None:
                     f"🔒 **No alternatives:** {', '.join(_ns_items)}{_ns_more}"
                 )
 
-        # ── Exclude a Course ───────────────────────────────────────────────────
-        with st.expander("⛔ Exclude a Course", expanded=False):
-            st.caption(
-                "Remove a course from the path entirely. The path will recalculate without it. "
-                "To undo, remove it from **Courses to Avoid** in the sidebar."
-            )
-
-            def _excl_label(c: str) -> str:
-                name   = catalog.get(c, {}).get("name", "")
-                cr     = catalog.get(c, {}).get("credits", 3)
-                spaced = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', c)
-                return f"{spaced} ({cr} cr) — {name[:40]}" if name else f"{spaced} ({cr} cr)"
-
-            _excludable = [c for c in path if c not in set(avoid_courses)]
-            _excl_pick = st.selectbox(
-                "Select a course to exclude",
-                options=_excludable,
-                format_func=_excl_label,
-                key="excl_selectbox",
-                index=None,
-                placeholder="Choose a course to exclude…",
-            )
-
-            if _excl_pick is not None:
-                _excl_name = catalog.get(_excl_pick, {}).get("name", "")
-                st.info(f"**{_excl_pick}** — {_excl_name} will be removed from the path.")
-
-                def _do_exclude() -> None:
-                    val = st.session_state.get("excl_selectbox")
-                    if not val:
-                        return
-                    course_id = val if isinstance(val, str) else val.get("Course")
-                    if not course_id:
-                        return
-                    cur_avoid = list(st.session_state.get("avoid_courses", []))
-                    if course_id not in cur_avoid:
-                        cur_avoid.append(course_id)
-                    st.session_state["avoid_courses"] = cur_avoid
-                    st.session_state.pop("excl_selectbox", None)
-
-                st.button(
-                    "⛔ Confirm Exclude", key="execute_excl_btn",
-                    type="primary", use_container_width=True,
-                    on_click=_do_exclude,
-                )
-
         # ── Export CSV ─────────────────────────────────────────────────────────
         csv_buf = io.StringIO()
         csv_buf.write("Course Code,Course Name,Credits,Fulfills\n")
