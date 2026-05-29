@@ -6,6 +6,7 @@ import os
 import sys
 import hashlib
 import itertools
+import random
 
 # Allow running as `python scripts/run_catalog_pipeline.py` from the project root
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -17,56 +18,119 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 TARGET_URLS = [
-    "https://catalog.unc.edu/courses/comp/", 
-    "https://catalog.unc.edu/courses/data/", 
-    "https://catalog.unc.edu/courses/stor/", 
+    "https://catalog.unc.edu/courses/comp/",
+    "https://catalog.unc.edu/courses/data/",
+    "https://catalog.unc.edu/courses/stor/",
     "https://catalog.unc.edu/courses/math/",
-    "https://catalog.unc.edu/courses/phys/",
-    "https://catalog.unc.edu/courses/astr/",
-    "https://catalog.unc.edu/courses/bioc/",
-    "https://catalog.unc.edu/courses/biol/",
-    "https://catalog.unc.edu/courses/bios/",
-    "https://catalog.unc.edu/courses/bmme/",
-    "https://catalog.unc.edu/courses/chem/",
-    "https://catalog.unc.edu/courses/chip/",
-    "https://catalog.unc.edu/courses/emes/",
-    "https://catalog.unc.edu/courses/enec/",
-    "https://catalog.unc.edu/courses/envr/",
-    "https://catalog.unc.edu/courses/epid/",
-    "https://catalog.unc.edu/courses/exss/",
-    "https://catalog.unc.edu/courses/mcro/",
-    "https://catalog.unc.edu/courses/nsci/",
-    "https://catalog.unc.edu/courses/nutr/",
-    "https://catalog.unc.edu/courses/sphg/",
-    "https://catalog.unc.edu/courses/sphs/",
-
-    "https://catalog.unc.edu/courses/aaad/",
-    "https://catalog.unc.edu/courses/amst/",
-    "https://catalog.unc.edu/courses/anth/",
-    "https://catalog.unc.edu/courses/comm/",
+    "https://catalog.unc.edu/courses/busi/",
     "https://catalog.unc.edu/courses/econ/",
-    "https://catalog.unc.edu/courses/educ/",
-    "https://catalog.unc.edu/courses/engl/",
-    "https://catalog.unc.edu/courses/geog/",
-    "https://catalog.unc.edu/courses/glbl/",
+    "https://catalog.unc.edu/courses/psyc/",
+    "https://catalog.unc.edu/courses/biol/",
+    "https://catalog.unc.edu/courses/chem/",
+    "https://catalog.unc.edu/courses/phys/",
+    "https://catalog.unc.edu/courses/nsci/",
+    "https://catalog.unc.edu/courses/exss/",
+
+    "https://catalog.unc.edu/courses/mejo/",
+    "https://catalog.unc.edu/courses/poli/",
     "https://catalog.unc.edu/courses/hist/",
-    "https://catalog.unc.edu/courses/ling/",
+    "https://catalog.unc.edu/courses/engl/",
+    "https://catalog.unc.edu/courses/comm/",
+    "https://catalog.unc.edu/courses/soci/",
+    "https://catalog.unc.edu/courses/pwad/",
+    "https://catalog.unc.edu/courses/anth/",
     "https://catalog.unc.edu/courses/phil/",
     "https://catalog.unc.edu/courses/plcy/",
-    "https://catalog.unc.edu/courses/poli/",
-    "https://catalog.unc.edu/courses/psyc/",
-    "https://catalog.unc.edu/courses/pwad/",
-    "https://catalog.unc.edu/courses/reli/",
-    "https://catalog.unc.edu/courses/soci/",
+    "https://catalog.unc.edu/courses/educ/",
+    "https://catalog.unc.edu/courses/glbl/",
     "https://catalog.unc.edu/courses/wgst/",
 
+    "https://catalog.unc.edu/courses/enec/",
+    "https://catalog.unc.edu/courses/envr/",
+    "https://catalog.unc.edu/courses/emes/",
+    "https://catalog.unc.edu/courses/geog/",
     "https://catalog.unc.edu/courses/appl/",
-    "https://catalog.unc.edu/courses/busi/",
-    "https://catalog.unc.edu/courses/hpm/",
-    "https://catalog.unc.edu/courses/inls/",
-    "https://catalog.unc.edu/courses/mejo/",
     "https://catalog.unc.edu/courses/mngt/",
-    "https://catalog.unc.edu/courses/plan/"
+    "https://catalog.unc.edu/courses/plan/",
+    "https://catalog.unc.edu/courses/inls/",
+    "https://catalog.unc.edu/courses/scll/",
+    "https://catalog.unc.edu/courses/amst/",
+    "https://catalog.unc.edu/courses/aaad/",
+    "https://catalog.unc.edu/courses/ltam/",
+    "https://catalog.unc.edu/courses/euro/",
+    "https://catalog.unc.edu/courses/jwst/",
+
+    "https://catalog.unc.edu/courses/arts/",
+    "https://catalog.unc.edu/courses/arth/",
+    "https://catalog.unc.edu/courses/dram/",
+    "https://catalog.unc.edu/courses/musc/",
+    "https://catalog.unc.edu/courses/cmpl/",
+    "https://catalog.unc.edu/courses/folk/",
+    "https://catalog.unc.edu/courses/reli/",
+
+    "https://catalog.unc.edu/courses/lfit/",
+    "https://catalog.unc.edu/courses/phya/",
+    "https://catalog.unc.edu/courses/ures/",
+    "https://catalog.unc.edu/courses/idst/",
+    "https://catalog.unc.edu/courses/spcl/",
+    "https://catalog.unc.edu/courses/aero/",
+    "https://catalog.unc.edu/courses/army/",
+    "https://catalog.unc.edu/courses/navs/",
+
+    "https://catalog.unc.edu/courses/sphg/",
+    "https://catalog.unc.edu/courses/hpm/",
+    "https://catalog.unc.edu/courses/epid/",
+    "https://catalog.unc.edu/courses/bios/",
+    "https://catalog.unc.edu/courses/nutr/",
+    "https://catalog.unc.edu/courses/nurs/",
+    "https://catalog.unc.edu/courses/bmme/",
+    "https://catalog.unc.edu/courses/mcro/",
+    "https://catalog.unc.edu/courses/icmu/",
+    "https://catalog.unc.edu/courses/sphs/",
+    "https://catalog.unc.edu/courses/clsc/",
+    "https://catalog.unc.edu/courses/radi/",
+    "https://catalog.unc.edu/courses/dhyg/",
+    "https://catalog.unc.edu/courses/ndss/",
+
+    "https://catalog.unc.edu/courses/ling/",
+    "https://catalog.unc.edu/courses/span/",
+    "https://catalog.unc.edu/courses/fren/",
+    "https://catalog.unc.edu/courses/chin/",
+    "https://catalog.unc.edu/courses/japn/",
+    "https://catalog.unc.edu/courses/kor/",
+    "https://catalog.unc.edu/courses/germ/",
+    "https://catalog.unc.edu/courses/ital/",
+    "https://catalog.unc.edu/courses/latn/",
+    "https://catalog.unc.edu/courses/grek/",
+    "https://catalog.unc.edu/courses/arab/",
+    "https://catalog.unc.edu/courses/russ/",
+    "https://catalog.unc.edu/courses/hnur/",
+    "https://catalog.unc.edu/courses/hebr/",
+    "https://catalog.unc.edu/courses/prsn/",
+    "https://catalog.unc.edu/courses/port/",
+    "https://catalog.unc.edu/courses/viet/",
+    "https://catalog.unc.edu/courses/swah/",
+    "https://catalog.unc.edu/courses/yoru/",
+    "https://catalog.unc.edu/courses/wolo/",
+    "https://catalog.unc.edu/courses/lgla/",
+    "https://catalog.unc.edu/courses/cher/",
+    "https://catalog.unc.edu/courses/chwa/",
+    "https://catalog.unc.edu/courses/cata/",
+    "https://catalog.unc.edu/courses/dtch/",
+    "https://catalog.unc.edu/courses/czch/",
+    "https://catalog.unc.edu/courses/bcs/",
+    "https://catalog.unc.edu/courses/plsh/",
+    "https://catalog.unc.edu/courses/hung/",
+    "https://catalog.unc.edu/courses/turk/",
+    "https://catalog.unc.edu/courses/ukrn/",
+    "https://catalog.unc.edu/courses/macd/",
+    "https://catalog.unc.edu/courses/asia/",
+    "https://catalog.unc.edu/courses/clas/",
+    "https://catalog.unc.edu/courses/arch/",
+    "https://catalog.unc.edu/courses/clar/",
+    "https://catalog.unc.edu/courses/gsll/",
+    "https://catalog.unc.edu/courses/roml/",
+    "https://catalog.unc.edu/courses/slav/"
 ]
 OUTPUT_PATH = "data/course_catalog.json"
 CACHE_PATH = "data/course_cache.json"
@@ -206,6 +270,7 @@ def run_ingestion_pipeline():
         try:
             dept_data = scrape_department(url)
             raw_scraped_data.update(dept_data)
+
         except Exception as e:
             logger.error(f"Scraper failed for {url}: {e}")
             
@@ -251,6 +316,8 @@ def run_ingestion_pipeline():
                     course_cache[text_hash] = ast_prereqs
                     save_cache(course_cache)
                     llm_used = True
+
+                    time.sleep(2.5)
 
         # 4. COMPILE AST INTO 2D SOLVER MATRIX
         clean_prereqs = compile_ast_to_2d_array(ast_prereqs) if ast_prereqs else []
