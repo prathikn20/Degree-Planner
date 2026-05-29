@@ -145,6 +145,209 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
                 fulfillment_map[c] = group_desc
 
     return remaining, fulfillment_map
+def _program_total_size(track: str, conc: str, requirements: dict, catalog: dict) -> tuple:
+    """(total_slot_count, total_credit_hours) for a program's full degree requirements.
+    Used to compute per-program 50% exclusivity thresholds."""
+    track_req = requirements.get(track, {})
+    base      = track_req.get("base_requirements", {})
+    conc_data = track_req.get("concentrations", {}).get(conc, {})
+
+    required = base.get("required_courses", []) + conc_data.get("required_courses", [])
+    groups   = base.get("choice_groups",    []) + conc_data.get("choice_groups",    [])
+
+    n_slots   = len(required)
+    n_credits = sum(catalog.get(c, {}).get("credits", 3) for c in required)
+
+    for g in groups:
+        if g.get("credits_required"):
+            cr = g["credits_required"]
+            n_slots   += max(1, cr // 3)
+            n_credits += cr
+        else:
+            n = g.get("courses_required", 1)
+            n_slots   += n
+            n_credits += n * 3      # approximation; actual credits refined at selection time
+
+    return n_slots, n_credits
+
+
+def select_courses_globally(
+    audit_by_track:  dict,
+    requirements:    dict,
+    catalog:         dict,
+    completed:       list,
+    majors_to_check: list,
+    avoid_courses:   list | None = None,
+) -> dict:
+    """
+    Cross-program greedy selector with Lazy Exclusivity enforcement.
+
+    Optimisation goal: maximise the number of courses that satisfy requirement
+    slots in MORE THAN ONE distinct program (inter-program double-dipping).
+
+    Constraints:
+      1. Intra-program exclusivity — a course fills at most ONE requirement group
+         within a given program (base + concentration share one pool).
+      2. Strict-majority exclusivity — for every program, MORE THAN 50% of its
+         total required slots (by count and by credit hours) must be filled by
+         courses exclusive to that program.  The algorithm assumes sharing is OK
+         and lazily rejects only when this threshold would be exceeded.
+
+    Returns: track_id → (remaining_courses: list[str], fulfillment_map: dict[str,str])
+    """
+    completed_set = set(completed)
+    avoid_set     = set(avoid_courses) if avoid_courses else set()
+
+    # ── Per-program mutable state ─────────────────────────────────────────────
+    class _PS:
+        __slots__ = ("max_shared_slots", "max_shared_credits",
+                     "shared_slots", "shared_credits", "consumed")
+
+        def __init__(self, track: str, conc: str):
+            n_slots, n_credits = _program_total_size(track, conc, requirements, catalog)
+            # strict majority → shared < total/2 → max_shared = (total-1)//2
+            self.max_shared_slots   = (n_slots   - 1) // 2
+            self.max_shared_credits = (n_credits - 1) // 2
+            self.shared_slots   = 0
+            self.shared_credits = 0
+            self.consumed: set = set()      # intra-program dedup
+
+    ps: dict = {m["track"]: _PS(m["track"], m["concentration"]) for m in majors_to_check}
+
+    # ── Build pending slots from each program's audit results ─────────────────
+    # Each slot is a mutable dict representing one still-unfilled requirement group.
+    slots: list = []
+
+    for m in majors_to_check:
+        track, conc = m["track"], m["concentration"]
+        results     = audit_by_track[track]
+        track_req   = requirements.get(track, {})
+        base        = track_req.get("base_requirements", {})
+        conc_data   = track_req.get("concentrations", {}).get(conc, {})
+
+        for course in base.get("required_courses", []) + conc_data.get("required_courses", []):
+            if course in results["unsatisfied"]:
+                slots.append({
+                    "track": track, "gid": course, "desc": "Required Course",
+                    "options": [course],
+                    "needed": 1, "credits": None, "accrued": 0,
+                })
+
+        for group in base.get("choice_groups", []) + conc_data.get("choice_groups", []):
+            gid = group["id"]
+            if gid not in results["unsatisfied"]:
+                continue
+            info    = results["missing_courses"].get(gid, {})
+            options = [o for o in info.get("options", []) if o not in avoid_set]
+            desc    = group.get("description") or gid
+            if group.get("credits_required"):
+                slots.append({
+                    "track": track, "gid": gid, "desc": desc, "options": options,
+                    "needed": None,
+                    "credits": info.get("credits_still_needed", group["credits_required"]),
+                    "accrued": 0,
+                })
+            else:
+                slots.append({
+                    "track": track, "gid": gid, "desc": desc, "options": options,
+                    "needed": info.get("still_needed", group.get("courses_required", 1)),
+                    "credits": None, "accrued": 0,
+                })
+
+    # ── Output containers ─────────────────────────────────────────────────────
+    remaining_out:   dict = {m["track"]: [] for m in majors_to_check}
+    fulfillment_out: dict = {m["track"]: {} for m in majors_to_check}
+
+    # ── Helpers ───────────────────────────────────────────────────────────────
+    def _filled(s: dict) -> bool:
+        if s["credits"] is not None:
+            return s["accrued"] >= s["credits"]
+        return s["needed"] is not None and s["needed"] <= 0
+
+    def _can_share(course: str, tracks: list) -> bool:
+        """True iff adding this course as shared keeps every involved program
+        within its strict-majority-exclusive budget (both slot count and credits)."""
+        if len(tracks) <= 1:
+            return True
+        cr = catalog.get(course, {}).get("credits", 3)
+        for t in tracks:
+            p = ps[t]
+            if p.shared_slots >= p.max_shared_slots:
+                return False
+            if p.shared_credits + cr > p.max_shared_credits:
+                return False
+        return True
+
+    # ── Greedy selection loop ─────────────────────────────────────────────────
+    for _ in range(len(slots) * 300):       # safety cap prevents infinite loops
+        open_s = [s for s in slots if not _filled(s)]
+        if not open_s:
+            break
+
+        # Build course → [open-slot indices] for every course still assignable
+        c2si: dict = {}
+        for i, s in enumerate(open_s):
+            consumed = ps[s["track"]].consumed
+            for c in s["options"]:
+                if c not in consumed:
+                    c2si.setdefault(c, []).append(i)
+
+        if not c2si:
+            break   # no remaining assignable courses (may leave slots unfilled)
+
+        # Score: prioritise courses satisfying more distinct programs;
+        # break ties by lower prerequisite depth then lexicographic code.
+        def _score(c: str) -> tuple:
+            n_tracks = len({open_s[i]["track"] for i in c2si[c]})
+            depth    = get_prereq_depth(c, catalog, completed_set)
+            return (-n_tracks, depth, c)
+
+        best = min(c2si, key=_score)
+        cr   = catalog.get(best, {}).get("credits", 3)
+
+        # For each track, pick the most-constrained fillable slot (fewest remaining options).
+        # Most-constrained-first reduces the chance of painting ourselves into a corner.
+        t2si: dict = {}
+        t2n:  dict = {}
+        for idx in c2si[best]:
+            t = open_s[idx]["track"]
+            n_alts = sum(1 for c in open_s[idx]["options"]
+                         if c not in ps[t].consumed and c != best)
+            if t not in t2si or n_alts < t2n[t]:
+                t2si[t] = idx
+                t2n[t]  = n_alts
+
+        tracks = list(t2si)
+
+        # Lazy exclusivity: assume sharing OK, reject only if 50% rule violated
+        if len(tracks) > 1 and not _can_share(best, tracks):
+            # Fall back to exclusive for the most-constrained track
+            sole = min(tracks, key=lambda t: t2n[t])
+            t2si = {sole: t2si[sole]}
+            tracks = [sole]
+
+        is_shared = len(tracks) > 1
+
+        # Commit the assignment
+        for t, idx in t2si.items():
+            s = open_s[idx]
+            if s["credits"] is not None:
+                s["accrued"] += cr
+            else:
+                s["needed"] -= 1
+
+            ps[t].consumed.add(best)
+            if is_shared:
+                ps[t].shared_slots   += 1
+                ps[t].shared_credits += cr
+
+            if best not in remaining_out[t]:
+                remaining_out[t].append(best)
+            fulfillment_out[t][best] = s["desc"]
+
+    return {t: (remaining_out[t], fulfillment_out[t]) for t in remaining_out}
+
+
 def compute_in_degrees(graph):
     in_degree = {course: 0 for course in graph}
     for course in graph:
