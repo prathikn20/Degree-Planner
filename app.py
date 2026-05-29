@@ -1,6 +1,8 @@
 import io
 import os
+import re as _re
 import tempfile
+from collections import Counter
 
 import pandas as pd
 import streamlit as st
@@ -136,11 +138,8 @@ def build_prereq_dot(
     assumed_completed: list[str],
     in_progress: list[str],
 ) -> str:
-    import re as _re
-
     completed_set = set(assumed_completed)
     in_prog_set   = set(in_progress)
-    remaining_set = set(path)
 
     visible: set[str] = set(path)
     edges: list[tuple[str, str]] = []
@@ -149,37 +148,35 @@ def build_prereq_dot(
         pathways = catalog.get(course, {}).get("prerequisites", [])
         if not pathways:
             continue
-        # Prefer the prereq pathway that overlaps most with what the student already has
+        # Pick the shortest prereq pathway, preferring those with already-completed courses
         completed_paths = [p for p in pathways if any(c in completed_set for c in p)]
         best = min(completed_paths or pathways, key=len)
         for prereq in best:
-            if prereq in completed_set or prereq in remaining_set:
-                visible.add(prereq)
-                edges.append((prereq, course))
+            visible.add(prereq)   # include even if outside path — shows full context
+            edges.append((prereq, course))
 
     def _node(c: str) -> str:
-        name = catalog.get(c, {}).get("name", "")
-        short = (name[:20] + "…") if len(name) > 20 else name
+        name  = catalog.get(c, {}).get("name", "")
+        short = (name[:28] + "…") if len(name) > 28 else name
         label = f"{c}\\n{short}" if short else c
-        # Escape any double-quotes inside the label
         label = label.replace('"', '\\"')
         if c in in_prog_set:
-            fill, border = "#FFD966", "#7d6608"   # amber  – in progress
+            fill, border = "#FFD966", "#7d6608"
         elif c in completed_set:
-            fill, border = "#93C47D", "#2d5f2d"   # green  – completed
+            fill, border = "#93C47D", "#2d5f2d"
         else:
-            fill, border = "#6FA8DC", "#1a4a6b"   # blue   – still needed
+            fill, border = "#6FA8DC", "#1a4a6b"
         return (
             f'    "{c}" [label="{label}", fillcolor="{fill}", '
-            f'color="{border}", penwidth=1.5];'
+            f'color="{border}", penwidth=1.8, width=2.2, height=0.7];'
         )
 
     lines = [
         "digraph {",
-        '    rankdir=LR;',
-        '    graph [bgcolor="transparent", pad="0.3", nodesep="0.4", ranksep="0.7"];',
-        '    node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=9];',
-        '    edge [color="#666666", arrowsize=0.7];',
+        '    rankdir=TB;',
+        '    graph [bgcolor="transparent", pad="0.8", nodesep="1.0", ranksep="1.6"];',
+        '    node [shape=box, style="filled,rounded", fontname="Helvetica", fontsize=12];',
+        '    edge [color="#555555", arrowsize=1.0, penwidth=1.4];',
     ]
     for node in sorted(visible):
         lines.append(_node(node))
@@ -193,36 +190,46 @@ def build_prereq_dot(
 
 def render_audit(
     results: dict,
-    double_dipped: set | None = None,
     path: list | None = None,
     catalog: dict | None = None,
     planned: list | None = None,
+    global_course_usage: dict | None = None,
+    req_descriptions: dict | None = None,
 ) -> None:
     satisfied     = results.get("satisfied", [])
     missing       = results.get("missing_courses", {})
     unsatisfied   = results.get("unsatisfied", [])
     satisfied_map = results.get("satisfied_map", {})
-    double_dipped = double_dipped or set()
     path_set      = set(path or [])
     planned_set   = set(planned or [])
     catalog       = catalog or {}
+    usage         = global_course_usage or {}
+    descriptions  = req_descriptions or {}
 
-    def _course_chip(code: str) -> str:
-        name = catalog.get(code, {}).get("name", "")
-        suffix = " _(planned)_" if code in planned_set else ""
-        return f"**{code}**" + (f" — {name}" if name else "") + suffix
+    def _spaced(code: str) -> str:
+        return _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', code)
+
+    def _req_header(req_id: str) -> str:
+        name = descriptions.get(req_id, "")
+        return f"**{req_id}** — {name}" if name and name != req_id else f"**{req_id}**"
 
     with st.expander(f"✅ Satisfied Requirements ({len(satisfied)})", expanded=False):
         if satisfied:
             for req in satisfied:
                 courses_used = satisfied_map.get(req, [])
-                is_dipped    = any(c in double_dipped for c in courses_used)
-                badge        = " `[Double-Dipped]`" if is_dipped else ""
                 if courses_used:
-                    fulfilled = ", ".join(_course_chip(c) for c in courses_used)
-                    st.markdown(f"- ✅ **{req}** — Fulfilled by: {fulfilled}{badge}")
+                    chips      = []
+                    is_double  = False
+                    for c in courses_used:
+                        suffix = " _(planned)_" if c in planned_set else ""
+                        chips.append(f"**{_spaced(c)}**{suffix}")
+                        if usage.get(c, 0) > 1:
+                            is_double = True
+                    fulfilled = ", ".join(chips)
+                    badge     = " &nbsp;🔄 **[Double-Counted]**" if is_double else ""
+                    st.markdown(f"- ✅ {_req_header(req)} — Fulfilled by: {fulfilled}{badge}")
                 else:
-                    st.markdown(f"- ✅ **{req}**{badge}")
+                    st.markdown(f"- ✅ {_req_header(req)}")
         else:
             st.write("No requirements satisfied yet.")
 
@@ -230,23 +237,25 @@ def render_audit(
         if missing:
             for req_id, details in missing.items():
                 if isinstance(details, list):
-                    # Required course — no alternatives, must take this specific one
-                    st.markdown(f"- ❌ **{req_id}** — Required but not yet completed")
+                    st.markdown(f"- ❌ {_req_header(req_id)} — Required but not yet completed")
                 else:
                     needed  = details.get("still_needed") or details.get("credits_still_needed", 0)
                     suffix  = "credits" if "credits_still_needed" in details else "course(s)"
                     options = details.get("options", [])
 
-                    # Recommended = first option already in Kahn's path
                     recommended  = next((o for o in options if o in path_set), None)
                     alternatives = [o for o in options if o != recommended][:3]
 
-                    rec_part = f" — Recommended: **{recommended}**" if recommended else f" — Need **{needed}** more {suffix}"
+                    rec_part = (
+                        f" — Recommended: **{_spaced(recommended)}**"
+                        if recommended else
+                        f" — Need **{needed}** more {suffix}"
+                    )
                     alt_part = (
-                        f" *(Alternatives: {', '.join(alternatives)})*"
+                        f" *(Alternatives: {', '.join(_spaced(o) for o in alternatives)})*"
                         if alternatives and recommended else ""
                     )
-                    st.markdown(f"- ❌ **{req_id}**{rec_part}{alt_part}")
+                    st.markdown(f"- ❌ {_req_header(req_id)}{rec_part}{alt_part}")
         else:
             st.success("All requirements are satisfied!")
 
@@ -530,22 +539,28 @@ if uploaded is not None:
     tab_labels = [_tab_label(m) for m in majors_to_check]
     tabs = st.tabs(tab_labels)
 
-    # Build cross-track double-dip map: for each track, which courses were also
-    # used by at least one other track in this session?
-    all_used: dict[str, set] = {
-        m["track"]: audit[m["track"]]["results"].get("courses_used", set())
-        for m in majors_to_check
-        if m["track"] in audit
-    }
-
-    def _double_dipped_for(track: str) -> set:
-        others = set().union(*(u for t, u in all_used.items() if t != track))
-        return all_used.get(track, set()) & others
+    # Global course-usage counter: number of programs each course appears in.
+    # Used to flag double-counted courses in the satisfied requirements view.
+    global_course_usage: dict[str, int] = Counter(
+        c
+        for m in majors_to_check if m["track"] in audit
+        for c in audit[m["track"]]["results"].get("courses_used", set())
+    )
 
     for tab, program in zip(tabs, majors_to_check):
         with tab:
             track_data = audit.get(program["track"])
             if track_data:
+                # Build a req_id → human description map for this program
+                req_descriptions: dict[str, str] = {}
+                _prog = requirements.get(program["track"], {})
+                _base = _prog.get("base_requirements", {})
+                _conc = _prog.get("concentrations", {}).get(program["concentration"], {})
+                for _cid in _base.get("required_courses", []) + _conc.get("required_courses", []):
+                    req_descriptions[_cid] = catalog.get(_cid, {}).get("name", "")
+                for _grp in _base.get("choice_groups", []) + _conc.get("choice_groups", []):
+                    req_descriptions[_grp["id"]] = _grp.get("description", "")
+
                 pct = track_data["results"].get("completion_pct", 0.0)
                 satisfied_n = len(track_data["results"].get("satisfied", []))
                 total_n     = satisfied_n + len(track_data["results"].get("unsatisfied", []))
@@ -557,10 +572,11 @@ if uploaded is not None:
                 st.caption(f"{satisfied_n} of {total_n} requirements satisfied")
                 render_audit(
                     track_data["results"],
-                    double_dipped=_double_dipped_for(program["track"]),
                     path=path,
                     catalog=catalog,
                     planned=planned,
+                    global_course_usage=global_course_usage,
+                    req_descriptions=req_descriptions,
                 )
             else:
                 st.warning(f"No audit data found for {fmt(program['track'])}.")
@@ -576,25 +592,67 @@ if uploaded is not None:
     if path:
         unknown_in_path = [c for c in path if c not in catalog]
 
-        # ── Prerequisite graph ─────────────────────────────────────────────────
-        assumed_for_graph = list(dict.fromkeys(completed + in_progress + planned))
-        with st.expander("🕸️ Visualize Prerequisite Path", expanded=False):
-            st.caption(
-                "🟢 **Green** = already completed &nbsp;|&nbsp; "
-                "🟡 **Amber** = in-progress this semester &nbsp;|&nbsp; "
-                "🔵 **Blue** = still needed &nbsp;|&nbsp; "
-                "Arrows show prerequisite dependencies."
-            )
-            dot_src = build_prereq_dot(path, catalog, assumed_for_graph, in_progress)
-            st.graphviz_chart(dot_src, use_container_width=True)
-
         # ── Course table ───────────────────────────────────────────────────────
+        # Build course → fulfillment label (which requirement it satisfies)
+        _path_set = set(path)
+        _course_fulfillment: dict[str, list[str]] = {}
+
+        for _m in majors_to_check:
+            _track = _m["track"]
+            if _track not in audit:
+                continue
+            _missing = audit[_track]["results"].get("missing_courses", {})
+            _mprog   = requirements.get(_track, {})
+            _mbase   = _mprog.get("base_requirements", {})
+            _mconc   = _mprog.get("concentrations", {}).get(_m["concentration"], {})
+            _req_desc: dict[str, str] = {}
+            for _grp in _mbase.get("choice_groups", []) + _mconc.get("choice_groups", []):
+                _req_desc[_grp["id"]] = _grp.get("description", _grp["id"])
+
+            _plabel = "Gen Ed" if _track == GEN_ED_TRACK else fmt(_track)
+
+            for _req_id, _details in _missing.items():
+                if isinstance(_details, list):
+                    for _c in _details:
+                        if _c in _path_set:
+                            _course_fulfillment.setdefault(_c, []).append(
+                                f"{_plabel}: Required Course"
+                            )
+                else:
+                    _desc = _req_desc.get(_req_id, _req_id)
+                    for _c in _details.get("options", []):
+                        if _c in _path_set:
+                            _course_fulfillment.setdefault(_c, []).append(
+                                f"{_plabel}: {_desc}"
+                            )
+
+        # For prerequisites that unlock path courses, label them accordingly
+        _assumed_set = set(completed + in_progress + planned)
+        _prereq_for: dict[str, list[str]] = {}
+        for _course in path:
+            _pathways = catalog.get(_course, {}).get("prerequisites", [])
+            if _pathways:
+                _cpaths = [p for p in _pathways if any(c in _assumed_set for c in p)]
+                _best   = min(_cpaths or _pathways, key=len)
+                for _pre in _best:
+                    if _pre in _path_set and _pre != _course:
+                        _prereq_for.setdefault(_pre, []).append(_course)
+
+        def _fulfills_label(course: str) -> str:
+            if course in _course_fulfillment:
+                return " · ".join(_course_fulfillment[course])
+            if course in _prereq_for:
+                targets = ", ".join(_prereq_for[course][:3])
+                return f"Prereq → {targets}"
+            return "—"
+
         rows = [
             {
                 "#":       i,
                 "Course":  course,
                 "Name":    catalog.get(course, {}).get("name", "—"),
                 "Credits": catalog.get(course, {}).get("credits", 3),
+                "Fulfills": _fulfills_label(course),
             }
             for i, course in enumerate(path, 1)
         ]
@@ -608,10 +666,11 @@ if uploaded is not None:
 
         # ── Export CSV ─────────────────────────────────────────────────────────
         csv_buf = io.StringIO()
-        csv_buf.write("Course Code,Course Name,Credits\n")
+        csv_buf.write("Course Code,Course Name,Credits,Fulfills\n")
         for row in rows:
-            name_escaped = row["Name"].replace('"', '""')
-            csv_buf.write(f'"{row["Course"]}","{name_escaped}",{row["Credits"]}\n')
+            name_escaped     = row["Name"].replace('"', '""')
+            fulfills_escaped = row["Fulfills"].replace('"', '""')
+            csv_buf.write(f'"{row["Course"]}","{name_escaped}",{row["Credits"]},"{fulfills_escaped}"\n')
 
         st.download_button(
             label="📥 Download Graduation Plan",
@@ -620,6 +679,23 @@ if uploaded is not None:
             mime="text/csv",
             use_container_width=True,
         )
+
+        # ── Prerequisite graph (after table for better context) ────────────────
+        assumed_for_graph = list(dict.fromkeys(completed + in_progress + planned))
+        with st.expander("🕸️ Prerequisite Tree", expanded=True):
+            st.caption(
+                "🟢 **Green** = already completed &nbsp;|&nbsp; "
+                "🟡 **Amber** = in-progress this semester &nbsp;|&nbsp; "
+                "🔵 **Blue** = still needed &nbsp;|&nbsp; "
+                "Arrows point from prerequisite → course."
+            )
+            dot_src = build_prereq_dot(path, catalog, assumed_for_graph, in_progress)
+            st.markdown(
+                "<style>div[data-testid='stGraphVizChart'] iframe"
+                "{ min-height: 640px !important; }</style>",
+                unsafe_allow_html=True,
+            )
+            st.graphviz_chart(dot_src, use_container_width=True)
     else:
         st.success("No remaining required courses — all requirements are covered by your transcript!")
 

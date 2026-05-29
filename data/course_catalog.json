@@ -1461,7 +1461,7 @@
   },
   "DATA542": {
     "name": "Insurance: Balancing Risk and Return",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["MATH232", "MATH231"],
       ["STOR151", "STOR155"],
@@ -2394,7 +2394,7 @@
   },
   "STOR765": {
     "name": "Statistical Consulting",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -4180,7 +4180,7 @@
   },
   "BIOC649": {
     "name": "Mathematics and Macromolecules",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -4411,7 +4411,7 @@
   },
   "BIOC703": {
     "name": "Seminars in Chromatin and Epigenetics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": ["PHRS712"],
@@ -4483,7 +4483,7 @@
   },
   "BIOC716": {
     "name": "Biophysics Colloquium",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -6743,7 +6743,7 @@
   },
   "BIOL648": {
     "name": "Palynology",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -18352,7 +18352,7 @@
   },
   "POLI325": {
     "name": "Institute of Politics Fellows Seminar in Civic Leadership",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19577,7 +19577,7 @@
   },
   "BUSI100": {
     "name": "Introduction to Business: People, Profits, Planet",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19593,7 +19593,7 @@
   },
   "BUSI188": {
     "name": "Foundations of Leadership: Discovering Your Strengths",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19601,7 +19601,7 @@
   },
   "BUSI189": {
     "name": "Introduction to Careers in Business",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19617,7 +19617,7 @@
   },
   "BUSI191": {
     "name": "Gateway into Capital Markets and Investments",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19773,7 +19773,7 @@
   },
   "BUSI402": {
     "name": "Applied Microeconomics for Business",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["ECON101"]
     ],
@@ -19791,7 +19791,7 @@
   },
   "BUSI404": {
     "name": "Business Ethics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19833,7 +19833,7 @@
   },
   "BUSI409": {
     "name": "Advanced Corporate Finance",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -19853,7 +19853,7 @@
   },
   "BUSI411": {
     "name": "Strategy I: Competitive Strategy",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19861,7 +19861,7 @@
   },
   "BUSI412": {
     "name": "Strategy II: Global Corporate Strategy",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI411"]
     ],
@@ -19879,7 +19879,7 @@
   },
   "BUSI444": {
     "name": "Flourishing: Coaching and Leadership",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19897,7 +19897,7 @@
   },
   "BUSI470": {
     "name": "Storytelling to Influence and Inspire",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19913,7 +19913,7 @@
   },
   "BUSI487": {
     "name": "Creating Data-Driven Business Insights: Databases and Visualization",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19929,7 +19929,7 @@
   },
   "BUSI490": {
     "name": "Business Topics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19961,7 +19961,7 @@
   },
   "BUSI501": {
     "name": "Professional Selling Strategies and Skills",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19969,7 +19969,7 @@
   },
   "BUSI502": {
     "name": "Entrepreneurial Finance",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -19979,7 +19979,7 @@
   },
   "BUSI503": {
     "name": "Family Business I: Introduction to Family Enterprise",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -19987,7 +19987,7 @@
   },
   "BUSI504": {
     "name": "Startup UNC",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI500"]
     ],
@@ -20005,7 +20005,7 @@
   },
   "BUSI506": {
     "name": "Venture Capital Fundamentals",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20021,7 +20021,7 @@
   },
   "BUSI508": {
     "name": "Sustainable Business and Impact Entrepreneurship",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20037,7 +20037,7 @@
   },
   "BUSI510": {
     "name": "The Challenge of Healthcare: A System Overview",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20045,7 +20045,7 @@
   },
   "BUSI511": {
     "name": "Regional Venture Capital Immersion",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI506"]
     ],
@@ -20055,7 +20055,7 @@
   },
   "BUSI512": {
     "name": "Family Business II: Governance and Ownership",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI503"]
     ],
@@ -20065,7 +20065,7 @@
   },
   "BUSI513": {
     "name": "Venture Capital in Action",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI502", "BUSI506"]
     ],
@@ -20075,7 +20075,7 @@
   },
   "BUSI514": {
     "name": "STAR - Experiential Learning Project",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI554"]
     ],
@@ -20085,7 +20085,7 @@
   },
   "BUSI517": {
     "name": "Private Equity and Debt Markets",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20121,7 +20121,7 @@
   },
   "BUSI522": {
     "name": "Personal Branding and Professional Relationships",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20129,7 +20129,7 @@
   },
   "BUSI523": {
     "name": "Diversity and Inclusion at Work",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20145,7 +20145,7 @@
   },
   "BUSI525": {
     "name": "Advanced Business Presentations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI401"]
     ],
@@ -20163,7 +20163,7 @@
   },
   "BUSI527": {
     "name": "Gender at Work",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20171,7 +20171,7 @@
   },
   "BUSI528": {
     "name": "Leadership Communication",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20179,7 +20179,7 @@
   },
   "BUSI529": {
     "name": "Intercultural Communication in the Global Workplace",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20187,7 +20187,7 @@
   },
   "BUSI530": {
     "name": "Corporate Communication: Social Advocacy and Activism",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20215,7 +20215,7 @@
   },
   "BUSI536": {
     "name": "Project Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI403"]
     ],
@@ -20225,7 +20225,7 @@
   },
   "BUSI537": {
     "name": "Retail Operations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI403"]
     ],
@@ -20235,7 +20235,7 @@
   },
   "BUSI538": {
     "name": "Sustainable Operations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI403"]
     ],
@@ -20245,7 +20245,7 @@
   },
   "BUSI539": {
     "name": "Health Care Operations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI403"]
     ],
@@ -20255,7 +20255,7 @@
   },
   "BUSI540": {
     "name": "Leadership for Wicked Problems",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20263,7 +20263,7 @@
   },
   "BUSI545": {
     "name": "Negotiations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI405"]
     ],
@@ -20273,7 +20273,7 @@
   },
   "BUSI546": {
     "name": "Sport Marketing and Media",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20281,7 +20281,7 @@
   },
   "BUSI547": {
     "name": "Managerial Decision Making",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI405"]
     ],
@@ -20291,7 +20291,7 @@
   },
   "BUSI548": {
     "name": "Financing Affordable Housing",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI585", "BUSI408"]
     ],
@@ -20301,7 +20301,7 @@
   },
   "BUSI550": {
     "name": "People Analytics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20309,7 +20309,7 @@
   },
   "BUSI552": {
     "name": "Strategic Innovation",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20327,7 +20327,7 @@
   },
   "BUSI555": {
     "name": "Groups and Teams in Organizations",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI405"]
     ],
@@ -20337,7 +20337,7 @@
   },
   "BUSI556": {
     "name": "Thinking Creatively: Cognitive Tools for Individuals and Teams",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20371,7 +20371,7 @@
   },
   "BUSI563": {
     "name": "Retail & E-tail Marketing",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20417,7 +20417,7 @@
   },
   "BUSI568": {
     "name": "Customer Insights and Analytics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["STOR155"]
     ],
@@ -20427,7 +20427,7 @@
   },
   "BUSI571": {
     "name": "Strategic Cost Analysis and Performance Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20445,7 +20445,7 @@
   },
   "BUSI575": {
     "name": "Financial Statement Analysis and Valuation",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI407", "BUSI408"]
     ],
@@ -20473,7 +20473,7 @@
   },
   "BUSI581": {
     "name": "Financial Modeling for Leveraged Buyout Transactions",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20521,7 +20521,7 @@
   },
   "BUSI586": {
     "name": "Personal Finance",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20531,7 +20531,7 @@
   },
   "BUSI587": {
     "name": "Investment Banking",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20541,7 +20541,7 @@
   },
   "BUSI588": {
     "name": "Introduction to Derivative Securities and Risk Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20551,7 +20551,7 @@
   },
   "BUSI589": {
     "name": "Fixed Income",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20579,7 +20579,7 @@
   },
   "BUSI597": {
     "name": "Sustainable Finance",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20587,7 +20587,7 @@
   },
   "BUSI598": {
     "name": "Alternative Investments",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI580", "BUSI408"],
       ["BUSI588", "BUSI408"]
@@ -20598,7 +20598,7 @@
   },
   "BUSI600": {
     "name": "Risk Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20608,7 +20608,7 @@
   },
   "BUSI601": {
     "name": "Real Estate Finance",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20618,7 +20618,7 @@
   },
   "BUSI602": {
     "name": "Strategic Economics",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20626,7 +20626,7 @@
   },
   "BUSI603": {
     "name": "Real Estate Development",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI585", "BUSI408"]
     ],
@@ -20636,7 +20636,7 @@
   },
   "BUSI604": {
     "name": "Real Estate and Capital Markets",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20656,7 +20656,7 @@
   },
   "BUSI606": {
     "name": "Buyout Structures and Deals",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20666,7 +20666,7 @@
   },
   "BUSI607": {
     "name": "Inside the Capital Markets - Institutions, Players and Regulators",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20676,7 +20676,7 @@
   },
   "BUSI608": {
     "name": "Introduction to FinTech - Blockchain Technologies and Cryptocurrencies",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20700,7 +20700,7 @@
   },
   "BUSI618": {
     "name": "Global Financial Markets",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI408"]
     ],
@@ -20710,7 +20710,7 @@
   },
   "BUSI625": {
     "name": "Global Healthcare Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20718,7 +20718,7 @@
   },
   "BUSI626": {
     "name": "Introduction to Healthcare Management",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20726,7 +20726,7 @@
   },
   "BUSI627": {
     "name": "Healthcare Brand Plan",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20734,7 +20734,7 @@
   },
   "BUSI653": {
     "name": "Applied Learning: Symposium Core Committee",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -20742,7 +20742,7 @@
   },
   "BUSI688": {
     "name": "Applied Trading Strategies",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["BUSI588", "BUSI408"]
     ],
@@ -20998,7 +20998,7 @@
   },
   "HPM605": {
     "name": "Practice Application Journaling I",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21006,7 +21006,7 @@
   },
   "HPM606": {
     "name": "Practice Application Journaling II",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["HPM605"]
     ],
@@ -21016,7 +21016,7 @@
   },
   "HPM607": {
     "name": "Practice Application Journaling III",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21024,7 +21024,7 @@
   },
   "HPM608": {
     "name": "Practice Application Journaling IV",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21032,7 +21032,7 @@
   },
   "HPM609": {
     "name": "Practice Application Journaling V",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21040,7 +21040,7 @@
   },
   "HPM610": {
     "name": "Practice Application Journaling VI",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21056,7 +21056,7 @@
   },
   "HPM630": {
     "name": "IHI Course in Healthcare Quality Improvement",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21174,7 +21174,7 @@
   },
   "HPM705": {
     "name": "Healthcare Management Skills Development Workshop I",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
@@ -21182,7 +21182,7 @@
   },
   "HPM706": {
     "name": "Healthcare Management Skills Development Workshop II",
-    "credits": 5,
+    "credits": 1.5,
     "prerequisites": [
       ["HPM705"]
     ],
