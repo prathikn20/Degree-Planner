@@ -84,9 +84,14 @@ def expand_prerequisites(courses, catalog, completed_set):
     return all_needed
 
 def get_remaining_courses(results, requirements, catalog, completed, avoid_courses=None, track_id="COMP_BS", concentration_id="None"):
-    completed_set = set(completed)
-    avoid_set     = set(avoid_courses) if avoid_courses else set()
-    remaining = []
+    completed_set    = set(completed)
+    avoid_set        = set(avoid_courses) if avoid_courses else set()
+    remaining        = []
+    # Tracks courses already assigned to a group within this program so the
+    # same course cannot fill two choice-group slots in the same major.
+    # Scoped per call, so inter-major double-dipping (e.g. STOR415 counting
+    # for both Data Science BS and Gen Ed) is intentionally unaffected.
+    consumed_by_path = set()
 
     track_data = requirements.get(track_id, {})
     if not track_data:
@@ -103,6 +108,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
     for course in program.get("required_courses", []):
         if course in results["unsatisfied"]:
             remaining.append(course)
+            consumed_by_path.add(course)
 
     for group in program.get("choice_groups", []):
         if group["id"] not in results["unsatisfied"]:
@@ -112,7 +118,7 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
         options = group_info["options"]
 
         sorted_options = sorted(
-            [c for c in options if c not in avoid_set],
+            [c for c in options if c not in avoid_set and c not in consumed_by_path],
             key=lambda c: get_prereq_depth(c, catalog, completed_set)
         )
 
@@ -123,12 +129,14 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
                 if current_credits >= credits_needed:
                     break
                 remaining.append(opt)
+                consumed_by_path.add(opt)
                 current_credits += catalog.get(opt, {}).get("credits", 3)
-                
+
         else:
             courses_needed = group_info.get("still_needed", group.get("courses_required", 1))
             chosen = sorted_options[:courses_needed]
             remaining.extend(chosen)
+            consumed_by_path.update(chosen)
 
     return remaining
 def compute_in_degrees(graph):
