@@ -10,13 +10,13 @@ import re
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.scraper.req_scraper import scrape_major_requirements
-from src.scraper.req_assembler import assemble_section
+from src.scraper.req_assembler import assemble_section, classify_section_type
 from src.scraper.llm_req_parser import parse_rule_text
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-DEFAULT_MODEL   = "qwen2.5:32b"
+DEFAULT_MODEL   = "qwen2.5:14b"
 OUTPUT_PATH     = "data/test_degree_requirements.json"
 CACHE_PATH      = "data/req_cache.json"
 
@@ -25,7 +25,7 @@ CACHE_PATH      = "data/req_cache.json"
 # scrapeable from a sc_courselist page, so it is intentionally excluded here —
 # keep maintaining it manually in the production file.
 TARGET_TRACKS = {
-    # ── Majors ────────────────────────────────────────────────────────────────
+    # ── BS / BSBA / BSPH Majors ───────────────────────────────────────────────
     "Computer_Science_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/computer-science-major-bs/",
     "Data_Science_BS":
@@ -33,7 +33,7 @@ TARGET_TRACKS = {
     "Mathematics_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/mathematics-major-bs/",
     "Statistics_and_Analytics_BS":
-        "https://catalog.unc.edu/undergraduate/programs-study/statistics-analytics-major-bs/",
+        "https://catalog.unc.edu/undergraduate/programs-study/statistics-analytics-majors-bs/",
     "Economics_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/economics-major-bs/",
     "Biology_BS":
@@ -46,18 +46,75 @@ TARGET_TRACKS = {
         "https://catalog.unc.edu/undergraduate/programs-study/neuroscience-major-bs/",
     "Psychology_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/psychology-major-bs/",
-    "Political_Science_BA":
-        "https://catalog.unc.edu/undergraduate/programs-study/political-science-major-ba/",
-    "Public_Policy_BA":
-        "https://catalog.unc.edu/undergraduate/programs-study/public-policy-major-ba/",
     "Exercise_and_Sport_Science_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-bs/",
     "Biomedical_Engineering_BS":
         "https://catalog.unc.edu/undergraduate/programs-study/biomedical-engineering-major-bs/",
     "Biostatistics_BSPH":
-        "https://catalog.unc.edu/undergraduate/programs-study/biostatistics-bsph/",
+        "https://catalog.unc.edu/undergraduate/programs-study/biostatistics-major-bsph/",
     "Business_Administration_BSBA":
-        "https://catalog.unc.edu/undergraduate/programs-study/business-administration-bsba/",
+        "https://catalog.unc.edu/undergraduate/programs-study/business-administration-major-bsba/",
+    "Applied_Sciences_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/applied-sciences-major-bs/",
+    "Earth_and_Marine_Sciences_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/earth-marine-sciences-major-bs/",
+    "Environmental_Science_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/environmental-science-bs/",
+    "Information_Science_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/information-science-major-bs/",
+    "Neurodiagnostics_and_Sleep_Science_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/neurodiagnostics-sleep-sciences-major-bs/",
+    "Community_and_Global_Public_Health_BSPH":
+        "https://catalog.unc.edu/undergraduate/programs-study/community-global-public-health-major-bsph/",
+    "Health_Policy_and_Management_BSPH":
+        "https://catalog.unc.edu/undergraduate/programs-study/health-policy-management-major-bsph/",
+    "Nutrition_BSPH":
+        "https://catalog.unc.edu/undergraduate/programs-study/nutrition-major-bsph/",
+    # ── BA Majors ─────────────────────────────────────────────────────────────
+    "Political_Science_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/political-science-major-ba/",
+    "Public_Policy_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/public-policy-major-ba/",
+    "Sociology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/sociology-major-ba/",
+    "Economics_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/economics-major-ba/",
+    "Psychology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/psychology-major-ba/",
+    "Computer_Science_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/computer-science-major-ba/",
+    "Data_Science_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/data-science-major-ba/",
+    "Mathematics_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/mathematics-major-ba/",
+    "Biology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/biology-major-ba/",
+    "Chemistry_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/chemistry-major-ba/",
+    "Physics_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/physics-major-ba/",
+    "Linguistics_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/linguistics-major-ba/",
+    "Anthropology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/anthropology-major-ba/",
+    "Medical_Anthropology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/medical-anthropology-major-ba/",
+    "Global_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/global-studies-major-ba/",
+    "Environmental_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/environmental-studies-major-ba/",
+    "Peace_War_and_Defense_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/peace-war-defense-major-ba/",
+    "Management_and_Society_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/management-society-major-ba/",
+    "Communication_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/communication-studies-major-ba/",
+    "Exercise_and_Sport_Science_Fitness_Professional_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-ba-fitness-professional/",
+    "Exercise_and_Sport_Science_General_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-ba-general/",
+    "Exercise_and_Sport_Science_Sport_Administration_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-ba-sport-administration/",
     # ── Minors ────────────────────────────────────────────────────────────────
     "Computer_Science_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/computer-science-minor/",
@@ -65,6 +122,8 @@ TARGET_TRACKS = {
         "https://catalog.unc.edu/undergraduate/programs-study/data-science-minor/",
     "Mathematics_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/mathematics-minor/",
+    "Statistics_and_Analytics_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/statistics-and-analytics-minor/",
     "Economics_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/economics-minor/",
     "Biology_Minor":
@@ -90,15 +149,67 @@ TARGET_TRACKS = {
     "Applied_Sciences_and_Engineering_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/applied-sciences-engineering-minor/",
     "Anthropology_General_Minor":
-        "https://catalog.unc.edu/undergraduate/programs-study/anthropology-general-minor/",
+        "https://catalog.unc.edu/undergraduate/programs-study/general-anthropology-minor/",
     "Medical_Anthropology_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/medical-anthropology-minor/",
     "Marine_Sciences_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/marine-sciences-minor/",
     "Spanish_for_the_Professions_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/spanish-professions-minor/",
-    "Sociology_BA":
-        "https://catalog.unc.edu/undergraduate/programs-study/sociology-major-ba/",
+    "Neuroscience_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/neuroscience-minor/",
+    "Exercise_and_Sport_Science_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-minor/",
+    "Information_Systems_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/information-systems-minor/",
+    "Astronomy_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/astronomy-minor/",
+    "Business_of_Health_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/business-health-minor/",
+    "Real_Estate_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/real-estate-minor/",
+    "Health_and_Society_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/health-society-minor/",
+    "Sustainability_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/sustainability-studies-minor/",
+    "Sports_Medicine_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/sports-medicine-minor/",
+    "Coaching_Education_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/coaching-education-minor/",
+    "Geographic_Information_Sciences_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/gis-minor/",
+    "Geological_Sciences_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/geological-sciences-minor/",
+    "Food_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/food-studies-minor/",
+    "Global_Cinema_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/global-cinema-minor/",
+    "Dramatic_Art_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/dramatic-art-minor/",
+    "Music_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/music-minor/",
+    "Studio_Art_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/studio-art-minor/",
+    "Art_History_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/art-history-minor/",
+    "Creative_Writing_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/creative-writing-minor/",
+    "Media_and_Journalism_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/media-journalism-minor/",
+    "History_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/history-minor/",
+    "Religious_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/religious-studies-minor/",
+    "Conflict_Management_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/conflict-management-minor/",
+    "Urban_Studies_and_Planning_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/urban-studies-planning-minor/",
+    "Environmental_Microbiology_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/environmental-microbiology-minor/",
+    "Hydrology_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/hydrology-minor/",
+    "Climate_Change_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/climate-change-minor/",
 }
 
 
@@ -167,6 +278,96 @@ def reindex_choice_groups(groups: list) -> list:
     return result
 
 
+def propagate_reference_lists(sections: list) -> list:
+    """
+    One propagation pass: if a section sits between two reference_list sections
+    AND it has no or_alternative rows and no real rule_texts, it is almost
+    certainly part of the same reference cluster (e.g. a 1-course Sociology
+    career-cluster sub-section).  Mark it reference_list too.
+
+    Also marks any section whose title is exactly "Requirements" (the generic
+    catch-all name used by many concentration sub-blocks) that has no real rules
+    as a reference_list when its neighbors are all reference_lists.
+    """
+    _BOILERPLATE = re.compile(
+        r'^(code\s*[\|]?\s*title|total\s*hours?)\s*$', re.IGNORECASE
+    )
+
+    def is_pool_candidate(sec):
+        """
+        True when a section looks like a reference pool rather than a real requirements block.
+        Conditions:
+          - No real rule_texts (only Code|Title / Total Hours boilerplate)
+          - AND either: no or_alternatives at all,
+                   or: or_alternatives are rare (< 20% of course rows) indicating
+                       they are cross-listed equivalences, not genuine student choices.
+        """
+        has_real_rule = any(
+            r['kind'] == 'rule_text' and not _BOILERPLATE.match(r['text'].strip())
+            for r in sec['rows']
+        )
+        if has_real_rule:
+            return False
+        course_rows = sum(1 for r in sec['rows'] if r['kind'] == 'course')
+        or_alt_rows = sum(1 for r in sec['rows'] if r['kind'] == 'or_alternative')
+        total = course_rows + or_alt_rows
+        if total == 0:
+            return False
+        return (or_alt_rows / total) < 0.20
+
+    # Keep old name as an alias for legacy call sites
+    is_pure_pool = is_pool_candidate
+
+    # First pass: classify each section
+    types = [classify_section_type(s['title'], s['rows']) for s in sections]
+
+    # Second pass: propagate reference_list outward, two rules:
+    #   Rule A — a pure-pool section adjacent to a reference_list section inherits it.
+    #   Rule B — any section following a reference_list EMPTY header (0 course rows)
+    #            inherits reference_list regardless of its own content, because the header
+    #            names a container (e.g. "Sample Plan of Study") whose children are all
+    #            informational rather than mandatory.
+    changed = True
+    while changed:
+        changed = False
+        for i in range(len(sections)):
+            if types[i] == 'reference_list':
+                continue
+
+            def _sec_has_courses(sec):
+                return any(r['kind'] in ('course', 'or_alternative') for r in sec['rows'])
+
+            # Rule A: pure pool beside a CONTENT-BEARING reference_list neighbour.
+            # Require the neighbour to have course rows — an empty reference_list header
+            # (e.g. "Sample Plan of Study") must not bleed into preceding required sections.
+            if is_pure_pool(sections[i]):
+                prev_ref = (i > 0
+                            and types[i - 1] == 'reference_list'
+                            and _sec_has_courses(sections[i - 1]))
+                next_ref = (i < len(types) - 1
+                            and types[i + 1] == 'reference_list'
+                            and _sec_has_courses(sections[i + 1]))
+                if prev_ref or next_ref:
+                    types[i] = 'reference_list'
+                    changed = True
+                    continue
+
+            # Rule B: directly follows a reference_list EMPTY header (no course rows).
+            # Handles children of containers like "Sample Plan of Study" that aren't
+            # pure pools themselves (they may have real rule_texts describing the year).
+            if i > 0 and types[i - 1] == 'reference_list' and not _sec_has_courses(sections[i - 1]):
+                types[i] = 'reference_list'
+                changed = True
+
+    # Inject pre-computed type so assemble_section doesn't recompute
+    result = []
+    for sec, t in zip(sections, types):
+        sec = dict(sec)
+        sec['_type'] = t
+        result.append(sec)
+    return result
+
+
 def make_cached_rule_parser(req_cache: dict, model_name: str):
     """
     Returns a caching wrapper around parse_rule_text.
@@ -174,16 +375,22 @@ def make_cached_rule_parser(req_cache: dict, model_name: str):
     many degree pages — caching avoids redundant LLM calls.
     Same hash + atomic-save pattern as the catalog pipeline's course_cache.
     """
+    _REJECTED = "__rejected__"
+
     def parse_with_cache(text: str):
         key = hashlib.md5(text.encode('utf-8')).hexdigest()
-        if key in req_cache:
-            return req_cache[key]
+        cached = req_cache.get(key)
+        if cached == _REJECTED:
+            return None
+        if cached is not None:
+            return cached
 
         logger.info(f"  -> Cache miss, calling LLM: {text[:80]}")
         parsed = parse_rule_text(text, model_name=model_name)
-        if parsed:
-            req_cache[key] = parsed
-            save_json_file(req_cache, CACHE_PATH)  # flush immediately — never lose work
+        # Cache both successes and rejections so we never call the LLM twice for
+        # the same text, even when the LLM/validator rejects the output.
+        req_cache[key] = parsed if parsed is not None else _REJECTED
+        save_json_file(req_cache, CACHE_PATH)
         time.sleep(0.5)
         return parsed
 
@@ -212,10 +419,18 @@ def run_req_pipeline(model_name: str, force: bool = False):
 
         logger.info("  %d sections under header: '%s'", len(scraped['sections']), scraped['main_header'])
 
+        # Pre-classify sections and propagate reference_list to neighbor pure pools.
+        sections = propagate_reference_lists(scraped['sections'])
+
         base_core   = {"required_courses": [], "choice_groups": []}
         conc_blocks = []
 
-        for section in scraped['sections']:
+        for section in sections:
+            # Short-circuit reference_list sections: no LLM calls, no assembly needed.
+            if section.get('_type') == 'reference_list':
+                logger.info("  [%-13s] '%s' | req: 0 | groups: 0", 'reference_list', section['title'])
+                continue
+
             block  = assemble_section(section, rule_parser)
             b_type = block['block_type']
 
