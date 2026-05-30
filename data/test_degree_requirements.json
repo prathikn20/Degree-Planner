@@ -662,23 +662,6 @@
           "rule": null
         },
         {
-          "description": "At least three additional MATH courses numbered above 520, excluding MATH\u00a0528L and MATH\u00a0529L",
-          "type": "rule_based",
-          "courses_required": 3,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "MATH",
-            "min_number": 521,
-            "min_credits": null,
-            "exclude": [
-              "MATH528L",
-              "MATH529L"
-            ]
-          },
-          "id": "rule_1"
-        },
-        {
           "id": "choice_1",
           "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
           "type": "explicit",
@@ -699,20 +682,6 @@
             "PHYS114"
           ],
           "rule": null
-        },
-        {
-          "description": "At least three additional courses in the Division of Natural Sciences and Mathematics",
-          "type": "rule_based",
-          "courses_required": 3,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_2"
         },
         {
           "id": "choice_2",
@@ -809,7 +778,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_3"
+          "id": "rule_1"
         }
       ]
     },
@@ -1071,22 +1040,6 @@
           "rule": null
         },
         {
-          "description": "Any course numbered CHEM\u00a0420 or higher (excluding CHEM\u00a0692H )",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "CHEM",
-            "min_number": 420,
-            "min_credits": null,
-            "exclude": [
-              "CHEM692H"
-            ]
-          },
-          "id": "rule_1"
-        },
-        {
           "id": "list_2",
           "description": "One capstone laboratory course is required from the following list",
           "type": "explicit",
@@ -1123,9 +1076,6 @@
         "PHYS521",
         "PHYS441",
         "PHYS481L",
-        "MATH528",
-        "MATH529",
-        "PHYS231",
         "PHYS118",
         "PHYS119",
         "MATH231",
@@ -1157,25 +1107,12 @@
           "type": "explicit",
           "courses_required": 6,
           "options": [
-            "ASTR202"
+            "ASTR202",
+            "MATH528",
+            "MATH529",
+            "PHYS231"
           ],
           "rule": null
-        },
-        {
-          "description": "PHYS (numbered above 300 except PHYS 395)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "PHYS",
-            "min_number": 301,
-            "min_credits": null,
-            "exclude": [
-              "PHYS395"
-            ]
-          },
-          "id": "rule_1"
         },
         {
           "id": "choice_2",
@@ -1200,7 +1137,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_2"
+          "id": "rule_1"
         },
         {
           "id": "list_2",
@@ -5374,41 +5311,6 @@
         "COMP211",
         "COMP301",
         "COMP311",
-        "BIOL525",
-        "BIOL553",
-        "BIOL554",
-        "BIOS512",
-        "BIOS611",
-        "BIOS635",
-        "BMME575",
-        "ECON525",
-        "ECON573",
-        "GEOG592",
-        "INLS318",
-        "INLS418",
-        "INLS509",
-        "INLS512",
-        "INLS523",
-        "INLS609",
-        "INLS613",
-        "INLS623",
-        "INLS642",
-        "INLS672",
-        "INLS718",
-        "LING401",
-        "LING460",
-        "LING540",
-        "MATH560",
-        "MATH566",
-        "MEJO581",
-        "PHYS231",
-        "PHYS331",
-        "PHYS332",
-        "PSYC559",
-        "STOR512",
-        "STOR520",
-        "STOR565",
-        "STOR566",
         "MATH231"
       ],
       "choice_groups": [
@@ -5439,66 +5341,53 @@
           "id": "rule_1"
         },
         {
+          "id": "list_1",
           "description": "Four additional elective courses chosen from the following, with no more than two courses from other departments:",
-          "type": "rule_based",
-          "courses_required": 4,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_2"
-        },
-        {
-          "description": "COMP courses numbered 420 - 599 (excluding COMP\u00a0496)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "COMP",
-            "min_number": 420,
-            "min_credits": null,
-            "exclude": [
-              "COMP496"
-            ]
-          },
-          "id": "rule_3"
-        },
-        {
-          "description": "Graduate level courses (600 or higher) excluding COMP\u00a0690 , COMP\u00a0692H , and COMP\u00a0790 3",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "COMP",
-            "min_number": 600,
-            "min_credits": 3,
-            "exclude": [
-              "COMP690",
-              "COMP692H",
-              "COMP790"
-            ]
-          },
-          "id": "rule_4"
-        },
-        {
-          "id": "choice_2",
-          "description": "MATH/ENVR 661 | Scientific Computation I",
           "type": "explicit",
-          "courses_required": 1,
+          "courses_required": 2,
           "options": [
+            "BIOL525",
+            "BIOL553",
+            "BIOL554",
+            "BIOS512",
+            "BIOS611",
+            "BIOS635",
+            "BMME575",
+            "ECON525",
+            "ECON573",
+            "GEOG592",
+            "INLS318",
+            "INLS418",
+            "INLS509",
+            "INLS512",
+            "INLS523",
+            "INLS609",
+            "INLS613",
+            "INLS623",
+            "INLS642",
+            "INLS672",
+            "INLS718",
+            "LING401",
+            "LING460",
+            "LING540",
+            "MATH560",
+            "MATH566",
             "MATH661",
-            "ENVR661"
+            "ENVR661",
+            "MEJO581",
+            "PHYS231",
+            "PHYS331",
+            "PHYS332",
+            "PSYC559",
+            "STOR512",
+            "STOR520",
+            "STOR565",
+            "STOR566"
           ],
           "rule": null
         },
         {
-          "id": "choice_3",
+          "id": "choice_2",
           "description": "STOR\u00a0155 | Introduction to Data Models and Inference 4, H, F",
           "type": "explicit",
           "courses_required": 1,
@@ -10238,20 +10127,6 @@
             "ENVR705"
           ],
           "rule": null
-        },
-        {
-          "description": "--- *95 | Mentored research course with a microbiology focus (3 credits required) 2",
-          "type": "rule_based",
-          "courses_required": 2,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "MCB",
-            "min_number": null,
-            "min_credits": 3,
-            "exclude": []
-          },
-          "id": "rule_1"
         }
       ]
     },
@@ -10294,20 +10169,6 @@
             "GEOG442"
           ],
           "rule": null
-        },
-        {
-          "description": "3 credits of mentored undergraduate research (e.g., 395) with an advisor with a hydrology focus",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": 3,
-            "exclude": []
-          },
-          "id": "rule_1"
         }
       ]
     },

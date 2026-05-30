@@ -344,26 +344,24 @@ def assemble_section(section, rule_parser_fn):
                                 j += 1  # skip footer row, keep collecting
                                 continue
                             break  # "Code | Title" and others → stop
-                        # Skip exclusion/clarification notes embedded in the list block
-                        if any(kw in rtext.lower() for kw in
-                               ['excluding', 'except', 'not including', 'with no more', 'no more than']):
-                            if _is_explicit_rule(r['text']):
-                                break  # a rule in its own right — let the outer loop handle it
-                            j += 1  # skip pure clarification footnotes
                         # Skip short sub-category dividers / dept-qualifier texts within a
-                        # list block.  Covers two kinds:
-                        #   (a) pure-alpha labels: "Finance", "Marketing"
-                        #   (b) short dept+qualifier texts: "COMP courses numbered 420–599"
-                        # Neither introduces a new requirement — they describe categories of
-                        # options within the enclosing list.
-                        # Guard: texts ending with ":" are section-boundary labels like
-                        # "The core course in entrepreneurship:" or "Capstone course:" — those
-                        # must break the loop so the courses after them aren't consumed as
-                        # options for the wrong group.
-                        elif (len(rtext) <= 70
-                              and not is_list_header(r['text'])
-                              and not rtext.endswith(':')):
+                        # list block BEFORE the exclusion-note check, so that texts like
+                        # "COMP courses numbered 420–599 (excluding COMP 496)" — which contain
+                        # "excluding" but are category descriptors, not standalone rules — are
+                        # skipped rather than treated as exclusion notes that break the loop.
+                        # Guard: texts ending with ":" are section-boundary labels (e.g.
+                        # "Capstone course:") and must break the loop.
+                        if (len(rtext) <= 120
+                                and not is_list_header(r['text'])
+                                and not rtext.endswith(':')):
                             j += 1
+                        # Skip pure exclusion/clarification footnotes embedded in the list
+                        # block ONLY when they are not explicit rules in their own right.
+                        elif any(kw in rtext.lower() for kw in
+                                 ['excluding', 'except', 'not including', 'with no more', 'no more than']):
+                            if _is_explicit_rule(r['text']):
+                                break  # a standalone rule — let the outer loop handle it
+                            j += 1  # skip pure clarification footnote
                         else:
                             break
                     else:
