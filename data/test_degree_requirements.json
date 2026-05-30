@@ -1984,8 +1984,6 @@
       },
       "Rehabilitation_Engineering": {
         "required_courses": [
-          "BMME495",
-          "BMME543",
           "BME418",
           "BME425",
           "BME438",
@@ -2957,11 +2955,7 @@
   },
   "Marine_Sciences_Minor": {
     "base_requirements": {
-      "required_courses": [
-        "ENEC204",
-        "ENEC395",
-        "ENEC698"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
           "id": "list_1",
@@ -5193,13 +5187,12 @@
         "BIOL252",
         "CHEM101",
         "CHEM102",
-        "NUTR240",
-        "CHEM261",
         "BIOS600",
         "EPID600",
         "SPHG351",
         "SPHG352",
         "NUTR175",
+        "NUTR240",
         "NUTR405",
         "NUTR470",
         "NUTR611",
@@ -5212,6 +5205,7 @@
         "NUTR692H",
         "BIOL103",
         "CHEM241",
+        "CHEM261",
         "CHEM262",
         "MATH231"
       ],
@@ -9380,7 +9374,27 @@
   },
   "Exercise_and_Sport_Science_General_BA": {
     "base_requirements": {
-      "required_courses": [],
+      "required_courses": [
+        "EXSS155",
+        "EXSS256",
+        "EXSS180",
+        "EXSS181",
+        "EXSS273",
+        "EXSS288",
+        "EXSS376",
+        "EXSS380",
+        "EXSS385",
+        "BIOL101",
+        "EXSS51",
+        "EXSS207",
+        "EXSS393",
+        "EXSS395",
+        "EXSS420",
+        "EXSS493",
+        "EXSS593",
+        "EXSS693H",
+        "EXSS694H"
+      ],
       "choice_groups": []
     },
     "concentrations": {
@@ -10032,131 +10046,71 @@
   },
   "Geological_Sciences_Minor": {
     "base_requirements": {
-      "required_courses": [
-        "EMES68",
-        "EMES72H",
-        "EMES76",
-        "EMES77",
-        "EMES79",
-        "EMES89",
-        "EMES101",
-        "EMES103",
-        "EMES200",
-        "EMES201",
-        "EMES203",
-        "EMES221",
-        "EMES301",
-        "EMES302",
-        "EMES303",
-        "EMES304",
-        "EMES305",
-        "EMES306",
-        "EMES310",
-        "EMES314",
-        "EMES324",
-        "EMES405",
-        "EMES406",
-        "EMES412",
-        "EMES414",
-        "ENEC514",
-        "EMES425",
-        "EMES431",
-        "EMES432",
-        "EMES436",
-        "EMES438",
-        "EMES483",
-        "EMES485",
-        "EMES486",
-        "EMES501",
-        "EMES504",
-        "EMES508",
-        "EMES520",
-        "EMES525",
-        "EMES567",
-        "EMES580",
-        "EMES608",
-        "EMES655",
-        "GEOG440",
-        "GEOL502"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
-          "description": "Four EMES courses from the list of options below.",
-          "type": "rule_based",
+          "id": "list_1",
+          "description": "Four EMES courses from the list of options below. 1",
+          "type": "explicit",
           "courses_required": 4,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "EMES",
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
-        },
-        {
-          "id": "choice_1",
-          "description": "EMES\u00a0395 | Undergraduate Research in Earth, Marine, and Environmental Sciences 2",
-          "type": "explicit",
-          "courses_required": 1,
           "options": [
+            "EMES68",
+            "EMES72H",
+            "EMES76",
+            "EMES77",
+            "EMES79",
+            "EMES89",
+            "EMES101",
+            "EMES103",
+            "EMES200",
+            "EMES201",
+            "EMES203",
+            "EMES221",
+            "EMES301",
+            "EMES302",
+            "EMES303",
+            "EMES304",
+            "EMES305",
+            "EMES306",
+            "EMES310",
+            "EMES314",
+            "EMES324",
             "EMES395",
-            "EMES396"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_2",
-          "description": "EMES/ENEC 417 | Surface Processes and Landscape Evolution",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "EMES396",
+            "EMES405",
+            "EMES406",
+            "EMES412",
+            "EMES414",
+            "ENEC514",
             "EMES417",
-            "ENEC417"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_3",
-          "description": "EMES/ANTH 421 | Archaeological Geology",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "ENEC417",
             "EMES421",
-            "ANTH421"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_4",
-          "description": "EMES/ENEC 435 | Principles of Environmental Consulting: Mechanics of Groundwater Flow",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "ANTH421",
+            "EMES425",
+            "EMES431",
+            "EMES432",
             "EMES435",
-            "ENEC435"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_5",
-          "description": "EMES/ENEC 511 | Stable Isotopes in the Environment",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "ENEC435",
+            "EMES436",
+            "EMES438",
+            "EMES483",
+            "EMES485",
+            "EMES486",
+            "EMES501",
+            "EMES504",
+            "EMES508",
             "EMES511",
-            "ENEC511"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_6",
-          "description": "EMES/ENEC 512 | Advanced Coastal Environmental Change",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "ENEC511",
             "EMES512",
-            "ENEC512"
+            "ENEC512",
+            "EMES520",
+            "EMES525",
+            "EMES567",
+            "EMES580",
+            "EMES608",
+            "EMES655",
+            "GEOG440",
+            "GEOL502"
           ],
           "rule": null
         }
@@ -10888,180 +10842,7 @@
   },
   "Religious_Studies_Minor": {
     "base_requirements": {
-      "required_courses": [
-        "RELI63",
-        "RELI65",
-        "RELI70",
-        "RELI78",
-        "RELI80",
-        "RELI104",
-        "RELI105",
-        "RELI109",
-        "RELI114",
-        "RELI117",
-        "RELI201",
-        "RELI205",
-        "RELI207",
-        "RELI208",
-        "RELI209",
-        "RELI211",
-        "RELI212",
-        "RELI215",
-        "RELI217",
-        "RELI314",
-        "RELI315",
-        "RELI390",
-        "RELI411",
-        "RELI412",
-        "RELI413",
-        "RELI414",
-        "RELI501",
-        "RELI504",
-        "RELI590",
-        "RELI602",
-        "RELI603",
-        "RELI607",
-        "RELI608",
-        "RELI609",
-        "RELI610",
-        "RELI614",
-        "RELI617",
-        "ASIA300",
-        "RELI283",
-        "ASIA301",
-        "RELI286",
-        "ASIA302",
-        "RELI287",
-        "ASIA303",
-        "RELI288",
-        "RELI64",
-        "RELI66",
-        "RELI73",
-        "RELI165",
-        "RELI184",
-        "RELI185",
-        "RELI248",
-        "RELI279",
-        "RELI289",
-        "RELI381",
-        "RELI385",
-        "RELI474",
-        "RELI480",
-        "RELI485",
-        "RELI524",
-        "RELI580",
-        "RELI585",
-        "RELI586",
-        "RELI62",
-        "RELI77",
-        "RELI87",
-        "RELI88",
-        "RELI108",
-        "RELI161",
-        "RELI162",
-        "RELI163",
-        "RELI164",
-        "RELI166",
-        "RELI220",
-        "RELI266",
-        "RELI365",
-        "RELI366",
-        "RELI367",
-        "RELI368",
-        "RELI450",
-        "RELI465",
-        "RELI565",
-        "RELI564",
-        "RELI566",
-        "RELI569",
-        "RELI662",
-        "RELI665",
-        "WGST664",
-        "CMPL270",
-        "GSLL270",
-        "JWST239",
-        "RELI239",
-        "JWST100",
-        "RELI123",
-        "PHIL134",
-        "RELI126",
-        "RELI60",
-        "RELI61",
-        "RELI67",
-        "RELI68",
-        "RELI71",
-        "RELI74",
-        "RELI75",
-        "RELI76",
-        "RELI79",
-        "RELI85",
-        "RELI101",
-        "RELI102",
-        "RELI121",
-        "RELI122",
-        "RELI125",
-        "RELI127",
-        "RELI130",
-        "RELI134",
-        "RELI135",
-        "RELI138",
-        "RELI167",
-        "RELI222",
-        "RELI224",
-        "RELI225",
-        "RELI226",
-        "RELI232",
-        "RELI233",
-        "RELI235",
-        "RELI236",
-        "RELI245",
-        "RELI246",
-        "RELI322",
-        "RELI323",
-        "RELI325",
-        "RELI338",
-        "RELI345",
-        "RELI352",
-        "RELI420",
-        "RELI421",
-        "RELI423",
-        "RELI425",
-        "RELI426",
-        "RELI427",
-        "RELI430",
-        "RELI438",
-        "RELI452",
-        "RELI522",
-        "RELI525",
-        "RELI527",
-        "RELI528",
-        "RELI530",
-        "RELI620",
-        "WGST370",
-        "JWST444",
-        "RELI444",
-        "WGST448",
-        "RELI69",
-        "RELI72",
-        "RELI140",
-        "RELI141",
-        "RELI142",
-        "RELI151",
-        "RELI240",
-        "RELI241",
-        "RELI242",
-        "RELI247",
-        "RELI332",
-        "RELI340",
-        "RELI441",
-        "RELI442",
-        "RELI443",
-        "RELI446",
-        "RELI448",
-        "RELI540",
-        "RELI541",
-        "RELI542"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
           "description": "Minimum requirements for the minor consist of five courses, two of which must be numbered above 400",
@@ -11078,687 +10859,359 @@
           "id": "rule_1"
         },
         {
+          "id": "list_1",
           "description": "At least one course in two of the department's subfields (see lists below).",
-          "type": "rule_based",
-          "courses_required": 2,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_2"
-        },
-        {
-          "id": "choice_1",
-          "description": "RELI/CLAR 375 | Archaeology of Cult",
           "type": "explicit",
           "courses_required": 1,
           "options": [
+            "RELI63",
+            "RELI65",
+            "RELI70",
+            "RELI78",
+            "RELI80",
+            "RELI104",
+            "RELI105",
+            "RELI109",
+            "RELI114",
+            "RELI117",
+            "RELI201",
+            "RELI205",
+            "RELI207",
+            "RELI208",
+            "RELI209",
+            "RELI211",
+            "RELI212",
+            "RELI215",
+            "RELI217",
+            "RELI314",
+            "RELI315",
+            "RELI390",
+            "RELI411",
+            "RELI412",
+            "RELI413",
+            "RELI414",
+            "RELI501",
+            "RELI504",
+            "RELI590",
+            "RELI602",
+            "RELI603",
+            "RELI607",
+            "RELI608",
+            "RELI609",
+            "RELI610",
+            "RELI614",
+            "RELI617",
             "RELI375",
-            "CLAR375"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_2",
-          "description": "RELI/CLAR/JWST 110 | The Archaeology of Palestine in the New Testament Period",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "CLAR375",
             "RELI110",
             "CLAR110",
-            "JWST110"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_3",
-          "description": "RELI/CLAR/JWST 512 | Ancient Synagogues",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST110",
             "RELI512",
             "CLAR512",
-            "JWST512"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_4",
-          "description": "RELI/FOLK 502 | Myths and Epics of the Ancient Near East H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST512",
             "RELI502",
-            "FOLK502"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_5",
-          "description": "RELI/JWST 103 | Introduction to the Hebrew Bible/Old Testament Literature H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "FOLK502",
             "RELI103",
-            "JWST103"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_6",
-          "description": "RELI/JWST 106 | Judaism in the Time of Jesus",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST103",
             "RELI106",
-            "JWST106"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_7",
-          "description": "RELI/JWST 206 | Prophecy and Divination in Ancient Israel and Judah H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST106",
             "RELI206",
-            "JWST206"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_8",
-          "description": "RELI/JWST 503 | Exploring the Dead Sea Scrolls H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST206",
             "RELI503",
-            "JWST503"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_9",
-          "description": "ANTH/ASIA/RELI 574 | Chinese World Views",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "JWST503",
             "ANTH574",
             "ASIA574",
-            "RELI574"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_10",
-          "description": "ARAB/ASIA/RELI 681 | Readings in Islamicate Literatures",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI574",
             "ARAB681",
             "ASIA681",
-            "RELI681"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_11",
-          "description": "ASIA/COMM/RELI 386 | Dance and Embodied Knowledge in the Indian Context",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI681",
             "ASIA386",
             "COMM386",
-            "RELI386"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_12",
-          "description": "ASIA/COMM/RELI 387 | Disciplining the Body and Mind: The Martial Arts of East Asia in Religion, History, and Culture",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI386",
             "ASIA387",
             "COMM387",
-            "RELI387"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_13",
-          "description": "ASIA/RELI 180 | Introduction to Islamic Civilization",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI387",
             "ASIA180",
-            "RELI180"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_14",
-          "description": "ASIA/RELI 181 | Modern Muslim Societies",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI180",
             "ASIA181",
-            "RELI181"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_15",
-          "description": "ASIA/RELI 183 | Asian Religions",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI181",
             "ASIA183",
-            "RELI183"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_16",
-          "description": "ASIA/RELI 280 | Hindu Gods and Goddesses H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI183",
             "ASIA280",
-            "RELI280"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_17",
-          "description": "ASIA/RELI 284 | The Buddhist Tradition: East Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI280",
             "ASIA284",
-            "RELI284"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_18",
-          "description": "ASIA/RELI 285 | Monks, Magic, & Meditation: Theravada Buddhism Across Space and Time",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI284",
             "ASIA285",
-            "RELI285"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_19",
-          "description": "ASIA/RELI 382 | The Story of Rama in Indian Culture\u2013Experiential",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI285",
             "ASIA382",
-            "RELI382"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_20",
-          "description": "ASIA/RELI 383 | The Mahabharata: Remembered and Reimagined\u2013Experiential",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI382",
             "ASIA383",
-            "RELI383"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_21",
-          "description": "ASIA/RELI 384 | Religion and Globalization in Southeast Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI383",
             "ASIA384",
-            "RELI384"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_22",
-          "description": "ASIA/RELI 445 | Asian Religions in America",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI384",
             "ASIA445",
-            "RELI445"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_23",
-          "description": "ASIA/RELI 486 | Islam and Feminism/Islamic Feminism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI445",
             "ASIA486",
-            "RELI486"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_24",
-          "description": "ASIA/RELI/WGST 482 | Sex, Gender, and Religion in South Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI486",
             "ASIA482",
             "RELI482",
-            "WGST482"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_25",
-          "description": "ASIA/RELI 487 | Mountains, Pilgrimage, and Sacred Places in Japan",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST482",
             "ASIA487",
-            "RELI487"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_26",
-          "description": "ASIA/RELI 488 | Shinto in Japanese History",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI487",
             "ASIA488",
-            "RELI488"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_27",
-          "description": "ASIA/RELI 489 | Animals in Japanese Religion",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI488",
             "ASIA489",
-            "RELI489"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_28",
-          "description": "ASIA/RELI 581 | Sufism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI489",
             "ASIA581",
-            "RELI581"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_29",
-          "description": "ASIA/RELI 582 | Islam and Islamic Art in South Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI581",
             "ASIA582",
-            "RELI582"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_30",
-          "description": "ASIA/RELI 583 | Religion and Culture in Iran, 1500-Present",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI582",
             "ASIA583",
-            "RELI583"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_31",
-          "description": "ASIA/RELI 584 | The Qur'an as Literature",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI583",
             "ASIA584",
-            "RELI584"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_32",
-          "description": "ASIA/RELI 587 | Islam and Sexual Diversity",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI584",
             "ASIA587",
-            "RELI587"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_33",
-          "description": "HNUR/RELI 592 | Religious Conflict and Literature in India",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI587",
+            "ASIA300",
+            "RELI283",
+            "ASIA301",
+            "RELI286",
+            "ASIA302",
+            "RELI287",
+            "ASIA303",
+            "RELI288",
             "HNUR592",
-            "RELI592"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_34",
-          "description": "PWAD/RELI 481 | Religion, Fundamentalism, and Nationalism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI592",
             "PWAD481",
-            "RELI481"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_35",
-          "description": "ASIA/RELI 180 | Introduction to Islamic Civilization",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI481",
+            "RELI64",
+            "RELI66",
+            "RELI73",
+            "RELI165",
+            "RELI184",
+            "RELI185",
+            "RELI248",
+            "RELI279",
+            "RELI289",
+            "RELI381",
+            "RELI385",
+            "RELI390",
+            "RELI474",
+            "RELI480",
+            "RELI485",
+            "RELI524",
+            "RELI580",
+            "RELI585",
+            "RELI586",
+            "RELI590",
             "ASIA180",
-            "RELI180"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_36",
-          "description": "ASIA/RELI 284 | The Buddhist Tradition: East Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI180",
             "ASIA284",
-            "RELI284"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_37",
-          "description": "ASIA/RELI 488 | Shinto in Japanese History",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI284",
             "ASIA488",
-            "RELI488"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_38",
-          "description": "ASIA/RELI 581 | Sufism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI488",
             "ASIA581",
-            "RELI581"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_39",
-          "description": "EURO/RELI 270 | Religion in Western Europe H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI581",
+            "ASIA301",
+            "RELI286",
+            "ASIA303",
+            "RELI288",
             "EURO270",
-            "RELI270"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_40",
-          "description": "GSLL/RELI 218 | Christianity and Islam in the Middle Ages",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI270",
             "GSLL218",
-            "RELI218"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_41",
-          "description": "GERM/RELI 227 | Luther and the Bible",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI218",
             "GERM227",
-            "RELI227"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_42",
-          "description": "HIST/RELI 263 | Gender and Religion in Premodern Europe H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI227",
             "HIST263",
-            "RELI263"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_43",
-          "description": "HIST/RELI 454 | The Reformation",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI263",
             "HIST454",
-            "RELI454"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_44",
-          "description": "RELI/WGST 362 | Mary in the Christian Tradition H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI454",
+            "RELI62",
+            "RELI77",
+            "RELI87",
+            "RELI88",
+            "RELI108",
+            "RELI161",
+            "RELI162",
+            "RELI163",
+            "RELI164",
+            "RELI165",
+            "RELI166",
+            "RELI184",
+            "RELI209",
+            "RELI215",
+            "RELI220",
+            "RELI266",
+            "RELI365",
+            "RELI366",
+            "RELI367",
+            "RELI368",
+            "RELI390",
+            "RELI450",
+            "RELI465",
+            "RELI565",
+            "RELI564",
+            "RELI566",
+            "RELI569",
+            "RELI586",
+            "RELI590",
+            "RELI617",
+            "RELI662",
             "RELI362",
-            "WGST362"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_45",
-          "description": "RELI/WGST 371 | Women Mystics",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST362",
             "RELI371",
-            "WGST371"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_46",
-          "description": "ANTH/FOLK/RELI 428 | Religion and Anthropology H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST371",
+            "RELI665",
+            "WGST664",
             "ANTH428",
             "FOLK428",
-            "RELI428"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_47",
-          "description": "ANTH/FOLK/RELI 688 | Observation and Interpretation of Religious Action",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI428",
             "ANTH688",
             "FOLK688",
-            "RELI688"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_48",
-          "description": "HIST/RELI 263 | Gender and Religion in Premodern Europe H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI688",
+            "CMPL270",
+            "GSLL270",
+            "JWST239",
+            "RELI239",
             "HIST263",
-            "RELI263"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_49",
-          "description": "JWST/RELI 343 | Religion in Modern Israel",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI263",
+            "JWST100",
+            "RELI123",
             "JWST343",
-            "RELI343"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_50",
-          "description": "JWST/RELI/WGST 533 | Women, Gender, and Judaism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI343",
             "JWST533",
             "RELI533",
-            "WGST533"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_51",
-          "description": "RELI/SOCI 429 | Religion and Society",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST533",
+            "PHIL134",
+            "RELI126",
+            "RELI60",
+            "RELI61",
+            "RELI67",
+            "RELI68",
+            "RELI71",
+            "RELI74",
+            "RELI75",
+            "RELI76",
+            "RELI77",
+            "RELI79",
+            "RELI85",
+            "RELI101",
+            "RELI102",
+            "RELI121",
+            "RELI122",
+            "RELI125",
+            "RELI127",
+            "RELI130",
+            "RELI134",
+            "RELI135",
+            "RELI138",
+            "RELI163",
+            "RELI166",
+            "RELI167",
+            "RELI205",
+            "RELI220",
+            "RELI222",
+            "RELI224",
+            "RELI225",
+            "RELI226",
+            "RELI232",
+            "RELI233",
+            "RELI235",
+            "RELI236",
+            "RELI245",
+            "RELI246",
+            "RELI322",
+            "RELI323",
+            "RELI325",
+            "RELI338",
+            "RELI345",
+            "RELI352",
+            "RELI390",
+            "RELI420",
+            "RELI421",
+            "RELI423",
+            "RELI425",
+            "RELI426",
+            "RELI427",
+            "RELI430",
+            "RELI438",
+            "RELI452",
+            "RELI474",
+            "RELI522",
+            "RELI524",
+            "RELI525",
+            "RELI527",
+            "RELI528",
+            "RELI530",
+            "RELI564",
+            "RELI590",
+            "RELI620",
             "RELI429",
-            "SOCI429"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_52",
-          "description": "RELI/WGST 244 | Gender and Sexuality in Western Christianity H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "SOCI429",
             "RELI244",
-            "WGST244"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_53",
-          "description": "RELI/WGST 362 | Mary in the Christian Tradition H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST244",
             "RELI362",
-            "WGST362"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_54",
-          "description": "RELI/WGST 424 | Gender Theory and the Study of Religion",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST362",
+            "RELI368",
+            "WGST370",
             "RELI424",
-            "WGST424"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_55",
-          "description": "ANTH/FOLK/RELI 342 | African-American Religious Experience",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "WGST424",
+            "RELI665",
+            "WGST664",
             "ANTH342",
             "FOLK342",
-            "RELI342"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_56",
-          "description": "ASIA/RELI 445 | Asian Religions in America",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI342",
             "ASIA445",
-            "RELI445"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_57",
-          "description": "JWST/RELI 107 | Introduction to Modern Judaism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI445",
             "JWST107",
-            "RELI107"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_58",
-          "description": "JWST/RELI 143 | Judaism in Our Time",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI107",
             "JWST143",
-            "RELI143"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_59",
-          "description": "JWST/RELI 243 | Introduction to American Judaism",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI143",
             "JWST243",
-            "RELI243"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_60",
-          "description": "JWST/RELI 343 | Religion in Modern Israel",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
+            "RELI243",
             "JWST343",
-            "RELI343"
+            "RELI343",
+            "JWST444",
+            "RELI444",
+            "WGST448",
+            "RELI60",
+            "RELI66",
+            "RELI69",
+            "RELI71",
+            "RELI72",
+            "RELI87",
+            "RELI130",
+            "RELI135",
+            "RELI140",
+            "RELI141",
+            "RELI142",
+            "RELI151",
+            "RELI235",
+            "RELI240",
+            "RELI241",
+            "RELI242",
+            "RELI245",
+            "RELI246",
+            "RELI247",
+            "RELI248",
+            "RELI332",
+            "RELI338",
+            "RELI340",
+            "RELI345",
+            "RELI390",
+            "RELI423",
+            "RELI441",
+            "RELI442",
+            "RELI443",
+            "RELI446",
+            "RELI448",
+            "RELI452",
+            "RELI501",
+            "RELI540",
+            "RELI541",
+            "RELI542",
+            "RELI580",
+            "RELI590"
           ],
           "rule": null
         }

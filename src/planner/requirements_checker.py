@@ -20,6 +20,7 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
     rule_attribute = rule.get("attribute")
     rule_dept      = rule.get("department")
     rule_min_num   = rule.get("min_number", 0)
+    rule_max_num   = rule.get("max_number", float("inf"))
     rule_exclude   = set(rule.get("exclude", []))
     rule_min_cred  = rule.get("min_credits", 0)
 
@@ -40,7 +41,7 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
         number = int(number_str)
 
         if ((not rule_dept or dept == rule_dept) and
-                number >= rule_min_num and
+                rule_min_num <= number <= rule_max_num and
                 data.get("credits", 0) >= rule_min_cred):
             valid.append(course_id)
 
@@ -54,7 +55,7 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
             if not v_num_str:
                 continue
             v_num = int(v_num_str)
-            if (not rule_dept or v_dept == rule_dept) and v_num >= rule_min_num:
+            if (not rule_dept or v_dept == rule_dept) and rule_min_num <= v_num <= rule_max_num:
                 valid.append(virtual_id)
 
     if rule_attribute and not valid:

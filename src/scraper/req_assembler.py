@@ -179,8 +179,10 @@ def classify_section_type(title, rows=None):
         # A large pool of courses with no real selection rules → reference list.
         # Three tiers:
         #  ≥ 5 courses, no or-alts, no required/requirements → reference_list
-        #  ≥ 5 courses, no or-alts, has "requirements" title → only if ≥ 15 courses
-        #  ≥ 15 courses (any or-alt count) + no hard required signal → reference_list
+        #  ≥ 5 courses, no or-alts, has "requirements" title → only if ≥ 25 courses
+        #    (raised from 15 to avoid mis-classifying genuine small BA/BS "Requirements"
+        #     sections like EXSS General BA that have 18 mandatory courses)
+        #  ≥ 25 courses (any or-alt count) + no hard required signal → reference_list
         #   (handles merged pools like "Requirements" containing Organismal+Allied Science)
         if real_rule_count == 0:
             _HARD_REQUIRED = r'\b(required|core|prerequisite|gateway|admission|foundation)\b'
@@ -191,12 +193,12 @@ def classify_section_type(title, rows=None):
             if course_count >= 5 and or_alt_count == 0:
                 if not has_hard and not has_soft:
                     return 'reference_list'
-                if not has_hard and course_count >= 15:
+                if not has_hard and course_count >= 25:
                     return 'reference_list'
 
             # For large pools even with or_alts: no genuine requirement section
-            # has 15+ standalone courses with zero selection rules.
-            if course_count >= 15 and not has_hard:
+            # has 25+ standalone courses with zero selection rules.
+            if course_count >= 25 and not has_hard:
                 return 'reference_list'
 
     return 'core'
@@ -322,9 +324,16 @@ def assemble_section(section, rule_parser_fn):
                         list_options.extend(r['codes'])
                         j += 1
                     elif r['kind'] == 'rule_text':
-                        # Always stop at boilerplate terminators (Total Hours, Code|Title)
+                        # "Total Hours" is a table footer that some catalog pages
+                        # place BEFORE the course list in the HTML (unusual layout).
+                        # Skip it so courses that follow are still collected.
+                        # "Code | Title" and dept-descriptor patterns are true section
+                        # terminators and should still break.
                         if _BOILERPLATE_ROW_RE.match(rtext):
-                            break
+                            if re.match(r'^total\s+hours?', rtext, re.IGNORECASE):
+                                j += 1  # skip footer row, keep collecting
+                                continue
+                            break  # "Code | Title" and others → stop
                         # Skip exclusion/clarification notes embedded in the list block
                         if any(kw in rtext.lower() for kw in
                                ['excluding', 'except', 'not including', 'with no more', 'no more than']):

@@ -1207,7 +1207,8 @@
           "type": "rule_based",
           "rule": {
             "department": "ECON",
-            "min_number": 500
+            "min_number": 500,
+            "max_number": 699
           }
         },
         {
@@ -1217,7 +1218,8 @@
           "type": "rule_based",
           "rule": {
             "department": "ECON",
-            "min_number": 400
+            "min_number": 400,
+            "max_number": 699
           }
         },
         {
