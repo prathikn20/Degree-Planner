@@ -176,6 +176,16 @@ def classify_section_type(title, rows=None):
         or_alt_count = sum(1 for r in rows if r['kind'] == 'or_alternative')
         real_rule_count = _count_real_rules(rows)
 
+        # Fast-path for extremely large elective pools (≥ 100 standalone courses,
+        # no or_alternatives, no hard required signal in title).  No genuine set of
+        # required courses is 100+ standalone entries — these are always elective pools
+        # regardless of whether incidental rule_texts (language credits, free electives)
+        # inflate real_rule_count above zero.
+        _HARD_REQUIRED_FAST = r'\b(required|core|prerequisite|gateway|admission|foundation)\b'
+        if (course_count >= 100 and or_alt_count == 0
+                and not re.search(_HARD_REQUIRED_FAST, t)):
+            return 'reference_list'
+
         # A large pool of courses with no real selection rules → reference list.
         # Three tiers:
         #  ≥ 5 courses, no or-alts, no required/requirements → reference_list
@@ -340,11 +350,19 @@ def assemble_section(section, rule_parser_fn):
                             if _is_explicit_rule(r['text']):
                                 break  # a rule in its own right — let the outer loop handle it
                             j += 1  # skip pure clarification footnotes
-                        # Skip short, alphabetic-only sub-category dividers (Finance, Marketing…)
-                        elif (len(rtext) <= 50
-                              and not _is_explicit_rule(r['text'])
+                        # Skip short sub-category dividers / dept-qualifier texts within a
+                        # list block.  Covers two kinds:
+                        #   (a) pure-alpha labels: "Finance", "Marketing"
+                        #   (b) short dept+qualifier texts: "COMP courses numbered 420–599"
+                        # Neither introduces a new requirement — they describe categories of
+                        # options within the enclosing list.
+                        # Guard: texts ending with ":" are section-boundary labels like
+                        # "The core course in entrepreneurship:" or "Capstone course:" — those
+                        # must break the loop so the courses after them aren't consumed as
+                        # options for the wrong group.
+                        elif (len(rtext) <= 70
                               and not is_list_header(r['text'])
-                              and _SUBCATEGORY_RE.match(rtext)):
+                              and not rtext.endswith(':')):
                             j += 1
                         else:
                             break

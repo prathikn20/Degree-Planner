@@ -1,3 +1,21 @@
+def _split_course_id(course_id: str) -> tuple[str, str]:
+    """Return (dept_prefix, digit_string) by collecting leading alpha chars only.
+
+    'BUSI691H'  → ('BUSI', '691')  — trailing suffix letter ignored
+    'COMP110'   → ('COMP', '110')
+    'FY-SEMINAR'→ ('FY',   '')     — hyphenated ids handled gracefully
+    'APPL760L'  → ('APPL', '760')
+    """
+    dept = ""
+    for ch in course_id:
+        if ch.isalpha():
+            dept += ch
+        else:
+            break
+    digits = "".join(filter(str.isdigit, course_id))
+    return dept, digits
+
+
 def _get_satisfying_course(course, catalog, completed_set, virtual_to_real=None):
     if course in completed_set:
         return course
@@ -17,12 +35,13 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
         return []
 
     valid = []
-    rule_attribute = rule.get("attribute")
-    rule_dept      = rule.get("department")
-    rule_min_num   = rule.get("min_number", 0)
-    rule_max_num   = rule.get("max_number", float("inf"))
-    rule_exclude   = set(rule.get("exclude", []))
-    rule_min_cred  = rule.get("min_credits", 0)
+    rule_attribute   = rule.get("attribute")
+    rule_dept        = rule.get("department")
+    rule_exclude_dept = rule.get("exclude_department")
+    rule_min_num     = rule.get("min_number") or 0
+    rule_max_num     = rule.get("max_number") or float("inf")
+    rule_exclude     = set(rule.get("exclude") or [])
+    rule_min_cred    = rule.get("min_credits") or 0
 
     for course_id, data in catalog.items():
         if course_id in rule_exclude:
@@ -34,11 +53,13 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
                 valid.append(course_id)
             continue
 
-        dept       = ''.join(filter(str.isalpha, course_id))
-        number_str = ''.join(filter(str.isdigit, course_id))
+        dept, number_str = _split_course_id(course_id)
         if not number_str:
             continue
         number = int(number_str)
+
+        if rule_exclude_dept and dept == rule_exclude_dept:
+            continue
 
         if ((not rule_dept or dept == rule_dept) and
                 rule_min_num <= number <= rule_max_num and
@@ -50,11 +71,12 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
         for virtual_id in virtual_courses:
             if virtual_id in rule_exclude or virtual_id in valid_set:
                 continue
-            v_dept     = ''.join(filter(str.isalpha, virtual_id))
-            v_num_str  = ''.join(filter(str.isdigit, virtual_id))
+            v_dept, v_num_str = _split_course_id(virtual_id)
             if not v_num_str:
                 continue
             v_num = int(v_num_str)
+            if rule_exclude_dept and v_dept == rule_exclude_dept:
+                continue
             if (not rule_dept or v_dept == rule_dept) and rule_min_num <= v_num <= rule_max_num:
                 valid.append(virtual_id)
 

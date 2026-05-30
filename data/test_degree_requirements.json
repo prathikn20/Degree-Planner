@@ -1136,7 +1136,6 @@
         "CHEM102",
         "CHEM102L",
         "ASTR519",
-        "PHYS632",
         "ASTR202",
         "CHEM101L"
       ],
@@ -1163,20 +1162,6 @@
           "rule": null
         },
         {
-          "description": "ASTR (numbered above 300)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ASTR",
-            "min_number": 301,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
-        },
-        {
           "description": "PHYS (numbered above 300 except PHYS 395)",
           "type": "rule_based",
           "courses_required": 1,
@@ -1190,7 +1175,7 @@
               "PHYS395"
             ]
           },
-          "id": "rule_2"
+          "id": "rule_1"
         },
         {
           "id": "choice_2",
@@ -1215,35 +1200,21 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_3"
+          "id": "rule_2"
         },
         {
+          "id": "list_2",
           "description": "Six or more additional credit hours chosen from:",
-          "type": "rule_based",
+          "type": "explicit",
           "courses_required": 6,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_4"
-        },
-        {
-          "description": "ASTR (numbered above 300)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ASTR",
-            "min_number": 301,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_5"
+          "options": [
+            "MATH528",
+            "MATH529",
+            "PHYS231",
+            "PHYS451",
+            "PHYS632"
+          ],
+          "rule": null
         }
       ]
     },
@@ -1656,20 +1627,6 @@
             "SOCI252"
           ],
           "rule": null
-        },
-        {
-          "description": "Four political science (POLI) electives at the 100 level or above",
-          "type": "rule_based",
-          "courses_required": 4,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "POLI",
-            "min_number": 100,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_2"
         }
       ]
     },
@@ -2193,20 +2150,6 @@
             "ECON420"
           ],
           "rule": null
-        },
-        {
-          "description": "Two additional ECON courses at the 400 level",
-          "type": "rule_based",
-          "courses_required": 2,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ECON",
-            "min_number": 400,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
         }
       ]
     },
@@ -2734,20 +2677,6 @@
             "LING203"
           ],
           "rule": null
-        },
-        {
-          "description": "Two additional LING courses numbered 200 or higher. 2,3",
-          "type": "rule_based",
-          "courses_required": 2,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "LING",
-            "min_number": 200,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
         }
       ]
     },
@@ -3105,20 +3034,6 @@
             "SOCI692H"
           ],
           "rule": null
-        },
-        {
-          "description": "Two additional three-hour SOCI courses (six hours)",
-          "type": "rule_based",
-          "courses_required": 2,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "SOCI",
-            "min_number": null,
-            "min_credits": 3,
-            "exclude": []
-          },
-          "id": "rule_1"
         },
         {
           "id": "choice_1",
@@ -3744,8 +3659,6 @@
         "APPL260",
         "APPL285",
         "APPL385",
-        "APPL697",
-        "APPL698",
         "CHEM101",
         "CHEM102",
         "MATH231",
@@ -3768,18 +3681,15 @@
           "rule": null
         },
         {
+          "id": "list_1",
           "description": "Select one of the following tracks:",
-          "type": "rule_based",
+          "type": "explicit",
           "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
+          "options": [
+            "APPL697",
+            "APPL698"
+          ],
+          "rule": null
         }
       ]
     },
@@ -6256,13 +6166,7 @@
         "MATH383",
         "CHEM101",
         "CHEM101L",
-        "PHYS231",
-        "PHYS295",
-        "PHYS395",
-        "PHYS691H",
-        "PHYS692H",
         "PHYS332",
-        "STOR435",
         "COMP110",
         "COMP210",
         "PHYS381",
@@ -6270,15 +6174,13 @@
         "PHYS405",
         "BIOL101",
         "CHEM102",
-        "CHEM261",
-        "CHEM262",
-        "CHEM430",
         "BUSI408",
         "BUSI580",
         "BUSI588",
         "BUSI589",
         "BUSI600",
         "BUSI688",
+        "PHYS231",
         "PHYS451",
         "PHYS481L"
       ],
@@ -6354,34 +6256,21 @@
           "id": "rule_2"
         },
         {
-          "description": "Three additional credits chosen from:",
-          "type": "rule_based",
-          "courses_required": 1,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_3"
-        },
-        {
-          "description": "ASTR (numbered above 300)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ASTR",
-            "min_number": 301,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_4"
-        },
-        {
           "id": "list_1",
+          "description": "Three additional credits chosen from:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "PHYS231",
+            "PHYS295",
+            "PHYS395",
+            "PHYS691H",
+            "PHYS692H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
           "description": "One of the following courses:",
           "type": "explicit",
           "courses_required": 1,
@@ -6423,7 +6312,7 @@
           "rule": null
         },
         {
-          "id": "list_2",
+          "id": "list_3",
           "description": "Three additional credits chosen from:",
           "type": "explicit",
           "courses_required": 3,
@@ -6435,56 +6324,20 @@
           "rule": null
         },
         {
-          "id": "list_3",
+          "id": "list_4",
           "description": "Three additional credits chosen from:",
           "type": "explicit",
           "courses_required": 3,
           "options": [
-            "ASTR202"
+            "ASTR202",
+            "MATH347",
+            "MATH577",
+            "STOR435"
           ],
           "rule": null
-        },
-        {
-          "description": "ASTR (numbered above 300)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ASTR",
-            "min_number": 301,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_5"
-        },
-        {
-          "description": "PHYS (numbered above 200) 3",
-          "type": "rule_based",
-          "courses_required": 3,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "PHYS",
-            "min_number": 201,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_6"
         },
         {
           "id": "choice_7",
-          "description": "MATH\u00a0347 | Linear Algebra for Applications F",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "MATH347",
-            "MATH577"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_8",
           "description": "COMP\u00a0283 | Discrete Structures H",
           "type": "explicit",
           "courses_required": 1,
@@ -6495,7 +6348,7 @@
           "rule": null
         },
         {
-          "id": "choice_9",
+          "id": "choice_8",
           "description": "PHYS\u00a0201 | Basic Mechanics 2",
           "type": "explicit",
           "courses_required": 1,
@@ -6506,7 +6359,7 @@
           "rule": null
         },
         {
-          "id": "choice_10",
+          "id": "choice_9",
           "description": "PHYS\u00a0211 | Intermediate Electromagnetism 1",
           "type": "explicit",
           "courses_required": 1,
@@ -6517,7 +6370,7 @@
           "rule": null
         },
         {
-          "id": "choice_11",
+          "id": "choice_10",
           "description": "PHYS\u00a0231 | Physical Computing H",
           "type": "explicit",
           "courses_required": 1,
@@ -6539,7 +6392,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_7"
+          "id": "rule_3"
         },
         {
           "description": "ENEC 300-Level Elective (Two ENEC courses numbered 300 or above) 3",
@@ -6553,10 +6406,10 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_8"
+          "id": "rule_4"
         },
         {
-          "id": "choice_12",
+          "id": "choice_11",
           "description": "PHYS\u00a0201 | Basic Mechanics 2",
           "type": "explicit",
           "courses_required": 1,
@@ -6567,7 +6420,7 @@
           "rule": null
         },
         {
-          "id": "choice_13",
+          "id": "choice_12",
           "description": "PHYS\u00a0211 | Intermediate Electromagnetism 1",
           "type": "explicit",
           "courses_required": 1,
@@ -6578,7 +6431,7 @@
           "rule": null
         },
         {
-          "id": "choice_14",
+          "id": "choice_13",
           "description": "PHYS\u00a0461 | Introduction to Medical Physics",
           "type": "explicit",
           "courses_required": 1,
@@ -6589,48 +6442,19 @@
           "rule": null
         },
         {
+          "id": "list_5",
           "description": "Three additional credits chosen from:",
-          "type": "rule_based",
-          "courses_required": 1,
-          "options": [],
-          "rule": {
-            "department": null,
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_9"
-        },
-        {
-          "description": "BIOL (numbered above 200)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "BIOL",
-            "min_number": 201,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_10"
-        },
-        {
-          "description": "PHYS (numbered above 200) 3",
-          "type": "rule_based",
+          "type": "explicit",
           "courses_required": 3,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "PHYS",
-            "min_number": 201,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_11"
+          "options": [
+            "CHEM261",
+            "CHEM262",
+            "CHEM430"
+          ],
+          "rule": null
         },
         {
-          "id": "choice_15",
+          "id": "choice_14",
           "description": "PHYS\u00a0201 | Basic Mechanics 2",
           "type": "explicit",
           "courses_required": 1,
@@ -6641,7 +6465,7 @@
           "rule": null
         },
         {
-          "id": "choice_16",
+          "id": "choice_15",
           "description": "PHYS\u00a0211 | Intermediate Electromagnetism 1",
           "type": "explicit",
           "courses_required": 1,
@@ -6652,7 +6476,7 @@
           "rule": null
         },
         {
-          "id": "choice_17",
+          "id": "choice_16",
           "description": "PHYS/BMME 441 | Thermal Physics 1",
           "type": "explicit",
           "courses_required": 1,
@@ -6664,7 +6488,7 @@
           "rule": null
         },
         {
-          "id": "list_4",
+          "id": "list_6",
           "description": "Three additional credits chosen from the following options 3",
           "type": "explicit",
           "courses_required": 3,
@@ -6676,7 +6500,7 @@
           "rule": null
         },
         {
-          "id": "choice_18",
+          "id": "choice_17",
           "description": "PHYS\u00a0201 | Basic Mechanics 2",
           "type": "explicit",
           "courses_required": 1,
@@ -6687,7 +6511,7 @@
           "rule": null
         },
         {
-          "id": "choice_19",
+          "id": "choice_18",
           "description": "PHYS\u00a0211 | Intermediate Electromagnetism 1",
           "type": "explicit",
           "courses_required": 1,
@@ -6698,7 +6522,7 @@
           "rule": null
         },
         {
-          "id": "list_5",
+          "id": "list_7",
           "description": "Six additional credits chosen from the following options 3",
           "type": "explicit",
           "courses_required": 6,
@@ -6934,20 +6758,6 @@
           "rule": null
         },
         {
-          "description": "Four additional three-hour courses in anthropology",
-          "type": "rule_based",
-          "courses_required": 4,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "ANTH",
-            "min_number": null,
-            "min_credits": 3,
-            "exclude": []
-          },
-          "id": "rule_1"
-        },
-        {
           "description": "No more than three courses used to fulfill the major can be numbered below 200.",
           "type": "rule_based",
           "courses_required": 3,
@@ -6959,7 +6769,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "id": "rule_2"
+          "id": "rule_1"
         },
         {
           "id": "list_5",
@@ -7121,308 +6931,7 @@
         "POLI150",
         "SOCI111",
         "SOCI121",
-        "WGST281",
-        "AAAD101",
-        "AAAD307",
-        "AAAD315",
-        "AAAD316",
-        "AAAD403",
-        "AMST277",
-        "ANTH130",
-        "ANTH280",
-        "ANTH319",
-        "ANTH360",
-        "ANTH375",
-        "ASIA300",
-        "RELI283",
-        "ENGL279",
-        "GEOG423",
-        "GEOG435",
-        "GEOG447",
-        "GEOG452",
-        "GEOG453",
-        "GEOG460",
-        "GEOG464",
-        "GEOG480",
-        "GLBL87H",
-        "GLBL221",
-        "GLBL383",
-        "GLBL401",
-        "GLBL415",
-        "GLBL450",
-        "GLBL481",
-        "GLBL487",
-        "GLBL489",
-        "GLBL491H",
-        "HIST101",
-        "HIST276",
-        "HIST510",
-        "HIST570",
-        "HIST577",
-        "LING543",
-        "MUSC291",
-        "POLI231",
-        "POLI234",
-        "POLI235",
-        "POLI236",
-        "POLI238",
-        "POLI239",
-        "POLI252",
-        "POLI253",
-        "POLI255",
-        "POLI260",
-        "POLI431",
-        "POLI433",
-        "POLI435",
-        "POLI438",
-        "POLI442",
-        "POLI443",
-        "POLI444",
-        "POLI448",
-        "POLI449",
-        "POLI450",
-        "POLI451",
-        "POLI457",
-        "POLI459",
-        "POLI470",
-        "POLI471",
-        "PWAD250",
-        "PWAD252",
-        "PWAD352",
-        "PWAD489",
-        "RELI181",
-        "SOCI274",
-        "WGST388",
-        "WGST410",
-        "AAAD212",
-        "AAAD410",
-        "ANTH320",
-        "BUSI611",
-        "ECON434",
-        "ECON450",
-        "ECON460",
-        "ECON461",
-        "ECON465",
-        "ECON468",
-        "ECON469",
-        "ECON560",
-        "GEOG428",
-        "GEOG458",
-        "GLBL413",
-        "PLAN574",
-        "PLAN773",
-        "SOCI58",
-        "ANTH147",
-        "ANTH151",
-        "ANTH238",
-        "ANTH318",
-        "ANTH446",
-        "ANTH470",
-        "ANTH473",
-        "ARAB214",
-        "ENEC325",
-        "ENEC330",
-        "ENEC370",
-        "ENEC510",
-        "ENGL268",
-        "ENVR600",
-        "ENVR610",
-        "FREN305",
-        "GEOG222",
-        "GEOG237",
-        "GEOG269",
-        "GEOG334",
-        "GEOG437",
-        "GEOG446",
-        "GEOG457",
-        "GLBL483",
-        "HPM660",
-        "MHCH610",
-        "PLCY661",
-        "SOCI469",
-        "AAAD200",
-        "AAAD391",
-        "AAAD461",
-        "ANTH427",
-        "ANTH461",
-        "CMPL442",
-        "GLBL435",
-        "HIST110",
-        "HIST278",
-        "WGST211",
-        "WGST352",
-        "AAAD210",
-        "AAAD284",
-        "AMST248",
-        "ENGL248",
-        "POLI248",
-        "WGST249",
-        "ANTH102",
-        "ANTH123",
-        "ANTH259",
-        "ANTH284",
-        "ANTH334",
-        "ANTH429",
-        "ANTH477",
-        "ARTH155",
-        "ASIA150",
-        "CMPL143",
-        "COMM574",
-        "DRAM486",
-        "ENGL164",
-        "FREN280",
-        "FREN355",
-        "FREN375",
-        "FREN377",
-        "GEOG56",
-        "GEOG448",
-        "GLBL486",
-        "GLBL492H",
-        "HIST139",
-        "ITAL385",
-        "MUSC258",
-        "RELI121",
-        "RELI284",
-        "RELI285",
-        "RELI345",
-        "RELI428",
-        "SPAN344",
-        "SPAN378",
-        "WGST124",
-        "AAAD201",
-        "AAAD214",
-        "AAAD300",
-        "AAAD301",
-        "AAAD318",
-        "AAAD320",
-        "AAAD329",
-        "AAAD388",
-        "AAAD400",
-        "AAAD414",
-        "AAAD421",
-        "AAAD487",
-        "ARTH255",
-        "GEOG268",
-        "HIST130",
-        "HIST279",
-        "ANTH330",
-        "ASIA134",
-        "ASIA183",
-        "ASIA231",
-        "ASIA261",
-        "ASIA262",
-        "ASIA331",
-        "ASIA333",
-        "ASIA427",
-        "CHIN150",
-        "CHIN252",
-        "CHIN253",
-        "CHIN361",
-        "CHIN463",
-        "CHIN464",
-        "CHIN562",
-        "GEOG266",
-        "HIST134",
-        "HIST136",
-        "HIST288",
-        "JAPN162",
-        "JAPN375",
-        "JAPN482",
-        "KOR150",
-        "KOR151",
-        "KOR232",
-        "KOR327",
-        "KOR346",
-        "PHIL213",
-        "RELI287",
-        "RELI288",
-        "AAAD260",
-        "AAAD278",
-        "AAAD460",
-        "ARTH267",
-        "GEOG259",
-        "GEOG430",
-        "GLBL382",
-        "HIST142",
-        "HIST143",
-        "HIST145",
-        "HIST175H",
-        "HIST242",
-        "HIST248",
-        "HIST532",
-        "LTAM101",
-        "MUSC147",
-        "POLI434",
-        "PORT310",
-        "PORT370",
-        "PORT375",
-        "PORT387",
-        "PORT388",
-        "RELI151",
-        "WGST280",
-        "WGST465",
-        "ARAB150",
-        "ARAB151",
-        "ARAB337",
-        "ARAB453",
-        "ASIA124",
-        "ASIA359",
-        "ASIA435",
-        "ASIA462",
-        "ASIA471",
-        "HIST537",
-        "HIST538",
-        "JWST107",
-        "RELI64",
-        "RELI180",
-        "RELI385",
-        "RELI480",
-        "RELI581",
-        "RELI583",
-        "RELI584",
-        "SOCI419",
-        "ARTH152",
-        "ARTH283",
-        "CMPL270",
-        "GSLL270",
-        "JWST239",
-        "RELI239",
-        "DTCH405",
-        "ENGL278",
-        "EURO270",
-        "FREN350",
-        "FREN372",
-        "FREN378",
-        "FREN386",
-        "FREN388",
-        "FREN389",
-        "GERM302",
-        "GERM382",
-        "GERM560",
-        "GSLL255",
-        "HIST259",
-        "HIST262",
-        "ITAL320",
-        "ITAL330",
-        "ITAL333",
-        "ITAL335",
-        "ITAL343",
-        "ITAL365",
-        "ITAL398",
-        "POLI232H",
-        "POLI630",
-        "ROML56",
-        "SPAN340",
-        "GLBL482",
-        "HIST161",
-        "HIST162",
-        "HIST481",
-        "HIST482",
-        "HIST483",
-        "HIST484",
-        "RUSS270",
-        "RUSS445",
-        "SLAV248"
+        "WGST281"
       ],
       "choice_groups": [
         {
@@ -7533,373 +7042,6 @@
             "exclude": []
           },
           "id": "rule_3"
-        },
-        {
-          "id": "choice_7",
-          "description": "ARTH/HIST 514 | Monuments and Memory",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ARTH514",
-            "HIST514"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_8",
-          "description": "ASIA/HIST/PWAD 281 | The Pacific War, 1937-1945: Its Causes and Legacy",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ASIA281",
-            "HIST281",
-            "PWAD281"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_9",
-          "description": "ENEC/PLCY 372 | Global Environment: Policy Analysis and Solutions",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC372",
-            "PLCY372"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_10",
-          "description": "ENEC/POLI 254 | International Environmental Politics",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC254",
-            "POLI254"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_11",
-          "description": "HIST/PWAD 205 | War, Diplomacy, and Statecraft, 1618-1815",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "HIST205",
-            "PWAD205"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_12",
-          "description": "HIST/PWAD 206 | War, Diplomacy, and Statecraft, 1815-1945",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "HIST206",
-            "PWAD206"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_13",
-          "description": "HIST/PWAD 207 | The Global Cold War",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "HIST207",
-            "PWAD207"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_14",
-          "description": "POLI/PWAD 150 | International Relations and Global Politics H, F",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "POLI150",
-            "PWAD150"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_15",
-          "description": "POLI/PWAD 469 | Conflict and Intervention in the Former Yugoslavia H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "POLI469",
-            "PWAD469"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_16",
-          "description": "ANTH/WGST 443 | Cultures and Politics of Reproduction",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ANTH443",
-            "WGST443"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_17",
-          "description": "ANTH/WGST 445 | Migration and Health",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ANTH445",
-            "WGST445"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_18",
-          "description": "ENEC/POLI 254 | International Environmental Politics",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC254",
-            "POLI254"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_19",
-          "description": "ENEC/GEOG 264 | Conservation of Biodiversity in Theory and Practice",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC264",
-            "GEOG264"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_20",
-          "description": "ENEC/PLCY 372 | Global Environment: Policy Analysis and Solutions",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC372",
-            "PLCY372"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_21",
-          "description": "ENEC/GEOG 437 | Social Vulnerability to Climate Change",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ENEC437",
-            "GEOG437"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_22",
-          "description": "GEOG/ENEC 451 | Population, Development, and the Environment",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "GEOG451",
-            "ENEC451"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_23",
-          "description": "AAAD/WGST 200 | Gender and Sexuality in Africa",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "AAAD200",
-            "WGST200"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_24",
-          "description": "ARTH/HIST 514 | Monuments and Memory",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ARTH514",
-            "HIST514"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_25",
-          "description": "ASIA/RELI 183 | Asian Religions",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ASIA183",
-            "RELI183"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_26",
-          "description": "GEOG/ASIA 267 | South Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "GEOG267",
-            "ASIA267"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_27",
-          "description": "MEJO/WGST 442 | Gender, Class, Race, and Mass Media",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "MEJO442",
-            "WGST442"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_28",
-          "description": "WGST/HIST 313 | Women and the Law in Africa and the Middle East",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "WGST313",
-            "HIST313"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_29",
-          "description": "ANTH/ASIA 365 | Chinese Diaspora in the Asia Pacific",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ANTH365",
-            "ASIA365"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_30",
-          "description": "ASIA/HIST 133 | Introduction to Chinese History",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ASIA133",
-            "HIST133"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_31",
-          "description": "ASIA/RELI 285 | Monks, Magic, & Meditation: Theravada Buddhism Across Space and Time",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ASIA285",
-            "RELI285"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_32",
-          "description": "GEOG/ASIA 267 | South Asia",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "GEOG267",
-            "ASIA267"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_33",
-          "description": "ANTH/FOLK 130 | Anthropology of the Caribbean",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ANTH130",
-            "FOLK130"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_34",
-          "description": "ASIA/HIST/PWAD 277 | The Conflict over Israel/Palestine",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ASIA277",
-            "HIST277",
-            "PWAD277"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_35",
-          "description": "EURO/HIST 159 | Europe and the World Since 1900",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "EURO159",
-            "HIST159"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_36",
-          "description": "HIST/EURO/POLI 257 | Politics, Society, and Culture in Postwar Germany",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "HIST257",
-            "EURO257",
-            "POLI257"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_37",
-          "description": "JWST/PLSH 412 | From Communism to Capitalism: 20th- and 21st-Century Polish Literature and Culture",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "JWST412",
-            "PLSH412"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_38",
-          "description": "POLI/PWAD 469 | Conflict and Intervention in the Former Yugoslavia H",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "POLI469",
-            "PWAD469"
-          ],
-          "rule": null
-        },
-        {
-          "id": "choice_39",
-          "description": "POLI/PWAD/SOCI 260 | Crisis and Change in Russia and Eastern Europe",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "POLI260",
-            "PWAD260",
-            "SOCI260"
-          ],
-          "rule": null
         }
       ]
     },
@@ -9606,20 +8748,6 @@
             "INLS396"
           ],
           "rule": null
-        },
-        {
-          "description": "An INLS course numbered above 400",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "INLS",
-            "min_number": 400,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
         }
       ]
     },
@@ -9705,20 +8833,6 @@
             "BUSI510"
           ],
           "rule": null
-        },
-        {
-          "description": "BUSI 5-- | Capstone (pending course proposal)",
-          "type": "rule_based",
-          "courses_required": 1,
-          "credits_required": null,
-          "options": [],
-          "rule": {
-            "department": "BUSI",
-            "min_number": null,
-            "min_credits": null,
-            "exclude": []
-          },
-          "id": "rule_1"
         },
         {
           "id": "list_3",
@@ -10857,363 +9971,6 @@
             "exclude": []
           },
           "id": "rule_1"
-        },
-        {
-          "id": "list_1",
-          "description": "At least one course in two of the department's subfields (see lists below).",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "RELI63",
-            "RELI65",
-            "RELI70",
-            "RELI78",
-            "RELI80",
-            "RELI104",
-            "RELI105",
-            "RELI109",
-            "RELI114",
-            "RELI117",
-            "RELI201",
-            "RELI205",
-            "RELI207",
-            "RELI208",
-            "RELI209",
-            "RELI211",
-            "RELI212",
-            "RELI215",
-            "RELI217",
-            "RELI314",
-            "RELI315",
-            "RELI390",
-            "RELI411",
-            "RELI412",
-            "RELI413",
-            "RELI414",
-            "RELI501",
-            "RELI504",
-            "RELI590",
-            "RELI602",
-            "RELI603",
-            "RELI607",
-            "RELI608",
-            "RELI609",
-            "RELI610",
-            "RELI614",
-            "RELI617",
-            "RELI375",
-            "CLAR375",
-            "RELI110",
-            "CLAR110",
-            "JWST110",
-            "RELI512",
-            "CLAR512",
-            "JWST512",
-            "RELI502",
-            "FOLK502",
-            "RELI103",
-            "JWST103",
-            "RELI106",
-            "JWST106",
-            "RELI206",
-            "JWST206",
-            "RELI503",
-            "JWST503",
-            "ANTH574",
-            "ASIA574",
-            "RELI574",
-            "ARAB681",
-            "ASIA681",
-            "RELI681",
-            "ASIA386",
-            "COMM386",
-            "RELI386",
-            "ASIA387",
-            "COMM387",
-            "RELI387",
-            "ASIA180",
-            "RELI180",
-            "ASIA181",
-            "RELI181",
-            "ASIA183",
-            "RELI183",
-            "ASIA280",
-            "RELI280",
-            "ASIA284",
-            "RELI284",
-            "ASIA285",
-            "RELI285",
-            "ASIA382",
-            "RELI382",
-            "ASIA383",
-            "RELI383",
-            "ASIA384",
-            "RELI384",
-            "ASIA445",
-            "RELI445",
-            "ASIA486",
-            "RELI486",
-            "ASIA482",
-            "RELI482",
-            "WGST482",
-            "ASIA487",
-            "RELI487",
-            "ASIA488",
-            "RELI488",
-            "ASIA489",
-            "RELI489",
-            "ASIA581",
-            "RELI581",
-            "ASIA582",
-            "RELI582",
-            "ASIA583",
-            "RELI583",
-            "ASIA584",
-            "RELI584",
-            "ASIA587",
-            "RELI587",
-            "ASIA300",
-            "RELI283",
-            "ASIA301",
-            "RELI286",
-            "ASIA302",
-            "RELI287",
-            "ASIA303",
-            "RELI288",
-            "HNUR592",
-            "RELI592",
-            "PWAD481",
-            "RELI481",
-            "RELI64",
-            "RELI66",
-            "RELI73",
-            "RELI165",
-            "RELI184",
-            "RELI185",
-            "RELI248",
-            "RELI279",
-            "RELI289",
-            "RELI381",
-            "RELI385",
-            "RELI390",
-            "RELI474",
-            "RELI480",
-            "RELI485",
-            "RELI524",
-            "RELI580",
-            "RELI585",
-            "RELI586",
-            "RELI590",
-            "ASIA180",
-            "RELI180",
-            "ASIA284",
-            "RELI284",
-            "ASIA488",
-            "RELI488",
-            "ASIA581",
-            "RELI581",
-            "ASIA301",
-            "RELI286",
-            "ASIA303",
-            "RELI288",
-            "EURO270",
-            "RELI270",
-            "GSLL218",
-            "RELI218",
-            "GERM227",
-            "RELI227",
-            "HIST263",
-            "RELI263",
-            "HIST454",
-            "RELI454",
-            "RELI62",
-            "RELI77",
-            "RELI87",
-            "RELI88",
-            "RELI108",
-            "RELI161",
-            "RELI162",
-            "RELI163",
-            "RELI164",
-            "RELI165",
-            "RELI166",
-            "RELI184",
-            "RELI209",
-            "RELI215",
-            "RELI220",
-            "RELI266",
-            "RELI365",
-            "RELI366",
-            "RELI367",
-            "RELI368",
-            "RELI390",
-            "RELI450",
-            "RELI465",
-            "RELI565",
-            "RELI564",
-            "RELI566",
-            "RELI569",
-            "RELI586",
-            "RELI590",
-            "RELI617",
-            "RELI662",
-            "RELI362",
-            "WGST362",
-            "RELI371",
-            "WGST371",
-            "RELI665",
-            "WGST664",
-            "ANTH428",
-            "FOLK428",
-            "RELI428",
-            "ANTH688",
-            "FOLK688",
-            "RELI688",
-            "CMPL270",
-            "GSLL270",
-            "JWST239",
-            "RELI239",
-            "HIST263",
-            "RELI263",
-            "JWST100",
-            "RELI123",
-            "JWST343",
-            "RELI343",
-            "JWST533",
-            "RELI533",
-            "WGST533",
-            "PHIL134",
-            "RELI126",
-            "RELI60",
-            "RELI61",
-            "RELI67",
-            "RELI68",
-            "RELI71",
-            "RELI74",
-            "RELI75",
-            "RELI76",
-            "RELI77",
-            "RELI79",
-            "RELI85",
-            "RELI101",
-            "RELI102",
-            "RELI121",
-            "RELI122",
-            "RELI125",
-            "RELI127",
-            "RELI130",
-            "RELI134",
-            "RELI135",
-            "RELI138",
-            "RELI163",
-            "RELI166",
-            "RELI167",
-            "RELI205",
-            "RELI220",
-            "RELI222",
-            "RELI224",
-            "RELI225",
-            "RELI226",
-            "RELI232",
-            "RELI233",
-            "RELI235",
-            "RELI236",
-            "RELI245",
-            "RELI246",
-            "RELI322",
-            "RELI323",
-            "RELI325",
-            "RELI338",
-            "RELI345",
-            "RELI352",
-            "RELI390",
-            "RELI420",
-            "RELI421",
-            "RELI423",
-            "RELI425",
-            "RELI426",
-            "RELI427",
-            "RELI430",
-            "RELI438",
-            "RELI452",
-            "RELI474",
-            "RELI522",
-            "RELI524",
-            "RELI525",
-            "RELI527",
-            "RELI528",
-            "RELI530",
-            "RELI564",
-            "RELI590",
-            "RELI620",
-            "RELI429",
-            "SOCI429",
-            "RELI244",
-            "WGST244",
-            "RELI362",
-            "WGST362",
-            "RELI368",
-            "WGST370",
-            "RELI424",
-            "WGST424",
-            "RELI665",
-            "WGST664",
-            "ANTH342",
-            "FOLK342",
-            "RELI342",
-            "ASIA445",
-            "RELI445",
-            "JWST107",
-            "RELI107",
-            "JWST143",
-            "RELI143",
-            "JWST243",
-            "RELI243",
-            "JWST343",
-            "RELI343",
-            "JWST444",
-            "RELI444",
-            "WGST448",
-            "RELI60",
-            "RELI66",
-            "RELI69",
-            "RELI71",
-            "RELI72",
-            "RELI87",
-            "RELI130",
-            "RELI135",
-            "RELI140",
-            "RELI141",
-            "RELI142",
-            "RELI151",
-            "RELI235",
-            "RELI240",
-            "RELI241",
-            "RELI242",
-            "RELI245",
-            "RELI246",
-            "RELI247",
-            "RELI248",
-            "RELI332",
-            "RELI338",
-            "RELI340",
-            "RELI345",
-            "RELI390",
-            "RELI423",
-            "RELI441",
-            "RELI442",
-            "RELI443",
-            "RELI446",
-            "RELI448",
-            "RELI452",
-            "RELI501",
-            "RELI540",
-            "RELI541",
-            "RELI542",
-            "RELI580",
-            "RELI590"
-          ],
-          "rule": null
         }
       ]
     },
