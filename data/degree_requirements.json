@@ -44,7 +44,8 @@
               "BUSI410",
               "BUSI411",
               "BUSI412"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -55,7 +56,8 @@
           "type": "rule_based",
           "rule": {
             "exclude_department": "BUSI",
-            "min_number": 100
+            "min_number": 100,
+            "max_number": 699
           }
         }
       ]
@@ -186,7 +188,8 @@
               "COMP496",
               "COMP690",
               "COMP692H"
-            ]
+            ],
+            "max_number": 699
           }
         }
       ]
@@ -833,28 +836,43 @@
           "description": "Foundations of Data and Information",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["DATA130", "ENGL480", "ENGL482", "INLS201", "SOCI318"]
+          "options": [
+            "DATA130",
+            "ENGL480",
+            "ENGL482",
+            "INLS201",
+            "SOCI318"
+          ]
         },
         {
           "id": "ds_comp_thinking",
           "description": "Introduction to Programming",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["COMP110", "COMP116"]
+          "options": [
+            "COMP110",
+            "COMP116"
+          ]
         },
         {
           "id": "ds_math_foundations",
           "description": "Mathematical Tools for Data Science or Linear Algebra",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["MATH210", "MATH347"]
+          "options": [
+            "MATH210",
+            "MATH347"
+          ]
         },
         {
           "id": "ds_stat_foundations",
           "description": "Methods and Models of Data Science or Methods of Data Analysis",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["STOR320", "STOR455"]
+          "options": [
+            "STOR320",
+            "STOR455"
+          ]
         },
         {
           "id": "ds_communication",
@@ -862,8 +880,16 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "COMM113", "COMM171", "DATA150", "ENGL119", "ENGL303", 
-            "ENGL411", "GEOG115", "GEOG415", "INLS541", "MEJO102"
+            "COMM113",
+            "COMM171",
+            "DATA150",
+            "ENGL119",
+            "ENGL303",
+            "ENGL411",
+            "GEOG115",
+            "GEOG415",
+            "INLS541",
+            "MEJO102"
           ]
         }
       ]
@@ -884,14 +910,24 @@
             "description": "Data Journalism Domain Course",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["GEOG215", "LING460", "POLI209", "STOR538"]
+            "options": [
+              "GEOG215",
+              "LING460",
+              "POLI209",
+              "STOR538"
+            ]
           },
           {
             "id": "dj_applied",
             "description": "Data Journalism Applied Course",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["MEJO459", "MEJO553", "MEJO625", "MEJO630"]
+            "options": [
+              "MEJO459",
+              "MEJO553",
+              "MEJO625",
+              "MEJO630"
+            ]
           }
         ]
       },
@@ -908,9 +944,21 @@
             "courses_required": 1,
             "type": "explicit",
             "options": [
-              "ECON423", "ECON425", "ECON445", "ECON450", "ECON480", 
-              "ECON522", "ECON525", "ECON545", "ECON550", "ECON551", 
-              "ECON552", "ECON571", "ECON573", "ECON575", "ECON580"
+              "ECON423",
+              "ECON425",
+              "ECON445",
+              "ECON450",
+              "ECON480",
+              "ECON522",
+              "ECON525",
+              "ECON545",
+              "ECON550",
+              "ECON551",
+              "ECON552",
+              "ECON571",
+              "ECON573",
+              "ECON575",
+              "ECON580"
             ]
           }
         ]
@@ -927,7 +975,10 @@
             "description": "Quantitative Language Science Elective",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["LING225", "LING520"]
+            "options": [
+              "LING225",
+              "LING520"
+            ]
           }
         ]
       },
@@ -941,14 +992,23 @@
             "description": "Introduction to Planning",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["PLAN246", "PLAN247", "PLAN256", "PLAN257", "PLAN714"]
+            "options": [
+              "PLAN246",
+              "PLAN247",
+              "PLAN256",
+              "PLAN257",
+              "PLAN714"
+            ]
           },
           {
             "id": "uda_core",
             "description": "Urban Data Analytics Core",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["PLAN372", "PLAN672"]
+            "options": [
+              "PLAN372",
+              "PLAN672"
+            ]
           },
           {
             "id": "uda_applied",
@@ -956,8 +1016,14 @@
             "courses_required": 1,
             "type": "explicit",
             "options": [
-              "PLAN591", "PLAN635", "PLAN636", "PLAN637", 
-              "PLAN671", "PLAN720", "PLAN739", "PLAN745"
+              "PLAN591",
+              "PLAN635",
+              "PLAN636",
+              "PLAN637",
+              "PLAN671",
+              "PLAN720",
+              "PLAN739",
+              "PLAN745"
             ]
           }
         ]
@@ -973,8 +1039,15 @@
             "courses_required": 3,
             "type": "explicit",
             "options": [
-              "MNGT345", "MNGT380", "SOCI121", "SOCI172", "SOCI252", 
-              "SOCI277", "SOCI302", "SOCI427", "SOCI429"
+              "MNGT345",
+              "MNGT380",
+              "SOCI121",
+              "SOCI172",
+              "SOCI252",
+              "SOCI277",
+              "SOCI302",
+              "SOCI427",
+              "SOCI429"
             ]
           }
         ]
@@ -988,8 +1061,16 @@
             "courses_required": 4,
             "type": "explicit",
             "options": [
-              "COMM83", "COMM86", "COMM249", "COMM348", "COMM360", 
-              "COMM453", "COMP380", "MEJO242", "HIST322", "HIST328"
+              "COMM83",
+              "COMM86",
+              "COMM249",
+              "COMM348",
+              "COMM360",
+              "COMM453",
+              "COMP380",
+              "MEJO242",
+              "HIST322",
+              "HIST328"
             ]
           }
         ]
@@ -1006,9 +1087,18 @@
             "courses_required": 2,
             "type": "explicit",
             "options": [
-              "GEOG391", "GEOG410", "GEOG456", "GEOG477", "GEOG491", 
-              "GEOG541", "GEOG544", "GEOG555", "GEOG567", "GEOG577", 
-              "GEOG591", "GEOG592"
+              "GEOG391",
+              "GEOG410",
+              "GEOG456",
+              "GEOG477",
+              "GEOG491",
+              "GEOG541",
+              "GEOG544",
+              "GEOG555",
+              "GEOG567",
+              "GEOG577",
+              "GEOG591",
+              "GEOG592"
             ]
           }
         ]
@@ -1088,7 +1178,8 @@
             "exclude": [
               "MATH528L",
               "MATH529L"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -1347,7 +1438,8 @@
               "BIOL296",
               "BIOL353",
               "BIOL495"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -1559,7 +1651,8 @@
             "min_number": 420,
             "exclude": [
               "CHEM692H"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -1844,7 +1937,8 @@
           "type": "rule_based",
           "rule": {
             "department": "POLI",
-            "min_number": 400
+            "min_number": 400,
+            "max_number": 699
           }
         },
         {
@@ -1854,7 +1948,8 @@
           "type": "rule_based",
           "rule": {
             "department": "POLI",
-            "min_number": 100
+            "min_number": 100,
+            "max_number": 699
           }
         }
       ]
@@ -2757,7 +2852,8 @@
               "STOR766",
               "STOR767",
               "STOR790"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -3171,7 +3267,8 @@
               "EXSS51",
               "EXSS54",
               "EXSS89"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -3224,7 +3321,8 @@
           "type": "rule_based",
           "rule": {
             "department": "EXSS",
-            "min_number": 200
+            "min_number": 200,
+            "max_number": 699
           }
         },
         {
@@ -3234,7 +3332,8 @@
           "type": "rule_based",
           "rule": {
             "department": "EXSS",
-            "min_number": 100
+            "min_number": 100,
+            "max_number": 699
           }
         },
         {
@@ -4620,7 +4719,8 @@
               "BUSI406",
               "BUSI408",
               "BUSI411"
-            ]
+            ],
+            "max_number": 699
           }
         }
       ]
@@ -4677,7 +4777,8 @@
               "SPAN404",
               "SPAN405",
               "SPAN601"
-            ]
+            ],
+            "max_number": 699
           }
         }
       ]
@@ -5044,7 +5145,8 @@
           "type": "rule_based",
           "rule": {
             "department": "PHIL",
-            "min_number": 200
+            "min_number": 200,
+            "max_number": 699
           }
         },
         {
@@ -5054,7 +5156,8 @@
           "type": "rule_based",
           "rule": {
             "department": "PHIL",
-            "min_number": 100
+            "min_number": 100,
+            "max_number": 699
           }
         }
       ]
@@ -5342,7 +5445,8 @@
           "type": "rule_based",
           "rule": {
             "department": "LING",
-            "min_number": 200
+            "min_number": 200,
+            "max_number": 699
           }
         }
       ]
@@ -5368,7 +5472,8 @@
           "type": "rule_based",
           "rule": {
             "department": "ENEC",
-            "min_number": 400
+            "min_number": 400,
+            "max_number": 699
           }
         },
         {
@@ -5382,7 +5487,8 @@
             "exclude": [
               "ENEC201",
               "ENEC202"
-            ]
+            ],
+            "max_number": 699
           }
         }
       ]
@@ -5619,7 +5725,8 @@
               "min_number": 400,
               "exclude": [
                 "ECON493"
-              ]
+              ],
+              "max_number": 699
             }
           }
         ]
@@ -5640,7 +5747,8 @@
               "min_number": 400,
               "exclude": [
                 "ECON493"
-              ]
+              ],
+              "max_number": 699
             }
           }
         ]
@@ -5662,7 +5770,8 @@
               "min_number": 400,
               "exclude": [
                 "ECON493"
-              ]
+              ],
+              "max_number": 699
             }
           }
         ]
@@ -5693,7 +5802,8 @@
               "min_number": 400,
               "exclude": [
                 "ECON493"
-              ]
+              ],
+              "max_number": 699
             }
           }
         ]
@@ -5814,7 +5924,8 @@
           "type": "rule_based",
           "rule": {
             "department": "BIOL",
-            "min_number": 400
+            "min_number": 400,
+            "max_number": 699
           }
         }
       ]
@@ -6024,7 +6135,8 @@
               "ANTH393",
               "ANTH395",
               "ANTH396"
-            ]
+            ],
+            "max_number": 699
           }
         },
         {
@@ -6043,7 +6155,8 @@
               "ANTH393",
               "ANTH395",
               "ANTH396"
-            ]
+            ],
+            "max_number": 699
           }
         }
       ]
@@ -6075,7 +6188,8 @@
             "department": "SOCI",
             "min_number": 400,
             "min_credits": null,
-            "exclude": []
+            "exclude": [],
+            "max_number": 699
           }
         },
         {
@@ -6089,7 +6203,8 @@
             "department": "SOCI",
             "min_number": null,
             "min_credits": 3,
-            "exclude": []
+            "exclude": [],
+            "max_number": 699
           }
         }
       ]
