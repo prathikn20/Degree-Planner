@@ -702,32 +702,45 @@ if uploaded is not None:
                 _entry = f"{_plbl}: {_req_label}"
                 if _entry not in _completed_satisfies.get(_c, []):
                     _completed_satisfies.setdefault(_c, []).append(_entry)
-        # Partial contributions for credit-based unsatisfied groups:
-        # A course contributed iff it is in the full option set but NOT in the
-        # remaining-options list (which only contains options not yet completed).
+        # Partial contributions for unsatisfied groups where the student has already
+        # completed at least one qualifying course.  A course contributed iff it is
+        # in the full option set but NOT in the remaining-options list (which only
+        # contains options not yet completed).
         from src.planner.requirements_checker import get_rule_based_options as _grbo
         for _grp in _base_reqs.get("choice_groups", []) + _conc_reqs.get("choice_groups", []):
             _gid = _grp["id"]
             if _gid not in audit[_tr]["results"].get("unsatisfied", []):
                 continue
             _credits_req = _grp.get("credits_required")
-            if not _credits_req:
-                continue  # count-based groups: partial not meaningful for single-course slots
+            _courses_req = _grp.get("courses_required", 1)
             _full_opts   = set(_grp.get("options") or _grbo(_grp.get("rule") or {}, catalog))
             _missing     = audit[_tr]["results"].get("missing_courses", {}).get(_gid, {})
             _remain_opts = set(_missing.get("options", []))
-            _still_needed = _missing.get("credits_still_needed", _credits_req)
-            _counted      = _credits_req - _still_needed
-            if _counted <= 0:
-                continue
-            _req_label = _req_names.get(_gid, _gid)
+            _req_label   = _req_names.get(_gid, _gid)
             # Courses that were in options AND completed (not in remaining) contributed
             _contributed = _full_opts - _remain_opts
-            for _c in _contributed:
-                _cr = catalog.get(_c, {}).get("credits", 0)
-                _entry = f"{_plbl}: {_req_label} (partial — {_cr:.4g} cr of {_credits_req:.4g} cr needed)"
-                if _entry not in _completed_satisfies.get(_c, []):
-                    _completed_satisfies.setdefault(_c, []).append(_entry)
+            if not _contributed:
+                continue
+            if _credits_req:
+                _still_needed = _missing.get("credits_still_needed", _credits_req)
+                _counted      = _credits_req - _still_needed
+                if _counted <= 0:
+                    continue
+                for _c in _contributed:
+                    _cr = catalog.get(_c, {}).get("credits", 0)
+                    _entry = f"{_plbl}: {_req_label} (partial — {_cr:.4g} cr of {_credits_req:.4g} cr needed)"
+                    if _entry not in _completed_satisfies.get(_c, []):
+                        _completed_satisfies.setdefault(_c, []).append(_entry)
+            elif _courses_req > 1:
+                # Multi-slot count-based group: show each completed course's contribution
+                _still_needed = _missing.get("still_needed", _courses_req)
+                _counted      = _courses_req - _still_needed
+                if _counted <= 0:
+                    continue
+                for _c in _contributed:
+                    _entry = f"{_plbl}: {_req_label} (partial — {_counted}/{_courses_req} courses)"
+                    if _entry not in _completed_satisfies.get(_c, []):
+                        _completed_satisfies.setdefault(_c, []).append(_entry)
 
     with st.expander(f"✅ Completed Courses ({len(completed)})", expanded=False):
         st.caption("Every course on your transcript and what requirement(s) it satisfies across your selected programs.")

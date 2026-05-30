@@ -345,6 +345,28 @@ def scrape_major_requirements(url):
     if current_section and current_section['rows']:
         sections.append(current_section)
 
+    # Drop trivially-small trailing tables that share their title with a prior section.
+    # These are cross-reference tables (e.g. ENEC capstone sequence on the Marine Sciences
+    # Minor page) that happen to carry the same section heading ("Requirements") as the real
+    # course table and have ≤ 4 course rows with no rules.  Keeping them would add
+    # unrelated required courses to the wrong program.
+    seen_titles: set = set()
+    filtered_sections = []
+    for sec in sections:
+        title_key = sec['title'].strip().lower()
+        course_count = sum(1 for r in sec['rows'] if r['kind'] in ('course', 'or_alternative'))
+        _TRIVIAL_RULE = re.compile(r'^(code\s*[\|]?\s*title|total\s+hours?)', re.IGNORECASE)
+        rule_count   = sum(1 for r in sec['rows'] if r['kind'] == 'rule_text'
+                           and not _TRIVIAL_RULE.match(r['text'].strip()))
+        # Skip a section when it duplicates an already-seen title AND is very small
+        # (≤ 4 courses, no real rules) — these are cross-linked tables, not requirements.
+        if title_key in seen_titles and course_count <= 4 and rule_count == 0:
+            logger.debug(f"  Skipping cross-reference table '{sec['title']}' ({course_count} courses)")
+        else:
+            filtered_sections.append(sec)
+            seen_titles.add(title_key)
+    sections = filtered_sections
+
     # Post-process: collapse child pool sections under their parent headers
     sections = group_pool_sections(sections)
 
