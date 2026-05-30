@@ -37,14 +37,23 @@ def get_prereq_depth(course, catalog, completed_set):
 
 def expand_prerequisites(courses, catalog, completed_set):
     all_needed = set()
+    # Pre-seed with all initially requested courses so that when course A checks
+    # whether sibling course B satisfies one of A's prerequisite paths, B is already
+    # recognised as "planned" even if the BFS hasn't reached it yet.
+    # (Without this, e.g. ECON411 sees ECON410 not yet in all_needed and falls back
+    # to an alternative path like COMP550, pulling in a spurious dependency.)
+    initial_set = set(courses) - completed_set
+    all_needed.update(initial_set)
+
     queue = deque(courses)
 
     while queue:
         course = queue.popleft()
 
-        if course in completed_set or course in all_needed:
+        if course in completed_set or (course in all_needed and course not in initial_set):
             continue
 
+        initial_set.discard(course)   # allow re-processing to expand its own prereqs
         all_needed.add(course)
 
         if course not in catalog:
@@ -65,7 +74,7 @@ def expand_prerequisites(courses, catalog, completed_set):
                     continue
                 components_satisfied = False
                 break
-            
+
             if components_satisfied:
                 path_satisfied = True
                 break
@@ -82,6 +91,13 @@ def expand_prerequisites(courses, catalog, completed_set):
             queue.append(prereq)
 
     return all_needed
+
+def _course_num(course: str) -> int:
+    """Return the numeric portion of a course ID for sort-order preference.
+    Lower numbers are preferred so elective slots fill from accessible courses up."""
+    m = re.search(r'\d+', course)
+    return int(m.group()) if m else 9999
+
 
 def _is_restricted_pseudo_leaf(course: str, catalog: dict) -> bool:
     """True when a course is >= 400-level with no prerequisites defined.
@@ -136,7 +152,8 @@ def get_remaining_courses(results, requirements, catalog, completed, avoid_cours
             [c for c in options if c not in avoid_set and c not in consumed_by_path
              and (c in explicitly_requested_set or not _is_restricted_pseudo_leaf(c, catalog))],
             key=lambda c: (0 if c in explicitly_requested_set else 1,
-                           get_prereq_depth(c, catalog, completed_set))
+                           get_prereq_depth(c, catalog, completed_set),
+                           _course_num(c))
         )
 
         if "credits_required" in group and group["credits_required"]:
@@ -324,7 +341,7 @@ def select_courses_globally(
             n_tracks  = len({open_s[i]["track"] for i in c2si[c]})
             depth     = get_prereq_depth(c, catalog, completed_set)
             requested = 0 if c in explicitly_requested_set else 1
-            return (-n_tracks, requested, depth, c)
+            return (-n_tracks, requested, depth, _course_num(c), c)
 
         best = min(c2si, key=_score)
         cr   = catalog.get(best, {}).get("credits", 3)
