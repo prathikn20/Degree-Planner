@@ -24,14 +24,29 @@ def get_prereq_depth(course, catalog, completed_set):
         if current not in catalog:
             continue
 
+        # If this intermediate node is already takeable (all its prereqs are met),
+        # it doesn't block anything — don't explore its prerequisites further.
+        # Without this check, OR-alternative paths (e.g. COMP550 as an alternative
+        # to ECON400 for ECON410) inflate the depth of easily-accessible courses.
+        if depth > 0 and is_available(current, catalog, completed_set):
+            continue
+
         pathways = catalog[current].get('prerequisites', [])
         if not pathways:
             continue
 
-        for path in pathways:
-            for prereq in path:
-                if prereq not in completed_set and prereq not in visited:
-                    queue.append((prereq, depth + 1))
+        # Only explore the cheapest OR-alternative path — the one with the fewest
+        # prerequisites that still need work.  Exploring all paths would inflate
+        # depth via long alternative chains that wouldn't actually be taken.
+        best_path = min(
+            pathways,
+            key=lambda path: sum(
+                1 for p in path if p not in completed_set and p not in visited
+            ),
+        )
+        for prereq in best_path:
+            if prereq not in completed_set and prereq not in visited:
+                queue.append((prereq, depth + 1))
 
     return max_depth
 
