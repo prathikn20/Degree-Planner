@@ -818,6 +818,203 @@
       }
     }
   },
+  "Data_Science_BA": {
+    "base_requirements": {
+      "required_courses": [
+        "DATA110",
+        "DATA120",
+        "DATA140",
+        "MATH231",
+        "STOR120"
+      ],
+      "choice_groups": [
+        {
+          "id": "ds_foundations",
+          "description": "Foundations of Data and Information",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["DATA130", "ENGL480", "ENGL482", "INLS201", "SOCI318"]
+        },
+        {
+          "id": "ds_comp_thinking",
+          "description": "Introduction to Programming",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["COMP110", "COMP116"]
+        },
+        {
+          "id": "ds_math_foundations",
+          "description": "Mathematical Tools for Data Science or Linear Algebra",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["MATH210", "MATH347"]
+        },
+        {
+          "id": "ds_stat_foundations",
+          "description": "Methods and Models of Data Science or Methods of Data Analysis",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": ["STOR320", "STOR455"]
+        },
+        {
+          "id": "ds_communication",
+          "description": "Communication requirement",
+          "courses_required": 1,
+          "type": "explicit",
+          "options": [
+            "COMM113", "COMM171", "DATA150", "ENGL119", "ENGL303", 
+            "ENGL411", "GEOG115", "GEOG415", "INLS541", "MEJO102"
+          ]
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Data_Journalism": {
+        "required_courses": [
+          "MEJO487",
+          "MEJO570"
+        ],
+        "choice_groups": [
+          {
+            "id": "dj_domain",
+            "description": "Data Journalism Domain Course",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": ["GEOG215", "LING460", "POLI209", "STOR538"]
+          },
+          {
+            "id": "dj_applied",
+            "description": "Data Journalism Applied Course",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": ["MEJO459", "MEJO553", "MEJO625", "MEJO630"]
+          }
+        ]
+      },
+      "Economic_Analysis": {
+        "required_courses": [
+          "ECON370",
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "econ_analysis_elective",
+            "description": "Economic Analysis Elective",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": [
+              "ECON423", "ECON425", "ECON445", "ECON450", "ECON480", 
+              "ECON522", "ECON525", "ECON545", "ECON550", "ECON551", 
+              "ECON552", "ECON571", "ECON573", "ECON575", "ECON580"
+            ]
+          }
+        ]
+      },
+      "Quantitative_Language_Science": {
+        "required_courses": [
+          "LING401",
+          "LING460",
+          "LING540"
+        ],
+        "choice_groups": [
+          {
+            "id": "qls_elective",
+            "description": "Quantitative Language Science Elective",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": ["LING225", "LING520"]
+          }
+        ]
+      },
+      "Urban_Data_Analytics": {
+        "required_courses": [
+          "PLAN562"
+        ],
+        "choice_groups": [
+          {
+            "id": "uda_intro",
+            "description": "Introduction to Planning",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": ["PLAN246", "PLAN247", "PLAN256", "PLAN257", "PLAN714"]
+          },
+          {
+            "id": "uda_core",
+            "description": "Urban Data Analytics Core",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": ["PLAN372", "PLAN672"]
+          },
+          {
+            "id": "uda_applied",
+            "description": "Applied Urban Data Analytics",
+            "courses_required": 1,
+            "type": "explicit",
+            "options": [
+              "PLAN591", "PLAN635", "PLAN636", "PLAN637", 
+              "PLAN671", "PLAN720", "PLAN739", "PLAN745"
+            ]
+          }
+        ]
+      },
+      "Sociology": {
+        "required_courses": [
+          "SOCI251"
+        ],
+        "choice_groups": [
+          {
+            "id": "soc_data_electives",
+            "description": "Sociology Data Electives",
+            "courses_required": 3,
+            "type": "explicit",
+            "options": [
+              "MNGT345", "MNGT380", "SOCI121", "SOCI172", "SOCI252", 
+              "SOCI277", "SOCI302", "SOCI427", "SOCI429"
+            ]
+          }
+        ]
+      },
+      "Data_and_Society": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "das_electives",
+            "description": "Data and Society Options",
+            "courses_required": 4,
+            "type": "explicit",
+            "options": [
+              "COMM83", "COMM86", "COMM249", "COMM348", "COMM360", 
+              "COMM453", "COMP380", "MEJO242", "HIST322", "HIST328"
+            ]
+          }
+        ]
+      },
+      "Geographic_Information_Science": {
+        "required_courses": [
+          "GEOG215",
+          "GEOG370"
+        ],
+        "choice_groups": [
+          {
+            "id": "gis_electives",
+            "description": "Geographic Information Science Electives",
+            "courses_required": 2,
+            "type": "explicit",
+            "options": [
+              "GEOG391", "GEOG410", "GEOG456", "GEOG477", "GEOG491", 
+              "GEOG541", "GEOG544", "GEOG555", "GEOG567", "GEOG577", 
+              "GEOG591", "GEOG592"
+            ]
+          }
+        ]
+      }
+    }
+  },
   "Mathematics_BS": {
     "base_requirements": {
       "required_courses": [
