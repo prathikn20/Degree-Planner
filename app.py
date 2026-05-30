@@ -673,7 +673,7 @@ if uploaded is not None:
 
     st.warning(
         "⚠️ **Always cross-check with your academic advisor and the official Tar Heel Tracker.** "
-        "This planner is a planning aid — it may not reflect catalog-year exceptions, "
+        "This planner is a planning aid so it may not reflect catalog-year exceptions, "
         "transfer credit evaluations, or policy changes. Do not rely on it as the sole "
         "source of truth for graduation clearance."
     )

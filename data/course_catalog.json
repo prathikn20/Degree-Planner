@@ -69927,7 +69927,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FY-SEMINAR"
+      "FY-SEMINAR",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST101": {
@@ -69936,7 +69937,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST111L": {
     "name": "Data Literacy Lab",
@@ -69944,7 +69947,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST112I": {
     "name": "Death and Dying",
@@ -69953,7 +69958,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-KNOW"
+      "FC-KNOW",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST112L": {
@@ -69966,7 +69972,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST113I": {
     "name": "The Idea of Race",
@@ -69976,7 +69984,8 @@
     "cross_listed": [],
     "attributes": [
       "FC-KNOW",
-      "FC-POWER"
+      "FC-POWER",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST113L": {
@@ -69989,7 +69998,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST114I": {
     "name": "Science Fiction, the Environment, and Vulnerable Communities",
@@ -69999,7 +70010,8 @@
     "cross_listed": [],
     "attributes": [
       "FC-CREATE",
-      "FC-POWER"
+      "FC-POWER",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST114L": {
@@ -70012,7 +70024,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST115I": {
     "name": "Understanding Health and Happiness",
@@ -70020,7 +70034,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST115L": {
     "name": "Data Literacy Lab",
@@ -70032,7 +70048,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST116I": {
     "name": "Gender",
@@ -70040,7 +70058,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST116L": {
     "name": "Data Literacy Lab",
@@ -70052,7 +70072,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST117I": {
     "name": "Experiencing Latin America: Bodies, Belonging, Nature",
@@ -70060,7 +70082,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST117L": {
     "name": "Data Literacy Lab",
@@ -70072,7 +70096,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST118I": {
     "name": "Fake News, Real Science",
@@ -70080,7 +70106,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST118L": {
     "name": "Data Literacy Lab",
@@ -70092,7 +70120,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST119I": {
     "name": "Food: People, Politics, and Policies",
@@ -70100,7 +70130,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST119L": {
     "name": "Data Literacy Lab",
@@ -70112,7 +70144,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST120I": {
     "name": "Myths, Moons, and Methods",
@@ -70120,7 +70154,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST120L": {
     "name": "Data Literacy Lab",
@@ -70132,7 +70168,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST121I": {
     "name": "Performing and Imagining the American South",
@@ -70140,7 +70178,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST121L": {
     "name": "Data Literacy Lab",
@@ -70152,7 +70192,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST122I": {
     "name": "Humans and the Cosmos",
@@ -70160,7 +70202,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST122L": {
     "name": "Data Literacy Lab",
@@ -70172,7 +70216,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST123I": {
     "name": "Borders and Boundaries",
@@ -70181,7 +70227,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-GLOBAL"
+      "FC-GLOBAL",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST123L": {
@@ -70194,7 +70241,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST124I": {
     "name": "Pandemics: Ethics, Literatures, and Cultures",
@@ -70204,7 +70253,8 @@
     "cross_listed": [],
     "attributes": [
       "FC-KNOW",
-      "FC-VALUES"
+      "FC-VALUES",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST124L": {
@@ -70217,7 +70267,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST125I": {
     "name": "The Art and Science of Expertise",
@@ -70225,7 +70277,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST125L": {
     "name": "Data Literacy Lab",
@@ -70237,7 +70291,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST126I": {
     "name": "Values and Prices",
@@ -70245,7 +70301,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST126L": {
     "name": "Data Literacy Lab",
@@ -70257,7 +70315,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST127I": {
     "name": "What is Art? Where is Art?",
@@ -70265,7 +70325,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST127L": {
     "name": "Data Literacy Lab",
@@ -70277,7 +70339,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST128I": {
     "name": "Never in Polite Company: Talking about Religion and Politics in Public",
@@ -70287,7 +70351,8 @@
     "cross_listed": [],
     "attributes": [
       "FC-POWER",
-      "FC-VALUES"
+      "FC-VALUES",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST128L": {
@@ -70300,7 +70365,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST129I": {
     "name": "Countering Hate",
@@ -70308,7 +70375,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST129L": {
     "name": "Data Literacy Lab",
@@ -70320,7 +70389,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST130I": {
     "name": "The Future of Food",
@@ -70329,7 +70400,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-KNOW"
+      "FC-KNOW",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST130L": {
@@ -70342,7 +70414,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST131I": {
     "name": "Voting and Elections",
@@ -70351,7 +70425,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FAD"
+      "FAD",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST131L": {
@@ -70364,7 +70439,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST132I": {
     "name": "Science for Hyperpartisan Times",
@@ -70373,7 +70450,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-KNOW"
+      "FC-KNOW",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST132L": {
@@ -70386,7 +70464,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST133I": {
     "name": "How to Not Be Fooled - Or Fool Yourself",
@@ -70394,7 +70474,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST133L": {
     "name": "Data Literacy Lab",
@@ -70406,7 +70488,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST134I": {
     "name": "Jerusalem: Real and Imagined",
@@ -70414,7 +70498,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST134L": {
     "name": "Data Literacy Lab",
@@ -70426,7 +70512,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST135I": {
     "name": "Art and Activism",
@@ -70434,7 +70522,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST136I": {
     "name": "Relational Leadership",
@@ -70443,7 +70533,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "COMM"
+      "COMM",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST137I": {
@@ -70453,7 +70544,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-CREATE"
+      "FC-CREATE",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST138I": {
@@ -70463,7 +70555,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "FC-AESTH"
+      "FC-AESTH",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST190": {
@@ -70476,7 +70569,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST190L": {
     "name": "Special Topics in Interdisciplinary Studies Lab",
@@ -70497,7 +70592,9 @@
     ],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST195": {
     "name": "Undergraduate Research Consulting Team",
@@ -70505,7 +70602,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST197": {
     "name": "Research with the American South",
@@ -70513,7 +70612,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST198": {
     "name": "Research beyond Academia",
@@ -70521,7 +70622,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST199": {
     "name": "Research at Carolina",
@@ -70529,7 +70632,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST201": {
     "name": "Increasing Diversity in STEM Research",
@@ -70537,7 +70642,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST290": {
     "name": "Special Topics in Interdisciplinary Studies",
@@ -70545,7 +70652,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST293": {
     "name": "Global Tech Experience",
@@ -70554,7 +70663,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "HI-EXP"
+      "HI-EXP",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST396": {
@@ -70563,7 +70673,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST496": {
     "name": "Independent Study",
@@ -70571,7 +70683,9 @@
     "prerequisites": [],
     "corequisites": [],
     "cross_listed": [],
-    "attributes": []
+    "attributes": [
+      "INTERDISCIPLINARY"
+    ]
   },
   "IDST691H": {
     "name": "Senior Honors Thesis",
@@ -70580,7 +70694,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "RESEARCH"
+      "RESEARCH",
+      "INTERDISCIPLINARY"
     ]
   },
   "IDST692H": {
@@ -70590,7 +70705,8 @@
     "corequisites": [],
     "cross_listed": [],
     "attributes": [
-      "RESEARCH"
+      "RESEARCH",
+      "INTERDISCIPLINARY"
     ]
   },
   "SPCL290": {

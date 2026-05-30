@@ -1,4 +1,5 @@
-{"Business_Administration_BSBA": {
+{
+  "Business_Administration_BSBA": {
     "base_requirements": {
       "required_courses": [
         "BUSI401",
@@ -18,7 +19,10 @@
           "description": "Applied Microeconomics for Business or Intermediate Microeconomics",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["BUSI402", "ECON410"]
+          "options": [
+            "BUSI402",
+            "ECON410"
+          ]
         },
         {
           "id": "business_electives_track",
@@ -28,7 +32,19 @@
           "rule": {
             "department": "BUSI",
             "min_number": 400,
-            "exclude": ["BUSI401", "BUSI402", "BUSI403", "BUSI404", "BUSI405", "BUSI406", "BUSI407", "BUSI408", "BUSI410", "BUSI411", "BUSI412"]
+            "exclude": [
+              "BUSI401",
+              "BUSI402",
+              "BUSI403",
+              "BUSI404",
+              "BUSI405",
+              "BUSI406",
+              "BUSI407",
+              "BUSI408",
+              "BUSI410",
+              "BUSI411",
+              "BUSI412"
+            ]
           }
         },
         {
@@ -3254,6 +3270,16 @@
           "rule": {
             "attribute": "FAD"
           }
+        },
+        {
+          "id": "INTERDISCIPLINARY",
+          "description": "Interdisciplinary Perspectives (one IDST course or a course with an I suffix, e.g. GLBL210I)",
+          "courses_required": 1,
+          "is_core": false,
+          "type": "rule_based",
+          "rule": {
+            "attribute": "INTERDISCIPLINARY"
+          }
         }
       ]
     },
@@ -3275,21 +3301,37 @@
           "description": "Select one statistics course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["PSYC210", "STOR120", "STOR155"]
+          "options": [
+            "PSYC210",
+            "STOR120",
+            "STOR155"
+          ]
         },
         {
           "id": "nsci_research_methods",
           "description": "Select one research methods course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["NSCI271", "NSCI273", "NSCI274", "NSCI277", "NSCI278", "NSCI279", "PSYC270"]
+          "options": [
+            "NSCI271",
+            "NSCI273",
+            "NSCI274",
+            "NSCI277",
+            "NSCI278",
+            "NSCI279",
+            "PSYC270"
+          ]
         },
         {
           "id": "nsci_two_courses",
           "description": "Select two courses from the core options",
           "courses_required": 2,
           "type": "explicit",
-          "options": ["NSCI221", "NSCI222", "NSCI225"]
+          "options": [
+            "NSCI221",
+            "NSCI222",
+            "NSCI225"
+          ]
         },
         {
           "id": "knowledge_electives",
@@ -3297,14 +3339,69 @@
           "credits_required": 6,
           "type": "explicit",
           "options": [
-            "BIOL205", "BIOL240", "BIOL425", "BIOL431", "BIOL440", "BIOL450", "BIOL453", "BIOL455", "BIOL458", "BIOL523", "BIOL542", "BIOL544L", "BIOL545", "BIOL547", "BIOL552", "BIOL635", 
-            "CHEM430", 
-            "COMP210", "COMP211", "COMP301", "COMP311", "COMP555", "COMP560", "COMP562", "COMP576", "COMP581", "COMP631", "COMP633", "COMP651", 
-            "EXSS155", "EXSS175", "EXSS256", "EXSS275L", "EXSS276", "EXSS380", "EXSS580", "EXSS581", 
-            "NDSS401", "NDSS420", 
-            "PHYS405", "PHYS461", 
-            "PSYC245", "PSYC404", "PSYC469", "PSYC517", "PSYC559", "PSYC602", 
-            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI418", "NSCI419", "NSCI421", "NSCI422", "NSCI423", "NSCI439", "NSCI440", "NSCI493", "NSCI507", "NSCI693H", "NSCI694H"
+            "BIOL205",
+            "BIOL240",
+            "BIOL425",
+            "BIOL431",
+            "BIOL440",
+            "BIOL450",
+            "BIOL453",
+            "BIOL455",
+            "BIOL458",
+            "BIOL523",
+            "BIOL542",
+            "BIOL544L",
+            "BIOL545",
+            "BIOL547",
+            "BIOL552",
+            "BIOL635",
+            "CHEM430",
+            "COMP210",
+            "COMP211",
+            "COMP301",
+            "COMP311",
+            "COMP555",
+            "COMP560",
+            "COMP562",
+            "COMP576",
+            "COMP581",
+            "COMP631",
+            "COMP633",
+            "COMP651",
+            "EXSS155",
+            "EXSS175",
+            "EXSS256",
+            "EXSS275L",
+            "EXSS276",
+            "EXSS380",
+            "EXSS580",
+            "EXSS581",
+            "NDSS401",
+            "NDSS420",
+            "PHYS405",
+            "PHYS461",
+            "PSYC245",
+            "PSYC404",
+            "PSYC469",
+            "PSYC517",
+            "PSYC559",
+            "PSYC602",
+            "NSCI395",
+            "NSCI401",
+            "NSCI403",
+            "NSCI405",
+            "NSCI414",
+            "NSCI418",
+            "NSCI419",
+            "NSCI421",
+            "NSCI422",
+            "NSCI423",
+            "NSCI439",
+            "NSCI440",
+            "NSCI493",
+            "NSCI507",
+            "NSCI693H",
+            "NSCI694H"
           ]
         },
         {
@@ -3313,15 +3410,68 @@
           "credits_required": 6,
           "type": "explicit",
           "options": [
-            "APPL101", "APPL240", "APPL350", "APPL430", "APPL435", 
-            "BIOL224H", "BIOL224L", "BIOL226", "BIOL226L", "BIOL553", "BIOL554", 
-            "BMME207", "BMME301", "BMME550", 
-            "COMP283", 
-            "MATH210", "MATH233", "MATH235", "STOR235", "MATH347", "MATH381", "MATH383", "MATH383L", "MATH523", "MATH528", "MATH528L", "MATH529", "MATH529L", "MATH535", "MATH555", "MATH560", "MATH564", "MATH566", "MATH577", "MATH594", "MATH661", "MATH662", "MATH668", "MATH669", 
-            "NDSS410", "NDSS430", 
-            "NSCI395", "NSCI405", "NSCI418", "NSCI419", "NSCI423", "NSCI439", "NSCI440", "NSCI493", "NSCI693H", "NSCI694H", 
-            "PSYC533", 
-            "STOR215", "STOR320", "STOR415", "STOR435", "STOR445", "STOR455", "STOR535", "STOR555", "STOR556", "STOR565"
+            "APPL101",
+            "APPL240",
+            "APPL350",
+            "APPL430",
+            "APPL435",
+            "BIOL224H",
+            "BIOL224L",
+            "BIOL226",
+            "BIOL226L",
+            "BIOL553",
+            "BIOL554",
+            "BMME207",
+            "BMME301",
+            "BMME550",
+            "COMP283",
+            "MATH210",
+            "MATH233",
+            "MATH235",
+            "STOR235",
+            "MATH347",
+            "MATH381",
+            "MATH383",
+            "MATH383L",
+            "MATH523",
+            "MATH528",
+            "MATH528L",
+            "MATH529",
+            "MATH529L",
+            "MATH535",
+            "MATH555",
+            "MATH560",
+            "MATH564",
+            "MATH566",
+            "MATH577",
+            "MATH594",
+            "MATH661",
+            "MATH662",
+            "MATH668",
+            "MATH669",
+            "NDSS410",
+            "NDSS430",
+            "NSCI395",
+            "NSCI405",
+            "NSCI418",
+            "NSCI419",
+            "NSCI423",
+            "NSCI439",
+            "NSCI440",
+            "NSCI493",
+            "NSCI693H",
+            "NSCI694H",
+            "PSYC533",
+            "STOR215",
+            "STOR320",
+            "STOR415",
+            "STOR435",
+            "STOR445",
+            "STOR455",
+            "STOR535",
+            "STOR555",
+            "STOR556",
+            "STOR565"
           ]
         },
         {
@@ -3330,7 +3480,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["BIOL101", "BIOL101L"]
+          "options": [
+            "BIOL101",
+            "BIOL101L"
+          ]
         },
         {
           "id": "add_biol_103",
@@ -3338,7 +3491,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["BIOL103"]
+          "options": [
+            "BIOL103"
+          ]
         },
         {
           "id": "add_biol_220",
@@ -3346,7 +3501,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["BIOL220"]
+          "options": [
+            "BIOL220"
+          ]
         },
         {
           "id": "add_chem_101",
@@ -3354,7 +3511,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM101", "CHEM101L"]
+          "options": [
+            "CHEM101",
+            "CHEM101L"
+          ]
         },
         {
           "id": "add_chem_102",
@@ -3362,7 +3522,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM102", "CHEM102L"]
+          "options": [
+            "CHEM102",
+            "CHEM102L"
+          ]
         },
         {
           "id": "add_chem_241",
@@ -3370,7 +3533,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM241", "CHEM241L"]
+          "options": [
+            "CHEM241",
+            "CHEM241L"
+          ]
         },
         {
           "id": "add_chem_261",
@@ -3378,7 +3544,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM261"]
+          "options": [
+            "CHEM261"
+          ]
         },
         {
           "id": "add_chem_262",
@@ -3386,7 +3554,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM262", "CHEM262L"]
+          "options": [
+            "CHEM262",
+            "CHEM262L"
+          ]
         },
         {
           "id": "add_comp",
@@ -3394,7 +3565,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["COMP110", "COMP116"]
+          "options": [
+            "COMP110",
+            "COMP116"
+          ]
         },
         {
           "id": "add_math_231",
@@ -3402,7 +3576,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH231"]
+          "options": [
+            "MATH231"
+          ]
         },
         {
           "id": "add_math_232",
@@ -3410,7 +3586,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH232"]
+          "options": [
+            "MATH232"
+          ]
         },
         {
           "id": "add_phys_1",
@@ -3418,7 +3596,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS114", "PHYS118"]
+          "options": [
+            "PHYS114",
+            "PHYS118"
+          ]
         },
         {
           "id": "add_phys_2",
@@ -3426,7 +3607,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS115", "PHYS119"]
+          "options": [
+            "PHYS115",
+            "PHYS119"
+          ]
         },
         {
           "id": "add_psyc_101",
@@ -3434,7 +3618,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PSYC101"]
+          "options": [
+            "PSYC101"
+          ]
         }
       ]
     },
@@ -3466,7 +3652,10 @@
           "description": "Research with Faculty Mentor II or Senior Honor Thesis Research II",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["PHYS395", "PHYS692H"]
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ]
         },
         {
           "id": "phys_upper_electives",
@@ -3474,9 +3663,27 @@
           "credits_required": 6,
           "type": "explicit",
           "options": [
-            "ASTR202", "ASTR301", "ASTR431", "ASTR501", "ASTR502", "ASTR503", "ASTR504", "ASTR505", "ASTR519", "ASTR701",
-            "MATH528", "MATH529", 
-            "PHYS231", "PHYS358", "PHYS405", "PHYS410", "PHYS515", "PHYS543", "PHYS631", "PHYS632", "PHYS633"
+            "ASTR202",
+            "ASTR301",
+            "ASTR431",
+            "ASTR501",
+            "ASTR502",
+            "ASTR503",
+            "ASTR504",
+            "ASTR505",
+            "ASTR519",
+            "ASTR701",
+            "MATH528",
+            "MATH529",
+            "PHYS231",
+            "PHYS358",
+            "PHYS405",
+            "PHYS410",
+            "PHYS515",
+            "PHYS543",
+            "PHYS631",
+            "PHYS632",
+            "PHYS633"
           ]
         },
         {
@@ -3485,7 +3692,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS118"]
+          "options": [
+            "PHYS118"
+          ]
         },
         {
           "id": "add_phys_119",
@@ -3493,7 +3702,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS119"]
+          "options": [
+            "PHYS119"
+          ]
         },
         {
           "id": "add_math_231",
@@ -3501,7 +3712,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH231"]
+          "options": [
+            "MATH231"
+          ]
         },
         {
           "id": "add_math_232",
@@ -3509,7 +3722,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH232"]
+          "options": [
+            "MATH232"
+          ]
         },
         {
           "id": "add_math_233",
@@ -3517,7 +3732,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH233"]
+          "options": [
+            "MATH233"
+          ]
         },
         {
           "id": "add_math_383",
@@ -3525,7 +3742,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH383"]
+          "options": [
+            "MATH383"
+          ]
         },
         {
           "id": "add_chem_101",
@@ -3533,7 +3752,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM101", "CHEM101L"]
+          "options": [
+            "CHEM101",
+            "CHEM101L"
+          ]
         }
       ]
     },
@@ -3544,7 +3766,6 @@
       }
     }
   },
-
   "Physics_BS_Astrophysics": {
     "base_requirements": {
       "required_courses": [
@@ -3565,7 +3786,10 @@
           "description": "Research with Faculty Mentor II or Senior Honor Thesis Research II",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["PHYS395", "PHYS692H"]
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ]
         },
         {
           "id": "astr_upper_elective",
@@ -3583,9 +3807,20 @@
           "credits_required": 6,
           "type": "explicit",
           "options": [
-            "ASTR301", "ASTR431", "ASTR501", "ASTR502", "ASTR503", "ASTR504", "ASTR505", "ASTR519", "ASTR701",
-            "MATH528", "MATH529", 
-            "PHYS231", "PHYS451", "PHYS632"
+            "ASTR301",
+            "ASTR431",
+            "ASTR501",
+            "ASTR502",
+            "ASTR503",
+            "ASTR504",
+            "ASTR505",
+            "ASTR519",
+            "ASTR701",
+            "MATH528",
+            "MATH529",
+            "PHYS231",
+            "PHYS451",
+            "PHYS632"
           ]
         },
         {
@@ -3594,7 +3829,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS118"]
+          "options": [
+            "PHYS118"
+          ]
         },
         {
           "id": "add_phys_119",
@@ -3602,7 +3839,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS119"]
+          "options": [
+            "PHYS119"
+          ]
         },
         {
           "id": "add_astr_202",
@@ -3610,7 +3849,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["ASTR202"]
+          "options": [
+            "ASTR202"
+          ]
         },
         {
           "id": "add_math_231",
@@ -3618,7 +3859,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH231"]
+          "options": [
+            "MATH231"
+          ]
         },
         {
           "id": "add_math_232",
@@ -3626,7 +3869,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH232"]
+          "options": [
+            "MATH232"
+          ]
         },
         {
           "id": "add_math_233",
@@ -3634,7 +3879,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH233"]
+          "options": [
+            "MATH233"
+          ]
         },
         {
           "id": "add_math_383",
@@ -3642,7 +3889,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH383"]
+          "options": [
+            "MATH383"
+          ]
         }
       ]
     },
@@ -3666,28 +3915,43 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PSYC101"]
+          "options": [
+            "PSYC101"
+          ]
         },
         {
           "id": "psyc_behavioral_neuro_area",
           "description": "Behavioral Integrative Neuroscience Area",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["NSCI222", "NSCI225", "NSCI221", "PSYC220"]
+          "options": [
+            "NSCI222",
+            "NSCI225",
+            "NSCI221",
+            "PSYC220"
+          ]
         },
         {
           "id": "psyc_cognitive_area",
           "description": "Cognitive Area",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["NSCI225", "PSYC230"]
+          "options": [
+            "NSCI225",
+            "PSYC230"
+          ]
         },
         {
           "id": "psyc_clin_dev_soc_areas",
           "description": "Two courses from Clinical, Development, or Social Areas",
           "courses_required": 2,
           "type": "explicit",
-          "options": ["PSYC242", "PSYC245", "PSYC250", "PSYC260"]
+          "options": [
+            "PSYC242",
+            "PSYC245",
+            "PSYC250",
+            "PSYC260"
+          ]
         },
         {
           "id": "psyc_special_requirement",
@@ -3695,11 +3959,35 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "PSYC395", "PSYC404", "PSYC430", "PSYC433", "PSYC438", "PSYC469", "PSYC504", 
-            "PSYC517", "PSYC525", "PSYC528", "PSYC530", "PSYC531", "PSYC532", "PSYC533", 
-            "PSYC534", "PSYC559", "PSYC693H", "PSYC694H", 
-            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI421", "NSCI422", 
-            "NSCI423", "NSCI507", "NSCI693H", "NSCI694H"
+            "PSYC395",
+            "PSYC404",
+            "PSYC430",
+            "PSYC433",
+            "PSYC438",
+            "PSYC469",
+            "PSYC504",
+            "PSYC517",
+            "PSYC525",
+            "PSYC528",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC533",
+            "PSYC534",
+            "PSYC559",
+            "PSYC693H",
+            "PSYC694H",
+            "NSCI395",
+            "NSCI401",
+            "NSCI403",
+            "NSCI405",
+            "NSCI414",
+            "NSCI421",
+            "NSCI422",
+            "NSCI423",
+            "NSCI507",
+            "NSCI693H",
+            "NSCI694H"
           ]
         },
         {
@@ -3708,11 +3996,37 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "PSYC395", "PSYC404", "PSYC430", "PSYC434", "PSYC467", "PSYC469", "PSYC471", 
-            "PSYC490", "PSYC500", "PSYC501", "PSYC502", "PSYC504", "PSYC514", "PSYC530", 
-            "PSYC531", "PSYC532", "PSYC565", "PSYC601", "PSYC693H", "PSYC694H",
-            "NSCI395", "NSCI401", "NSCI403", "NSCI405", "NSCI414", "NSCI421", "NSCI422", 
-            "NSCI423", "NSCI507", "NSCI693H", "NSCI694H"
+            "PSYC395",
+            "PSYC404",
+            "PSYC430",
+            "PSYC434",
+            "PSYC467",
+            "PSYC469",
+            "PSYC471",
+            "PSYC490",
+            "PSYC500",
+            "PSYC501",
+            "PSYC502",
+            "PSYC504",
+            "PSYC514",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC565",
+            "PSYC601",
+            "PSYC693H",
+            "PSYC694H",
+            "NSCI395",
+            "NSCI401",
+            "NSCI403",
+            "NSCI405",
+            "NSCI414",
+            "NSCI421",
+            "NSCI422",
+            "NSCI423",
+            "NSCI507",
+            "NSCI693H",
+            "NSCI694H"
           ]
         },
         {
@@ -3721,11 +4035,36 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "NSCI175", "NSCI221", "NSCI222", "NSCI225", "PSYC220", "PSYC242", "PSYC245", 
-            "PSYC230", "PSYC250", "PSYC260", "PSYC395", "PSYC404", "PSYC430", "PSYC467", 
-            "PSYC469", "PSYC471", "PSYC500", "PSYC502", "PSYC504", "PSYC514", "PSYC530", 
-            "PSYC531", "PSYC532", "PSYC565", "PSYC601", "NSCI401", "NSCI403", "NSCI405", 
-            "NSCI421", "NSCI422"
+            "NSCI175",
+            "NSCI221",
+            "NSCI222",
+            "NSCI225",
+            "PSYC220",
+            "PSYC242",
+            "PSYC245",
+            "PSYC230",
+            "PSYC250",
+            "PSYC260",
+            "PSYC395",
+            "PSYC404",
+            "PSYC430",
+            "PSYC467",
+            "PSYC469",
+            "PSYC471",
+            "PSYC500",
+            "PSYC502",
+            "PSYC504",
+            "PSYC514",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC565",
+            "PSYC601",
+            "NSCI401",
+            "NSCI403",
+            "NSCI405",
+            "NSCI421",
+            "NSCI422"
           ]
         },
         {
@@ -3734,7 +4073,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["BIOL101", "BIOL101L"]
+          "options": [
+            "BIOL101",
+            "BIOL101L"
+          ]
         },
         {
           "id": "add_physical_science",
@@ -3742,7 +4084,13 @@
           "credits_required": 4,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM101", "CHEM101L", "PHYS114", "PHYS118", "MATH231"]
+          "options": [
+            "CHEM101",
+            "CHEM101L",
+            "PHYS114",
+            "PHYS118",
+            "MATH231"
+          ]
         },
         {
           "id": "quant_reasoning_elective",
@@ -3751,9 +4099,27 @@
           "is_core": false,
           "type": "explicit",
           "options": [
-            "COMP110", "COMP116", "COMP210", "COMP211", "COMP283", "COMP301", 
-            "MATH110", "MATH130", "MATH152", "MATH210", "MATH231", "MATH232", "MATH233", "MATH381", 
-            "STOR113", "STOR120", "STOR151", "STOR155", "STOR215", "STOR315", "STOR435",
+            "COMP110",
+            "COMP116",
+            "COMP210",
+            "COMP211",
+            "COMP283",
+            "COMP301",
+            "MATH110",
+            "MATH130",
+            "MATH152",
+            "MATH210",
+            "MATH231",
+            "MATH232",
+            "MATH233",
+            "MATH381",
+            "STOR113",
+            "STOR120",
+            "STOR151",
+            "STOR155",
+            "STOR215",
+            "STOR315",
+            "STOR435",
             "PHIL155"
           ]
         },
@@ -3764,25 +4130,133 @@
           "is_core": false,
           "type": "explicit",
           "options": [
-            "ANTH143", "ANTH148", "ANTH217", "ANTH298", "ANTH315", "ANTH318", "ANTH412", 
-            "ANTH413", "ANTH414", "ANTH415", "ANTH416", "ANTH423", "ANTH437", "ANTH471",
-            "ASTR101", "ASTR102", "ASTR103",
-            "BIOC107", "BIOC108",
-            "BIOL103", "BIOL104", "BIOL202", "BIOL205", "BIOL220", "BIOL240", "BIOL250", 
-            "BIOL260", "BIOL271", "BIOL272", "BIOL278", "BIOL422", "BIOL451", "BIOL471",
-            "BMME150", "BMME207", "BMME301", "BMME315", "BMME335", "BMME385", "BMME405", "BMME420",
-            "CHEM102", "CHEM241", "CHEM241L", "CHEM245L", "CHEM251", "CHEM261", "CHEM262", "CHEM262L", "CHEM263L", "CHEM430", "CHEM481",
-            "COMP110", "COMP116", "COMP210", "COMP211", "COMP283", "COMP301", "COMP401", "COMP410",
-            "EMES101", "EMES101L", "EMES103", "EMES202", "EMES220", 
-            "ENEC108", "ENEC202", "ENEC220", "ENEC256", "ENEC304", "ENEC324", "ENEC403", "ENEC406",
-            "ENVR205", "ENVR403", "ENVR411", "ENVR412", "ENVR416", "ENVR421", "ENVR430", "ENVR451",
-            "EXSS175", "EXSS275L", "EXSS276", "EXSS376", "EXSS380", "EXSS385", "EXSS475", "EXSS576", "EXSS580",
-            "GEOG110", "GEOG111", "GEOG212", "GEOG253", "GEOG391", "GEOG412", "GEOG414", "GEOG416",
-            "MATH232", "MATH233", "MATH347", "MATH381", "MATH383", "MATH521", "MATH528",
-            "MCRO251", "NUTR240", "NUTR400", "NUTR600", "NUTR620",
-            "PHIL155", "PHIL455",
-            "PHYS101", "PHYS115", "PHYS119", "PHYS211", "PHYS281L", "PHYS331",
-            "STOR120", "STOR155", "STOR215", "STOR315", "STOR320", "STOR415", "STOR435", "STOR445", "STOR455"
+            "ANTH143",
+            "ANTH148",
+            "ANTH217",
+            "ANTH298",
+            "ANTH315",
+            "ANTH318",
+            "ANTH412",
+            "ANTH413",
+            "ANTH414",
+            "ANTH415",
+            "ANTH416",
+            "ANTH423",
+            "ANTH437",
+            "ANTH471",
+            "ASTR101",
+            "ASTR102",
+            "ASTR103",
+            "BIOC107",
+            "BIOC108",
+            "BIOL103",
+            "BIOL104",
+            "BIOL202",
+            "BIOL205",
+            "BIOL220",
+            "BIOL240",
+            "BIOL250",
+            "BIOL260",
+            "BIOL271",
+            "BIOL272",
+            "BIOL278",
+            "BIOL422",
+            "BIOL451",
+            "BIOL471",
+            "BMME150",
+            "BMME207",
+            "BMME301",
+            "BMME315",
+            "BMME335",
+            "BMME385",
+            "BMME405",
+            "BMME420",
+            "CHEM102",
+            "CHEM241",
+            "CHEM241L",
+            "CHEM245L",
+            "CHEM251",
+            "CHEM261",
+            "CHEM262",
+            "CHEM262L",
+            "CHEM263L",
+            "CHEM430",
+            "CHEM481",
+            "COMP110",
+            "COMP116",
+            "COMP210",
+            "COMP211",
+            "COMP283",
+            "COMP301",
+            "COMP401",
+            "COMP410",
+            "EMES101",
+            "EMES101L",
+            "EMES103",
+            "EMES202",
+            "EMES220",
+            "ENEC108",
+            "ENEC202",
+            "ENEC220",
+            "ENEC256",
+            "ENEC304",
+            "ENEC324",
+            "ENEC403",
+            "ENEC406",
+            "ENVR205",
+            "ENVR403",
+            "ENVR411",
+            "ENVR412",
+            "ENVR416",
+            "ENVR421",
+            "ENVR430",
+            "ENVR451",
+            "EXSS175",
+            "EXSS275L",
+            "EXSS276",
+            "EXSS376",
+            "EXSS380",
+            "EXSS385",
+            "EXSS475",
+            "EXSS576",
+            "EXSS580",
+            "GEOG110",
+            "GEOG111",
+            "GEOG212",
+            "GEOG253",
+            "GEOG391",
+            "GEOG412",
+            "GEOG414",
+            "GEOG416",
+            "MATH232",
+            "MATH233",
+            "MATH347",
+            "MATH381",
+            "MATH383",
+            "MATH521",
+            "MATH528",
+            "MCRO251",
+            "NUTR240",
+            "NUTR400",
+            "NUTR600",
+            "NUTR620",
+            "PHIL155",
+            "PHIL455",
+            "PHYS101",
+            "PHYS115",
+            "PHYS119",
+            "PHYS211",
+            "PHYS281L",
+            "PHYS331",
+            "STOR120",
+            "STOR155",
+            "STOR215",
+            "STOR315",
+            "STOR320",
+            "STOR415",
+            "STOR435",
+            "STOR445",
+            "STOR455"
           ]
         }
       ]
@@ -3803,14 +4277,22 @@
           "description": "Gateway to Philosophy, Politics, and Economics",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["PHIL384", "POLI384", "ECON384"]
+          "options": [
+            "PHIL384",
+            "POLI384",
+            "ECON384"
+          ]
         },
         {
           "id": "ppe_capstone",
           "description": "Philosophy, Politics, and Economics: Capstone Course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["PHIL698", "POLI698", "ECON698"]
+          "options": [
+            "PHIL698",
+            "POLI698",
+            "ECON698"
+          ]
         },
         {
           "id": "ppe_philosophy",
@@ -3818,9 +4300,24 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "PHIL140", "PHIL157", "PHIL160", "PHIL163", "PHIL164", "PHIL165", 
-            "PHIL170", "PHIL265", "PHIL272", "PHIL273", "PHIL274", "PHIL276", 
-            "PHIL280", "PHIL364", "PHIL368", "PHIL370", "PLCY71", "PLCY340"
+            "PHIL140",
+            "PHIL157",
+            "PHIL160",
+            "PHIL163",
+            "PHIL164",
+            "PHIL165",
+            "PHIL170",
+            "PHIL265",
+            "PHIL272",
+            "PHIL273",
+            "PHIL274",
+            "PHIL276",
+            "PHIL280",
+            "PHIL364",
+            "PHIL368",
+            "PHIL370",
+            "PLCY71",
+            "PLCY340"
           ]
         },
         {
@@ -3829,9 +4326,22 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "PLCY101", "PWAD101", "PLCY220", "PWAD220", "PLCY352H", 
-            "POLI130", "POLI270", "POLI271", "POLI280", "POLI288", 
-            "POLI401", "POLI442", "POLI470", "POLI472", "POLI474", "POLI478"
+            "PLCY101",
+            "PWAD101",
+            "PLCY220",
+            "PWAD220",
+            "PLCY352H",
+            "POLI130",
+            "POLI270",
+            "POLI271",
+            "POLI280",
+            "POLI288",
+            "POLI401",
+            "POLI442",
+            "POLI470",
+            "POLI472",
+            "POLI474",
+            "POLI478"
           ]
         },
         {
@@ -3840,7 +4350,12 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "ECON101", "ECON411", "ECON434", "ECON460", "ECON510", "ECON511"
+            "ECON101",
+            "ECON411",
+            "ECON434",
+            "ECON460",
+            "ECON510",
+            "ECON511"
           ]
         }
       ]
@@ -3867,7 +4382,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["BUSI100"]
+          "options": [
+            "BUSI100"
+          ]
         },
         {
           "id": "prereq_econ101",
@@ -3875,7 +4392,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["ECON101"]
+          "options": [
+            "ECON101"
+          ]
         },
         {
           "id": "prereq_data_inference",
@@ -3883,7 +4402,11 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["STOR155", "DATA110", "STOR120"]
+          "options": [
+            "STOR155",
+            "DATA110",
+            "STOR120"
+          ]
         },
         {
           "id": "busi_additional_electives",
@@ -3892,7 +4415,13 @@
           "type": "rule_based",
           "rule": {
             "department": "BUSI",
-            "exclude": ["BUSI100", "BUSI403", "BUSI406", "BUSI408", "BUSI411"]
+            "exclude": [
+              "BUSI100",
+              "BUSI403",
+              "BUSI406",
+              "BUSI408",
+              "BUSI411"
+            ]
           }
         }
       ]
@@ -3916,14 +4445,24 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["SPAN261", "SPAN267"]
+          "options": [
+            "SPAN261",
+            "SPAN267"
+          ]
         },
         {
           "id": "span_professional_track",
           "description": "Two profession-specific courses in the same professional track (Business, Medical, or Legal)",
           "courses_required": 2,
           "type": "explicit",
-          "options": ["SPAN320", "SPAN325", "SPAN321", "SPAN328", "SPAN323", "SPAN324"]
+          "options": [
+            "SPAN320",
+            "SPAN325",
+            "SPAN321",
+            "SPAN328",
+            "SPAN323",
+            "SPAN324"
+          ]
         },
         {
           "id": "span_upper_electives",
@@ -3933,7 +4472,13 @@
           "rule": {
             "department": "SPAN",
             "min_number": 301,
-            "exclude": ["SPAN401", "SPAN402", "SPAN404", "SPAN405", "SPAN601"]
+            "exclude": [
+              "SPAN401",
+              "SPAN402",
+              "SPAN404",
+              "SPAN405",
+              "SPAN601"
+            ]
           }
         }
       ]
@@ -3954,7 +4499,15 @@
           "description": "Four core courses from the approved list",
           "courses_required": 4,
           "type": "explicit",
-          "options": ["PLCY210", "PLCY220", "PLCY340", "PLCY460", "PLCY581", "PLCY310", "ECON410"]
+          "options": [
+            "PLCY210",
+            "PLCY220",
+            "PLCY340",
+            "PLCY460",
+            "PLCY581",
+            "PLCY310",
+            "ECON410"
+          ]
         },
         {
           "id": "plcy_minor_elective",
@@ -3962,30 +4515,259 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "PLCY101", "PLCY110", "PLCY230", "PLCY290", "PLCY326", "PLCY330", "PLCY354", "PLCY360", "PLCY361", "PLCY364", "PLCY371", "PLCY372", "PLCY373", "PLCY384", "PLCY411", "PLCY412", "PLCY414", "PLCY424", "PLCY425", "PLCY430", "PLCY473", "PLCY475", "PLCY480", "PLCY485", "PLCY520", "PLCY527", "PLCY565", "PLCY570",
-            "AAAD307", "AAAD333", "AAAD488", "AAAD485", "AMST390", "AMST486", "ANTH312", "ANTH318", "ANTH319", "ANTH350", "ANTH355", "ANTH360", "ANTH377", "ANTH380", "ANTH422", "ANTH429", "ANTH439", "ANTH441", "ANTH460", "ANTH470", "ANTH502", "ANTH537", "ANTH585", 
-            "BUSI404", "BUSI405", "BUSI500", "BUSI503", "BUSI504", "BUSI506", "BUSI512", "BUSI610", "BUSI611", 
-            "COMM312", "COMM325", "COMM372", "COMM375", "COMM470", "COMM521", "COMM524", "COMM525", "COMM571", "COMM572", "COMM574", "COMM575", "COMM576", "COMM624", "COMM625", "COMM652", 
-            "ECON320", "ECON325", "ECON345", "ECON380", "ECON423", "ECON440", "ECON445", "ECON450", "ECON455", "ECON460", "ECON465", "ECON480", "ECON511", 
-            "EDUC401", "EDUC506", "EDUC521", "EDUC533", "EDUC535", 
-            "EMES314", "ENGL164", "ENGL279", 
-            "ENEC463", "ENEC307", "ENEC308", "ENEC309", "ENEC330", "ENEC350", "ENEC351", "ENEC352", "ENEC370", "ENEC462", "ENEC474", "ENEC586", "ENEC685", "ENEC698", "ENEC470", "ENEC368", "ENVR600", 
-            "GEOG281", "GEOG370", "GEOG391", "GEOG414", "GEOG416", "GEOG423", "GEOG428", "GEOG430", "GEOG435", "GEOG446", "GEOG447", "GEOG448", "GEOG451", "GEOG457", "GEOG458", "GEOG460", "GEOG470", "GEOG480", "GEOG491", "GEOG541", "GEOG542", 
-            "GLBL382", "GLBL390", 
-            "HIST238", "HIST365", "HIST385", "HIST510", "HIST566", "HIST568", "HIST577", "HIST584", "HIST589", 
-            "HPM310", "HPM330", "HPM340", "HPM350", "HPM351", "HPM352", "INLS382", "INLS515", 
-            "MEJO340", "MEJO441", "MEJO442", "MEJO443", "MEJO445", "MEJO446", "MEJO458", "MEJO541", "MEJO560", "MEJO652", 
-            "MNGT345", "MNGT365", "MNGT380", "MNGT410", "MNGT412", "MNGT415", "MNGT427", 
-            "PHIL364", "PHIL370", "PHIL384", "PHIL473", "PHIL480", "PHIL698", 
-            "PLAN330", "PLAN574", "PLAN636", "PLAN637", "PLAN641", "PLAN651", "PLAN685", 
-            "POLI400", "POLI401", "POLI406", "POLI410", "POLI411", "POLI412", "POLI416", "POLI418", "POLI419H", "POLI420", "POLI431", "POLI433", "POLI434", "POLI438", "POLI442", "POLI443", "POLI444", "POLI457", "POLI470", "POLI472", 
-            "PSYC467", "PSYC469", "PSYC471", "PSYC500", "PSYC502", "PSYC504", "PSYC514", "PSYC530", "PSYC531", "PSYC532", "PSYC565", "PSYC601", 
-            "PWAD250", "PWAD368", "PWAD416", "PWAD443", "PWAD444", "PWAD453", "PWAD460", "PWAD469", "PWAD574", "PWAD575", "PWAD577", 
-            "RELI423", "RELI443", 
-            "STOR305", "STOR358", "STOR415", "STOR455", 
-            "SOCI410", "SOCI412", "SOCI415", "SOCI418", "SOCI420", "SOCI422", "SOCI423", "SOCI424", "SOCI425", "SOCI426", "SOCI427", "SOCI431", "SOCI444", "SOCI468", "SOCI469", 
-            "SPHG350H", 
-            "WGST368", "WGST388", "WGST410", "WGST662"
+            "PLCY101",
+            "PLCY110",
+            "PLCY230",
+            "PLCY290",
+            "PLCY326",
+            "PLCY330",
+            "PLCY354",
+            "PLCY360",
+            "PLCY361",
+            "PLCY364",
+            "PLCY371",
+            "PLCY372",
+            "PLCY373",
+            "PLCY384",
+            "PLCY411",
+            "PLCY412",
+            "PLCY414",
+            "PLCY424",
+            "PLCY425",
+            "PLCY430",
+            "PLCY473",
+            "PLCY475",
+            "PLCY480",
+            "PLCY485",
+            "PLCY520",
+            "PLCY527",
+            "PLCY565",
+            "PLCY570",
+            "AAAD307",
+            "AAAD333",
+            "AAAD488",
+            "AAAD485",
+            "AMST390",
+            "AMST486",
+            "ANTH312",
+            "ANTH318",
+            "ANTH319",
+            "ANTH350",
+            "ANTH355",
+            "ANTH360",
+            "ANTH377",
+            "ANTH380",
+            "ANTH422",
+            "ANTH429",
+            "ANTH439",
+            "ANTH441",
+            "ANTH460",
+            "ANTH470",
+            "ANTH502",
+            "ANTH537",
+            "ANTH585",
+            "BUSI404",
+            "BUSI405",
+            "BUSI500",
+            "BUSI503",
+            "BUSI504",
+            "BUSI506",
+            "BUSI512",
+            "BUSI610",
+            "BUSI611",
+            "COMM312",
+            "COMM325",
+            "COMM372",
+            "COMM375",
+            "COMM470",
+            "COMM521",
+            "COMM524",
+            "COMM525",
+            "COMM571",
+            "COMM572",
+            "COMM574",
+            "COMM575",
+            "COMM576",
+            "COMM624",
+            "COMM625",
+            "COMM652",
+            "ECON320",
+            "ECON325",
+            "ECON345",
+            "ECON380",
+            "ECON423",
+            "ECON440",
+            "ECON445",
+            "ECON450",
+            "ECON455",
+            "ECON460",
+            "ECON465",
+            "ECON480",
+            "ECON511",
+            "EDUC401",
+            "EDUC506",
+            "EDUC521",
+            "EDUC533",
+            "EDUC535",
+            "EMES314",
+            "ENGL164",
+            "ENGL279",
+            "ENEC463",
+            "ENEC307",
+            "ENEC308",
+            "ENEC309",
+            "ENEC330",
+            "ENEC350",
+            "ENEC351",
+            "ENEC352",
+            "ENEC370",
+            "ENEC462",
+            "ENEC474",
+            "ENEC586",
+            "ENEC685",
+            "ENEC698",
+            "ENEC470",
+            "ENEC368",
+            "ENVR600",
+            "GEOG281",
+            "GEOG370",
+            "GEOG391",
+            "GEOG414",
+            "GEOG416",
+            "GEOG423",
+            "GEOG428",
+            "GEOG430",
+            "GEOG435",
+            "GEOG446",
+            "GEOG447",
+            "GEOG448",
+            "GEOG451",
+            "GEOG457",
+            "GEOG458",
+            "GEOG460",
+            "GEOG470",
+            "GEOG480",
+            "GEOG491",
+            "GEOG541",
+            "GEOG542",
+            "GLBL382",
+            "GLBL390",
+            "HIST238",
+            "HIST365",
+            "HIST385",
+            "HIST510",
+            "HIST566",
+            "HIST568",
+            "HIST577",
+            "HIST584",
+            "HIST589",
+            "HPM310",
+            "HPM330",
+            "HPM340",
+            "HPM350",
+            "HPM351",
+            "HPM352",
+            "INLS382",
+            "INLS515",
+            "MEJO340",
+            "MEJO441",
+            "MEJO442",
+            "MEJO443",
+            "MEJO445",
+            "MEJO446",
+            "MEJO458",
+            "MEJO541",
+            "MEJO560",
+            "MEJO652",
+            "MNGT345",
+            "MNGT365",
+            "MNGT380",
+            "MNGT410",
+            "MNGT412",
+            "MNGT415",
+            "MNGT427",
+            "PHIL364",
+            "PHIL370",
+            "PHIL384",
+            "PHIL473",
+            "PHIL480",
+            "PHIL698",
+            "PLAN330",
+            "PLAN574",
+            "PLAN636",
+            "PLAN637",
+            "PLAN641",
+            "PLAN651",
+            "PLAN685",
+            "POLI400",
+            "POLI401",
+            "POLI406",
+            "POLI410",
+            "POLI411",
+            "POLI412",
+            "POLI416",
+            "POLI418",
+            "POLI419H",
+            "POLI420",
+            "POLI431",
+            "POLI433",
+            "POLI434",
+            "POLI438",
+            "POLI442",
+            "POLI443",
+            "POLI444",
+            "POLI457",
+            "POLI470",
+            "POLI472",
+            "PSYC467",
+            "PSYC469",
+            "PSYC471",
+            "PSYC500",
+            "PSYC502",
+            "PSYC504",
+            "PSYC514",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC565",
+            "PSYC601",
+            "PWAD250",
+            "PWAD368",
+            "PWAD416",
+            "PWAD443",
+            "PWAD444",
+            "PWAD453",
+            "PWAD460",
+            "PWAD469",
+            "PWAD574",
+            "PWAD575",
+            "PWAD577",
+            "RELI423",
+            "RELI443",
+            "STOR305",
+            "STOR358",
+            "STOR415",
+            "STOR455",
+            "SOCI410",
+            "SOCI412",
+            "SOCI415",
+            "SOCI418",
+            "SOCI420",
+            "SOCI422",
+            "SOCI423",
+            "SOCI424",
+            "SOCI425",
+            "SOCI426",
+            "SOCI427",
+            "SOCI431",
+            "SOCI444",
+            "SOCI468",
+            "SOCI469",
+            "SPHG350H",
+            "WGST368",
+            "WGST388",
+            "WGST410",
+            "WGST662"
           ]
         }
       ]
@@ -4010,8 +4792,37 @@
           "courses_required": 3,
           "type": "explicit",
           "options": [
-            "ASTR202", "ASTR301", "ASTR390", "ASTR431", "ASTR501", "ASTR502", "ASTR503", "ASTR504", "ASTR505", "ASTR519", "ASTR701",
-            "PHYS211", "PHYS231", "PHYS311", "PHYS331", "PHYS332", "PHYS358", "PHYS401", "PHYS405", "PHYS410", "PHYS412", "PHYS421", "PHYS441", "PHYS451", "PHYS461", "PHYS515", "PHYS521", "PHYS543", "PHYS631", "PHYS632", "PHYS633"
+            "ASTR202",
+            "ASTR301",
+            "ASTR390",
+            "ASTR431",
+            "ASTR501",
+            "ASTR502",
+            "ASTR503",
+            "ASTR504",
+            "ASTR505",
+            "ASTR519",
+            "ASTR701",
+            "PHYS211",
+            "PHYS231",
+            "PHYS311",
+            "PHYS331",
+            "PHYS332",
+            "PHYS358",
+            "PHYS401",
+            "PHYS405",
+            "PHYS410",
+            "PHYS412",
+            "PHYS421",
+            "PHYS441",
+            "PHYS451",
+            "PHYS461",
+            "PHYS515",
+            "PHYS521",
+            "PHYS543",
+            "PHYS631",
+            "PHYS632",
+            "PHYS633"
           ]
         }
       ]
@@ -4066,14 +4877,68 @@
           "courses_required": 5,
           "type": "explicit",
           "options": [
-            "AAAD300", "AAAD387", "ANTH53", "ANTH56", "ANTH104", "ANTH143", "ANTH147", "ANTH148", 
-            "ANTH151", "ANTH204", "ANTH214", "ANTH217", "ANTH237", "ANTH238", "ANTH252", "ANTH270", 
-            "ANTH272", "ANTH277", "ANTH278", "ANTH280", "ANTH285", "ANTH294", "ANTH298", "ANTH315", 
-            "ANTH318", "ANTH319", "ANTH320", "ANTH325", "ANTH326", "ANTH328", "ANTH341", "ANTH349", 
-            "ANTH361", "ANTH389", "ANTH390", "ANTH405", "ANTH414", "ANTH422", "ANTH423", "ANTH426", 
-            "ANTH430", "ANTH437", "ANTH439", "ANTH441", "ANTH442", "ANTH443", "ANTH444", "ANTH445", 
-            "ANTH446", "ANTH448", "ANTH470", "ANTH471", "ANTH473", "ANTH474", "ANTH535", "ANTH538", 
-            "ANTH582", "ANTH585", "ANTH623", "ANTH624", "ANTH625", "ANTH649"
+            "AAAD300",
+            "AAAD387",
+            "ANTH53",
+            "ANTH56",
+            "ANTH104",
+            "ANTH143",
+            "ANTH147",
+            "ANTH148",
+            "ANTH151",
+            "ANTH204",
+            "ANTH214",
+            "ANTH217",
+            "ANTH237",
+            "ANTH238",
+            "ANTH252",
+            "ANTH270",
+            "ANTH272",
+            "ANTH277",
+            "ANTH278",
+            "ANTH280",
+            "ANTH285",
+            "ANTH294",
+            "ANTH298",
+            "ANTH315",
+            "ANTH318",
+            "ANTH319",
+            "ANTH320",
+            "ANTH325",
+            "ANTH326",
+            "ANTH328",
+            "ANTH341",
+            "ANTH349",
+            "ANTH361",
+            "ANTH389",
+            "ANTH390",
+            "ANTH405",
+            "ANTH414",
+            "ANTH422",
+            "ANTH423",
+            "ANTH426",
+            "ANTH430",
+            "ANTH437",
+            "ANTH439",
+            "ANTH441",
+            "ANTH442",
+            "ANTH443",
+            "ANTH444",
+            "ANTH445",
+            "ANTH446",
+            "ANTH448",
+            "ANTH470",
+            "ANTH471",
+            "ANTH473",
+            "ANTH474",
+            "ANTH535",
+            "ANTH538",
+            "ANTH582",
+            "ANTH585",
+            "ANTH623",
+            "ANTH624",
+            "ANTH625",
+            "ANTH649"
           ]
         }
       ]
@@ -4094,7 +4959,12 @@
           "description": "One course emphasizing global oceanic processes",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["EMES103", "EMES401", "BIOL350", "ENVR417"]
+          "options": [
+            "EMES103",
+            "EMES401",
+            "BIOL350",
+            "ENVR417"
+          ]
         },
         {
           "id": "marine_sciences_electives",
@@ -4102,15 +4972,55 @@
           "courses_required": 3,
           "type": "explicit",
           "options": [
-            "EMES52", "EMES53", "EMES55", "EMES89", "EMES203", 
-            "EMES204", "BIOL204", "EMES220", "ENEC220", "EMES352", "ENEC352", 
-            "EMES395", "EMES411", "ENEC411", "EMES434", "EMES440", "BIOL462", 
-            "EMES441", "ENEC441", "EMES442", "BIOL457", "EMES443", "EMES444", 
-            "ENEC444", "BIOL456", "EMES446", "BIOL452", "EMES447", "EMES448", 
-            "ENEC448", "EMES470", "EMES471", "ENEC471", "EMES472", "EMES473", 
-            "ENGL473", "EMES474", "EMES483", "EMES505", "ENVR505", "EMES506", 
-            "EMES507", "BIOL657", "ENVR520", "EMES512", "ENEC512",
-            "ENEC204", "ENEC395", "ENEC698"
+            "EMES52",
+            "EMES53",
+            "EMES55",
+            "EMES89",
+            "EMES203",
+            "EMES204",
+            "BIOL204",
+            "EMES220",
+            "ENEC220",
+            "EMES352",
+            "ENEC352",
+            "EMES395",
+            "EMES411",
+            "ENEC411",
+            "EMES434",
+            "EMES440",
+            "BIOL462",
+            "EMES441",
+            "ENEC441",
+            "EMES442",
+            "BIOL457",
+            "EMES443",
+            "EMES444",
+            "ENEC444",
+            "BIOL456",
+            "EMES446",
+            "BIOL452",
+            "EMES447",
+            "EMES448",
+            "ENEC448",
+            "EMES470",
+            "EMES471",
+            "ENEC471",
+            "EMES472",
+            "EMES473",
+            "ENGL473",
+            "EMES474",
+            "EMES483",
+            "EMES505",
+            "ENVR505",
+            "EMES506",
+            "EMES507",
+            "BIOL657",
+            "ENVR520",
+            "EMES512",
+            "ENEC512",
+            "ENEC204",
+            "ENEC395",
+            "ENEC698"
           ]
         }
       ]
@@ -4135,8 +5045,29 @@
           "credits_required": 9,
           "type": "explicit",
           "options": [
-            "MATH347", "MATH383L", "MATH528L", "MATH529L",
-            "MATH521", "MATH522", "MATH523", "MATH524", "MATH528", "MATH529", "MATH534", "MATH535", "MATH548", "MATH553", "MATH555", "MATH564", "MATH566", "MATH577", "MATH594", "MATH661", "MATH662", "MATH668", "MATH669"
+            "MATH347",
+            "MATH383L",
+            "MATH528L",
+            "MATH529L",
+            "MATH521",
+            "MATH522",
+            "MATH523",
+            "MATH524",
+            "MATH528",
+            "MATH529",
+            "MATH534",
+            "MATH535",
+            "MATH548",
+            "MATH553",
+            "MATH555",
+            "MATH564",
+            "MATH566",
+            "MATH577",
+            "MATH594",
+            "MATH661",
+            "MATH662",
+            "MATH668",
+            "MATH669"
           ]
         },
         {
@@ -4145,7 +5076,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH231"]
+          "options": [
+            "MATH231"
+          ]
         },
         {
           "id": "add_math_232",
@@ -4153,7 +5086,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH232"]
+          "options": [
+            "MATH232"
+          ]
         },
         {
           "id": "add_math_233",
@@ -4161,7 +5096,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH233", "MATH235"]
+          "options": [
+            "MATH233",
+            "MATH235"
+          ]
         }
       ]
     },
@@ -4182,14 +5120,21 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["LING101"]
+          "options": [
+            "LING101"
+          ]
         },
         {
           "id": "ling_core",
           "description": "Two courses selected from the core linguistics list",
           "courses_required": 2,
           "type": "explicit",
-          "options": ["LING200", "LING201", "LING202", "LING203"]
+          "options": [
+            "LING200",
+            "LING201",
+            "LING202",
+            "LING203"
+          ]
         },
         {
           "id": "ling_electives",
@@ -4235,7 +5180,10 @@
           "rule": {
             "department": "ENEC",
             "min_number": 100,
-            "exclude": ["ENEC201", "ENEC202"]
+            "exclude": [
+              "ENEC201",
+              "ENEC202"
+            ]
           }
         }
       ]
@@ -4247,7 +5195,6 @@
       }
     }
   },
-
   "Entrepreneurship_Minor": {
     "base_requirements": {
       "required_courses": [
@@ -4260,14 +5207,20 @@
           "description": "One principles of entrepreneurship course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["ECON125", "ECON57H"]
+          "options": [
+            "ECON125",
+            "ECON57H"
+          ]
         },
         {
           "id": "ent_econ_core",
           "description": "One principles of economics course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["ECON101", "ECON111"]
+          "options": [
+            "ECON101",
+            "ECON111"
+          ]
         },
         {
           "id": "ent_track_course",
@@ -4275,7 +5228,13 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "ECON327", "ENEC473", "MEJO592", "PLCY326", "SPHG428H", "SOCI302", "SOCI427"
+            "ECON327",
+            "ENEC473",
+            "MEJO592",
+            "PLCY326",
+            "SPHG428H",
+            "SOCI302",
+            "SOCI427"
           ]
         }
       ]
@@ -4296,28 +5255,48 @@
           "description": "Data and Computational Thinking (one course)",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["COMP110", "COMP116", "GEOG215", "POLI281"]
+          "options": [
+            "COMP110",
+            "COMP116",
+            "GEOG215",
+            "POLI281"
+          ]
         },
         {
           "id": "data_statistical_thinking",
           "description": "Data and Statistical Thinking (one course)",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["LING460", "SOCI318", "STOR120"]
+          "options": [
+            "LING460",
+            "SOCI318",
+            "STOR120"
+          ]
         },
         {
           "id": "data_culture_society",
           "description": "Data, Culture, and Society (one course)",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["CLAR270", "COMM348", "COMM349", "COMP380", "DATA120", "GEOG115", "ENGL114", "GEOG141", "PLAN562", "POLI209"]
+          "options": [
+            "CLAR270",
+            "COMM348",
+            "COMM349",
+            "COMP380",
+            "DATA120",
+            "GEOG115",
+            "ENGL114",
+            "GEOG141",
+            "PLAN562",
+            "POLI209"
+          ]
         },
         {
           "id": "data_science_electives",
           "description": "Two additional elective courses from the approved list",
           "courses_required": 2,
           "type": "explicit",
-          "options": [] 
+          "options": []
         }
       ]
     },
@@ -4328,7 +5307,6 @@
       }
     }
   },
-
   "Computer_Science_Minor": {
     "base_requirements": {
       "required_courses": [
@@ -4343,7 +5321,32 @@
           "courses_required": 2,
           "type": "explicit",
           "options": [
-            "COMP311", "COMP421", "COMP426", "COMP431", "COMP433", "COMP435", "COMP455", "COMP520", "COMP521", "COMP523", "COMP524", "COMP530", "COMP533", "COMP535", "COMP541", "COMP550", "COMP555", "COMP560", "COMP562", "COMP576", "COMP581", "COMP585", "COMP590", "COMP631", "COMP633", "COMP651"
+            "COMP311",
+            "COMP421",
+            "COMP426",
+            "COMP431",
+            "COMP433",
+            "COMP435",
+            "COMP455",
+            "COMP520",
+            "COMP521",
+            "COMP523",
+            "COMP524",
+            "COMP530",
+            "COMP533",
+            "COMP535",
+            "COMP541",
+            "COMP550",
+            "COMP555",
+            "COMP560",
+            "COMP562",
+            "COMP576",
+            "COMP581",
+            "COMP585",
+            "COMP590",
+            "COMP631",
+            "COMP633",
+            "COMP651"
           ]
         }
       ]
@@ -4355,7 +5358,6 @@
       }
     }
   },
-
   "Chemistry_Minor": {
     "base_requirements": {
       "required_courses": [
@@ -4372,7 +5374,10 @@
           "description": "Laboratory in Separations and Analytical Characterization",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["CHEM241L", "CHEM245L"]
+          "options": [
+            "CHEM241L",
+            "CHEM245L"
+          ]
         }
       ]
     },
@@ -4399,7 +5404,11 @@
             "description": "Select at least two courses from the core list",
             "courses_required": 2,
             "type": "explicit",
-            "options": ["ECON400", "ECON410", "ECON420"]
+            "options": [
+              "ECON400",
+              "ECON410",
+              "ECON420"
+            ]
           },
           {
             "id": "econ_minor_electives",
@@ -4409,7 +5418,9 @@
             "rule": {
               "department": "ECON",
               "min_number": 400,
-              "exclude": ["ECON493"]
+              "exclude": [
+                "ECON493"
+              ]
             }
           }
         ]
@@ -4428,7 +5439,9 @@
             "rule": {
               "department": "ECON",
               "min_number": 400,
-              "exclude": ["ECON493"]
+              "exclude": [
+                "ECON493"
+              ]
             }
           }
         ]
@@ -4448,7 +5461,9 @@
             "rule": {
               "department": "ECON",
               "min_number": 400,
-              "exclude": ["ECON493"]
+              "exclude": [
+                "ECON493"
+              ]
             }
           }
         ]
@@ -4464,7 +5479,10 @@
             "description": "Intermediate Microeconomics or Intermediate Macroeconomics",
             "courses_required": 1,
             "type": "explicit",
-            "options": ["ECON410", "ECON420"]
+            "options": [
+              "ECON410",
+              "ECON420"
+            ]
           },
           {
             "id": "metrics_electives",
@@ -4474,7 +5492,9 @@
             "rule": {
               "department": "ECON",
               "min_number": 400,
-              "exclude": ["ECON493"]
+              "exclude": [
+                "ECON493"
+              ]
             }
           }
         ]
@@ -4491,14 +5511,20 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["BIOL101", "BIOL101L"]
+          "options": [
+            "BIOL101",
+            "BIOL101L"
+          ]
         },
         {
           "id": "biol_minor_intro",
           "description": "How Cells Function or Biodiversity",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["BIOL103", "BIOL104"]
+          "options": [
+            "BIOL103",
+            "BIOL104"
+          ]
         },
         {
           "id": "biol_minor_core_option",
@@ -4506,10 +5532,28 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "BIOL220", "BIOL240", "BIOL250", "BIOL260", 
-            "BIOL271", "BIOL272", "BIOL273", "BIOL274", "BIOL277", "BIOL278", "BIOL279", 
-            "BIOL422", "BIOL441", "BIOL451", "BIOL471", "BIOL472", "BIOL473", "BIOL474", 
-            "BIOL475", "BIOL476", "BIOL479", "BIOL579"
+            "BIOL220",
+            "BIOL240",
+            "BIOL250",
+            "BIOL260",
+            "BIOL271",
+            "BIOL272",
+            "BIOL273",
+            "BIOL274",
+            "BIOL277",
+            "BIOL278",
+            "BIOL279",
+            "BIOL422",
+            "BIOL441",
+            "BIOL451",
+            "BIOL471",
+            "BIOL472",
+            "BIOL473",
+            "BIOL474",
+            "BIOL475",
+            "BIOL476",
+            "BIOL479",
+            "BIOL579"
           ]
         },
         {
@@ -4518,13 +5562,50 @@
           "courses_required": 1,
           "type": "explicit",
           "options": [
-            "BIOL395", "BIOL255H", "BIOL256", "BIOL459", "BIOL461", "BIOL463", "BIOL526H", 
-            "BIOL535", "BIOL562", "BIOL563",
-            "BIOL271", "BIOL271L", "BIOL272", "BIOL272L", "BIOL273", "BIOL274", "BIOL274L", 
-            "BIOL277", "BIOL277L", "BIOL278", "BIOL278L", "BIOL279", "BIOL279L", 
-            "BIOL421L", "BIOL422", "BIOL422L", "BIOL441", "BIOL441L", "BIOL451", "BIOL451L", 
-            "BIOL471", "BIOL471L", "BIOL472", "BIOL473", "BIOL473L", "BIOL474", "BIOL474L", 
-            "BIOL475", "BIOL475L", "BIOL476", "BIOL476L", "BIOL479", "BIOL479L", "BIOL579"
+            "BIOL395",
+            "BIOL255H",
+            "BIOL256",
+            "BIOL459",
+            "BIOL461",
+            "BIOL463",
+            "BIOL526H",
+            "BIOL535",
+            "BIOL562",
+            "BIOL563",
+            "BIOL271",
+            "BIOL271L",
+            "BIOL272",
+            "BIOL272L",
+            "BIOL273",
+            "BIOL274",
+            "BIOL274L",
+            "BIOL277",
+            "BIOL277L",
+            "BIOL278",
+            "BIOL278L",
+            "BIOL279",
+            "BIOL279L",
+            "BIOL421L",
+            "BIOL422",
+            "BIOL422L",
+            "BIOL441",
+            "BIOL441L",
+            "BIOL451",
+            "BIOL451L",
+            "BIOL471",
+            "BIOL471L",
+            "BIOL472",
+            "BIOL473",
+            "BIOL473L",
+            "BIOL474",
+            "BIOL474L",
+            "BIOL475",
+            "BIOL475L",
+            "BIOL476",
+            "BIOL476L",
+            "BIOL479",
+            "BIOL479L",
+            "BIOL579"
           ]
         },
         {
@@ -4559,7 +5640,10 @@
           "courses_required": 2,
           "is_core": false,
           "type": "explicit",
-          "options": ["CHEM101", "CHEM101L"]
+          "options": [
+            "CHEM101",
+            "CHEM101L"
+          ]
         },
         {
           "id": "ase_prereq_calc1",
@@ -4567,7 +5651,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH231"]
+          "options": [
+            "MATH231"
+          ]
         },
         {
           "id": "ase_prereq_calc2",
@@ -4575,7 +5661,9 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["MATH232"]
+          "options": [
+            "MATH232"
+          ]
         },
         {
           "id": "ase_prereq_comp",
@@ -4583,7 +5671,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["COMP110", "COMP116"]
+          "options": [
+            "COMP110",
+            "COMP116"
+          ]
         },
         {
           "id": "ase_prereq_phys1",
@@ -4591,7 +5682,10 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS114", "PHYS118"]
+          "options": [
+            "PHYS114",
+            "PHYS118"
+          ]
         },
         {
           "id": "ase_prereq_phys2",
@@ -4599,14 +5693,24 @@
           "courses_required": 1,
           "is_core": false,
           "type": "explicit",
-          "options": ["PHYS115", "PHYS119"]
+          "options": [
+            "PHYS115",
+            "PHYS119"
+          ]
         },
         {
           "id": "ase_core_elective",
           "description": "Select one core engineering course",
           "courses_required": 1,
           "type": "explicit",
-          "options": ["APPL240", "APPL260", "APPL285", "APPL385", "PHYS231", "ENVR205"]
+          "options": [
+            "APPL240",
+            "APPL260",
+            "APPL285",
+            "APPL385",
+            "PHYS231",
+            "ENVR205"
+          ]
         },
         {
           "id": "ase_engineering_topics",
@@ -4614,15 +5718,82 @@
           "courses_required": 2,
           "type": "explicit",
           "options": [
-            "APPL350", "APPL405", "APPL412", "APPL430", "APPL435", "APPL462", "APPL463", "APPL465",
-            "BIOL226", "BIOL431", "BMME435", "PHYS405", "BIOL534", "MATH564", "BIOL537", "BIOL551", "BIOL553", "MATH553", "BIOL554",
-            "CHEM441", "CHEM441L", "CHEM445", "CHEM448", "CHEM449", "CHEM470", "CHEM472", "PHYS472",
-            "COMP433", "COMP447", "PHYS447", "COMP523", "COMP541", "COMP560", "COMP562", "COMP581",
-            "EMES415", "EMES560", "EMES561",
-            "ENVR451", "ENVR452", "EMES560", "PHYS660", "ENVR453", "ENVR468", "ENEC468", "ENVR470", "ENEC470", "ENVR671", "ENVR672",
-            "MATH347", "MATH528", "MATH529", "MATH553", "BIOL553", "MATH534", "BIOL534", "MATH566",
-            "NSCI421", "NSCI423",
-            "PHYS331", "PHYS332", "PHYS401", "PHYS405", "BIOL431", "BMME435", "PHYS441", "BMME441", "PHYS447", "COMP447", "PHYS461", "PHYS472", "CHEM472", "PHYS515", "PHYS529", "PHYS660", "ENVR452"
+            "APPL350",
+            "APPL405",
+            "APPL412",
+            "APPL430",
+            "APPL435",
+            "APPL462",
+            "APPL463",
+            "APPL465",
+            "BIOL226",
+            "BIOL431",
+            "BMME435",
+            "PHYS405",
+            "BIOL534",
+            "MATH564",
+            "BIOL537",
+            "BIOL551",
+            "BIOL553",
+            "MATH553",
+            "BIOL554",
+            "CHEM441",
+            "CHEM441L",
+            "CHEM445",
+            "CHEM448",
+            "CHEM449",
+            "CHEM470",
+            "CHEM472",
+            "PHYS472",
+            "COMP433",
+            "COMP447",
+            "PHYS447",
+            "COMP523",
+            "COMP541",
+            "COMP560",
+            "COMP562",
+            "COMP581",
+            "EMES415",
+            "EMES560",
+            "EMES561",
+            "ENVR451",
+            "ENVR452",
+            "EMES560",
+            "PHYS660",
+            "ENVR453",
+            "ENVR468",
+            "ENEC468",
+            "ENVR470",
+            "ENEC470",
+            "ENVR671",
+            "ENVR672",
+            "MATH347",
+            "MATH528",
+            "MATH529",
+            "MATH553",
+            "BIOL553",
+            "MATH534",
+            "BIOL534",
+            "MATH566",
+            "NSCI421",
+            "NSCI423",
+            "PHYS331",
+            "PHYS332",
+            "PHYS401",
+            "PHYS405",
+            "BIOL431",
+            "BMME435",
+            "PHYS441",
+            "BMME441",
+            "PHYS447",
+            "COMP447",
+            "PHYS461",
+            "PHYS472",
+            "CHEM472",
+            "PHYS515",
+            "PHYS529",
+            "PHYS660",
+            "ENVR452"
           ]
         }
       ]
@@ -4646,7 +5817,15 @@
           "rule": {
             "department": "ANTH",
             "min_number": 200,
-            "exclude": ["ANTH195", "ANTH196", "ANTH295", "ANTH296", "ANTH393", "ANTH395", "ANTH396"]
+            "exclude": [
+              "ANTH195",
+              "ANTH196",
+              "ANTH295",
+              "ANTH296",
+              "ANTH393",
+              "ANTH395",
+              "ANTH396"
+            ]
           }
         },
         {
@@ -4657,7 +5836,61 @@
           "rule": {
             "department": "ANTH",
             "min_number": 100,
-            "exclude": ["ANTH195", "ANTH196", "ANTH295", "ANTH296", "ANTH393", "ANTH395", "ANTH396"]
+            "exclude": [
+              "ANTH195",
+              "ANTH196",
+              "ANTH295",
+              "ANTH296",
+              "ANTH393",
+              "ANTH395",
+              "ANTH396"
+            ]
+          }
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Sociology_BA": {
+    "base_requirements": {
+      "required_courses": [
+        "SOCI101",
+        "SOCI250",
+        "SOCI251",
+        "SOCI252"
+      ],
+      "choice_groups": [
+        {
+          "id": "rule_1",
+          "description": "Three SOCI electives numbered above 400 (upper-level)",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "SOCI",
+            "min_number": 400,
+            "min_credits": null,
+            "exclude": []
+          }
+        },
+        {
+          "id": "rule_2",
+          "description": "Two additional three-hour SOCI courses (six hours)",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "SOCI",
+            "min_number": null,
+            "min_credits": 3,
+            "exclude": []
           }
         }
       ]

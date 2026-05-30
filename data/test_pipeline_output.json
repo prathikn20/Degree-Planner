@@ -1,0 +1,829 @@
+{
+  "Data_Science_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "DATA110",
+        "DATA120",
+        "MATH231",
+        "MATH232",
+        "MATH347"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Communications (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMM113",
+            "COMM171",
+            "DATA150",
+            "ENGL119",
+            "ENGL303",
+            "ENGL411",
+            "GEOG115",
+            "GEOG415",
+            "INLS541",
+            "MEJO102"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "Mathematical and Statistical Foundations (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS650",
+            "MATH521",
+            "STOR435",
+            "MATH535",
+            "STOR535",
+            "STOR634"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "Optimization (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH522",
+            "MATH524",
+            "MATH560",
+            "STOR415",
+            "STOR612"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_4",
+          "description": "Machine Learning and AI (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS635",
+            "COMP562",
+            "DATA521",
+            "STOR565",
+            "STOR566"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_5",
+          "description": "Computational Thinking (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS511",
+            "BIOS512",
+            "COMP301",
+            "MATH566",
+            "MATH661",
+            "STOR320",
+            "STOR520",
+            "STOR572"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Choose six upper-division electives (see list below) OR a four-course concentration and two upper-division electives.",
+          "type": "rule_based",
+          "courses_required": 6,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": 300,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables \u2020, H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "MATH\u00a0381 | Discrete Mathematics \u2020, H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH381",
+            "STOR315",
+            "COMP283"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "STOR\u00a0120 | Foundations of Statistics and Data Science \u2020, H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "STOR120",
+            "COMP110",
+            "COMP116"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Economic_Analysis": {
+        "required_courses": [
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON571",
+              "ECON573",
+              "ECON575"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON522",
+              "ECON525",
+              "ECON545",
+              "ECON550",
+              "ECON551",
+              "ECON552",
+              "ECON580"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      },
+      "Data_Science_in_Politics": {
+        "required_courses": [
+          "POLI381",
+          "POLI480"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "POLI209",
+              "POLI350",
+              "POLI487",
+              "POLI488"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "POLI193",
+              "POLI395"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      },
+      "Urban_Analytics": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN246",
+              "PLAN247",
+              "PLAN256",
+              "PLAN257",
+              "PLAN714"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN562"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_3",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN672"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_4",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN591",
+              "PLAN635",
+              "PLAN636",
+              "PLAN637",
+              "PLAN671",
+              "PLAN720",
+              "PLAN745",
+              "PLAN739"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      },
+      "Sports_Analytics": {
+        "required_courses": [
+          "STOR538",
+          "STOR590"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "EXSS221",
+              "EXSS324",
+              "EXSS327",
+              "STOR455",
+              "STOR475",
+              "STOR543",
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR565",
+              "STOR572"
+            ],
+            "rule": null,
+            "credits_required": 6
+          }
+        ]
+      },
+      "Quantitative_Language_Science": {
+        "required_courses": [
+          "COMP586",
+          "LING401",
+          "LING460",
+          "LING540"
+        ],
+        "choice_groups": []
+      },
+      "Operations_Research": {
+        "required_courses": [
+          "STOR415",
+          "STOR445"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "STOR512",
+              "STOR543",
+              "STOR545",
+              "STOR572",
+              "STOR641",
+              "STOR642"
+            ],
+            "rule": null,
+            "credits_required": 6
+          }
+        ]
+      },
+      "Mathematical_Foundations": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Analytical Methods. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH524",
+              "MATH528",
+              "MATH560",
+              "STOR512"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_2",
+            "description": "Algebraic and Computational Techniques. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH533",
+              "MATH577",
+              "MATH661",
+              "MATH662"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_3",
+            "description": "Statistical Methods. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR654"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_4",
+            "description": "Computational and Stochastic Modeling. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH564",
+              "STOR445",
+              "STOR543",
+              "STOR545"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      },
+      "Decision_Analytics": {
+        "required_courses": [
+          "STOR445",
+          "STOR572"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMP562",
+              "STOR455",
+              "STOR475",
+              "STOR512",
+              "STOR543",
+              "STOR545",
+              "STOR555",
+              "STOR565"
+            ],
+            "rule": null,
+            "credits_required": 6
+          }
+        ]
+      },
+      "Statistical_Learning_and_Data_Analysis": {
+        "required_courses": [
+          "STOR555",
+          "STOR565"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "STOR512",
+              "STOR556",
+              "STOR557",
+              "STOR566",
+              "STOR654",
+              "STOR655",
+              "STOR664",
+              "STOR665"
+            ],
+            "rule": null,
+            "credits_required": 6
+          }
+        ]
+      },
+      "Advanced_Artificial_Intelligence_and_Machine_Learning": {
+        "required_courses": [
+          "DATA520",
+          "DATA521"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Selection one of the following courses:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "DATA522",
+              "DATA523"
+            ],
+            "rule": null,
+            "credits_required": 3
+          },
+          {
+            "id": "list_2",
+            "description": "One additional course from the AI and Machine Learning Competency:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "BIOS635",
+              "COMP562",
+              "MATH560",
+              "STOR565",
+              "STOR566"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      },
+      "Health_Informatics": {
+        "required_courses": [
+          "CHIP725",
+          "CHIP690",
+          "CHIP710"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following elective courses:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "CHIP793",
+              "CHIP732",
+              "CHIP721",
+              "STOR475"
+            ],
+            "rule": null,
+            "credits_required": 3
+          }
+        ]
+      }
+    }
+  },
+  "Environmental_Science_and_Studies_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "ENEC201",
+        "ENEC202"
+      ],
+      "choice_groups": [
+        {
+          "description": "Three additional ENEC courses (at least one at the 400 level or higher)",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ENEC",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Physics_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "PHYS281L",
+        "PHYS331",
+        "PHYS332",
+        "PHYS401",
+        "PHYS311",
+        "PHYS412",
+        "PHYS421",
+        "PHYS451",
+        "PHYS521",
+        "PHYS441",
+        "PHYS481L",
+        "MATH528",
+        "MATH529",
+        "PHYS231",
+        "PHYS118",
+        "PHYS119",
+        "MATH231",
+        "MATH232",
+        "MATH233",
+        "MATH383",
+        "CHEM101",
+        "CHEM102",
+        "CHEM102L",
+        "ASTR519",
+        "PHYS632",
+        "ASTR202",
+        "CHEM101L"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Six additional credit hours chosen from:",
+          "type": "explicit",
+          "courses_required": 6,
+          "options": [
+            "ASTR202"
+          ],
+          "rule": null
+        },
+        {
+          "description": "ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "description": "PHYS (numbered above 300 except PHYS 395)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "PHYS",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": [
+              "PHYS395"
+            ]
+          },
+          "id": "rule_2"
+        },
+        {
+          "id": "choice_2",
+          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ],
+          "rule": null
+        },
+        {
+          "description": "One additional course chosen from ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_3"
+        },
+        {
+          "description": "Six or more additional credit hours chosen from:",
+          "type": "rule_based",
+          "courses_required": 6,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_4"
+        },
+        {
+          "description": "ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_5"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Physics_Major_BSStandard": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Physics_Major_BSAstrophysics": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Spanish_for_the_Professions_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "SPAN329"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Two profession-specific courses in the same professional track from the following options:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "SPAN320",
+            "SPAN325",
+            "SPAN321",
+            "SPAN328",
+            "SPAN323",
+            "SPAN324"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional three-credit SPAN courses above SPAN  300, excluding SPAN\u00a0401 , SPAN\u00a0402 , SPAN\u00a0404 , SPAN\u00a0405 , and SPAN\u00a0601",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "SPAN",
+            "min_number": 300,
+            "min_credits": 3,
+            "exclude": [
+              "SPAN401",
+              "SPAN402",
+              "SPAN404",
+              "SPAN405",
+              "SPAN601"
+            ]
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Linguistics_Minor": {
+    "base_requirements": {
+      "required_courses": [],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Two courses selected from: 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "LING200",
+            "LING201",
+            "LING202",
+            "LING203"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional LING courses numbered 200 or higher. 2,3",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "LING",
+            "min_number": 200,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Mathematics_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "MATH381",
+        "MATH383",
+        "MATH231",
+        "MATH232"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Three mathematics courses from the following list:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "MATH347",
+            "MATH383L",
+            "MATH528L",
+            "MATH529L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  }
+}

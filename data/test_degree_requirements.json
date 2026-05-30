@@ -1,0 +1,4049 @@
+{
+  "Computer_Science_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "COMP210",
+        "COMP211",
+        "COMP301",
+        "COMP311",
+        "COMP455",
+        "COMP550",
+        "MATH231",
+        "MATH232"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "COMP\u00a0283 | Discrete Structures 1, H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP283",
+            "MATH381",
+            "STOR315"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Five additional three-or-more credit hour COMP courses numbered 420 or higher (excluding COMP 496 , COMP 690 , and COMP 692H ).",
+          "type": "rule_based",
+          "courses_required": 5,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "COMP",
+            "min_number": 420,
+            "min_credits": 3,
+            "exclude": [
+              "COMP496",
+              "COMP690",
+              "COMP692H"
+            ]
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_2",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables 1, H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "STOR235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "MATH\u00a0347 | Linear Algebra for Applications F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH347",
+            "MATH577"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_4",
+          "description": "STOR\u00a0435 | Introduction to Probability H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "STOR435",
+            "STOR535",
+            "BIOS650"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Two science courses chosen from: 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "ASTR100",
+            "ASTR101",
+            "ASTR102",
+            "ASTR103",
+            "BIOL101",
+            "BIOL202",
+            "BIOL205",
+            "BIOL220",
+            "BIOL240",
+            "CHEM101",
+            "CHEM102",
+            "EMES101",
+            "EMES103",
+            "ENEC202",
+            "PHYS114",
+            "PHYS115",
+            "PHYS118",
+            "PHYS119",
+            "PHYS451",
+            "PHYS452"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Data_Science_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "DATA110",
+        "DATA120",
+        "MATH231",
+        "MATH232",
+        "MATH347"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Communications (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMM113",
+            "COMM171",
+            "DATA150",
+            "ENGL119",
+            "ENGL303",
+            "ENGL411",
+            "GEOG115",
+            "GEOG415",
+            "INLS541",
+            "MEJO102"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "Mathematical and Statistical Foundations (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS650",
+            "MATH521",
+            "STOR435",
+            "MATH535",
+            "STOR535",
+            "STOR634"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "Optimization (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH522",
+            "MATH524",
+            "MATH560",
+            "STOR415",
+            "STOR612"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_4",
+          "description": "Machine Learning and AI (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS635",
+            "COMP562",
+            "DATA521",
+            "STOR565",
+            "STOR566"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_5",
+          "description": "Computational Thinking (select one):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOS511",
+            "BIOS512",
+            "COMP301",
+            "MATH566",
+            "MATH661",
+            "STOR320",
+            "STOR520",
+            "STOR572"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Choose six upper-division electives (see list below) OR a four-course concentration and two upper-division electives.",
+          "type": "rule_based",
+          "courses_required": 6,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": 300,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables \u2020, H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "MATH\u00a0381 | Discrete Mathematics \u2020, H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH381",
+            "STOR315",
+            "COMP283"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "STOR\u00a0120 | Foundations of Statistics and Data Science \u2020, H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "STOR120",
+            "COMP110",
+            "COMP116"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Economic_Analysis": {
+        "required_courses": [
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON571",
+              "ECON573",
+              "ECON575"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON522",
+              "ECON525",
+              "ECON545",
+              "ECON550",
+              "ECON551",
+              "ECON552",
+              "ECON580"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Data_Science_in_Politics": {
+        "required_courses": [
+          "POLI381",
+          "POLI480"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "POLI209",
+              "POLI350",
+              "POLI487",
+              "POLI488"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "POLI193",
+              "POLI395"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Urban_Analytics": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN246",
+              "PLAN247",
+              "PLAN256",
+              "PLAN257",
+              "PLAN714"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_2",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN562"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_3",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN672"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_4",
+            "description": "Select one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN591",
+              "PLAN635",
+              "PLAN636",
+              "PLAN637",
+              "PLAN671",
+              "PLAN720",
+              "PLAN745",
+              "PLAN739"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Sports_Analytics": {
+        "required_courses": [
+          "STOR538",
+          "STOR590"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "EXSS221",
+              "EXSS324",
+              "EXSS327",
+              "STOR455",
+              "STOR475",
+              "STOR543",
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR565",
+              "STOR572"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Quantitative_Language_Science": {
+        "required_courses": [
+          "COMP586",
+          "LING401",
+          "LING460",
+          "LING540"
+        ],
+        "choice_groups": []
+      },
+      "Operations_Research": {
+        "required_courses": [
+          "STOR415",
+          "STOR445"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "STOR512",
+              "STOR543",
+              "STOR545",
+              "STOR572",
+              "STOR641",
+              "STOR642"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Mathematical_Foundations": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Analytical Methods. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH524",
+              "MATH528",
+              "MATH560",
+              "STOR512"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_2",
+            "description": "Algebraic and Computational Techniques. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH533",
+              "MATH577",
+              "MATH661",
+              "MATH662"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_3",
+            "description": "Statistical Methods. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR654"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_4",
+            "description": "Computational and Stochastic Modeling. Choose one of the following:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MATH564",
+              "STOR445",
+              "STOR543",
+              "STOR545"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Decision_Analytics": {
+        "required_courses": [
+          "STOR445",
+          "STOR572"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMP562",
+              "STOR455",
+              "STOR475",
+              "STOR512",
+              "STOR543",
+              "STOR545",
+              "STOR555",
+              "STOR565"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Statistical_Learning_and_Data_Analysis": {
+        "required_courses": [
+          "STOR555",
+          "STOR565"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Choose two of the following:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "STOR512",
+              "STOR556",
+              "STOR557",
+              "STOR566",
+              "STOR654",
+              "STOR655",
+              "STOR664",
+              "STOR665"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Advanced_Artificial_Intelligence_and_Machine_Learning": {
+        "required_courses": [
+          "DATA520",
+          "DATA521"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Selection one of the following courses:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "DATA522",
+              "DATA523"
+            ],
+            "rule": null
+          },
+          {
+            "id": "list_2",
+            "description": "One additional course from the AI and Machine Learning Competency:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "BIOS635",
+              "COMP562",
+              "MATH560",
+              "STOR565",
+              "STOR566"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Health_Informatics": {
+        "required_courses": [
+          "CHIP725",
+          "CHIP690",
+          "CHIP710"
+        ],
+        "choice_groups": [
+          {
+            "id": "list_1",
+            "description": "Select one of the following elective courses:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "CHIP793",
+              "CHIP732",
+              "CHIP721",
+              "STOR475"
+            ],
+            "rule": null
+          }
+        ]
+      }
+    }
+  },
+  "Mathematics_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "MATH231",
+        "MATH232",
+        "MATH381",
+        "MATH383",
+        "MATH521",
+        "MATH535",
+        "STOR435",
+        "STOR555"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "One of the following:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP110",
+            "COMP116",
+            "STOR120",
+            "STOR155",
+            "MATH347",
+            "MATH577",
+            "MATH381",
+            "MATH383",
+            "MATH521"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "One of the following:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH522",
+            "MATH523",
+            "MATH528",
+            "MATH566"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "One of the following:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH533",
+            "MATH534",
+            "MATH578",
+            "MATH548"
+          ],
+          "rule": null
+        },
+        {
+          "description": "At least three additional MATH courses numbered above 520, excluding MATH\u00a0528L and MATH\u00a0529L",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "MATH",
+            "min_number": 521,
+            "min_credits": null,
+            "exclude": [
+              "MATH528L",
+              "MATH529L"
+            ]
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_4",
+          "description": "Physics course chosen from the following options:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS118",
+            "PHYS114"
+          ],
+          "rule": null
+        },
+        {
+          "description": "At least three additional courses in the Division of Natural Sciences and Mathematics",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_2"
+        },
+        {
+          "id": "choice_2",
+          "description": "COMP\u00a0110 | Introduction to Programming H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP110",
+            "COMP116"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "STOR\u00a0120 | Foundations of Statistics and Data Science H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "STOR120",
+            "STOR155"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_5",
+          "description": "Five courses chosen from the following list: 2",
+          "type": "explicit",
+          "courses_required": 5,
+          "options": [
+            "MATH522",
+            "MATH523",
+            "MATH524",
+            "MATH528",
+            "MATH529",
+            "MATH535",
+            "MATH548",
+            "MATH560",
+            "MATH563",
+            "MATH564",
+            "MATH566",
+            "MATH661",
+            "MATH668",
+            "MATH383L",
+            "MATH528L",
+            "MATH529L",
+            "MATH347",
+            "MATH577"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_4",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_6",
+          "description": "Physics course chosen from the following options:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS118",
+            "PHYS114"
+          ],
+          "rule": null
+        },
+        {
+          "description": "At least three additional courses in the Division of Natural Sciences and Mathematics.",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_3"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Mathematics_Major_BSApplied": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Economics_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "ECON101",
+        "ECON400",
+        "ECON410",
+        "ECON420",
+        "ECON470",
+        "MATH231",
+        "MATH232"
+      ],
+      "choice_groups": [
+        {
+          "description": "Five ECON courses at the 400, 500, or 600 level, with at least two numbered 500 or higher",
+          "type": "rule_based",
+          "courses_required": 5,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ECON",
+            "min_number": 400,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Select two of the following:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "COMP110",
+            "COMP116",
+            "MATH347",
+            "MATH381",
+            "COMP283",
+            "STOR415",
+            "STOR435",
+            "STOR535"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Biology_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "BIOL101",
+        "BIOL103",
+        "BIOL104",
+        "BIOL105L",
+        "BIOL220",
+        "BIOL240",
+        "BIOL250",
+        "BIOL260",
+        "CHEM101",
+        "CHEM102",
+        "CHEM261",
+        "MATH231",
+        "BIOL271",
+        "BIOL272",
+        "BIOL273",
+        "BIOL274",
+        "BIOL277",
+        "BIOL278",
+        "BIOL279",
+        "BIOL441",
+        "BIOL451",
+        "BIOL471",
+        "BIOL473",
+        "BIOL474",
+        "BIOL475",
+        "BIOL476",
+        "BIOL479",
+        "BIOL579",
+        "ANTH143",
+        "ANTH148",
+        "ANTH298",
+        "ANTH315",
+        "ANTH318",
+        "ANTH412",
+        "ANTH414",
+        "ANTH415",
+        "ANTH416",
+        "ANTH470",
+        "ANTH623",
+        "BIOC107",
+        "BIOC108",
+        "BIOL213",
+        "BIOL291",
+        "BIOL292",
+        "BIOL294",
+        "BIOL295",
+        "BIOL296",
+        "BIOL495",
+        "BMME335",
+        "COMP380",
+        "ENEC202",
+        "ENEC256",
+        "ENEC324",
+        "ENEC403",
+        "ENEC406",
+        "ENEC410",
+        "ENEC411",
+        "ENEC415",
+        "ENEC471",
+        "ENEC489",
+        "EPID600",
+        "EXSS175",
+        "EXSS276",
+        "GEOG110",
+        "GEOG111",
+        "GEOG212",
+        "GEOG222",
+        "GEOG253",
+        "MATH129P",
+        "MCRO251",
+        "NSCI175",
+        "NSCI222",
+        "NSCI225",
+        "NUTR240",
+        "PHIL155",
+        "PHYS132",
+        "PSYC101",
+        "PSYC210",
+        "PSYC220",
+        "PSYC230",
+        "STOR120",
+        "SPHS570"
+      ],
+      "choice_groups": [
+        {
+          "description": "Four biology electives (each of three or more credits) numbered above 200 (not including BIOL\u00a0213, BIOL\u00a0222, BIOL\u00a0253, BIOL\u00a0291, BIOL\u00a0292, BIOL\u00a0293, BIOL\u00a0294, BIOL\u00a0295, BIOL\u00a0296, BIOL 353, a second semester of BIOL\u00a0395, and BIOL\u00a0495). At least two courses in the major must have a laboratory (not including BIOL\u00a0101L or BIOL\u00a0105L). ENEC\u00a0489 can also count as a biology elective.",
+          "type": "rule_based",
+          "courses_required": 4,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": 200,
+            "min_credits": 3,
+            "exclude": [
+              "BIOL213",
+              "BIOL222",
+              "BIOL253",
+              "BIOL291",
+              "BIOL292",
+              "BIOL293",
+              "BIOL294",
+              "BIOL295",
+              "BIOL296",
+              "BIOL353",
+              "BIOL495"
+            ]
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "list_1",
+          "description": "Two of the following:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "MATH232",
+            "PHYS115",
+            "PHYS119",
+            "COMP110",
+            "COMP116",
+            "BIOL222",
+            "STOR120",
+            "STOR215",
+            "STOR151",
+            "STOR155"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "One of the following:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS114",
+            "PHYS118"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_1",
+          "description": "BIOL\u00a0422 & BIOL\u00a0421L | Microbiology and Bacterial Genetics Laboratory",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL422",
+            "BIOL421L",
+            "BIOL422"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Chemistry_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "CHEM101",
+        "CHEM102L",
+        "CHEM241",
+        "CHEM251",
+        "CHEM433",
+        "CHEM481",
+        "CHEM482",
+        "CHEM261",
+        "CHEM262",
+        "CHEM262L",
+        "BIOL101",
+        "MATH232",
+        "MATH233",
+        "MATH383",
+        "PHYS118",
+        "PHYS119",
+        "ENGL105",
+        "IDST101",
+        "IDST111L",
+        "MATH231",
+        "EDUC760",
+        "EDUC532",
+        "EDUC615",
+        "EDUC689",
+        "EDUC593",
+        "EDUC601"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM102",
+            "CHEM102H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM241L",
+            "CHEM245L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "CHEM\u00a0481L | Physical Chemistry Laboratory I",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM481L",
+            "CHEM482L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Fifteen hours of advanced chemistry elective courses (one laboratory course is required) from the following list:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM395"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Any course numbered CHEM\u00a0420 or higher (excluding CHEM\u00a0692H )",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "CHEM",
+            "min_number": 420,
+            "min_credits": null,
+            "exclude": [
+              "CHEM692H"
+            ]
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "list_2",
+          "description": "One capstone laboratory course is required from the following list",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM520L",
+            "CHEM530L",
+            "CHEM541L",
+            "CHEM550L",
+            "CHEM551L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_4",
+          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM102",
+            "CHEM102H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_5",
+          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM241L",
+            "CHEM245L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_6",
+          "description": "CHEM\u00a0262 | Introduction to Organic Chemistry II H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM262",
+            "CHEM262H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_7",
+          "description": "CHEM\u00a0481L | Physical Chemistry Laboratory I",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM481L",
+            "CHEM482L"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Capstone Laboratory Course chosen from: CHEM\u00a0520L , 530L , 541L , 550L , 551L",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "CHEM",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_2"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Sample__of_Study": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Physics_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "PHYS281L",
+        "PHYS331",
+        "PHYS332",
+        "PHYS401",
+        "PHYS311",
+        "PHYS412",
+        "PHYS421",
+        "PHYS451",
+        "PHYS521",
+        "PHYS441",
+        "PHYS481L",
+        "MATH528",
+        "MATH529",
+        "PHYS231",
+        "PHYS118",
+        "PHYS119",
+        "MATH231",
+        "MATH232",
+        "MATH233",
+        "MATH383",
+        "CHEM101",
+        "CHEM102",
+        "CHEM102L",
+        "ASTR519",
+        "PHYS632",
+        "ASTR202",
+        "CHEM101L"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Six additional credit hours chosen from:",
+          "type": "explicit",
+          "courses_required": 6,
+          "options": [
+            "ASTR202"
+          ],
+          "rule": null
+        },
+        {
+          "description": "ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "description": "PHYS (numbered above 300 except PHYS 395)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "PHYS",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": [
+              "PHYS395"
+            ]
+          },
+          "id": "rule_2"
+        },
+        {
+          "id": "choice_2",
+          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS395",
+            "PHYS692H"
+          ],
+          "rule": null
+        },
+        {
+          "description": "One additional course chosen from ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_3"
+        },
+        {
+          "description": "Six or more additional credit hours chosen from:",
+          "type": "rule_based",
+          "courses_required": 6,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_4"
+        },
+        {
+          "description": "ASTR (numbered above 300)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ASTR",
+            "min_number": 301,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_5"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Physics_Major_BSStandard": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Physics_Major_BSAstrophysics": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Neuroscience_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "NSCI175",
+        "BIOL101",
+        "BIOL103",
+        "BIOL220",
+        "CHEM101",
+        "CHEM102",
+        "CHEM241",
+        "CHEM241L",
+        "CHEM261",
+        "CHEM262",
+        "CHEM262L",
+        "MATH231",
+        "MATH232",
+        "BIOL205",
+        "BIOL240",
+        "BIOL425",
+        "BIOL431",
+        "BIOL440",
+        "BIOL450",
+        "BIOL453",
+        "BIOL455",
+        "BIOL458",
+        "BIOL523",
+        "BIOL542",
+        "BIOL544L",
+        "BIOL545",
+        "BIOL547",
+        "BIOL552",
+        "BIOL635",
+        "CHEM430",
+        "COMP210",
+        "COMP211",
+        "COMP301",
+        "COMP311",
+        "COMP555",
+        "COMP560",
+        "COMP562",
+        "COMP576",
+        "COMP581",
+        "COMP631",
+        "COMP633",
+        "COMP651",
+        "EXSS155",
+        "EXSS175",
+        "EXSS256",
+        "EXSS275L",
+        "EXSS276",
+        "EXSS380",
+        "EXSS580",
+        "EXSS581",
+        "NDSS401",
+        "NDSS420",
+        "NSCI300",
+        "PHYS405",
+        "PHYS461",
+        "PSYC245",
+        "PSYC404",
+        "PSYC469",
+        "PSYC517",
+        "PSYC559",
+        "PSYC602",
+        "APPL101",
+        "APPL240",
+        "APPL350",
+        "APPL430",
+        "APPL435",
+        "BIOL224H",
+        "BIOL224L",
+        "BIOL226",
+        "BIOL226L",
+        "BIOL553",
+        "BIOL554",
+        "BMME207",
+        "BMME301",
+        "BMME550",
+        "COMP283",
+        "MATH210",
+        "MATH233",
+        "STOR235",
+        "MATH347",
+        "MATH381",
+        "MATH383",
+        "MATH383L",
+        "MATH523",
+        "MATH528",
+        "MATH528L",
+        "MATH529",
+        "MATH529L",
+        "MATH535",
+        "MATH555",
+        "MATH560",
+        "MATH564",
+        "MATH566",
+        "MATH577",
+        "MATH594",
+        "MATH661",
+        "MATH662",
+        "MATH668",
+        "MATH669",
+        "NDSS410",
+        "NDSS430",
+        "NSCI395",
+        "NSCI405",
+        "NSCI418",
+        "NSCI419",
+        "NSCI423",
+        "NSCI439",
+        "NSCI440",
+        "NSCI493",
+        "NSCI693H",
+        "NSCI694H",
+        "PSYC533",
+        "STOR215",
+        "STOR320",
+        "STOR415",
+        "STOR435",
+        "STOR445",
+        "STOR455",
+        "STOR535",
+        "STOR555",
+        "STOR556",
+        "STOR565"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Select one statistics course:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PSYC210",
+            "STOR120",
+            "STOR155"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "Select one research methods course (Neuroscience research method courses NSCI 27* should be prioritized over PSYC\u00a0270 ):",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "NSCI271",
+            "NSCI273",
+            "NSCI274",
+            "NSCI277",
+            "NSCI278",
+            "NSCI279",
+            "PSYC270"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "Select two courses:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "NSCI221",
+            "NSCI222",
+            "NSCI225"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Knowledge Electives (select at least six credit hours from list below)",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": 3,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "COMP\u00a0110 | Introduction to Programming H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP110",
+            "COMP116"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_4",
+          "description": "Select one course:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS114",
+            "PHYS118"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_5",
+          "description": "Select one course:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS115",
+            "PHYS119",
+            "PSYC101"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Psychology_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "PSYC101",
+        "PSYC210",
+        "PSYC270",
+        "NSCI222",
+        "NSCI225",
+        "NSCI221",
+        "PSYC220",
+        "PSYC230",
+        "PSYC242",
+        "PSYC245",
+        "PSYC250",
+        "PSYC260",
+        "BIOL101",
+        "CHEM101",
+        "PHYS114",
+        "PHYS118",
+        "MATH231",
+        "PSYC395",
+        "PSYC404",
+        "PSYC430",
+        "PSYC433",
+        "PSYC438",
+        "PSYC469",
+        "PSYC504",
+        "PSYC517",
+        "PSYC525",
+        "PSYC528",
+        "PSYC530",
+        "PSYC531",
+        "PSYC532",
+        "PSYC533",
+        "PSYC534",
+        "PSYC559",
+        "PSYC693H",
+        "PSYC694H",
+        "NSCI395",
+        "NSCI415",
+        "NSCI493",
+        "ANTH143",
+        "ANTH148",
+        "ANTH217",
+        "ANTH298",
+        "ANTH315",
+        "ANTH318",
+        "ANTH412",
+        "ANTH413",
+        "ANTH414",
+        "ANTH415",
+        "ANTH416",
+        "ANTH423",
+        "ANTH437",
+        "ANTH471",
+        "ASTR390",
+        "BIOC107",
+        "BIOC108",
+        "BIOL195",
+        "BIOL290",
+        "BIOL291",
+        "BIOL292",
+        "BIOL293",
+        "BIOL294",
+        "BIOL295",
+        "BIOL296",
+        "BIOL395",
+        "BIOL490",
+        "BIOL495",
+        "BMME150",
+        "BMME207",
+        "BMME301",
+        "BMME315",
+        "BMME335",
+        "BMME385",
+        "BMME405",
+        "BMME420",
+        "BMME435",
+        "BMME445",
+        "BMME455",
+        "BMME470",
+        "BMME485",
+        "BMME505",
+        "BIOS500H",
+        "BIOS540",
+        "BIOS690",
+        "BIOS691",
+        "BIOS693H",
+        "BIOS694H",
+        "CHEM190",
+        "CHEM291",
+        "CHEM395",
+        "CHEM396",
+        "CHEM410",
+        "CHEM692H",
+        "COMP116",
+        "COMP185",
+        "COMP190",
+        "COMP380",
+        "COMP390",
+        "COMP393",
+        "ENEC108",
+        "ENEC202",
+        "ENEC220",
+        "ENEC222",
+        "ENEC256",
+        "ENEC304",
+        "ENEC324",
+        "ENEC352",
+        "ENEC403",
+        "ENEC406",
+        "ENEC410",
+        "ENEC411",
+        "ENEC415",
+        "ENEC416",
+        "ENEC431",
+        "ENEC450",
+        "ENEC462",
+        "ENEC471",
+        "ENEC479",
+        "ENEC489",
+        "ENEC530",
+        "ENEC562",
+        "ENEC567",
+        "ENVR205",
+        "ENVR403",
+        "ENVR411",
+        "ENVR412",
+        "ENVR413",
+        "ENVR416",
+        "ENVR419",
+        "ENVR421",
+        "ENVR425",
+        "ENVR430",
+        "ENVR442",
+        "ENVR451",
+        "ENVR453",
+        "ENVR468",
+        "ENVR470",
+        "ENVR472",
+        "ENVR514",
+        "ENVR575",
+        "ENVR630",
+        "ENVR661",
+        "ENVR662",
+        "ENVR666",
+        "ENVR668",
+        "ENVR669",
+        "ENVR671",
+        "ENVR672",
+        "ENVR675",
+        "EXSS175",
+        "EXSS275L",
+        "EXSS276",
+        "EXSS376",
+        "EXSS380",
+        "EXSS385",
+        "EXSS475",
+        "EXSS576",
+        "EXSS580",
+        "GEOG110",
+        "GEOG111",
+        "GEOG212",
+        "GEOG253",
+        "GEOG391",
+        "GEOG412",
+        "GEOG414",
+        "GEOG416",
+        "GEOG440",
+        "GEOG441",
+        "GEOG442",
+        "GEOL395",
+        "MASC100",
+        "MASC190",
+        "MASC390",
+        "MASC395",
+        "MASC396",
+        "MASC490",
+        "EMES190",
+        "EMES220",
+        "EMES390",
+        "EMES395",
+        "EMES396",
+        "EMES412",
+        "EMES490",
+        "EMES590",
+        "EMES691H",
+        "EMES692H",
+        "MATH290",
+        "MCRO690",
+        "NUTR240",
+        "NUTR400",
+        "NUTR600",
+        "NUTR620",
+        "PHIL155",
+        "PHIL455",
+        "PHYS132",
+        "PHYS295",
+        "PHYS391",
+        "PHYS395",
+        "PHYS410",
+        "PHYS671L",
+        "PHYS672L",
+        "PHYS691H",
+        "PHYS692H",
+        "STOR151",
+        "STOR155"
+      ],
+      "choice_groups": [
+        {
+          "description": "One course below 400 from each of the following program areas:",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "description": "One course below 400 from two of the three following psychology program areas:",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "PSYC",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_2"
+        },
+        {
+          "description": "One upper-level course chosen from \"Special Requirement Courses\" (see list below)",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_3"
+        },
+        {
+          "description": "One additional PSYC and/or NSCI course above 101; may not include PSYC\u00a0190 or NSCI\u00a0190 . 4",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": 102,
+            "min_credits": null,
+            "exclude": [
+              "PSYC190",
+              "NSCI190"
+            ]
+          },
+          "id": "rule_4"
+        },
+        {
+          "description": "At least 3 additional three-credit hour non-Psychology and Neuroscience Department courses which must come from the Allied Science list (see below). Additionally, 1 four-credit hour non-Psychology and Neuroscience Department course from the Allied Science list (see below) or one of the following combinations: CHEM\u00a0241 + 241L , CHEM\u00a0241H + 245L , CHEM\u00a0262 + 262L or CHEM\u00a0262H + 263L or EMES\u00a0101 + EMES\u00a0101L .",
+          "type": "rule_based",
+          "courses_required": 4,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": 3,
+            "exclude": []
+          },
+          "id": "rule_5"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Political_Science_BA": {
+    "base_requirements": {
+      "required_courses": [
+        "POLI100",
+        "POLI150",
+        "POLI281",
+        "POLI381",
+        "POLI209",
+        "POLI350",
+        "POLI395",
+        "POLI416",
+        "POLI417",
+        "POLI429",
+        "POLI447",
+        "POLI453",
+        "POLI692H",
+        "POLI693H",
+        "POLI200",
+        "POLI201",
+        "POLI202",
+        "POLI203",
+        "POLI204",
+        "POLI205",
+        "POLI206",
+        "POLI207",
+        "POLI208",
+        "POLI211",
+        "POLI215",
+        "POLI217",
+        "POLI220",
+        "POLI240",
+        "POLI248",
+        "POLI333",
+        "POLI345",
+        "POLI400",
+        "POLI401",
+        "POLI404",
+        "POLI406",
+        "POLI409",
+        "POLI410",
+        "POLI411",
+        "POLI412",
+        "POLI418",
+        "POLI419",
+        "POLI420",
+        "POLI421",
+        "POLI422",
+        "POLI424",
+        "POLI428",
+        "POLI130",
+        "POLI210",
+        "POLI231",
+        "POLI232",
+        "POLI233",
+        "POLI234",
+        "POLI235",
+        "POLI236",
+        "POLI237",
+        "POLI238",
+        "POLI239",
+        "POLI241",
+        "POLI252",
+        "POLI253",
+        "POLI254",
+        "POLI255",
+        "POLI256",
+        "POLI257",
+        "POLI260",
+        "POLI430",
+        "POLI431",
+        "POLI432",
+        "POLI433",
+        "POLI434",
+        "POLI435",
+        "POLI438",
+        "POLI440",
+        "POLI441",
+        "POLI442",
+        "POLI443",
+        "POLI444",
+        "POLI448",
+        "POLI449",
+        "POLI450",
+        "POLI451",
+        "POLI452",
+        "POLI457",
+        "POLI458",
+        "POLI459",
+        "POLI469",
+        "POLI630",
+        "POLI631",
+        "POLI632",
+        "POLI270",
+        "POLI271",
+        "POLI265",
+        "POLI272",
+        "POLI275",
+        "POLI276",
+        "POLI280",
+        "POLI470",
+        "POLI471",
+        "POLI472",
+        "POLI476",
+        "POLI477",
+        "POLI478",
+        "POLI285",
+        "POLI691H",
+        "POLI287",
+        "POLI288",
+        "POLI488"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "One course in comparative politics chosen from:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "POLI130",
+            "POLI232",
+            "POLI233",
+            "POLI234",
+            "POLI235",
+            "POLI236",
+            "POLI237",
+            "POLI238",
+            "POLI239",
+            "POLI241"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "One course in political theory chosen from:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "POLI265",
+            "POLI270",
+            "POLI271",
+            "POLI272",
+            "POLI275",
+            "POLI276",
+            "POLI280",
+            "POLI470",
+            "POLI471",
+            "POLI472",
+            "POLI475",
+            "POLI476",
+            "POLI478"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "One course in research methods chosen from: 1",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "POLI209",
+            "POLI281",
+            "POLI285",
+            "POLI287",
+            "POLI288",
+            "POLI381",
+            "POLI417",
+            "POLI488",
+            "POLI691H",
+            "ECON400",
+            "GEOG391",
+            "GEOG392",
+            "PHIL140",
+            "PHIL154",
+            "PHIL335",
+            "PHIL357",
+            "PLCY460",
+            "PSYC270",
+            "SOCI251",
+            "SOCI252"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Public_Policy_BA": {
+    "base_requirements": {
+      "required_courses": [
+        "PLCY210",
+        "PLCY220",
+        "PLCY340",
+        "PLCY460",
+        "PLCY581",
+        "ECON101",
+        "AAAD307",
+        "POLI333",
+        "AAAD488",
+        "AAAD485",
+        "AMST390",
+        "AMST486",
+        "ANTH312",
+        "ANTH318",
+        "ANTH319",
+        "ANTH350",
+        "ANTH355",
+        "ANTH360",
+        "ANTH377",
+        "ANTH380",
+        "ANTH422",
+        "ANTH429",
+        "ANTH439",
+        "ANTH441",
+        "ANTH460",
+        "ANTH470",
+        "ANTH502",
+        "ANTH537",
+        "ANTH585",
+        "BUSI404",
+        "BUSI405",
+        "BUSI500",
+        "BUSI503",
+        "BUSI504",
+        "BUSI506",
+        "BUSI512",
+        "BUSI610",
+        "BUSI611",
+        "COMM312",
+        "COMM325",
+        "COMM372",
+        "COMM375",
+        "COMM470",
+        "COMM521",
+        "COMM524",
+        "COMM525",
+        "COMM571",
+        "COMM572",
+        "COMM574",
+        "COMM575",
+        "COMM576",
+        "COMM624",
+        "COMM625",
+        "COMM652",
+        "ECON320",
+        "ECON325",
+        "ECON345",
+        "ECON380",
+        "ECON423",
+        "ECON440",
+        "ECON445",
+        "ECON450",
+        "ECON455",
+        "ECON460",
+        "ECON465",
+        "ECON480",
+        "ECON511",
+        "EDUC401",
+        "EDUC506",
+        "EDUC521",
+        "EDUC533",
+        "EDUC535",
+        "EMES314",
+        "ENGL164",
+        "ENGL279",
+        "ENEC463",
+        "ENEC307",
+        "ENEC308",
+        "ENEC309",
+        "ENEC330",
+        "ENEC350",
+        "ENEC351",
+        "ENEC352",
+        "ENEC370",
+        "ENEC462",
+        "ENEC474",
+        "ENEC586",
+        "ENEC685",
+        "ENEC698",
+        "ENVR470",
+        "PHIL368",
+        "ENVR600",
+        "GEOG281",
+        "GEOG370",
+        "GEOG391",
+        "GEOG414",
+        "GEOG416",
+        "GEOG423",
+        "GEOG428",
+        "GEOG430",
+        "GEOG435",
+        "GEOG446",
+        "GEOG447",
+        "GEOG448",
+        "ENEC451",
+        "GEOG457",
+        "GEOG458",
+        "GEOG460",
+        "GEOG470",
+        "GEOG480",
+        "GEOG491",
+        "GEOG541",
+        "GEOG542",
+        "GLBL382",
+        "GLBL390",
+        "HIST238",
+        "HIST365",
+        "HIST385",
+        "HIST510",
+        "HIST566",
+        "HIST568",
+        "HIST577",
+        "HIST584",
+        "HIST589",
+        "HPM310",
+        "HPM330",
+        "HPM340",
+        "HPM350",
+        "HPM351",
+        "HPM352",
+        "INLS382",
+        "INLS515",
+        "MEJO340",
+        "MEJO441",
+        "MEJO442",
+        "MEJO443",
+        "MEJO445",
+        "MEJO446",
+        "MEJO458",
+        "MEJO541",
+        "MEJO560",
+        "MEJO652",
+        "MNGT345",
+        "MNGT365",
+        "MNGT380",
+        "MNGT410",
+        "MNGT412",
+        "MNGT415",
+        "MNGT427",
+        "PHIL364",
+        "PHIL370",
+        "PHIL384",
+        "PHIL473",
+        "PHIL480",
+        "PHIL698",
+        "PLAN330",
+        "PLAN574",
+        "PLAN636",
+        "PLAN637",
+        "PLAN641",
+        "PLAN651",
+        "PLAN685",
+        "POLI400",
+        "POLI401",
+        "POLI406",
+        "POLI410",
+        "POLI411",
+        "POLI412",
+        "POLI416",
+        "POLI418",
+        "POLI419H",
+        "POLI420",
+        "POLI431",
+        "POLI433",
+        "POLI434",
+        "POLI438",
+        "POLI442",
+        "POLI443",
+        "POLI444",
+        "POLI457",
+        "POLI470",
+        "POLI472",
+        "PSYC467",
+        "PSYC469",
+        "PSYC471",
+        "PSYC500",
+        "PSYC502",
+        "PSYC504",
+        "PSYC514",
+        "PSYC530",
+        "PSYC531",
+        "PSYC532",
+        "PSYC565",
+        "PSYC601",
+        "PWAD250",
+        "PWAD368",
+        "PWAD416",
+        "PWAD443",
+        "PWAD444",
+        "PWAD453",
+        "PWAD460",
+        "PWAD469",
+        "PWAD574",
+        "PWAD575",
+        "PWAD577",
+        "RELI423",
+        "RELI443",
+        "STOR305",
+        "STOR358",
+        "STOR415",
+        "STOR455",
+        "SOCI410",
+        "SOCI412",
+        "SOCI415",
+        "SOCI418",
+        "SOCI420",
+        "SOCI422",
+        "SOCI423",
+        "SOCI424",
+        "SOCI425",
+        "SOCI426",
+        "SOCI427",
+        "SOCI431",
+        "SOCI444",
+        "SOCI468",
+        "SOCI469",
+        "SPHG350H",
+        "WGST368",
+        "WGST388",
+        "WGST410",
+        "WGST662"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "PLCY\u00a0310 | Microeconomic Foundations of Public Policy (formerly PLCY 410)",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PLCY310",
+            "ECON410"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "PLCY\u00a0698 | Senior Capstone in Public Policy 2",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PLCY698",
+            "PLCY692H"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Exercise_and_Sport_Science_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "EXSS155",
+        "EXSS256",
+        "EXSS273",
+        "EXSS376",
+        "EXSS380",
+        "EXSS385",
+        "BIOL101",
+        "ANTH143",
+        "ANTH148",
+        "ANTH151",
+        "ANTH217",
+        "ANTH298",
+        "ANTH315",
+        "ANTH318",
+        "ANTH412",
+        "ANTH413",
+        "ANTH414",
+        "ANTH415",
+        "ANTH416",
+        "ANTH423",
+        "ANTH437",
+        "ANTH470",
+        "ANTH471",
+        "BIOL271",
+        "BIOL272",
+        "BIOL273",
+        "BIOC107",
+        "BIOC108",
+        "BMME150",
+        "BMME207",
+        "BMME301",
+        "BMME315",
+        "BMME335",
+        "BMME385",
+        "BMME435",
+        "BMME505",
+        "BMME521",
+        "BMME543",
+        "BMME545",
+        "BMME555",
+        "BMME572",
+        "BMME585",
+        "BIOS500H",
+        "BIOS540",
+        "BIOS690",
+        "BIOS691",
+        "BIOS693H",
+        "BIOS694H",
+        "CHEM102",
+        "EMES100",
+        "EMES190",
+        "EMES390",
+        "EMES395",
+        "EMES396",
+        "EMES412",
+        "EMES490",
+        "EMES590",
+        "EMES691H",
+        "EMES692H",
+        "ENEC108",
+        "ENEC202",
+        "ENEC220",
+        "ENEC222",
+        "ENEC256",
+        "ENEC304",
+        "ENEC324",
+        "ENEC352",
+        "ENEC403",
+        "ENEC406",
+        "ENEC410",
+        "ENEC411",
+        "ENEC415",
+        "ENEC416",
+        "ENEC431",
+        "ENEC450",
+        "ENEC462",
+        "ENEC471",
+        "ENEC479",
+        "ENEC489",
+        "ENEC530",
+        "ENEC562",
+        "ENEC567",
+        "ENVR205",
+        "ENVR403",
+        "ENVR411",
+        "ENVR412",
+        "ENVR413",
+        "ENVR416",
+        "ENVR419",
+        "ENVR421",
+        "ENVR425",
+        "ENVR430",
+        "ENVR451",
+        "ENVR453",
+        "ENVR468",
+        "ENVR470",
+        "ENVR472",
+        "ENVR514",
+        "ENVR575",
+        "ENVR630",
+        "ENVR661",
+        "ENVR662",
+        "ENVR666",
+        "ENVR668",
+        "ENVR669",
+        "ENVR671",
+        "ENVR672",
+        "ENVR675",
+        "GEOG110",
+        "GEOG111",
+        "GEOG212",
+        "GEOG253",
+        "GEOG391",
+        "GEOG412",
+        "GEOG414",
+        "GEOG416",
+        "GEOG440",
+        "GEOG441",
+        "GEOG442",
+        "MATH231",
+        "MCRO251",
+        "NUTR240",
+        "NUTR600",
+        "NUTR620",
+        "PSYC101",
+        "EXSS51",
+        "EXSS207",
+        "EXSS393",
+        "EXSS395",
+        "EXSS420",
+        "EXSS493",
+        "EXSS593",
+        "EXSS693H",
+        "EXSS694H"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Five elective courses from the following list, with at least 9 credits from courses numbered 400 and above:",
+          "type": "explicit",
+          "courses_required": 5,
+          "options": [
+            "EXSS181",
+            "EXSS265",
+            "EXSS275L",
+            "EXSS288",
+            "EXSS360",
+            "EXSS366",
+            "EXSS395",
+            "EXSS408",
+            "EXSS409",
+            "EXSS410",
+            "EXSS433L",
+            "EXSS450",
+            "EXSS475",
+            "EXSS478",
+            "EXSS573",
+            "EXSS576",
+            "EXSS580",
+            "EXSS581",
+            "EXSS694H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "Select three courses from the following options:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "CHEM101",
+            "CHEM102",
+            "PHYS114",
+            "PHYS118",
+            "PHYS115",
+            "PHYS119",
+            "MATH231"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Biomedical_Engineering_BS": {
+    "base_requirements": {
+      "required_courses": [
+        "CHEM101",
+        "ENGL105",
+        "MATH231",
+        "MATH232",
+        "PHYS118",
+        "BMME201",
+        "BMME205",
+        "BMME209",
+        "BMME298",
+        "BMME207",
+        "BMME301",
+        "BMME302",
+        "BMME398",
+        "BMME315",
+        "BMME335",
+        "BMME345",
+        "BMME355",
+        "BMME365",
+        "BMME375",
+        "BMME385",
+        "BMME697",
+        "BMME698",
+        "BIOL101",
+        "CHEM102",
+        "CHEM261",
+        "MATH233",
+        "MATH383",
+        "PHYS119",
+        "APPL465",
+        "BIOL220",
+        "BIOL443",
+        "BIOL451",
+        "CHEM430",
+        "ENVR451",
+        "EXSS380",
+        "EXSS385",
+        "MATH347",
+        "MATH381",
+        "PHYS331",
+        "PHYS381",
+        "PHYS461",
+        "BMME495",
+        "BMME511",
+        "BMME523",
+        "BMME524",
+        "BMME527",
+        "BMME585",
+        "BME570",
+        "BMME435",
+        "PHYS405",
+        "BIOL431",
+        "PHYS441",
+        "MAE201",
+        "MSE301",
+        "BMME521",
+        "BMME555",
+        "CE282",
+        "MAE308",
+        "BMME572",
+        "BME429",
+        "BME448",
+        "BME483",
+        "BME484",
+        "TE463",
+        "BMME543",
+        "BME418",
+        "BME425",
+        "BME438",
+        "BME444",
+        "BME456",
+        "BMME561",
+        "BMME568",
+        "BMME575",
+        "MATH528",
+        "MA501",
+        "BME412",
+        "BME463",
+        "BME464",
+        "ECE456",
+        "ECE505",
+        "BME522",
+        "ECE436"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "BMME\u00a0325 | Biochemistry for Biomedical Engineers",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BMME325",
+            "CHEM430"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "BIOL\u00a0101L | Introductory Biology Laboratory",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL101L",
+            "BIOL102L"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Computer_Science_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "COMP210",
+        "COMP211",
+        "COMP301"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Two courses from the following options:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "COMP311"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Data_Science_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "COMP110",
+        "COMP116",
+        "GEOG215",
+        "POLI281",
+        "LING460",
+        "SOCI318",
+        "STOR120",
+        "CLAR270",
+        "COMM348",
+        "COMM349",
+        "COMP380",
+        "DATA120",
+        "GEOG115",
+        "ENGL114",
+        "GEOG141",
+        "PLAN562",
+        "POLI209",
+        "ANTH419",
+        "LING520",
+        "ANTH680",
+        "ASTR502",
+        "ASTR519",
+        "COMP555",
+        "BIOL525",
+        "BIOL534",
+        "MATH564",
+        "MATH553",
+        "BIOL554",
+        "ENEC562",
+        "ENEC563",
+        "COMP576",
+        "BUSI410",
+        "COMP488",
+        "CLAR411",
+        "COMP210",
+        "COMP388",
+        "COMP410",
+        "COMP421",
+        "COMP426",
+        "COMP433",
+        "COMP486",
+        "INLS512",
+        "COMP487",
+        "INLS509",
+        "BUSI488",
+        "BCB555",
+        "COMP560",
+        "COMP562",
+        "COMP572",
+        "ECON470",
+        "ECON545",
+        "ECON550",
+        "ECON565",
+        "ECON571",
+        "ECON573",
+        "ECON575",
+        "ECON580",
+        "EMES520",
+        "EMES561",
+        "ENEC305",
+        "GEOG437",
+        "ENVR468",
+        "BIOL562",
+        "BIOL563",
+        "ENGL480",
+        "ENGL482",
+        "ENEC468",
+        "EPID600",
+        "EXSS327",
+        "GEOG370",
+        "GEOG392",
+        "GEOG414",
+        "GEOG416",
+        "ENEC437",
+        "GEOG446",
+        "GEOG456",
+        "PLAN491",
+        "HIST273",
+        "LING202",
+        "LING203",
+        "LING333",
+        "LING401",
+        "LING422",
+        "ANTH520",
+        "LING525",
+        "MATH210",
+        "MATH560",
+        "MEJO570",
+        "MEJO571",
+        "PHIL353",
+        "PHYS331",
+        "PHYS332",
+        "PLAN372",
+        "GEOG491",
+        "PLCY460",
+        "PLCY505",
+        "PLCY581",
+        "POLI381",
+        "PSYC532",
+        "PSYC533",
+        "PSYC559",
+        "ROML501",
+        "STOR320",
+        "STOR455",
+        "STOR535",
+        "STOR538",
+        "STOR556",
+        "STOR565",
+        "STOR572",
+        "STOR557"
+      ],
+      "choice_groups": [
+        {
+          "description": "Two additional elective courses from the list below",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Mathematics_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "MATH381",
+        "MATH383",
+        "MATH231",
+        "MATH232"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Three mathematics courses from the following list:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "MATH347",
+            "MATH383L",
+            "MATH528L",
+            "MATH529L"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_1",
+          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH233",
+            "MATH235"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Economics_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "ECON101"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Select at least two courses from the following list:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "ECON400",
+            "ECON410",
+            "ECON420"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional ECON courses at the 400 level",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ECON",
+            "min_number": 400,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      },
+      "Microeconomics": {
+        "required_courses": [
+          "ECON101",
+          "ECON400",
+          "ECON410"
+        ],
+        "choice_groups": []
+      },
+      "Macroeconomics": {
+        "required_courses": [
+          "ECON101",
+          "ECON400",
+          "ECON410",
+          "ECON420"
+        ],
+        "choice_groups": []
+      },
+      "Econometrics": {
+        "required_courses": [
+          "ECON101",
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "choice_1",
+            "description": "ECON\u00a0410 | Intermediate Microeconomics 1, H",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON410",
+              "ECON420"
+            ],
+            "rule": null
+          }
+        ]
+      }
+    }
+  },
+  "Biology_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "BIOL271",
+        "BIOL272",
+        "BIOL273",
+        "BIOL274",
+        "BIOL277",
+        "BIOL278",
+        "BIOL279",
+        "BIOL441",
+        "BIOL451",
+        "BIOL471",
+        "BIOL472",
+        "BIOL473",
+        "BIOL474",
+        "BIOL475",
+        "BIOL476",
+        "BIOL479",
+        "BIOL579"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "BIOL\u00a0103 | How Cells Function F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL103",
+            "BIOL104"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "One of the following five core course options:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL220",
+            "BIOL240",
+            "BIOL250",
+            "BIOL260"
+          ],
+          "rule": null
+        },
+        {
+          "description": "One course numbered above 400",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": 401,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_2",
+          "description": "BIOL\u00a0422 & BIOL\u00a0421L | Microbiology and Bacterial Genetics Laboratory",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL422",
+            "BIOL421L",
+            "BIOL422"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Chemistry_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "CHEM102L",
+        "CHEM241",
+        "CHEM261",
+        "CHEM262",
+        "CHEM262L"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM102",
+            "CHEM102H"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "CHEM241L",
+            "CHEM245L"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Physics_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "PHYS118",
+        "PHYS119"
+      ],
+      "choice_groups": [
+        {
+          "description": "Three additional courses chosen from ASTR\u00a0202 , ASTR (numbered above 300), and PHYS (numbered above 200). Each course must be 3 credit hours or more.",
+          "type": "rule_based",
+          "courses_required": 3,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": 3,
+            "exclude": [
+              "ASTR202",
+              "PHYS201",
+              "PHYS202"
+            ]
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Business_Administration_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "BUSI100",
+        "ECON101",
+        "BUSI403",
+        "BUSI406",
+        "BUSI408",
+        "BUSI411"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "One course from this list:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "STOR155",
+            "DATA110",
+            "STOR120"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Philosophy_Politics_and_Economics_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "ECON384",
+        "ECON698"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "One philosophy course chosen from:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHIL140",
+            "PHIL157",
+            "PHIL160",
+            "PHIL163",
+            "PHIL164",
+            "PHIL165",
+            "PHIL170",
+            "PHIL265",
+            "PHIL272",
+            "PHIL273",
+            "PHIL274",
+            "PHIL276",
+            "PHIL280",
+            "PHIL364",
+            "PHIL368",
+            "PHIL370",
+            "PLCY71",
+            "PLCY340"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "One political science course chosen from:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PWAD101",
+            "PWAD220",
+            "PLCY352H",
+            "POLI130",
+            "POLI270",
+            "POLI271",
+            "POLI280",
+            "POLI288",
+            "POLI401",
+            "POLI442",
+            "POLI470",
+            "POLI472",
+            "POLI474",
+            "POLI478"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "One economics course chosen from:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "ECON101",
+            "ECON411",
+            "ECON434",
+            "ECON460",
+            "ECON510",
+            "ECON511"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Public_Policy_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "AAAD307",
+        "POLI333",
+        "AAAD488",
+        "AAAD485",
+        "AMST390",
+        "AMST486",
+        "ANTH312",
+        "ANTH318",
+        "ANTH319",
+        "ANTH350",
+        "ANTH355",
+        "ANTH360",
+        "ANTH377",
+        "ANTH380",
+        "ANTH422",
+        "ANTH429",
+        "ANTH439",
+        "ANTH441",
+        "ANTH460",
+        "ANTH470",
+        "ANTH502",
+        "ANTH537",
+        "ANTH585",
+        "BUSI404",
+        "BUSI405",
+        "BUSI500",
+        "BUSI503",
+        "BUSI504",
+        "BUSI506",
+        "BUSI512",
+        "BUSI610",
+        "BUSI611",
+        "COMM312",
+        "COMM325",
+        "COMM372",
+        "COMM375",
+        "COMM470",
+        "COMM521",
+        "COMM524",
+        "COMM525",
+        "COMM571",
+        "COMM572",
+        "COMM574",
+        "COMM575",
+        "COMM576",
+        "COMM624",
+        "COMM625",
+        "COMM652",
+        "ECON320",
+        "ECON325",
+        "ECON345",
+        "ECON380",
+        "ECON423",
+        "ECON440",
+        "ECON445",
+        "ECON450",
+        "ECON455",
+        "ECON460",
+        "ECON465",
+        "ECON480",
+        "ECON511",
+        "EDUC401",
+        "EDUC506",
+        "EDUC521",
+        "EDUC533",
+        "EDUC535",
+        "EMES314",
+        "ENGL164",
+        "ENGL279",
+        "ENEC463",
+        "ENEC307",
+        "ENEC308",
+        "ENEC309",
+        "ENEC330",
+        "ENEC350",
+        "ENEC351",
+        "ENEC352",
+        "ENEC370",
+        "ENEC462",
+        "ENEC474",
+        "ENEC586",
+        "ENEC685",
+        "ENEC698",
+        "ENVR470",
+        "PHIL368",
+        "ENVR600",
+        "GEOG281",
+        "GEOG370",
+        "GEOG391",
+        "GEOG414",
+        "GEOG416",
+        "GEOG423",
+        "GEOG428",
+        "GEOG430",
+        "GEOG435",
+        "GEOG446",
+        "GEOG447",
+        "GEOG448",
+        "ENEC451",
+        "GEOG457",
+        "GEOG458",
+        "GEOG460",
+        "GEOG470",
+        "GEOG480",
+        "GEOG491",
+        "GEOG541",
+        "GEOG542",
+        "GLBL382",
+        "GLBL390",
+        "HIST238",
+        "HIST365",
+        "HIST385",
+        "HIST510",
+        "HIST566",
+        "HIST568",
+        "HIST577",
+        "HIST584",
+        "HIST589",
+        "HPM310",
+        "HPM330",
+        "HPM340",
+        "HPM350",
+        "HPM351",
+        "HPM352",
+        "INLS382",
+        "INLS515",
+        "MEJO340",
+        "MEJO441",
+        "MEJO442",
+        "MEJO443",
+        "MEJO445",
+        "MEJO446",
+        "MEJO458",
+        "MEJO541",
+        "MEJO560",
+        "MEJO652",
+        "MNGT345",
+        "MNGT365",
+        "MNGT380",
+        "MNGT410",
+        "MNGT412",
+        "MNGT415",
+        "MNGT427",
+        "PHIL364",
+        "PHIL370",
+        "PHIL384",
+        "PHIL473",
+        "PHIL480",
+        "PHIL698",
+        "PLAN330",
+        "PLAN574",
+        "PLAN636",
+        "PLAN637",
+        "PLAN641",
+        "PLAN651",
+        "PLAN685",
+        "POLI400",
+        "POLI401",
+        "POLI406",
+        "POLI410",
+        "POLI411",
+        "POLI412",
+        "POLI416",
+        "POLI418",
+        "POLI419H",
+        "POLI420",
+        "POLI431",
+        "POLI433",
+        "POLI434",
+        "POLI438",
+        "POLI442",
+        "POLI443",
+        "POLI444",
+        "POLI457",
+        "POLI470",
+        "POLI472",
+        "PSYC467",
+        "PSYC469",
+        "PSYC471",
+        "PSYC500",
+        "PSYC502",
+        "PSYC504",
+        "PSYC514",
+        "PSYC530",
+        "PSYC531",
+        "PSYC532",
+        "PSYC565",
+        "PSYC601",
+        "PWAD250",
+        "PWAD368",
+        "PWAD416",
+        "PWAD443",
+        "PWAD444",
+        "PWAD453",
+        "PWAD460",
+        "PWAD469",
+        "PWAD574",
+        "PWAD575",
+        "PWAD577",
+        "RELI423",
+        "RELI443",
+        "STOR305",
+        "STOR358",
+        "STOR415",
+        "STOR455",
+        "SOCI410",
+        "SOCI412",
+        "SOCI415",
+        "SOCI418",
+        "SOCI420",
+        "SOCI422",
+        "SOCI423",
+        "SOCI424",
+        "SOCI425",
+        "SOCI426",
+        "SOCI427",
+        "SOCI431",
+        "SOCI444",
+        "SOCI468",
+        "SOCI469",
+        "SPHG350H",
+        "WGST368",
+        "WGST388",
+        "WGST410",
+        "WGST662"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Students must complete at least four of the following core courses:",
+          "type": "explicit",
+          "courses_required": 4,
+          "options": [
+            "PLCY210",
+            "PLCY220",
+            "PLCY340",
+            "PLCY460",
+            "PLCY581",
+            "PLCY310",
+            "ECON410"
+          ],
+          "rule": null
+        },
+        {
+          "description": "One elective course selected from the following options:",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Entrepreneurship_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "ECON125",
+        "ECON57H",
+        "ECON101",
+        "ECON111",
+        "ECON325",
+        "ECON327",
+        "ENEC473",
+        "MEJO592",
+        "PLCY326",
+        "SPHG428H",
+        "SOCI302",
+        "SOCI427",
+        "ECON393"
+      ],
+      "choice_groups": []
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Philosophy_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "PHIL110",
+        "PHIL210",
+        "PHIL220",
+        "PHIL134",
+        "PHIL230",
+        "PHIL340",
+        "PHIL150",
+        "PHIL155",
+        "PHIL355",
+        "PHIL160",
+        "PHIL275",
+        "PHIL381"
+      ],
+      "choice_groups": [
+        {
+          "description": "A minor in philosophy requires five philosophy courses. No more than three of the five may be numbered 199 and below. The five courses must include at least one course in three of the following four distribution areas:",
+          "type": "rule_based",
+          "courses_required": 5,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "PHIL",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Linguistics_Minor": {
+    "base_requirements": {
+      "required_courses": [],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Two courses selected from: 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "LING200",
+            "LING201",
+            "LING202",
+            "LING203"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional LING courses numbered 200 or higher. 2,3",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "LING",
+            "min_number": 200,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Environmental_Science_and_Studies_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "ENEC201",
+        "ENEC202"
+      ],
+      "choice_groups": [
+        {
+          "description": "Three additional ENEC courses (at least one at the 400 level or higher)",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "ENEC",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Applied_Sciences_and_Engineering_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "CHEM101",
+        "MATH231",
+        "MATH232",
+        "APPL101",
+        "APPL110",
+        "APPL350",
+        "APPL405",
+        "APPL412",
+        "APPL430",
+        "APPL435",
+        "APPL462",
+        "APPL463",
+        "APPL465",
+        "BIOL226",
+        "BIOL431",
+        "BMME435",
+        "PHYS405",
+        "BIOL534",
+        "MATH564",
+        "BIOL537",
+        "BIOL551",
+        "MATH553",
+        "BIOL554",
+        "CHEM441",
+        "CHEM445",
+        "CHEM448",
+        "CHEM449",
+        "CHEM470",
+        "PHYS472",
+        "COMP433",
+        "PHYS447",
+        "COMP523",
+        "COMP541",
+        "COMP560",
+        "COMP562",
+        "COMP581",
+        "EMES415",
+        "EMES560",
+        "EMES561",
+        "ENVR451",
+        "ENVR452",
+        "PHYS660",
+        "ENVR453",
+        "ENEC468",
+        "ENEC470",
+        "ENVR671",
+        "ENVR672",
+        "MATH347",
+        "MATH528",
+        "MATH529",
+        "BIOL553",
+        "MATH566",
+        "NSCI421",
+        "NSCI423",
+        "PHYS331",
+        "PHYS332",
+        "PHYS401",
+        "BMME441",
+        "COMP447",
+        "PHYS461",
+        "CHEM472",
+        "PHYS515",
+        "PHYS529"
+      ],
+      "choice_groups": [
+        {
+          "id": "choice_1",
+          "description": "COMP\u00a0110 | Introduction to Programming H",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP110",
+            "COMP116"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_1",
+          "description": "Select one:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS114",
+            "PHYS118"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_2",
+          "description": "Select one:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "PHYS115",
+            "PHYS119"
+          ],
+          "rule": null
+        },
+        {
+          "id": "list_3",
+          "description": "Select one course from the following list:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "APPL240",
+            "APPL260",
+            "APPL285",
+            "APPL385",
+            "PHYS231",
+            "ENVR205"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Select two engineering topic courses from the list below.",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": null,
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Medical_Anthropology_Minor": {
+    "base_requirements": {
+      "required_courses": [],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Five three-hour courses taken from the following list:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "AAAD300",
+            "AAAD387",
+            "ANTH53",
+            "ANTH56",
+            "ANTH104",
+            "ANTH143",
+            "ANTH147",
+            "ANTH148",
+            "ANTH151",
+            "ANTH204",
+            "ANTH214",
+            "ANTH217",
+            "ANTH237",
+            "ANTH238",
+            "ANTH252",
+            "ANTH270",
+            "ANTH272",
+            "ANTH277",
+            "ANTH278",
+            "ANTH280",
+            "ANTH285",
+            "ANTH294",
+            "ANTH298",
+            "ANTH315",
+            "ANTH318",
+            "ANTH319",
+            "ANTH320",
+            "ANTH325",
+            "ANTH326",
+            "ANTH328",
+            "ANTH341",
+            "ANTH349",
+            "ANTH361",
+            "ANTH389",
+            "ANTH390",
+            "ANTH405",
+            "ANTH414",
+            "ANTH422",
+            "ANTH423",
+            "ANTH426",
+            "ANTH430",
+            "ANTH437",
+            "ANTH439",
+            "ANTH441",
+            "ANTH442",
+            "ANTH443",
+            "ANTH444",
+            "ANTH445",
+            "ANTH446",
+            "ANTH448",
+            "ANTH470",
+            "ANTH471",
+            "ANTH473",
+            "ANTH474",
+            "ANTH535",
+            "ANTH538",
+            "ANTH582",
+            "ANTH585",
+            "ANTH623",
+            "ANTH624",
+            "ANTH625",
+            "ANTH649"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Marine_Sciences_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "EMES401",
+        "BIOL350",
+        "ENVR417",
+        "EMES103",
+        "ENEC204",
+        "ENEC395",
+        "ENEC698"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Three additional courses in marine sciences from the following list:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "EMES52",
+            "EMES53",
+            "EMES55",
+            "EMES89",
+            "EMES203",
+            "BIOL204",
+            "ENEC220",
+            "ENEC352",
+            "EMES395",
+            "ENEC411",
+            "EMES434",
+            "EMES440",
+            "BIOL462",
+            "ENEC441",
+            "EMES442",
+            "BIOL457",
+            "EMES443",
+            "ENEC444",
+            "BIOL456",
+            "EMES446",
+            "BIOL452",
+            "EMES447",
+            "ENEC448",
+            "EMES470",
+            "ENEC471",
+            "EMES472",
+            "ENGL473",
+            "EMES474",
+            "EMES483",
+            "ENVR505",
+            "EMES506",
+            "EMES507",
+            "BIOL657",
+            "ENVR520",
+            "ENEC512"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Spanish_for_the_Professions_Minor": {
+    "base_requirements": {
+      "required_courses": [
+        "SPAN329"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Two profession-specific courses in the same professional track from the following options:",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "SPAN320",
+            "SPAN325",
+            "SPAN321",
+            "SPAN328",
+            "SPAN323",
+            "SPAN324"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional three-credit SPAN courses above SPAN  300, excluding SPAN\u00a0401 , SPAN\u00a0402 , SPAN\u00a0404 , SPAN\u00a0405 , and SPAN\u00a0601",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "SPAN",
+            "min_number": 300,
+            "min_credits": 3,
+            "exclude": [
+              "SPAN401",
+              "SPAN402",
+              "SPAN404",
+              "SPAN405",
+              "SPAN601"
+            ]
+          },
+          "id": "rule_1"
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  },
+  "Sociology_BA": {
+    "base_requirements": {
+      "required_courses": [
+        "SOCI101",
+        "SOCI250",
+        "SOCI251",
+        "SOCI252",
+        "SOCI131",
+        "SOCI410",
+        "SOCI415",
+        "SOCI427",
+        "SOCI420",
+        "SOCI412",
+        "SOCI423",
+        "SOCI426",
+        "SOCI122",
+        "SOCI123",
+        "SOCI273",
+        "SOCI274",
+        "SOCI424",
+        "SOCI414",
+        "SOCI422",
+        "SOCI429",
+        "SOCI431",
+        "SOCI468",
+        "SOCI411",
+        "SOCI469"
+      ],
+      "choice_groups": [
+        {
+          "id": "list_1",
+          "description": "Three SOCI electives numbered above 400 (upper-level). With permission of the director of undergraduate studies, one of the following courses may count as a 400-level elective:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SOCI290",
+            "SOCI396",
+            "SOCI691H",
+            "SOCI692H"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Two additional three-hour SOCI courses (six hours)",
+          "type": "rule_based",
+          "courses_required": 2,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "SOCI",
+            "min_number": null,
+            "min_credits": 3,
+            "exclude": []
+          },
+          "id": "rule_1"
+        },
+        {
+          "id": "choice_1",
+          "description": "SOCI\u00a0130 | Family and Society",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SOCI130",
+            "SOCI425"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_2",
+          "description": "SOCI\u00a0273 | Social and Economic Justice, Experiential Education",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SOCI273",
+            "SOCI274"
+          ],
+          "rule": null
+        },
+        {
+          "id": "choice_3",
+          "description": "SOCI\u00a0423 | Sociology of Education, Experiential Education",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SOCI423",
+            "SOCI426"
+          ],
+          "rule": null
+        }
+      ]
+    },
+    "concentrations": {
+      "None": {
+        "required_courses": [],
+        "choice_groups": []
+      }
+    }
+  }
+}

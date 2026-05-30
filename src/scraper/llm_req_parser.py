@@ -137,7 +137,7 @@ def _validate(parsed: dict) -> dict | None:
     }
 
 
-def parse_rule_text(text: str, model_name: str = 'qwen2.5:14b') -> dict | None:
+def parse_rule_text(text: str, model_name: str = 'qwen2.5:32b') -> dict | None:
     """
     Parse a single natural-language rule sentence into a rule_based choice group.
     Uses few-shot examples to guide the model, same pattern as the catalog parser.
