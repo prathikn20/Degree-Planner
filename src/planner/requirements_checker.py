@@ -132,16 +132,19 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
     required_set = set(program["required_courses"])
 
     # UNC double-counting pools (all symmetric with one another):
-    #   fys_consumed — courses that satisfied FY-SEMINAR; each may still
-    #                  count for exactly ONE FC group.
-    #   fad_consumed — courses that satisfied FAD; each may still count for
-    #                  exactly ONE FC group (NC System policy).
-    #   fc_consumed  — courses that satisfied an FC group; each may still
-    #                  count for FAD (the reverse direction).
+    #   fys_consumed   — courses that satisfied FY-SEMINAR; each may still
+    #                    count for exactly ONE FC group.
+    #   fad_consumed   — courses that satisfied FAD; each may still count for
+    #                    exactly ONE FC group (NC System policy).
+    #   idst_consumed  — courses that satisfied INTERDISCIPLINARY; each may
+    #                    still count for exactly ONE FC group (and vice versa).
+    #   fc_consumed    — courses that satisfied an FC group; each may still
+    #                    count for FAD or INTERDISCIPLINARY (the reverse direction).
     # Once a course is pulled from any of these pools it is fully consumed.
-    fys_consumed: set[str] = set()
-    fad_consumed: set[str] = set()
-    fc_consumed:  set[str] = set()
+    fys_consumed:  set[str] = set()
+    fad_consumed:  set[str] = set()
+    idst_consumed: set[str] = set()
+    fc_consumed:   set[str] = set()
 
     # ── Choice groups ─────────────────────────────────────────────────────────
     for group in program["choice_groups"]:
@@ -157,9 +160,10 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
         options = [o for o in options if o not in required_set and o not in avoid_set]
 
-        is_fys = group["id"] == "FY-SEMINAR"
-        is_fc  = group["id"].startswith("FC-")
-        is_fad = group["id"] == "FAD"
+        is_fys  = group["id"] == "FY-SEMINAR"
+        is_fc   = group["id"].startswith("FC-")
+        is_fad  = group["id"] == "FAD"
+        is_idst = group["id"] == "INTERDISCIPLINARY"
 
         courses_needed = group.get("courses_required", 1)
         credits_needed = group.get("credits_required")
@@ -175,8 +179,11 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
             # FAD-consumed courses may also satisfy exactly one FC group
             if not sat and is_fc:
                 sat = _get_satisfying_course(option, catalog, fad_consumed, virtual_to_real)
-            # FC-consumed courses may also satisfy FAD (symmetric with above)
-            if not sat and is_fad:
+            # IDST-consumed courses may also satisfy exactly one FC group
+            if not sat and is_fc:
+                sat = _get_satisfying_course(option, catalog, idst_consumed, virtual_to_real)
+            # FC-consumed courses may also satisfy FAD or INTERDISCIPLINARY (symmetric)
+            if not sat and (is_fad or is_idst):
                 sat = _get_satisfying_course(option, catalog, fc_consumed, virtual_to_real)
             if not sat:
                 continue
@@ -201,6 +208,8 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 fys_consumed.discard(sat)
             elif sat in fad_consumed:
                 fad_consumed.discard(sat)
+            elif sat in idst_consumed:
+                idst_consumed.discard(sat)
             elif sat in fc_consumed:
                 fc_consumed.discard(sat)
             else:
@@ -208,10 +217,11 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 if is_fys:
                     fys_consumed.add(sat)
                 elif is_fad:
-                    # Reserve: can still count for one FC group
                     fad_consumed.add(sat)
+                elif is_idst:
+                    idst_consumed.add(sat)
                 elif is_fc:
-                    # Reserve: can still count for FAD
+                    # Reserve: can still count for FAD or INTERDISCIPLINARY
                     fc_consumed.add(sat)
             results["courses_used"].add(sat)
 

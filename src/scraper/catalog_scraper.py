@@ -128,6 +128,13 @@ def extract_course_info(block):
             if _FAD_FULL_RE.search(gen_ed_section) and "FAD" not in attributes:
                 attributes.append("FAD")
 
+    # Interdisciplinary courses are identified structurally: IDST prefix or "I" suffix
+    # (e.g. GLBL210I, IDST112I). The catalog doesn't print a "Gen Ed: INTERDISCIPLINARY"
+    # tag — the course code itself is the marker.
+    if course_id and course_id.startswith('IDST'):
+        if 'INTERDISCIPLINARY' not in attributes:
+            attributes.append('INTERDISCIPLINARY')
+
     course_data = {
         "name": title_text,
         "credits": credits,
@@ -135,7 +142,7 @@ def extract_course_info(block):
         "cross_listed": cross_listed,
         "attributes": attributes
     }
-    
+
     return course_id, course_data
 
 def scrape_department(url):

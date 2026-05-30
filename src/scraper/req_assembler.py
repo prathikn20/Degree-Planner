@@ -6,10 +6,10 @@ logger = logging.getLogger(__name__)
 # Only call the LLM if the text explicitly describes a countable rule.
 # If the text doesn't match these, it's ambiguous boilerplate — drop it, don't hallucinate.
 _EXPLICIT_RULE_RE = re.compile(
-    r'(\d{3}\s*(or\s+higher|or\s+above|level\s+or\s+above))'   # "420 or higher"
-    r'|numbered?\s+\d{3}'                                        # "numbered 420"
-    r'|\d+\s+additional\b.{0,40}\bcourses?\b'                   # "five additional COMP courses"
-    r'|upper.?division\s+elective',                              # "upper-division electives"
+    r'\d{3}\s*(or\s+(higher|above|greater))'                                    # "420 or higher/above/greater"
+    r'|numbered?\s+(above\s+)?\d{3}'                                            # "numbered 420" or "numbered above 520"
+    r'|(\d+|one|two|three|four|five|six|seven|eight|nine|ten)\s+additional\b.{0,40}\bcourses?\b'  # "three additional COMP courses"
+    r'|upper.?division\s+elective',                                             # "upper-division electives"
     re.IGNORECASE
 )
 
@@ -31,19 +31,24 @@ LIST_HEADER_PATTERNS = [
     # "select one", "choose two", etc.
     re.compile(r'\b(select|choose)\s+(one|two|three|four|five|six|seven|\d+)\b', re.IGNORECASE),
     # "Two ... courses ... from/chosen" with flexible gaps
-    re.compile(r'\b(one|two|three|four|five|six|seven|\d+)\b.{0,40}\b(course|courses)\b.{0,20}\b(from|chosen)\b', re.IGNORECASE),
+    re.compile(r'\b(one|two|three|four|five|six|seven|\d+)\b.{0,40}\b(course|courses)\b.{0,50}\b(from|chosen)\b', re.IGNORECASE),
     # "(select one):" parenthetical headers used by CourseLeaf
     re.compile(r'\(select\s+\w+\)', re.IGNORECASE),
+    # "One of the following:", "Two of the following list:", etc.
+    re.compile(r'\b(one|two|three|four|five|six|seven|\d+)\s+of\s+(the\s+)?following\b', re.IGNORECASE),
 ]
 
 
 def classify_section_type(title):
     """Block type is determined by section title text, not by LLM."""
     t = title.lower()
-    if 'concentration' in t:
-        return 'concentration'
-    if 'upper-division electives' in t or 'upper division electives' in t:
+    # Treat sections whose title is primarily a suggestion/reference list as non-requirements.
+    if ('suggestion' in t or 'upper-division elective' in t or 'upper division elective' in t
+            or 'elective list' in t or 'elective course list' in t):
         return 'reference_list'
+    # UNC uses several keywords for what are effectively concentrations/tracks.
+    if any(kw in t for kw in ('concentration', ' plan', ' option', ' track')):
+        return 'concentration'
     return 'core'
 
 
@@ -141,7 +146,9 @@ def assemble_section(section, rule_parser_fn):
                         kw in r['text'].lower()
                         for kw in ['excluding', 'except', 'not including', 'with no more', 'no more than']
                     ):
-                        j += 1  # skip exclusion/clarification notes within a list block
+                        if _is_explicit_rule(r['text']):
+                            break  # a rule in its own right — let the outer loop handle it
+                        j += 1  # skip pure clarification/exclusion footnotes within a list block
                     else:
                         break
 
