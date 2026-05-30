@@ -1299,7 +1299,7 @@
           "rule": {
             "department": "ECON",
             "min_number": 500,
-            "max_number": 699
+            "max_number": 689
           }
         },
         {
@@ -1310,7 +1310,7 @@
           "rule": {
             "department": "ECON",
             "min_number": 400,
-            "max_number": 699
+            "max_number": 689
           }
         },
         {
