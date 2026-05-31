@@ -390,8 +390,8 @@ def select_courses_globally(
 
 
 def build_selection_avoid(catalog: dict, assumed: list, avoid: list) -> list:
-    """Return an avoid list for select_courses_globally that blocks all courses of
-    a first-year program type when the student has already completed one of that type.
+    """Return an extended avoid list that blocks all FY-SEMINAR / FY-LAUNCH courses
+    from the selection pass when the student has already completed one of that type.
 
     UNC allows each student exactly ONE FY-SEMINAR enrollment and ONE FY-LAUNCH
     enrollment.  If *assumed* (completed + in-progress) already contains a course
