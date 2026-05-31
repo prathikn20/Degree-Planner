@@ -482,6 +482,11 @@ def assemble_section(section, rule_parser_fn):
                 list_options = valid_codes_only(list_options)
                 if list_options:
                     count = extract_count_from_text(text) or 1
+                    # Clamp to actual option count: a "two courses" header that only
+                    # captures one course before the next rule_text breaks the scan
+                    # means the intent is "take this one required course" (the second
+                    # is handled by a separate following group).
+                    count = min(count, len(list_options))
                     group = {
                         'id': next_id('list', text),
                         'description': text,

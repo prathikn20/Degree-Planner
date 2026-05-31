@@ -10,7 +10,7 @@ import re
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.scraper.req_scraper import scrape_major_requirements
-from src.scraper.req_assembler import assemble_section, classify_section_type
+from src.scraper.req_assembler import assemble_section, classify_section_type, is_list_header
 from src.scraper.llm_req_parser import parse_rule_text
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -581,6 +581,134 @@ def propagate_reference_lists(sections: list) -> list:
     return result
 
 
+_SEE_BELOW_RE = re.compile(
+    r'\bsee\s+(lists?|requirements?|the\s+(?:lists?|electives?))\s+below\b',
+    re.IGNORECASE
+)
+def inject_cross_section_pools(sections: list) -> list:
+    """
+    When a core/concentration section has a 'see list below' list-header rule_text
+    with no course rows following it in the same section, look ahead up to 6 sections
+    for a reference_list pool and inject its courses immediately after the header row.
+
+    This handles the Data Science BS pattern where:
+      Core Requirements: "Choose six upper-division electives (see list below) …"
+      Upper-Division Electives: [61 course rows — classified reference_list]
+
+    The pool section is removed from the output so it isn't processed again.
+    Must be called AFTER propagate_reference_lists (sections must have '_type' set).
+    """
+    consumed_pool_indices: set[int] = set()
+    # Map: section_index -> list of (row_index, pool_courses) to inject
+    injections: dict[int, list] = {}
+
+    for i, sec in enumerate(sections):
+        if sec.get('_type') not in ('core', 'concentration', None):
+            continue
+
+        rows = sec['rows']
+        for j, row in enumerate(rows):
+            if row['kind'] != 'rule_text':
+                continue
+            if not _SEE_BELOW_RE.search(row['text']):
+                continue
+            if not is_list_header(row['text']):
+                continue
+
+            # If course rows already follow in the same section, nothing to inject
+            has_following_courses = any(
+                rows[k]['kind'] in ('course', 'or_alternative')
+                for k in range(j + 1, len(rows))
+            )
+            if has_following_courses:
+                continue
+
+            # Search forward for a reference_list pool section
+            for look in range(i + 1, min(i + 7, len(sections))):
+                if look in consumed_pool_indices:
+                    continue
+                candidate = sections[look]
+                if candidate.get('_type') != 'reference_list':
+                    continue
+                pool_courses = [
+                    r for r in candidate['rows']
+                    if r['kind'] in ('course', 'or_alternative')
+                ]
+                if not pool_courses:
+                    continue
+
+                injections.setdefault(i, []).append((j, pool_courses))
+                consumed_pool_indices.add(look)
+                logger.info(
+                    "  Pool injection: '%s' <- '%s' (%d courses) for rule '%s...'",
+                    sec['title'], candidate['title'], len(pool_courses), row['text'][:60],
+                )
+                break  # only consume one pool per rule_text
+
+    # Build output: apply injections and drop consumed pool sections
+    result = []
+    for i, sec in enumerate(sections):
+        if i in consumed_pool_indices:
+            continue  # this section was consumed as a pool, skip it
+
+        if i in injections:
+            rows = list(sec['rows'])
+            # Apply injections in reverse order so earlier row indices stay valid
+            for row_idx, pool_courses in sorted(injections[i], reverse=True):
+                rows = rows[:row_idx + 1] + pool_courses + rows[row_idx + 1:]
+            sec = dict(sec)
+            sec['rows'] = rows
+
+        result.append(sec)
+
+    return result
+
+
+_CONC_AREA_RE = re.compile(
+    r'\bfrom\s+a\s+concentration\b|\bconcentration\s+area\b',
+    re.IGNORECASE
+)
+
+
+def detect_unnamed_concentrations(sections: list) -> list:
+    """
+    Reclassify core sections as concentrations when they directly follow a core
+    section whose rule_texts reference 'a concentration area' or 'concentration
+    area' — the Data Science BA pattern where concentration blocks have no
+    'Concentration' keyword in their title.
+
+    Only reclassifies consecutive core sections immediately after the marker;
+    stops as soon as a reference_list, already-labelled concentration, or the
+    end of the list is reached.
+
+    Must be called AFTER propagate_reference_lists and inject_cross_section_pools.
+    """
+    # Find the index of the first core section that contains the concentration marker
+    marker_idx = None
+    for i, sec in enumerate(sections):
+        if sec.get('_type') != 'core':
+            continue
+        if any(r['kind'] == 'rule_text' and _CONC_AREA_RE.search(r['text'])
+               for r in sec['rows']):
+            marker_idx = i
+            break
+
+    if marker_idx is None:
+        return sections
+
+    result = []
+    for i, sec in enumerate(sections):
+        sec = dict(sec)
+        if i > marker_idx and sec.get('_type') == 'core':
+            sec['_type'] = 'concentration'
+            if not re.search(r'\bconcentration\b', sec['title'], re.IGNORECASE):
+                sec['title'] = sec['title'] + ' Concentration'
+            logger.info("  Reclassified '%s' as unnamed concentration", sec['title'])
+        result.append(sec)
+
+    return result
+
+
 def make_cached_rule_parser(req_cache: dict, model_name: str):
     """
     Returns a caching wrapper around parse_rule_text.
@@ -664,6 +792,12 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
 
         # Pre-classify sections and propagate reference_list to neighbor pure pools.
         sections = propagate_reference_lists(scraped['sections'])
+        # Inject course pools for 'see list below' rules whose pool lives in a
+        # separate section (e.g. DS BS 'Upper-Division Electives' pool).
+        sections = inject_cross_section_pools(sections)
+        # Reclassify core sections that follow a 'concentration area' rule as
+        # concentrations (e.g. DS BA where concentration names lack the keyword).
+        sections = detect_unnamed_concentrations(sections)
 
         base_core   = {"required_courses": [], "choice_groups": []}
         conc_blocks = []
@@ -742,13 +876,18 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
             logger.info("Preserved manually-maintained entry: %s", preserved)
 
     # Apply manual patches so hand-curated explicit lists survive --force reruns.
-    # Matching strategy: try group ID first, then fall back to description substring.
+    # Two patch types:
+    #   base_requirements.choice_group_patches — update existing groups in base
+    #   concentration_patches.<conc_id>.inject_choice_groups — add groups to a concentration
+    # Matching strategy for choice_group_patches: ID first, then description substring.
     manual_patches = load_json_file(MANUAL_PATCHES_PATH)
     if manual_patches:
         applied = 0
         for track_id, patch_data in manual_patches.items():
             if track_id not in master_reqs:
                 continue
+
+            # ── base_requirements patches ──────────────────────────────────────
             for group_id, patch in (patch_data.get('base_requirements', {})
                                             .get('choice_group_patches', {}).items()):
                 cg = master_reqs[track_id]['base_requirements']['choice_groups']
@@ -756,7 +895,6 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
 
                 target = next((g for g in cg if g['id'] == group_id), None)
                 if target is None and match_desc:
-                    # Fallback: find group whose description contains the match string
                     target = next(
                         (g for g in cg if match_desc.lower() in g.get('description', '').lower()),
                         None
@@ -769,6 +907,23 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
                     target['rule'] = patch.get('rule', None)
                     target.pop('credits_required', None)
                     applied += 1
+
+            # ── concentration patches ──────────────────────────────────────────
+            # inject_choice_groups: append new groups to a concentration block.
+            # Only injects if the group ID is not already present (idempotent).
+            for conc_id, conc_patch in patch_data.get('concentration_patches', {}).items():
+                concs = master_reqs[track_id].setdefault('concentrations', {})
+                concs.setdefault(conc_id, {'required_courses': [], 'choice_groups': []})
+                existing_ids = {g['id'] for g in concs[conc_id]['choice_groups']}
+                for group in conc_patch.get('inject_choice_groups', []):
+                    if group['id'] not in existing_ids:
+                        concs[conc_id]['choice_groups'].append(group)
+                        existing_ids.add(group['id'])
+                        applied += 1
+                        logger.info(
+                            "  Injected group '%s' into %s concentrations.%s",
+                            group['id'], track_id, conc_id,
+                        )
 
         if applied:
             logger.info("Applied %d manual patches from %s", applied, MANUAL_PATCHES_PATH)

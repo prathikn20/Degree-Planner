@@ -236,13 +236,154 @@
             "COMP116"
           ],
           "rule": null
+        },
+        {
+          "id": "upper_div_electives_1",
+          "description": "Choose six upper-division electives (see list below) OR a four-course concentration and two upper-division electives.",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "BIOS645",
+            "BIOS664",
+            "COMP421",
+            "COMP488",
+            "COMP550",
+            "COMP560",
+            "COMP562",
+            "COMP586",
+            "COMP664",
+            "COMP683",
+            "DATA481",
+            "DATA493",
+            "DATA495",
+            "DATA496",
+            "DATA520",
+            "DATA521",
+            "DATA522",
+            "DATA523",
+            "DATA543",
+            "DATA593",
+            "DATA693H",
+            "DATA694H",
+            "DATA890",
+            "ENGL411",
+            "GEOG415",
+            "INLS541",
+            "MATH521",
+            "MATH522",
+            "MATH524",
+            "MATH528",
+            "MATH529",
+            "MATH535",
+            "MATH550",
+            "MATH560",
+            "MATH566",
+            "MATH577",
+            "MATH590",
+            "MATH594",
+            "MATH661",
+            "MATH662",
+            "STOR415",
+            "STOR435",
+            "STOR445",
+            "STOR455",
+            "STOR512",
+            "STOR520",
+            "STOR535",
+            "STOR538",
+            "STOR543",
+            "STOR545",
+            "STOR555",
+            "STOR556",
+            "STOR557",
+            "STOR565",
+            "STOR566",
+            "STOR572",
+            "STOR590",
+            "STOR612",
+            "STOR634",
+            "STOR712",
+            "STOR893"
+          ],
+          "rule": null
         }
       ]
     },
     "concentrations": {
       "None": {
         "required_courses": [],
-        "choice_groups": []
+        "choice_groups": [
+          {
+            "id": "upper_div_electives_1",
+            "description": "Four additional upper-division electives (required when no concentration is chosen)",
+            "type": "explicit",
+            "courses_required": 4,
+            "options": [
+              "BIOS645",
+              "BIOS664",
+              "COMP421",
+              "COMP488",
+              "COMP550",
+              "COMP560",
+              "COMP562",
+              "COMP586",
+              "COMP664",
+              "COMP683",
+              "DATA481",
+              "DATA493",
+              "DATA495",
+              "DATA496",
+              "DATA520",
+              "DATA521",
+              "DATA522",
+              "DATA523",
+              "DATA543",
+              "DATA593",
+              "DATA693H",
+              "DATA694H",
+              "DATA890",
+              "ENGL411",
+              "GEOG415",
+              "INLS541",
+              "MATH521",
+              "MATH522",
+              "MATH524",
+              "MATH528",
+              "MATH529",
+              "MATH535",
+              "MATH550",
+              "MATH560",
+              "MATH566",
+              "MATH577",
+              "MATH590",
+              "MATH594",
+              "MATH661",
+              "MATH662",
+              "STOR415",
+              "STOR435",
+              "STOR445",
+              "STOR455",
+              "STOR512",
+              "STOR520",
+              "STOR535",
+              "STOR538",
+              "STOR543",
+              "STOR545",
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR565",
+              "STOR566",
+              "STOR572",
+              "STOR590",
+              "STOR612",
+              "STOR634",
+              "STOR712",
+              "STOR893"
+            ],
+            "rule": null
+          }
+        ]
       },
       "Economic_Analysis": {
         "required_courses": [
@@ -5009,32 +5150,15 @@
   },
   "Data_Science_BA": {
     "base_requirements": {
-      "required_courses": [
-        "MEJO487",
-        "MEJO570",
-        "ECON370",
-        "ECON400",
-        "ECON470",
-        "LING401",
-        "LING460",
-        "LING540",
-        "SOCI251",
-        "GEOG215",
-        "GEOG370"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
           "id": "core_requirements_foundation_1",
           "description": "Foundations of Data and Information (two courses):",
           "type": "explicit",
-          "courses_required": 2,
+          "courses_required": 1,
           "options": [
-            "DATA110",
-            "DATA130",
-            "ENGL480",
-            "ENGL482",
-            "INLS201",
-            "SOCI318"
+            "DATA110"
           ],
           "rule": null
         },
@@ -5107,168 +5231,6 @@
             "MEJO102"
           ],
           "rule": null
-        },
-        {
-          "id": "data_journalism_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "GEOG215",
-            "LING460",
-            "POLI209",
-            "STOR538"
-          ],
-          "rule": null
-        },
-        {
-          "id": "data_journalism_options_2",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "MEJO459",
-            "MEJO553",
-            "MEJO625",
-            "MEJO630"
-          ],
-          "rule": null
-        },
-        {
-          "id": "economic_analysis_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ECON423",
-            "ECON425",
-            "ECON445",
-            "ECON450",
-            "ECON480",
-            "ECON522",
-            "ECON525",
-            "ECON545",
-            "ECON550",
-            "ECON551",
-            "ECON552",
-            "ECON571",
-            "ECON573",
-            "ECON575",
-            "ECON580"
-          ],
-          "rule": null
-        },
-        {
-          "id": "quantitative_language_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "LING225",
-            "LING520"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN246",
-            "PLAN247",
-            "PLAN256",
-            "PLAN257",
-            "PLAN714",
-            "PLAN562"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_2",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN372",
-            "PLAN672"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_3",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN591",
-            "PLAN635",
-            "PLAN636",
-            "PLAN637",
-            "PLAN671",
-            "PLAN720",
-            "PLAN739",
-            "PLAN745"
-          ],
-          "rule": null
-        },
-        {
-          "id": "sociology_options_1",
-          "description": "Select three of the following options:",
-          "type": "explicit",
-          "courses_required": 3,
-          "options": [
-            "MNGT345",
-            "MNGT380",
-            "SOCI121",
-            "SOCI172",
-            "SOCI252",
-            "SOCI277",
-            "SOCI302",
-            "SOCI427",
-            "SOCI429"
-          ],
-          "rule": null
-        },
-        {
-          "id": "data_society_options_1",
-          "description": "Select four of the following options:",
-          "type": "explicit",
-          "courses_required": 4,
-          "options": [
-            "COMM83",
-            "COMM86",
-            "COMM249",
-            "COMM348",
-            "COMM360",
-            "COMM453",
-            "COMP380",
-            "MEJO242",
-            "HIST322",
-            "HIST328"
-          ],
-          "rule": null
-        },
-        {
-          "id": "geographic_information_options_1",
-          "description": "Select two of the following options:",
-          "type": "explicit",
-          "courses_required": 2,
-          "options": [
-            "GEOG391",
-            "GEOG410",
-            "GEOG456",
-            "GEOG477",
-            "GEOG491",
-            "GEOG541",
-            "GEOG544",
-            "GEOG555",
-            "GEOG567",
-            "GEOG577",
-            "GEOG591",
-            "GEOG592"
-          ],
-          "rule": null
         }
       ]
     },
@@ -5276,6 +5238,219 @@
       "None": {
         "required_courses": [],
         "choice_groups": []
+      },
+      "Data_Journalism": {
+        "required_courses": [
+          "MEJO487",
+          "MEJO570"
+        ],
+        "choice_groups": [
+          {
+            "id": "data_journalism_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "GEOG215",
+              "LING460",
+              "POLI209",
+              "STOR538"
+            ],
+            "rule": null
+          },
+          {
+            "id": "data_journalism_options_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MEJO459",
+              "MEJO553",
+              "MEJO625",
+              "MEJO630"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Economic_Analysis": {
+        "required_courses": [
+          "ECON370",
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "economic_analysis_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON423",
+              "ECON425",
+              "ECON445",
+              "ECON450",
+              "ECON480",
+              "ECON522",
+              "ECON525",
+              "ECON545",
+              "ECON550",
+              "ECON551",
+              "ECON552",
+              "ECON571",
+              "ECON573",
+              "ECON575",
+              "ECON580"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Quantitative_Language_Science": {
+        "required_courses": [
+          "LING401",
+          "LING460",
+          "LING540"
+        ],
+        "choice_groups": [
+          {
+            "id": "quantitative_language_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "LING225",
+              "LING520"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Urban_Data_Analytics": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "urban_data_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN246",
+              "PLAN247",
+              "PLAN256",
+              "PLAN257",
+              "PLAN714",
+              "PLAN562"
+            ],
+            "rule": null
+          },
+          {
+            "id": "urban_data_options_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN372",
+              "PLAN672"
+            ],
+            "rule": null
+          },
+          {
+            "id": "urban_data_options_3",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN591",
+              "PLAN635",
+              "PLAN636",
+              "PLAN637",
+              "PLAN671",
+              "PLAN720",
+              "PLAN739",
+              "PLAN745"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Sociology": {
+        "required_courses": [
+          "SOCI251"
+        ],
+        "choice_groups": [
+          {
+            "id": "sociology_concentration_options_1",
+            "description": "Select three of the following options:",
+            "type": "explicit",
+            "courses_required": 3,
+            "options": [
+              "MNGT345",
+              "MNGT380",
+              "SOCI121",
+              "SOCI172",
+              "SOCI252",
+              "SOCI277",
+              "SOCI302",
+              "SOCI427",
+              "SOCI429"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Data_and_Society": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "data_society_options_1",
+            "description": "Select four of the following options:",
+            "type": "explicit",
+            "courses_required": 4,
+            "options": [
+              "COMM83",
+              "COMM86",
+              "COMM249",
+              "COMM348",
+              "COMM360",
+              "COMM453",
+              "COMP380",
+              "MEJO242",
+              "HIST322",
+              "HIST328"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Geographic_Information_Science": {
+        "required_courses": [
+          "GEOG215",
+          "GEOG370"
+        ],
+        "choice_groups": [
+          {
+            "id": "geographic_information_options_1",
+            "description": "Select two of the following options:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "GEOG391",
+              "GEOG410",
+              "GEOG456",
+              "GEOG477",
+              "GEOG491",
+              "GEOG541",
+              "GEOG544",
+              "GEOG555",
+              "GEOG567",
+              "GEOG577",
+              "GEOG591",
+              "GEOG592"
+            ],
+            "rule": null
+          }
+        ]
       }
     }
   },
