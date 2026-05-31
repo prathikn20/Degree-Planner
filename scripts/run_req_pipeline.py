@@ -210,6 +210,219 @@ TARGET_TRACKS = {
         "https://catalog.unc.edu/undergraduate/programs-study/hydrology-minor/",
     "Climate_Change_Minor":
         "https://catalog.unc.edu/undergraduate/programs-study/climate-change-minor/",
+    # ── Additional majors and minors from the full catalog ────────────────────
+    "Aerospace_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/aerospace-studies-minor/",
+    "African_American_and_Diaspora_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/african-american-diaspora-studies-minor/",
+    "African_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/african-studies-minor/",
+    "African_African_American_and_Diaspora_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/african-african-american-diaspora-studies-major-ba/",
+    "American_Indian_and_Indigenous_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/american-indian-indigenous-studies-minor/",
+    "American_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/american-studies-major-ba/",
+    "American_Studies_BA_AIIS_Concentration":
+        "https://catalog.unc.edu/undergraduate/programs-study/american-studies-major-baamerican-indian-indigenous-studies-concentration/",
+    "American_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/american-studies-minor/",
+    "Arabic_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/arabic-minor/",
+    "Archaeology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/archaeology-major-ba/",
+    "Archaeology_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/archaeology-minor/",
+    "Art_History_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/art-history-major-ba/",
+    "Art_History_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/art-history-minor/",
+    "Asian_Studies_BA_Arab_Cultures":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-arab-cultures-concentration/",
+    "Asian_Studies_BA_Chinese":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-chinese-concentration/",
+    "Asian_Studies_BA_Interdisciplinary":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-general-concentration/",
+    "Asian_Studies_BA_Japanese":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-japanese-concentration/",
+    "Asian_Studies_BA_Korean":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-korean-concentration/",
+    "Asian_Studies_BA_Persian":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-persian-concentration/",
+    "Asian_Studies_BA_South_Asian":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-south-asian-studies-concentration/",
+    "Asian_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/asian-studies-minor/",
+    "BEST_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/best-minor/",
+    "Biology_BS_Quantitative_Biology_Track":
+        "https://catalog.unc.edu/undergraduate/programs-study/biology-major-bs-quantitative-biology-track/",
+    "Chemistry_BS_Biochemistry_Track":
+        "https://catalog.unc.edu/undergraduate/programs-study/chemistry-major-bs-biochemistry-track/",
+    "Chemistry_BS_Polymer_Track":
+        "https://catalog.unc.edu/undergraduate/programs-study/chemistry-major-bs-polymer-track/",
+    "Chinese_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/chinese-minor/",
+    "Civic_Life_and_Leadership_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/civic-life-leadership-minor/",
+    "Classical_Humanities_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/classical-humanities-minor/",
+    "Classics_BA_Classical_Archaeology":
+        "https://catalog.unc.edu/undergraduate/programs-study/classics-major-ba-classical-archaeology/",
+    "Classics_BA_Classical_Civilization":
+        "https://catalog.unc.edu/undergraduate/programs-study/classics-major-ba-classical-civilization/",
+    "Classics_BA_Greek_Latin":
+        "https://catalog.unc.edu/undergraduate/programs-study/classics-major-ba-greek-latin/",
+    "Clinical_Laboratory_Science_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/clinical-laboratory-science-major-bs/",
+    "Comparative_Literature_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/comparative-literature-minor/",
+    "Contemporary_European_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/contemporary-european-studies-major-ba/",
+    "Dental_Hygiene_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/dental-hygiene-major-bs/",
+    "Dramatic_Art_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/dramatic-art-major-ba/",
+    "Education_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/education-minor/",
+    "Engineering_for_Environmental_Change_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/engineering-environmental-change-climate-health-minor/",
+    "English_and_Comparative_Literature_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/english-comparative-major-ba/",
+    "English_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/english-minor/",
+    "Environmental_Health_Sciences_BSPH":
+        "https://catalog.unc.edu/undergraduate/programs-study/environmental-health-sciences-major-bsph/",
+    "Environmental_Justice_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/environmental-justice-minor/",
+    "French_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/french-minor/",
+    "Geography_and_Environment_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/geography-major-ba/",
+    "Geography_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/geography-minor/",
+    "Geological_Sciences_BA_Earth_Science":
+        "https://catalog.unc.edu/undergraduate/programs-study/geological-sciences-major-ba-earth-science-concentration/",
+    "German_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/german-minor/",
+    "Germanic_and_Slavic_BA_German_Studies":
+        "https://catalog.unc.edu/undergraduate/programs-study/germanic-slavic-languages-literatures-major-ba-german-literature-culture-concentration/",
+    "Germanic_and_Slavic_BA_Russian":
+        "https://catalog.unc.edu/undergraduate/programs-study/germanic-slavic-languages-literatures-major-ba-russian-language-culture-concentration/",
+    "Germanic_and_Slavic_BA_Slavic_and_East_European":
+        "https://catalog.unc.edu/undergraduate/programs-study/germanic-slavic-languages-literatures-major-ba-central-european-studies-concentration/",
+    "Greek_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/greek-minor/",
+    "Heritage_and_Global_Engagement_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/heritage-global-engagement-minor/",
+    "Hindi_Urdu_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/hindi-urdu-minor/",
+    "Hispanic_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/hispanic-studies-minor/",
+    "History_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/history-major-ba/",
+    "Human_and_Organizational_Leadership_Development_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/human-org-leadership-ba/",
+    "Human_Development_and_Family_Science_BAEd":
+        "https://catalog.unc.edu/undergraduate/programs-study/human-development-family-studies-baed/",
+    "Human_Development_Sustainability_and_Rights_Africa_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/human-development-sustainability-rights-africa-african-diaspora-minor/",
+    "Interdisciplinary_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/interdisciplinary-studies-major-ba/",
+    "Islamic_and_Middle_Eastern_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/islamic-middle-eastern-studies-minor/",
+    "Italian_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/italian-minor/",
+    "Japanese_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/japanese-minor/",
+    "Jewish_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/jewish-studies-minor/",
+    "Korean_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/korean-minor/",
+    "Latin_American_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/latin-american-studies-major-ba/",
+    "Latin_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/latin-minor/",
+    "Latina_o_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/latina-latino-studies-minor/",
+    "Media_and_Journalism_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/media-journalism-major-ba/",
+    "Medicine_Literature_and_Culture_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/medicine-literature-culture-minor/",
+    "Medieval_and_Early_Modern_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/medieval-early-modern-studies-minor/",
+    "Middle_Eastern_Languages_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/middle-eastern-languages-minor/",
+    "Military_Science_and_Leadership_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/military-science-minor/",
+    "Modern_Hebrew_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/modern-hebrew-minor/",
+    "Music_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/music-major-ba/",
+    "Music_BMus":
+        "https://catalog.unc.edu/undergraduate/programs-study/music-major-bmus/",
+    "Musical_Theatre_Performance_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/musical-theatre-performance-minor/",
+    "Naval_Science_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/naval-science-minor/",
+    "Nursing_BSN":
+        "https://catalog.unc.edu/undergraduate/programs-study/nursing-major-bsn/",
+    "Persian_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/persian-minor/",
+    "Pharmaceutical_Sciences_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/pharmaceutical-sciences-minor/",
+    "Philosophy_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/philosophy-major-ba/",
+    "Portuguese_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/portuguese-minor/",
+    "Psychology_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/psychology-major-ba/",
+    "Radiologic_Science_BS":
+        "https://catalog.unc.edu/undergraduate/programs-study/radiologic-science-major-bs/",
+    "Religious_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/religious-studies-major-ba/",
+    "Religious_Studies_BA_Jewish_Studies":
+        "https://catalog.unc.edu/undergraduate/programs-study/religious-studies-major-ba-jewish-studies-concentration/",
+    "Risk_Management_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/risk-management-minor/",
+    "Romance_Languages_BA_French":
+        "https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-french-francophone-studies/",
+    "Romance_Languages_BA_Hispanic_Linguistics":
+        "https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-hispanic-linguistics/",
+    "Romance_Languages_BA_Hispanic_Studies":
+        "https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-hispanic-literatures-cultures/",
+    "Romance_Languages_BA_Italian":
+        "https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-italian/",
+    "Romance_Languages_BA_Portuguese":
+        "https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-portuguese/",
+    "Russian_Culture_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/russian-culture-minor/",
+    "Screenwriting_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/screenwriting-minor/",
+    "Sexuality_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/sexuality-studies-minor/",
+    "Slavic_and_East_European_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/slavic-east-european-languages-cultures-minor/",
+    "Social_and_Economic_Justice_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/social-economic-justice-minor/",
+    "Southeast_Asian_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/southeast-asian-studies-minor/",
+    "Speech_and_Hearing_Sciences_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/speech-hearing-sciences-minor/",
+    "Studio_Art_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/studio-art-major-ba/",
+    "Studio_Art_BFA":
+        "https://catalog.unc.edu/undergraduate/programs-study/studio-art-major-bfa/",
+    "Study_of_Christianity_and_Culture_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/study-christianity-culture-minor/",
+    "Translation_and_Interpreting_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/translation-minor/",
+    "Womens_and_Gender_Studies_BA":
+        "https://catalog.unc.edu/undergraduate/programs-study/womens-gender-studies-major-ba/",
+    "Womens_and_Gender_Studies_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/womens-gender-studies-minor/",
+    "Writing_Editing_and_Digital_Publishing_Minor":
+        "https://catalog.unc.edu/undergraduate/programs-study/writing-editing-digital-publishing-minor/",
 }
 
 
@@ -397,15 +610,45 @@ def make_cached_rule_parser(req_cache: dict, model_name: str):
     return parse_with_cache
 
 
-def run_req_pipeline(model_name: str, force: bool = False):
-    logger.info("Starting Requirements Pipeline  model=%s  output=%s", model_name, OUTPUT_PATH)
+def make_no_llm_rule_parser(skipped_log: dict, current_track: list):
+    """
+    Returns a stub rule parser that logs skipped rule texts instead of calling
+    the LLM.  current_track is a one-element list so the closure can see the
+    track_id set by the outer loop without rebinding.
+    """
+    def stub(text: str):
+        track_id = current_track[0]
+        skipped_log.setdefault(track_id, [])
+        if text not in skipped_log[track_id]:
+            skipped_log[track_id].append(text)
+        logger.info(f"  [no-llm] Skipping rule text: {text[:80]}")
+        return None
+
+    return stub
+
+
+SKIPPED_RULES_PATH    = "data/skipped_rules.json"
+MANUAL_PATCHES_PATH   = "data/req_manual_patches.json"
+
+
+def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False):
+    logger.info("Starting Requirements Pipeline  model=%s  output=%s  no_llm=%s",
+                model_name, OUTPUT_PATH, no_llm)
 
     # Seed with existing output so a partial re-run doesn't wipe already-done tracks.
     master_reqs = load_json_file(OUTPUT_PATH)
     req_cache   = load_json_file(CACHE_PATH)
-    rule_parser = make_cached_rule_parser(req_cache, model_name)
+
+    skipped_log: dict = {}
+    current_track: list = [None]
+
+    if no_llm:
+        rule_parser = make_no_llm_rule_parser(skipped_log, current_track)
+    else:
+        rule_parser = make_cached_rule_parser(req_cache, model_name)
 
     for track_id, url in TARGET_TRACKS.items():
+        current_track[0] = track_id
         if not force and track_id in master_reqs:
             logger.info("Skipping %s (already in output — use --force to reprocess)", track_id)
             continue
@@ -491,8 +734,38 @@ def run_req_pipeline(model_name: str, force: bool = False):
             len(concentrations) - 1,  # exclude the implicit 'None'
         )
 
-    save_json_file(master_reqs, OUTPUT_PATH)
+    # Apply manual patches so hand-curated explicit lists survive --force reruns.
+    manual_patches = load_json_file(MANUAL_PATCHES_PATH)
+    if manual_patches:
+        applied = 0
+        for track_id, patch_data in manual_patches.items():
+            if track_id not in master_reqs:
+                continue
+            for group_id, patch in (patch_data.get('base_requirements', {})
+                                            .get('choice_group_patches', {}).items()):
+                cg = master_reqs[track_id]['base_requirements']['choice_groups']
+                for g in cg:
+                    if g['id'] == group_id:
+                        g['type'] = patch['type']
+                        g['options'] = patch.get('options', [])
+                        g['courses_required'] = patch.get('courses_required', g['courses_required'])
+                        g['rule'] = patch.get('rule', None)
+                        g.pop('credits_required', None)
+                        applied += 1
+                        break
+        if applied:
+            logger.info("Applied %d manual patches from %s", applied, MANUAL_PATCHES_PATH)
+            save_json_file(master_reqs, OUTPUT_PATH)
+
     logger.info("Pipeline complete. %d tracks written to %s", len(master_reqs), OUTPUT_PATH)
+
+    if no_llm and skipped_log:
+        save_json_file(skipped_log, SKIPPED_RULES_PATH)
+        total_skipped = sum(len(v) for v in skipped_log.values())
+        logger.info(
+            "Skipped %d rule texts across %d tracks — saved to %s",
+            total_skipped, len(skipped_log), SKIPPED_RULES_PATH,
+        )
 
 
 if __name__ == "__main__":
@@ -501,5 +774,7 @@ if __name__ == "__main__":
                         help=f'Ollama model name (default: {DEFAULT_MODEL})')
     parser.add_argument('--force', action='store_true',
                         help='Reprocess tracks already present in the output file')
+    parser.add_argument('--no-llm', action='store_true',
+                        help='Skip LLM rule parsing; log skipped rule texts to data/skipped_rules.json')
     args = parser.parse_args()
-    run_req_pipeline(model_name=args.model, force=args.force)
+    run_req_pipeline(model_name=args.model, force=args.force, no_llm=args.no_llm)

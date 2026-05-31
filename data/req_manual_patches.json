@@ -1,0 +1,301 @@
+{
+  "Biology_BS": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "rule_1": {
+          "type": "explicit",
+          "options": [
+            "BIOL271",
+            "BIOL272",
+            "BIOL273",
+            "BIOL274",
+            "BIOL277",
+            "BIOL278",
+            "BIOL279",
+            "BIOL422",
+            "BIOL441",
+            "BIOL451",
+            "BIOL471",
+            "BIOL473",
+            "BIOL474",
+            "BIOL475",
+            "BIOL476",
+            "BIOL479",
+            "BIOL579"
+          ],
+          "courses_required": 1
+        },
+        "rule_3": {
+          "type": "explicit",
+          "options": [
+            "ANTH143",
+            "ANTH148",
+            "ANTH298",
+            "ANTH315",
+            "ANTH318",
+            "ANTH412",
+            "ANTH414",
+            "ANTH415",
+            "ANTH416",
+            "ANTH470",
+            "ANTH623",
+            "BIOC107",
+            "BIOC108",
+            "BMME335",
+            "ENEC202",
+            "ENEC256",
+            "ENEC324",
+            "ENEC403",
+            "ENEC406",
+            "ENEC410",
+            "ENEC411",
+            "ENEC415",
+            "ENEC471",
+            "ENEC489",
+            "EPID600",
+            "EXSS175",
+            "EXSS276",
+            "GEOG110",
+            "GEOG111",
+            "GEOG212",
+            "GEOG222",
+            "GEOG253",
+            "MCRO251",
+            "NSCI175",
+            "NSCI222",
+            "NSCI225",
+            "NUTR240",
+            "PHIL155",
+            "PSYC101",
+            "PSYC210",
+            "PSYC220",
+            "PSYC230",
+            "SPHS570"
+          ],
+          "courses_required": 2
+        }
+      }
+    }
+  },
+  "Psychology_BS": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "rule_1": {
+          "type": "explicit",
+          "options": [
+            "NSCI222",
+            "NSCI225",
+            "NSCI221",
+            "PSYC220",
+            "PSYC230",
+            "PSYC242",
+            "PSYC245",
+            "PSYC250",
+            "PSYC260"
+          ],
+          "courses_required": 5
+        },
+        "rule_3": {
+          "type": "explicit",
+          "options": [
+            "PSYC395",
+            "PSYC404",
+            "PSYC430",
+            "PSYC433",
+            "PSYC438",
+            "PSYC469",
+            "PSYC504",
+            "PSYC517",
+            "PSYC525",
+            "PSYC528",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC533",
+            "PSYC534",
+            "PSYC559",
+            "PSYC693H",
+            "PSYC694H",
+            "NSCI395",
+            "NSCI400",
+            "NSCI405",
+            "NSCI410",
+            "NSCI420",
+            "NSCI430",
+            "NSCI500",
+            "NSCI510",
+            "NSCI520",
+            "NSCI530",
+            "NSCI540",
+            "NSCI550",
+            "NSCI600",
+            "NSCI610",
+            "NSCI620",
+            "NSCI630",
+            "NSCI640",
+            "NSCI650",
+            "NSCI660",
+            "NSCI670",
+            "NSCI680",
+            "NSCI690",
+            "NSCI695",
+            "NSCI699"
+          ],
+          "courses_required": 1
+        }
+      }
+    }
+  },
+  "Statistics_and_Analytics_BS": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "rule_2": {
+          "type": "explicit",
+          "options": [
+            "STOR305",
+            "STOR323",
+            "STOR471",
+            "STOR472",
+            "STOR475",
+            "STOR512",
+            "STOR536",
+            "STOR538",
+            "STOR543",
+            "STOR545",
+            "STOR555",
+            "STOR556",
+            "STOR557",
+            "STOR565",
+            "STOR566",
+            "STOR572",
+            "BIOS664",
+            "BUSI403",
+            "BUSI408",
+            "BUSI410",
+            "BUSI532",
+            "BUSI533",
+            "COMP301",
+            "COMP401",
+            "COMP210",
+            "COMP410",
+            "COMP421",
+            "ECON410",
+            "ECON420",
+            "ECON511",
+            "INLS523",
+            "MATH383",
+            "MATH521",
+            "MATH522",
+            "MATH523",
+            "MATH524",
+            "MATH548",
+            "MATH566"
+          ],
+          "courses_required": 3
+        }
+      }
+    }
+  },
+  "Biomedical_Engineering_BS": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "rule_1": {
+          "type": "explicit",
+          "options": [
+            "BMME315",
+            "BMME325",
+            "CHEM430",
+            "BMME335",
+            "BMME345",
+            "BMME355",
+            "BMME365",
+            "BMME375",
+            "BMME385"
+          ],
+          "courses_required": 3
+        },
+        "rule_2": {
+          "type": "explicit",
+          "options": [
+            "APPL465",
+            "BIOL220",
+            "BIOL443",
+            "BIOL451",
+            "CHEM430",
+            "ENVR451",
+            "EXSS380",
+            "EXSS385",
+            "MATH347",
+            "MATH381",
+            "PHYS331",
+            "PHYS381",
+            "PHYS461"
+          ],
+          "courses_required": 1
+        },
+        "rule_3": {
+          "type": "explicit",
+          "options": [
+            "BMME435",
+            "BMME441",
+            "BMME495",
+            "BMME511",
+            "BMME521",
+            "BMME522",
+            "BMME523",
+            "BMME524",
+            "BMME527",
+            "BMME543",
+            "BMME555",
+            "BMME561",
+            "BMME568",
+            "BMME572",
+            "BMME575",
+            "BMME585",
+            "MATH528"
+          ],
+          "courses_required": 4
+        }
+      }
+    }
+  },
+  "Business_Administration_BSBA": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "rule_1": {
+          "type": "rule_based",
+          "rule": {
+            "department": null,
+            "exclude_department": "BUSI",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "courses_required": 5
+        }
+      }
+    }
+  },
+  "Computer_Science_Minor": {
+    "base_requirements": {
+      "choice_group_patches": {
+        "list_1": {
+          "type": "rule_based",
+          "options": [],
+          "courses_required": 2,
+          "rule": {
+            "department": "COMP",
+            "min_number": 311,
+            "min_credits": null,
+            "exclude": [
+              "COMP495",
+              "COMP496",
+              "COMP691H",
+              "COMP692H"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import json
 import logging
 import re
-import ollama
 from typing import Optional, List
 from pydantic import BaseModel, Field
 
@@ -146,6 +145,7 @@ def parse_rule_text(text: str, model_name: str = 'qwen2.5:32b') -> dict | None:
         return None
 
     try:
+        import ollama
         response = ollama.chat(
             model=model_name,
             messages=[

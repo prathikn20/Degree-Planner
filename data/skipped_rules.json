@@ -1,0 +1,537 @@
+{
+  "Computer_Science_BS": [
+    "Five additional three-or-more credit hour COMP courses numbered 420 or higher (excluding COMP\u00a0496 , COMP\u00a0690 , and COMP\u00a0692H ). 2"
+  ],
+  "Data_Science_BS": [
+    "Choose six upper-division electives (see list below) OR a four-course concentration and two upper-division electives. 1"
+  ],
+  "Mathematics_BS": [
+    "At least three additional courses in the Division of Natural Sciences and Mathematics."
+  ],
+  "Statistics_and_Analytics_BS": [
+    "One STOR course at the 500 level",
+    "Three additional courses from either Group A or Group B (see lists below)"
+  ],
+  "Economics_BS": [
+    "Five ECON courses at the 400, 500, or 600 level, with at least two numbered 500 or higher 1, 3"
+  ],
+  "Biology_BS": [
+    "An organismal structure and diversity course (see list below)",
+    "Four biology electives (each of three or more credits) numbered above 200 (not including BIOL\u00a0213 , BIOL\u00a0222 , BIOL\u00a0253 , BIOL\u00a0291 , BIOL\u00a0292 , BIOL\u00a0293 , BIOL\u00a0294 , BIOL\u00a0295 , BIOL\u00a0296 , BIOL 353, a second semester of BIOL\u00a0395 , and BIOL\u00a0495 ). At least two courses in the major must have a laboratory (not including BIOL\u00a0101L or BIOL\u00a0105L ). ENEC\u00a0489 can also count as a biology elective. 4,5",
+    "A choice of two additional allied sciences electives selected from the course list below (some courses are more than 3 credits)"
+  ],
+  "Physics_BS": [
+    "One additional course chosen from ASTR (numbered above 300)"
+  ],
+  "Neuroscience_BS": [
+    "Knowledge Electives (select at least six credit hours from list below)",
+    "Mathematics, Methods, Statistics Electives (select at least six credit hours from list below)"
+  ],
+  "Psychology_BS": [
+    "One course below 400 from each of the following program areas:",
+    "One course below 400 from two of the three following psychology program areas:",
+    "One upper-level course chosen from \"Special Requirement Courses\" (see list below) 4",
+    "One upper-level PSYC and/or NSCI course numbered between 395 and 699. May not include PSYC\u00a0493 or NSCI\u00a0493 . 4",
+    "One additional PSYC and/or NSCI course above 101; may not include PSYC\u00a0190 or NSCI\u00a0190 . 4",
+    "At least 3 additional three-credit hour non-Psychology and Neuroscience Department courses which must come from the Allied Science list (see below).  Additionally, 1 four-credit hour non-Psychology and Neuroscience Department course from the Allied Science list (see below) or one of the following combinations: CHEM\u00a0241 + 241L , CHEM\u00a0241H + 245L , CHEM\u00a0262 + 262L or CHEM\u00a0262H + 263L or EMES\u00a0101 + EMES\u00a0101L . 5"
+  ],
+  "Exercise_and_Sport_Science_BS": [
+    "A choice of four additional allied sciences electives, selected from the course list below (some courses are more than 3 credits) 1"
+  ],
+  "Biomedical_Engineering_BS": [
+    "Take three gateway electives to prepare for specialty electives in one or two areas",
+    "STEM elective - see requirements below",
+    "Four specialty electives - see requirements below"
+  ],
+  "Business_Administration_BSBA": [
+    "19.5 credit hours of business electives 2, 4, 5, 6",
+    "At least five courses outside the Kenan\u2013Flagler Business School and any additional business or nonbusiness courses needed to complete a minimum of 120 credit hours, including transfer credit, to graduate"
+  ],
+  "Earth_and_Marine_Sciences_BS": [
+    "Select three EMES specialization courses numbered 300 and higher",
+    "Six credits of a capstone experience:",
+    "EMES\u00a0395 | Undergraduate Research in Earth, Marine, and Environmental Sciences (6 credit hours total)"
+  ],
+  "Environmental_Science_BS": [
+    "Two courses from one analytical skills option:",
+    "Five courses chosen from one of the following concentrations (see lists below)",
+    "Enough free electives to accumulate minimum of 120 credit hours. 2"
+  ],
+  "Information_Science_BS": [
+    "A coherent set of five or more electives, selected from the list below, equaling 15 credit hours 1"
+  ],
+  "Community_and_Global_Public_Health_BSPH": [
+    "Three additional elective courses chosen from the list below."
+  ],
+  "Nutrition_BSPH": [
+    "18 hours of elective courses (e.g., 6 courses) from other fields of study 3,5,6"
+  ],
+  "Political_Science_BA": [
+    "Nine courses, including the following courses and including at least one 400-level political science (POLI) course:"
+  ],
+  "Public_Policy_BA": [
+    "At least six credit hours of approved public policy electives. 1",
+    "Policy Field (optional), see list below"
+  ],
+  "Economics_BA": [
+    "Four ECON courses at the 400, 500, or 600 level, with at least one course numbered ECON 500 or higher. 1,3"
+  ],
+  "Psychology_BA": [
+    "One course below 400 from four of the five following psychology program areas:",
+    "Two additional PSYC and/or NSCI courses numbered between 395 and 699; may not include PSYC\u00a0493 or NSCI\u00a0493 4",
+    "One additional PSYC and/or NSCI course above 101; may not include PSYC\u00a0190 or NSCI\u00a0190 . 4",
+    "One non-Psychology and Neuroscience Department course which comes from the Allied Science list (see below)"
+  ],
+  "Computer_Science_BA": [
+    "Two additional COMP elective courses numbered 420 or higher (at least three credits each) 2"
+  ],
+  "Data_Science_BA": [
+    "Four additional courses from a concentration area (see below)"
+  ],
+  "Mathematics_BA": [
+    "At least three more MATH courses numbered above 500. 2"
+  ],
+  "Biology_BA": [
+    "An organismal structure and diversity course (see list below)",
+    "Three biology electives (each of three or more credits) numbered above 200 (not including BIOL\u00a0213 , BIOL\u00a0222 , BIOL\u00a0253 , BIOL\u00a0291 , BIOL\u00a0292 , BIOL\u00a0293 , BIOL\u00a0294 , BIOL\u00a0295 , BIOL\u00a0296 , BIOL 353, a second semester of BIOL\u00a0395 , and BIOL\u00a0495 ). At least one course in the major must have a laboratory (not including BIOL\u00a0101L or BIOL\u00a0105L ). 4,5",
+    "Four additional allied science electives chosen from the course list below (some courses are more than 3 credits)",
+    "Students must fulfill all General Education requirements, including Supplemental General Education, and enough electives to complete 120 hours required for graduation."
+  ],
+  "Chemistry_BA": [
+    "Additional Gen Ed courses (three courses)",
+    "One CHEM elective course (see course list on Requirements tab) 3"
+  ],
+  "Physics_BA": [
+    "Nine additional credits chosen from ASTR (202 or numbered above 300) and PHYS (numbered above 200) 3",
+    "Six additional credits chosen from ASTR (numbered above 300)",
+    "ENEC\u00a02--- | ENEC 200-Level Elective (One ENEC course numbered 200 or above)",
+    "ENEC\u00a03--- | ENEC 300-Level Elective (Two ENEC courses numbered 300 or above) 3"
+  ],
+  "Linguistics_BA": [
+    "Five additional linguistics courses chosen from the following lists:",
+    "Up to five LING courses numbered 200 to 699, excluding LING 400 2"
+  ],
+  "Anthropology_BA": [
+    "No more than three courses used to fulfill the major can be numbered below 200.",
+    "No more than six hours of field-oriented coursework can be counted toward the major."
+  ],
+  "Medical_Anthropology_BA": [
+    "Select one research methods and experience courses (see list below)",
+    "Select six elective courses, apportioned in the following ways: 1",
+    "At least one from the biological/ecological elective list (see below)",
+    "At least one from the sociocultural elective list (see below)",
+    "ANY Anthropology (ANTH) course can count for the remaining four electives. No more than two of the six courses can be at the 100-level or below"
+  ],
+  "Global_Studies_BA": [
+    "One core methodology/methods course",
+    "Four courses from one of the following thematic areas 1",
+    "Three courses from one of the following world areas 1"
+  ],
+  "Environmental_Studies_BA": [
+    "Two courses from one of the following skills categories:",
+    "Five courses chosen from one of the concentrations list below",
+    "One course from each of the Pillars of Sustainability, plus one additional course at the 300-level or above in any pillar (4 courses total):",
+    "Two courses from one skill area and one additional course from a second skill (3 courses total):",
+    "Enough General Education and free electives to accumulate at least 120 credit hours. 1"
+  ],
+  "Peace_War_and_Defense_BA": [
+    "Four courses from one concentration (see course lists below) 1",
+    "Two courses chosen from outside the area of concentration (see course lists below) 1"
+  ],
+  "Communication_Studies_BA": [
+    "Three COMM courses at the 050-300 level within a chosen pathway (including a minimum of 2 starting point courses) 1",
+    "Three COMM courses at the 400-600 level within a chosen pathway",
+    "Three COMM electives (at any level and within any pathway)",
+    "The 10 courses (30 hours) should also be apportioned in the following ways:",
+    "At least one Modes of Inquiry course (see options below).",
+    "At least one Representation, Identity, and Difference course (see options below).",
+    "At least one COMM Experience course (see options below). 2",
+    "At least six courses from a single Pathway.",
+    "A minimum of 10 COMM courses, except for those students pursuing the new media option described below.",
+    "Select four (4) courses from one of the two pathway lists below.",
+    "Select two (2) additional courses outside the Department of Communication (see list below)"
+  ],
+  "Exercise_and_Sport_Science_Sport_Administration_BA": [
+    "Nine (9) additional credits must be earned in EXSS courses (at least one course, 3 hours, must be at the 200 level or above). 2"
+  ],
+  "Data_Science_Minor": [
+    "Two additional elective courses from the list below 1"
+  ],
+  "Economics_Minor": [
+    "Two 400-level ECON electives in Applied Microeconomics or Microeconomic Theory",
+    "One 400-level ECON elective in Macroeconomics or Time Series Econometrics",
+    "One 400-level ECON elective in Econometrics or Data Science"
+  ],
+  "Biology_Minor": [
+    "An organismal structure and diversity course with lab (see list below)",
+    "One course with a laboratory 1",
+    "One course numbered above 400"
+  ],
+  "Physics_Minor": [
+    "Three additional courses chosen from ASTR\u00a0202 , ASTR (numbered above 300), and PHYS (numbered above 200). Each course must be 3 credit hours or more. 3"
+  ],
+  "Business_Administration_Minor": [
+    "BUSI --- | Additional BUSI courses to reach the minimum 15 credit hours"
+  ],
+  "Public_Policy_Minor": [
+    "One elective course selected from the following options:"
+  ],
+  "Entrepreneurship_Minor": [
+    "Complete a 280-hour internship with a start-up or employer approved by the internship coordinator of the minor."
+  ],
+  "Environmental_Science_and_Studies_Minor": [
+    "Three additional ENEC courses (at least one at the 400 level or higher)"
+  ],
+  "Applied_Sciences_and_Engineering_Minor": [
+    "Select two engineering topic courses from the list below."
+  ],
+  "Anthropology_General_Minor": [
+    "Five three-hour anthropology (ANTH) courses taken in the department. 1, 2"
+  ],
+  "Spanish_for_the_Professions_Minor": [
+    "Two additional three-credit SPAN courses above SPAN  300, excluding SPAN\u00a0401 , SPAN\u00a0402 , SPAN\u00a0404 , SPAN\u00a0405 , and SPAN\u00a0601"
+  ],
+  "Neuroscience_Minor": [
+    "Four courses distributed over at least three academic departments, selected from the following lists:"
+  ],
+  "Global_Cinema_Minor": [
+    "Three electives from at least two different departments, chosen from the list below"
+  ],
+  "Music_Minor": [
+    "The remaining nine hours are to be taken from other MUSC courses (which may include lessons or ensembles) subject to prerequisites and other admissions requirements."
+  ],
+  "Studio_Art_Minor": [
+    "One Tier I studio course (see list below)",
+    "One Tier II studio course (see list below)",
+    "One Tier III studio course (see list below)",
+    "Two studio art elective courses (any ARTS course, including FYS)",
+    "2-D Courses",
+    "3-D Courses",
+    "4-D (Time-Based) Courses"
+  ],
+  "History_Minor": [
+    "Five history (HIST) courses taken in the Department of History 1, 2"
+  ],
+  "Religious_Studies_Minor": [
+    "Minimum requirements for the minor consist of five courses, two of which must be numbered above 400"
+  ],
+  "Conflict_Management_Minor": [
+    "BUSI\u00a0470 | Storytelling to Influence and Inspire (1.5 credit hours) 1",
+    "Select one course from either human behavior and brain function OR domestic- and internationally-related course list"
+  ],
+  "Urban_Studies_and_Planning_Minor": [
+    "Select three additional PLAN courses numbered 100 through 699. 1"
+  ],
+  "African_Studies_Minor": [
+    "Four additional AAAD courses at or above the 100 level whose last two digits are from 00 to 29.  In addition students may substitute a course from the following list of courses outside that range:"
+  ],
+  "African_African_American_and_Diaspora_Studies_BA": [
+    "Five additional AAAD courses. 1"
+  ],
+  "American_Indian_and_Indigenous_Studies_Minor": [
+    "Select four additional courses from the list below"
+  ],
+  "American_Studies_BA": [
+    "Seven additional elective courses selected from other AMST, FOLK, and  CHER courses. 1, 2",
+    "Of the nine (9) total courses in the major, at least four (4) must be numbered 200 or higher"
+  ],
+  "American_Studies_BA_AIIS_Concentration": [
+    "Select eight additional courses from the list below, with at least four numbered 200 or higher."
+  ],
+  "American_Studies_Minor": [
+    "Three additional elective courses selected from other AMST, FOLK, and  CHER courses. 1"
+  ],
+  "Archaeology_BA": [
+    "Two courses in archaeological practice.",
+    "One must be a field school (may be satisfied with a minimum of 3 hours of transfer credit):"
+  ],
+  "Art_History_BA": [
+    "Two art history foundation courses from ARTH 100 to ARTH\u00a0200",
+    "Nine ARTH courses above 200, apportioned in the following way 1",
+    "At least one course from three of the four geographic areas (see course lists below)"
+  ],
+  "Asian_Studies_BA_Arab_Cultures": [
+    "Two additional Arabic language courses beyond ARAB\u00a0204 1",
+    "or approved courses taken in UNC\u2013Chapel Hill-sponsored study abroad programs"
+  ],
+  "Asian_Studies_BA_Chinese": [
+    "At least two culture courses (chosen from list below)",
+    "Two more courses that may be from either the language list or the culture list"
+  ],
+  "Asian_Studies_BA_Interdisciplinary": [
+    "The major consists of eight courses which must include the following: 1",
+    "At least one other course (other than a language course or senior honors thesis course) taken within the Department of Asian and Middle Eastern Studies and chosen from the list below 2",
+    "At least one course each from any two other departments",
+    "At least one course numbered 400 or above 3",
+    "At least two courses each from any two of the six geographic regions: China, Japan, Korea, Middle East, South Asia, Southeast Asia (see lists below)",
+    "One language course beyond level 4 or a course at level 2 or above in a second Asian language may count as a major course."
+  ],
+  "Asian_Studies_BA_Japanese": [
+    "At least three advanced Japanese courses from the list below",
+    "At least two culture courses from the list below 2",
+    "One more course that may be from either the advanced Japanese list or the culture list 2"
+  ],
+  "Asian_Studies_BA_Korean": [
+    "At least two Korean language courses beyond KOR\u00a0204 . 1"
+  ],
+  "Asian_Studies_BA_Persian": [
+    "One introductory-level course in Persian Studies:",
+    "Three upper-level courses in Persian Stuidies:",
+    "One Regional course (see list below) 1",
+    "One additional elective course, chosen from the following options: 1",
+    "An additional course from the introductory-level list",
+    "An additional course from the upper-level list",
+    "An additional course from the Regional list"
+  ],
+  "Asian_Studies_BA_South_Asian": [
+    "Five courses, including at least three numbered 200 or above, from either the list of introductory courses above or the course list below"
+  ],
+  "Biology_BS_Quantitative_Biology_Track": [
+    "An organismal diversity course (see list below)",
+    "Two laboratory courses, one of which must be a quantitative biology lab course 4",
+    "A choice of two additional allied sciences electives selected from the course list below (some courses are more than 3 credits) 6",
+    "Enough general education and free electives to accumulate 125 academic hours"
+  ],
+  "Chemistry_BS_Polymer_Track": [
+    "Three advanced polymer chemistry electives from:",
+    "One advanced chemistry elective from CHEM\u00a0395 or any chemistry course numbered higher than CHEM\u00a0420 (at least three hours)"
+  ],
+  "Civic_Life_and_Leadership_Minor": [
+    "Two electives, from three categories of courses listed below (the two electives must not be from the same category)"
+  ],
+  "Classical_Humanities_Minor": [
+    "Two additional courses: any CLAR or CLAS course numbered above 132 or any GREK or LATN course not being used to fulfill the global/foreign language General Education requirement"
+  ],
+  "Classics_BA_Classical_Archaeology": [
+    "Three courses in one of the following configurations:",
+    "Three courses in Classical Civilization (CLAS), including at least one numbered 200 or above. CLAS 125 and CLAS\u00a0126 do not satisfy this requirement. 1",
+    "Three courses in GREK or LATN at any level.",
+    "Three courses combining GREK or LATN at any level and CLAS courses at any level, excluding CLAS 125 and CLAS\u00a0126 . 1"
+  ],
+  "Classics_BA_Classical_Civilization": [
+    "Five additional courses chosen from the following list:",
+    "Any GREK or LATN course numbered 204 or higher"
+  ],
+  "Classics_BA_Greek_Latin": [
+    "Five additional courses in Greek above GREK\u00a0203 1",
+    "Two additional courses in CLAS or CLAR with full or partial emphasis on ancient Greek culture (see list below)",
+    "Five additional courses in Latin above LATN\u00a0203 1",
+    "Two additional courses in CLAS or CLAR with full or partial emphasis on Roman culture (see list below)",
+    "Choose one emphasis 1",
+    "One additional course in CLAS or CLAR with full or partial emphasis on ancient Greek culture (see course list below)",
+    "One additional course in CLAS or CLAR with full or partial emphasis on Roman culture (see course list below)"
+  ],
+  "Contemporary_European_Studies_BA": [
+    "Four courses from one of the two themes listed below",
+    "One course chosen from the other theme",
+    "One additional course from Theme 1, Theme 2, or the list of approved elective courses on contemporary Europe"
+  ],
+  "Dramatic_Art_BA": [
+    "Three foundational courses in acting, design, and directing:"
+  ],
+  "English_and_Comparative_Literature_BA": [
+    "Concentration (seven courses), see requirements below 2",
+    "At least six (6) courses (out of 10) must be at or above the 200 level. 3",
+    "Of these six (6), at least two (2) courses (out of 10) must be at the 300-level (Writing Intensive) in ENGL or CMPL. 3",
+    "Of these six (6), at least one (1) course (out of 10) must be at the 400-level (Research Intensive) in ENGL or CMPL. 3",
+    "Select four (4) additional courses from ENGL and/or CMPL 1",
+    "Select four (4) electives from the lists below: 1",
+    "Select three (3) additional courses from ENGL and/or CMPL 2",
+    "Select four (4) courses from the lists below: 1",
+    "Select three (3) additional courses in ENGL and/or CMPL 2",
+    "Select four (4) courses from the following lists: 2",
+    "Select two (2) additional courses in ENGL and/or CMPL 3",
+    "Select five (5) courses from one of the following options:",
+    "Select one (1) to three (3) international literature courses taught in any foreign language department (200-level or higher) 1,2",
+    "Select two (2) to four (4) CMPL or ENGL courses (excluding ENGL\u00a0100 , ENGL\u00a0105 , ENGL\u00a0105I , ENGL\u00a0110 , and ENGL\u00a0191 ). No more than two (2) from ENGL.",
+    "Select two (2) additional ENGL and/or CMPL courses 1",
+    "At least six (6) courses (out of 10) must be at or above the 200 level.",
+    "At least two (2) courses (out of 10) must be at the 300-level (Writing Intensive).",
+    "At least one (1) course (out of 10) must be at the 400-level (Research Intensive)."
+  ],
+  "English_Minor": [
+    "One course from Survey II in the core curriculum for the English and Comparative Literature major (see list below)",
+    "Three (3) additional ENGL courses, with at least two (2) at or above the 200 level. 1"
+  ],
+  "Environmental_Health_Sciences_BSPH": [
+    "Two additional courses from biology, chemistry, computer programming, or phsycis. At least one course from two different categories. A grade of C or better required. See course selection below.",
+    "All students should complete two advanced undergraduate or graduate level courses (400-level or above) that provide in-depth study of environmental health.  Courses should be listed or cross-listed as ENVR courses. ENVR\u00a0400 , ENVR\u00a0403 , ENVR\u00a0430 , ENVR\u00a0593 , ENVR\u00a0600 , ENVR\u00a0601 , ENVR\u00a0695 , ENVR\u00a0691H and ENVR\u00a0692H are excluded."
+  ],
+  "Environmental_Justice_Minor": [
+    "One elective course from List One (see below)",
+    "One elective course from either List One or List Two (see below)"
+  ],
+  "French_Minor": [
+    "Four additional FREN courses numbered above FREN\u00a0204 , excluding FREN\u00a0308 , FREN\u00a0401 , FREN\u00a0402 , FREN\u00a0601 , FREN\u00a0692H . At least two courses (six hours) must be above 300. 1"
+  ],
+  "Geography_Minor": [
+    "Any two core courses:",
+    "Three GEOG elective courses"
+  ],
+  "Geological_Sciences_BA_Earth_Science": [
+    "Science-oriented Experiential Education (EE) courses (6 credits total). 2",
+    "At least three geology and/or allied science electives not otherwise required for the major (see below chart)",
+    "STOR --- | any Statistics and Operations Research course STOR\u00a0155 or above"
+  ],
+  "Germanic_and_Slavic_BA_German_Studies": [
+    "A minimum of eight courses (24 credit hours). Three of these courses are taught in German (204, 301, 302). The courses for the German Studies Major include:",
+    "Two Electives: Students can choose two German-language classes, or two English-language classes, or one German-language and one English-language class from the following options: A) Applied German (these courses are taught in German): GERM\u00a0303 , 304 , 305 , 306 , 493 and  B) Histories, Themes or Theories (see above)"
+  ],
+  "Germanic_and_Slavic_BA_Russian": [
+    "Four additional courses (12 credit hours) selected from Russian language and literature/culture courses (RUSS) 1",
+    "Other than the introductory and intermediate language courses mentioned above, at least four courses (12 credit hours) must be taken at UNC\u2013Chapel Hill to fulfill the requirements of the major. Majors who study abroad or wish to transfer credit from another institution may apply to transfer a maximum of four courses counting toward the major. Before their departure for a study abroad program, students should consult with the relevant director of undergraduate studies about appropriate courses taken abroad for the major."
+  ],
+  "Germanic_and_Slavic_BA_Slavic_and_East_European": [
+    "Four departmental courses (12 credit hours) in CZCH, GSLL, PLSH, RUSS, or SLAV numbered above 200 (not including introductory or intermediate foreign language courses) 1",
+    "Two additional courses (6 credit hours), which may include departmental courses in CZCH, GSLL, PLSH, RUSS, or SLAV numbered above 100, or approved Slavic & East European studies electives (see list below) 1",
+    "Students must establish credit for level 4 (four semesters) of one East or Central European language (3 credit hours): 2, 3"
+  ],
+  "Greek_Minor": [
+    "Two (2) additional courses numbered GREK\u00a0221 or higher",
+    "One (1) additional course chosen from any CLAR or CLAS course or any GREK or LATN course not being used to fulfill the global/foreign language General Education requirement"
+  ],
+  "Hispanic_Studies_Minor": [
+    "Four courses numbered above SPAN 330, excluding SPAN\u00a0401 , SPAN\u00a0402 , SPAN\u00a0404 , SPAN\u00a0405 , and SPAN\u00a0601"
+  ],
+  "History_BA": [
+    "A total of 10 HIST courses",
+    "One course in Latin America or Africa, Asia, and Middle East history",
+    "At least six courses numbered 200 or above"
+  ],
+  "Human_and_Organizational_Leadership_Development_BA": [
+    "At least five elective courses from the list below."
+  ],
+  "Human_Development_and_Family_Science_BAEd": [
+    "Select from the following 3 options: 3,4",
+    "Four courses from the Family Life Education concentration (see list below)",
+    "Four courses from the Child and Family Health concentration (see list below)",
+    "Four courses from the concentration lists or the elective list (see lists below)"
+  ],
+  "Interdisciplinary_Studies_BA": [
+    "Eight courses chosen from at least three departments and which must be appropriate for juniors and seniors majoring in those departments. 1, 2, 3"
+  ],
+  "Islamic_and_Middle_Eastern_Studies_Minor": [
+    "Three of the five courses in the minor (including the required courses listed above) must be selected from one of two subject categories\u2014either Islamic studies or Middle Eastern studies\u2014as indicated by the two lists of approved courses below."
+  ],
+  "Italian_Minor": [
+    "Four additional ITAL courses excluding ITAL\u00a0101 , ITAL\u00a0102 , ITAL\u00a0203 , ITAL\u00a0204 , ITAL\u00a0401 and ITAL\u00a0402 . 1"
+  ],
+  "Jewish_Studies_Minor": [
+    "Four (4) additional Jewish Studies (JWST) elective courses, with at least one course numbered 400 or higher."
+  ],
+  "Latin_American_Studies_BA": [
+    "Select two (2) courses numbered under 200 (see list below). LTAM\u00a0101 is strongly recommended",
+    "Select three (3) courses numbered 200-399 (see list below)."
+  ],
+  "Latin_Minor": [
+    "Four (4) coures in Latin numbered LATN\u00a0221 or higher"
+  ],
+  "Latina_o_Studies_Minor": [
+    "One humanities/fine arts course in Latina/o literatures and cultural production (see list below)",
+    "One course in social sciences or Latina/o communities and cultural space (see list below)"
+  ],
+  "Media_and_Journalism_BA": [
+    "Students must take one elective MEJO course of their choice to meet the 39-hour MEJO minimum. This can be any course offered by the school (including MEJO\u00a089 and MEJO\u00a0101 ), regardless of area of study, except MEJO\u00a0393 . Students may take additional courses in this category, but doing so will exceed the 39-hour minimum.",
+    "At least one course 3"
+  ],
+  "Middle_Eastern_Languages_Minor": [
+    "The minor consists of five courses taken in any two of the Middle Eastern languages listed below.",
+    "Three courses above 203 in one Middle Eastern language."
+  ],
+  "Modern_Hebrew_Minor": [
+    "A fourth course chosen from either the language or culture list above."
+  ],
+  "Music_BA": [
+    "Music theory (six hours), two of:",
+    "Music electives (nine hours) chosen from MUSC courses: students may count no more than three additional hours from MUSC\u00a0211 - MUSC\u00a0214 towards their music major. They may count as credit hours for graduation, subject to the overall limit on music hours."
+  ],
+  "Music_BMus": [
+    "Individual Lessons (twelve hours): chosen from MUSC\u00a0200 \u2013 MUSC\u00a0207 taken over six semesters (or the equivalent for students whose primary focus is composition). 1",
+    "Music electives (fifteen hours) chosen from MUSC courses: students may count no more than six additional hours from MUSC\u00a0211 - MUSC\u00a0214 towards their music major. They may count as credit hours for graduation, subject to the overall limit on music hours."
+  ],
+  "Musical_Theatre_Performance_Minor": [
+    "At least 4 hours in Music Literacy:",
+    "At least 4 hours in Movement Literacy:",
+    "At least 4 hours in Acting Literacy:",
+    "The remaining 4 hours can come from either list above"
+  ],
+  "Persian_Minor": [
+    "A fourth course chosen from either the language or culture list above."
+  ],
+  "Portuguese_Minor": [
+    "Four additional PORT courses numbered between PORT 300 and PORT 699, excluding PORT\u00a0401 , PORT\u00a0402 , PORT\u00a0691H , and PORT\u00a0692H"
+  ],
+  "Religious_Studies_BA": [
+    "Six RELI courses, including courses cross-listed with other units",
+    "Two RELI courses numbered 400 or above, including courses cross-listed with other units"
+  ],
+  "Religious_Studies_BA_Jewish_Studies": [
+    "Six (6) additional Jewish Studies (JWST) elective courses, with at least two courses numbered 400 or higher."
+  ],
+  "Risk_Management_Minor": [
+    "Two additional elective courses chosen from the list below. 2"
+  ],
+  "Romance_Languages_BA_Hispanic_Studies": [
+    "Three courses from one of the following concentrations (see course lists below):",
+    "Four elective courses numbered SPAN 330 or higher (except SPAN\u00a0401 - SPAN\u00a0402 , SPAN\u00a0404 -405, SPAN\u00a0414 - SPAN\u00a0417 , SPAN\u00a0601 , and SPAN\u00a0691H -692H)"
+  ],
+  "Romance_Languages_BA_Italian": [
+    "Seven additional ITAL courses excluding ITAL\u00a0101 , ITAL\u00a0102 , ITAL\u00a0203 , ITAL\u00a0204 , ITAL\u00a0401 , ITAL\u00a0402 and ITAL\u00a0692H . 1"
+  ],
+  "Russian_Culture_Minor": [
+    "A minimum of five RUSS courses (15 hours) covering any aspect of Russian language, literature, or culture. 1"
+  ],
+  "Screenwriting_Minor": [
+    "Three electives from the following options: 1"
+  ],
+  "Sexuality_Studies_Minor": [
+    "Additional courses (see list below) 1"
+  ],
+  "Slavic_and_East_European_Studies_Minor": [
+    "A minimum of five courses (15 hours) in BCS, CZCH, GSLL, PLSH, RUSS, or SLAV. 1"
+  ],
+  "Studio_Art_BA": [
+    "Three Tier I studio courses",
+    "Select one 2-D course (see list below)",
+    "Select one 3-D course (see list below)",
+    "Select one 4-D course (see list below)",
+    "Three Tier II studio courses (see list below)",
+    "Two Tier III studio courses (see list below)",
+    "Three studio art elective courses 1,2",
+    "One art history (ARTH) course 3",
+    "2-D Courses",
+    "3-D Courses",
+    "4-D (Time-Based) Courses"
+  ],
+  "Studio_Art_BFA": [
+    "Three Tier 1 studio courses",
+    "Select one 2-D course (see list below)",
+    "Select one 3-D course (see list below)",
+    "Select one 4-D course (see list below)",
+    "Four Tier II studio courses (see list below)",
+    "Five Tier III studio courses (see list below)",
+    "Six studio art elective courses 1,2",
+    "Two art history (ARTH) courses 3",
+    "2-D Courses",
+    "3-D Courses",
+    "4-D (Time-Based) Courses"
+  ],
+  "Study_of_Christianity_and_Culture_Minor": [
+    "The minor requires the completion of five courses, including at least one course from each of the following categories.",
+    "Ancient, medieval, or early modern Christianity (see list below)",
+    "Christianity in the modern world (see list below)"
+  ],
+  "Translation_and_Interpreting_Minor": [
+    "One elective course numbered SPAN 330 or above, excluding SPAN\u00a0401 , SPAN\u00a0402 , SPAN\u00a0404 , SPAN\u00a0405 , SPAN\u00a0414 , SPAN\u00a0415 , and SPAN\u00a0601 1"
+  ],
+  "Womens_and_Gender_Studies_BA": [
+    "One course on minority/Third World/non-Western women or gender (see list below).",
+    "Three interdisciplinary perspectives courses chosen from at least two of the three categories (see lists below)."
+  ],
+  "Womens_and_Gender_Studies_Minor": [
+    "Four courses chosen from at least two of the following three categories. 1"
+  ],
+  "Writing_Editing_and_Digital_Publishing_Minor": [
+    "Up to four courses from the list of electives to reach the five course total (see list below)"
+  ]
+}
