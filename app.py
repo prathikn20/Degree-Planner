@@ -10,7 +10,10 @@ import pandas as pd
 import streamlit as st
 
 from src.planner.graph import build_graph, load_catalog, load_requirements
-from src.planner.path_generator import kahns_algorithm, select_courses_globally
+from src.planner.path_generator import (
+    kahns_algorithm, select_courses_globally,
+    build_selection_avoid, dedup_fy_seminar,
+)
 from src.planner.requirements_checker import check_requirements, get_rule_based_options
 from src.planner.tracker_parser import parse_tarheel_tracker
 
@@ -127,18 +130,10 @@ def run_pipeline(
     _all_requested = list(dict.fromkeys(list(explicitly_requested or []) + planned))
 
     # UNC rule: one FY-SEMINAR course per college career.
-    # If the student has already completed a FY-SEMINAR course, block all
-    # FY-SEMINAR attribute courses from the selection pass so they cannot be
-    # recommended for FC or other slots (check_requirements still uses the
-    # original avoid so it correctly marks FY-SEMINAR as satisfied).
-    _assumed_fy_taken = any(
-        "FY-SEMINAR" in catalog.get(c, {}).get("attributes", [])
-        for c in assumed
-    )
-    _selection_avoid = avoid
-    if _assumed_fy_taken:
-        _fy_all = {c for c in catalog if "FY-SEMINAR" in catalog[c].get("attributes", [])}
-        _selection_avoid = list(set(avoid) | _fy_all)
+    # build_selection_avoid blocks all FY-SEMINAR courses from the selection
+    # pass when the student has already completed one (check_requirements still
+    # uses the original avoid so it correctly marks FY-SEMINAR as satisfied).
+    _selection_avoid = build_selection_avoid(catalog, assumed, avoid)
 
     # Pass 1 — requirements audit (each program uses its own consumption pool so
     # cross-program double-dipping is structurally allowed at the checker level).
@@ -173,38 +168,12 @@ def run_pipeline(
         all_remaining.update(remaining)
 
     # UNC rule: a student may only enroll in 1 FY-SEMINAR course ever.
-    # Build a combined fulfillment map to know WHY each FY-SEMINAR-attribute course
-    # is in all_remaining.  Only courses assigned to the FY-SEMINAR slot itself are
-    # subject to dedup; courses assigned to other requirements (e.g. INTERDISCIPLINARY
-    # or an FC group) carry a different fulfillment label and must be kept.
-    _combined_fm: dict[str, str] = {}
-    for _m in majors_to_check:
-        for _c, _d in audit[_m["track"]].get("fulfillment_map", {}).items():
-            if _c not in _combined_fm:
-                _combined_fm[_c] = _d
-
-    _fy_group_desc = next(
-        (g.get("description") or g["id"]
-         for g in requirements.get("UNC_General_Education", {})
-                              .get("base_requirements", {})
-                              .get("choice_groups", [])
-         if g["id"] == "FY-SEMINAR"),
-        "FY-SEMINAR",
+    # dedup_fy_seminar uses fulfillment labels to preserve courses assigned to
+    # other requirements (e.g. INTERDISCIPLINARY) while deduping the FY-SEMINAR slot.
+    all_remaining = dedup_fy_seminar(
+        all_remaining, audit, majors_to_check, requirements, catalog, assumed,
+        gen_ed_track=GEN_ED_TRACK,
     )
-    _fy_for_slot = sorted(
-        [c for c in all_remaining
-         if "FY-SEMINAR" in catalog.get(c, {}).get("attributes", [])
-         and _combined_fm.get(c) == _fy_group_desc],
-        key=lambda c: -len(catalog.get(c, {}).get("attributes", [])),
-    )
-    if _assumed_fy_taken:
-        # Student already has a FY-SEMINAR; remove any that slipped into the slot.
-        for c in _fy_for_slot:
-            all_remaining.discard(c)
-    else:
-        # Keep the most attribute-rich FY-SEMINAR for the slot; discard extras.
-        for c in _fy_for_slot[1:]:
-            all_remaining.discard(c)
 
     # Build per-track sets so Kahn's can prioritise courses that satisfy the
     # most distinct programs (inter-major overlaps get scheduled first).

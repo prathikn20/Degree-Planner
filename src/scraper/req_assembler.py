@@ -205,6 +205,23 @@ LIST_HEADER_PATTERNS = [
         r'^(?:at\s+least\s+)?(?:one|two|three|four|five|\d+)\s+of\s*:',
         re.IGNORECASE
     ),
+    # "from the [word] list below" / "selected/chosen from the [word] list below"
+    # Catches: "from the course list below", "selected from the approved list below", etc.
+    re.compile(
+        r'\bfrom\s+(?:(?:a|the)\s+)?(?:\w+\s+)?lists?\s+below\b',
+        re.IGNORECASE
+    ),
+    # "at least N credit hours [of/from ...]" — credit-based pool header
+    # Catches: "At least six credit hours of approved public policy electives"
+    re.compile(
+        r'\bat\s+least\s+(?:\w+|\d+)\s+credit\s+hours?\b',
+        re.IGNORECASE
+    ),
+    # "N credit hours [of/from ...]" — pure credit-based header without leading count
+    re.compile(
+        r'^(?:\d+(?:\.\d+)?|\w+)\s+credit\s+hours?\b',
+        re.IGNORECASE
+    ),
 ]
 
 
@@ -481,22 +498,60 @@ def assemble_section(section, rule_parser_fn):
 
                 list_options = valid_codes_only(list_options)
                 if list_options:
-                    count = extract_count_from_text(text) or 1
-                    # Clamp to actual option count: a "two courses" header that only
-                    # captures one course before the next rule_text breaks the scan
-                    # means the intent is "take this one required course" (the second
-                    # is handled by a separate following group).
-                    count = min(count, len(list_options))
-                    group = {
-                        'id': next_id('list', text),
-                        'description': text,
-                        'type': 'explicit',
-                        'courses_required': count,
-                        'options': list_options,
-                        'rule': None
-                    }
-                    if row.get('hours'):
-                        group['credits_required'] = row['hours']
+                    # Detect credit-hour headers so we can set credits_required and
+                    # derive a sensible courses_required (credit_hours ÷ 3).
+                    _credits_header_m = re.search(
+                        r'\b(\d+(?:\.\d+)?)\s+credit\s+hours?\b'
+                        r'|(?:at\s+least\s+)?(one|two|three|four|five|six|seven|eight|nine|ten)'
+                        r'\s+credit\s+hours?\b',
+                        text, re.IGNORECASE
+                    )
+                    _credits_from_header: int | None = None
+                    if _credits_header_m:
+                        raw = _credits_header_m.group(1) or _credits_header_m.group(2)
+                        _wn = {'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,
+                               'seven':7,'eight':8,'nine':9,'ten':10}
+                        try:
+                            _credits_from_header = int(float(raw)) if raw and raw[0].isdigit() \
+                                else _wn.get((raw or '').lower())
+                        except (ValueError, TypeError):
+                            pass
+
+                    if _credits_from_header:
+                        # Credit-based header: set credits_required as the authoritative
+                        # constraint.  courses_required is set to the credit-hours ÷ 3
+                        # approximation so schema checks pass; the requirements_checker
+                        # uses credits_required when present and ignores courses_required.
+                        # We do NOT go through the reindex_choice_groups deletion path:
+                        # that path only removes credits_required when courses_required is
+                        # set as a primary (non-derived) value, so we rely on the checker's
+                        # own credits_needed branch instead.
+                        group = {
+                            'id': next_id('list', text),
+                            'description': text,
+                            'type': 'explicit',
+                            'courses_required': max(1, _credits_from_header // 3),
+                            'credits_required': _credits_from_header,
+                            'options': list_options,
+                            'rule': None
+                        }
+                    else:
+                        count = extract_count_from_text(text) or 1
+                        # Clamp to actual option count: a "two courses" header that only
+                        # captures one course before the next rule_text breaks the scan
+                        # means the intent is "take this one required course" (the second
+                        # is handled by a separate following group).
+                        count = min(count, len(list_options))
+                        group = {
+                            'id': next_id('list', text),
+                            'description': text,
+                            'type': 'explicit',
+                            'courses_required': count,
+                            'options': list_options,
+                            'rule': None
+                        }
+                        if row.get('hours'):
+                            group['credits_required'] = row['hours']
                     choice_groups.append(group)
                     i = j
                 else:

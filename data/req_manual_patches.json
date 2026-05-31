@@ -385,7 +385,7 @@
       "None": {
         "inject_choice_groups": [
           {
-            "id": "upper_div_electives_1",
+            "id": "upper_div_electives_none_1",
             "description": "Four additional upper-division electives (required when no concentration is chosen)",
             "type": "explicit",
             "courses_required": 4,

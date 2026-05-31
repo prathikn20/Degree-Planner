@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.scraper.req_scraper import scrape_major_requirements
 from src.scraper.req_assembler import assemble_section, classify_section_type, is_list_header
-from src.scraper.llm_req_parser import parse_rule_text
+from src.scraper.llm_req_parser import parse_rule_text, parse_rule_text_regex
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -469,11 +469,6 @@ def reindex_choice_groups(groups: list) -> list:
     at choice_1 / list_1 / rule_1.  When their groups are concatenated into one
     base_requirements list the duplicates would silently mask each other in the
     requirements checker (which keys satisfied/unsatisfied by group id).
-
-    Also drops `credits_required` from groups that already have a meaningful
-    `courses_required` — the assembler can set both when the list-header row has
-    an hours column, but the requirements checker treats credits_required as
-    authoritative and would ignore courses_required.
     """
     seen: dict[str, int] = {}
     result = []
@@ -482,11 +477,6 @@ def reindex_choice_groups(groups: list) -> list:
         seen[base] = seen.get(base, 0) + 1
         g = dict(g)                                    # shallow copy — don't mutate original
         g['id'] = f"{base}_{seen[base]}"
-
-        # If both counts are present, keep only courses_required (count-based wins)
-        if g.get('courses_required') and g.get('credits_required'):
-            del g['credits_required']
-
         result.append(g)
     return result
 
@@ -582,7 +572,17 @@ def propagate_reference_lists(sections: list) -> list:
 
 
 _SEE_BELOW_RE = re.compile(
-    r'\bsee\s+(lists?|requirements?|the\s+(?:lists?|electives?))\s+below\b',
+    r'(?:'
+    # "see list(s)/requirements below"
+    r'\bsee\s+(?:lists?|requirements?|the\s+(?:lists?|electives?))\s+below\b'
+    # "from the list below" / "from the requirements below"
+    r'|\bfrom\s+(?:the\s+)?(?:lists?|requirements?)\s+below\b'
+    # "from (a/the) [optional-word] list(s) below" — catches "from the course list below",
+    # "from the approved list below", "from the following list below", etc.
+    r'|\bfrom\s+(?:(?:a|the)\s+)?(?:\w+\s+)?lists?\s+below\b'
+    # pool references embedded in "selected/chosen from the [word] list below"
+    r'|\b(?:selected|chosen)\s+from\s+(?:the\s+)?(?:\w+\s+)?lists?\s+below\b'
+    r')',
     re.IGNORECASE
 )
 def inject_cross_section_pools(sections: list) -> list:
@@ -610,9 +610,19 @@ def inject_cross_section_pools(sections: list) -> list:
         for j, row in enumerate(rows):
             if row['kind'] != 'rule_text':
                 continue
-            if not _SEE_BELOW_RE.search(row['text']):
-                continue
-            if not is_list_header(row['text']):
+
+            is_see_below  = bool(_SEE_BELOW_RE.search(row['text']))
+            is_list_hdr   = is_list_header(row['text'])
+            is_credits_rule = bool(re.search(
+                r'\bat\s+least\s+(?:\w+|\d+(?:\.\d+)?)\s+credit\s+hours?\b'
+                r'|\b\d+(?:\.\d+)?\s+credit\s+hours?\s+of\b',
+                row['text'], re.IGNORECASE
+            ))
+
+            # Trigger injection when:
+            #   A) explicit "see list/from list below" + is_list_header (normal path)
+            #   B) credits-based rule + is_list_header (e.g. "At least 6 credit hours of …")
+            if not ((is_see_below and is_list_hdr) or (is_credits_rule and is_list_hdr)):
                 continue
 
             # If course rows already follow in the same section, nothing to inject
@@ -740,16 +750,25 @@ def make_cached_rule_parser(req_cache: dict, model_name: str):
 
 def make_no_llm_rule_parser(skipped_log: dict, current_track: list):
     """
-    Returns a stub rule parser that logs skipped rule texts instead of calling
-    the LLM.  current_track is a one-element list so the closure can see the
-    track_id set by the outer loop without rebinding.
+    Returns a rule parser that first tries the regex-based parser (no LLM needed)
+    and only logs a rule as skipped when regex cannot handle it.
+
+    current_track is a one-element list so the closure can see the track_id set
+    by the outer loop without rebinding.
     """
     def stub(text: str):
+        # Try the regex parser first — handles most "N DEPT courses X or higher"
+        # patterns without any LLM call.
+        result = parse_rule_text_regex(text)
+        if result is not None:
+            return result
+
+        # Regex couldn't parse it — log and skip.
         track_id = current_track[0]
         skipped_log.setdefault(track_id, [])
         if text not in skipped_log[track_id]:
             skipped_log[track_id].append(text)
-        logger.info(f"  [no-llm] Skipping rule text: {text[:80]}")
+        logger.info("  [no-llm] Skipping rule text: %s", text[:80])
         return None
 
     return stub

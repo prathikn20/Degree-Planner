@@ -389,6 +389,105 @@ def select_courses_globally(
     return {t: (remaining_out[t], fulfillment_out[t]) for t in remaining_out}
 
 
+def build_selection_avoid(catalog: dict, assumed: list, avoid: list) -> list:
+    """Return an avoid list for select_courses_globally that blocks all courses of
+    a first-year program type when the student has already completed one of that type.
+
+    UNC allows each student exactly ONE FY-SEMINAR enrollment and ONE FY-LAUNCH
+    enrollment.  If *assumed* (completed + in-progress) already contains a course
+    with the relevant attribute, the selection pass must never recommend another —
+    not even for an FC or INTERDISCIPLINARY slot — because the student literally
+    cannot enroll in a second FY-SEMINAR or FY-LAUNCH course.
+    """
+    extended = list(avoid)
+    for fy_attr in ("FY-SEMINAR", "FY-LAUNCH"):
+        if any(fy_attr in catalog.get(c, {}).get("attributes", []) for c in assumed):
+            blocked = {c for c in catalog if fy_attr in catalog[c].get("attributes", [])}
+            extended = list(set(extended) | blocked)
+    return extended
+
+
+def dedup_fy_seminar(
+    all_remaining: set,
+    audit:         dict,
+    majors_to_check: list,
+    requirements:  dict,
+    catalog:       dict,
+    assumed:       list,
+    gen_ed_track:  str = "UNC_General_Education",
+) -> set:
+    """Enforce the UNC 'one per career' rules for FY-SEMINAR and FY-LAUNCH programs.
+
+    FY-SEMINAR (fulfillment-aware):
+      Only courses whose fulfillment label matches the FY-SEMINAR slot are subject
+      to dedup.  Courses assigned to other requirements (INTERDISCIPLINARY, FC-NATSCI,
+      …) are left untouched — this fixed Bug 1 where IDST89 (FY-SEMINAR +
+      INTERDISCIPLINARY) was removed because it had fewer attributes than a
+      co-selected FY-SEMINAR course.
+
+    FY-LAUNCH (attribute-count sort):
+      FY-LAUNCH has no dedicated requirement slot; the greedy selector may assign
+      multiple FY-LAUNCH courses to different FC slots.  Keep the most
+      attribute-rich one (maximises gen-ed overlap from one enrollment) and discard
+      the rest.  When the student has already completed a FY-LAUNCH course, every
+      FY-LAUNCH course in remaining is discarded.
+    """
+    # ── FY-SEMINAR ────────────────────────────────────────────────────────────
+    assumed_fy_taken = any(
+        "FY-SEMINAR" in catalog.get(c, {}).get("attributes", [])
+        for c in assumed
+    )
+
+    combined_fm: dict[str, str] = {}
+    for m in majors_to_check:
+        for c, d in audit[m["track"]].get("fulfillment_map", {}).items():
+            if c not in combined_fm:
+                combined_fm[c] = d
+
+    fy_group_desc = next(
+        (g.get("description") or g["id"]
+         for g in requirements.get(gen_ed_track, {})
+                              .get("base_requirements", {})
+                              .get("choice_groups", [])
+         if g["id"] == "FY-SEMINAR"),
+        "FY-SEMINAR",
+    )
+
+    fy_for_slot = sorted(
+        [c for c in all_remaining
+         if "FY-SEMINAR" in catalog.get(c, {}).get("attributes", [])
+         and combined_fm.get(c) == fy_group_desc],
+        key=lambda c: -len(catalog.get(c, {}).get("attributes", [])),
+    )
+
+    if assumed_fy_taken:
+        for c in fy_for_slot:
+            all_remaining.discard(c)
+    else:
+        for c in fy_for_slot[1:]:
+            all_remaining.discard(c)
+
+    # ── FY-LAUNCH ─────────────────────────────────────────────────────────────
+    assumed_fl_taken = any(
+        "FY-LAUNCH" in catalog.get(c, {}).get("attributes", [])
+        for c in assumed
+    )
+
+    fl_in_remaining = sorted(
+        [c for c in all_remaining if "FY-LAUNCH" in catalog.get(c, {}).get("attributes", [])],
+        key=lambda c: -len(catalog.get(c, {}).get("attributes", [])),
+    )
+
+    if assumed_fl_taken:
+        for c in fl_in_remaining:
+            all_remaining.discard(c)
+    else:
+        for c in fl_in_remaining[1:]:
+            all_remaining.discard(c)
+
+    return all_remaining
+
+
 def compute_in_degrees(graph):
     in_degree = {course: 0 for course in graph}
     for course in graph:
