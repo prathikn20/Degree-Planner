@@ -40,6 +40,113 @@ def _is_explicit_rule(text):
 # Strict course code validator. Reject anything else.
 COURSE_CODE_RE = re.compile(r'^[A-Z]{2,5}\d{2,4}[A-Z]?$')
 
+# ── Semantic ID generation ────────────────────────────────────────────────────
+
+_ID_STOP = frozenset({
+    'the','and','or','of','to','a','an','in','from','for','with','at','by',
+    'is','are','be','was','that','this','which','have','has','not','see','list',
+    'below','above','following','courses','course','credit','hours','hour',
+    'total','including','required','students','also','take','must','may','can',
+    'least','most','more','chosen','one','two','three','four','five','six',
+    'seven','eight','nine','ten','additional','each','any','all','both',
+    'either','where','select','choose','complete','fulfill','following',
+    'section','area','program','major','minor','department',
+})
+
+_TYPE_WORDS = [
+    ('upper.?division|upper.?level', 'upper_div'),
+    (r'\belective', 'electives'),
+    (r'\bgateway\b', 'gateway'),
+    (r'\bseminar\b|fys\b|first.year seminar', 'seminar'),
+    (r'\bcapstone\b|\bthesis\b|\bsenior project\b', 'capstone'),
+    (r'\bresearch\b', 'research'),
+    (r'\bfoundation', 'foundation'),
+    (r'\blab\b|\blaboratory\b', 'lab'),
+    (r'\bconcentration\b', 'concentration'),
+    (r'\bcalculus\b|\bcalc\b', 'calculus'),
+    (r'\bstatistics?\b|\bstatistical\b', 'statistics'),
+    (r'\bprogramming\b', 'programming'),
+    (r'\bscience\b', 'science'),
+    (r'\bcore\b', 'core'),
+    (r'\bwriting\b', 'writing'),
+    (r'\bmath\b|mathematics', 'math'),
+]
+
+
+def _description_slug(description: str, block_title: str = '') -> str:
+    """Convert a requirement description into a short, readable slug for use as a group ID."""
+    text = description.strip()
+
+    # Strip exclusion clauses before any pattern matching
+    clean = re.sub(r'\(?\s*excluding\b.*', '', text, flags=re.IGNORECASE).strip()
+    clean_lower = clean.lower()
+
+    # ── Priority 1: DEPT + level number (highest signal) ──────────────────────
+
+    # 1a: "DEPT [words] numbered [above] NNN"
+    #     Catches: "COMP courses numbered 420", "COMP elective courses numbered 420"
+    dept_numbered = re.search(
+        r'\b([A-Z]{2,5})\b.{0,30}\bnumbered?\s+(?:above\s+)?(\d{3})', clean
+    )
+    if dept_numbered:
+        dept, num = dept_numbered.group(1).lower(), dept_numbered.group(2)
+        return f"{dept}_{num}_electives"
+
+    # 1b: "DEPT (NNN or higher)" / "DEPT NNN or higher/above"
+    dept_or_higher = re.search(
+        r'\b([A-Z]{2,5})\b.{0,10}[(\s]*(\d{3})\s*or\s*(?:higher|above)', clean
+    )
+    if dept_or_higher:
+        dept, num = dept_or_higher.group(1).lower(), dept_or_higher.group(2)
+        return f"{dept}_{num}_electives"
+
+    # 1c: "DEPT [words] at the NNN level" / "DEPT NNN level"
+    dept_at_level = re.search(
+        r'\b([A-Z]{2,5})\b.{0,30}\bat\s+the\s+(\d{3})\s*[–-]?(?:\d{3})?\s*level', clean
+    )
+    if not dept_at_level:
+        dept_at_level = re.search(r'\b([A-Z]{2,5})\b.{0,10}\s(\d{3})\s*-?\s*level', clean)
+    if dept_at_level:
+        dept, num = dept_at_level.group(1).lower(), dept_at_level.group(2)
+        return f"{dept}_{num}_electives"
+
+    # 1d: Inline catalog link "DEPT NNN | Title"
+    #     Catches: "MATH 233 | Calculus of Functions"
+    inline_course = re.search(r'\b([A-Z]{2,5})\s+(\d{3}[A-Z]?)\s*\|', clean)
+    if inline_course:
+        dept, num = inline_course.group(1).lower(), inline_course.group(2)
+        return f"{dept}_{num}"
+
+    # ── Priority 2: DEPT + semantic type word ──────────────────────────────────
+    NON_DEPT = {'OR', 'AND', 'NOT', 'FOR', 'THE', 'WITH', 'FROM', 'THAT',
+                'ALL', 'ANY', 'ONE', 'TWO', 'BUT', 'SEE', 'MAY', 'CAN', 'ARE'}
+    depts = [d for d in re.findall(r'\b([A-Z]{2,5})\b', clean) if d not in NON_DEPT]
+    dept_slug = depts[0].lower() if depts else ''
+
+    type_word = ''
+    for pattern, label in _TYPE_WORDS:
+        if re.search(pattern, clean_lower):
+            type_word = label
+            break
+    if not type_word:
+        # Exclude dept_slug itself and add 'credits' to stop words for fallback
+        extra_stop = _ID_STOP | {'credits', 'credit', 'level', dept_slug}
+        words = re.split(r'[^a-z0-9]+', clean_lower)
+        kws = [w for w in words if len(w) > 3 and w not in extra_stop]
+        type_word = kws[0] if kws else 'electives'
+
+    if dept_slug:
+        return f"{dept_slug}_{type_word}"
+
+    # ── Priority 3: meaningful words from block title + type word ──────────────
+    if block_title:
+        title_words = re.split(r'[^a-z0-9]+', block_title.lower())
+        title_kw = [w for w in title_words if len(w) > 2 and w not in _ID_STOP]
+        if title_kw:
+            return f"{'_'.join(title_kw[:2])}_{type_word}"
+
+    return type_word or 'requirement'
+
 # Word-to-number mapping for natural language counts
 WORD_NUMBERS = {
     'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
@@ -254,11 +361,14 @@ def assemble_section(section, rule_parser_fn):
 
     required_courses = []
     choice_groups = []
-    group_counter = [0]
+    _slug_counts: dict[str, int] = {}
 
-    def next_id(prefix):
-        group_counter[0] += 1
-        return f"{prefix}_{group_counter[0]}"
+    def next_id(_unused_prefix: str, description: str = '') -> str:
+        """Return a human-readable, collision-free group ID."""
+        base = _description_slug(description, title) if description.strip() else _unused_prefix
+        _slug_counts[base] = _slug_counts.get(base, 0) + 1
+        n = _slug_counts[base]
+        return base if n == 1 else f"{base}_{n}"
 
     i = 0
     while i < len(rows):
@@ -276,9 +386,10 @@ def assemble_section(section, rule_parser_fn):
             if alternatives:
                 all_options = valid_codes_only(row['codes'] + alternatives)
                 if all_options:
+                    desc = row.get('text', '')
                     choice_groups.append({
-                        'id': next_id('choice'),
-                        'description': row.get('text', ''),
+                        'id': next_id('choice', desc),
+                        'description': desc,
                         'type': 'explicit',
                         'courses_required': 1,
                         'options': all_options,
@@ -292,9 +403,10 @@ def assemble_section(section, rule_parser_fn):
                 if len(codes) > 1:
                     numbers = {re.sub(r'^[A-Z]+', '', c) for c in codes}
                     if len(numbers) == 1:
+                        desc = row.get('text', '')
                         choice_groups.append({
-                            'id': next_id('choice'),
-                            'description': row.get('text', ''),
+                            'id': next_id('choice', desc),
+                            'description': desc,
                             'type': 'explicit',
                             'courses_required': 1,
                             'options': codes,
@@ -371,7 +483,7 @@ def assemble_section(section, rule_parser_fn):
                 if list_options:
                     count = extract_count_from_text(text) or 1
                     group = {
-                        'id': next_id('list'),
+                        'id': next_id('list', text),
                         'description': text,
                         'type': 'explicit',
                         'courses_required': count,
@@ -386,7 +498,7 @@ def assemble_section(section, rule_parser_fn):
                     # List header with no following courses — treat as rule text
                     parsed = rule_parser_fn(text)
                     if parsed:
-                        parsed['id'] = next_id('rule')
+                        parsed['id'] = next_id('rule', text)
                         choice_groups.append(parsed)
                     i += 1
             else:
@@ -414,9 +526,10 @@ def assemble_section(section, rule_parser_fn):
                         j += 1
                     cat_options = valid_codes_only(cat_options)
                     if cat_options:
+                        cat_desc = stripped.rstrip(':').strip()
                         choice_groups.append({
-                            'id': next_id('list'),
-                            'description': stripped.rstrip(':').strip(),
+                            'id': next_id('list', cat_desc),
+                            'description': cat_desc,
                             'type': 'explicit',
                             'courses_required': 1,
                             'options': cat_options,
@@ -431,7 +544,7 @@ def assemble_section(section, rule_parser_fn):
                 elif _is_explicit_rule(text):
                     parsed = rule_parser_fn(text)
                     if parsed:
-                        parsed['id'] = next_id('rule')
+                        parsed['id'] = next_id('rule', text)
                         choice_groups.append(parsed)
                     i += 1
                 else:

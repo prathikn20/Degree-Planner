@@ -214,28 +214,34 @@ class TestEconomicsBS:
 class TestBiologyBS:
     TRACK = "Biology_BS"
 
+    def _find_group(self, cg, keyword):
+        return next((g for g in cg if keyword.lower() in g.get("description","").lower()), None)
+
     def test_organismal_list_is_explicit_with_options(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule1 = next((g for g in cg if g["id"] == "rule_1"), None)
-        assert rule1 is not None, "rule_1 should exist"
-        assert rule1["type"] == "explicit", "rule_1 should be explicit (not rule_based stub)"
-        assert len(rule1["options"]) >= 15, f"Expected >=15 organismal courses, got {len(rule1['options'])}"
-        assert "BIOL271" in rule1["options"]
-        assert "BIOL579" in rule1["options"]
+        g = self._find_group(cg, "organismal")
+        assert g is not None, "Organismal diversity group should exist"
+        assert g["type"] == "explicit", "Should be explicit (not a null-rule stub)"
+        assert len(g["options"]) >= 15, f"Expected >=15 organismal courses, got {len(g['options'])}"
+        assert "BIOL271" in g["options"]
+        assert "BIOL579" in g["options"]
 
     def test_organismal_course_satisfies_rule1(self, reqs, catalog):
+        cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
+        g = self._find_group(cg, "organismal")
+        assert g is not None
         base_req = reqs[self.TRACK]["base_requirements"]["required_courses"]
-        completed = base_req + ["BIOL271"]  # organismal course
+        completed = base_req + ["BIOL271"]
         r = _check(reqs, catalog, self.TRACK, completed)
-        assert "rule_1" in r["satisfied"], "BIOL271 should satisfy the organismal diversity requirement"
+        assert g["id"] in r["satisfied"], "BIOL271 should satisfy the organismal diversity requirement"
 
     def test_allied_sciences_list_has_options(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule3 = next((g for g in cg if g["id"] == "rule_3"), None)
-        assert rule3 is not None, "rule_3 should exist"
-        assert rule3["type"] == "explicit"
-        assert len(rule3["options"]) >= 30, f"Expected >=30 allied science options, got {len(rule3['options'])}"
-        assert rule3["courses_required"] == 2
+        g = self._find_group(cg, "allied science")
+        assert g is not None, "Allied sciences group should exist"
+        assert g["type"] == "explicit"
+        assert len(g["options"]) >= 30, f"Expected >=30 allied science options, got {len(g['options'])}"
+        assert g["courses_required"] == 2
 
 
 class TestStatisticsBS:
@@ -243,49 +249,57 @@ class TestStatisticsBS:
 
     def test_group_a_b_electives_are_explicit(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule2 = next((g for g in cg if g["id"] == "rule_2"), None)
-        assert rule2 is not None, "rule_2 should exist"
-        assert rule2["type"] == "explicit"
-        assert "STOR471" in rule2["options"]   # Group A
-        assert "COMP421" in rule2["options"]   # Group B
-        assert rule2["courses_required"] == 3
+        g = next((x for x in cg
+                  if x.get("type") == "explicit" and "STOR471" in (x.get("options") or [])), None)
+        assert g is not None, "Group A/B electives group with STOR471 should exist"
+        assert "COMP421" in g["options"]
+        assert g["courses_required"] == 3
 
     def test_stor500_level_rule_satisfied(self, reqs, catalog):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule1 = next((g for g in cg if g["id"] == "rule_1"), None)
-        if rule1 is None:
-            pytest.skip("rule_1 not present in Stats BS")
+        # Find the STOR 500-level rule_based group
+        stor500 = next((g for g in cg
+                        if g.get("type") == "rule_based"
+                        and (g.get("rule") or {}).get("department") == "STOR"
+                        and (g.get("rule") or {}).get("min_number", 0) >= 500), None)
+        if stor500 is None:
+            pytest.skip("STOR 500-level rule_based group not present in Stats BS")
         base_req = reqs[self.TRACK]["base_requirements"]["required_courses"]
         completed = base_req + ["STOR512"]
         r = _check(reqs, catalog, self.TRACK, completed)
-        assert "rule_1" in r["satisfied"], "STOR512 should satisfy STOR 500-level requirement"
+        assert stor500["id"] in r["satisfied"], "STOR512 should satisfy STOR 500-level requirement"
 
 
 class TestBiomedicalEngineeringBS:
     TRACK = "Biomedical_Engineering_BS"
 
+    def _find_group(self, cg, keyword):
+        return next((g for g in cg if keyword.lower() in g.get("description","").lower()), None)
+
     def test_gateway_electives_are_explicit(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule1 = next((g for g in cg if g["id"] == "rule_1"), None)
-        assert rule1 is not None
-        assert rule1["type"] == "explicit"
-        assert "BMME315" in rule1["options"]
-        assert rule1["courses_required"] == 3
+        g = self._find_group(cg, "gateway")
+        assert g is not None, "Gateway electives group should exist"
+        assert g["type"] == "explicit"
+        assert "BMME315" in g["options"]
+        assert g["courses_required"] == 3
 
     def test_stem_elective_is_explicit(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule2 = next((g for g in cg if g["id"] == "rule_2"), None)
-        assert rule2 is not None
-        assert rule2["type"] == "explicit"
-        assert "MATH347" in rule2["options"]
-        assert rule2["courses_required"] == 1
+        g = self._find_group(cg, "stem elective")
+        assert g is not None, "STEM elective group should exist"
+        assert g["type"] == "explicit"
+        assert "MATH347" in g["options"]
+        assert g["courses_required"] == 1
 
     def test_specialty_electives_are_explicit(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule3 = next((g for g in cg if g["id"] == "rule_3"), None)
-        assert rule3 is not None
-        assert rule3["type"] == "explicit"
-        assert rule3["courses_required"] == 4
+        # "specialty" appears in gateway description too — match on courses_required=4
+        g = next((x for x in cg if "specialty" in x.get("description","").lower()
+                  and x.get("courses_required", 0) == 4), None)
+        assert g is not None, "Specialty electives group (req=4) should exist"
+        assert g["type"] == "explicit"
+        assert g["courses_required"] == 4
 
 
 class TestWomensGenderStudiesBA:
@@ -293,52 +307,54 @@ class TestWomensGenderStudiesBA:
 
     def test_minority_course_group_is_explicit_with_real_options(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule1 = next((g for g in cg if g["id"] == "rule_1"), None)
-        assert rule1 is not None
-        assert rule1["type"] == "explicit", "rule_1 should be explicit, not a null-rule stub"
-        assert len(rule1["options"]) >= 40, f"Expected >=40 minority courses, got {len(rule1['options'])}"
-        assert rule1["courses_required"] == 1
+        g = next((x for x in cg if "minority" in x.get("description","").lower()
+                  or "non-western" in x.get("description","").lower()), None)
+        assert g is not None, "Minority/non-Western women group should exist"
+        assert g["type"] == "explicit", "Should be explicit, not a null-rule stub"
+        assert len(g["options"]) >= 40, f"Expected >=40 minority courses, got {len(g['options'])}"
+        assert g["courses_required"] == 1
 
     def test_interdisciplinary_group_has_options(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule2 = next((g for g in cg if g["id"] == "rule_2"), None)
-        assert rule2 is not None
-        assert rule2["type"] == "explicit"
-        assert len(rule2["options"]) >= 100
-        assert rule2["courses_required"] == 3
+        # Use courses_required=3 to distinguish from the "fourth course" group (req=1)
+        g = next((x for x in cg if "interdisciplinary" in x.get("description","").lower()
+                  and x.get("courses_required", 0) == 3), None)
+        assert g is not None, "Interdisciplinary perspectives group (req=3) should exist"
+        assert g["type"] == "explicit"
+        assert len(g["options"]) >= 100
+        assert g["courses_required"] == 3
 
 
 class TestBusinessAdministrationBSBA:
     TRACK = "Business_Administration_BSBA"
 
-    def test_outside_kf_rule_excludes_busi(self, reqs, catalog):
+    def _outside_kf_group(self, reqs):
         cg = reqs[self.TRACK]["base_requirements"]["choice_groups"]
-        rule1 = next((g for g in cg if g["id"] == "rule_1"), None)
-        assert rule1 is not None
-        assert rule1.get("type") == "rule_based"
-        rule = rule1.get("rule") or {}
+        return next((g for g in cg if g.get("type") == "rule_based"
+                     and (g.get("rule") or {}).get("exclude_department") == "BUSI"), None)
+
+    def test_outside_kf_rule_excludes_busi(self, reqs, catalog):
+        g = self._outside_kf_group(reqs)
+        assert g is not None, "Outside Kenan-Flagler rule_based group should exist"
+        rule = g.get("rule") or {}
         assert rule.get("exclude_department") == "BUSI", \
             "Outside KF rule should exclude BUSI department"
 
     def test_non_busi_courses_satisfy_rule(self, reqs, catalog):
         from src.planner.requirements_checker import get_rule_based_options
         base_req = reqs[self.TRACK]["base_requirements"]["required_courses"]
-        rule1 = next((g for g in reqs[self.TRACK]["base_requirements"]["choice_groups"]
-                      if g.get("id") == "rule_1"), None)
-        if rule1 is None:
-            pytest.skip("rule_1 not in BSBA")
-        # Get all options that satisfy the exclude_department=BUSI rule
-        opts = get_rule_based_options(rule1["rule"], catalog)
-        # Also find which options are consumed by other groups to avoid overlap
+        g = self._outside_kf_group(reqs)
+        if g is None:
+            pytest.skip("Outside-KF rule_based group not in BSBA")
+        opts = get_rule_based_options(g["rule"], catalog)
         other_group_opts = set()
-        for g in reqs[self.TRACK]["base_requirements"]["choice_groups"]:
-            if g["id"] != "rule_1":
-                other_group_opts.update(g.get("options") or [])
-        # Pick 5 that won't be consumed by other groups first
+        for other in reqs[self.TRACK]["base_requirements"]["choice_groups"]:
+            if other["id"] != g["id"]:
+                other_group_opts.update(other.get("options") or [])
         safe_outside = [c for c in opts if c not in base_req and c not in other_group_opts][:5]
         assert len(safe_outside) == 5, f"Need 5 safe non-BUSI courses, found: {safe_outside}"
         r = _check(reqs, catalog, self.TRACK, base_req + safe_outside)
-        assert "rule_1" in r["satisfied"], f"5 non-BUSI courses {safe_outside} should satisfy outside KF rule"
+        assert g["id"] in r["satisfied"], f"5 non-BUSI courses {safe_outside} should satisfy outside KF rule"
 
 
 # ── 4. Rule-based checker resolves correctly ──────────────────────────────────

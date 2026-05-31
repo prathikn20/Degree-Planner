@@ -23,7 +23,8 @@
             "BIOL479",
             "BIOL579"
           ],
-          "courses_required": 1
+          "courses_required": 1,
+          "_match_description": "An organismal structure and diversity course"
         },
         "rule_3": {
           "type": "explicit",
@@ -72,7 +73,8 @@
             "PSYC230",
             "SPHS570"
           ],
-          "courses_required": 2
+          "courses_required": 2,
+          "_match_description": "A choice of two additional allied sciences electives"
         }
       }
     }
@@ -93,7 +95,8 @@
             "PSYC250",
             "PSYC260"
           ],
-          "courses_required": 5
+          "courses_required": 5,
+          "_match_description": "One course below 400 from each of the following program areas"
         },
         "rule_3": {
           "type": "explicit",
@@ -141,7 +144,8 @@
             "NSCI695",
             "NSCI699"
           ],
-          "courses_required": 1
+          "courses_required": 1,
+          "_match_description": "One upper-level course chosen from"
         }
       }
     }
@@ -191,7 +195,8 @@
             "MATH548",
             "MATH566"
           ],
-          "courses_required": 3
+          "courses_required": 3,
+          "_match_description": "Three additional courses from either Group A or Group B"
         }
       }
     }
@@ -212,7 +217,8 @@
             "BMME375",
             "BMME385"
           ],
-          "courses_required": 3
+          "courses_required": 3,
+          "_match_description": "Take three gateway electives"
         },
         "rule_2": {
           "type": "explicit",
@@ -231,7 +237,8 @@
             "PHYS381",
             "PHYS461"
           ],
-          "courses_required": 1
+          "courses_required": 1,
+          "_match_description": "STEM elective"
         },
         "rule_3": {
           "type": "explicit",
@@ -254,7 +261,8 @@
             "BMME585",
             "MATH528"
           ],
-          "courses_required": 4
+          "courses_required": 4,
+          "_match_description": "Four specialty electives"
         }
       }
     }
@@ -271,7 +279,8 @@
             "min_credits": null,
             "exclude": []
           },
-          "courses_required": 5
+          "courses_required": 5,
+          "_match_description": "At least five courses outside the Kenan"
         }
       }
     }
@@ -293,7 +302,8 @@
               "COMP691H",
               "COMP692H"
             ]
-          }
+          },
+          "_match_description": "Two courses"
         }
       }
     }

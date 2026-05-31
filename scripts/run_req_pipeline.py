@@ -734,7 +734,15 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
             len(concentrations) - 1,  # exclude the implicit 'None'
         )
 
+    # Preserve manually-maintained entries that are not in TARGET_TRACKS.
+    old_data = load_json_file(OUTPUT_PATH)
+    for preserved in ('UNC_General_Education', 'Physics_BS_Astrophysics'):
+        if preserved not in master_reqs and preserved in old_data:
+            master_reqs[preserved] = old_data[preserved]
+            logger.info("Preserved manually-maintained entry: %s", preserved)
+
     # Apply manual patches so hand-curated explicit lists survive --force reruns.
+    # Matching strategy: try group ID first, then fall back to description substring.
     manual_patches = load_json_file(MANUAL_PATCHES_PATH)
     if manual_patches:
         applied = 0
@@ -744,15 +752,24 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
             for group_id, patch in (patch_data.get('base_requirements', {})
                                             .get('choice_group_patches', {}).items()):
                 cg = master_reqs[track_id]['base_requirements']['choice_groups']
-                for g in cg:
-                    if g['id'] == group_id:
-                        g['type'] = patch['type']
-                        g['options'] = patch.get('options', [])
-                        g['courses_required'] = patch.get('courses_required', g['courses_required'])
-                        g['rule'] = patch.get('rule', None)
-                        g.pop('credits_required', None)
-                        applied += 1
-                        break
+                match_desc = patch.get('_match_description', '')
+
+                target = next((g for g in cg if g['id'] == group_id), None)
+                if target is None and match_desc:
+                    # Fallback: find group whose description contains the match string
+                    target = next(
+                        (g for g in cg if match_desc.lower() in g.get('description', '').lower()),
+                        None
+                    )
+
+                if target:
+                    target['type'] = patch['type']
+                    target['options'] = patch.get('options', [])
+                    target['courses_required'] = patch.get('courses_required', target['courses_required'])
+                    target['rule'] = patch.get('rule', None)
+                    target.pop('credits_required', None)
+                    applied += 1
+
         if applied:
             logger.info("Applied %d manual patches from %s", applied, MANUAL_PATCHES_PATH)
             save_json_file(master_reqs, OUTPUT_PATH)
