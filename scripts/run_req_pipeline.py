@@ -10,7 +10,7 @@ import re
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.scraper.req_scraper import scrape_major_requirements
-from src.scraper.req_assembler import assemble_section, classify_section_type, is_list_header
+from src.scraper.req_assembler import assemble_section, classify_section_type, is_list_header, _is_elective_pool
 from src.scraper.llm_req_parser import parse_rule_text, parse_rule_text_regex
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -778,7 +778,8 @@ SKIPPED_RULES_PATH    = "data/skipped_rules.json"
 MANUAL_PATCHES_PATH   = "data/req_manual_patches.json"
 
 
-def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False):
+def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False,
+                     only_tracks: set | None = None):
     logger.info("Starting Requirements Pipeline  model=%s  output=%s  no_llm=%s",
                 model_name, OUTPUT_PATH, no_llm)
 
@@ -796,7 +797,12 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
 
     for track_id, url in TARGET_TRACKS.items():
         current_track[0] = track_id
-        if not force and track_id in master_reqs:
+        # --tracks N restricts processing and implies --force for those tracks
+        if only_tracks is not None:
+            if track_id not in only_tracks:
+                continue
+            # treat as forced for the listed tracks
+        elif not force and track_id in master_reqs:
             logger.info("Skipping %s (already in output — use --force to reprocess)", track_id)
             continue
 
@@ -844,6 +850,27 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
                     if code not in seen:
                         base_core['required_courses'].append(code)
                         seen.add(code)
+                base_core['choice_groups'].extend(block['choice_groups'])
+            elif b_type == 'additional':
+                # "Additional Requirements" sections (math/science prerequisites).
+                # Required courses in these sections become single-option choice_groups
+                # with is_core=False so they don't count against the 50% core cap.
+                # Choice groups from the section already have is_core=False (set by
+                # assemble_section when block_type == 'additional').
+                seen = {g['id'] for g in base_core['choice_groups']}
+                for code in block['required_courses']:
+                    gid = code  # use the course code as the group ID
+                    if gid not in seen:
+                        base_core['choice_groups'].append({
+                            'id': gid,
+                            'description': code,
+                            'type': 'explicit',
+                            'courses_required': 1,
+                            'options': [code],
+                            'rule': None,
+                            'is_core': False,
+                        })
+                        seen.add(gid)
                 base_core['choice_groups'].extend(block['choice_groups'])
             elif b_type == 'concentration':
                 conc_blocks.append(block)
@@ -936,6 +963,12 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False)
                 existing_ids = {g['id'] for g in concs[conc_id]['choice_groups']}
                 for group in conc_patch.get('inject_choice_groups', []):
                     if group['id'] not in existing_ids:
+                        # Ensure is_core is set: use explicit value or infer from description
+                        if 'is_core' not in group:
+                            group = dict(group)
+                            group['is_core'] = not _is_elective_pool(
+                                group.get('description', '')
+                            )
                         concs[conc_id]['choice_groups'].append(group)
                         existing_ids.add(group['id'])
                         applied += 1
@@ -967,5 +1000,8 @@ if __name__ == "__main__":
                         help='Reprocess tracks already present in the output file')
     parser.add_argument('--no-llm', action='store_true',
                         help='Skip LLM rule parsing; log skipped rule texts to data/skipped_rules.json')
+    parser.add_argument('--tracks', nargs='+', metavar='TRACK_ID',
+                        help='Only process these specific track IDs (implies --force for those tracks)')
     args = parser.parse_args()
-    run_req_pipeline(model_name=args.model, force=args.force, no_llm=args.no_llm)
+    run_req_pipeline(model_name=args.model, force=args.force, no_llm=args.no_llm,
+                     only_tracks=set(args.tracks) if args.tracks else None)

@@ -1,0 +1,74 @@
+HARD_CONSTRAINTS_MATRIX.txt
+===============================================================================
+SYSTEM CONSTRAINTS ARCHITECTURE FOR DEGREE PLANNER OPTIMIZATION ENGINE
+===============================================================================
+
+1. INTRA-PROGRAM EXCLUSIVITY CONSTRAINT
+-------------------------------------------------------------------------------
+* Description: A single unique canonical course identity cannot occupy more than 
+  one Demand Slot within the exact same degree program track.
+* Container Course Exception: Independent studies, undergraduate research, or 
+  rotating special topics seminars (e.g., numbers ending in 93, 95, 96, 99 or 
+  matching "is_repeatable": true) are exempt from this binary block. Their 
+  exclusivity is governed by a threshold capacity counter: 
+  Count(Canonical_ID) <= Max_Allowed_Enrollments.
+
+2. TRACK-CONTEXTUALIZED PREREQUISITE SATISFACTION
+-------------------------------------------------------------------------------
+* Description: No course can be scheduled unless at least one valid prerequisite 
+  pathway defined in the catalog is completely satisfied by either the student's 
+  completed credits or other planned courses sequenced in strictly prior terms.
+* Cross-Listing Handling: Prerequisite chains are stored dynamically as a 
+  dictionary mapped to specific track IDs to prevent cross-track prerequisite 
+  bypasses. The engine enforces the strict prerequisite pathway mandated by the 
+  slot's parent Track_ID for major requirements, while allowing a flexible 
+  bracketed "OR" structure for neutral General Education slots.
+
+3. FOCUS CAPACITY (FC) SINGULARITY CONSTRAINT
+-------------------------------------------------------------------------------
+* Description: While any course (including core major requirements, IDST, or 
+  FAD options) can satisfy a General Education Focus Capacity (FC) slot via its 
+  attributes, a single unique canonical course node cannot be assigned to more 
+  than one FC slot simultaneously across the graduation plan.
+* Mathematical Expression: Sum_over_fc_slots(Indicator(Course C assigned)) <= 1
+
+4. THE 50% PROGRAM EXCLUSIVITY RULE (IDENTITY PROTECTION)
+-------------------------------------------------------------------------------
+* Description: For any degree program track P (Major or Minor), the number of 
+  core slots filled by courses unique to P (not shared with any other concurrent 
+  track in the active plan) must be strictly greater than half of the total 
+  core slots demanded by that program.
+* Mathematical Expression: Exclusive_Core_Slots(P) > (Total_Core_Slots(P) / 2)
+* Lockout Mitigation: Mandatory, single-candidate required core course slots 
+  (domain size = 1) where the student has zero elective flexibility are excluded 
+  from the Total_Core_Slots denominator. This prevents small-scale minors from 
+  triggering unresolvable domain collapses due to structural major overlaps.
+
+5. FIRST-YEAR FOUNDATION XOR CONSTRAINT
+-------------------------------------------------------------------------------
+* Description: A student's career graduation plan can contain at most one 
+  introductory foundational first-year course. Enrollment in an FY-SEMINAR and 
+  an FY-LAUNCH are strictly mutually exclusive.
+* Mathematical Expression: Planned(FY-SEMINAR) + Planned(FY-LAUNCH) <= 1
+* Execution: The moment one type is logged as completed or active, the alternative 
+  attribute is permanently purged from all remaining unassigned slot domains.
+
+6. SLOT SUFFICIENCY & REAL-CREDIT ACCUMULATION
+-------------------------------------------------------------------------------
+* Description: Every generated Demand Slot must be fully and mathematically 
+  satisfied by meeting its exact course-count target or minimum credit hour threshold.
+* Variable-Credit Handling: Credit-sufficed elective slots must evaluate the 
+  strict summation of actual assigned credit hours. Variable-credit courses 
+  default to their minimum value during the search unless explicitly overridden 
+  by historical user transcript data to prevent credit miscalculations.
+
+7. LONGEST-PATH TEMPORAL CEILING CONSTRAINT
+-------------------------------------------------------------------------------
+* Description: Prevents the engine from recommending deep, narrow linear 
+  prerequisite chains that are physically impossible to complete within the 
+  student's remaining time horizon.
+* Handling: The engine calculates the longest linear prerequisite chain depth 
+  (max_depth) of the proposed schedule. If max_depth > Remaining_Semesters, 
+  a massive credit penalty is applied, forcing the solver to select a wider, 
+  parallelizable layout of alternative courses.
+===============================================================================

@@ -1,11 +1,7 @@
-def _split_course_id(course_id: str) -> tuple[str, str]:
-    """Return (dept_prefix, digit_string) by collecting leading alpha chars only.
+import copy
 
-    'BUSI691H'  → ('BUSI', '691')  — trailing suffix letter ignored
-    'COMP110'   → ('COMP', '110')
-    'FY-SEMINAR'→ ('FY',   '')     — hyphenated ids handled gracefully
-    'APPL760L'  → ('APPL', '760')
-    """
+
+def _split_course_id(course_id: str) -> tuple[str, str]:
     dept = ""
     for ch in course_id:
         if ch.isalpha():
@@ -35,32 +31,28 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
         return []
 
     valid = []
-    rule_attribute   = rule.get("attribute")
-    rule_dept        = rule.get("department")
+    rule_attribute    = rule.get("attribute")
+    rule_dept         = rule.get("department")
     rule_exclude_dept = rule.get("exclude_department")
-    rule_min_num     = rule.get("min_number") or 0
-    rule_max_num     = rule.get("max_number") or float("inf")
-    rule_exclude     = set(rule.get("exclude") or [])
-    rule_min_cred    = rule.get("min_credits") or 0
+    rule_min_num      = rule.get("min_number") or 0
+    rule_max_num      = rule.get("max_number") or float("inf")
+    rule_exclude      = set(rule.get("exclude") or [])
+    rule_min_cred     = rule.get("min_credits") or 0
 
     for course_id, data in catalog.items():
         if course_id in rule_exclude:
             continue
-
         if rule_attribute:
             rule_attr_lower = rule_attribute.lower()
             if any(rule_attr_lower in attr.lower() for attr in data.get("attributes", [])):
                 valid.append(course_id)
             continue
-
         dept, number_str = _split_course_id(course_id)
         if not number_str:
             continue
         number = int(number_str)
-
         if rule_exclude_dept and dept == rule_exclude_dept:
             continue
-
         if ((not rule_dept or dept == rule_dept) and
                 rule_min_num <= number <= rule_max_num and
                 data.get("credits", 0) >= rule_min_cred):
@@ -81,10 +73,7 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
                 valid.append(virtual_id)
 
     if rule_attribute and not valid:
-        print(
-            f"Warning: attribute rule '{rule_attribute}' matched 0 courses in the catalog. "
-            "Check that the scraper is writing the correct attribute string."
-        )
+        print(f"Warning: attribute rule '{rule_attribute}' matched 0 courses in the catalog.")
 
     return valid
 
@@ -92,25 +81,10 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
 def check_requirements(requirements, catalog, completed, other_majors_courses=None,
                         other_required_courses=None, avoid_courses=None,
                         track_id="COMP_BS", concentration_id="None"):
-    """
-    Evaluate how well *completed* satisfies the requirements for *track_id*.
-
-    Cross-program double-dipping is fully allowed: the same course may satisfy
-    requirements in multiple distinct programs.  Intra-program deduplication is
-    enforced by discarding each consumed course from *available_completed* so it
-    cannot fill a second slot within the same degree.
-
-    *other_majors_courses* and *other_required_courses* are accepted for API
-    compatibility with call sites that pre-date this design, but are not used.
-    """
     avoid_set = set(avoid_courses) if avoid_courses else set()
-
-    # Each program evaluation gets its own consumption pool — courses discarded
-    # here do not affect evaluations of other programs.
     available_completed = set(completed)
     original_completed  = set(completed)
 
-    # Cross-listed normalization: map virtual IDs back to the real completed course.
     virtual_to_real: dict[str, str] = {}
     for c in original_completed:
         for equiv in catalog.get(c, {}).get('cross_listed', []):
@@ -140,7 +114,6 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
         "choice_groups":    base.get("choice_groups",    []) + conc.get("choice_groups",    []),
     }
 
-    # ── Required courses ──────────────────────────────────────────────────────
     for course in program["required_courses"]:
         sat = _get_satisfying_course(course, catalog, available_completed, virtual_to_real)
         if sat:
@@ -154,22 +127,11 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
     required_set = set(program["required_courses"])
 
-    # UNC double-counting pools (all symmetric with one another):
-    #   fys_consumed   — courses that satisfied FY-SEMINAR; each may still
-    #                    count for exactly ONE FC group.
-    #   fad_consumed   — courses that satisfied FAD; each may still count for
-    #                    exactly ONE FC group (NC System policy).
-    #   idst_consumed  — courses that satisfied INTERDISCIPLINARY; each may
-    #                    still count for exactly ONE FC group (and vice versa).
-    #   fc_consumed    — courses that satisfied an FC group; each may still
-    #                    count for FAD or INTERDISCIPLINARY (the reverse direction).
-    # Once a course is pulled from any of these pools it is fully consumed.
     fys_consumed:  set[str] = set()
     fad_consumed:  set[str] = set()
     idst_consumed: set[str] = set()
     fc_consumed:   set[str] = set()
 
-    # ── Choice groups ─────────────────────────────────────────────────────────
     for group in program["choice_groups"]:
         if group.get("options"):
             options = list(group["options"])
@@ -196,16 +158,12 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
         for option in options:
             sat = _get_satisfying_course(option, catalog, available_completed, virtual_to_real)
-            # FYS-consumed courses may still satisfy exactly one FC group
             if not sat and is_fc:
                 sat = _get_satisfying_course(option, catalog, fys_consumed, virtual_to_real)
-            # FAD-consumed courses may also satisfy exactly one FC group
             if not sat and is_fc:
                 sat = _get_satisfying_course(option, catalog, fad_consumed, virtual_to_real)
-            # IDST-consumed courses may also satisfy exactly one FC group
             if not sat and is_fc:
                 sat = _get_satisfying_course(option, catalog, idst_consumed, virtual_to_real)
-            # FC-consumed courses may also satisfy FAD or INTERDISCIPLINARY (symmetric)
             if not sat and (is_fad or is_idst):
                 sat = _get_satisfying_course(option, catalog, fc_consumed, virtual_to_real)
             if not sat:
@@ -244,7 +202,6 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 elif is_idst:
                     idst_consumed.add(sat)
                 elif is_fc:
-                    # Reserve: can still count for FAD or INTERDISCIPLINARY
                     fc_consumed.add(sat)
             results["courses_used"].add(sat)
 
@@ -270,3 +227,186 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
     results["total_satisfied"]    = len(results["satisfied"])
 
     return results
+
+
+def calculate_static_depths(catalog):
+    """Phase 1: Tarjan's/DFS Cycle Severing and Static Depth Calculation."""
+    depths = {}
+    visited = set()
+    path = set()
+
+    def dfs(course_id):
+        if course_id in path:
+            return 0  # Cycle detected, sever the back-edge safely
+        if course_id in visited:
+            return depths.get(course_id, 1)
+
+        path.add(course_id)
+        max_prereq_depth = 0
+        
+        prereqs = catalog.get(course_id, {}).get("prerequisites", [])
+        for pathway in prereqs:
+            pathway_depth = 0
+            for prereq in pathway:
+                pathway_depth = max(pathway_depth, dfs(prereq))
+            max_prereq_depth = max(max_prereq_depth, pathway_depth)
+
+        path.remove(course_id)
+        visited.add(course_id)
+        
+        depth = max_prereq_depth + 1
+        depths[course_id] = depth
+        return depth
+
+    for c in catalog:
+        if c not in visited:
+            dfs(c)
+    return depths
+
+def build_canonical_catalog(catalog):
+    """Phase 1: Ingestion, Canonical Masking, and Macro-Nodes."""
+    canon_catalog = {}
+    course_to_canon = {}
+    macro_bindings = {}
+    blacklist = {}
+    
+    depths = calculate_static_depths(catalog)
+
+    visited = set()
+    for course_id, data in catalog.items():
+        if course_id in visited:
+            continue
+            
+        # Handle Co-requisite Macro Binding (Atomic Nodes)
+        coreqs = data.get("corequisites", [])
+        if coreqs:
+            macro_id = f"MACRO_{course_id}_AND_{coreqs[0]}"
+            macro_bindings[macro_id] = [course_id, coreqs[0]]
+            base_canon = macro_id
+            visited.add(coreqs[0])
+        else:
+            cross_listed = data.get("cross_listed", [])
+            group = sorted([course_id] + cross_listed)
+            base_canon = f"CANON_{'_'.join(group)}"
+            for c in group:
+                visited.add(c)
+                
+        # Register anti-requisites
+        anti_reqs = data.get("mutually_exclusive", [])
+        if anti_reqs:
+            blacklist[base_canon] = anti_reqs
+
+        for c in data.get("cross_listed", []) + [course_id]:
+            course_to_canon[c] = base_canon
+            
+        canon_catalog[base_canon] = {
+            "original_courses": data.get("cross_listed", []) + [course_id],
+            "credits": data.get("credits", 3),
+            "is_repeatable": data.get("is_repeatable", False) or any(course_id.endswith(str(x)) for x in [93, 95, 99]),
+            "prerequisites": data.get("prerequisites", []),
+            "depth": depths.get(course_id, 1)
+        }
+        
+    return canon_catalog, course_to_canon, macro_bindings, blacklist
+
+def generate_slots_and_candidates(requirements, catalog, majors_to_check, completed_courses, avoid_courses=None):
+    """Phase 2: Resilient Slot Materialization and Credit Ledger."""
+    canon_catalog, course_to_canon, macro_bindings, blacklist = build_canonical_catalog(catalog)
+
+    # Build the avoid set (canonicalized)
+    avoid_canon_set = set()
+    for c in (avoid_courses or []):
+        avoid_canon_set.add(course_to_canon.get(c, c))
+
+    # The Credit Ledger (Prevents Transcript Inflation)
+    credit_ledger = {}
+    global_satisfied_set = set()
+
+    for c in (completed_courses or []):
+        canon_id = course_to_canon.get(c, c)
+        global_satisfied_set.add(canon_id)
+        if canon_id not in credit_ledger:
+            credit_ledger[canon_id] = {"earned_credits": 0, "original_codes": []}
+        credit_ledger[canon_id]["earned_credits"] += catalog.get(c, {}).get("credits", 3)
+        credit_ledger[canon_id]["original_codes"].append(c)
+
+    slots = []
+
+    for entry in majors_to_check:
+        program_id = entry if isinstance(entry, str) else entry.get("track", "")
+        concentration_id = entry.get("concentration", "None") if isinstance(entry, dict) else "None"
+        track_data = requirements.get(program_id, {})
+        if not track_data:
+            continue
+
+        base = track_data.get("base_requirements", {})
+        conc = track_data.get("concentrations", {}).get(concentration_id, {})
+
+        # Merge base + concentration requirements
+        req_courses   = base.get("required_courses", []) + conc.get("required_courses", [])
+        choice_groups = base.get("choice_groups",    []) + conc.get("choice_groups",    [])
+
+        # Explode Fixed Requirements into Single Slots
+        # Required courses are never filtered by avoid_courses — they are mandatory.
+        for course in req_courses:
+            canon_id = course_to_canon.get(course, course)
+            if canon_id in global_satisfied_set:
+                continue
+            slots.append({
+                "program_id":   program_id,
+                "slot_id":      f"{program_id}__req__{canon_id}",
+                "is_core":      True,
+                "type":         "single",
+                "candidates":   [canon_id],
+                "credits_needed": canon_catalog.get(canon_id, {}).get("credits", 3),
+            })
+
+        # Choice Groups (Pools vs Explicit Slots)
+        for i, group in enumerate(choice_groups):
+            group_id = group.get("id", f"group_{i}")
+            if group.get("options"):
+                raw_options = group["options"]
+            elif group.get("type") == "rule_based":
+                raw_options = get_rule_based_options(group.get("rule") or {}, catalog)
+            else:
+                raw_options = []
+
+            options = [course_to_canon.get(o, o) for o in raw_options]
+            valid_candidates = [
+                o for o in options
+                if o not in global_satisfied_set
+                and o not in avoid_canon_set
+                and canon_catalog.get(o, {}).get("credits", 0) > 0  # exclude 0-credit courses
+            ]
+
+            credits_req = group.get("credits_required")
+            courses_req = group.get("courses_required", 1)
+
+            if credits_req:
+                if not valid_candidates:
+                    continue  # pool fully satisfied by completed courses
+                slots.append({
+                    "program_id":   program_id,
+                    "slot_id":      f"{program_id}__{group_id}__POOL",
+                    "is_core":      group.get("is_core", False),
+                    "type":         "pool",
+                    "candidates":   valid_candidates,
+                    "credits_needed": credits_req,
+                })
+            else:
+                # Subtract courses already completed from this group before creating splits
+                already_done = sum(1 for o in options if o in global_satisfied_set)
+                remaining_needed = max(0, courses_req - already_done)
+                if remaining_needed == 0 or not valid_candidates:
+                    continue  # group fully satisfied
+                for j in range(remaining_needed):
+                    slots.append({
+                        "program_id":   program_id,
+                        "slot_id":      f"{program_id}__{group_id}__split_{j}",
+                        "is_core":      group.get("is_core", False),
+                        "type":         "single",
+                        "candidates":   valid_candidates,
+                        "credits_needed": 3,
+                    })
+
+    return slots, canon_catalog, credit_ledger, macro_bindings, blacklist

@@ -389,6 +389,7 @@
             "description": "Four additional upper-division electives (required when no concentration is chosen)",
             "type": "explicit",
             "courses_required": 4,
+            "is_core": true,
             "options": [
               "BIOS645",
               "BIOS664",

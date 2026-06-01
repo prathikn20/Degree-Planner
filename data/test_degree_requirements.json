@@ -7,9 +7,7 @@
         "COMP301",
         "COMP311",
         "COMP455",
-        "COMP550",
-        "MATH231",
-        "MATH232"
+        "COMP550"
       ],
       "choice_groups": [
         {
@@ -22,7 +20,50 @@
             "MATH381",
             "STOR315"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "description": "Five additional three-or-more credit hour COMP courses numbered 420 or higher (excluding COMP\u00a0496 , COMP\u00a0690 , and COMP\u00a0692H ). 2",
+          "type": "rule_based",
+          "courses_required": 5,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "COMP",
+            "min_number": 420,
+            "max_number": null,
+            "min_credits": 3,
+            "exclude": [
+              "COMP496",
+              "COMP690",
+              "COMP692H"
+            ]
+          },
+          "id": "comp_420_electives_1",
+          "is_core": true
+        },
+        {
+          "id": "MATH231_1",
+          "description": "MATH231",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH231"
+          ],
+          "rule": null,
+          "is_core": false
+        },
+        {
+          "id": "MATH232_1",
+          "description": "MATH232",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH232"
+          ],
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "math_1",
@@ -33,7 +74,8 @@
             "MATH233",
             "STOR235"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "math_2",
@@ -44,7 +86,8 @@
             "MATH347",
             "MATH577"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "stor_1",
@@ -56,7 +99,8 @@
             "STOR535",
             "BIOS650"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "requirements_science_1",
@@ -85,24 +129,9 @@
             "PHYS451",
             "PHYS452"
           ],
-          "rule": null
-        },
-        {
-          "id": "comp_420_electives",
-          "description": "Five additional three-or-more credit hour COMP courses numbered 420 or higher (excluding COMP 496, COMP 690, and COMP 692H).",
-          "type": "rule_based",
-          "courses_required": 5,
-          "options": [],
-          "rule": {
-            "department": "COMP",
-            "min_number": 420,
-            "min_credits": 3,
-            "exclude": [
-              "COMP496",
-              "COMP690",
-              "COMP692H"
-            ]
-          }
+          "rule": null,
+          "is_core": false,
+          "credits_required": 8
         }
       ]
     },
@@ -117,10 +146,7 @@
     "base_requirements": {
       "required_courses": [
         "DATA110",
-        "DATA120",
-        "MATH231",
-        "MATH232",
-        "MATH347"
+        "DATA120"
       ],
       "choice_groups": [
         {
@@ -140,7 +166,9 @@
             "INLS541",
             "MEJO102"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true,
+          "credits_required": 3
         },
         {
           "id": "core_requirements_foundation_1",
@@ -155,7 +183,9 @@
             "STOR535",
             "STOR634"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true,
+          "credits_required": 3
         },
         {
           "id": "core_requirements_optimization_1",
@@ -169,7 +199,9 @@
             "STOR415",
             "STOR612"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true,
+          "credits_required": 3
         },
         {
           "id": "ai_machine_1",
@@ -183,7 +215,9 @@
             "STOR565",
             "STOR566"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true,
+          "credits_required": 3
         },
         {
           "id": "core_requirements_computational_1",
@@ -200,7 +234,113 @@
             "STOR520",
             "STOR572"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": true,
+          "credits_required": 3
+        },
+        {
+          "id": "core_requirements_upper_div_1",
+          "description": "Choose six upper-division electives (see list below) OR a four-course concentration and two upper-division electives. 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "BIOS645",
+            "BIOS664",
+            "COMP421",
+            "COMP488",
+            "COMP550",
+            "COMP560",
+            "COMP562",
+            "COMP586",
+            "COMP664",
+            "COMP683",
+            "DATA481",
+            "DATA493",
+            "DATA495",
+            "DATA496",
+            "DATA520",
+            "DATA521",
+            "DATA522",
+            "DATA523",
+            "DATA543",
+            "DATA593",
+            "DATA693H",
+            "DATA694H",
+            "DATA890",
+            "ENGL411",
+            "GEOG415",
+            "INLS541",
+            "MATH521",
+            "MATH522",
+            "MATH524",
+            "MATH528",
+            "MATH529",
+            "MATH535",
+            "MATH550",
+            "MATH560",
+            "MATH566",
+            "MATH577",
+            "MATH590",
+            "MATH594",
+            "MATH661",
+            "MATH662",
+            "STOR415",
+            "STOR435",
+            "STOR445",
+            "STOR455",
+            "STOR512",
+            "STOR520",
+            "STOR535",
+            "STOR538",
+            "STOR543",
+            "STOR545",
+            "STOR555",
+            "STOR556",
+            "STOR557",
+            "STOR565",
+            "STOR566",
+            "STOR572",
+            "STOR590",
+            "STOR612",
+            "STOR634",
+            "STOR712",
+            "STOR893"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "MATH231_1",
+          "description": "MATH231",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH231"
+          ],
+          "rule": null,
+          "is_core": false
+        },
+        {
+          "id": "MATH232_1",
+          "description": "MATH232",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH232"
+          ],
+          "rule": null,
+          "is_core": false
+        },
+        {
+          "id": "MATH347_1",
+          "description": "MATH347",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MATH347"
+          ],
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "math_1",
@@ -211,7 +351,8 @@
             "MATH233",
             "MATH235"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "math_2",
@@ -223,7 +364,8 @@
             "STOR315",
             "COMP283"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         },
         {
           "id": "stor_1",
@@ -235,14 +377,87 @@
             "COMP110",
             "COMP116"
           ],
-          "rule": null
+          "rule": null,
+          "is_core": false
         }
       ]
     },
     "concentrations": {
       "None": {
         "required_courses": [],
-        "choice_groups": []
+        "choice_groups": [
+          {
+            "id": "upper_div_electives_none_1",
+            "description": "Four additional upper-division electives (required when no concentration is chosen)",
+            "type": "explicit",
+            "courses_required": 4,
+            "is_core": true,
+            "options": [
+              "BIOS645",
+              "BIOS664",
+              "COMP421",
+              "COMP488",
+              "COMP550",
+              "COMP560",
+              "COMP562",
+              "COMP586",
+              "COMP664",
+              "COMP683",
+              "DATA481",
+              "DATA493",
+              "DATA495",
+              "DATA496",
+              "DATA520",
+              "DATA521",
+              "DATA522",
+              "DATA523",
+              "DATA543",
+              "DATA593",
+              "DATA693H",
+              "DATA694H",
+              "DATA890",
+              "ENGL411",
+              "GEOG415",
+              "INLS541",
+              "MATH521",
+              "MATH522",
+              "MATH524",
+              "MATH528",
+              "MATH529",
+              "MATH535",
+              "MATH550",
+              "MATH560",
+              "MATH566",
+              "MATH577",
+              "MATH590",
+              "MATH594",
+              "MATH661",
+              "MATH662",
+              "STOR415",
+              "STOR435",
+              "STOR445",
+              "STOR455",
+              "STOR512",
+              "STOR520",
+              "STOR535",
+              "STOR538",
+              "STOR543",
+              "STOR545",
+              "STOR555",
+              "STOR556",
+              "STOR557",
+              "STOR565",
+              "STOR566",
+              "STOR572",
+              "STOR590",
+              "STOR612",
+              "STOR634",
+              "STOR712",
+              "STOR893"
+            ],
+            "rule": null
+          }
+        ]
       },
       "Economic_Analysis": {
         "required_courses": [
@@ -260,7 +475,9 @@
               "ECON573",
               "ECON575"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "economic_analysis_options_2",
@@ -276,7 +493,9 @@
               "ECON552",
               "ECON580"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       },
@@ -297,7 +516,9 @@
               "POLI487",
               "POLI488"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "data_science_options_2",
@@ -308,7 +529,9 @@
               "POLI193",
               "POLI395"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       },
@@ -327,7 +550,9 @@
               "PLAN257",
               "PLAN714"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "urban_analytics_electives_2",
@@ -337,7 +562,9 @@
             "options": [
               "PLAN562"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "urban_analytics_electives_3",
@@ -347,7 +574,9 @@
             "options": [
               "PLAN672"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "urban_analytics_electives_4",
@@ -364,7 +593,9 @@
               "PLAN745",
               "PLAN739"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       },
@@ -392,7 +623,9 @@
               "STOR565",
               "STOR572"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 6
           }
         ]
       },
@@ -424,7 +657,9 @@
               "STOR641",
               "STOR642"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 6
           }
         ]
       },
@@ -442,7 +677,9 @@
               "MATH560",
               "STOR512"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "mathematical_foundations_algebraic_1",
@@ -455,7 +692,9 @@
               "MATH661",
               "MATH662"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "mathematical_foundations_statistics_1",
@@ -468,7 +707,9 @@
               "STOR557",
               "STOR654"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "mathematical_foundations_computational_1",
@@ -481,7 +722,9 @@
               "STOR543",
               "STOR545"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       },
@@ -506,7 +749,9 @@
               "STOR555",
               "STOR565"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 6
           }
         ]
       },
@@ -531,7 +776,9 @@
               "STOR664",
               "STOR665"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 6
           }
         ]
       },
@@ -550,7 +797,9 @@
               "DATA522",
               "DATA523"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           },
           {
             "id": "ai_machine_1",
@@ -564,7 +813,9 @@
               "STOR565",
               "STOR566"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       },
@@ -586,7 +837,9 @@
               "CHIP721",
               "STOR475"
             ],
-            "rule": null
+            "rule": null,
+            "is_core": true,
+            "credits_required": 3
           }
         ]
       }
@@ -1483,6 +1736,245 @@
             "PLCY692H"
           ],
           "rule": null
+        },
+        {
+          "id": "core_requirements_electives_1",
+          "description": "At least six credit hours of approved public policy electives. 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "credits_required": 6,
+          "options": [
+            "AAAD307",
+            "AAAD333",
+            "POLI333",
+            "AAAD488",
+            "AAAD485",
+            "AMST390",
+            "AMST486",
+            "ANTH312",
+            "ANTH318",
+            "ANTH319",
+            "ANTH350",
+            "ANTH355",
+            "ANTH360",
+            "ANTH377",
+            "ANTH380",
+            "ANTH422",
+            "ANTH429",
+            "ANTH439",
+            "ANTH441",
+            "ANTH460",
+            "ANTH470",
+            "ANTH502",
+            "ANTH537",
+            "ANTH585",
+            "BUSI404",
+            "BUSI405",
+            "BUSI500",
+            "BUSI503",
+            "BUSI504",
+            "BUSI506",
+            "BUSI512",
+            "BUSI610",
+            "BUSI611",
+            "COMM312",
+            "COMM325",
+            "COMM372",
+            "COMM375",
+            "COMM470",
+            "COMM521",
+            "COMM524",
+            "COMM525",
+            "COMM571",
+            "COMM572",
+            "COMM574",
+            "COMM575",
+            "COMM576",
+            "COMM624",
+            "COMM625",
+            "COMM652",
+            "ECON320",
+            "ECON325",
+            "ECON345",
+            "ECON380",
+            "ECON423",
+            "ECON440",
+            "ECON445",
+            "ECON450",
+            "ECON455",
+            "ECON460",
+            "ECON465",
+            "ECON480",
+            "ECON511",
+            "EDUC401",
+            "EDUC506",
+            "EDUC521",
+            "EDUC533",
+            "EDUC535",
+            "EMES314",
+            "ENGL164",
+            "ENGL279",
+            "ENEC463",
+            "ENEC307",
+            "ENEC308",
+            "ENEC309",
+            "ENEC330",
+            "ENEC350",
+            "ENEC351",
+            "ENEC352",
+            "ENEC370",
+            "ENEC462",
+            "ENEC474",
+            "ENEC586",
+            "ENEC685",
+            "ENEC698",
+            "ENEC470",
+            "ENVR470",
+            "ENEC368",
+            "PHIL368",
+            "ENVR600",
+            "GEOG281",
+            "GEOG370",
+            "GEOG391",
+            "GEOG414",
+            "GEOG416",
+            "GEOG423",
+            "GEOG428",
+            "GEOG430",
+            "GEOG435",
+            "GEOG446",
+            "GEOG447",
+            "GEOG448",
+            "GEOG451",
+            "ENEC451",
+            "GEOG457",
+            "GEOG458",
+            "GEOG460",
+            "GEOG470",
+            "GEOG480",
+            "GEOG491",
+            "GEOG541",
+            "GEOG542",
+            "GLBL382",
+            "GLBL390",
+            "HIST238",
+            "HIST365",
+            "HIST385",
+            "HIST510",
+            "HIST566",
+            "HIST568",
+            "HIST577",
+            "HIST584",
+            "HIST589",
+            "HPM310",
+            "HPM330",
+            "HPM340",
+            "HPM350",
+            "HPM351",
+            "HPM352",
+            "INLS382",
+            "INLS515",
+            "MEJO340",
+            "MEJO441",
+            "MEJO442",
+            "MEJO443",
+            "MEJO445",
+            "MEJO446",
+            "MEJO458",
+            "MEJO541",
+            "MEJO560",
+            "MEJO652",
+            "MNGT345",
+            "MNGT365",
+            "MNGT380",
+            "MNGT410",
+            "MNGT412",
+            "MNGT415",
+            "MNGT427",
+            "PHIL364",
+            "PHIL370",
+            "PHIL384",
+            "PHIL473",
+            "PHIL480",
+            "PHIL698",
+            "PLAN330",
+            "PLAN574",
+            "PLAN636",
+            "PLAN637",
+            "PLAN641",
+            "PLAN651",
+            "PLAN685",
+            "POLI400",
+            "POLI401",
+            "POLI406",
+            "POLI410",
+            "POLI411",
+            "POLI412",
+            "POLI416",
+            "POLI418",
+            "POLI419H",
+            "POLI420",
+            "POLI431",
+            "POLI433",
+            "POLI434",
+            "POLI438",
+            "POLI442",
+            "POLI443",
+            "POLI444",
+            "POLI457",
+            "POLI470",
+            "POLI472",
+            "PSYC467",
+            "PSYC469",
+            "PSYC471",
+            "PSYC500",
+            "PSYC502",
+            "PSYC504",
+            "PSYC514",
+            "PSYC530",
+            "PSYC531",
+            "PSYC532",
+            "PSYC565",
+            "PSYC601",
+            "PWAD250",
+            "PWAD368",
+            "PWAD416",
+            "PWAD443",
+            "PWAD444",
+            "PWAD453",
+            "PWAD460",
+            "PWAD469",
+            "PWAD574",
+            "PWAD575",
+            "PWAD577",
+            "RELI423",
+            "RELI443",
+            "STOR305",
+            "STOR358",
+            "STOR415",
+            "STOR455",
+            "SOCI410",
+            "SOCI412",
+            "SOCI415",
+            "SOCI418",
+            "SOCI420",
+            "SOCI422",
+            "SOCI423",
+            "SOCI424",
+            "SOCI425",
+            "SOCI426",
+            "SOCI427",
+            "SOCI431",
+            "SOCI444",
+            "SOCI468",
+            "SOCI469",
+            "SPHG350H",
+            "WGST368",
+            "WGST388",
+            "WGST410",
+            "WGST662"
+          ],
+          "rule": null
         }
       ]
     },
@@ -1546,6 +2038,58 @@
             "PHYS115",
             "PHYS119",
             "MATH231"
+          ],
+          "rule": null
+        },
+        {
+          "id": "requirements_electives_1",
+          "description": "A choice of four additional allied sciences electives, selected from the course list below (some courses are more than 3 credits) 1",
+          "type": "explicit",
+          "courses_required": 4,
+          "options": [
+            "ANTH143",
+            "ANTH148",
+            "ANTH151",
+            "ANTH217",
+            "ANTH298",
+            "ANTH315",
+            "ANTH318",
+            "ANTH412",
+            "ANTH413",
+            "ANTH414",
+            "ANTH415",
+            "ANTH416",
+            "ANTH423",
+            "ANTH437",
+            "ANTH470",
+            "ANTH471",
+            "BIOL101",
+            "BIOL271",
+            "BIOL272",
+            "BIOL273",
+            "BIOC107",
+            "BIOC108",
+            "BMME150",
+            "BMME207",
+            "BMME301",
+            "BMME315",
+            "BMME335",
+            "BMME385",
+            "BMME435",
+            "BMME505",
+            "BMME521",
+            "BMME543",
+            "BMME545",
+            "BMME555",
+            "BMME572",
+            "BMME585",
+            "BIOS500H",
+            "BIOS540",
+            "BIOS690",
+            "BIOS691",
+            "BIOS693H",
+            "BIOS694H",
+            "CHEM102"
           ],
           "rule": null
         }
@@ -1878,6 +2422,133 @@
             "GEOG141",
             "PLAN562",
             "POLI209"
+          ],
+          "rule": null
+        },
+        {
+          "id": "core_requirements_electives_1",
+          "description": "Two additional elective courses from the list below 1",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "ANTH419",
+            "ANTH520",
+            "LING520",
+            "ANTH680",
+            "ASTR502",
+            "ASTR519",
+            "BCB555",
+            "COMP555",
+            "BIOL525",
+            "BIOL534",
+            "MATH564",
+            "BIOL553",
+            "MATH553",
+            "BIOL554",
+            "BIOL562",
+            "ENEC562",
+            "BIOL563",
+            "ENEC563",
+            "BMME576",
+            "COMP576",
+            "BUSI410",
+            "BUSI488",
+            "COMP488",
+            "CLAR411",
+            "COMP210",
+            "COMP388",
+            "COMP410",
+            "COMP421",
+            "COMP426",
+            "COMP433",
+            "COMP486",
+            "INLS512",
+            "COMP487",
+            "INLS509",
+            "COMP488",
+            "BUSI488",
+            "COMP555",
+            "BCB555",
+            "COMP560",
+            "COMP562",
+            "COMP572",
+            "COMP576",
+            "ECON470",
+            "ECON545",
+            "ECON550",
+            "ECON565",
+            "ECON571",
+            "ECON573",
+            "ECON575",
+            "ECON580",
+            "EMES520",
+            "EMES561",
+            "ENEC305",
+            "ENEC437",
+            "GEOG437",
+            "ENEC468",
+            "ENVR468",
+            "ENEC562",
+            "BIOL562",
+            "ENEC563",
+            "BIOL563",
+            "ENGL480",
+            "ENGL482",
+            "ENVR468",
+            "ENEC468",
+            "EPID600",
+            "EXSS327",
+            "GEOG370",
+            "GEOG392",
+            "GEOG414",
+            "GEOG416",
+            "GEOG437",
+            "ENEC437",
+            "GEOG446",
+            "GEOG456",
+            "GEOG491",
+            "PLAN491",
+            "HIST273",
+            "INLS509",
+            "COMP487",
+            "INLS512",
+            "COMP486",
+            "LING202",
+            "LING203",
+            "LING333",
+            "LING401",
+            "LING422",
+            "LING520",
+            "ANTH520",
+            "LING525",
+            "MATH210",
+            "MATH553",
+            "MATH560",
+            "MATH564",
+            "MEJO570",
+            "MEJO571",
+            "PHIL353",
+            "PHYS331",
+            "PHYS332",
+            "PLAN372",
+            "PLAN491",
+            "GEOG491",
+            "PLCY460",
+            "PLCY505",
+            "PLCY581",
+            "POLI381",
+            "PSYC532",
+            "PSYC533",
+            "PSYC559",
+            "ROML501",
+            "STOR320",
+            "STOR455",
+            "STOR535",
+            "STOR538",
+            "STOR556",
+            "STOR565",
+            "STOR572",
+            "STOR557"
           ],
           "rule": null
         }
@@ -2788,6 +3459,21 @@
           "rule": null
         },
         {
+          "description": "One STOR course at the 500 level",
+          "type": "rule_based",
+          "courses_required": 1,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "STOR",
+            "min_number": 500,
+            "max_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "stor_500_electives_1"
+        },
+        {
           "id": "stor_5",
           "description": "STOR\u00a0155 | Introduction to Data Models and Inference H, F",
           "type": "explicit",
@@ -2799,7 +3485,7 @@
           "rule": null
         },
         {
-          "id": "stor_group_ab_electives",
+          "id": "requirements_group_1",
           "description": "Three additional courses from either Group A or Group B (see lists below)",
           "type": "explicit",
           "courses_required": 3,
@@ -4433,6 +5119,74 @@
             "COMP116"
           ],
           "rule": null
+        },
+        {
+          "id": "core_requirements_electives_1",
+          "description": "A coherent set of five or more electives, selected from the list below, equaling 15 credit hours 1",
+          "type": "explicit",
+          "courses_required": 5,
+          "credits_required": 15,
+          "options": [
+            "APPL101",
+            "BIOS511",
+            "BUSI410",
+            "BUSI520",
+            "COMM140",
+            "COMM150",
+            "COMM431",
+            "COMM450",
+            "COMM636",
+            "COMP126",
+            "COMP210",
+            "COMP211",
+            "COMP283",
+            "COMP301",
+            "COMP311",
+            "COMP380",
+            "COMP426",
+            "COMP431",
+            "ECON400",
+            "ECON470",
+            "ENGL117",
+            "ENGL482",
+            "GEOG215",
+            "GEOG370",
+            "GEOG477",
+            "GEOG491",
+            "GEOG591",
+            "MATH381",
+            "MEJO182",
+            "MEJO187",
+            "MEJO433",
+            "MEJO445",
+            "MEJO482",
+            "MEJO484",
+            "MEJO487",
+            "MEJO581",
+            "MEJO582",
+            "MEJO583",
+            "MEJO585",
+            "MUSC239",
+            "PHIL143",
+            "PHYS633",
+            "PLCY460",
+            "POLI281",
+            "PSYC180",
+            "PSYC210",
+            "PSYC230",
+            "PSYC330",
+            "SOCI318",
+            "STOR120",
+            "STOR151",
+            "STOR155",
+            "STOR215",
+            "STOR305",
+            "STOR320",
+            "STOR435",
+            "STOR455",
+            "STOR565"
+          ],
+          "rule": null
         }
       ]
     },
@@ -5009,32 +5763,15 @@
   },
   "Data_Science_BA": {
     "base_requirements": {
-      "required_courses": [
-        "MEJO487",
-        "MEJO570",
-        "ECON370",
-        "ECON400",
-        "ECON470",
-        "LING401",
-        "LING460",
-        "LING540",
-        "SOCI251",
-        "GEOG215",
-        "GEOG370"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
           "id": "core_requirements_foundation_1",
           "description": "Foundations of Data and Information (two courses):",
           "type": "explicit",
-          "courses_required": 2,
+          "courses_required": 1,
           "options": [
-            "DATA110",
-            "DATA130",
-            "ENGL480",
-            "ENGL482",
-            "INLS201",
-            "SOCI318"
+            "DATA110"
           ],
           "rule": null
         },
@@ -5107,168 +5844,6 @@
             "MEJO102"
           ],
           "rule": null
-        },
-        {
-          "id": "data_journalism_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "GEOG215",
-            "LING460",
-            "POLI209",
-            "STOR538"
-          ],
-          "rule": null
-        },
-        {
-          "id": "data_journalism_options_2",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "MEJO459",
-            "MEJO553",
-            "MEJO625",
-            "MEJO630"
-          ],
-          "rule": null
-        },
-        {
-          "id": "economic_analysis_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "ECON423",
-            "ECON425",
-            "ECON445",
-            "ECON450",
-            "ECON480",
-            "ECON522",
-            "ECON525",
-            "ECON545",
-            "ECON550",
-            "ECON551",
-            "ECON552",
-            "ECON571",
-            "ECON573",
-            "ECON575",
-            "ECON580"
-          ],
-          "rule": null
-        },
-        {
-          "id": "quantitative_language_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "LING225",
-            "LING520"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_1",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN246",
-            "PLAN247",
-            "PLAN256",
-            "PLAN257",
-            "PLAN714",
-            "PLAN562"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_2",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN372",
-            "PLAN672"
-          ],
-          "rule": null
-        },
-        {
-          "id": "urban_data_options_3",
-          "description": "Select one of the following options:",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "PLAN591",
-            "PLAN635",
-            "PLAN636",
-            "PLAN637",
-            "PLAN671",
-            "PLAN720",
-            "PLAN739",
-            "PLAN745"
-          ],
-          "rule": null
-        },
-        {
-          "id": "sociology_options_1",
-          "description": "Select three of the following options:",
-          "type": "explicit",
-          "courses_required": 3,
-          "options": [
-            "MNGT345",
-            "MNGT380",
-            "SOCI121",
-            "SOCI172",
-            "SOCI252",
-            "SOCI277",
-            "SOCI302",
-            "SOCI427",
-            "SOCI429"
-          ],
-          "rule": null
-        },
-        {
-          "id": "data_society_options_1",
-          "description": "Select four of the following options:",
-          "type": "explicit",
-          "courses_required": 4,
-          "options": [
-            "COMM83",
-            "COMM86",
-            "COMM249",
-            "COMM348",
-            "COMM360",
-            "COMM453",
-            "COMP380",
-            "MEJO242",
-            "HIST322",
-            "HIST328"
-          ],
-          "rule": null
-        },
-        {
-          "id": "geographic_information_options_1",
-          "description": "Select two of the following options:",
-          "type": "explicit",
-          "courses_required": 2,
-          "options": [
-            "GEOG391",
-            "GEOG410",
-            "GEOG456",
-            "GEOG477",
-            "GEOG491",
-            "GEOG541",
-            "GEOG544",
-            "GEOG555",
-            "GEOG567",
-            "GEOG577",
-            "GEOG591",
-            "GEOG592"
-          ],
-          "rule": null
         }
       ]
     },
@@ -5276,6 +5851,219 @@
       "None": {
         "required_courses": [],
         "choice_groups": []
+      },
+      "Data_Journalism": {
+        "required_courses": [
+          "MEJO487",
+          "MEJO570"
+        ],
+        "choice_groups": [
+          {
+            "id": "data_journalism_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "GEOG215",
+              "LING460",
+              "POLI209",
+              "STOR538"
+            ],
+            "rule": null
+          },
+          {
+            "id": "data_journalism_options_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "MEJO459",
+              "MEJO553",
+              "MEJO625",
+              "MEJO630"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Economic_Analysis": {
+        "required_courses": [
+          "ECON370",
+          "ECON400",
+          "ECON470"
+        ],
+        "choice_groups": [
+          {
+            "id": "economic_analysis_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "ECON423",
+              "ECON425",
+              "ECON445",
+              "ECON450",
+              "ECON480",
+              "ECON522",
+              "ECON525",
+              "ECON545",
+              "ECON550",
+              "ECON551",
+              "ECON552",
+              "ECON571",
+              "ECON573",
+              "ECON575",
+              "ECON580"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Quantitative_Language_Science": {
+        "required_courses": [
+          "LING401",
+          "LING460",
+          "LING540"
+        ],
+        "choice_groups": [
+          {
+            "id": "quantitative_language_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "LING225",
+              "LING520"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Urban_Data_Analytics": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "urban_data_options_1",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN246",
+              "PLAN247",
+              "PLAN256",
+              "PLAN257",
+              "PLAN714",
+              "PLAN562"
+            ],
+            "rule": null
+          },
+          {
+            "id": "urban_data_options_2",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN372",
+              "PLAN672"
+            ],
+            "rule": null
+          },
+          {
+            "id": "urban_data_options_3",
+            "description": "Select one of the following options:",
+            "type": "explicit",
+            "courses_required": 1,
+            "options": [
+              "PLAN591",
+              "PLAN635",
+              "PLAN636",
+              "PLAN637",
+              "PLAN671",
+              "PLAN720",
+              "PLAN739",
+              "PLAN745"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Sociology": {
+        "required_courses": [
+          "SOCI251"
+        ],
+        "choice_groups": [
+          {
+            "id": "sociology_concentration_options_1",
+            "description": "Select three of the following options:",
+            "type": "explicit",
+            "courses_required": 3,
+            "options": [
+              "MNGT345",
+              "MNGT380",
+              "SOCI121",
+              "SOCI172",
+              "SOCI252",
+              "SOCI277",
+              "SOCI302",
+              "SOCI427",
+              "SOCI429"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Data_and_Society": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "data_society_options_1",
+            "description": "Select four of the following options:",
+            "type": "explicit",
+            "courses_required": 4,
+            "options": [
+              "COMM83",
+              "COMM86",
+              "COMM249",
+              "COMM348",
+              "COMM360",
+              "COMM453",
+              "COMP380",
+              "MEJO242",
+              "HIST322",
+              "HIST328"
+            ],
+            "rule": null
+          }
+        ]
+      },
+      "Geographic_Information_Science": {
+        "required_courses": [
+          "GEOG215",
+          "GEOG370"
+        ],
+        "choice_groups": [
+          {
+            "id": "geographic_information_options_1",
+            "description": "Select two of the following options:",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "GEOG391",
+              "GEOG410",
+              "GEOG456",
+              "GEOG477",
+              "GEOG491",
+              "GEOG541",
+              "GEOG544",
+              "GEOG555",
+              "GEOG567",
+              "GEOG577",
+              "GEOG591",
+              "GEOG592"
+            ],
+            "rule": null
+          }
+        ]
       }
     }
   },
@@ -5345,6 +6133,50 @@
           "rule": null
         },
         {
+          "id": "intermediate_level_organismal_1",
+          "description": "An organismal structure and diversity course (see list below)",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "BIOL271",
+            "BIOL272",
+            "BIOL273",
+            "BIOL274",
+            "BIOL277",
+            "BIOL278",
+            "BIOL279",
+            "BIOL422",
+            "BIOL421L",
+            "BIOL422",
+            "BIOL441",
+            "BIOL451",
+            "BIOL471",
+            "BIOL472",
+            "BIOL473",
+            "BIOL474",
+            "BIOL475",
+            "BIOL476",
+            "BIOL479",
+            "BIOL579"
+          ],
+          "rule": null
+        },
+        {
+          "description": "Three biology electives (each of three or more credits) numbered above 200 (not including BIOL\u00a0213 , BIOL\u00a0222 , BIOL\u00a0253 , BIOL\u00a0291 , BIOL\u00a0292 , BIOL\u00a0293 , BIOL\u00a0294 , BIOL\u00a0295 , BIOL\u00a0296 , BIOL 353, a second semester of BIOL\u00a0395 , and BIOL\u00a0495 ). At least one course in the major must have a laboratory (not including BIOL\u00a0101L or BIOL\u00a0105L ). 4,5",
+          "type": "rule_based",
+          "courses_required": 3,
+          "credits_required": null,
+          "options": [],
+          "rule": {
+            "department": "BIOL",
+            "min_number": 200,
+            "max_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "id": "biol_electives_1"
+        },
+        {
           "id": "requirements_electives_1",
           "description": "One of:",
           "type": "explicit",
@@ -5364,34 +6196,8 @@
           "rule": null
         },
         {
-          "id": "bio_organismal_diversity",
-          "description": "An organismal structure and diversity course (see list below)",
-          "type": "explicit",
-          "courses_required": 1,
-          "options": [
-            "BIOL271",
-            "BIOL272",
-            "BIOL273",
-            "BIOL274",
-            "BIOL277",
-            "BIOL278",
-            "BIOL279",
-            "BIOL422",
-            "BIOL441",
-            "BIOL451",
-            "BIOL471",
-            "BIOL473",
-            "BIOL474",
-            "BIOL475",
-            "BIOL476",
-            "BIOL479",
-            "BIOL579"
-          ],
-          "rule": null
-        },
-        {
-          "id": "bio_allied_sciences",
-          "description": "Four additional allied science electives chosen from the course list below",
+          "id": "requirements_electives_2",
+          "description": "Four additional allied science electives chosen from the course list below (some courses are more than 3 credits)",
           "type": "explicit",
           "courses_required": 4,
           "options": [
@@ -5408,7 +6214,15 @@
             "ANTH623",
             "BIOC107",
             "BIOC108",
+            "BIOL213",
+            "BIOL291",
+            "BIOL292",
+            "BIOL294",
+            "BIOL295",
+            "BIOL296",
+            "BIOL495",
             "BMME335",
+            "COMP380",
             "ENEC202",
             "ENEC256",
             "ENEC324",
@@ -5427,16 +6241,19 @@
             "GEOG212",
             "GEOG222",
             "GEOG253",
+            "MATH129P",
             "MCRO251",
             "NSCI175",
             "NSCI222",
             "NSCI225",
             "NUTR240",
             "PHIL155",
+            "PHYS132",
             "PSYC101",
             "PSYC210",
             "PSYC220",
             "PSYC230",
+            "STOR120",
             "SPHS570"
           ],
           "rule": null

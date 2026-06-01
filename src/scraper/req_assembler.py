@@ -37,6 +37,23 @@ def _is_explicit_rule(text):
         return False
     return bool(_EXPLICIT_RULE_RE.search(t))
 
+
+# Matches open elective-pool descriptions: "elective", "420 or higher", "numbered 420",
+# "at the 400-level".  Used to set is_core=False on elective-pool choice groups.
+_ELECTIVE_POOL_RE = re.compile(
+    r'\belectives?\b'                                    # "elective" or "electives"
+    r'|\d{3}\s*or\s+(?:higher|above)'                   # "420 or higher"
+    r'|numbered?\s+(?:above\s+)?\d{3}'                  # "numbered 420"
+    r'|at\s+the\s+\d{3}(?:\s*[-–]\s*\d{3})?\s*level',  # "at the 400-level"
+    re.IGNORECASE
+)
+
+
+def _is_elective_pool(text: str) -> bool:
+    """True when a choice-group description describes an open elective pool
+    (not a specific constrained requirement)."""
+    return bool(_ELECTIVE_POOL_RE.search(text))
+
 # Strict course code validator. Reject anything else.
 COURSE_CODE_RE = re.compile(r'^[A-Z]{2,5}\d{2,4}[A-Z]?$')
 
@@ -255,9 +272,18 @@ def classify_section_type(title, rows=None):
     """
     Determine block type from title (primary) and content (fallback).
 
-    Returns: 'core' | 'concentration' | 'reference_list'
+    Returns: 'core' | 'additional' | 'concentration' | 'reference_list'
+
+    'additional' is for sections titled "Additional Requirements" (or similar).
+    These sections contain prerequisite/support courses that are NOT subject to
+    the 50% core double-counting cap between majors.
     """
     t = title.lower()
+
+    # "Additional Requirements" — prerequisite/support courses; NOT core for the
+    # double-counting cap.  Must be checked before the generic 'core' fallback.
+    if re.match(r'^additional\s+requirements?\b', t):
+        return 'additional'
 
     # --- Strong reference_list signals from title ---
     _REF_TITLE = [
@@ -376,6 +402,14 @@ def assemble_section(section, rule_parser_fn):
     # Allow grouping pre-pass to inject a pre-computed type
     block_type = section.get('_type') or classify_section_type(title, rows)
 
+    # Groups from 'additional' sections are never core for double-counting purposes.
+    # Everything in 'core' (or 'concentration') sections IS core — even elective pools,
+    # because those still count toward the UNC 50%-cap on shared core-section courses.
+    is_additional_section = (block_type == 'additional')
+
+    def _core(_description: str = '') -> bool:
+        return not is_additional_section
+
     required_courses = []
     choice_groups = []
     _slug_counts: dict[str, int] = {}
@@ -410,7 +444,8 @@ def assemble_section(section, rule_parser_fn):
                         'type': 'explicit',
                         'courses_required': 1,
                         'options': all_options,
-                        'rule': None
+                        'rule': None,
+                        'is_core': _core(desc),
                     })
                 i = j
             else:
@@ -427,7 +462,8 @@ def assemble_section(section, rule_parser_fn):
                             'type': 'explicit',
                             'courses_required': 1,
                             'options': codes,
-                            'rule': None
+                            'rule': None,
+                            'is_core': _core(desc),
                         })
                         i += 1
                         continue
@@ -533,7 +569,8 @@ def assemble_section(section, rule_parser_fn):
                             'courses_required': max(1, _credits_from_header // 3),
                             'credits_required': _credits_from_header,
                             'options': list_options,
-                            'rule': None
+                            'rule': None,
+                            'is_core': _core(text),
                         }
                     else:
                         count = extract_count_from_text(text) or 1
@@ -548,7 +585,8 @@ def assemble_section(section, rule_parser_fn):
                             'type': 'explicit',
                             'courses_required': count,
                             'options': list_options,
-                            'rule': None
+                            'rule': None,
+                            'is_core': _core(text),
                         }
                         if row.get('hours'):
                             group['credits_required'] = row['hours']
@@ -559,6 +597,7 @@ def assemble_section(section, rule_parser_fn):
                     parsed = rule_parser_fn(text)
                     if parsed:
                         parsed['id'] = next_id('rule', text)
+                        parsed['is_core'] = _core(text)
                         choice_groups.append(parsed)
                     i += 1
             else:
@@ -593,7 +632,8 @@ def assemble_section(section, rule_parser_fn):
                             'type': 'explicit',
                             'courses_required': 1,
                             'options': cat_options,
-                            'rule': None
+                            'rule': None,
+                            'is_core': _core(cat_desc),
                         })
                     else:
                         logger.debug(f"  Sub-cat label with no following courses: '{text[:50]}'")
@@ -605,6 +645,7 @@ def assemble_section(section, rule_parser_fn):
                     parsed = rule_parser_fn(text)
                     if parsed:
                         parsed['id'] = next_id('rule', text)
+                        parsed['is_core'] = _core(text)
                         choice_groups.append(parsed)
                     i += 1
                 else:
