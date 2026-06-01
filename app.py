@@ -1,4 +1,5 @@
 import datetime
+import hashlib
 import io
 import json
 import os
@@ -321,9 +322,11 @@ def build_alternatives_map(
                 continue
 
             desc = fm[course]
+            # desc may be concatenated ("desc1 + desc2") for double-counted courses
+            desc_parts = {part.strip() for part in desc.split(" + ")}
             found = True
 
-            if desc == "Required Course":
+            if "Required Course" in desc_parts:
                 result[course] = {"desc": desc, "track": track, "alternatives": []}
                 break
 
@@ -334,7 +337,7 @@ def build_alternatives_map(
 
             for group in all_groups:
                 g_desc = group.get("description") or group["id"]
-                if g_desc != desc:
+                if g_desc not in desc_parts:
                     continue
 
                 if group.get("options"):
@@ -348,7 +351,7 @@ def build_alternatives_map(
                     o for o in full_options
                     if o not in assumed_set and o not in avoid_set and o not in path_set and o != course and o in catalog
                 ]
-                result[course] = {"desc": desc, "track": track, "alternatives": alternatives}
+                result[course] = {"desc": g_desc, "track": track, "alternatives": alternatives}
                 break
             break
 
@@ -473,24 +476,36 @@ if not _real_majors:
 uploaded = st.file_uploader("Upload Tar Heel Tracker PDF", type=["pdf"], label_visibility="collapsed")
 
 if uploaded is not None:
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
-        uploaded.seek(0)
-        tmp.write(uploaded.read())
-        tmp_path = tmp.name
+    _file_bytes = uploaded.read()
+    _key_src = json.dumps({
+        "file": hashlib.md5(_file_bytes).hexdigest(),
+        "majors": majors_to_check,
+        "planned": sorted(planned_courses or []),
+        "avoid": sorted(avoid_courses or []),
+    }, sort_keys=True).encode()
+    _pipeline_key = hashlib.md5(_key_src).hexdigest()
 
-    try:
-        with st.spinner("Parsing transcript and auditing requirements…"):
-            data = run_pipeline(
-                tmp_path, majors_to_check, catalog, requirements, graph,
-                planned_courses=planned_courses,
-                avoid_courses=avoid_courses,
-                explicitly_requested=list(st.session_state.get("user_swaps", set())),
-            )
-    except Exception as exc:
-        st.error(f"Pipeline error: {exc}")
-        st.stop()
-    finally:
-        os.unlink(tmp_path)
+    if st.session_state.get("_pipeline_key") != _pipeline_key:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            tmp.write(_file_bytes)
+            tmp_path = tmp.name
+        try:
+            with st.spinner("Parsing transcript and auditing requirements…"):
+                data = run_pipeline(
+                    tmp_path, majors_to_check, catalog, requirements, graph,
+                    planned_courses=planned_courses,
+                    avoid_courses=avoid_courses,
+                )
+        except Exception as exc:
+            st.error(f"Pipeline error: {exc}")
+            st.stop()
+        finally:
+            os.unlink(tmp_path)
+        st.session_state["_pipeline_key"] = _pipeline_key
+        st.session_state["_pipeline_data"] = data
+        st.session_state["user_swaps"] = {}
+    else:
+        data = st.session_state["_pipeline_data"]
 
     completed     = data["completed"]
     in_progress   = data["in_progress"]

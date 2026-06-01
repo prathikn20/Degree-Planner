@@ -1,19 +1,12 @@
 import time
 import random
+from collections import defaultdict
 
 def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blacklist, remaining_semesters=8):
-    """Phase 3 & 4: The 30-Second Iterated Local Search (ILS) Engine."""
+    """Phase 1 Greedy + Phase 2 Short ILS Optimization Engine."""
     if not slots:
         return [], {}
 
-    start_time = time.time()
-    TIMEOUT_LIMIT = 28.0 # Safety buffer to ensure Streamlit doesn't timeout
-
-    best_schedule = None
-    best_score = float('inf')
-    
-    current_assignment = {s["slot_id"]: [] for s in slots}
-    
     def calculate_objective(assignment):
         penalties = 0
         unique_courses: set = set()
@@ -116,24 +109,198 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
 
         return total_unique_credits + penalties
 
-    # Iterated Local Search Loop
+    # ─── Phase 1: Coverage-Ranked Greedy Assignment ───────────────────────────
+
+    def _is_fc_slot(sid):
+        return ("__FC-" in sid or "__FY-SEMINAR" in sid or
+                "__FAD" in sid or "__INTERDISCIPLINARY" in sid)
+
+    # Map each candidate to the list of slots it appears in
+    candidate_to_slots = defaultdict(list)
+    for s in slots:
+        for c in s.get("candidates", []):
+            candidate_to_slots[c].append(s)
+
+    greedy_assignment = {s["slot_id"]: [] for s in slots}
+    filled_slots = set()
+
+    # Constraint state for the greedy
+    prog_course_assigned = defaultdict(int)   # (prog_id, canon_id) -> number of slots in that prog
+    fc_course_assigned = set()                # canon_ids already placed in an FC/FY/FAD/IDST slot
+    fy_types_seen = set()                     # "FY-SEMINAR" and/or "FY-LAUNCH"
+
+    def _pool_credits(sid):
+        return sum(canon_catalog.get(c, {}).get("credits", 3) for c in greedy_assignment[sid])
+
+    def _is_filled(s):
+        sid = s["slot_id"]
+        if sid in filled_slots:
+            return True
+        if s["type"] == "single":
+            return bool(greedy_assignment[sid])
+        return _pool_credits(sid) >= s.get("credits_needed", 3)
+
+    def _mark_filled_if_done(s):
+        if _is_filled(s):
+            filled_slots.add(s["slot_id"])
+
+    # Sort candidates: highest coverage first, then highest credits as tiebreaker
+    sorted_candidates = sorted(
+        candidate_to_slots.keys(),
+        key=lambda c: (-len(candidate_to_slots[c]), -canon_catalog.get(c, {}).get("credits", 3))
+    )
+
+    # Phase 1a: assign each high-coverage candidate to every slot it qualifies for
+    for c in sorted_candidates:
+        is_repeatable = canon_catalog.get(c, {}).get("is_repeatable", False)
+        depth = canon_catalog.get(c, {}).get("depth", 1)
+
+        # C7: skip courses too deep to complete in time
+        if depth > remaining_semesters:
+            continue
+
+        prog_assigned_this_c = set()   # programs where c has been assigned in this pass
+        fc_assigned_this_c = False
+
+        # Process required/single slots first (most critical), then pools
+        slots_for_c = sorted(
+            candidate_to_slots[c],
+            key=lambda s: (
+                0 if "__req__" in s["slot_id"] else 1,   # required slots first
+                0 if s["type"] == "single" else 1,        # single before pool
+                len(s.get("candidates", []))              # fewer alternatives = more critical
+            )
+        )
+
+        for s in slots_for_c:
+            sid = s["slot_id"]
+            pid = s["program_id"]
+
+            # C6: skip already-filled slots
+            if _is_filled(s):
+                continue
+
+            # C1: one slot per program per non-repeatable course
+            if not is_repeatable:
+                if pid in prog_assigned_this_c:
+                    continue
+                if prog_course_assigned[(pid, c)] > 0:
+                    continue
+
+            # C3: FC singularity + C5: FY XOR
+            if _is_fc_slot(sid):
+                if fc_assigned_this_c or c in fc_course_assigned:
+                    continue
+                if "__FY-SEMINAR" in sid and "FY-LAUNCH" in fy_types_seen:
+                    continue
+                if "__FY-LAUNCH" in sid and "FY-SEMINAR" in fy_types_seen:
+                    continue
+
+            # Assign
+            greedy_assignment[sid].append(c)
+
+            if not is_repeatable:
+                prog_assigned_this_c.add(pid)
+                prog_course_assigned[(pid, c)] += 1
+
+            if _is_fc_slot(sid):
+                fc_assigned_this_c = True
+                fc_course_assigned.add(c)
+                if "__FY-SEMINAR" in sid:
+                    fy_types_seen.add("FY-SEMINAR")
+                elif "__FY-LAUNCH" in sid:
+                    fy_types_seen.add("FY-LAUNCH")
+
+            _mark_filled_if_done(s)
+
+    # Phase 1b: fill any remaining empty slots with the best available candidate
+    for s in slots:
+        if _is_filled(s):
+            continue
+        sid = s["slot_id"]
+        pid = s["program_id"]
+
+        while not _is_filled(s):
+            best_c = None
+            best_score_t = (-1, -1)   # (prefer_3cr_flag, credits)
+
+            for c in s.get("candidates", []):
+                if c in greedy_assignment[sid]:
+                    continue  # already assigned to this slot
+
+                is_repeatable = canon_catalog.get(c, {}).get("is_repeatable", False)
+                if canon_catalog.get(c, {}).get("depth", 1) > remaining_semesters:
+                    continue
+                if not is_repeatable and prog_course_assigned[(pid, c)] > 0:
+                    continue
+                if _is_fc_slot(sid):
+                    if c in fc_course_assigned:
+                        continue
+                    if "__FY-SEMINAR" in sid and "FY-LAUNCH" in fy_types_seen:
+                        continue
+                    if "__FY-LAUNCH" in sid and "FY-SEMINAR" in fy_types_seen:
+                        continue
+
+                cr = canon_catalog.get(c, {}).get("credits", 3)
+                has_3cr_alt = (cr < 3) and any(
+                    canon_catalog.get(alt, {}).get("credits", 0) >= 3
+                    for alt in s.get("candidates", []) if alt != c
+                )
+                score_t = (0 if has_3cr_alt else 1, cr)
+                if score_t > best_score_t:
+                    best_score_t = score_t
+                    best_c = c
+
+            if best_c is None:
+                break  # no valid candidate; ILS will repair
+
+            greedy_assignment[sid].append(best_c)
+            is_rep = canon_catalog.get(best_c, {}).get("is_repeatable", False)
+            if not is_rep:
+                prog_course_assigned[(pid, best_c)] += 1
+            if _is_fc_slot(sid):
+                fc_course_assigned.add(best_c)
+                if "__FY-SEMINAR" in sid:
+                    fy_types_seen.add("FY-SEMINAR")
+                elif "__FY-LAUNCH" in sid:
+                    fy_types_seen.add("FY-LAUNCH")
+
+            if s["type"] == "single":
+                filled_slots.add(sid)
+                break  # single slot: one assignment is sufficient
+            elif _pool_credits(sid) >= s.get("credits_needed", 3):
+                filled_slots.add(sid)
+                # while condition exits naturally
+
+    # ─── Phase 2: Short ILS Refinement (5 seconds) ────────────────────────────
+    # Start from the greedy solution; the ILS fixes C4 edge cases and makes
+    # marginal improvements without the 28-second cold-start cost.
+
+    current_assignment = {k: list(v) for k, v in greedy_assignment.items()}
+    best_score = calculate_objective(current_assignment)
+    best_schedule = {k: list(v) for k, v in current_assignment.items()}
+
+    ils_start = time.time()
+    ILS_TIMEOUT = 5.0
     iterations = 0
-    while time.time() - start_time < TIMEOUT_LIMIT:
+    rng = random.Random(42)   # local seed so we don't disturb global random state
+
+    while time.time() - ils_start < ILS_TIMEOUT:
         iterations += 1
         local_min_reached = False
-        
-        while not local_min_reached and time.time() - start_time < TIMEOUT_LIMIT:
+
+        while not local_min_reached and time.time() - ils_start < ILS_TIMEOUT:
             local_min_reached = True
-            
+
             for s in slots:
                 sid = s["slot_id"]
                 current_cands = current_assignment[sid]
                 best_local_cands = current_cands
                 best_local_score = calculate_objective(current_assignment)
-                
+
                 for cand in s.get("candidates", []):
                     test_assignment = {k: list(v) for k, v in current_assignment.items()}
-                    
+
                     if s["type"] == "single":
                         test_assignment[sid] = [cand]
                     elif s["type"] == "pool":
@@ -141,37 +308,37 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                         pool_credits = s.get("credits_needed", 3)
                         new_pool = [cand]
                         acc_credits = canon_catalog.get(cand, {}).get("credits", 3)
-                        
+
                         rem_cands = [x for x in s.get("candidates", []) if x != cand]
                         for rc in rem_cands:
                             if acc_credits >= pool_credits: break
                             new_pool.append(rc)
                             acc_credits += canon_catalog.get(rc, {}).get("credits", 3)
                         test_assignment[sid] = new_pool
-                        
+
                     test_score = calculate_objective(test_assignment)
                     if test_score < best_local_score:
                         best_local_score = test_score
                         best_local_cands = test_assignment[sid]
                         local_min_reached = False
-                
+
                 current_assignment[sid] = best_local_cands
-        
+
         current_score = calculate_objective(current_assignment)
         if current_score < best_score:
             best_score = current_score
             best_schedule = {k: list(v) for k, v in current_assignment.items()}
-            
+
         # Perturbation
-        if time.time() - start_time < TIMEOUT_LIMIT:
+        if time.time() - ils_start < ILS_TIMEOUT:
             for sid in current_assignment.keys():
-                if random.random() < 0.10:
+                if rng.random() < 0.10:
                     current_assignment[sid] = []
 
-    # Phase 4: Post-Processing
+    # ─── Phase 3: Post-Processing (unchanged) ─────────────────────────────────
     final_path_set = set()
     course_to_slots_map = {}
-    
+
     if best_schedule:
         for sid, assigned_canons in best_schedule.items():
             for canon in assigned_canons:
@@ -184,5 +351,5 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     final_path_set.add(clean_c)
                     course_to_slots_map.setdefault(clean_c, []).append(sid)
 
-    print(f"[Engine] Optimization finished. ILS Iterations: {iterations}. Final Score: {best_score}")
+    print(f"[Engine] Greedy+ILS finished. ILS Iterations: {iterations}. Final Score: {best_score}")
     return list(final_path_set), course_to_slots_map
