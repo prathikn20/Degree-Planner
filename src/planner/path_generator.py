@@ -65,11 +65,13 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             if len(fc_slots_list) > 1:
                 penalties += 5000 * (len(fc_slots_list) - 1)
 
-        # C1 – Intra-program exclusivity: non-repeatable courses may fill only
-        # ONE slot per program (cross-program double-counting is encouraged)
+        # C1 – Intra-program exclusivity: any course may fill only ONE slot per
+        # program (cross-program double-counting is still encouraged).
+        # Penalty exceeds C6 (10000) so the ILS never fills an empty slot with a
+        # duplicate course just to avoid the C6 unfilled-slot penalty.
         for (pid, c), count in prog_course_slots.items():
-            if count > 1 and not canon_catalog.get(c, {}).get("is_repeatable", False):
-                penalties += 3000 * (count - 1)
+            if count > 1:
+                penalties += 11000 * (count - 1)
 
         # C5 – FY Foundation XOR: plan may not contain both an FY-SEMINAR and
         # an FY-LAUNCH assignment simultaneously
@@ -84,6 +86,9 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             penalties += 10000
 
         # C4 – 50% Program Exclusivity Rule
+        # A core slot is exclusive to P when every assigned course is absent
+        # from every OTHER program's slots (program-aware, not global-count-aware).
+        _all_pids_in_use = {k[0] for k in prog_course_slots}
         prog_exclusivity: dict = {}
         for s in slots:
             pid = s["program_id"]
@@ -92,12 +97,16 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             if s.get("is_core") and len(s.get("candidates", [])) > 1:
                 prog_exclusivity[pid]["core_total"] += 1
                 assigned = assignment.get(s["slot_id"], [])
-                if assigned and all(global_usage.get(c, 0) == 1 for c in assigned):
+                if assigned and all(
+                    all(prog_course_slots.get((other_pid, c), 0) == 0
+                        for other_pid in _all_pids_in_use if other_pid != pid)
+                    for c in assigned
+                ):
                     prog_exclusivity[pid]["exclusive"] += 1
 
         for pid, stats in prog_exclusivity.items():
             if stats["core_total"] > 0 and (stats["exclusive"] * 2) <= stats["core_total"]:
-                penalties += 500
+                penalties += 3500
 
         # ── Objective: total UNIQUE credits ───────────────────────────────────
         # Courses that cross-count across programs are counted ONCE, so the
@@ -152,7 +161,6 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
 
     # Phase 1a: assign each high-coverage candidate to every slot it qualifies for
     for c in sorted_candidates:
-        is_repeatable = canon_catalog.get(c, {}).get("is_repeatable", False)
         depth = canon_catalog.get(c, {}).get("depth", 1)
 
         # C7: skip courses too deep to complete in time
@@ -180,12 +188,11 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             if _is_filled(s):
                 continue
 
-            # C1: one slot per program per non-repeatable course
-            if not is_repeatable:
-                if pid in prog_assigned_this_c:
-                    continue
-                if prog_course_assigned[(pid, c)] > 0:
-                    continue
+            # C1: one slot per program per course
+            if pid in prog_assigned_this_c:
+                continue
+            if prog_course_assigned[(pid, c)] > 0:
+                continue
 
             # C3: FC singularity + C5: FY XOR
             if _is_fc_slot(sid):
@@ -199,9 +206,8 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             # Assign
             greedy_assignment[sid].append(c)
 
-            if not is_repeatable:
-                prog_assigned_this_c.add(pid)
-                prog_course_assigned[(pid, c)] += 1
+            prog_assigned_this_c.add(pid)
+            prog_course_assigned[(pid, c)] += 1
 
             if _is_fc_slot(sid):
                 fc_assigned_this_c = True
@@ -228,10 +234,9 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                 if c in greedy_assignment[sid]:
                     continue  # already assigned to this slot
 
-                is_repeatable = canon_catalog.get(c, {}).get("is_repeatable", False)
                 if canon_catalog.get(c, {}).get("depth", 1) > remaining_semesters:
                     continue
-                if not is_repeatable and prog_course_assigned[(pid, c)] > 0:
+                if prog_course_assigned[(pid, c)] > 0:
                     continue
                 if _is_fc_slot(sid):
                     if c in fc_course_assigned:
@@ -255,9 +260,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                 break  # no valid candidate; ILS will repair
 
             greedy_assignment[sid].append(best_c)
-            is_rep = canon_catalog.get(best_c, {}).get("is_repeatable", False)
-            if not is_rep:
-                prog_course_assigned[(pid, best_c)] += 1
+            prog_course_assigned[(pid, best_c)] += 1
             if _is_fc_slot(sid):
                 fc_course_assigned.add(best_c)
                 if "__FY-SEMINAR" in sid:
@@ -271,6 +274,127 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             elif _pool_credits(sid) >= s.get("credits_needed", 3):
                 filled_slots.add(sid)
                 # while condition exits naturally
+
+    # ─── Phase 1c: C4 Greedy Repair ──────────────────────────────────────────────
+    # Audit C4 violations after the greedy passes; repair them so ILS starts
+    # from a feasible point rather than spending its budget climbing out of a
+    # heavily cross-counted state.
+    #
+    # Uses canon_to_progs (which programs each canon appears in) rather than a
+    # raw usage count, so repeatable courses filling multiple same-program slots
+    # are correctly treated as exclusive (not cross-counted).
+
+    canon_to_progs: dict = defaultdict(set)  # canon_id -> set of program_ids
+    for s in slots:
+        for c in greedy_assignment[s['slot_id']]:
+            canon_to_progs[c].add(s['program_id'])
+
+    for prog_id in list(dict.fromkeys(s['program_id'] for s in slots)):
+        core_slots_P = [s for s in slots
+                        if s['program_id'] == prog_id
+                        and s.get('is_core')
+                        and len(s.get('candidates', [])) > 1]
+        core_total = len(core_slots_P)
+        if core_total == 0:
+            continue
+
+        while True:
+            # Slot is exclusive to P iff every assigned canon appears ONLY in P's slots.
+            exclusive_count = sum(
+                1 for s in core_slots_P
+                if greedy_assignment[s['slot_id']]
+                and all(canon_to_progs[c] == {prog_id}
+                        for c in greedy_assignment[s['slot_id']])
+            )
+            if exclusive_count * 2 > core_total:
+                break  # C4 satisfied for this program
+
+            target_canon = None
+            best_max_alts = -1
+            for s in core_slots_P:
+                for c in greedy_assignment[s['slot_id']]:
+                    if len(canon_to_progs[c]) <= 1:
+                        continue  # already exclusive to P (or unset)
+                    # Only target canons removable from foreign slots that have
+                    # genuine alternatives (skip single-candidate required slots).
+                    foreign_with_c = [
+                        fs for fs in slots
+                        if fs['program_id'] != prog_id
+                        and c in greedy_assignment[fs['slot_id']]
+                        and len(fs.get('candidates', [])) > 1
+                    ]
+                    if not foreign_with_c:
+                        continue
+                    max_alts = max(len(fs.get('candidates', [])) for fs in foreign_with_c)
+                    if max_alts > best_max_alts:
+                        best_max_alts = max_alts
+                        target_canon = c
+
+            if target_canon is None:
+                break  # can't fix further; ILS will handle
+
+            newly_unfilled = []
+            for s in slots:
+                if s['program_id'] == prog_id:
+                    continue
+                if len(s.get('candidates', [])) <= 1:
+                    continue  # never touch single-candidate (required) slots
+                sid = s['slot_id']
+                if target_canon not in greedy_assignment[sid]:
+                    continue
+                greedy_assignment[sid].remove(target_canon)
+                canon_to_progs[target_canon].discard(s['program_id'])
+                filled_slots.discard(sid)
+                if _is_filled(s):
+                    filled_slots.add(sid)
+                else:
+                    newly_unfilled.append(s)
+
+            for s in newly_unfilled:
+                sid = s['slot_id']
+                pid_s = s['program_id']
+                while not _is_filled(s):
+                    best_c = None
+                    best_score_t = (-1, -1)
+                    for c in s.get('candidates', []):
+                        if c in greedy_assignment[sid]:
+                            continue
+                        if canon_catalog.get(c, {}).get('depth', 1) > remaining_semesters:
+                            continue
+                        if prog_course_assigned[(pid_s, c)] > 0:
+                            continue
+                        if _is_fc_slot(sid):
+                            if c in fc_course_assigned:
+                                continue
+                            if '__FY-SEMINAR' in sid and 'FY-LAUNCH' in fy_types_seen:
+                                continue
+                            if '__FY-LAUNCH' in sid and 'FY-SEMINAR' in fy_types_seen:
+                                continue
+                        cr = canon_catalog.get(c, {}).get('credits', 3)
+                        has_3cr_alt = (cr < 3) and any(
+                            canon_catalog.get(alt, {}).get('credits', 0) >= 3
+                            for alt in s.get('candidates', []) if alt != c
+                        )
+                        score_t = (0 if has_3cr_alt else 1, cr)
+                        if score_t > best_score_t:
+                            best_score_t = score_t
+                            best_c = c
+                    if best_c is None:
+                        break
+                    greedy_assignment[sid].append(best_c)
+                    prog_course_assigned[(pid_s, best_c)] += 1
+                    if _is_fc_slot(sid):
+                        fc_course_assigned.add(best_c)
+                        if '__FY-SEMINAR' in sid:
+                            fy_types_seen.add('FY-SEMINAR')
+                        elif '__FY-LAUNCH' in sid:
+                            fy_types_seen.add('FY-LAUNCH')
+                    canon_to_progs[best_c].add(pid_s)
+                    if s['type'] == 'single':
+                        filled_slots.add(sid)
+                        break
+                    elif _pool_credits(sid) >= s.get('credits_needed', 3):
+                        filled_slots.add(sid)
 
     # ─── Phase 2: Short ILS Refinement (5 seconds) ────────────────────────────
     # Start from the greedy solution; the ILS fixes C4 edge cases and makes
@@ -350,6 +474,16 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     clean_c = orig[-1] if orig else actual_c.replace("CANON_", "").split("_")[0]
                     final_path_set.add(clean_c)
                     course_to_slots_map.setdefault(clean_c, []).append(sid)
+
+    # Guard: remove courses absent from the canon catalog (happens when
+    # requirements.json references a course not yet in course_catalog.json).
+    valid_codes = {
+        orig
+        for data in canon_catalog.values()
+        for orig in data.get("original_courses", [])
+    }
+    final_path_set = {c for c in final_path_set if c in valid_codes}
+    course_to_slots_map = {c: v for c, v in course_to_slots_map.items() if c in valid_codes}
 
     print(f"[Engine] Greedy+ILS finished. ILS Iterations: {iterations}. Final Score: {best_score}")
     return list(final_path_set), course_to_slots_map

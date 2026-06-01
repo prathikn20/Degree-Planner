@@ -371,7 +371,8 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             else:
                 raw_options = []
 
-            options = [course_to_canon.get(o, o) for o in raw_options]
+            # Deduplicate after canonicalization (cross-listed pairs map to the same canon)
+            options = list(dict.fromkeys(course_to_canon.get(o, o) for o in raw_options))
             valid_candidates = [
                 o for o in options
                 if o not in global_satisfied_set
@@ -396,6 +397,18 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             else:
                 # Subtract courses already completed from this group before creating splits
                 already_done = sum(1 for o in options if o in global_satisfied_set)
+
+                # For rule-based attribute groups, also count completed courses directly
+                # by catalog attribute. This handles cases where a completed course code
+                # doesn't match any catalog key exactly (section variants, leading zeros, etc.)
+                if group.get("type") == "rule_based" and group.get("rule", {}).get("attribute"):
+                    attr = group["rule"]["attribute"].lower()
+                    direct_done = sum(
+                        1 for c in (completed_courses or [])
+                        if any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
+                    )
+                    already_done = max(already_done, direct_done)
+
                 remaining_needed = max(0, courses_req - already_done)
                 if remaining_needed == 0 or not valid_candidates:
                     continue  # group fully satisfied

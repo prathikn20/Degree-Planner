@@ -67,6 +67,76 @@ def fmt(key: str) -> str:
 def is_minor(track_id: str) -> bool:
     return "minor" in track_id.lower()
 
+def _shorten_desc(raw: str) -> str:
+    """Condense a verbose requirement description to a concise display label."""
+    if not raw or raw == "Required Course":
+        return raw
+
+    d = raw.replace("\xa0", " ")
+
+    # "DEPT NNN | Full Course Name flags" → keep only the name part
+    if " | " in d:
+        d = d.split(" | ", 1)[1]
+
+    # Multi-sentence blurbs: keep only the first sentence
+    d = _re.sub(r"\.\s+[A-Z].*$", "", d)
+
+    # Remove boilerplate parentheticals FIRST so "or" inside them
+    # doesn't get caught by the OR-alternative strip below
+    _strip_parens = [
+        r"\(select one\):?",
+        r"\(required when[^)]*\)",
+        r"\(see list[^)]*\)",
+        r"\(each of[^)]*\)",
+        r"\(not including[^)]*\)",
+        r"\(excluding[^)]*\)",
+        r"\(which may[^)]*\)",
+        r"\(taken in[^)]*\)",
+        r"\(some courses[^)]*\)",
+        r"\(no more than[^)]*\)",
+        r"\(the first (?:semester|year)[^)]*\)",
+        r"\([\d.]+ credit[^)]*\)",
+        r"\([\d.]+ hours[^)]*\)",
+        r"\([A-Z][A-Z0-9-]+ —[^)]*\)",  # "(CODE — explanation)" e.g. "(FC-LAB — …)"
+        r"\([^)]{30,}\)",  # any remaining long parenthetical
+    ]
+    for pat in _strip_parens:
+        d = _re.sub(r"\s*" + pat, "", d, flags=_re.IGNORECASE)
+
+    # Strip "… OR …" alternatives (after parens are gone so inner "or" isn't matched)
+    d = _re.sub(r"\s+OR\s+.*", "", d, flags=_re.IGNORECASE)
+
+    # Strip trailing "chosen from …" and "from the following …"
+    d = _re.sub(r"\s+chosen from.*$", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s+from the following.*$", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r",?\s*from:?\s*$", "", d, flags=_re.IGNORECASE)
+
+    # Strip leading verbose openers
+    d = _re.sub(
+        r"^(Choose|Select|At least|A minimum of|Minimum|"
+        r"A major in|A minor in|The remaining|All students must complete)\s+",
+        "", d, flags=_re.IGNORECASE,
+    )
+
+    # Strip trailing catalog attribute flags: ", H", " F", ", 1, H, F"
+    d = _re.sub(r"((?:[,\s]+\b[HF]\b)+)\s*$", "", d)
+    # Strip trailing standalone footnote numbers: " 1", ", 4,5"
+    d = _re.sub(r"(\s*,?\s*\b\d\b)+\s*$", "", d)
+
+    # Strip trailing punctuation
+    d = d.rstrip(".:, ")
+
+    # Normalize whitespace and capitalise
+    d = _re.sub(r"\s+", " ", d).strip()
+    if d:
+        d = d[0].upper() + d[1:]
+
+    # Truncate to 55 characters
+    if len(d) > 55:
+        d = d[:53].rstrip(" ,:(") + "…"
+
+    return d or raw
+
 def available_concentrations(requirements: dict, track: str) -> list[str]:
     concs = list(requirements.get(track, {}).get("concentrations", {}).keys())
     return concs if concs else ["None"]
@@ -145,7 +215,7 @@ def run_pipeline(
         _t, _c = _m["track"], _m["concentration"]
         _base_g = requirements.get(_t, {}).get("base_requirements", {}).get("choice_groups", [])
         _conc_g = requirements.get(_t, {}).get("concentrations", {}).get(_c, {}).get("choice_groups", [])
-        _group_desc_map[_t] = {g["id"]: (g.get("description") or g["id"]) for g in _base_g + _conc_g}
+        _group_desc_map[_t] = {g["id"]: _shorten_desc(g.get("description") or g["id"]) for g in _base_g + _conc_g}
 
     for course, slot_ids in course_to_slots_map.items():
         for slot_id in slot_ids:
@@ -164,7 +234,7 @@ def run_pipeline(
                     if not existing:
                         audit[program_id]["fulfillment_map"][course] = desc
                     elif desc not in existing:
-                        audit[program_id]["fulfillment_map"][course] += f" + {desc}"
+                        audit[program_id]["fulfillment_map"][course] += f" · {desc}"
 
     semester_path = kahns_algorithm(best_path, catalog)
     flat_path: list[str] = []
@@ -322,8 +392,8 @@ def build_alternatives_map(
                 continue
 
             desc = fm[course]
-            # desc may be concatenated ("desc1 + desc2") for double-counted courses
-            desc_parts = {part.strip() for part in desc.split(" + ")}
+            # desc may be multi-program ("desc1 · desc2") for double-counted courses
+            desc_parts = {part.strip() for part in desc.split(" · ")}
             found = True
 
             if "Required Course" in desc_parts:
@@ -336,7 +406,7 @@ def build_alternatives_map(
             all_groups = base.get("choice_groups", []) + conc_data.get("choice_groups", [])
 
             for group in all_groups:
-                g_desc = group.get("description") or group["id"]
+                g_desc = _shorten_desc(group.get("description") or group["id"])
                 if g_desc not in desc_parts:
                     continue
 
@@ -684,6 +754,7 @@ if uploaded is not None:
     if path:
         unknown_in_path = [c for c in path if c not in catalog]
         _path_set = set(path)
+        _swap_orig_set = set(_user_swaps.keys())
         _course_fulfillment: dict[str, list[str]] = {}
 
         for _m in majors_to_check:
@@ -691,7 +762,7 @@ if uploaded is not None:
             if _track not in audit: continue
             _plabel = "Gen Ed" if _track == GEN_ED_TRACK else fmt(_track)
             for _c, _desc in audit[_track].get("fulfillment_map", {}).items():
-                if _c in _path_set:
+                if _c in _path_set or _c in _swap_orig_set:
                     _course_fulfillment.setdefault(_c, []).append(f"{_plabel}: {_desc}")
 
         _assumed_set = set(completed + in_progress)
