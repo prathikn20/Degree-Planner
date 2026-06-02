@@ -47,6 +47,11 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
             if any(rule_attr_lower in attr.lower() for attr in data.get("attributes", [])):
                 valid.append(course_id)
             continue
+        # FY-SEMINAR courses are first-year seminars; exclude them from
+        # department/number-based elective pools so they cannot satisfy
+        # requirements like busi_electives or comp_420_electives.
+        if "FY-SEMINAR" in data.get("attributes", []):
+            continue
         dept, number_str = _split_course_id(course_id)
         if not number_str:
             continue

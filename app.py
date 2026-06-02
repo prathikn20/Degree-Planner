@@ -439,6 +439,10 @@ catalog, requirements, graph = load_static_data()
 
 if "user_swaps" not in st.session_state:
     st.session_state.user_swaps = {}
+if "planned_courses_committed" not in st.session_state:
+    st.session_state.planned_courses_committed = []
+if "avoid_courses_committed" not in st.session_state:
+    st.session_state.avoid_courses_committed = []
 
 all_tracks    = list(requirements.keys())
 GEN_ED_TRACK  = "UNC_General_Education"
@@ -487,7 +491,7 @@ with st.sidebar:
 
     st.divider()
     with st.expander("🔮 What-If Scenarios", expanded=False):
-        st.caption("Simulate future courses or block specific recommendations.")
+        st.caption("Stage courses below, then click **Apply** to update the plan.")
 
         def _course_label(c: str) -> str:
             name = catalog.get(c, {}).get("name", "")
@@ -495,8 +499,34 @@ with st.sidebar:
             display = spaced if spaced != c else c
             return f"{display} — {name[:42]}" if name else display
 
-        planned_courses: list[str] = st.multiselect("Planned Courses (simulate taking these)", options=sorted(catalog.keys()), format_func=_course_label, key="planned_courses", placeholder="Type a course ID or name…")
-        avoid_courses: list[str] = st.multiselect("Courses to Avoid (do not recommend these)", options=sorted(catalog.keys()), format_func=_course_label, key="avoid_courses", placeholder="Type a course ID or name…")
+        with st.form(key="whatif_form", clear_on_submit=False):
+            _staged_planned = st.multiselect(
+                "Planned Courses (simulate taking these)",
+                options=sorted(catalog.keys()),
+                default=st.session_state.planned_courses_committed,
+                format_func=_course_label,
+                key="planned_courses_staged",
+                placeholder="Type a course ID or name…",
+            )
+            _staged_avoid = st.multiselect(
+                "Courses to Avoid (do not recommend these)",
+                options=sorted(catalog.keys()),
+                default=st.session_state.avoid_courses_committed,
+                format_func=_course_label,
+                key="avoid_courses_staged",
+                placeholder="Type a course ID or name…",
+            )
+            _whatif_applied = st.form_submit_button("✅ Apply What-If Scenarios", use_container_width=True, type="primary")
+
+        if _whatif_applied:
+            st.session_state.planned_courses_committed = _staged_planned
+            st.session_state.avoid_courses_committed   = _staged_avoid
+
+        planned_courses: list[str] = st.session_state.planned_courses_committed
+        avoid_courses:   list[str] = st.session_state.avoid_courses_committed
+
+        if planned_courses or avoid_courses:
+            st.caption(f"Active: **{len(planned_courses)}** planned · **{len(avoid_courses)}** avoided")
 
     st.divider()
     n_majors = 1 + (1 if dual and major2 else 0)
@@ -510,6 +540,7 @@ with st.sidebar:
             fb_title = st.text_input("Brief title", placeholder="One-line summary…")
             fb_desc = st.text_area("Details", placeholder="Describe the feature or bug…", height=110)
             fb_email = st.text_input("Email (optional)", placeholder="so I can follow up")
+            st.caption("⚠️ Do not submit sensitive information, PIDs, or transcript data here.")
             _fb_submitted = st.form_submit_button("Submit", use_container_width=True)
 
         if _fb_submitted:
@@ -521,6 +552,13 @@ with st.sidebar:
                     st.error(f"Submission failed: {_fb_err}")
             else:
                 st.warning("Please fill in both the title and description.")
+
+    st.divider()
+    st.caption(
+        "**Disclaimer:** This is an unofficial, student-built tool. "
+        "It is not affiliated with, endorsed by, or connected to the University of North Carolina at Chapel Hill. "
+        "Always consult your official Tar Heel Tracker and academic advisor."
+    )
 
 # ── Build generic majors_to_check list ─────────────
 majors_to_check: list[dict] = []
@@ -543,7 +581,10 @@ if not _real_majors:
     st.info("👈 Choose at least one major in the sidebar, then upload your Tar Heel Tracker PDF.")
     st.stop()
 
-uploaded = st.file_uploader("Upload Tar Heel Tracker PDF", type=["pdf"], label_visibility="collapsed")
+_privacy_consent = st.checkbox(
+    "I understand that my transcript is processed securely in-memory and is never saved, stored, or viewed by humans."
+)
+uploaded = st.file_uploader("Upload Tar Heel Tracker PDF", type=["pdf"], label_visibility="collapsed", disabled=not _privacy_consent)
 
 if uploaded is not None:
     _file_bytes = uploaded.read()
@@ -560,12 +601,14 @@ if uploaded is not None:
             tmp.write(_file_bytes)
             tmp_path = tmp.name
         try:
-            with st.spinner("Parsing transcript and auditing requirements…"):
+            with st.status("Analyzing your degree plan… (up to 30 seconds)", expanded=False) as _status:
+                _status.write("Parsing Tar Heel Tracker transcript…")
                 data = run_pipeline(
                     tmp_path, majors_to_check, catalog, requirements, graph,
                     planned_courses=planned_courses,
                     avoid_courses=avoid_courses,
                 )
+                _status.update(label="Degree plan ready!", state="complete", expanded=False)
         except Exception as exc:
             st.error(f"Pipeline error: {exc}")
             st.stop()
@@ -746,6 +789,124 @@ if uploaded is not None:
                 st.warning(f"No audit data found for {fmt(program['track'])}.")
 
     st.divider()
+
+    # ── Double-Counted Courses ─────────────────────────────────────────────────
+    _dc_map: dict[str, list[str]] = {}
+
+    # Completed/in-progress courses that satisfy ≥2 program requirements
+    for _c, _entries in _completed_satisfies.items():
+        if len(_entries) >= 2:
+            _dc_map[_c] = list(_entries)
+
+    # Path courses that appear in ≥2 programs' fulfillment maps
+    _path_set_dc = set(path)
+    _path_dc_raw: dict[str, list[str]] = {}
+    for _m in majors_to_check:
+        _tr = _m["track"]
+        if _tr not in audit:
+            continue
+        _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
+        for _c, _desc in audit[_tr].get("fulfillment_map", {}).items():
+            if _c in _path_set_dc:
+                _path_dc_raw.setdefault(_c, []).append(f"{_plbl}: {_desc}")
+    for _c, _entries in _path_dc_raw.items():
+        if len(_entries) >= 2 and _c not in _dc_map:
+            _dc_map[_c] = _entries
+
+    if _dc_map:
+        # Assign a distinct color to each program label for badges
+        _dc_palette = ["#6FA8DC", "#93C47D", "#B39DDB", "#FFD966", "#E06666"]
+        _dc_prog_labels = sorted({
+            e.split(": ", 1)[0] for _entries in _dc_map.values() for e in _entries
+        })
+        _dc_prog_colors = {lbl: _dc_palette[i % len(_dc_palette)] for i, lbl in enumerate(_dc_prog_labels)}
+
+        def _hex_to_rgb(h: str) -> str:
+            h = h.lstrip("#")
+            return f"{int(h[0:2],16)},{int(h[2:4],16)},{int(h[4:6],16)}"
+
+        _dc_completed_set   = set(completed)
+        _dc_in_progress_set = set(in_progress)
+
+        def _dc_sort_key(c: str) -> tuple:
+            if c in _dc_completed_set:   return (0, c)
+            if c in _dc_in_progress_set: return (1, c)
+            return (2, c)
+
+        _dc_cards: list[str] = []
+        for _c in sorted(_dc_map, key=_dc_sort_key):
+            _entries = _dc_map[_c]
+            _name     = catalog.get(_c, {}).get("name", "")
+            _cr       = catalog.get(_c, {}).get("credits", "?")
+            _spaced_c = _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', _c)
+            _name_short = (_name[:52] + "…") if len(_name) > 52 else _name
+
+            if _c in _dc_completed_set:
+                _status_icon  = "✅"
+                _status_label = "Completed"
+                _status_style = "background:rgba(76,175,80,0.12);color:#4CAF50;border:1px solid rgba(76,175,80,0.35);"
+                _card_style   = "border-color:rgba(76,175,80,0.25);background:rgba(76,175,80,0.03);"
+            elif _c in _dc_in_progress_set:
+                _status_icon  = "📘"
+                _status_label = "In Progress"
+                _status_style = "background:rgba(33,150,243,0.12);color:#2196F3;border:1px solid rgba(33,150,243,0.35);"
+                _card_style   = "border-color:rgba(33,150,243,0.25);background:rgba(33,150,243,0.03);"
+            else:
+                _status_icon  = "📅"
+                _status_label = "Planned"
+                _status_style = "background:rgba(128,128,128,0.1);color:rgba(150,150,150,1);border:1px solid rgba(128,128,128,0.25);"
+                _card_style   = ""
+
+            _rows: list[str] = []
+            for _entry in _entries:
+                _parts    = _entry.split(": ", 1)
+                _prog_lbl = _parts[0]
+                _req_lbl  = _parts[1] if len(_parts) > 1 else _entry
+                _color    = _dc_prog_colors.get(_prog_lbl, "#9E9E9E")
+                _rgb      = _hex_to_rgb(_color)
+                _rows.append(
+                    f'<div class="dc-row">'
+                    f'<span class="dc-prog" style="background:rgba({_rgb},0.14);color:{_color};border-color:rgba({_rgb},0.35);">{_prog_lbl}</span>'
+                    f'<span class="dc-req">{_req_lbl}</span>'
+                    f'</div>'
+                )
+
+            _dc_cards.append(
+                f'<div class="dc-card" style="{_card_style}">'
+                f'<div class="dc-header">'
+                f'<span class="dc-code">{_spaced_c}</span>'
+                f'<span class="dc-name">{_name_short}</span>'
+                f'<span class="dc-cr">{_cr} cr</span>'
+                f'<span class="dc-status" style="{_status_style}">{_status_icon} {_status_label}</span>'
+                f'</div>'
+                + "".join(_rows)
+                + f'</div>'
+            )
+
+        _dc_css = """<style>
+.dc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0 6px}
+.dc-card{border:1px solid rgba(128,128,128,0.2);border-radius:10px;padding:14px 16px;background:rgba(128,128,128,0.03)}
+.dc-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.dc-code{font-weight:700;font-size:15px;white-space:nowrap}
+.dc-name{color:rgba(150,150,150,1);font-size:13px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dc-cr{font-size:11px;padding:2px 8px;border-radius:10px;background:rgba(128,128,128,0.1);white-space:nowrap;flex-shrink:0}
+.dc-status{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.dc-row{display:flex;align-items:center;gap:9px;padding:5px 0;border-top:1px solid rgba(128,128,128,0.1)}
+.dc-prog{font-size:11px;font-weight:600;white-space:nowrap;padding:3px 10px;border-radius:20px;border:1px solid;flex-shrink:0}
+.dc-req{font-size:13px}
+</style>"""
+
+        with st.expander(f"🔄 Double-Counted Courses ({len(_dc_map)})", expanded=True):
+            st.caption(
+                "Each course below simultaneously satisfies requirements for **multiple programs**, "
+                "reducing your total course load."
+            )
+            st.markdown(
+                _dc_css + f'<div class="dc-grid">{"".join(_dc_cards)}</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown("")  # breathing room
+
     st.subheader("📅 Suggested Graduation Path")
 
     path_credits    = sum(catalog.get(c, {}).get("credits", 3) for c in path)
@@ -785,23 +946,20 @@ if uploaded is not None:
                     return " · ".join(_course_fulfillment[_orig])
             return "—"
 
-        _course_to_sem: dict[str, str] = {}
-        for _sem_name, _sem_courses in semester_path.items():
-            _sem_label = _sem_name.replace("Semester ", "S") if _sem_name.startswith("Semester ") else _sem_name
-            for _sc in _sem_courses:
-                _course_to_sem[_sc] = _sem_label
-
         _swapped_in = set(_user_swaps.values())
-        rows = [{"#": i, "Sem": _course_to_sem.get(course, ""), "Course": (f"🔄 {course}" if course in _swapped_in else f"📌 {course}" if course in _planned_set else course), "Name": catalog.get(course, {}).get("name", "—"), "Credits": catalog.get(course, {}).get("credits", 3), "Fulfills": _fulfills_label(course)} for i, course in enumerate(path, 1)]
+        rows = [{"#": i, "Course": (f"🔄 {course}" if course in _swapped_in else f"📌 {course}" if course in _planned_set else course), "Name": catalog.get(course, {}).get("name", "—"), "Credits": catalog.get(course, {}).get("credits", 3), "Fulfills": _fulfills_label(course)} for i, course in enumerate(path, 1)]
         _path_df = pd.DataFrame(rows)
-        _html_table = _path_df.to_html(index=False, escape=False).replace('<table border="1" class="dataframe">', '<table class="grad-table">')
+        try:
+            _html_table = _path_df.to_html(index=False, escape=False).replace('<table border="1" class="dataframe">', '<table class="grad-table">')
+        except Exception:
+            _html_table = _path_df.to_html(index=False, escape=True).replace('<table border="1" class="dataframe">', '<table class="grad-table">')
         st.markdown(f"""
 <div style="overflow-x: auto; max-width: 100%;">
   <style>
     .grad-table {{ width: max-content; min-width: 100%; border-collapse: collapse; font-size: 14px; }}
     .grad-table th {{ text-align: left; padding: 10px 14px; border-bottom: 2px solid rgba(128,128,128,0.3); white-space: nowrap; }}
     .grad-table td {{ text-align: left; padding: 8px 14px; border-bottom: 1px solid rgba(128,128,128,0.15); word-wrap: break-word; white-space: normal; max-width: 480px; }}
-    .grad-table td:nth-child(1), .grad-table td:nth-child(2), .grad-table td:nth-child(5) {{ white-space: nowrap; }}
+    .grad-table td:nth-child(1), .grad-table td:nth-child(2), .grad-table td:nth-child(4) {{ white-space: nowrap; }}
     .grad-table tr:hover td {{ background: rgba(128,128,128,0.08); }}
   </style>
   {_html_table}
@@ -878,9 +1036,13 @@ if uploaded is not None:
 
         assumed_for_graph = list(dict.fromkeys(completed + in_progress + planned))
         with st.expander("🕸️ Prerequisite Tree", expanded=True):
-            dot_src = build_prereq_dot(path, catalog, assumed_for_graph, in_progress)
-            st.markdown("<style>div[data-testid='stGraphVizChart'] iframe { min-height: 640px !important; }</style>", unsafe_allow_html=True)
-            st.graphviz_chart(dot_src, use_container_width=True)
+            try:
+                dot_src = build_prereq_dot(path, catalog, assumed_for_graph, in_progress)
+                st.markdown("<style>div[data-testid='stGraphVizChart'] iframe { min-height: 640px !important; }</style>", unsafe_allow_html=True)
+                st.graphviz_chart(dot_src, use_container_width=True)
+            except Exception as _graph_err:
+                st.warning(f"⚠️ Prerequisite graph could not be rendered: {_graph_err}")
+                st.caption("This can happen when the path contains courses with no prerequisite connections. The course list above is still accurate.")
     else:
         st.success("No remaining required courses — all requirements are covered by your transcript!")
 

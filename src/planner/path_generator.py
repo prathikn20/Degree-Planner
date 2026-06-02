@@ -32,8 +32,9 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                 unique_courses.add(c)
                 global_usage[c] = global_usage.get(c, 0) + 1
 
-                # Track for C3 – FC Singularity (FC-* and FY-SEMINAR slots)
-                if "__FC-" in sid or "__FY-SEMINAR" in sid or "__FAD" in sid or "__INTERDISCIPLINARY" in sid:
+                # Track for C3 – FC Singularity (FC-*, FY-SEMINAR, FY-LAUNCH, FAD, IDST slots)
+                if ("__FC-" in sid or "__FY-SEMINAR" in sid or "__FY-LAUNCH" in sid
+                        or "__FAD" in sid or "__INTERDISCIPLINARY" in sid):
                     fc_course_slots.setdefault(c, []).append(sid)
 
                 # Track for C1 – Intra-program exclusivity
@@ -58,6 +59,15 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                            for alt in s.get("candidates", []) if alt != c):
                         penalties += 2000
 
+            # Non-standard relative preference: penalize internships (93) and
+            # honors (H) courses only when a standard alternative exists in the
+            # same slot's original candidate pool.
+            for c in assigned:
+                if _is_non_standard(c):
+                    if any(not _is_non_standard(alt)
+                           for alt in s.get("candidates", []) if alt != c):
+                        penalties += 5000
+
         # ── Pass 2: structural constraint penalties ───────────────────────────
 
         # C3 – FC Singularity: a course may satisfy AT MOST one FC/FY/FAD/IDST slot
@@ -73,17 +83,26 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             if count > 1:
                 penalties += 11000 * (count - 1)
 
-        # C5 – FY Foundation XOR: plan may not contain both an FY-SEMINAR and
-        # an FY-LAUNCH assignment simultaneously
+        # C5 – FY Foundation XOR + Singularity:
+        # (a) plan may not contain both an FY-SEMINAR and an FY-LAUNCH simultaneously
+        # (b) plan may not contain more than 1 FY-SEMINAR course or more than 1 FY-LAUNCH course
         fy_types_assigned: set = set()
+        fy_seminar_count = 0
+        fy_launch_count = 0
         for c, fc_slots_list in fc_course_slots.items():
             for fsl in fc_slots_list:
                 if "__FY-SEMINAR" in fsl:
+                    fy_seminar_count += 1
                     fy_types_assigned.add("FY-SEMINAR")
                 elif "__FY-LAUNCH" in fsl:
+                    fy_launch_count += 1
                     fy_types_assigned.add("FY-LAUNCH")
         if len(fy_types_assigned) > 1:
-            penalties += 10000
+            penalties += 10000                                      # C5a: XOR
+        if fy_seminar_count > 1:
+            penalties += 10000 * (fy_seminar_count - 1)            # C5b: singularity
+        if fy_launch_count > 1:
+            penalties += 10000 * (fy_launch_count - 1)             # C5b: singularity
 
         # C4 – 50% Program Exclusivity Rule
         # A core slot is exclusive to P when every assigned course is absent
@@ -121,8 +140,19 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
     # ─── Phase 1: Coverage-Ranked Greedy Assignment ───────────────────────────
 
     def _is_fc_slot(sid):
-        return ("__FC-" in sid or "__FY-SEMINAR" in sid or
+        return ("__FC-" in sid or "__FY-SEMINAR" in sid or "__FY-LAUNCH" in sid or
                 "__FAD" in sid or "__INTERDISCIPLINARY" in sid)
+
+    def _is_non_standard(c):
+        """True for internship courses (numeric suffix ends in 93) or honors courses (end in H)."""
+        cu = c.upper().replace(' ', '')
+        if cu.endswith('H'):
+            return True
+        # Strip alphabetic prefix to get numeric suffix
+        i = len(cu)
+        while i > 0 and cu[i - 1].isdigit():
+            i -= 1
+        return cu[i:].endswith('93')
 
     # Map each candidate to the list of slots it appears in
     candidate_to_slots = defaultdict(list)
@@ -194,7 +224,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             if prog_course_assigned[(pid, c)] > 0:
                 continue
 
-            # C3: FC singularity + C5: FY XOR
+            # C3: FC singularity + C5: FY XOR + C5: FY singularity
             if _is_fc_slot(sid):
                 if fc_assigned_this_c or c in fc_course_assigned:
                     continue
@@ -202,6 +232,10 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     continue
                 if "__FY-LAUNCH" in sid and "FY-SEMINAR" in fy_types_seen:
                     continue
+                if "__FY-SEMINAR" in sid and "FY-SEMINAR" in fy_types_seen:
+                    continue  # C5b: only 1 FY-SEMINAR allowed across entire plan
+                if "__FY-LAUNCH" in sid and "FY-LAUNCH" in fy_types_seen:
+                    continue  # C5b: only 1 FY-LAUNCH allowed across entire plan
 
             # Assign
             greedy_assignment[sid].append(c)
@@ -244,6 +278,17 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     if "__FY-SEMINAR" in sid and "FY-LAUNCH" in fy_types_seen:
                         continue
                     if "__FY-LAUNCH" in sid and "FY-SEMINAR" in fy_types_seen:
+                        continue
+                    if "__FY-SEMINAR" in sid and "FY-SEMINAR" in fy_types_seen:
+                        continue  # C5b singularity
+                    if "__FY-LAUNCH" in sid and "FY-LAUNCH" in fy_types_seen:
+                        continue  # C5b singularity
+
+                # Non-standard relative preference: skip internships/honors
+                # in Phase 1b when a standard candidate exists in the pool
+                if _is_non_standard(c):
+                    if any(not _is_non_standard(alt)
+                           for alt in s.get("candidates", []) if alt != c):
                         continue
 
                 cr = canon_catalog.get(c, {}).get("credits", 3)
@@ -370,6 +415,17 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                                 continue
                             if '__FY-LAUNCH' in sid and 'FY-SEMINAR' in fy_types_seen:
                                 continue
+                            if '__FY-SEMINAR' in sid and 'FY-SEMINAR' in fy_types_seen:
+                                continue  # C5b singularity
+                            if '__FY-LAUNCH' in sid and 'FY-LAUNCH' in fy_types_seen:
+                                continue  # C5b singularity
+                        # Non-standard relative preference: skip internships/honors
+                        # in Phase 1c repair when a standard candidate exists in pool
+                        if _is_non_standard(c):
+                            if any(not _is_non_standard(alt)
+                                   for alt in s.get('candidates', []) if alt != c):
+                                continue
+
                         cr = canon_catalog.get(c, {}).get('credits', 3)
                         has_3cr_alt = (cr < 3) and any(
                             canon_catalog.get(alt, {}).get('credits', 0) >= 3
