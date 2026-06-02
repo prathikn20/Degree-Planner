@@ -582,7 +582,7 @@ if not _real_majors:
     st.stop()
 
 _privacy_consent = st.checkbox(
-    "I understand that my transcript is processed securely in-memory and is never saved, stored, or viewed by humans."
+    "I understand that my transcript is processed securely in-memory and is never saved, stored, or viewed by humans or AI."
 )
 uploaded = st.file_uploader("Upload Tar Heel Tracker PDF", type=["pdf"], label_visibility="collapsed", disabled=not _privacy_consent)
 
