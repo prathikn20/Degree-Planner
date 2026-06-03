@@ -1,9 +1,12 @@
+# UNUSED: Stale dev CLI demo. Imports get_remaining_courses and kahns_algorithm from
+# path_generator (neither exists there) and tracker_parser (now transcript_parser).
+# Not part of the Streamlit app.
 import argparse
 
 from src.planner.graph import load_catalog, load_requirements, build_graph
 from src.planner.requirements_checker import check_requirements
 from src.planner.path_generator import get_remaining_courses, kahns_algorithm
-from src.planner.tracker_parser import parse_tarheel_tracker
+from src.planner.transcript_parser import parse_tarheel_tracker
 
 _COMPLETED = [
     "COMP110", "COMP210",

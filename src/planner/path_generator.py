@@ -452,7 +452,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     elif _pool_credits(sid) >= s.get('credits_needed', 3):
                         filled_slots.add(sid)
 
-    # ─── Phase 2: Short ILS Refinement (5 seconds) ────────────────────────────
+    # ─── Phase 2: Short ILS Refinement (15 seconds) ───────────────────────────
     # Start from the greedy solution; the ILS fixes C4 edge cases and makes
     # marginal improvements without the 28-second cold-start cost.
 
@@ -461,7 +461,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
     best_schedule = {k: list(v) for k, v in current_assignment.items()}
 
     ils_start = time.time()
-    ILS_TIMEOUT = 5.0
+    ILS_TIMEOUT = 15.0
     iterations = 0
     rng = random.Random(42)   # local seed so we don't disturb global random state
 

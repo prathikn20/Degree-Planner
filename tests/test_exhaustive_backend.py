@@ -613,7 +613,7 @@ class TestExceptionHunter(unittest.TestCase):
         both are acceptable; an unhandled IndexError/KeyError is not.
         """
         import tempfile
-        from src.planner.tracker_parser import parse_tarheel_tracker
+        from src.planner.transcript_parser import parse_tarheel_tracker
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
             tmp.write(b"NOTAPDF" + b"\x00\xff" * 512)
@@ -638,7 +638,7 @@ class TestExceptionHunter(unittest.TestCase):
     def test_empty_file_raises_known_exception(self):
         """A zero-byte file must not produce a raw stack trace."""
         import tempfile
-        from src.planner.tracker_parser import parse_tarheel_tracker
+        from src.planner.transcript_parser import parse_tarheel_tracker
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
             tmp.write(b"")

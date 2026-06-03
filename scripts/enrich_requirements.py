@@ -1,7 +1,7 @@
 """
 Post-processing enrichment pass over degree_requirements.json.
 
-Runs after run_req_pipeline.py.  No LLM needed — pure logic.
+Runs after run_requirements_pipeline.py.  No LLM needed — pure logic.
 
 What it does
 ------------
@@ -20,7 +20,7 @@ electives.
 Usage
 -----
     python3 scripts/enrich_requirements.py
-    python3 scripts/enrich_requirements.py --input data/test_pipeline_output.json
+    python3 scripts/enrich_requirements.py --input data/staging/test_pipeline_output.json
                                             --output data/degree_requirements.json
 """
 

@@ -1,4 +1,4 @@
-# run this in your project directory as: python3 diagnose.py
+# UNUSED: One-off HTML structure debugger for the catalog scraper. Not part of the app.
 import requests
 from bs4 import BeautifulSoup
 

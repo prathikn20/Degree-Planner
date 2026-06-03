@@ -6,19 +6,6 @@ An interactive degree-planning engine for UNC Chapel Hill that models course pre
 
 ---
 
-## Supported Programs
-
-| Degree | Concentrations |
-|---|---|
-| BS Data Science | Applied Mathematics, Statistics, Computer Science |
-| BA Data Science | Applied Mathematics, Statistics, Computer Science |
-| BS Statistics & Analytics | — |
-| BSBA Business Administration | — |
-| BS Information Science | — |
-| IDST (Interdisciplinary Studies) | Custom tracks |
-
----
-
 ## Local Setup
 
 **Requirements:** Python 3.11+
@@ -65,12 +52,14 @@ src/
     graph.py                # Prerequisite graph construction
     path_generator.py       # ILS constraint solver
     requirements_checker.py # Degree audit / rule validation
-    tracker_parser.py       # PDF transcript parser (Tar Heel Tracker)
-  data_pipeline/
-    kahns_algorithm.py      # Topological sort
+    transcript_parser.py    # PDF transcript parser (Tar Heel Tracker)
+    topological_sort.py     # Topological sort (Kahn's algorithm)
 data/
-  catalog.json              # Course catalog (scraped + enriched)
-  requirements.json         # Degree requirement rules
+  course_catalog.json       # Course catalog (scraped + enriched)
+  degree_requirements.json  # Degree requirement rules
+  backup/                   # Archived production snapshots
+  staging/                  # Working files during catalog refresh
+  .cache/                   # Ephemeral scraper caches (safe to delete)
 ```
 
 ---

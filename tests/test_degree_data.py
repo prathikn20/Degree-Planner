@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.planner.requirements_checker import check_requirements
 
-REQS_PATH    = "data/test_degree_requirements.json"
+REQS_PATH    = "data/staging/test_degree_requirements.json"
 CATALOG_PATH = "data/course_catalog.json"
 COURSE_RE    = re.compile(r'^[A-Z]{2,5}\d{2,4}[A-Z]?$')
 

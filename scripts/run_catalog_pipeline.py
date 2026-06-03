@@ -83,6 +83,9 @@ TARGET_URLS = [
     "https://catalog.unc.edu/courses/bios/",
     "https://catalog.unc.edu/courses/nutr/",
     "https://catalog.unc.edu/courses/nurs/",
+    "https://catalog.unc.edu/courses/hbeh/",   # Health Behavior — needed by CGPH BSPH
+    "https://catalog.unc.edu/courses/chip/",   # Carolina Health Informatics — needed by DS BS Health Informatics
+    "https://catalog.unc.edu/courses/phrs/",   # Pharmaceutical Sciences — needed by Pharm Sci Minor
     "https://catalog.unc.edu/courses/bmme/",
     "https://catalog.unc.edu/courses/mcro/",
     "https://catalog.unc.edu/courses/icmu/",
@@ -133,7 +136,7 @@ TARGET_URLS = [
     "https://catalog.unc.edu/courses/slav/"
 ]
 OUTPUT_PATH = "data/course_catalog.json"
-CACHE_PATH = "data/course_cache.json"
+CACHE_PATH = "data/.cache/course_cache.json"
 OVERRIDES_PATH = "data/overrides.json"
 LOG_PATH = "logs/needs_review.log"
 MODEL_NAME = "qwen2.5:14b"
@@ -383,10 +386,48 @@ def run_ingestion_pipeline():
             if 'INTERDISCIPLINARY' not in attrs:
                 attrs.append('INTERDISCIPLINARY')
 
+    # Post-processing: strip any cross_listed code that does not exist as a catalog key.
+    # This prevents stale "Previously offered as" codes (renumbered courses) from polluting
+    # the cross_listed arrays and breaking path validation in requirements_checker.py.
+    valid_keys = set(normalized_catalog.keys())
+    for cid, cdata in normalized_catalog.items():
+        raw_cross = cdata.get("cross_listed", [])
+        clean_cross = [c for c in raw_cross if c in valid_keys]
+        if len(clean_cross) != len(raw_cross):
+            removed = [c for c in raw_cross if c not in valid_keys]
+            logger.debug(f"Removed stale cross_listed codes from {cid}: {removed}")
+            cdata["cross_listed"] = clean_cross
+
     save_catalog(normalized_catalog)
     logger.info("Final catalog saved.")
 
+    # ── Post-pipeline data quality report ────────────────────────────────────
+    valid_keys = set(normalized_catalog.keys())
+
+    # Ghost prerequisite summary (courses whose prereqs reference non-existent courses)
+    ghost_prereq_counts: dict[str, int] = {}
+    for cid, cdata in normalized_catalog.items():
+        for pathway in (cdata.get("prerequisites") or []):
+            for prereq in pathway:
+                if prereq not in valid_keys:
+                    ghost_prereq_counts[prereq] = ghost_prereq_counts.get(prereq, 0) + 1
+    if ghost_prereq_counts:
+        top = sorted(ghost_prereq_counts.items(), key=lambda x: -x[1])[:10]
+        logger.warning(
+            "Ghost prerequisite references (not in catalog): %d unique codes. "
+            "Top offenders: %s. Add their department URLs to TARGET_URLS if they exist.",
+            len(ghost_prereq_counts), top
+        )
+    else:
+        logger.info("No ghost prerequisite references — all prereq codes exist in catalog.")
+
+    # Zero-credit course summary
+    zero_cr = [c for c, d in normalized_catalog.items() if d.get("credits", 1) == 0]
+    if zero_cr:
+        logger.warning("Zero-credit courses: %d  Sample: %s", len(zero_cr), zero_cr[:5])
+
     logger.info(f"Pipeline complete! Saved to {OUTPUT_PATH}")
+    logger.info("Run 'python scripts/validate_pipeline_output.py' for a full data quality audit.")
     if os.path.exists(LOG_PATH):
         logger.warning(f"WARNING: Some courses were flagged. Check {LOG_PATH} for details.")
     else:

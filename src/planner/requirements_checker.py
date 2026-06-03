@@ -15,7 +15,7 @@ def _split_course_id(course_id: str) -> tuple[str, str]:
 def _get_satisfying_course(course, catalog, completed_set, virtual_to_real=None):
     if course in completed_set:
         return course
-    cross_listed = catalog.get(course, {}).get('cross_listed', [])
+    cross_listed = catalog.get(course, {}).get('cross_listed') or []
     for equiv in cross_listed:
         if equiv in completed_set:
             return equiv
@@ -44,13 +44,13 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
             continue
         if rule_attribute:
             rule_attr_lower = rule_attribute.lower()
-            if any(rule_attr_lower in attr.lower() for attr in data.get("attributes", [])):
+            if any(rule_attr_lower in attr.lower() for attr in (data.get("attributes") or [])):
                 valid.append(course_id)
             continue
         # FY-SEMINAR courses are first-year seminars; exclude them from
         # department/number-based elective pools so they cannot satisfy
         # requirements like busi_electives or comp_420_electives.
-        if "FY-SEMINAR" in data.get("attributes", []):
+        if "FY-SEMINAR" in (data.get("attributes") or []):
             continue
         dept, number_str = _split_course_id(course_id)
         if not number_str:
@@ -92,7 +92,7 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
     virtual_to_real: dict[str, str] = {}
     for c in original_completed:
-        for equiv in catalog.get(c, {}).get('cross_listed', []):
+        for equiv in (catalog.get(c, {}).get('cross_listed') or []):
             if equiv not in original_completed:
                 virtual_to_real[equiv] = c
         # Honors variant: MATH232H satisfies anything requiring MATH232

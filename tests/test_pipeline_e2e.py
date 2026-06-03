@@ -2,7 +2,7 @@
 End-to-end test for the degree requirements pipeline.
 
 Runs scrape -> assemble -> LLM-rule-parse for 6 programs, writes results to
-data/test_pipeline_output.json, then diffs every field against
+data/staging/test_pipeline_output.json, then diffs every field against
 data/degree_requirements.json (source of truth).
 
 Tracks are chosen to cover distinct patterns WITHOUT reusing pages that were
@@ -19,7 +19,7 @@ Usage:
 
 Exit 0 = all structural checks passed, 1 = failures.
 
-SAFETY: never writes to data/degree_requirements.json or data/req_cache.json.
+SAFETY: never writes to data/degree_requirements.json or data/.cache/req_cache.json.
 """
 
 import sys
@@ -32,14 +32,14 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.scraper.req_scraper import scrape_major_requirements
-from src.scraper.req_assembler import assemble_section
-from src.scraper.llm_req_parser import parse_rule_text
+from src.scraper.requirements_scraper import scrape_major_requirements
+from src.scraper.requirements_assembler import assemble_section
+from src.scraper.llm_requirements_parser import parse_rule_text
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 TRUTH_PATH  = "data/degree_requirements.json"
-OUTPUT_PATH = "data/test_pipeline_output.json"
+OUTPUT_PATH = "data/staging/test_pipeline_output.json"
 COURSE_RE   = re.compile(r'^[A-Z]{2,5}\d{2,4}[A-Z]?$')
 
 # Each entry: url, courses that must appear somewhere (required OR any group options),

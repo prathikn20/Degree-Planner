@@ -41,8 +41,8 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.scraper.req_scraper import scrape_major_requirements
-from src.scraper.req_assembler import classify_section_type
+from src.scraper.requirements_scraper import scrape_major_requirements
+from src.scraper.requirements_assembler import classify_section_type
 
 # ── URL map ───────────────────────────────────────────────────────────────────
 

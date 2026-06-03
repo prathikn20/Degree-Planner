@@ -1,5 +1,5 @@
 """
-Pre-fetch and clean UNC catalog pages into data/html_cache/<TRACK_ID>.txt
+Pre-fetch and clean UNC catalog pages into data/.cache/html/<TRACK_ID>.txt
 
 Each output file contains ONLY:
   - Section headers (h2/h3/h4 inside the requirements block)
@@ -25,7 +25,7 @@ import time
 import requests
 from bs4 import BeautifulSoup, NavigableString
 
-HTML_CACHE_DIR = "data/html_cache"
+HTML_CACHE_DIR = "data/.cache/html"
 REQUEST_DELAY  = 0.4   # seconds between requests — be polite to the server
 
 TARGET_TRACKS = {

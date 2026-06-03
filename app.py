@@ -12,9 +12,9 @@ import streamlit as st
 
 from src.planner.graph import build_graph, load_catalog, load_requirements
 from src.planner.path_generator import solve_optimal_path
-from src.data_pipeline.kahns_algorithm import kahns_algorithm
+from src.planner.topological_sort import kahns_algorithm
 from src.planner.requirements_checker import check_requirements, get_rule_based_options, generate_slots_and_candidates
-from src.planner.tracker_parser import parse_tarheel_tracker
+from src.planner.transcript_parser import parse_tarheel_tracker
 
 CATALOG_PATH      = "data/course_catalog.json"
 REQUIREMENTS_PATH = "data/degree_requirements.json"

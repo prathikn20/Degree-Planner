@@ -33,7 +33,7 @@ def is_available(course, catalog, completed):
         for prereq in path:
             if prereq in completed:
                 continue
-            cross_listed = catalog.get(prereq, {}).get('cross_listed', [])
+            cross_listed = catalog.get(prereq, {}).get('cross_listed') or []
             if any(equiv in completed for equiv in cross_listed):
                 continue
             path_satisfied = False
