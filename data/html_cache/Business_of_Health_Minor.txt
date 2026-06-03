@@ -1,0 +1,38 @@
+TRACK: Business_of_Health_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/business-health-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: Business of Health Minors may take a maximum of two business elective courses outside their required program coursework.
+### Prerequisite Courses
+  BUSI 100 | Introduction to Business: People, Profits, Planet | 1.5hrs
+  ECON 101 | Introduction to Economics H, F | 4hrs
+RULE: One course from this list: 3
+  STOR 155 | Introduction to Data Models and Inference H, F | hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | hrs
+  DATA 110 | Introduction to Data Science H | hrs
+### Core Requirements
+RULE: Select one of the following options: 3
+  BUSI 403 | Operations Management | hrs
+  BUSI 406 | Marketing | hrs
+  BUSI 407 | Financial Accounting and Analysis | hrs
+  BUSI 408 | Corporate Finance | hrs
+  HPM 300 | The U.S. Health System | 3hrs
+  BUSI 411 | Strategy I: Competitive Strategy | 1.5hrs
+  BUSI 510 | The Challenge of Healthcare: A System Overview | 1.5hrs
+  BUSI 628 | Business of Health Capstone | 1.5hrs
+RULE: Additional elective courses to reach the minimum 15 credit hours, chosen from the following list: 4.5
+  BMME 590 | Special Topics in Biomedical Engineering 1 | hrs
+  BUSI 625 | Global Healthcare Management | hrs
+  BUSI 626 | Introduction to Healthcare Management | hrs
+  BUSI 627 | Healthcare Brand Plan | hrs
+  CHIP 400 | Digital Health Innovation | hrs
+  ECON 450 | Health Economics: Problems and Policy | hrs
+  ECON 550 | Advanced Health Econometrics | hrs
+  ECON 552 | The Economics of Health Care Markets and Policy | hrs
+  MEJO 469 | How Healthcare Works: Programs, Stakeholders, and Strategy | hrs
+  MEJO 569 | Behavioral Science in Health Communication | hrs
+  NURS 425 | Global and Interprofessional Approaches to Solve Complex Cases | hrs
+  PHIL 165 | Bioethics H | hrs
+NOTE: with approval, based on topic.

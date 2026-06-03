@@ -1,0 +1,79 @@
+TRACK: Physics_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/physics-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+
+## Physics Major, B.S.–Standard Option
+### Core Requirements
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 332 | Numerical Techniques for the Sciences II 1 | 4hrs
+  PHYS 401 | Mechanics I 2 | 3hrs
+  PHYS 311 | Electromagnetism I 1 | 3hrs
+  PHYS 412 | Electromagnetism II 2 | 3hrs
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS 451 | Electronics I 1 | 4hrs
+  PHYS 521 | Applications of Quantum Mechanics 1 | 3hrs
+  PHYS 441 | Thermal Physics 1 | 3hrs
+  PHYS 481L | Advanced Laboratory I 2 | 2hrs
+  PHYS 395 | Research with Faculty Mentor II | 3hrs
+  OR or PHYS 692H | Senior Honor Thesis Research II
+RULE: Six additional credit hours chosen from: 6
+  ASTR 202 | Introduction to Astrophysics | hrs
+RULE: ASTR (numbered above 300)
+RULE: PHYS (numbered above 300 except PHYS 395 )
+  MATH 528 | Mathematical Methods for the Physical Sciences I | hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II | hrs
+  PHYS 231 | Physical Computing 2, H | hrs
+### Additional Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H, F | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I ( CHEM 102 / CHEM 102L are recommended but not required) H, F | 4hrs
+RULE: Remaining General Education requirements and enough free electives to accumulate 120 academic hours 49
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Astronomy (ASTR) and Physics (PHYS) course descriptions .
+
+## Physics Major, B.S.–Astrophysics Option
+### Core Requirements
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 332 | Numerical Techniques for the Sciences II 1 | 4hrs
+  PHYS 401 | Mechanics I 2 | 3hrs
+  PHYS 311 | Electromagnetism I 1 | 3hrs
+  PHYS 412 | Electromagnetism II 2 | 3hrs
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS 521 | Applications of Quantum Mechanics 1 | 3hrs
+  PHYS 441 | Thermal Physics 1 | 3hrs
+  ASTR 519 | Observational Astronomy 1 | 4hrs
+  PHYS 395 | Research with Faculty Mentor II | 3hrs
+  OR or PHYS 692H | Senior Honor Thesis Research II
+RULE: One additional course chosen from ASTR (numbered above 300) 3
+RULE: Six or more additional credit hours chosen from: 6
+RULE: ASTR (numbered above 300)
+  MATH 528 | Mathematical Methods for the Physical Sciences I | hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II | hrs
+  PHYS 231 | Physical Computing 2, H | hrs
+  PHYS 451 | Electronics I 1 | hrs
+  PHYS 632 | Advanced Research Analytics | hrs
+### Additional Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  ASTR 202 | Introduction to Astrophysics ( CHEM 101 / CHEM 101L are recommended but not required) 1 | 3hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H, F | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+RULE: Remaining General Education requirements and enough free electives to accumulate 120 academic hours 49
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Astronomy (ASTR) and Physics (PHYS) course descriptions .
+NOTE: Most students will find it advantageous to defer some of the General Education requirements to the junior and/or senior year(s).

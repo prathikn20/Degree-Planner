@@ -1,0 +1,70 @@
+TRACK: Musical_Theatre_Performance_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/musical-theatre-performance-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor requires 15 credit hours. Students can pursue one of three tracks.
+
+## Music Track
+### Core Requirements
+  DRAM/MUSC 151 | Introduction to the American Stage Musical | 3hrs
+RULE: At least 4 hours in Music Literacy: 4
+  MUSC 102 | Individual Voice Lessons | hrs
+  MUSC 111 | Group Lessons in Voice | hrs
+  MUSC 121 | Fundamentals of Tonal Music I | hrs
+  MUSC 202 | Advanced Individual Lessons in Voice H | hrs
+RULE: At least 4 hours in Movement Literacy: 4
+  EXSS 10 | Beginning Ballet | hrs
+  EXSS 11 | Introduction to Dance Technique | hrs
+  EXSS 12 | Beginning Modern Dance | hrs
+  EXSS 20 | Intermediate Ballet | hrs
+  EXSS 22 | Intermediate Modern Dance | hrs
+  EXSS 30 | Advanced Ballet | hrs
+  DRAM 154 | Performers' Awareness | hrs
+  DRAM 155 | Movement for the Actor | hrs
+RULE: The remaining 4 hours can come from either list above or from the Acting Literacy list below: 4
+  DRAM 144 | Acting the Song | hrs
+NOTE: Students in the music track may not also pursue the music major (B.A., B.Mus) in voice or the music minor.
+
+## Dramatic Track
+### Core Requirements
+  DRAM/MUSC 151 | Introduction to the American Stage Musical | 3hrs
+RULE: At least 4 hours in Acting Literacy: 4
+  DRAM 135 | Acting for Nonmajors | hrs
+  DRAM 140 | Voice Training I | hrs
+  DRAM 144 | Acting the Song | hrs
+RULE: At least 4 hours in Movement Literacy: 4
+  EXSS 10 | Beginning Ballet | hrs
+  EXSS 11 | Introduction to Dance Technique | hrs
+  EXSS 12 | Beginning Modern Dance | hrs
+  EXSS 20 | Intermediate Ballet | hrs
+  EXSS 22 | Intermediate Modern Dance | hrs
+  EXSS 30 | Advanced Ballet | hrs
+  DRAM 154 | Performers' Awareness | hrs
+  DRAM 155 | Movement for the Actor | hrs
+RULE: The remaining 4 hours can come from either list above 4
+NOTE: Students in the dramatic track may not also pursue the dramatic art major or minor.
+
+## Hybrid Track
+### Core Requirements
+  DRAM/MUSC 151 | Introduction to the American Stage Musical | 3hrs
+RULE: Any combination of courses from the Music, Acting, and Movement Literacy lists (see below): 12
+RULE: Music Literacy
+  MUSC 102 | Individual Voice Lessons | hrs
+  MUSC 111 | Group Lessons in Voice | hrs
+  MUSC 121 | Fundamentals of Tonal Music I | hrs
+  MUSC 202 | Advanced Individual Lessons in Voice H | hrs
+RULE: Acting Literacy
+  DRAM 135 | Acting for Nonmajors | hrs
+  DRAM 140 | Voice Training I | hrs
+  DRAM 144 | Acting the Song | hrs
+RULE: Movement Literacy
+  EXSS 10 | Beginning Ballet | hrs
+  EXSS 11 | Introduction to Dance Technique | hrs
+  EXSS 12 | Beginning Modern Dance | hrs
+  EXSS 20 | Intermediate Ballet | hrs
+  EXSS 22 | Intermediate Modern Dance | hrs
+  EXSS 30 | Advanced Ballet | hrs
+  DRAM 154 | Performers' Awareness | hrs
+  DRAM 155 | Movement for the Actor | hrs
+NOTE: Students pursuing both the dramatic art and music major (double majors) should follow the hybrid track.

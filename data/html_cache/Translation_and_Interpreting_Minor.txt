@@ -1,0 +1,15 @@
+TRACK: Translation_and_Interpreting_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/translation-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  SPAN 300 | Grammar and Structure of Spanish 1, 2, H | 3hrs
+  SPAN 369 | Introduction to Translation 1 | 3hrs
+  SPAN 351 | Spanish Interpretation I 1 | 3hrs
+  SPAN 370 | Spanish Translation II 1 | 3hrs
+  OR or SPAN 352 | Spanish Interpretation II
+RULE: One elective course numbered SPAN 330 or above, excluding SPAN 401 , SPAN 402 , SPAN 404 , SPAN 405 , SPAN 414 , SPAN 415 , and SPAN 601 1 3
+NOTE: Students must earn a grade of C or better in all five (5) courses (15 credit hours) in the minor.
+NOTE: Prerequisite, SPAN 261

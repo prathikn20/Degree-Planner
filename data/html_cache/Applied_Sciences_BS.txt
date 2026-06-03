@@ -1,0 +1,59 @@
+TRACK: Applied_Sciences_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/applied-sciences-major-bs/
+
+NOTE: Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  APPL 101 | Exploring Engineering | 3hrs
+  APPL 110 | Design and Making for Engineers: Developing Your Personal Design Potential F | 3hrs
+  COMP 110 | Introduction to Programming H | 3hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  APPL 240 | Electronics from Sensors to Indicators: Circuits that Interact with the Physical World | 4hrs
+  APPL 260 | Materials Science and Engineering: Living in a Material World | 4hrs
+  APPL 285 | Engineering Fundamentals of Force, Motion, and Energy | 4hrs
+  APPL 385 | Thermodynamics for Engineers | 4hrs
+RULE: Select one of the following tracks: 16
+RULE: Environmental Engineering Track (16 credits), see details below
+RULE: Materials Engineering Track (16 credits), see details below
+  APPL 697 | Capstone Design I (pending approval) | 3hrs
+  APPL 698 | Capstone Design II (pending approval) | 3hrs
+### Additional Requirements
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 & 383L | First Course in Differential Equations and First Course in Differential Equations Laboratory H | 4hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+NOTE: ECON 101 is recommended, but not required.
+
+## Environmental Engineering Track
+  ENVR 205 & 205L | Engineering Tools for Environmental Problem Solving and Engineering for Environmental Problem Solving: Advanced Problems Lab | 4hrs
+RULE: Choose one foundational environmental engineering course: 3
+  ENVR 419 | Chemical Equilibria in Natural Waters | hrs
+  ENVR 421 | Environmental Health Microbiology | hrs
+  ENVR 548 | Sustainable Energy Systems | hrs
+  ENVR 675 | Air Pollution, Chemistry, and Physics | hrs
+RULE: Choose one modelling course: 3
+  ENVR 451 | Introduction to Environmental Modeling | hrs
+  ENVR 453 | Groundwater Hydrology | hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | hrs
+  ENVR 635 | Energy Modeling for Environment and Public Health | hrs
+  ENVR 730 | Computational Toxicology and Exposure Science | hrs
+RULE: Choose two process engineering courses: 6
+  ENVR 656 | Physical/Chemical Processes for Water Treatment | hrs
+  ENVR 710 | Environmental Process Biotechnology | hrs
+  ENVR 755 | Analysis of Water Resource Systems | hrs
+
+## Materials Engineering Track
+  APPL 462 | Engineering Materials: Properties, Selection and Design | 3hrs
+  APPL 472 | Materials Characterization Methods | 4hrs
+RULE: Choose three advanced materials engineering courses. These courses can come from a combination of one or both categories: 9
+  APPL 430 | Optoelectronics from Materials to Devices 1 | hrs
+  APPL 463 | Bioelectronic Materials 1 | hrs
+  APPL 465 | Engineering of Soft Materials:  SpongeBob Squarepants and Other Squishy Things 2 | hrs
+  APPL 467 | Materials Design for Biomedicine 2 | hrs
+NOTE: Electronics and optics
+NOTE: Soft materials

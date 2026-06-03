@@ -1,0 +1,29 @@
+TRACK: Hydrology_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/hydrology-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  EMES 324 & 324L | Water in Our World: Introduction to Hydrologic Science and Environmental Problems and Water in Our World Laboratory | 4hrs
+RULE: Three additional courses emphasizing surface or groundwater processes, aquatic ecology or biogeochemistry, or water resources, chosen from the following list: 9
+  EMES 79 | First-Year Seminar: Coasts in Crisis | hrs
+  EMES 89 | First-Year Seminar: Special Topics 2 | hrs
+  EMES 105 | Natural Disasters: Hollywood versus Reality | hrs
+  EMES 201 | Earth's Surface: Processes, Landforms, and History | hrs
+  EMES 325 | Fluid Mechanics for Environmental Sciences 1 | hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+  EMES/ENVR 413 | Limnology 1 | hrs
+  EMES/DATA/ENEC/ENVR 546 | Modeling Catastrophe Risk & Resilience 1 | hrs
+  EMES/ENEC 417 | Surface Processes and Landscape Evolution 1 | hrs
+  EMES 431 | Major World Rivers and Global Change: From Mountains to the Sea | hrs
+  EMES 433 | Wetland Hydrology | hrs
+  EMES/ENEC 435 | Groundwater Hydrology 1 | hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | hrs
+  EMES 508 | Global Hydrology 1 | hrs
+  ENVR 453 | Groundwater Hydrology | hrs
+  GEOG 440 | Earth Surface Processes 1 | hrs
+  GEOG 441 | Introduction to Watershed Systems 1 | hrs
+RULE: 3 credits of mentored undergraduate research (e.g., 395) with an advisor with a hydrology focus
+NOTE: Check the course description for prerequisite(s).
+NOTE: with permission, based on topic

@@ -1,0 +1,30 @@
+TRACK: Environmental_Microbiology_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/environmental-microbiology-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: One course emphasizing microbiology fundamentals, chosen from: 3-4
+  EMES/BIOL 204 | The Microbial World:  Foundations in Structure, Metabolism, and Ecology 1 | hrs
+  BIOL 422 & 422L | Microbiology and Microbiology Laboratory 1 | hrs
+  MCRO 251 | Introductory Medical Microbiology | hrs
+RULE: Three courses emphasizing microbial ecological theory, evolution, or within the environment, chosen from: 9
+  EMES/ENVR 413 | Limnology 1 | hrs
+  EMES 444/BIOL 456/ENEC 444 | Marine Phytoplankton | hrs
+  EMES 446/BIOL 452 | Marine Microbial Symbioses: Exploring How Microbial Interactions Affect Ecosystems and Human Health | hrs
+  EMES 447 | Microbial Ecological Genomics | hrs
+  EMES/ENEC 450 | Biogeochemical Processes 1 | hrs
+  EMES/BIOL 466 | Environmental Microbiology 1 | hrs
+  EMES/ENEC 471 | Human Impacts on Estuarine Ecosystems 1 | hrs
+  BIOL 480 | Discoveries in Prevention and Cure of Infectious Disease in London 1, H | hrs
+  BIOL 481 | Biology, History, and Evolution of Epidemic Diseases 1 | hrs
+  BIOL 620 | Bacterial Genetics with Emphasis on Pathogenic and Symbiotic Interactions 1 | hrs
+  ENVR 135 | Environment-ECUIPP Lab: Connecting with communities through environmental research for Public Health 3 | hrs
+  OR or ENVR 335 | Adv Environ-ECUIPP Lab: Connecting with Communities Through Environmental Research for PH Protection
+  ENVR 412 | Ecological Microbiology | hrs
+  ENVR 421 | Environmental Health Microbiology | hrs
+  ENVR 705 | One Health: Philosophy to Practical Integration (3 credits required) | hrs
+  --- *95 | Mentored research course with a microbiology focus (3 credits required) 2 | hrs
+NOTE: Prerequisite(s) required. Check course description for details.
+NOTE: Requires permission by the program director.
+NOTE: ENVR 335 is repeatable for credit, but only 3 credit hours may count toward the minor.

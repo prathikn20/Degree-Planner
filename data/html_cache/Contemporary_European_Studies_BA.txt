@@ -1,0 +1,190 @@
+TRACK: Contemporary_European_Studies_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/contemporary-european-studies-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements 1
+  EURO/HIST 159 | Europe and the World Since 1900 | 3hrs
+  EURO/POLI 239 | Introduction to European Government H | 3hrs
+RULE: Four courses from one of the two themes listed below 12
+RULE: One course chosen from the other theme 3
+RULE: One additional course from Theme 1, Theme 2, or the list of approved elective courses on contemporary Europe 3
+### Additional Requirements
+RULE: A modern European foreign language through level 5, chosen from the following languages: Arabic, Bosnian-Croatian-Serbian, Czech, French, German, Italian, Polish, Portuguese, Russian, Spanish, Turkish. 2 6
+NOTE: Of the total eight courses required for the major, three must be numbered 400 or above. Special topics courses EURO 190 and EURO 490 may count for either theme, with approval based on topic.
+NOTE: Please see the list of global language courses in the “General Education Requirements” section of this catalog. The first three levels of a foreign language can count toward the General Education requirement and have not been included as additional hours for the major.
+NOTE: Contemporary European studies majors are required to complete a minimum of five semesters of a modern European language, or document fifth-semester proficiency through University placement tests. One approved literature course taught in the language may also count as a theme or elective course if included in the course listings above. Majors are strongly encouraged to apply their language proficiency skills in languages across the curriculum (LAC) courses and complete a UNC-approved study abroad program in the target language.
+NOTE: The Curriculum in Contemporary European Studies offers an honors program. Students who wish to pursue an honors thesis are advised to contact the director of undergraduate studies and will enroll in EURO 691H and EURO 692H .
+NOTE: New courses may be added to this list annually, as they are developed. An updated list of approved courses may be obtained from the contemporary European studies website . Other courses relevant to the study of contemporary Europe may be taken for credit in the major (including EURO 190 and EURO 490 ), if approved by the curriculum advisor.
+
+## Theme I. Contemporary Europe: Integration and Enlargement
+  ECON 461 | European Economic Integration | 3hrs
+  ECON 560 | Advanced International Economics | 3hrs
+  ECON/EURO/PWAD 460 | International Economics | 3hrs
+  EURO/POLI 442 | International Political Economy | 3hrs
+  GEOG 124 | Feminist Geographies | 3hrs
+  GEOG 448 | Transnational Geographies of Muslim Societies | 3hrs
+  GEOG 464 | Europe Today: Transnationalism, Globalisms, and the Geographies of Pan-Europe | 3hrs
+  GEOG/PLAN 428 | Global Cities: Space, Power, and Identity in the Built Environment | 3hrs
+  POLI 190 | Undergraduate Seminar *, H | 3hrs
+  POLI 232 | Politics of the United Kingdom H | 3hrs
+  POLI 236 | Politics of East-Central Europe H | 3hrs
+  POLI 255 | International Migration and Citizenship Today H | 3hrs
+  POLI 433 | Politics of the European Union H | 3hrs
+  POLI/EURO 438 | Democracy and International Institutions in an Undivided Europe | 3hrs
+  POLI 447 | Immigrant Integration in Contemporary Western Europe H | 3hrs
+  POLI 448 | The Politics of Multilevel Governance | 3hrs
+  POLI 451 | Race, Ethnicity, and Political Change in Comparative Perspective | 3hrs
+  POLI 490 | Advanced Special Topics in Political Science *, H | 3hrs
+  POLI 630 | Political Contestation in Europe | 3hrs
+  POLI 631 | European Security: The Enlarging European Union and the Trans-Atlantic Relationship | 3hrs
+  POLI 632 | The European Union as a Global Actor | 3hrs
+  POLI/PWAD 459 | Trans-Atlantic Security H | 3hrs
+  POLI/PWAD 469 | Conflict and Intervention in the Former Yugoslavia H | 3hrs
+  POLI/PWAD/SOCI 260 | Crisis and Change in Russia and Eastern Europe | 3hrs
+NOTE: Asterisked courses require approval, based on topic.
+
+## Theme II. Contemporary Europe: Histories and Cultures
+  ARTH 282 | Modern Art in Europe 1850-1900: Realism, Impressionism, Post-Impressionism | 3hrs
+  ARTH 284 | Modern Art in Europe 1900-1960: Avant-Gardes and Politics | 3hrs
+  ARTH 303 | Art and Colonialism: France in Africa/Africa in France | 3hrs
+  ARTH 330 | Art, History, and the Modern Museum | 3hrs
+  ANTH 377 | European Societies | 3hrs
+  ASIA 490 | Advanced Topics in Asian Studies * | 1-4hrs
+  BCS 411 | Introduction to South Slavic Literatures and Cultures | 3hrs
+  BCS 490 | Topics in South Slavic Cultures | 3hrs
+  CMPL/GSLL 270/JWST 239/RELI 239 | German Culture and the Jewish Question | 3hrs
+  CMPL 281 | Holocaust Cinema in Eastern Europe | 3hrs
+  CMPL 469 | Milan Kundera and World Literature | 3hrs
+  CMPL 579 | What is a Medium? German Media Theory from Aesthetics to Cultural Techniques | 3hrs
+  COMM 464 | Collaborative Performance H | 3hrs
+  CZCH 280 | Closely Watched Trains: Czech Film and Literature | 3hrs
+  CZCH 411 | Introduction to Czech Literature | 3hrs
+  EURO/HIST 252 | Politics, Society, and Culture in Modern Germany (1871-1945) | 3hrs
+  EURO/HIST/POLI 257 | Politics, Society, and Culture in Postwar Germany | 3hrs
+  EURO/HIST/WGST 259 | Towards Emancipation? Women in Modern Europe | 3hrs
+  EURO/RELI 270 | Religion in Western Europe H | 3hrs
+  EURO/HIST 347 | Fascist Challenge in Europe, 1918-1945 | 3hrs
+  EURO/RUSS 486 | Exploration of Russian "Women's Prose" and Svetlana Alexievich (Nobel Prize in Literature 2015) | 3hrs
+  FREN 262 | Cultural and Linguistic Diversity in the French-Speaking World | 3hrs
+  FREN 326 | Cultures of Resistance in the French-Speaking World | 3hrs
+  FREN 350 | Current Societal Issues: France and Beyond | 3hrs
+  FREN 377 | The Evolution of Frenchness since WWII | 3hrs
+  FREN 378 | French and European Transmigrations: Global Contexts | 3hrs
+  FREN 383 | Franco-Asian Encounters | 3hrs
+  FREN 437 | Literary and Cultural Theory in France | 3hrs
+  FREN 504 | Cultural Wars: French/United States Perspectives | 3hrs
+  FREN 513 | 20th- and 21st-Century French Literature and Culture | 3hrs
+  GERM 245 | Marx, Nietzsche, and Freud | 3hrs
+  GERM 265 | Hitler in Hollywood: Cinematic Representations of Nazi Germany | 3hrs
+  GERM 268 | Auteur Cinema | 3hrs
+  GERM 279 | Once Upon A Fairy Tale: Fairy Tales and Childhood, Then and Now | 3hrs
+  GERM 285 | Contemporary German Literature in Translation | 3hrs
+  GERM 286 | (Un)Welcomed Guests? German Reflections on Exile and Immigration | 3hrs
+  GERM 349 | Vienna-Munich-Berlin: Revolutions in German Art c. 1900 | 3hrs
+  GERM 450 | Nietzsche, Hesse, and Mann | 3hrs
+  GERM 467 | Contemporary German and Austrian Cinema | 3hrs
+  GERM 475 | Different than the Others: Stories of Queer German Liberation, 1864-2021 | 3hrs
+  GERM 555 | Interrogating Cultures of Fascism: Introduction to Frankfurt School's Critical Theory 1923-Present | 3hrs
+  GSLL 259 | Ideology and Aesthetics: Marxism and Literature | 3hrs
+  GSLL 254 | The Division of Germany, Reunification, and Conflict with Russia H | 3hrs
+  GSLL 260 | From Berlin to Budapest: Literature, Film, and Culture of Central Europe | 3hrs
+  GSLL 268 | Cultural Trends in Post-Communist Central Europe: Search for Identity, Importance of Jewish Voices | 3hrs
+  GSLL 280 | The Dialectic of Whiteness and Blackness in Atlantic Cultures | 3hrs
+  GSLL 285 | Dissent and Protest in Central Europe | 3hrs
+  GSLL 465 | Literature of Atrocity: The Gulag and the Holocaust in the Soviet Union and Eastern Europe | 3hrs
+  GSLL 475 | Magical Realism: Central European Literature in a Global Context | 3hrs
+  HIST 165 | 20th Century Britain: from the Great War to Brexit | 3hrs
+  HIST 206 | War, Diplomacy, and Statecraft, 1815-1945 | 3hrs
+  HIST 256 | France, 1940 to the Present H | 3hrs
+  HIST/EURO/POLI 257 | Politics, Society, and Culture in Postwar Germany | 3hrs
+  HIST/WGST 259 | Towards Emancipation? Women in Modern Europe | 3hrs
+  HIST 260 | From Kings to Communists: East-Central Europe in the Modern Era H | 3hrs
+  HIST 261 | France, 1870-1940 | 3hrs
+  HIST/JWST/PWAD 262 | History of the Holocaust: The Destruction of the European Jews | 3hrs
+  HIST 269 | Modern London: Empire, Race, and Culture H | 3hrs
+  HIST 302 | Movies Make History: Films as Primary Sources in Europe and America H | 3hrs
+  HIST 312 | History of France and Algeria | 3hrs
+  HIST 348 | History of Migration | 3hrs
+  HIST 353 | Cinema, Culture, and Society | 3hrs
+  HIST 354 | War and Gender in Movies H | 3hrs
+  HIST 390H | Special Topics in History * | 3hrs
+  HIST 398 | Undergraduate Seminar in History *, H | 3hrs
+  HIST 458 | Europe and the World Wars, 1914-1945 | 3hrs
+  HIST 462 | Germany, 1806-1918: Politics, Society, and Culture H | 3hrs
+  HIST 463 | Germany since 1918: Politics, Society, and Culture H | 3hrs
+  HIST 466 | Modern European Intellectual History H | 3hrs
+  HIST 469 | European Social History | 3hrs
+  HIST 474 | Britain in World Affairs: British Foreign Policy since World War II | 3hrs
+  HIST 476 | Religion and Ethnicity | 3hrs
+  HIST 477 | Revolution in Russia, 1900-1930 | 3hrs
+  HIST 478 | Stalin and After: The USSR, 1929-Present | 3hrs
+  HIST 481 | From Communists to Capitalists: Eastern Europe since 1945 | 3hrs
+  HIST 485 | From Fiddler on the Roof to the Holocaust: East European and Soviet Jewish History | 3hrs
+  HIST 486/PWAD 485 | Extremism, Terrorism, and Security in Postwar Europe H | 3hrs
+  HIST 490 | Special Topics in History *, H | 3hrs
+  HIST 578 | Transatlantic Relations and Contemporary Geo-Politics from the Cold War to the Present | 3hrs
+  ITAL 250 | Italian Fascism: Between History, Fiction, and Film | 3hrs
+  ITAL 320 | Italian Cities and Cultures: History, Power, and Ecology | 3hrs
+  ITAL 343 | Italian Culture Today: Modern Italy as a Nation 1860 to Present | 3hrs
+  ITAL 365 | Italian Food and Culture | 3hrs
+  ITAL 385 | Italian Landscapes: Italy in the UNESCO World Heritage List | 3hrs
+  PLSH 280 | The Modern Cinema of Poland | 3hrs
+  PLSH 411 | 19th-Century Polish Literature and Culture | 3hrs
+  RUSS 270 | Crimes and Punishments: Russian Literature of the 19th Century | 3hrs
+  SPAN 340 | Iberian Cultural Topics | 3hrs
+  SPAN 371 | Studies in Spanish Literature | 3hrs
+  WGST/AMST 325 | Encountering Art in the Unexpected: Borderlands and Story in Contemporary American Visual Art | 3hrs
+NOTE: Asterisked courses require approval, based on topic.
+
+## Elective Courses on Contemporary Europe
+  ANTH 449 | Anthropology and Marxism | 3hrs
+  ARTH 283 | Picturing Paris: 1800-2000 | 3hrs
+  CMPL 374/WGST 373 | Modern Women Writers | 3hrs
+  CMPL 375 | New Wave Cinema: Its Sources and Its Legacies | 3hrs
+  CMPL 385 | Modernist and Postmodernist Narrative | 3hrs
+  CMPL 466 | Modernism | 3hrs
+  CMPL 468 | Aestheticism | 3hrs
+  ECON 434 | History of Economic Doctrines | 3hrs
+  ENGL/PWAD 659 | War in 20th-Century Literature H | 3hrs
+  FREN 372 | French and Francophone Studies since 1789 | 3hrs
+  FREN 386 | French New Wave Cinema | 3hrs
+  FREN 388 | History of French Cinema I: 1895-1950 | 3hrs
+  FREN 389 | History of French Cinema II: 1950 to the Present | 3hrs
+  FREN 515 | Social Networks: Technology and Community in Modern France | 3hrs
+  GERM/CMPL/WGST 271 | Women, Gender and Sexuality in German Cinema | 3hrs
+  GERM/CMPL 272 | History of German Cinema | 3hrs
+  GERM 281 | The German Idea of War: Philosophical Dialogues with the Literary and Visual Arts in WWI | 3hrs
+  GERM/PWAD 283 | Freedom, Terror, and Identity:  Modern Philosophy from Kant to Arendt | 3hrs
+  GERM 381 | Berlin: Mapping a (Post) Modern Metropolis | 3hrs
+  GERM 382 | Representations of Violence and Terrorism in Contemporary German Literature and Film | 3hrs
+  GERM 390 | Topics in German Studies * | 3hrs
+  GERM 560 | 20th-Century German Philosophy and Modern Youth Cultures | 3hrs
+  GSLL 88H | First-Year Seminar: Gender and Fiction in Central and Eastern Europe | 3hrs
+  GSLL 255 | Germany and Cold War: Occupation, Division, Reunification, Renewed Conflict with Russia (1945-Today) | 3hrs
+  GSLL 259 | Ideology and Aesthetics: Marxism and Literature | 3hrs
+  GSLL 283 | Hungarian Cinema since World War II | 3hrs
+  HIST 466 | Modern European Intellectual History H | 3hrs
+  HIST/ITAL 258 | Modern Italy since 1848 | 3hrs
+  ITAL 242 | Italy and Modernity: Culture in a Changing Country | 3hrs
+  ITAL 331 | Italian History and Culture II | 3hrs
+  ITAL 333 | Italian Film and Culture | 3hrs
+  ITAL 335 | Themes in Italian Film | 3hrs
+  ITAL 365 | Italian Food and Culture | 3hrs
+  ITAL 374 | Italian Ecofiction in Global Perspective | 3hrs
+  ITAL 382 | The Italian Novel | 3hrs
+  ITAL 388 | Environmental Issues in Italian Literature and Film | 3hrs
+  ITAL 398 | Undergraduate Seminar in Italian * | 3hrs
+  ITAL 571 | Primo Levi in English | 3hrs
+  JWST/PLSH 412 | From Communism to Capitalism: 20th- and 21st-Century Polish Literature and Culture | 3hrs
+  MUSC 284 | Beethoven and His Era | 3hrs
+  MUSC 285 | Musical Modernism | 3hrs
+  PHIL 224 | Existential Philosophy and the Meaning(lessness) of Life H | 3hrs
+  PHIL 229 | 20th-Century Western Philosophy | 3hrs
+  PHIL 494 | Existentialism and Phenomenology | 3hrs
+  POLI 432 | Tolerance in Liberal States | 3hrs
+  POLI 472 | Problems of Modern Democratic Theory H | 3hrs
+  PORT 375 | Portuguese and Brazilian Fiction in Translation | 3hrs
+  ROML 500 | Research Methods for Romance Languages and European Studies | 3hrs
+NOTE: Asterisked courses require approval, based on topic.

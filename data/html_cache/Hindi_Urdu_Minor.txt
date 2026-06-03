@@ -1,0 +1,63 @@
+TRACK: Hindi_Urdu_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/hindi-urdu-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The undergraduate minor in Hindi-Urdu consists of four courses.
+### Core Requirements
+RULE: Three courses are language courses beyond HNUR 203 chosen from among the following: 9-10
+  HNUR 204 | Intermediate Hindi-Urdu II | hrs
+  HNUR 305 | Advanced Hindi-Urdu I | hrs
+  HNUR 306 | Advanced Hindi-Urdu II | hrs
+  HNUR 407 | South Asian Society and Culture | hrs
+  HNUR 408 | South Asian Media and Film | hrs
+  HNUR 409 | Sex and Social Justice in South Asia | hrs
+  HNUR 410 | Seminar on the Urdu-Hindi Ghazal | hrs
+  HNUR 411 | Health and Medicine in South Asia | hrs
+  HNUR 490 | Topics in Hindi-Urdu Literature and Language | hrs
+RULE: The other course must be chosen from among the following: 3
+  ASIA 59 | First-Year Seminar: Media Masala: Popular Music, TV, and the Internet in Modern India and Pakistan | hrs
+  ASIA 61 | First-Year Seminar: A Tour of South Asia's Regional Art Cinemas | hrs
+  ASIA/PWAD 69 | First-Year Seminar: Wars and Veterans: Iran, Iraq, and Afghanistan | hrs
+  HIST 74 | First-Year Seminar: Emperors, Courts, and Consumption: The Mughals of India | hrs
+  ASIA 124 | Iranian Post-1979 Cinema | hrs
+  ASIA 125I | Transnational Lives: Culture, Film, and Fiction in the Iranian and Indian Diasporas | hrs
+  ASIA 126 | Introduction to Persian Literature | hrs
+  ASIA/WGST 127 | Iranian Women Writers | hrs
+  ASIA/HIST 135 | History of the Indian Subcontinent to 1750 | hrs
+  ASIA/HIST 136 | History of India, Pakistan, and Bangladesh: South Asia since 1750 | hrs
+  ASIA 152 | Survey of South Asian Cultural History | hrs
+  ASIA 163 | Hindi-Urdu Poetry in Performance | hrs
+  ASIA/MUSC 164 | Music of South Asia | hrs
+  ASIA/WGST 167 | Gender, Sexuality, and Social Justice in South Asia | hrs
+  ASIA 228 | Contested Souls: Literature, the Arts, and Religious Identity in Modern India | hrs
+  ASIA 231 | Bollywood Cinema | hrs
+  ASIA/CMPL 256 | Love in Classical Persian Poetry | hrs
+  ASIA/CMPL 258 | Iranian Prison Literature | hrs
+  ASIA/CMPL 261 | India and Orientalism | hrs
+  ASIA 262 | Nation, Film, and Novel in Modern India | hrs
+  ASIA/HIST 272 | Modern South Asia | hrs
+  ASIA/RELI 280 | Hindu Gods and Goddesses H | hrs
+  ASIA/RELI 285 | Monks, Magic, & Meditation: Theravada Buddhism Across Space and Time | hrs
+  ASIA 300/RELI 283 | The Buddhist Tradition: India, Nepal, and Tibet | hrs
+  ASIA 331/HIST 335/PWAD 331 | Cracking India: Partition and Its Legacy in South Asia H | hrs
+  ASIA 332 | The Story of Rama in India | hrs
+  ASIA 333 | The Mahabharata: Remembered and Reimagined | hrs
+  ANTH 361 | Community in India and South Asia | hrs
+  ASIA/RELI 381 | Religions of South Asia | hrs
+  ASIA/RELI 382 | The Story of Rama in Indian Culture–High Impact | hrs
+  ASIA/RELI 383 | The Mahabharata: Remembered and Reimagined–High Impact | hrs
+  ASIA 431 | Persian Sufi Literature | hrs
+  ASIA/HIST 440 | Gender in Indian History | hrs
+  ASIA 441/HIST 442 | Religion, Co-existence, and Conflict in Pre-Colonial India | hrs
+  ASIA 453 | Global Shangri-La: Tibet in the Modern World | hrs
+  ASIA/RELI/WGST 482 | Sex, Gender, and Religion in South Asia | hrs
+  ASIA 522 | Beauty and Power in the Classical Indian World | hrs
+  ASIA/HIST 557 | Fiction and History in India | hrs
+  ASIA/RELI 581 | Sufism | hrs
+  ASIA/RELI 582 | Islam and Islamic Art in South Asia | hrs
+  ASIA/RELI 583 | Religion and Culture in Iran, 1500-Present | hrs
+  HNUR/RELI 592 | Religious Conflict and Literature in India | hrs
+NOTE: HNUR 308 does not count toward the minor.
+NOTE: Placement credit (PL) may not be used to meet minor requirements.

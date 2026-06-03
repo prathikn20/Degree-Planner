@@ -1,0 +1,105 @@
+TRACK: Statistics_and_Analytics_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/statistics-analytics-majors-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  MATH/STOR 235 | Mathematics for Data Science | 4hrs
+  OR or MATH 233 | Calculus of Functions of Several Variables
+  STOR 315 | Discrete Mathematics for Data Science | 3hrs
+  OR or MATH 381 | Discrete Mathematics
+  OR or COMP 283 | Discrete Structures
+  STOR 320 | Methods and Models of Data Science | 4hrs
+  OR or STOR 520 | Statistical Computing for Data Science
+  STOR 415 | Introduction to Optimization 1, H | 3hrs
+  STOR 435 | Introduction to Probability H | 3hrs
+  OR or STOR 535 | Probability for Data Science
+  STOR 445 | Stochastic Modeling | 3hrs
+  STOR 455 | Methods of Data Analysis H | 3hrs
+RULE: One STOR course at the 500 level 3
+### Additional Requirements
+  COMP 116 | Introduction to Scientific Programming | 3hrs
+  OR or COMP 110 | Introduction to Programming
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 347 | Linear Algebra for Applications F | 3hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | 3-4hrs
+  OR or STOR 120 | Foundations of Statistics and Data Science
+RULE: Three additional courses from either Group A or Group B (see lists below) 9
+NOTE: Students may not enroll in STOR 305 if they have already taken STOR 415 .
+NOTE: Statistics and analytics majors must complete 120 academic hours.
+
+## Group A
+  STOR 305 | Introduction to Decision Analytics 1 | 3hrs
+  STOR 323I | Ethics of Machine Learning in Society | 3hrs
+  STOR 470 | Fundamentals of Actuarial Mathematics | 3hrs
+  STOR 471 | Long-Term Actuarial Models | 3hrs
+  STOR 472 | Short Term Actuarial Models | 3hrs
+  STOR 473 | Financial Mathematics for Actuarial Science | 3hrs
+  STOR 475 | Healthcare Risk Analytics | 3hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | 3hrs
+  STOR 536 | Advanced Methods in Probability | 3hrs
+  STOR 538 | Sports Analytics | 3hrs
+  STOR 543 | Dynamic Decision Analytics | 3hrs
+  STOR 545 | Stochastic Models and their Applications | 3hrs
+  STOR 555 | Mathematical Statistics | 3hrs
+  STOR 556 | Time Series Data Analysis | 3hrs
+  STOR 557 | Advanced Methods of Data Analysis | 3hrs
+  STOR 565 | Machine Learning | 3hrs
+  STOR 566 | Introduction to Deep Learning | 3hrs
+  STOR 572 | Simulation for Analytics | 3hrs
+  STOR 697 | Capstone | 3hrs
+NOTE: Students can only enroll in STOR 305 before taking STOR 415 .
+
+## Group B
+  BIOS 664 | Sample Survey Methodology | 4hrs
+  BUSI 403 | Operations Management | 3hrs
+  BUSI 408 | Corporate Finance | 3hrs
+  BUSI 410 | Business Analytics | 3hrs
+  BUSI 532 | Service and Platforms Operations Management H | 1.5hrs
+  BUSI 533 | Supply Chain Management H | 3hrs
+  COMP 401 | Foundation of Programming H | 3-4hrs
+  OR or COMP 301 | Foundations of Programming
+  COMP 410 | Data Structures | 3hrs
+  OR or COMP 210 | Data Structures and Analysis
+  COMP 421 | Files and Databases | 3hrs
+  ECON 410 | Intermediate Microeconomics H | 4hrs
+  ECON 420 | Intermediate Macroeconomics H | 3hrs
+  ECON 511 | Advanced Game Theory in Economics H | 3hrs
+  INLS 523 | Introduction to Database Concepts and Applications | 3hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+  MATH 521 | Advanced Calculus I H | 3hrs
+  MATH 522 | Advanced Calculus II H | 3hrs
+  MATH 523 | Functions of a Complex Variable with Applications | 3hrs
+  MATH 524 | Elementary Differential Equations | 3hrs
+  MATH 548 | Combinatorial Mathematics | 3hrs
+  MATH 566 | Introduction to Numerical Analysis | 3hrs
+
+## Pathways
+
+## Actuarial Science
+NOTE: This pathway equips students to quantify and manage financial risk in uncertain, high-stakes settings like insurance, pensions, healthcare, investments, and enterprise risk management. Students learn to model future outcomes using probability, statistics, financial mathematics, and modern data analytics—turning messy real-world information into clear assumptions, defensible forecasts, and actionable decisions. The concentration combines rigorous mathematical foundations with professional communication, regulatory and ethical judgment, and practical computing tools to prepare students for actuarial internships and the credentialing exam pathway. Graduates are prepared to explain complex risk tradeoffs plainly, build models that hold up under scrutiny, and support organizations in making long-term promises they can actually keep.
+NOTE: Students must take 3 of the following courses:
+  STOR 470 | Fundamentals of Actuarial Mathematics | 3hrs
+  STOR 471 | Long-Term Actuarial Models | 3hrs
+  STOR 472 | Short Term Actuarial Models | 3hrs
+  STOR 473 | Financial Mathematics for Actuarial Science | 3hrs
+
+## Decision Analytics
+NOTE: This pathway is for students who are interested in focusing their studies on making data-driven decisions in complex systems. While statistical techniques are very helpful for making decisions in data-rich settings, stylized formulations can be more helpful for generating insights and making decisions in the absence of sufficient data. This concentration brings together both statistics and operations research-based courses together to offer students a path for getting a more holistic training in analytical decision making.
+NOTE: Students must take 3 of the following courses:
+  STOR 475 | Healthcare Risk Analytics | 3hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | 3hrs
+  STOR 543 | Dynamic Decision Analytics | 3hrs
+  STOR 545 | Stochastic Models and their Applications | 3hrs
+  STOR 572 | Simulation for Analytics | 3hrs
+
+## Machine Learning
+NOTE: This pathway combines advanced statistical training with enhanced computational and data analytic training for those planning careers in information intensive industries or research. Students will extend their ability to model and analyze data, using mathematical and computational methods to make predictions and decisions in the face of uncertainty. The concentration is focused on fundamental training in mathematics and applied statistics, including specialized courses with an emphasis on statistical computing, and machine learning.
+NOTE: Students must take 3 of the following courses:
+  STOR 512 | Optimization for Machine Learning and Neural Networks | 3hrs
+  STOR 556 | Time Series Data Analysis | 3hrs
+  STOR 557 | Advanced Methods of Data Analysis | 3hrs
+  STOR 565 | Machine Learning | 3hrs
+  STOR 566 | Introduction to Deep Learning | 3hrs

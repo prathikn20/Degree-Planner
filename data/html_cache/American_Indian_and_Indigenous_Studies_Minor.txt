@@ -1,0 +1,57 @@
+TRACK: American_Indian_and_Indigenous_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/american-indian-indigenous-studies-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor in American Indian and indigenous studies consists of five courses.
+### Core Requirements
+  AMST/HIST 110 | Introduction to the Cultures and Histories of Native North America | 3hrs
+RULE: Select four additional courses from the list below 12
+NOTE: Electives
+  AMST FYS | First-Year Seminar 1 | hrs
+  AMST/ANTH 203 | Approaches to American Indian Studies | 3hrs
+  AMST/HIST 231 | Native American History: The East | 3hrs
+  AMST/HIST 233 | Native American History: The West | 3hrs
+  AMST/ANTH/HIST 234 | Native American Tribal Studies H | 3hrs
+  AMST/HIST 235 | Native America in the 20th Century | 3hrs
+  AMST 246 | Indigenous Storytelling: Oral, Written, and Visual Literatures of Native America | 3hrs
+  AMST 336 | Native Americans in Film | 3hrs
+  AMST 337 | American Indian Activism since 1887:  Beyond Red Power | 3hrs
+  AMST 338 | American Indian Novel | 3hrs
+  AMST 339 | The Long 1960s in Native America | 3hrs
+  AMST 340 | American Indian Art and Material Culture through Interdisciplinary Perspectives | 3hrs
+  AMST 341 | Digital Native America | 3hrs
+  AMST 345 | Issues in the Indigenous World | 3hrs
+  AMST 439 | Meaning and Makers: Indigenous Artists and the Marketplace | 3hrs
+  AMST 510 | Federal Indian Law and Policy | 3hrs
+  AMST 511 | American Indians and American Law | 3hrs
+  ANTH 121 | Ancient Cities of the Americas | 3hrs
+  ANTH 206 | American Indian Societies | 3hrs
+  ANTH 231 | The Inca and Their Ancestors: The Archaeology of Andean South America | 3hrs
+  ANTH 232 | Ancestral Maya Civilizations H | 3hrs
+  ANTH 250 | Archaeology of North America H | 3hrs
+  ANTH 252 | Archaeology of Food | 3hrs
+  ANTH 406 | Native Writers | 3hrs
+  ANTH 451 | Field School in North American Archaeology H | 6hrs
+  ANTH 550 | Archaeology of the American South | 3hrs
+  ARTH 160 | Introduction to the Art and Architecture of Pre-Hispanic Mesoamerica H | 3hrs
+  CHER 101 | Elementary Cherokee Language I | 3hrs
+  CHER 102 | Elementary Cherokee Language II | 3hrs
+  CHER 203 | Intermediate Cherokee Language I | 3hrs
+  CHER 204 | Intermediate Cherokee Language II | 3hrs
+  HIST 142 | Latin America under Colonial Rule | 3hrs
+  HIST 145 | Latin American Indigenous Peoples | 3hrs
+  HIST 240 | Introduction to Mexico: A Nation in Four Revolutions | 3hrs
+  HIST 315 | Nation-Building in Latin America H | 3hrs
+  HIST 526 | History of the Andes | 3hrs
+  HIST/WGST 576 | The Ethnohistory of Native American Women | 3hrs
+  LING 558 | Ancient Mayan Hieroglyphs | 3hrs
+  LING 560 | Mesoamerican Languages and Linguistics | 3hrs
+  LING 561 | Native Languages of the Americas | 3hrs
+  MAYA 401 | Introduction to Yucatec Maya | 3hrs
+  RELI 448 | Native and Christian: Indigenous Engagements with Christianity | 3hrs
+  SPAN 344 | Latin@ American Cultural Topics | 3hrs
+  SPAN 374 | Mesoamerica through Its Native Literatures | 3hrs
+  SPAN 625 | Indigenous Literatures and Cultures of the Américas | 3hrs
+  SPAN 683 | Guaraní Linguistics | 3hrs
+NOTE: With permission of the Director of Undergraduate Studies, one AMST First-Year Seminar course with relevant American Indian and Indigenous Studies (AIIS) content can count as an elective for the minor.

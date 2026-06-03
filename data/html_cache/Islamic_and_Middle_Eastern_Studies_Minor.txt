@@ -1,0 +1,91 @@
+TRACK: Islamic_and_Middle_Eastern_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/islamic-middle-eastern-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor consists of five courses, which must be taken in at least two different departments; at least one course must be from the Department of Religious Studies, and at least one course must be at an advanced level (400 and above).
+### Core Requirements
+  RELI 180 | Introduction to Islamic Civilization 1 | 3hrs
+  OR or HIST 138 | History of Muslim Societies to 1500
+RULE: One of the following three courses: 3
+  HIST 139 | History of Muslim Societies since 1500 | hrs
+  HIST 276 | The Modern Middle East | hrs
+  RELI 181 | Modern Muslim Societies | hrs
+RULE: Three elective courses (see course lists below) 9
+### Additional Requirements
+RULE: Three of the five courses in the minor (including the required courses listed above) must be selected from one of two subject categories—either Islamic studies or Middle Eastern studies—as indicated by the two lists of approved courses below.
+RULE: The other two courses must come from the other category.
+NOTE: Both courses cover material from the seventh century to 1500
+NOTE: One language course at level 5 or higher in Arabic, Hebrew, Hindi-Urdu, Persian, or Turkish can count as a course toward the minor. Up to two courses in Islamic and Middle East studies at Duke University may count toward the minor if approved by the director of the minor.
+NOTE: The minor is housed in the Department of Religious Studies and directed by Dr. Juliane Hammer, a member of the department, who is responsible for advising all students who minor in Islamic and Middle Eastern studies (as necessary beyond general academic advising).
+
+## Islamic Studies
+  ARAB/ASIA/RELI 681 | Readings in Islamicate Literatures | 3hrs
+  ASIA 59 | First-Year Seminar: Media Masala: Popular Music, TV, and the Internet in Modern India and Pakistan | 3hrs
+  ASIA 331 | Cracking India: Partition and Its Legacy in South Asia H | 3hrs
+  ASIA/HIST 135 | History of the Indian Subcontinent to 1750 | 3hrs
+  ASIA/HIST 136 | History of India, Pakistan, and Bangladesh: South Asia since 1750 | 3hrs
+  ASIA/HIST 138 | History of Muslim Societies to 1500 | 3hrs
+  ASIA/HIST 139 | History of Muslim Societies since 1500 | 3hrs
+  ASIA/RELI 180 | Introduction to Islamic Civilization | 3hrs
+  ASIA/RELI 181 | Modern Muslim Societies | 3hrs
+  ASIA/RELI 582 | Islam and Islamic Art in South Asia | 3hrs
+  ASIA/RELI 584 | The Qur'an as Literature | 3hrs
+  GEOG 448 | Transnational Geographies of Muslim Societies | 3hrs
+  GSLL/RELI 218 | Christianity and Islam in the Middle Ages | 3hrs
+  PWAD/RELI 481 | Religion, Fundamentalism, and Nationalism | 3hrs
+  RELI 64 | First-Year Seminar: Reintroducing Islam | 3hrs
+  RELI 185 | Women/Gender/Islam H | 3hrs
+  RELI 248 | Introduction to American Islam H | 3hrs
+  RELI 279 | Islamic Law, Ethics, and Practice | 3hrs
+  RELI 289 | Muhammad and the Qur'an | 3hrs
+  RELI 385 | Modern Muslims and the Qur'an | 3hrs
+  RELI 480 | Modern Muslim Literatures | 3hrs
+  RELI 485 | Gender and Sexuality in Islam | 3hrs
+  RELI 486 | Islam and Feminism/Islamic Feminism | 3hrs
+  RELI 580 | African American Islam | 3hrs
+  RELI 581 | Sufism | 3hrs
+  RELI 587 | Islam and Sexual Diversity | 3hrs
+  SOCI 419 | Sociology of the Islamic World | 3hrs
+
+## Middle Eastern Studies
+  ARAB 150 | Introduction to Arab Cultures | 3hrs
+  ARAB 151 | Arabic Literature through the Ages | 3hrs
+  ARAB 211 | Arab Comics | 3hrs
+  ARAB/ANTH 214 | Medicine in the Arab World | 3hrs
+  ARAB 350 | Women and Leadership in the Arab World | 3hrs
+  ARAB/ANTH 354 | Everyday Lives in the Middle East: Anthropological Perspectives | 3hrs
+  ARAB/ANTH 432 | Science and Society in the Middle East | 3hrs
+  ARAB 434 | Modern Arabic Literature in Translation | 3hrs
+  ARAB 453 | Film, Nation, and Identity in the Arab World | 3hrs
+  ASIA 73 | First-Year Seminar: Popular Culture in the Arab World | 3hrs
+  ASIA 126 | Introduction to Persian Literature | 3hrs
+  ASIA 235 | Israeli Cinema: Gender, Nation, and Ethnicity H | 3hrs
+  ASIA 431 | Persian Sufi Literature | 3hrs
+  ASIA 435 | The Cinemas of the Middle East and North Africa | 3hrs
+  ASIA/CMPL 256 | Love in Classical Persian Poetry | 3hrs
+  ASIA/CMPL 258 | Iranian Prison Literature | 3hrs
+  ASIA/CMPL 359 | Literary Diasporas of the Middle East | 3hrs
+  ASIA/CMPL 442 | Postcolonial Literature of the Middle East | 3hrs
+  ASIA/GEOG 447 | Gender, Space, and Place in the Middle East | 3hrs
+  ASIA/HIST 276 | The Modern Middle East | 3hrs
+  ASIA/HIST 277 | The Conflict over Israel/Palestine | 3hrs
+  ASIA/HIST 536 | Revolution in the Modern Middle East | 3hrs
+  ASIA/HIST 538 | The Middle East and the West | 3hrs
+  ASIA/HIST/WGST 537 | Women in the Middle East | 3hrs
+  ASIA/JWST 60 | First-Year Seminar: Israeli Culture and Society: Collective Memories and Fragmented Identities | 3hrs
+  ASIA/JWST 436 | Language, Exile, and Homeland in Zionist Thought and Practice | 3hrs
+  ASIA/JWST/PWAD 462 | The Arab-Jews: Culture, Community, and Coexistence | 3hrs
+  ASIA/PWAD 69 | First-Year Seminar: Wars and Veterans: Iran, Iraq, and Afghanistan | 3hrs
+  ASIA/RELI 583 | Religion and Culture in Iran, 1500-Present | 3hrs
+  ASIA/WGST 127 | Iranian Women Writers | 3hrs
+  ASIA/WGST 329 | Middle East Women Writers | 3hrs
+  ASIA/WGST 471 | Gender and Sexuality in Middle Eastern Literature | 3hrs
+  GEOG 59 | First-Year Seminar: Space, Identity, and Power in the Middle East | 3hrs
+  GERM 385 | Schein/Sein: Turkish German Culture, 1964 to Today | 3hrs
+  HIST 63 | First-Year Seminar: Water, Conflict, and Connection: the Middle East and Ottoman Lands H | 3hrs
+  HIST 163 | Modern Central Asia H | 3hrs
+  HIST 273 | Water, Conflict, and Connection in the Middle East | 3hrs
+  HIST 511 | 9/11 in World History H | 3hrs
+  JWST/RELI 343 | Religion in Modern Israel | 3hrs

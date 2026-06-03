@@ -1,0 +1,94 @@
+TRACK: Earth_and_Marine_Sciences_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/earth-marine-sciences-major-bs/
+
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: Students can pursue one of two concentrations, as outlined below.
+
+## Geoscience Concentration
+### Core Requirements
+  EMES 200 | The Solid Earth | 3hrs
+  EMES 201 | Earth's Surface: Processes, Landforms, and History | 3hrs
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | 3hrs
+RULE: Select four fundamentals courses (at least one with a lab) 13
+  EMES 301 | Earth's Critical Mineral Resources | hrs
+  EMES 302 | Structural Geology | hrs
+  EMES 303 | Sedimentology and Stratigraphy | hrs
+  EMES 304 | Petrology and Plate Tectonics | hrs
+  EMES 306 | Earth and Life through Time | hrs
+  EMES 405 | Geochemistry | hrs
+  EMES 406 | Introduction to Geophysics | hrs
+  EMES 417 | Surface Processes and Landscape Evolution | hrs
+  EMES 435 | Groundwater Hydrology | hrs
+RULE: Select three EMES specialization courses numbered 300 and higher 9-12
+RULE: Six credits of a capstone experience: 6
+  EMES 395 | Undergraduate Research in Earth, Marine, and Environmental Sciences (6 credit hours total) | hrs
+  EMES 485 & EMES 486 | Summer Field Course in Geology and Summer Field Course in Geology | hrs
+  EMES 691H & EMES 692H | Honors in Earth, Marine, and Environmental Sciences and Honors in Earth, Marine, and Environmental Sciences | hrs
+### Additional Requirements
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 118 | Introductory Calculus-based Mechanics and Relativity
+RULE: Select two of the following options: 6-8
+RULE: BIOL 101 / 101L or BIOL 101 / 102L
+  COMP 110 | Introduction to Programming H | hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+RULE: Any MATH above MATH 232 or MATH 210
+RULE: STOR 120 , 151 , or 155
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | hrs
+  OR or PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta
+
+## Marine Biology and Ecology Concentration
+### Core Requirements
+  EMES 103 & 103L | The Marine Environment and The Marine Environment Laboratory F | 3-4hrs
+  OR or EMES 202 | Oceanography
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | 3hrs
+  EMES 204 | The Microbial World:  Foundations in Structure, Metabolism, and Ecology | 3hrs
+  OR or BIOL 250 | Evolutionary Biology
+  OR or BIOL 260 | Introduction to Ecology
+RULE: Select four fundamentals courses (at least one with a lab) 1 13
+  EMES 320 | Marine Life in a Fluid World | hrs
+  EMES 320L | Marine Life in a Fluid World Laboratory 1 | hrs
+  EMES 352 | Marine Fisheries Ecology | hrs
+  EMES 441 | Marine Physiological Ecology 1 | hrs
+  EMES 442 | Marine Biology | hrs
+  EMES 442L | Marine Biology Lab 1 | hrs
+  EMES 446 | Marine Microbial Symbioses: Exploring How Microbial Interactions Affect Ecosystems and Human Health | hrs
+  EMES 447 | Microbial Ecological Genomics 1 | hrs
+  EMES 448 | Coastal and Estuarine Ecology 1 | hrs
+  EMES 450 | Biogeochemical Processes 1 | hrs
+  EMES 471 | Human Impacts on Estuarine Ecosystems 1 | hrs
+  BIOL 462/EMES 440 | Marine Ecology | hrs
+  EMES 507 | Biological Oceanography | hrs
+  EMES 515 | Quantitative Ecology 1 | hrs
+RULE: Select four EMES specialization courses numbered 300 and higher 12-16
+RULE: Three credits of a Applied Learning Experience: 3
+  EMES 395 | Undergraduate Research in Earth, Marine, and Environmental Sciences | hrs
+  EMES 396 | Independent Study in Earth, Marine, and Environmental Sciences | hrs
+  EMES 412 | Principles and Methods of Teaching Earth Science | hrs
+  EMES 441 | Marine Physiological Ecology | hrs
+  EMES 442 & 442L | Marine Biology and Marine Biology Lab | hrs
+  EMES 447 | Microbial Ecological Genomics | hrs
+  EMES 515 | Quantitative Ecology | hrs
+  ENEC 304 | Restoration Ecology | hrs
+  EMES 691H & EMES 692H | Honors in Earth, Marine, and Environmental Sciences and Honors in Earth, Marine, and Environmental Sciences | hrs
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems (with permission based on topic) | hrs
+### Additional Requirements
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 118 | Introductory Calculus-based Mechanics and Relativity
+RULE: Select two of the following options: 6-8
+RULE: BIOL 101 / 101L or BIOL 101 / 102L
+  COMP 110 | Introduction to Programming H | hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+RULE: Any MATH above MATH 232 or MATH 210
+RULE: STOR 120 , 151 , or 155
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | hrs
+  OR or PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta
+NOTE: This course fulfills the fundamentals lab requirement

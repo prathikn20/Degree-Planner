@@ -1,0 +1,38 @@
+TRACK: Classics_BA_Classical_Civilization
+URL: https://catalog.unc.edu/undergraduate/programs-study/classics-major-ba-classical-civilization/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  CLAS 121 | The Greeks H | 3hrs
+  CLAS 122 | The Romans H | 3hrs
+  CLAS 391 | Junior Seminar | 3hrs
+RULE: One of the following courses: 3
+  CLAR 244 | Greek Art and Archaeology | hrs
+  CLAR 247 | Roman Art and Archaeology | hrs
+RULE: Five additional courses chosen from the following list: 15
+RULE: Any CLAR or CLAS course at the 200 level or above
+RULE: Any GREK or LATN course numbered 204 or higher
+NOTE: The department course listing shows course descriptions for Classical Archaeology (CLAR), Classics in English/Classical Civilization (CLAS), Greek (GREK), and Latin (LATN).
+
+## Ancient History
+  HIST 225 | History of Greece | 3hrs
+  HIST 226 | The Rise of Rome | 3hrs
+  HIST 227 | The Fall of the Roman Empire | 3hrs
+  HIST 421 | Alexander | 3hrs
+  HIST 422 | Ancient Greek Warfare H | 3hrs
+  HIST 423 | Archaic Greece, 800-480 BCE | 3hrs
+  HIST 424 | Classical Greece (Sixth-Fourth Centuries BCE) | 3hrs
+  HIST 425 | Roman History, 154 BCE-14 CE | 3hrs
+  HIST 427 | The Early Roman Empire, 14 CE-193 CE | 3hrs
+  HIST 428 | The Later Roman Empire, 193 CE-378 CE | 3hrs
+
+## Ancient Philosophy
+  PHIL 210 | Wonder, Myth, and Reason: Introduction to Ancient Greek Science and Philosophy H | 3hrs
+  PHIL 211 | Perspectives on Gender, Race, and Marginality in Ancient Greek Philosophy, Science, and Medicine | 3hrs
+  PHIL 411 | Aristotle | 3hrs
+  PHIL 412 | Plato | 3hrs
+
+## Comparative Classics
+  ASIA 522 | Beauty and Power in the Classical Indian World | 3hrs

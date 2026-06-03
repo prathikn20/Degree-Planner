@@ -1,0 +1,11 @@
+TRACK: Portuguese_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/portuguese-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  PORT 310 | Advanced Communication in Portuguese: Media & Entertainment | 3hrs
+RULE: Four additional PORT courses numbered between PORT 300 and PORT 699, excluding PORT 401 , PORT 402 , PORT 691H , and PORT 692H 12
+NOTE: The minor in Portuguese requires five courses beyond PORT 204 , two of which may be taken abroad.
+NOTE: Portuguese (PORT) course descriptions .

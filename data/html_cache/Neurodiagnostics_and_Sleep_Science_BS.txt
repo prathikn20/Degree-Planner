@@ -1,0 +1,38 @@
+TRACK: Neurodiagnostics_and_Sleep_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/neurodiagnostics-sleep-sciences-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The schedule of academic work includes the following General Education requirements that are listed under “Additional Requirements. ” Students must complete all First-Year Foundation requirements, all Reflection and Integration requirements, and complete at least six Focus Capacity requirements as part of the IDEAs in Action General Education curriculum. In addition, the following specific requirements apply to students in the General College found under “Additional Requirements .”
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory H | 4hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  OR or BIOC 107 | Introduction to Biochemistry
+  MATH 130 | Precalculus Mathematics F | 3hrs
+  OR or MATH 231 | Calculus of Functions of One Variable I
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 118 | Introductory Calculus-based Mechanics and Relativity
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta
+  PSYC 101 | General Psychology F | 3hrs
+### Core Requirements
+  NDSS 393 | Clinical rotation in Neurophysiology and Polysomnography 1 | 2hrs
+  NDSS 401 | Basic Neurophysiology and Sleep for Clinical Neurophysiology 1 | 3hrs
+  NDSS 410 | Intro to Basic Sleep and Neurophysiology Instrumentation and Technology 1 | 4hrs
+  NDSS 415L | Polysomnographic and Neurophysiologic Technology/Lab 1 | 7hrs
+  NDSS 420 | Pathophysiology of Sleep, Neurological, and Related Disorders | 3hrs
+  NDSS 430 | Neurological and Sleep Diagnostic and Therapeutic Methods, and Monitoring | 3hrs
+  NDSS 440 | Evidence Based Practice in Neurodiagnostics and Sleep Science | 3hrs
+  NDSS 450 | Advanced Sleep and Neurodiagnostic Clinical Procedures | 3hrs
+  NDSS 460 | Informational Technology and Analytics in Neurodiagnostics and Sleep Science | 3hrs
+  NDSS 493 | Neurodiagnostics and Sleep Science Practicum | 3hrs
+  NDSS 500 | Principals and Practice of Healthcare Education | 3hrs
+  NDSS 510 | Program Administration: Neurodiagnostics and Sleep Science Department Management | 3hrs
+  NDSS 520 | Advanced Physiological Monitoring and Data Acquisition | 3hrs
+  NDSS 530 | Leadership in Healthcare Organizations | 3hrs
+  NDSS 593 | Neurodiagnostics and Sleep Science Internship | 3hrs
+  NDSS 697 | Neurodiagnostics and Sleep Science Capstone | 3hrs
+  NDSS 698 | Neurodiagnostics and Sleep Science Capstone II | 3hrs
+NOTE: This course is open to all students. Non-degree or prospective students may have the option to take this course prior to applying and receive credit towards the NDSS major once they have applied and been admitted to the program.

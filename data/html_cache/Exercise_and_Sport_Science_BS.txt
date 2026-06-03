@@ -1,0 +1,169 @@
+TRACK: Exercise_and_Sport_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  EXSS 155 | Human Anatomy and Physiology I H, F | 3hrs
+  EXSS 256 | Human Anatomy and Physiology II | 3hrs
+  EXSS 273 | Research in Exercise and Sport Science | 3hrs
+  EXSS 376 | Physiological Basis of Human Performance | 4hrs
+  EXSS 380 | Neuromuscular Control and Learning H | 3hrs
+  EXSS 385 | Biomechanics of Sport | 3hrs
+RULE: Five elective courses from the following list, with at least 9 credits from courses numbered 400 and above: 13-15
+  EXSS 181 | Sport and Exercise Psychology | hrs
+  EXSS 265 | Fundamentals of Sports Medicine | hrs
+  EXSS 275L | Human Anatomy Laboratory | hrs
+  EXSS 288 | Emergency Care of Athletic Injuries and Illnesses | hrs
+  EXSS 360 | Sports Nutrition | hrs
+  EXSS 366 | Foundations of Sports Medicine Rehabilation | hrs
+  EXSS 395 | Undergraduate Research Course | hrs
+  EXSS 408 | Theory and Application of Strength Training and Conditioning for Fitness Professionals | hrs
+  EXSS 409 | Exercise Prescription for Special Populations | hrs
+  EXSS 410 | Exercise Testing and Prescription | hrs
+  EXSS 433L | Exercise Technique | hrs
+  EXSS 450 | Essentials of Corrective Exercise Training | hrs
+  EXSS 475 | Functional Anatomy | hrs
+  EXSS 478 | Sports Performance Training | hrs
+  EXSS 573 | Sport Injury Epidemiology | hrs
+  EXSS 576 | Exercise Endocrinology | hrs
+  EXSS 580 | Neuromechanics of Human Movement | hrs
+  EXSS 581 | Biopsychosocial Aspects of Sport Injury | hrs
+  EXSS 694H | Senior Honors Thesis | hrs
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+RULE: Select three courses from the following options: 12
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | hrs
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | hrs
+  OR or PHYS 118 | Introductory Calculus-based Mechanics and Relativity
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | hrs
+  OR or PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta
+  MATH 231 | Calculus of Functions of One Variable I H, F | hrs
+RULE: A choice of four additional allied sciences electives, selected from the course list below (some courses are more than 3 credits) 1 12
+
+## Allied Science Electives
+### Anthropology 1
+  ANTH 143 | Human Evolution and Adaptation | 3hrs
+  ANTH 148 | Human Origins | 3hrs
+  ANTH 151 | Anthropological Perspectives on Food and Culture | 3hrs
+  ANTH 217 | Human Biology in Comparative Perspective | 3hrs
+  ANTH 298 | Biological Anthropology Theory and Practice | 3hrs
+  ANTH 315 | Human Genetics and Evolution | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 412 | Paleoanthropology | 3hrs
+  ANTH 413 | Laboratory Methods: Archaeobotany | 3hrs
+  ANTH 414 | Laboratory Methods: Human Osteology | 3hrs
+  ANTH 415 | Laboratory Methods: Zooarchaeology | 3hrs
+  ANTH 416 | Bioarchaeology | 3hrs
+  ANTH 423 | Written in Bone: CSI and the Science of Death Investigation from Skeletal Remains | 3hrs
+  ANTH 437 | Evolutionary Medicine | 3hrs
+  ANTH 470 | Medicine and Anthropology | 3hrs
+  ANTH 471 | Biocultural Perspectives on Maternal and Child Health | 3hrs
+### Biology 1
+  BIOL | Any three credit-hour class above BIOL 101 Principles of Biology, except BIOL 271 , BIOL 272 , BIOL 273 | hrs
+### Biochemistry 1
+  BIOC 107 | Introduction to Biochemistry | 4hrs
+  BIOC 108 | Introduction to Biochemistry | 4hrs
+### Biomedical Engineering 1
+  BMME 150 | Introduction to Materials Science | 3hrs
+  BMME 207 | Biomedical Electronics | 4hrs
+  BMME 301 | Human Physiology: Electrical Analysis | 4hrs
+  BMME 315 | Biotransport | 3hrs
+  BMME 335 | Biomaterials | 3hrs
+  BMME 385 | Bioinstrumentation | 3hrs
+  BMME 435 | Biological Physics | 3hrs
+  BMME 505 | Skeletal Biomechanics | 3hrs
+  BMME 521 | Introduction to Synthetic Biology | 3hrs
+  BMME 543 | Biomechanics of Movement | 3hrs
+  BMME 545 | Systems Neuroscience | 3hrs
+  BMME 555 | Biofluid Mechanics | 3hrs
+  BMME 572 | Analysis of Tissue Engineering Technologies | 3hrs
+  BMME 585 | Biotechnology | 3hrs
+### Biostatistics
+  BIOS | Any course above BIOS 500H , except BIOS 540 , BIOS 543, BIOS 690 , BIOS 691 , BIOS 693H , BIOS 694H | hrs
+### Chemistry
+  CHEM | Any three credit-hour class above CHEM 102 / 102L | hrs
+### Computer Science
+  COMP | Any COMP course | hrs
+### Earth, Marine, and Environmental Sciences 1
+  EMES | Any three credit-hour course above EMES 100 , except EMES 190 , EMES 390 , EMES 395 , EMES 396 , EMES 412 , EMES 490 , EMES 590 , EMES 691H , and EMES 692H | hrs
+### Environment, Ecology and Energy 1
+  ENEC 108 | Our Energy and Climate Crises: Challenges and Opportunities | 4hrs
+  ENEC 202 | Introduction to the Environmental Sciences | 4hrs
+  ENEC 220 | North Carolina Estuaries: Environmental Processes and Problems | 3hrs
+  ENEC 222 | Estuarine and Coastal Marine Science | 4hrs
+  ENEC 256 | Mountain Biodiversity | 4hrs
+  ENEC 304 | Restoration Ecology | 4hrs
+  ENEC 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | 3hrs
+  ENEC 352 | Marine Fisheries Ecology | 3hrs
+  ENEC 403 | Environmental Chemistry Processes | 3hrs
+  ENEC 406 | Atmospheric Processes II | 4hrs
+  ENEC 410 | Earth Processes in Environmental Systems | 4hrs
+  ENEC 411 | Oceanic Processes in Environmental Systems | 4hrs
+  ENEC 415 | Environmental Systems Modeling | 3hrs
+  ENEC 416 | Environmental Meteorology | 3hrs
+  ENEC 431 | Sustainable Cities: Exploring Ways of Making Cities More Sustainable | 3hrs
+  ENEC 450 | Biogeochemical Processes | 4hrs
+  ENEC 462 | Ecosystem Management | 3hrs
+  ENEC 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC 479 | Landscape Analysis | 3hrs
+  ENEC 489 | Ecological Processes in Environmental Systems | 4hrs
+  ENEC 530 | Principles of Climate Modeling | 3hrs
+  ENEC 562 | Statistics for Environmental Scientists | 4hrs
+  ENEC 567 | Ecological Analyses and Application | 3hrs
+### Environmental Sciences and Engineering
+  ENVR 205 | Engineering Tools for Environmental Problem Solving | 3hrs
+  ENVR 403 | Environmental Chemistry Processes | 3hrs
+  ENVR 411 | Laboratory Techniques and Field Measurements | 3hrs
+  ENVR 412 | Ecological Microbiology | 3hrs
+  ENVR 413 | Limnology | 3hrs
+  ENVR 416 | Aerosol Physics and Chemistry | 4hrs
+  ENVR 419 | Chemical Equilibria in Natural Waters | 3hrs
+  ENVR 421 | Environmental Health Microbiology | 3hrs
+  ENVR 425 | Introduction to Health Physics: Radiation and Radiation Protection | 3hrs
+  ENVR 430 | Health Effects of Environmental Agents | 3hrs
+  ENVR 451 | Introduction to Environmental Modeling | 3hrs
+  ENVR 453 | Groundwater Hydrology | 3hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | 3hrs
+  ENVR 470 | Environmental Risk Assessment | 3hrs
+  ENVR 472 | Quantitative Risk Assessment in Environmental Health Microbiology | 3hrs
+  ENVR 514 | Measurement of NOx, O3, and Volatile Organic Compounds | 3hrs
+  ENVR 575 | Global Climate Change: Science, Impacts, Solutions | 3hrs
+  ENVR 630 | Systems Biology in Environmental Health | 3hrs
+  ENVR 661 | Scientific Computation I | 3hrs
+  ENVR 662 | Scientific Computation II | 3hrs
+  ENVR 666 | Numerical Methods | 3hrs
+  ENVR 668 | Methods of Applied Mathematics I | 3hrs
+  ENVR 669 | Methods of Applied Mathematics II | 3hrs
+  ENVR 671 | Environmental Physics I | 3hrs
+  ENVR 672 | Environmental Physics II | 3hrs
+  ENVR 675 | Air Pollution, Chemistry, and Physics | 3hrs
+### Geography
+  GEOG 110 | The Blue Planet: An Introduction to Earth's Environmental Systems H | 3hrs
+  GEOG 111 | Weather and Climate | 3hrs
+  GEOG 212 | Environmental Conservation and Global Change | 3hrs
+  GEOG 253 | Introduction to Atmospheric Processes | 4hrs
+  GEOG 391 | Quantitative Methods in Geography | 3hrs
+  GEOG 412 | Synoptic Meteorology | 3hrs
+  GEOG 414 | Climate Change | 3hrs
+  GEOG 416 | Applied Climatology: The Impacts of Climate and Weather on Environmental and Social Systems | 3hrs
+  GEOG 440 | Earth Surface Processes | 3hrs
+  GEOG 441 | Introduction to Watershed Systems | 3hrs
+  GEOG 442 | Limnology and Freshwater Ecology | 3hrs
+### Mathematics
+RULE: Any class above MATH 231 Calculus of Functions of One Variable I
+### Microbiology 1
+  MCRO 251 | Introductory Medical Microbiology | 4hrs
+### Nutrition 1
+  NUTR 240 | Introduction to Human Nutrition | 3hrs
+  NUTR 600 | Human Metabolism: Macronutrients | 3hrs
+  NUTR 620 | Human Metabolism: Micronutrients | 3hrs
+### Psychology 1
+RULE: Any PSYC course above PSYC 101 General Psychology
+### Neuroscience 1
+RULE: Any NSCI course
+### Statistics and Operations Research
+RULE: Any STOR course above 155 Introduction to Statistics
+NOTE: Life sciences subject code.

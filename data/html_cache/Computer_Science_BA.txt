@@ -1,0 +1,146 @@
+TRACK: Computer_Science_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/computer-science-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Gateway Course
+  COMP 110 | Introduction to Programming H | 3hrs
+### Core Requirements
+  COMP 210 | Data Structures and Analysis 1 | 3hrs
+  COMP 211 | Systems Fundamentals 1 | 3hrs
+  COMP 301 | Foundations of Programming 1 | 3hrs
+  COMP 311 | Computer Organization 1 | 3hrs
+  COMP 283 | Discrete Structures 1, H | 3hrs
+  OR or MATH 381 | Discrete Mathematics
+  OR or STOR 315 | Discrete Mathematics for Data Science
+RULE: Six additional elective courses chosen from the following, with no more than two courses from other departments: 18
+RULE: COMP courses numbered 420 - 599 (excluding COMP 496 )
+RULE: Graduate level courses (600 or higher) excluding COMP 692H and COMP 790 2
+  BIOL 525 | Analysis and Interpretation of Sequence-Based Functional Genomics Experiments | hrs
+  BIOL 553 | Mathematical and Computational Models in Biology | hrs
+  BIOL 554 | Introduction to Computational Neuroscience | hrs
+  BIOS 512 | Data Science Basics | hrs
+  BIOS 611 | Introduction to Data Science | hrs
+  BIOS 635 | Introduction to Machine Learning | hrs
+  BMME 575 | Practical Machine Learning for Biosignal Analysis | hrs
+  COMM 638 | Game Design | hrs
+  ECON 525 | Advanced Financial Economics | hrs
+  ECON 573I | Machine Learning and Econometrics | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs
+  INLS 318 | Human Computer Interaction | hrs
+  INLS 418 | Human Factors in System Design | hrs
+  INLS 509 | Information Retrieval | hrs
+  INLS 512 | Applications of Natural Language Processing | hrs
+  INLS 523 | Introduction to Database Concepts and Applications | hrs
+  INLS 609 | Experimental Information Retrieval | hrs
+  INLS 613 | Text Mining | hrs
+  INLS 623 | Database Systems II: Intermediate Databases | hrs
+  INLS 641 | Visual Analytics | hrs
+  INLS 642 | Data Mining | hrs
+  INLS 718 | User Interface Design | hrs
+  LING 401 | Introduction to Computational Linguistics | hrs
+  LING 460 | Making Sense of Big Data: Textual Analysis with R | hrs
+  LING 540 | Mathematical Linguistics | hrs
+  MATH 560 | Optimization with Applications in Machine Learning | hrs
+  MATH 566 | Introduction to Numerical Analysis | hrs
+  MATH/ENVR 661 | Scientific Computation I | hrs
+  MEJO 581 | User Experience Design and Usability | hrs
+  PHYS 231 | Physical Computing H | hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | hrs
+  PHYS 332 | Numerical Techniques for the Sciences II | hrs
+  PSYC 559 | Applied Machine Learning in Psychology | hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | hrs
+  STOR 520 | Statistical Computing for Data Science | hrs
+  STOR 565 | Machine Learning | hrs
+  STOR 566 | Introduction to Deep Learning | hrs
+RULE: Other courses must be approved by the director of undergraduate studies and must have a significant computer or computing technology component.
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I (A grade of C or better is required) 1, H, F | 4hrs
+  STOR 155 | Introduction to Data Models and Inference 3, H, F | 3hrs
+  OR or STOR 120 | Foundations of Statistics and Data Science
+  OR or STOR 435 | Introduction to Probability
+  OR or STOR 535 | Probability for Data Science
+  OR or PSYC 210 | Statistical Principles of Psychological Research
+  OR or EMES 520 | Data Analysis for Earth and Marine Sciences
+  OR or BIOS 650 | Basic Elements of Probability and Statistical Inference I
+RULE: B.A. majors in computer science must fulfill all General Education requirements, including the Supplemental General Education requirement.
+NOTE: A grade of C or better is required in each of COMP 283 (or MATH 381 ), COMP 210 , COMP 211 , COMP 301 , COMP 311 , and MATH 231 .
+NOTE: COMP 790 courses are general seminar courses that are not appropriate for this requirement and may only be counted with the approval of the director of undergraduate studies.
+NOTE: PSYC 210 requires PSYC 101 as a prerequisite. Both STOR 435 and STOR 535 require MATH 233 as a prerequisite.
+NOTE: Computer science (COMP) course descriptions .
+NOTE: Pathways shown below are suggested collections of upper division electives most related to each area.
+
+## Artificial Intelligence
+### Recommended background: MATH 233 , MATH 347 , and STOR 435
+  COMP 486 | Applications of Natural Language Processing | 3hrs
+  COMP 560 | Artificial Intelligence | 3hrs
+  COMP 562 | Introduction to Machine Learning H | 3hrs
+  COMP 577 | Introduction to Computer Vision | 3hrs
+  COMP 581 | Introduction to Robotics H | 3hrs
+  COMP 586 | Natural Language Processing | 3hrs
+  COMP 664 | Deep Learning | 3hrs
+
+## Graphics and Game Development
+### Recommended background: MATH 347 or MATH 577
+  COMP 475 | 2D Computer Graphics | 3hrs
+  COMP 572 | Computational Photography | 3hrs
+  COMP 575 | Introduction to Computer Graphics | 3hrs
+  COMP 577 | Introduction to Computer Vision | 3hrs
+  COMP 651 | Computational Geometry | 3hrs
+
+## Human-Computer Interaction
+  COMP 426 | Modern Web Programming | 3hrs
+  COMP 616 | Information Visualization | 3hrs
+  COMP 617 | Visualization Design Methods | 3hrs
+
+## Mobile and Embedded Systems Engineering
+  COMP 433 | Mobile Computing Systems | 3hrs
+  COMP 530 | Operating Systems H | 3hrs
+  COMP 533 | Distributed Systems and Concurrent Programming | 3hrs
+  COMP 545 | Programming Intelligent Physical Systems H | 3hrs
+  COMP 581 | Introduction to Robotics H | 3hrs
+  COMP 635 | Wireless and Mobile Communications | 3hrs
+
+## Security and Privacy
+  COMP 431 | Internet Services and Protocols | 3hrs
+  COMP 435 | Computer Security Concepts | 3hrs
+  COMP 437 | Privacy Enhancing Technologies | 3hrs
+  COMP 537 | Cryptography H | 3hrs
+  COMP 637 | Formal Methods for System Security | 3hrs
+
+## Software Engineering
+### Core Courses
+  COMP 423 | Foundations of Software Engineering | hrs
+  COMP 426 | Modern Web Programming | hrs
+  COMP 433 | Mobile Computing Systems | hrs
+  COMP 523 | Software Engineering Laboratory | hrs
+### Related Courses
+  COMP 520 | Compilers | hrs
+  COMP 524 | Programming Language Concepts | hrs
+
+## Systems and Architecture
+### Software Systems
+  COMP 421 | Files and Databases | hrs
+  COMP 520 | Compilers | hrs
+  COMP 524 | Programming Language Concepts | hrs
+### Hardware Systems
+  COMP 530 | Operating Systems H | hrs
+  COMP 541 | Digital Logic and Computer Design | hrs
+  COMP 545 | Programming Intelligent Physical Systems H | hrs
+  COMP 581 | Introduction to Robotics H | hrs
+  COMP 630 | Operating System Implementation | hrs
+### Network Systems
+  COMP 431 | Internet Services and Protocols | hrs
+  COMP 533 | Distributed Systems and Concurrent Programming | hrs
+  COMP 631 | Networked and Distributed Systems | hrs
+  COMP 635 | Wireless and Mobile Communications | hrs
+
+## Theory
+  COMP 455 | Models of Languages and Computation | 3hrs
+  COMP 524 | Programming Language Concepts | 3hrs
+  COMP 550 | Algorithms and Analysis | 3hrs
+  COMP 555 | Bioalgorithms | 3hrs
+  COMP 637 | Formal Methods for System Security | 3hrs
+  COMP 651 | Computational Geometry | 3hrs
+  COMP 652 | Logical Foundations of Program Correctness | 3hrs

@@ -1,0 +1,328 @@
+TRACK: Environmental_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/environmental-science-bs/
+
+## Requirements
+NOTE: The environmental science program provides two options:
+
+## Environmental Science, B.S.
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  ENEC 201 | Introduction to Environment and Society H, F | 4hrs
+  ENEC 202I | Introduction to the Environmental Sciences | 4hrs
+  ENEC 203 | Introduction to Environmental Science Problem Solving | 3hrs
+  OR or EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences
+  OR or ENEC 415 | Environmental Systems Modeling
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+RULE: Two courses from one analytical skills option: 6-7
+RULE: Applied Math:
+  MATH 233 | Calculus of Functions of Several Variables H | hrs
+  MATH 383 | First Course in Differential Equations H | hrs
+RULE: GIS and Remote Sensing:
+  ANTH 419 | Anthropological Application of GIS | hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences 1 | hrs
+  ENEC/ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | hrs
+  ENEC 340 | Environmental Applications of Drones 1 | hrs
+  ENEC 479 | Landscape Analysis 1 | hrs
+  GEOG 370 | Geographic Information Science 1 | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG/PLAN 491 | Principles of Geographic Information Systems | hrs
+  GEOG 577 | Advanced Remote Sensing | hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | hrs
+RULE: Statistics:
+  BIOL/ENEC 562 | Statistics for Environmental Scientists 1 | hrs
+  BIOL/ENEC 563 | Statistical Analysis in Ecology and Evolution | hrs
+  BIOS 511 | Introduction to Statistical Computing and Data Management | hrs
+  BIOS 650 | Basic Elements of Probability and Statistical Inference I | hrs
+  EMES 515 | Quantitative Ecology 1 | hrs
+  EMES 520 | Data Analysis for Earth and Marine Sciences | hrs
+  EMES 525 | Modelling in Earth and Marine Sciences | hrs
+  ENEC/ENVR 570 | Uncertainty, Decisions, and the Environment | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+RULE: Informatics
+  BUSI 410 | Business Analytics | hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | hrs
+  INLS 161 | Tools for Information Literacy | hrs
+  INLS 382 | Information Systems Analysis and Design | hrs
+  INLS 523 | Introduction to Database Concepts and Applications | hrs
+  INLS 541 | Information Visualization | hrs
+  STOR 215 | Foundations of Decision Sciences | hrs
+  STOR 305 | Introduction to Decision Analytics | hrs
+RULE: Five courses chosen from one of the following concentrations (see lists below) 15-20
+### Additional Requirements
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  COMP 110 | Introduction to Programming H | 3hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  OR or BIOL 222 | Introduction to Programming with Biological Data
+  OR or INLS 560 | Introduction to Programming
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | 3hrs
+  OR or BIOS 600 | Principles of Statistical Inference
+RULE: Select one of the following: 8
+  BIOL 101 & 101L & BIOL 104 | Principles of Biology and Introductory Biology Laboratory and Biodiversity H, H, F | hrs
+  PHYS 118 & PHYS 119 | Introductory Calculus-based Mechanics and Relativity and Introductory Calculus-based Electromagnetism and Quanta H, F | hrs
+  PHYS 114 & PHYS 115 | General Physics I: For Students of the Life Sciences and General Physics II: For Students of the Life Sciences F | hrs
+RULE: Students are required to earn a minor in an allied science, such as biology, chemistry, computer science, data science, geography, geographic information sciences, geology, hydrology, information science, marine science, mathematics, physics, risk management, or statistics and analytics. 15
+RULE: Enough free electives to accumulate minimum of 120 credit hours. 2 varies
+NOTE: These courses are listed as options for multiple requirements (major core, concentrations, and/or additional requirements), but can only be counted towards one of the requirements.
+NOTE: Recommended courses include ECON 101 and one of the following FC-VALUES courses: ENEC 325 , ENEC 350 , or ENEC 368 / PHIL 368 ;
+
+## Ecology and Natural Resources Concentration
+  BIOL 260 | Introduction to Ecology | 3hrs
+  BIOL/ENEC 272 | Local Flora | 3hrs
+  BIOL 277 & 277L | Vertebrate Field Zoology and Vertebrate Field Zoology Laboratory | 4hrs
+  BIOL/ENEC 461 | Fundamentals of Ecology | 4hrs
+  BIOL 463 | Field Ecology | 4hrs
+  BIOL 464 | Global Change Biology | 3hrs
+  BIOL 465 | Global Biodiversity and Macroecology | 3hrs
+  BIOL 469 | Behavioral Ecology | 3hrs
+  BIOL 471 & 471L | Evolutionary Mechanisms and Evolutionary Mechanisms Laboratory | 4hrs
+  BIOL 476 & 476L | Avian Biology and Avian Biology Laboratory | 4hrs
+  BIOL 561 | Ecological Plant Geography | 3hrs
+  BIOL/ENEC 562 | Statistics for Environmental Scientists 1 | 4hrs
+  BIOL/ENEC 563 | Statistical Analysis in Ecology and Evolution | 4hrs
+  BIOL 564 | Population Ecology | 3hrs
+  BIOL 565 | Conservation Biology H | 3hrs
+  BIOL 568H | Disease Ecology and Evolution | 3hrs
+  EMES 202 | Oceanography 1 | 3hrs
+  EMES 507/ENVR 520 | Biological Oceanography | 4hrs
+  EMES 442 | Marine Biology | 3hrs
+  EMES 515 | Quantitative Ecology 1 | 3hrs
+  ENEC/BIOL 256 | Mountain Biodiversity | 4hrs
+  ENEC/GEOG 264 | Conservation of Biodiversity in Theory and Practice | 3hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | 3hrs
+  ENEC 304 | Restoration Ecology | 4hrs
+  ENEC 340 | Environmental Applications of Drones 1 | 3hrs
+  ENEC/EMES 352 | Marine Fisheries Ecology | 3hrs
+  ENEC 370 | Agriculture and the Environment H | 3hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 1-3hrs
+  EMES 440/BIOL 462 | Marine Ecology | 3hrs
+  ENEC/EMES 441 | Marine Physiological Ecology | 3hrs
+  ENEC/EMES 444/BIOL 456 | Marine Phytoplankton | 3hrs
+  ENEC/EMES 448 | Coastal and Estuarine Ecology 1 | 4hrs
+  ENEC/EMES 450 | Biogeochemical Processes | 4hrs
+  ENEC 462 | Ecosystem Management | 3hrs
+  ENEC/EMES 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC 479 | Landscape Analysis 1 | 3hrs
+  ENEC 485 | Coastal Resource Economics and Policy | 3-4hrs
+  ENEC 489 | Ecological Processes in Environmental Systems 1 | 4hrs
+  GEOG 444 | Landscape Biogeography | 3hrs
+NOTE: These courses appear in the major core, concentrations, and/or additional requirements, but can only be counted toward one of these requirements
+
+## Environment and Health Concentration
+  BIOL 402 | Infectious Disease in the Developing World | 3hrs
+  BIOL 568H | Disease Ecology and Evolution | 3hrs
+  CHEM 261 | Introduction to Organic Chemistry I 1, H | 3hrs
+  EMES 446 | Marine Microbial Symbioses: Exploring How Microbial Interactions Affect Ecosystems and Human Health | 3hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems 1 | 3hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | 3-4hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 1-3hrs
+  ENEC/ENVR 403 | Environmental Chemistry Processes 1 | 3hrs
+  ENEC/EMES 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC/ENVR 522 | Environmental Change and Human Health | 3hrs
+  ENVR 412 | Ecological Microbiology | 3hrs
+  ENVR 416 | Aerosol Physics and Chemistry | 4hrs
+  ENVR 419 | Chemical Equilibria in Natural Waters | 3hrs
+  ENVR 421 | Environmental Health Microbiology | 3hrs
+  ENVR 430 | Health Effects of Environmental Agents | 3hrs
+  ENVR 431 | Techniques in Environmental Health Sciences | 2hrs
+  ENVR 451 | Introduction to Environmental Modeling | 3hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health 1 | 3hrs
+  ENVR 470 | Environmental Risk Assessment | 3hrs
+  ENVR 472 | Quantitative Risk Assessment in Environmental Health Microbiology | 3hrs
+  ENVR 522 | Environmental Change and Human Health | 3hrs
+  ENVR 582 | Sanitation for Development | 3hrs
+  ENVR 600 | Environmental Health | 3hrs
+  EPID 600 | Principles of Epidemiology for Public Health | 3hrs
+NOTE: These courses appear in the major core, concentrations, and/or additional requirements, but can only be counted toward one of these requirements
+
+## Water and Climate Concentration
+  EMES 202 | Oceanography 1 | 3hrs
+  EMES 306 | Earth and Life through Time | 3hrs
+  EMES 310 | Coastal Environmental Change | 3hrs
+  EMES 320 | Marine Life in a Fluid World | 3hrs
+  EMES 402 | Physical Oceanography | 3hrs
+  EMES/ENVR 413 | Limnology | 3hrs
+  EMES 431 | Major World Rivers and Global Change: From Mountains to the Sea | 3hrs
+  EMES 432 | Ancient Climates: Greenhouse and Icehouse Worlds | 3hrs
+  EMES/ENEC 433 | Wetland Hydrology | 3hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | 3hrs
+  EMES 474 | Marine Geology | 3hrs
+  EMES 508 | Global Hydrology | 3hrs
+  EMES 512 | Advanced Coastal Environmental Change | 3hrs
+  ENEC/GEOG 253 | Introduction to Atmospheric Processes | 4hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems 1 | 3hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | 3hrs
+  ENEC/PLCY 373 | Confronting Climate Change in the Anthropocene | 3.0hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 1-3hrs
+  ENEC/ENVR 403 | Environmental Chemistry Processes 1 | 3hrs
+  ENEC/EMES 415 | Environmental Systems Modeling | 3hrs
+  ENEC/EMES 417 | Surface Processes and Landscape Evolution | 4hrs
+  ENEC/EMES 450 | Biogeochemical Processes | 4hrs
+  ENVR 416 | Aerosol Physics and Chemistry | 4hrs
+  ENVR 419 | Chemical Equilibria in Natural Waters | 3hrs
+  ENVR 453 | Groundwater Hydrology | 3hrs
+  GEOG 370 | Geographic Information Science 1 | 3hrs
+  GEOG 412 | Synoptic Meteorology | 3hrs
+  GEOG 414 | Climate Change | 3hrs
+  GEOG 416 | Applied Climatology: The Impacts of Climate and Weather on Environmental and Social Systems | 3hrs
+  GEOG 440/EMES 502 | Earth Surface Processes | 3hrs
+  GEOG/ENEC 437 | Social Vulnerability to Climate Change | 3hrs
+NOTE: These courses appear in the major core, concentrations, and/or additional requirements, but can only be counted toward one of these requirements
+
+## Environmental Science, B.S.–Quantitative Energy Systems Track
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: This major is designed for students with a strong interest in water, energy, and sustainable natural resources, and interdisciplinary approaches to analytics, informatics, or business.  The degree provides interdisciplinary preparation for graduate or professional training as well as for jobs in government, consulting, and industry.
+### Core Requirements
+  ENEC 201 | Introduction to Environment and Society H, F | 4hrs
+  ENEC 203 | Introduction to Environmental Science Problem Solving | 3hrs
+  OR or EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences
+  OR or ENEC 415 | Environmental Systems Modeling
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+RULE: Two courses each from two of the following quantitative skills (4 courses total) 12-16
+RULE: Informatics
+  BUSI 410 | Business Analytics | hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | hrs
+  INLS 161 | Tools for Information Literacy | hrs
+  INLS 382 | Information Systems Analysis and Design | hrs
+  INLS 523 | Introduction to Database Concepts and Applications | hrs
+  INLS 541 | Information Visualization | hrs
+  STOR 215 | Foundations of Decision Sciences | hrs
+  STOR 305 | Introduction to Decision Analytics | hrs
+RULE: Applied Mathematics
+  MATH 347 | Linear Algebra for Applications F | hrs
+  MATH 381 | Discrete Mathematics H | hrs
+  MATH 383 | First Course in Differential Equations H | hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | hrs
+  MATH 535 | Introduction to Probability | hrs
+  MATH 564 | Mathematical Modeling in the Life Sciences | hrs
+  PHYS 331 | Numerical Techniques for the Sciences I 1 | hrs
+RULE: Statistics
+  BIOS 511 | Introduction to Statistical Computing and Data Management | hrs
+  ENEC 562 | Statistics for Environmental Scientists | hrs
+  ENEC 563 | Statistical Analysis in Ecology and Evolution | hrs
+  ENEC/ENVR 570 | Uncertainty, Decisions, and the Environment | hrs
+  EMES 520 | Data Analysis for Earth and Marine Sciences | hrs
+  EMES 525 | Modelling in Earth and Marine Sciences | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 435 | Introduction to Probability H | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+RULE: Basic Science
+  BIOL 260 | Introduction to Ecology | hrs
+  BIOL 271 | Plant Biology | hrs
+  CHEM 261 | Introduction to Organic Chemistry I H | hrs
+  PHYS 114 & PHYS 115 | General Physics I: For Students of the Life Sciences and General Physics II: For Students of the Life Sciences 1, F | hrs
+  PHYS 118 & PHYS 119 | Introductory Calculus-based Mechanics and Relativity and Introductory Calculus-based Electromagnetism and Quanta H, F | hrs
+RULE: Modeling
+  BIOL 222 | Introduction to Programming with Biological Data | hrs
+  COMP 211 | Systems Fundamentals | hrs
+  COMP 283 | Discrete Structures H | hrs
+  OR or MATH 381 | Discrete Mathematics
+  ENEC 415 | Environmental Systems Modeling 1 | hrs
+  ENEC/ENVR/PLAN 635 | Energy Modeling for Environment and Public Health | hrs
+  INLS 560 | Introduction to Programming | hrs
+RULE: GIS and Remote Sensing
+  ANTH 419 | Anthropological Application of GIS | hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | hrs
+  ENEC 340 | Environmental Applications of Drones | hrs
+  ENEC/ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | hrs
+  ENEC 479 | Landscape Analysis | hrs
+  GEOG 370 | Geographic Information Science | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG 491 | Principles of Geographic Information Systems | hrs
+  GEOG 577 | Advanced Remote Sensing | hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs
+RULE: Four courses from one of the following concentrations 12-16
+RULE: Energy Management
+  ENEC 307 | Energy and Material Flows in the Environment and Society | hrs
+  ENEC/PLCY 371 | Energy Policy | hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates 1 | hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 407 | Principles of Energy Conversion | hrs
+  ENEC 432 | Environmental Life Cycle Assessment | hrs
+  ENEC 481 | Energy Economics | hrs
+  ENEC 482 | Energy and the Environment: A Coastal Perspective | hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  ENVR/ENEC 403 | Environmental Chemistry Processes 1 | hrs
+  PHYS 381 | Renewable Electric Power Systems | hrs
+  PLAN/ENEC 547 | Energy, Transportation, and Land Use | hrs
+  PLAN/ENEC/ENVR 548 | Sustainable Energy Systems | hrs
+  PLAN/ENEC/ENVR 635 | Energy Modeling for Environment and Public Health | hrs
+RULE: Environmental Processes
+  ENEC 202I | Introduction to the Environmental Sciences | hrs
+  ENEC 256 | Mountain Biodiversity | hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | hrs
+  ENEC 304 | Restoration Ecology | hrs
+  ENEC 352 | Marine Fisheries Ecology | hrs
+  ENEC 370 | Agriculture and the Environment H | hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates 1 | hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 462 | Ecosystem Management | hrs
+  ENEC 489 | Ecological Processes in Environmental Systems | hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  ENEC 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | hrs
+  ENVR/ENEC 403 | Environmental Chemistry Processes 1 | hrs
+  EMES 431 | Major World Rivers and Global Change: From Mountains to the Sea | hrs
+  EMES/ENEC 433 | Wetland Hydrology | hrs
+  EMES/ENEC 450 | Biogeochemical Processes | hrs
+  EMES/ENEC 435 | Groundwater Hydrology | hrs
+  EMES 436 | Geochemistry of Natural Waters | hrs
+  EMES 508 | Global Hydrology | hrs
+  EMES 520 | Data Analysis for Earth and Marine Sciences | hrs
+  EMES 525 | Modelling in Earth and Marine Sciences | hrs
+  GEOG 410 | Modeling of Environmental Systems | hrs
+  GEOG 412 | Synoptic Meteorology | hrs
+  GEOG 414 | Climate Change | hrs
+  GEOG 416 | Applied Climatology: The Impacts of Climate and Weather on Environmental and Social Systems | hrs
+  GEOG 441 | Introduction to Watershed Systems | hrs
+RULE: Smart Cities
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+  ENEC 350 | Environmental Law and Policy | hrs
+  ENEC 351 | Coastal Law and Policy | hrs
+  ENEC 380 | Environmental Economics | hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates 1 | hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC/PLAN 420 | Community Design and Green Architecture | hrs
+  ENEC 485 | Coastal Resource Economics and Policy | hrs
+  ENEC 492 | Social Science Research Methods | hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  PLAN/ENEC 547 | Energy, Transportation, and Land Use | hrs
+  PLAN 636 | Urban Transportation Planning | hrs
+  PLAN 637 | Public Transportation | hrs
+  PLAN 638 | Pedestrian and Bike Transportation | hrs
+  PLAN 639 | Complete Streets | hrs
+  PLAN/ENEC 641 | Watershed Planning | hrs
+  PLAN 651 | Urban Form and the Design of Cities | hrs
+  PLAN 652 | Site Planning and Urban Design | hrs
+  PLAN 655 | Planning for Natural Hazards and Climate Risk | hrs
+  PLAN 672 | Urban Data Analytics | hrs
+  PUBA/PLAN/ENVR 787 | Applied Environmental Finance: How to Pay for Environmental Services | hrs
+### Additional Requirements
+  COMP 110 | Introduction to Programming 1, H | 3-4hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  OR or PHYS 331 | Numerical Techniques for the Sciences I
+  OR or BIOL 222 | Introduction to Programming with Biological Data
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | 3hrs
+  OR or BIOS 600 | Principles of Statistical Inference
+RULE: Select one series from the following course pairs: 1,2 7-8
+  BIOL 101 & 101L & BIOL 104 | Principles of Biology and Introductory Biology Laboratory and Biodiversity H, F | hrs
+  CHEM 101 & 101L & CHEM 102 & CHEM 102L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I and General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | hrs
+  PHYS 114 & PHYS 115 | General Physics I: For Students of the Life Sciences and General Physics II: For Students of the Life Sciences F | hrs
+  PHYS 118 & PHYS 119 | Introductory Calculus-based Mechanics and Relativity and Introductory Calculus-based Electromagnetism and Quanta H, F | hrs
+RULE: Enough General Education courses and free electives to satisfy 120-credit hours. 51-61
+NOTE: Several courses are listed under multiple requirements in the major but can only be used to fulfill one requirement per course, For example: BIOL 222 , ENEC 395 , ENEC 415 , ENEC 396 , PLAN/ENEC/ENVR 635 , ENEC 693H , ENEC 694H , ENVR 403 / ENEC 403 , PHYS 114 , PHYS 115 , PHYS 118 , PHYS 119 , PHYS 331 .

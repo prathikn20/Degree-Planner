@@ -1,0 +1,50 @@
+TRACK: Radiologic_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/radiologic-science-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The schedule of academic work for radiologic science (medical imaging) majors includes the following General Education requirements. Students must complete all First-Year Foundation requirements, all Reflection & Integration requirements, and complete at least six Focus Capacity requirements as part of the IDEAs in Action General Education curriculum. In addition, the following specific requirements apply to students in the General College:
+### Quantitative reasoning requirement: 3-4
+  MATH 130 | Precalculus Mathematics F | hrs
+  OR or MATH 231 | Calculus of Functions of One Variable I
+### Six courses in the physical and life sciences
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory H | 4hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  OR or BIOC 107 | Introduction to Biochemistry
+  PHYS 114 & PHYS 115 | General Physics I: For Students of the Life Sciences and General Physics II: For Students of the Life Sciences F | 8hrs
+  PSYC 101 | General Psychology F | 3hrs
+NOTE: After admission to the program, the curriculum in radiologic science includes courses in gross anatomy, pathophysiology, radiography, imaging methods, research, practice issues, and clinical practice. The first year of the program provides the foundation and skills for clinical practice and patient care in diagnostic radiography. The second year of the program builds on this foundation and enhances skills for career and practice advancement through communications, physics, and research. During the second year, the student elects areas of clinical concentration, such as magnetic resonance imaging, computed tomography, advanced diagnostic imaging, cardiac catheterization, and vascular/interventional imaging.
+### Summer Session II (Junior Year)
+  RADI 440 | Gross Anatomy for Health Sciences | 3hrs
+  RADI 442 | Introduction to Radiologic Science | 3hrs
+### Junior Year Fall Semester
+  RADI 461 | Radiography I | 4hrs
+  OR or RADI 466 | Abdominal Sonography
+  RADI 462 | Radiographic Imaging I | 4hrs
+  OR or RADI 467 | Ultrasound Principles and Instrumentation
+  RADI 463 | Clinical Education I | 4hrs
+  RADI 660 | Pathophysiology | 3hrs
+### Junior Year Spring Semester
+  RADI 471 | Radiography II | 3-4hrs
+  OR or RADI 474 | Obstetrics and Gynecology Sonography
+  RADI 472 | Radiographic Imaging II | 4hrs
+  OR or RADI 478 | Sonographic Imaging I
+  RADI 473 | Clinical Education II | 4hrs
+  RADI 670 | Integrated Principles of Imaging Analysis | 4hrs
+### Summer Session I and II (Senior Year)
+  RADI 574 | Clinical  Education III | 3hrs
+  RADI 575 | Clinical Education IV | 5hrs
+### Senior Year Fall Semester
+  RADI 583 | Clinical Education V | 4hrs
+  RADI 585 | Radiologic Health Physics | 3-4hrs
+  OR or RADI 479 | Advanced Imaging in Sonography II
+  RADI 586 | Research in Radiologic Science I | 1hrs
+  RADI 594 | Professional Communications and Interactions | 3hrs
+  RADI 694 | Clinical Decisions in Radiology | 3hrs
+### Senior Year Spring Semester
+  RADI 584 | Clinical Education VI | 6hrs
+  RADI 597 | Leadership in Radiologic Science | 3hrs
+  RADI 681 | Trends in Medical Imaging Practices Issues in the Radiology Practice Environment | 3hrs
+  RADI 686 | Research in Radiologic Science II | 2hrs

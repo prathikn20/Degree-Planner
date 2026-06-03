@@ -1,0 +1,10 @@
+TRACK: Russian_Culture_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/russian-culture-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: A minimum of five RUSS courses (15 hours) covering any aspect of Russian language, literature, or culture. 1 15
+NOTE: The first two semesters of Russian (i.e., RUSS 101 and RUSS 102 ) may not be counted toward this minor.
+NOTE: Russian (RUSS) course descriptions .

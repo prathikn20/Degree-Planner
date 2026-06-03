@@ -1,0 +1,59 @@
+TRACK: Sustainability_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/sustainability-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  ENEC/PLAN 330 | Principles of Sustainability 1, H | 3hrs
+  OR or ENEC 201 | Introduction to Environment and Society
+  OR or ENEC 431 | Sustainable Cities: Exploring Ways of Making Cities More Sustainable
+RULE: Four elective courses chosen from the following options: 12
+  BUSI 507 | Sustainable Business and Social Enterprise H | hrs
+  ENEC 201 | Introduction to Environment and Society H, F | hrs
+  ENEC 202I | Introduction to the Environmental Sciences | hrs
+  ENEC/GEOG 264 | Conservation of Biodiversity in Theory and Practice | hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | hrs
+  ENEC 305 | Data Analysis and Visualization of Social and Environmental Interactions | hrs
+  ENEC 307 | Energy and Material Flows in the Environment and Society | hrs
+  ENEC 320 | The Future of Energy H | hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+  ENEC 350 | Environmental Law and Policy | hrs
+  ENEC 351 | Coastal Law and Policy | hrs
+  ENEC 370 | Agriculture and the Environment H | hrs
+  ENEC/PLCY 372 | Global Environment: Policy Analysis and Solutions | hrs
+  ENEC/PLCY 373 | Confronting Climate Change in the Anthropocene | hrs
+  ENEC/COMM 375 | Environmental Advocacy | hrs
+  ENEC 405 | Mountain Preservation | hrs
+  ENEC 407 | Principles of Energy Conversion | hrs
+  ENEC/PLAN 420 | Community Design and Green Architecture | hrs
+  ENEC 421 | Textiles: Environmental Impacts, Issues, and Innovations | hrs
+  ENEC 432 | Environmental Life Cycle Assessment | hrs
+  ENEC/EMES 448 | Coastal and Estuarine Ecology | hrs
+  ENEC 462 | Ecosystem Management | hrs
+  ENEC/BUSI 463 | Corporate Environmental Stewardship H | hrs
+  ENEC/ENVR 470 | Environmental Risk Assessment | hrs
+  ENEC/EMES 471 | Human Impacts on Estuarine Ecosystems | hrs
+  ENEC 473 | Business and Finance Fundamentals for Change Makers | hrs
+  ENEC 474 | Sustainable Coastal Management | hrs
+  ENEC 479 | Landscape Analysis | hrs
+  ENEC 481 | Energy Economics | hrs
+  ENEC 490 | Special Topics in Environmental Science and Studies H | hrs
+  ENEC 510 | Policy Analysis of Global Climate Change | hrs
+  ENEC/ENVR 522 | Environmental Change and Human Health | hrs
+  ENEC 547 | Energy, Transportation, and Land Use | hrs
+  ENEC/PLAN/ENVR 548 | Sustainable Energy Systems | hrs
+  ENEC/MEJO 565 | Environmental Storytelling | hrs
+  ENEC 567 | Ecological Analyses and Application | hrs
+  ENEC/PLAN 641 | Watershed Planning | hrs
+  ENEC 675 | Environmental Communication and the Public Sphere | hrs
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems | hrs
+  ENVR 600 | Environmental Health | hrs
+  GEOG 237 | Forest, Environment and Society | hrs
+  GEOG 334 | Human Ecology of Health and Disease | hrs
+  PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning | hrs
+  PLAN 247 | Solving Urban Problems | hrs
+  PLAN 636 | Urban Transportation Planning | hrs
+NOTE: If two of these courses are taken, the second course may satisfy the elective requirement.
+NOTE: The minor requires a minimum of 15 credit hours.

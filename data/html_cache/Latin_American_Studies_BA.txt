@@ -1,0 +1,124 @@
+TRACK: Latin_American_Studies_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/latin-american-studies-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The Curriculum in Latin American and Caribbean Studies is an interdisciplinary major designed to ensure access to diverse approaches to the study of Latin America and the Caribbean and to guide majors in develop ing a deeper knowledge of a particular geographic area in the region .
+### Core Requirements (9 courses)
+RULE: Select two (2) courses numbered under 200 (see list below). LTAM 101 is strongly recommended 6
+RULE: Select three (3) courses numbered 200-399 (see list below). 9
+RULE: Select three (3) courses numbered 400 and above (see list below). 9
+  LTAM 697 | Capstone Seminar | 3hrs
+### Additional Requirements (2 courses)
+RULE: Spanish or Portuguese at least through the fifth-semester course 1 6
+NOTE: The first three levels of Spanish or Portuguese may count toward the General Education Foundations requirements and have not been included as additional hours for the major.
+NOTE: Listed below are commonly offered courses for the major. Not all the courses on Latin American and Caribbean topics are listed; other courses may satisfy the major requirements as well. Special topics courses, first-year seminars, undergraduate seminars, independent studies, and capstone courses on Latin American and Caribbean topics also may count. To inquire about whether these courses count towards the major, contact the Director of Undergraduate Studies.
+NOTE: Select two courses from the following list.
+  AAAD 57 | First-Year Seminar: Afro-Latinxs in the U.S. | 3hrs
+  ANTH 68 | First-Year Seminar: Forced Out and Fenced In: Ethnography of Latinx Immigration | 3hrs
+  ANTH 121 | Ancient Cities of the Americas | 3hrs
+  ARTH 160 | Introduction to the Art and Architecture of Pre-Hispanic Mesoamerica H | 3hrs
+  ENGL 164 | Introduction to Latina/o Studies H | 3hrs
+  HIST 51 | First-Year Seminar: Latin American Revolutions | 3hrs
+  HIST 142 | Latin America under Colonial Rule | 3hrs
+  HIST 143 | Latin America since Independence | 3hrs
+  HIST 145 | Latin American Indigenous Peoples | 3hrs
+  LTAM 52 | First-Year Seminar: The Cuban Revolution, Latin America, and the United States | 3hrs
+  LTAM 101 | Introduction to Latin American Studies | 3hrs
+  MUSC 147 | Introduction to the Music of the Américas | 3hrs
+  POLI 57 | First-Year Seminar: Democratic Governance in Contemporary Latin America | 3hrs
+  RELI 151 | Religion in Latin America | 3hrs
+  ROML 58 | First-Year Seminar: Mexican Women across Borders and Genres | 3hrs
+NOTE: Select three courses from the following list.
+  AAAD 260 | Blackness in Latin America | 3hrs
+  AAAD 261 | Afro-Cuban Dance: History, Theory, and Practice | 3hrs
+  AAAD 278 | Black Caribbeans in the United States | 3hrs
+  AAAD 284 | Contemporary Perspectives on the African Diaspora in the Americas | 3hrs
+  AAAD 286 | The African Diaspora in the Colonial Americas, 1450-1800 | 3hrs
+  AAAD 360 | Black Women's Struggles and Resistance in Latin America and the Caribbean | 3hrs
+  AAAD 362 | Black Latin American Politics | 3hrs
+  AAAD 389 | The Caribbean Anticolonial: Caribbean Literature, Film, Aesthetics, and Politics | 3hrs
+  ANTH 231 | The Inca and Their Ancestors: The Archaeology of Andean South America | 3hrs
+  ANTH 232 | Ancestral Maya Civilizations H | 3hrs
+  ANTH 360 | Latin American Economy and Society | 3hrs
+  ARTH 267 | Latin American Modernisms | 3hrs
+  ARTH 277 | Art and Architecture of Viceregal Latin America | 3hrs
+  ENGL 240 | Caribbean Literature | 3hrs
+  ENGL 359 | Latina Feminisms: Civil Rights, Ecofeminism, and Health Studies | 3hrs
+  FREN 280 | French "Discoveries" of the Americas in Translation | 3hrs
+  FREN 288 | Francophone Caribbean Literature in Translation | 3hrs
+  GEOG 259 | Society and Environment in Latin America | 3hrs
+  HIST 240 | Introduction to Mexico: A Nation in Four Revolutions | 3hrs
+  HIST 241 | History of Latinos in the United States | 3hrs
+  HIST 242 | United States-Latin American Relations | 3hrs
+  HIST 248 | Guerrillas and Counterinsurgencies in Latin America | 3hrs
+  HIST 280 | Women and Gender in Latin American History | 3hrs
+  HIST 314 | Law and Society in Latin America | 3hrs
+  HIST 315 | Nation-Building in Latin America H | 3hrs
+  LTAM 215 | Peoples, Cultures, and Landscapes of Latin America | 3hrs
+  LTAM 241 | History of Latinos in the United States | 3hrs
+  LTAM 261 | Afro-Cuban Dance: History, Theory, and Practice | 3hrs
+  LTAM 291 | The Latino Experience in the United States | 3hrs
+  LTAM 314 | Law and Society in Latin America | 3hrs
+  LTAM 350 | The United States and Latin America | 3hrs
+  LTAM 362 | Black Latin American Politics | 3hrs
+  LTAM 390 | Special Topics in Latin American Studies | 3hrs
+  MUSC 258 | Musical Movements: Migration, Exile, and Diaspora | 3hrs
+  POLI 231 | Latin America and the United States in World Politics | 3hrs
+  POLI 238 | Politics of the Global South: Latin America H | 3hrs
+  PORT 316 | Brazilian Performance: Capoeira, Resilience and Resistance through Movement, Music and Dance | 3hrs
+  PORT 323 | Advanced Communication in Portuguese: History, Nature, and Society | 3hrs
+  PORT 370 | Modern Brazil through Literature and Film in Translation | 3hrs
+  PORT 375 | Portuguese and Brazilian Fiction in Translation | 3hrs
+  PORT 382 | Women Writers:  Brazil and Beyond | 3hrs
+  PORT 387 | Brazilian Religious Movements through Film and Literature | 3hrs
+  PORT 388 | Portuguese, Brazilian, and African Identity in Film | 3hrs
+  PLCY 349 | Immigration Policy in the 21st Century | 3hrs
+  RELI 245 | Latina/o Religions in the United States-Mexico Borderlands H | 3hrs
+  RELI 246 | Supernatural Encounters: Zombies, Vampires, Demons, and the Occult in the Americas H | 3hrs
+  SPAN 270 | Contemporary Spanish American Prose Fiction in Translation | 3hrs
+  SPAN 344 | Latin American Cultural Topics | 3hrs
+  SPAN 361 | Hispanic Film | 3hrs
+  SPAN 363 | Experiences of Disease and Health through Hispanic Literature and Culture | 3hrs
+  SPAN 373 | Studies in Latin American Literature | 3hrs
+  SPAN 388 | Narratives of the Mexican Revolution | 3hrs
+  WGST 352 | Rahtid Rebel Women: An Introduction to Caribbean Women | 3hrs
+NOTE: Select three courses from the following list.
+  AAAD 460 | Race, Culture, and Politics in Brazil | 3hrs
+  AAAD 461 | Race, Gender, and Activism in Cuba | 3hrs
+  ANTH 453 | Field School in South American Archaeology H | 6hrs
+  ARTH 445 | The Mexican Mural Renaissance, 1921-1945 | 3hrs
+  ARTH 452 | Brazilian Modernism | 3hrs
+  ARTH 469 | Art of the Aztec Empire | 3hrs
+  DRAM 486 | Latin American Theatre | 3hrs
+  DRAM 488 | United States Latino/a Theatre | 3hrs
+  EDUC 510 | Latinx Experience in Education | 3hrs
+  GEOG 457 | Rural Latin America: Agriculture, Environment, and Natural Resources H | 3hrs
+  GEOG 458 | Urban Latin America: Politics, Economy, and Society | 3hrs
+  GEOG 459 | Law, Indigenous Knowledge Systems and Environmental Activism in Latin America | 3hrs
+  HIST 526 | History of the Andes | 3hrs
+  HIST 531 | History of the Caribbean | 3hrs
+  HIST 532 | History of Cuba | 3hrs
+  LTAM 402 | Heritage and Migration in North Carolina | 3hrs
+  LTAM 403 | Migration and the Environment in Central America and the Caribbean | 3hrs
+  LTAM 411 | Summer Intensive Introductory Course in Yucatec Maya | 6hrs
+  LTAM 512 | Summer Intensive Continuing Course in Yucatec Maya | 6hrs
+  LING 561 | Native Languages of the Americas | 3hrs
+  LTAM 690 | Seminar in Latin American Issues | 3hrs
+  LTAM 691H | Honors in Latin American Studies | 3hrs
+  LTAM 692H | Honors in Latin American Studies | 3hrs
+  POLI 435H | Democracy and Development in Latin America | 3hrs
+  MEJO 443 | Latino Media Studies | 3hrs
+  MEJO 446 | Global Communication and Comparative Journalism | 3hrs
+  MEJO 490 | Special Topics in Mass Communication (with permission based on topic; 3 credits) H | 1-3hrs
+  POLI 434 | Politics of Mexico | 3hrs
+  POLI 435 | Democracy and Development in Latin America H | 3hrs
+  POLI 450 | Contemporary Inter-American Relations H | 3hrs
+
+## Additional Requirements
+NOTE: All General Education requirements apply. First- and second-year students are strongly encouraged to enroll in LTAM 101 , an interdisciplinary introductory course offered each year, usually in the fall.
+NOTE: The following courses are recommended for fulfilling General Education requirements for students interested in majoring in Latin American studies:
+
+## Global Language
+NOTE: Spanish or Portuguese should be used to satisfy the global language requirement. The global language 1 through 4 sequence ( PORT 101 , PORT 102 , PORT 203 , and PORT 204 or SPAN 101 , SPAN 102 , SPAN 203 , and SPAN 204 ) may be completed in two semesters by enrolling in intensive courses ( PORT 111 and PORT 212 , or SPAN 111 and SPAN 212 ).

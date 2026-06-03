@@ -1,0 +1,22 @@
+TRACK: Geographic_Information_Sciences_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/gis-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  GEOG 215 | Introduction to Spatial Data Science | 3hrs
+  GEOG 370 | Introduction to Geographic Information | 3hrs
+RULE: Select three courses from the following list: 9
+  ANTH 419 | Anthropological Application of GIS | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG/PLAN 491 | Introduction to GIS | hrs
+  GEOG 541 | GIS in Public Health | hrs
+  GEOG 544 | Geographic Information Systems for Impact Evaluation and Health Studies | hrs
+  GEOG 555 | Cartography of the Global South | hrs
+  GEOG 577 | Advanced Remote Sensing | hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs
+  GEOG 594 | Global Positioning Systems and Applications | hrs
+NOTE: This minor is open to all undergraduate students. For geography majors and minors, please note that no more than 45 hours of GEOG course credit may be used toward fulfilling the B.A. graduation requirement in the College of Arts and Sciences.

@@ -1,0 +1,75 @@
+TRACK: Mathematics_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/mathematics-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  MATH 347 | Linear Algebra for Applications (previously offered as MATH 547) | 3hrs
+  OR or MATH 577 | Linear Algebra
+  MATH 381 | Discrete Mathematics 1, H | 3hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+  MATH 521 | Advanced Calculus I H | 3hrs
+RULE: At least three more MATH courses numbered above 500. 2 9
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H, F | 4hrs
+  OR or MATH 235 | Mathematics for Data Science
+NOTE: A current or former major in statistics and analytics may substitute STOR 215 for MATH 381 .
+NOTE: For this requirement, taking the three lab courses MATH 383L + MATH 528L + MATH 529L counts as one 500-level course.
+NOTE: All General Education requirements apply (see the General Education Requirements in this catalog).
+NOTE: Following are suggested course selections (within the degree requirements) for students who have an interest in a particular direction.
+
+## Course Suggestions for Pure Mathematics
+NOTE: These courses provide a solid theoretical understanding of central mathematics and excellent preparation for graduate study in mathematics or the mathematical sciences.
+  MATH 521 | Advanced Calculus I H | 3hrs
+  MATH 522 | Advanced Calculus II H | 3hrs
+  MATH 577 | Linear Algebra | 3hrs
+  MATH 578 | Algebraic Structures | 3hrs
+RULE: Enough upper-level mathematics courses to satisfy the degree requirements
+NOTE: Those planning graduate study in mathematics or the mathematical sciences may consider taking some of MATH 653 , MATH 676 , MATH 680 , or subsequent courses.
+
+## Course Suggestions for Mathematical Economics
+NOTE: Suitable for students planning to go on to graduate school in economics or a related area, or pursue a career in economics, business, or finance. Note: With three more ECON courses numbered above 400, the requirements for the B.A. in economics could also be satisfied.
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  ECON 410 | Intermediate Microeconomics H | 4hrs
+  ECON 420 | Intermediate Macroeconomics H | 3hrs
+RULE: At least two of: 6
+  ECON 510 | Advanced Microeconomic Theory H | hrs
+  ECON 511 | Advanced Game Theory in Economics H | hrs
+  ECON 520 | Advanced Macroeconomic Theory H | hrs
+  MATH 521 | Advanced Calculus I H | 3hrs
+RULE: At least three of: 9
+  MATH 522 | Advanced Calculus II H | hrs
+  MATH 524 | Elementary Differential Equations | hrs
+  MATH 535 | Introduction to Probability | hrs
+  MATH 550 | Topology | hrs
+  MATH 555 | Introduction to Dynamics | hrs
+  MATH 564 | Mathematical Modeling in the Life Sciences | hrs
+RULE: Either: 6
+  MATH 535/STOR 435 | Introduction to Probability | hrs
+  STOR 555 | Mathematical Statistics | hrs
+RULE: Or:
+  ECON 400 | Introduction to Data Science and Econometrics H | hrs
+  MATH 347 | Linear Algebra for Applications F | hrs
+  OR or MATH 577 | Linear Algebra
+
+## Course Suggestions for Future High School Teachers
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 381 | Discrete Mathematics H | 3hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+RULE: At least one of: 3
+  MATH 534 | Elements of Modern Algebra | hrs
+  MATH 535 | Introduction to Probability | hrs
+  MATH 548 | Combinatorial Mathematics | hrs
+  MATH 550 | Topology | hrs
+  MATH 347 | Linear Algebra for Applications F | 3hrs
+  OR or MATH 577 | Linear Algebra
+  MATH 521 | Advanced Calculus I H | 3hrs
+  MATH 533 | Elementary Theory of Numbers | 3hrs
+  MATH 551 | Euclidean and Non-Euclidean Geometries | 3hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | 3hrs
+RULE: The Supplemental General Education requirement 9

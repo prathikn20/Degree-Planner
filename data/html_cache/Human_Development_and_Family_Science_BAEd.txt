@@ -1,0 +1,180 @@
+TRACK: Human_Development_and_Family_Science_BAEd
+URL: https://catalog.unc.edu/undergraduate/programs-study/human-development-family-studies-baed/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+
+## Human Development and Family Science, B.A.Ed.
+### Core Requirements
+  EDUC 181 | Introduction to Human Development and Family Science F | 3hrs
+  EDUC 401 | Childhood Development: Prenatal Birth to Age 12 | 3hrs
+  EDUC 501 | Adolescent and Adulthood Development: A Cross-Cultural | 3hrs
+  EDUC 403 | Individuals, Families, and Communities in Diverse Contexts | 3hrs
+  EDUC 405 | Parenting and Family Life Education | 3hrs
+  EDUC 408 | Research Methods in Human Development (must be taken prior to EDUC 583 ) | 3hrs
+  EDUC 583 | Career and Professional Development 1 | 3hrs
+  EDUC 698 | Internship in Human Development and Family Science 2 | 9hrs
+RULE: Diversity/equity focus course (select one): 3
+  EDUC 375 | Identity and Sexuality | hrs
+  EDUC 410 | Families and Communities in Diverse Contexts for Youth | hrs
+  EDUC 415 | Schooling of Immigrant Children | hrs
+  EDUC 461I | Exploring Social Determinants of Health Across Populations | hrs
+  EDUC 508 | Equity, Leadership, and You | hrs
+  EDUC 510 | Latinx Experience in Education | hrs
+  EDUC 512 | Critical Examination of Racism and Education: African American Case Example | hrs
+  EDUC 526 | Ethics and Education: From Global Problems to Classroom Dilemmas | hrs
+  EDUC 528 | Exceptionality Across the Life Span | hrs
+  EDUC 533 | Social Justice in Education | hrs
+  EDUC 575 | Nurturing Latinx Identity Formation | hrs
+  EDUC 611 | Black Families in Social and Contemporary Contexts | hrs
+RULE: Leadership requirement (select one): 3
+  EDUC 309 | Foundations of Leadership F | hrs
+  EDUC 316 | Advanced Leadership Development Seminar | hrs
+  EDUC 357 | Organizational and Community Development | hrs
+  EDUC 480 | Resource Management for Individuals and Families | hrs
+  EDUC 505 | Leadership in Educational/Nonprofit Settings | hrs
+  EDUC 506 | Politics, Policymaking, and America's Schools | hrs
+  EDUC 508 | Equity, Leadership, and You | hrs
+  EDUC 517 | Educational Partnership Through Program Evaluation | hrs
+### Additional Requirements
+RULE: Select from the following 3 options: 3,4 12
+RULE: Four courses from the Family Life Education concentration (see list below)
+RULE: Four courses from the Child and Family Health concentration (see list below)
+RULE: Four courses from the concentration lists or the elective list (see lists below)
+NOTE: Must take EDUC 408 prior to enrolling in EDUC 583 . Students must see the SOE director of advising for permission to enroll. EDUC 583 must be taken in the semester immediately preceding the internship semester. Students should consider summer internships where feasible to meet program milestones.
+NOTE: Students are expected to complete their internship in their senior year and when 90% of the HDFS course work in completed. During the internship semester, it is preferred that students only take one class with the internship. However, students will be allowed to enroll in up to six credit hours in addition to the required nine credit hour internship course, for a maximum of 15 hours. Students will not be allowed to register for 18 hours. The internship site must be approved by the HDFS program in the semester preceding the internship.
+NOTE: At least 6 of the 12 hours taken to satisfy a concentration must be completed at the University of North Carolina at Chapel Hill.
+NOTE: Students in either concentration may elect to complete courses in the other concentration but can only declare one concentration. For example, a student in the CFH concentration may complete courses in the FLE concentration as part of their general major electives.
+
+## Family Life Education Concentration
+RULE: Select four (4) courses from the following list: 12
+  EDUC 325 | Introduction to Counseling and Coaching | hrs
+  EDUC 375 | Identity and Sexuality | hrs
+  EDUC 410 | Families and Communities in Diverse Contexts for Youth | hrs
+  EDUC 480 | Resource Management for Individuals and Families | hrs
+  EDUC 605 | Family Systems and Policy | hrs
+  EDUC 611 | Black Families in Social and Contemporary Contexts | hrs
+  AAAD 341 | Law and Society | hrs
+  COMM 224 | Introduction to Gender and Communication H | hrs
+  COMM 318 | Cultural Diversity | hrs
+  COMM 422 | Family Communication H | hrs
+  PSYC 467 | The Development of Black Children | hrs
+  PSYC 471 | The Study of Adolescent Issues and Development | hrs
+  PSYC 517 | Addiction H | hrs
+  SOCI 130 | Family and Society 1 | hrs
+  SOCI 425 | Family and Society, Junior/Senior Section 1 | hrs
+  SOCI 431 | Aging | hrs
+  SOCI 468 | United States Poverty and Public Policy | hrs
+  SOWO 530 | Social Welfare Systems and Policies | hrs
+NOTE: Students may not receive credit for both SOCI 130 and SOCI 425 .
+
+## Child and Family Health Concentration
+RULE: Select four (4) courses from the following list: 12
+  EDUC 375 | Identity and Sexuality | hrs
+  EDUC 400 | Autism in Our Communities: An Interdisciplinary Perspective | hrs
+  EDUC 418 | Ethics of Care for the Hospitalized Child and Family | hrs
+  EDUC 461I | Exploring Social Determinants of Health Across Populations | hrs
+  EDUC 470 | Therapeutic Value of Play | hrs
+  EDUC 475 | Child and Family Health | hrs
+  EDUC 528 | Exceptionality Across the Life Span | hrs
+  EDUC 630 | Advanced Research Design and Methods in Human Development and Family Studies | hrs
+  EDUC 689 | Foundations of Special Education | hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory H | hrs
+  EXSS 211 | Adapted Physical Education | hrs
+  LING 101 | Introduction to Language H | hrs
+  LING 200 | Phonology | hrs
+  NURS 685I | Care of the Dying and Bereaved throughout the Life Span 1 | hrs
+  NUTR 240 | Introduction to Human Nutrition | hrs
+  PLCY/HPM 662 | Global Health and Human Rights | hrs
+  PSYC 210 | Statistical Principles of Psychological Research H | hrs
+  PSYC 220 | Biopsychology H | hrs
+  PSYC 245 | Psychopathology H | hrs
+  PSYC 517 | Addiction H | hrs
+  SOCI 172 | Introduction to Population Health in the United States | hrs
+  SOCI 422 | Sociology of Mental Health and Illness | hrs
+  SOCI 431 | Aging | hrs
+  SOCI 469 | Health and Society | hrs
+  SOWO 856 | Care of the Dying and Bereaved 1 | hrs
+  SPHS 520 | Human Communication Across the Lifespan | hrs
+  SPHS 521 | Human Communication Across the Lifespan (EE) | hrs
+  SPHS 582 | Introductory Audiology I | hrs
+  SPHS 583 | Introduction to Clinical Practice in Speech-Language Pathology and Audiology | hrs
+NOTE: Students may not use credit for both NURS 685I and SOWO 856 to count toward the concentration
+NOTE: Students may request additional health-related courses.
+
+## Electives Course List (for students who are not choosing a concentration)
+RULE: Select four (4) courses from the following list: 12
+  AAAD 130 | Introduction to African American and Diaspora Studies | hrs
+  AAAD 341 | Law and Society | hrs
+  AAAD/WGST 386 | Comparative Studies in Culture, Gender, and Global Forces | hrs
+  ANTH/WGST 277 | Gender and Culture | hrs
+  ANTH 318 | Human Growth and Development | hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory H | hrs
+  COMM 224 | Introduction to Gender and Communication H | hrs
+  COMM 318 | Cultural Diversity | hrs
+  COMM 422 | Family Communication H | hrs
+  COMM 576 | Race and Rhetoric | hrs
+  ENGL 284 | Reading Children's Literature H | hrs
+  EDUC 325 | Introduction to Counseling and Coaching | hrs
+  EDUC 349 | Adulting | hrs
+  EDUC 375 | Identity and Sexuality | hrs
+  EDUC 400 | Autism in Our Communities: An Interdisciplinary Perspective | hrs
+  EDUC 410 | Families and Communities in Diverse Contexts for Youth | hrs
+  EDUC 461I | Exploring Social Determinants of Health Across Populations | hrs
+  EDUC 470 | Therapeutic Value of Play | hrs
+  EDUC 475 | Child and Family Health | hrs
+  EDUC 480 | Resource Management for Individuals and Families | hrs
+  EDUC 509 | Helping Youth Thrive in K-12 Schools | hrs
+  EDUC 521 | Schools, Cultures, and Communities I: Youth | hrs
+  EDUC 522 | Schools, Cultures, and Communities II: Schools | hrs
+  EDUC 524 | Learning on the Edge: Theories of Experiential Education | hrs
+  EDUC 527 | Screen Education: Representations of Education in Popular Culture | hrs
+  EDUC 528 | Exceptionality Across the Life Span | hrs
+  EDUC 529 | Education in American Society | hrs
+  EDUC 532 | Human Development and Learning | hrs
+  EDUC 567 | Children's Literature in Elementary and Middle Schools | hrs
+  EDUC 572 | Psychology of Creativity | hrs
+  EDUC 605 | Family Systems and Policy | hrs
+  EDUC 611 | Black Families in Social and Contemporary Contexts | hrs
+  EDUC 630 | Advanced Research Design and Methods in Human Development and Family Studies | hrs
+  EDUC 689 | Foundations of Special Education | hrs
+  ENGL 291 | Picture Books H | hrs
+  EXSS 211 | Adapted Physical Education | hrs
+  HPM/PLCY 662 | Global Health and Human Rights | hrs
+  INLS 534 | Youth and Technology in Libraries | hrs
+  LING 101 | Introduction to Language H | hrs
+  LING 200 | Phonology | hrs
+  LING 203 | Language Acquisition and Development | hrs
+  LTAM 291 | The Latino Experience in the United States | hrs
+  NSCI 222 | Learning H | hrs
+  NUTR 240 | Introduction to Human Nutrition | hrs
+  PLCY 530 | Educational Problems and Policy Solutions H | hrs
+  PSYC 210 | Statistical Principles of Psychological Research H | hrs
+  PSYC 220 | Biopsychology H | hrs
+  PSYC 245 | Psychopathology H | hrs
+  PSYC 250 | Child Development H | hrs
+  PSYC 260 | Social Psychology H | hrs
+  PSYC 467 | The Development of Black Children | hrs
+  PSYC 468 | Family as a Context for Development | hrs
+  PSYC 471 | The Study of Adolescent Issues and Development | hrs
+  PSYC 517 | Addiction H | hrs
+  EDUC 628 | Teaching English Language Learners | hrs
+  SOCI 122 | Race and Ethnicity | hrs
+  SOCI 124 | Sex and Gender in Society | hrs
+  SOCI 130 | Family and Society | hrs
+  SOCI 172 | Introduction to Population Health in the United States | hrs
+  SOCI 422 | Sociology of Mental Health and Illness | hrs
+  SOCI 423 | Sociology of Education, Experiential Education | hrs
+  SOCI 425 | Family and Society, Junior/Senior Section | hrs
+  SOCI 426 | Sociology of Education | hrs
+  SOCI 431 | Aging | hrs
+  SOCI 444 | Race, Class, and Gender | hrs
+  SOCI 468 | United States Poverty and Public Policy | hrs
+  SOCI 469 | Health and Society | hrs
+  SOWO 530 | Social Welfare Systems and Policies | hrs
+  SPHS 520 | Human Communication Across the Lifespan | hrs
+  SPHS 521 | Human Communication Across the Lifespan (EE) | hrs
+  SPHS 582 | Introductory Audiology I | hrs
+  SPHS 583 | Introduction to Clinical Practice in Speech-Language Pathology and Audiology | hrs
+  WGST 101 | Introducing Intersectionality: Gender, Race, Class, and Sexuality H | hrs

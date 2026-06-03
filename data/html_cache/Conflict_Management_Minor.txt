@@ -1,0 +1,111 @@
+TRACK: Conflict_Management_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/conflict-management-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  PWAD 250 | Introduction to Peace and Security Studies | 3hrs
+### Practical-based courses (select three) 9
+  ANTH 147 | Comparative Healing Systems | hrs
+  BUSI 401 | Management and Corporate Communication 1 | hrs
+  BUSI 405 | Leading and Managing: An Introduction to Organizational Behavior 1 | hrs
+  BUSI 470 | Storytelling to Influence and Inspire (1.5 credit hours) 1 | hrs
+  BUSI 545 | Negotiations ( BUSI 405 prerequisite, 1.5 credits) 1 | hrs
+  BUSI 555 | Groups and Teams in Organizations ( BUSI 405 prerequisite, 1.5 credits) 1 | hrs
+  COMM 113 | Public Speaking 6 | hrs
+  COMM 120 | Introduction to Interpersonal and Organizational Communication 6, H, F | hrs
+  COMM 223 | Small Group Communication 6 | hrs
+  COMM 312 | Persuasion 6 | hrs
+  COMM 327 | Constructive Communication Conflict Across Contexts 6 | hrs
+  COMM 375 | Environmental Advocacy 6 | hrs
+  COMM 422 | Family Communication 6, H | hrs
+  COMM 473 | Advanced Public Speaking: Speaking in Community 6 | hrs
+  COMM 475 | Fostering Civil Discourse: Reasoning Together for Common Good 6 | hrs
+  COMM 523 | Communication and Leadership 6 | hrs
+  DRAM 140 | Voice Training I | hrs
+  OR or PLCY 305 | Communicating Under Pressure: Tools for Effective Communication
+  EDUC 309 | Foundations of Leadership 4, F | hrs
+  EDUC 357 | Organizational and Community Development 4 | hrs
+  EDUC 403 | Individuals, Families, and Communities in Diverse Contexts 4 | hrs
+  EDUC 410 | Families and Communities in Diverse Contexts for Youth 4 | hrs
+  EXSS 430 | Introduction to Leadership and Group Dynamics 5 | hrs
+  MNGT/SOCI 131 | Social Relations in the Workplace | hrs
+  LING/ANTH/WGST 302 | Language and Power | hrs
+  PHIL 105 | How to Reason and Argue: An Introduction to Critical Thinking 3 | hrs
+  PHIL 160 | Virtue, Value, and Happiness: An Introduction to Moral Theory 3, H | hrs
+  PHIL 163 | Practical Ethics: Moral Reasoning and How We Live 3, H | hrs
+  PHIL 164 | Morality and Business 3 | hrs
+  PHIL/POLI/PWAD 272 | The Ethics of Peace, War, and Defense 3 | hrs
+  PLCY 355 | Restorative Justice | hrs
+  PLCY/PWAD 450 | Internal and Interpersonal Conflict Management | hrs
+  POLI/PWAD 287 | Strategy and International Relations | hrs
+  POLI 424 | Legislative Procedure in Congress | hrs
+  POLI 440 | How to Stay in Power When the People Want You Dead: The Politics of Authoritarian Survival | hrs
+  POLI/PWAD 457 | International Conflict Processes | hrs
+  POLI/PWAD 458 | International Conflict Management and Resolution H | hrs
+  PWAD 480 | The Practice of Connecting with Strangers | hrs
+  SOCI 273 | Social and Economic Justice, Service Learning | hrs
+  OR or SOCI 274 | Advocacy Strategies: Communication Across Movements
+  SOCI 411 | People, Power, and Politics | hrs
+  SOCI 420 | Political Sociology | hrs
+  WGST 340 | Leadership in Violence Prevention | hrs
+RULE: Select one course from either human behavior and brain function OR domestic- and internationally-related course list 3
+### Human Behavior and Brain Function
+  ANTH 325 | Emotions and Society | hrs
+  COMM 318 | Cultural Diversity 6 | hrs
+  COMM 499 | The Dark Side of Interpersonal Communication 6 | hrs
+  COMM 521 | Communication and Social Memory 6 | hrs
+  EDUC 375 | Identity and Sexuality 4 | hrs
+  NSCI 175 | Introduction to Neuroscience H, F | hrs
+  POLI 215 | Political Psychology: An Introduction | hrs
+  PSYC 230 | Cognitive Psychology 2, H | hrs
+  PSYC 260 | Social Psychology 2, H | hrs
+  PSYC 430 | Human Memory 2 | hrs
+  PSYC 501 | Theoretical, Empirical Perspectives on Personality 2 | hrs
+  PSYC 565 | Stereotyping, Prejudice, and Discrimination 2 | hrs
+  PSYC 566 | Attitude Change 2 | hrs
+  PSYC 569 | Practical Wisdom from Advanced Social Psychology 2 | hrs
+  PSYC 570 | The Social Psychology of Self-Regulation 2 | hrs
+### Domestic- and Internationally Related Courses
+  AMST 278 | Crimes and Punishments | hrs
+  ANTH/PWAD 280 | Anthropology of War and Peace | hrs
+  ANTH 464 | Life and Violence | hrs
+  ASIA/PWAD 331/HIST 335 | Cracking India: Partition and Its Legacy in South Asia H | hrs
+  ASIA/JWST/PWAD 425 | Beyond Hostilities: Israeli-Palestinian Exchanges and Partnerships in Film, Literature, and Music | hrs
+  COMM 372 | The Rhetoric of Social Movements 6 | hrs
+  GLBL 401 | Right Wing Populism in Global Perspective H | hrs
+  GLBL 415 | Dealing with Difference: Criminal Justice, Race, and Social Movements in Globalization H | hrs
+  GLBL 450 | Social Change in Times of Crisis: Knowledge, Action, and Ontology H | hrs
+  GLBL 491H | Major Controversies in Human Rights | hrs
+  HIST/PWAD 207 | The Global Cold War | hrs
+  HIST/ASIA/PWAD 277 | The Conflict over Israel/Palestine | hrs
+  HIST/PWAD 254 | War and Society in Early Modern Europe | hrs
+  HIST 312 | History of France and Algeria | hrs
+  HIST/EURO 347 | Fascist Challenge in Europe, 1918-1945 | hrs
+  HIST 382 | The History of the Civil Rights Movement H | hrs
+  HIST 510 | Human Rights in the Modern World H | hrs
+  HIST/ASIA 538 | The Middle East and the West | hrs
+  HIST/PWAD 565 | Civil War and Reconstruction, 1848-1900 | hrs
+  PHIL 274 | Race, Racism, and Social Justice: African-American Political Philosophy 3, H | hrs
+  PLCY 220 | The Politics of Public Policy H | hrs
+  PLCY 430 | Analysis of National Security Policy | hrs
+  POLI/PWAD 150 | International Relations and Global Politics H, F | hrs
+  POLI 235 | The Politics of Russia and Eurasia H | hrs
+  POLI/PWAD/SOCI 260 | Crisis and Change in Russia and Eastern Europe | hrs
+  POLI 432 | Tolerance in Liberal States | hrs
+  POLI/PWAD 444 | Terrorism and International Peace | hrs
+  POLI 452 | Africa and International Conflict | hrs
+  POLI/PWAD 469 | Conflict and Intervention in the Former Yugoslavia H | hrs
+  PWAD/HIST 266 | Global History of Warfare | hrs
+  PWAD/COMM 355 | Terrorism and Political Violence | hrs
+  PWAD 364 | Post-Conflict and Peacebuilding | hrs
+  PWAD 483 | Conflict, Development, and U.S. Foreign Policy | hrs
+  PWAD 675 | War, Crimes against Humanity, and Justice | hrs
+  RELI 233 | Religion and Violence | hrs
+NOTE: BUSI 470 , BUSI 545 and BUSI 555 are 1.5 credit hour courses. Students who choose two of these courses (for a total of 3 hours) will need to select two additional courses (for a total of 9 hours) to fulfill this requirement. Conflict management minors will not receive priority registration for these courses. Minors will need to apply for these courses by completing the "Non-major Request Form."
+NOTE: PSYC 101 is a required prerequisite. Some PSYC courses may have additional prerequisites (see course description).
+NOTE: Students may select only one PHIL course from the list.
+NOTE: Registration priority will be given to education majors and minors. Conflict management students can register after School of Education majors and minors.
+NOTE: Registration priority will be given to exercise and sport science majors and minors. Conflict management students can register after exercise and sport science majors and minors.
+NOTE: Students may select only one COMM course from the list.

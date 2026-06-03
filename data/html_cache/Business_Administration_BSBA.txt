@@ -1,0 +1,256 @@
+TRACK: Business_Administration_BSBA
+URL: https://catalog.unc.edu/undergraduate/programs-study/business-administration-major-bsba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: A maximum of 9 credit hours of online or remote coursework may be applied toward the undergraduate business program
+NOTE: Students are required to complete 27 credit hours of core business courses.
+### Core Business Courses
+  BUSI 401 | Management and Corporate Communication 1 | 3hrs
+  BUSI 402 | Applied Microeconomics for Business 2 | 1.5hrs
+  OR or ECON 410 | Intermediate Microeconomics
+  BUSI 403 | Operations Management | 3hrs
+  BUSI 404 | Business Ethics | 1.5hrs
+  BUSI 405 | Leading and Managing: An Introduction to Organizational Behavior | 3hrs
+  BUSI 406 | Marketing (prerequisite for marketing electives) 1 | 3hrs
+  BUSI 407 | Financial Accounting and Analysis 1 | 3hrs
+  BUSI 408 | Corporate Finance (prerequisite for finance electives) 1 | 3hrs
+  BUSI 410 | Business Analytics | 3hrs
+  BUSI 411 | Strategy I: Competitive Strategy 3 | 1.5hrs
+  BUSI 412 | Strategy II: Global Corporate Strategy 3 | 1.5hrs
+### Business Electives
+RULE: 19.5 credit hours of business electives 2, 4, 5, 6 19.5
+### Courses Outside the Kenan-Flagler Business School
+RULE: Students must complete at least 15 hours in coursework taken outside the Kenan–Flagler Business School. General Education courses (IDEAs in Action) are specifically excluded from counting toward these 15 hours. Additional coursework may be taken as needed to reach the 120‑hour requirement. 15
+NOTE: Recommended to be taken within the first two semesters of the program.
+NOTE: If taking ECON 410 , students are subject to 18 total hours of BUSI electives.
+NOTE: BUSI 411 must be taken prior to BUSI 412 ; BUSI 412 must be taken in last 2 semesters.
+NOTE: An area core course, with an earned grade of at least a C (not C-), is a prerequisite course for any elective course in that area (e.g., BUSI 406 is a prerequisite for BUSI 562). Other restrictions may apply to certain business courses.
+NOTE: 300-level courses are capped at a maximum of 6.0 credits.
+NOTE: 9 elective credits can be fulfilled by completing an Area of Emphasis. Students can complete two Areas of Emphasis (18 credits)
+
+## Areas of Emphasis
+NOTE: Although not required, you may choose to complete up to two areas of emphasis (AOE) as part of your major electives. AOEs give you the opportunity to customize your major based on your interests and desired career trajectory. All AOEs are 9 credits.
+
+## Business of Health
+### Requirements
+RULE: Required course:
+  BUSI 510 | The Challenge of Healthcare: A System Overview | 1.5hrs
+RULE: Highly encouraged course:
+  HPM 300 | The U.S. Health System 1 | 3hrs
+RULE: Other Approved Elective Courses: 4.5
+  BUSI 625 | Global Healthcare Management | hrs
+  BUSI 626 | Introduction to Healthcare Management | hrs
+  BUSI 627 | Healthcare Brand Plan | hrs
+  CHIP 400 | Digital Health Innovation 1 | hrs
+  ECON 550 | Advanced Health Econometrics 1 | hrs
+  ECON 552 | The Economics of Health Care Markets and Policy 1 | hrs
+  MEJO 469 | How Healthcare Works: Programs, Stakeholders, and Strategy 1 | hrs
+  MEJO 569 | Behavioral Science in Health Communication 1 | hrs
+  PHIL 165 | Bioethics 1, H | hrs
+  BMME 590 | Special Topics in Biomedical Engineering 1, 2 | hrs
+  NURS 425 | Global and Interprofessional Approaches to Solve Complex Cases 1 | hrs
+NOTE: While this course counts towards AOE credits, it does not count towards BUSI elective credits
+NOTE: with approval, based on topic
+
+## Consulting
+### Requirements
+RULE: Required course:
+  BUSI 554 | Consulting Skills and Frameworks H | 3hrs
+RULE: Required: Applied Learning Experience (select one): 4 3
+  BUSI 475 | Nonprofit Leadership: Strategies and Practices | hrs
+  BUSI 505 | Entrepreneurial Consulting | hrs
+  BUSI 514 | STAR - Experiential Learning Project H | hrs
+RULE: Remaining credits from the list below: 3
+RULE: Finance
+  BUSI 502 | Entrepreneurial Finance | hrs
+  BUSI 582 | Mergers and Acquisitions H | hrs
+  BUSI 618 | Global Financial Markets | hrs
+RULE: Marketing
+  BUSI 488 | Data Science in the Business World | hrs
+  BUSI 562 | Consumer Behavior | hrs
+  BUSI 563 | Retail and E-tail Marketing | hrs
+  BUSI 564 | Design Thinking and Product Development | hrs
+  BUSI 566 | Marketing Strategy: Sustainable Competitive Advantage in Dynamic Environments | hrs
+  BUSI 568 | Customer Insights and Analytics | hrs
+  BUSI 559 | Product Management | hrs
+RULE: Operations
+  BUSI 487 | Creating Data-Driven Business Insights: Databases and Visualization | hrs
+  BUSI 532 | Service and Platforms Operations Management H | hrs
+  BUSI 533 | Supply Chain Management H | hrs
+RULE: Organizational Behavior
+  BUSI 547 | Managerial Decision Making | hrs
+  BUSI 540 | Leadership for Wicked Problems | hrs
+  BUSI 555 | Groups and Teams in Organizations | hrs
+  BUSI 550 | People Analytics | hrs
+RULE: Entrepreneurship
+  BUSI 506 | Venture Capital Fundamentals | hrs
+RULE: Sustainability
+  BUSI 508 | Sustainable Business and Impact Entrepreneurship | hrs
+  BUSI 507 | Sustainable Business and Social Enterprise H | hrs
+RULE: Accounting
+  BUSI 574 | Taxes and Business Strategy | hrs
+  BUSI 575 | Financial Statement Analysis and Valuation | hrs
+RULE: Business of Health
+  BUSI 627 | Healthcare Brand Plan | hrs
+RULE: Management and Communication
+  BUSI 525 | Advanced Business Presentations | hrs
+  BUSI 530 | Corporate Communication: Social Advocacy and Activism | hrs
+NOTE: While this course is repeatable, only 3 credits may count toward the AOE
+NOTE: with approval, based on topic
+NOTE: Other 3-credit courses that provide practical, consulting-focused, hands-on experience may be considered, subject to Undergraduate Business Program (UBP) approval (e.g., BUSI 393 – Internship or Global Immersion courses).
+
+## Entrepreneurship
+### Requirements
+RULE: 9 credits from the list below: 9
+  BUSI 500 | Entrepreneurship and Business Planning H | hrs
+  BUSI 509 | Entrepreneurs Lab: Advanced Entrepreneurial Insight and Leadership H | hrs
+  BUSI 501 | Professional Selling Strategies and Skills | hrs
+  BUSI 502 | Entrepreneurial Finance | hrs
+  BUSI 503 | Family Business I: Introduction to Family Enterprise | hrs
+  BUSI 504 | Startup UNC | hrs
+  BUSI 505 | Entrepreneurial Consulting | hrs
+  BUSI 506 | Venture Capital Fundamentals | hrs
+  BUSI 508 | Sustainable Business and Impact Entrepreneurship | hrs
+  BUSI 512 | Family Business II: Governance and Ownership | hrs
+  BUSI 513 | Venture Capital in Action | hrs
+  BUSI 517 | Private Equity and Debt Markets | hrs
+  BUSI 521 | Design Thinking: The Innovation Process for Complex Problems | hrs
+  BUSI 564 | Design Thinking and Product Development | hrs
+  BUSI 574 | Taxes and Business Strategy | hrs
+  BUSI 608 | Introduction to FinTech - Blockchain Technologies and Cryptocurrencies | hrs
+
+## Finance
+### Requirements
+RULE: 3 credits from Group One: 3
+  BUSI 409 | Advanced Corporate Finance H | hrs
+  BUSI 502 | Entrepreneurial Finance | hrs
+  BUSI 506 | Venture Capital Fundamentals | hrs
+  BUSI 580 | Investments H | hrs
+  BUSI 582 | Mergers and Acquisitions H | hrs
+RULE: 6 credits from Group Two: 6
+  BUSI 191 | Gateway into Capital Markets and Investments | hrs
+  BUSI 513 | Venture Capital in Action | hrs
+  BUSI 517 | Private Equity and Debt Markets | hrs
+  BUSI 518H | Applied Private Equity 2 | hrs
+  BUSI 575 | Financial Statement Analysis and Valuation | hrs
+  BUSI 577 | Projects for Investment Management Experiential-Learning | hrs
+  BUSI 581 | Financial Modeling for Leveraged Buyout Transactions | hrs
+  BUSI 583 | Applied Investment Management 2, H | hrs
+  BUSI 584 | Financial Modeling | hrs
+  BUSI 587 | Investment Banking H | hrs
+  BUSI 588 | Introduction to Derivative Securities and Risk Management H | hrs
+  BUSI 589 | Fixed Income H | hrs
+  BUSI 600 | Risk Management | hrs
+  BUSI 606 | Buyout Structures and Deals | hrs
+  BUSI 688 | Applied Trading Strategies H | hrs
+  BUSI 511 | Regional Venture Capital Immersion | hrs
+  BUSI 574 | Taxes and Business Strategy | hrs
+  BUSI 597 | Sustainable Finance | hrs
+  BUSI 601 | Real Estate Finance H | hrs
+  BUSI 607 | Inside the Capital Markets - Institutions, Players and Regulators | hrs
+  BUSI 608 | Introduction to FinTech - Blockchain Technologies and Cryptocurrencies | hrs
+  BUSI 618 | Global Financial Markets | hrs
+NOTE: While this course is repeatable, only 3 credits may count toward the AOE
+
+## Managing People and Organizations
+### Requirements
+RULE: Nine (9) credits from list below: 9
+  BUSI 350 | Symposium Core Committee 2 | hrs
+  BUSI 470 | Storytelling to Influence and Inspire | hrs
+  BUSI 540 | Leadership for Wicked Problems | hrs
+  BUSI 523 | Diversity and Inclusion at Work | hrs
+  BUSI 527 | Gender at Work | hrs
+  BUSI 528 | Leadership Communication | hrs
+  BUSI 530 | Corporate Communication: Social Advocacy and Activism | hrs
+  BUSI 545 | Negotiations | hrs
+  BUSI 547 | Managerial Decision Making | hrs
+  BUSI 550 | People Analytics | hrs
+  BUSI 555 | Groups and Teams in Organizations | hrs
+  BUSI 556 | Thinking Creatively: Cognitive Tools for Individuals and Teams | hrs
+  BUSI 526 | Leadership in Action | hrs
+NOTE: While this course is repeatable, only 3 credits may count toward the AOE
+
+## Marketing
+### Requirements
+RULE: Nine (9) credits from list below: 9
+  BUSI 488 | Data Science in the Business World | hrs
+  BUSI 501 | Professional Selling Strategies and Skills | hrs
+  BUSI 558 | Digital Marketing | hrs
+  BUSI 559 | Product Management | hrs
+  BUSI 562 | Consumer Behavior | hrs
+  BUSI 563 | Retail and E-tail Marketing | hrs
+  BUSI 564 | Design Thinking and Product Development | hrs
+  BUSI 565 | Marketing Research Design and Analysis | hrs
+  BUSI 566 | Marketing Strategy: Sustainable Competitive Advantage in Dynamic Environments | hrs
+  BUSI 567 | Customer Journeys | hrs
+  BUSI 568 | Customer Insights and Analytics | hrs
+  BUSI 627 | Healthcare Brand Plan | hrs
+
+## Operations Management
+### Requirements
+RULE: Required Course:
+  BUSI 533 | Supply Chain Management H | 3hrs
+RULE: Remaining credits from list below: 6
+  BUSI 487 | Creating Data-Driven Business Insights: Databases and Visualization | hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | hrs
+  BUSI 532 | Service and Platforms Operations Management H | hrs
+  BUSI 536 | Project Management | hrs
+  BUSI 537 | Retail Operations | hrs
+  BUSI 554 | Consulting Skills and Frameworks H | hrs
+  BUSI 538 | Sustainable Operations | hrs
+  BUSI 559 | Product Management | hrs
+  STOR 305 | Introduction to Decision Analytics 1 | hrs
+NOTE: While this course counts towards AOE credits, it does not count towards BUSI elective credits
+NOTE: with approval, based on topic
+
+## Real Estate
+### Requirements
+RULE: Required courses:
+  BUSI 585 | Introduction to Real Estate | 3hrs
+  BUSI 601 | Real Estate Finance H | 1.5hrs
+  BUSI 603 | Real Estate Development | 1.5hrs
+  BUSI 604 | Real Estate and Capital Markets H | 1.5hrs
+RULE: Remaining credits from the list below: 1.5
+  BUSI 293 | Affordable Housing Practicum | hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | hrs
+  BUSI 548 | Financing Affordable Housing | hrs
+  BUSI 580 | Investments H | hrs
+  BUSI 589 | Fixed Income H | hrs
+  BUSI 592 | Applied Private Equity: Real Estate 2 | hrs
+  BUSI 605 | Real Estate Capstone | hrs
+  PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning 1 | hrs
+  PLAN 420 | Community Design and Green Architecture 1 | hrs
+NOTE: While this course counts towards AOE credits, it does not count as BUSI elective credit
+NOTE: While this course is repeatable, only 3 credits may count toward the AOE
+
+## Sustainability
+### Requirements
+RULE: Required Course:
+  BUSI 507 | Sustainable Business and Social Enterprise 2, H | 3hrs
+RULE: Remaining credits from this list: 3 6
+  BUSI 540 | Leadership for Wicked Problems | hrs
+  BUSI 530 | Corporate Communication: Social Advocacy and Activism | hrs
+  BUSI 538 | Sustainable Operations | hrs
+  BUSI 597 | Sustainable Finance | hrs
+  DATA 541 | Natural Hazards and Financial Risk 1 | hrs
+NOTE: While this course counts towards AOE credits, it does not count towards BUSI elective credits
+NOTE: Or a UBP Sustainability Global Immersion elective.
+NOTE: Other special topics courses (e.g., BUSI 490 or ENEC 490) with a focus on sustainability may be considered, subject to Undergraduate Business Program (UBP) approval.
+
+## Transfer of Business Course Credits from Other Institutions
+NOTE: Without regard to a student’s prospective academic major or minor at UNC–Chapel Hill, the UNC Kenan–Flagler Business School will consider for transfer credit business administration courses that meet each of the following six criteria. No exceptions are made.
+NOTE: For upper-level courses (equivalent to those numbered 400–699 in the Kenan–Flagler undergraduate curriculum), the course was completed at
+NOTE: an accredited institution, including but not limited to AACSB International, or
+NOTE: a constituent four-year institution of the University of North Carolina, or
+NOTE: an international partner institution of Kenan–Flagler’s undergraduate business program, or the Study Abroad Office housed in the College of Arts and Sciences .
+NOTE: The final course grade earned was at least C (not C-) as verified by an official transcript. Courses taken Pass/Fail are ineligible.
+NOTE: A comparable course is available in the Kenan–Flagler undergraduate curriculum.
+NOTE: The course is not approved for credit in other UNC–Chapel Hill departments (i.e., no double credits).
+NOTE: The student completed the course within the past three academic years.
+NOTE: The substantive coverage of material constitutes no less than 75 percent of coverage in the comparable Kenan–Flagler course, and there is sufficient indication of individual student evaluation (i.e., no fewer than two major examinations, including a final examination).
+NOTE: For students who wish to transfer to UNC–Chapel Hill, pre-approval of such courses is recommended. Requests for validation of course credits earned at another institution must be made no later than the end of the first semester of enrollment at UNC–Chapel Hill following completion of the course. The business school does not award transfer credits in excess of three upper-level courses for transfer students.
+NOTE: For business majors who earn admission to UNC Kenan–Flagler Business School, no more than three upper-level courses taken at another institution may be applied to the undergraduate business major curriculum unless earned as part of a preapproved Kenan–Flagler overseas study program. B usiness majors studying through the Study Abroad Office in the College of Arts and Sciences are limited to transferring back a maximum of 9 credit hours towards the business major.
+NOTE: To request review and validation of eligible courses, students should submit a Transfer Credit Request Form through Connect Carolina for domestic credit transfer. A copy of the course syllabus must be included for all courses being evaluated. The syllabus must include the title and edition of textbook(s) as well as list explicitly the course content. If the syllabus lists only chapters covered, without a description of the chapter content, a copy of the textbook’s table of contents must be included.
+NOTE: For Study Abroad credit review, students should follow the guidelines provided by Kenan-Flagler's Global Team or the Study Abroad Office’s credit team.

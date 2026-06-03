@@ -1,0 +1,55 @@
+TRACK: Philosophy_Politics_and_Economics_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/philosophy-politics-economics-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The PPE minor requires five courses:
+### Requirements
+  PHIL/POLI/ECON 384 | Gateway to Philosophy, Politics, and Economics (gateway course) H | 3hrs
+  PHIL/POLI/ECON 698 | Philosophy, Politics, and Economics: Capstone Course (capstone seminar) | 3hrs
+RULE: One philosophy course chosen from: 3
+  PHIL 140 | Knowledge and Society H | hrs
+  PHIL 157 | Logic and Decision Theory H | hrs
+  PHIL 160 | Virtue, Value, and Happiness: An Introduction to Moral Theory H | hrs
+  PHIL 161 | Virtue, Value, and Happiness: An Introduction to Moral Theory | hrs
+  PHIL 163 | Practical Ethics: Moral Reasoning and How We Live H | hrs
+  PHIL 164 | Morality and Business | hrs
+  PHIL 165 | Bioethics H | hrs
+  PHIL 170 | Liberty, Rights, and Responsibilities: Introduction to Social Ethics and Political Thought H | hrs
+  PHIL 171 | Free Speech and the Norms of Public Discourse | hrs
+  PHIL 265 | Ethics, Politics, and Technology | hrs
+  PHIL 272 | The Ethics of Peace, War, and Defense | hrs
+  PHIL 273 | Justice, Rights, and the Common Good: Philosophical Perspectives on Social and Economic Issues H | hrs
+  PHIL 274 | Race, Racism, and Social Justice: African-American Political Philosophy H | hrs
+  PHIL 276 | Ideology, Capitalism, and Critique | hrs
+  PHIL 280 | Morality, Law, and Justice: Issues in Legal Philosophy H | hrs
+  PHIL 364 | Ethics and Economics | hrs
+  PHIL 368 | Living Things, Wilderness, and Ecosystems: An Introduction to Environmental Ethics H | hrs
+  PHIL 370 | Authority, Freedom, and Rights: Advanced Political Philosophy | hrs
+  PLCY 71 | First-Year Seminar: Justice and Inequality H | hrs
+  PLCY 340 | Justice in Public Policy H | hrs
+RULE: One political science course chosen from: 3
+  PLCY/PWAD 101 | Making Public Policy H | hrs
+  PLCY/PWAD 220 | The Politics of Public Policy H | hrs
+  PLCY 352H | Honors Seminar on Public Policy and Global Affairs | hrs
+  POLI 130 | Introduction to Comparative Politics H, F | hrs
+  POLI 270 | Classical Political Thought H | hrs
+  POLI 271 | Modern Political Thought H | hrs
+  POLI 280 | American Political Thought After the Civil War H | hrs
+  POLI 288 | Strategy and Politics | hrs
+  POLI 401 | Political Economy I: The Domestic System | hrs
+  POLI 442 | International Political Economy | hrs
+  POLI 470 | Social and Political Philosophy H | hrs
+  POLI 472 | Problems of Modern Democratic Theory H | hrs
+  POLI 474 | Global Justice | hrs
+  POLI 478 | The Politics, Philosophy, and Economics of Education | hrs
+RULE: One economics course chosen from: 3
+  ECON 101 | Introduction to Economics H, F | hrs
+  ECON 411 | Game Theory | hrs
+  ECON 434 | History of Economic Doctrines | hrs
+  ECON 460 | International Economics | hrs
+  ECON 510 | Advanced Microeconomic Theory H | hrs
+  ECON 511 | Advanced Game Theory in Economics H | hrs
+NOTE: Please note that, although it is not listed above in the political science course section, HNRS 354 (Elements of Politics) may count toward the politics core discipline of the PPE minor. A Tar Heel Tracker adjustment is required.
+NOTE: Detailed information is available on the program’s website .

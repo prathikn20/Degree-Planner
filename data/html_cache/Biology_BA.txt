@@ -1,0 +1,121 @@
+TRACK: Biology_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/biology-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Gateway Course
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory 1, H, F | 4hrs
+### Core Requirements
+### Fundamentals Core Courses
+  BIOL 103 | How Cells Function 2, F | 3hrs
+  BIOL 104 | Biodiversity 2, H, F | 3hrs
+  BIOL 105L | Biological Research Skills | 3hrs
+### Intermediate Level Core Courses
+RULE: Two of the following five Core Course options: 3 6-8
+  BIOL 220 | Molecular Genetics H | hrs
+  BIOL 240 | Cell Biology H | hrs
+  BIOL 250 | Evolutionary Biology | hrs
+  BIOL 260 | Introduction to Ecology | hrs
+RULE: An organismal structure and diversity course (see list below)
+RULE: Three biology electives (each of three or more credits) numbered above 200 (not including BIOL 213 , BIOL 222 , BIOL 253 , BIOL 291 , BIOL 292 , BIOL 293 , BIOL 294 , BIOL 295 , BIOL 296 , BIOL 353, a second semester of BIOL 395 , and BIOL 495 ). At least one course in the major must have a laboratory (not including BIOL 101L or BIOL 105L ). 4,5 10-11
+### Additional Requirements
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+RULE: One of: 3-4
+  BIOL 222 | Introduction to Programming with Biological Data | hrs
+  COMP 110 | Introduction to Programming H | hrs
+  COMP 116 | Introduction to Scientific Programming | hrs
+  MATH 130 | Precalculus Mathematics F | hrs
+  MATH 152 | Calculus for Business and Social Sciences F | hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | hrs
+  STOR 151 | Introduction to Data Analysis | hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | hrs
+  STOR 215 | Foundations of Decision Sciences | hrs
+RULE: Four additional allied science electives chosen from the course list below (some courses are more than 3 credits) 12
+RULE: Students must fulfill all General Education requirements, including Supplemental General Education, and enough electives to complete 120 hours required for graduation.
+NOTE: With a C grade or better in BIOL 101
+NOTE: Both BIOL 103 and BIOL 104 need to be completed before taking a 400-level BIOL class in the major.
+NOTE: Core courses taken beyond the two required ones may be used as electives.
+NOTE: At least one course in the major must be numbered above 400 (not including BIOL 501 and BIOL 692H ). One additional elective may consist of a total of three hours of courses numbered above 600 (not including BIOL 692H ).
+NOTE: At least one course in the major must have a laboratory (not including BIOL 101L or BIOL 105L ). BIOL 395 counts as a one semester laboratory course for students entering in Fall 2022 or later, however, additional research for credit will not count towards the major. Other laboratory courses include all of the Organismal Structure and Diversity courses listed below, any course with an "L" designation (except BIOL 253/L, which does not count as an elective in the major), and the following courses: BIOL 255H , BIOL 256 , BIOL 459 , BIOL 461 , BIOL 463 , BIOL 526H , BIOL 535 , BIOL 562 , and BIOL 563 .
+### Organismal Structure and Diversity Course List
+  BIOL 271 & 271L | Plant Biology and Plant Biology Laboratory | 4hrs
+  BIOL 272 & 272L | Local Flora and Local Flora Lab | 4hrs
+  BIOL 273 | Horticulture | 4hrs
+  BIOL 274 & 274L | Plant Diversity and Plant Diversity Laboratory | 4hrs
+  BIOL 277 & 277L | Vertebrate Field Zoology and Vertebrate Field Zoology Laboratory | 4hrs
+  BIOL 278 & 278L | Animal Behavior and Animal Behavior Laboratory | 4hrs
+  BIOL 279 & 279L | Seminar in Organismal Biology and Topics in Organismal Biology Laboratory | 3-4hrs
+  BIOL 422 & BIOL 421L | Microbiology and Bacterial Genetics Laboratory | 4-5hrs
+  OR or BIOL 422 & 422L | Microbiology and Microbiology Laboratory
+  BIOL 441 & 441L | Vertebrate Embryology and Vertebrate Embryology Laboratory | 4hrs
+  BIOL 451 & 451L | Comparative Physiology and Comparative Physiology Laboratory | 4hrs
+  BIOL 471 & 471L | Evolutionary Mechanisms and Evolutionary Mechanisms Laboratory | 4hrs
+  BIOL 472 | Introduction to Plant Taxonomy | 4hrs
+  BIOL 473 & 473L | Mammalian Morphology and Development and Mammalian Morphology Laboratory | 4hrs
+  BIOL 474 & 474L | Evolution of Vertebrate Life and Vertebrate Structure and Evolution Laboratory H | 4hrs
+  BIOL 475 & 475L | Biology of Marine Animals and Biology of Marine Animals Laboratory | 4hrs
+  BIOL 476 & 476L | Avian Biology and Avian Biology Laboratory | 4hrs
+  BIOL 479 & 479L | Topics in Organismal Biology at an Advanced Level and Laboratory in Organismal Biology: Advanced Topics | 4hrs
+  BIOL 579 | Organismal Structure and Diversity in the Southern Appalachian Mountains | 4hrs
+
+## Allied Science Electives
+NOTE: All allied science elective courses need to have a minimum of three credit hours.
+  ANTH 143 | Human Evolution and Adaptation | 3hrs
+  ANTH 148 | Human Origins | 3hrs
+  ANTH 298 | Biological Anthropology Theory and Practice | 3hrs
+  ANTH 315 | Human Genetics and Evolution | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 412 | Paleoanthropology | 3hrs
+  ANTH 414 | Laboratory Methods: Human Osteology | 3hrs
+  ANTH 415 | Laboratory Methods: Zooarchaeology | 3hrs
+  ANTH 416 | Bioarchaeology | 3hrs
+  ANTH 470 | Medicine and Anthropology | 3hrs
+  ANTH 623 | Human Disease Ecology | 3hrs
+  ASTR --- | Any ASTR course above 99 | 3hrs
+  BIOC 107 | Introduction to Biochemistry | 4hrs
+  BIOC 108 | Introduction to Biochemistry | 4hrs
+  BIOL --- | Any BIOL course above 101, except BIOL 213 , BIOL 291 , BIOL 292 , BIOL 294 , BIOL 295 , BIOL 296 , and BIOL 495 | 3hrs
+  BIOS --- | Any BIOS course | 3hrs
+  BMME 335 | Biomaterials | 3hrs
+  CHEM --- | Any CHEM course above 101 | 3hrs
+  CLAS 260 | Ancient Medicine H | 3hrs
+  COMP --- | Any COMP course above 100, except COMP 380 | 3hrs
+  EMES --- | Any EMES course above 100 | 3hrs
+  ENEC 202I | Introduction to the Environmental Sciences | 4hrs
+  ENEC 256 | Mountain Biodiversity | 4hrs
+  ENEC 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | 3hrs
+  ENEC 403 | Environmental Chemistry Processes | 3hrs
+  ENEC 406 | Atmospheric Processes II | 4hrs
+  ENEC 410 | Earth Processes in Environmental Systems | 4hrs
+  ENEC 411 | Oceanic Processes in Environmental Systems | 4hrs
+  ENEC 415 | Environmental Systems Modeling | 3hrs
+  ENEC 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC 489 | Ecological Processes in Environmental Systems | 4hrs
+  EPID 600 | Principles of Epidemiology for Public Health | 3hrs
+  EXSS 155 | Human Anatomy and Physiology I H, F | 3hrs
+  EXSS 256 | Human Anatomy and Physiology II | 3hrs
+  GEOG 110 | The Blue Planet: An Introduction to Earth's Environmental Systems H | 3hrs
+  GEOG 111 | Weather and Climate | 3hrs
+  GEOG 212 | Environmental Conservation and Global Change | 3hrs
+  GEOG 222 | Health and Medical Geography | 3hrs
+  GEOG 253 | Introduction to Atmospheric Processes | 4hrs
+  GEOL --- | Any GEOL course above 100 | 3hrs
+  MASC --- | Any MASC course above 100 | 3hrs
+  MATH --- | Any MATH course above 110, except MATH 129P | 3hrs
+  MCRO 251 | Introductory Medical Microbiology | 4hrs
+  NSCI 175 | Introduction to Neuroscience H, F | 3hrs
+  NSCI 222 | Learning H | 3hrs
+  NSCI 225 | Sensation and Perception H | 3hrs
+  NUTR 240 | Introduction to Human Nutrition | 3hrs
+  PHIL 155 | Truth and Proof: Introduction to Mathematical Logic H | 3hrs
+  PHYS --- | Any PHYS course above 99, except PHYS 132 | hrs
+  PSYC 101 | General Psychology F | 3hrs
+  PSYC 210 | Statistical Principles of Psychological Research H | 3hrs
+  PSYC 220 | Biopsychology H | 3hrs
+  PSYC 230 | Cognitive Psychology H | 3hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | 4hrs
+  STOR --- | Any STOR course above 151 | 3hrs
+  SPHS 570 | Anatomy and Physiology of the Speech, Language, and Hearing Mechanisms | 3hrs

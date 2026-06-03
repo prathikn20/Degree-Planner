@@ -1,0 +1,14 @@
+TRACK: Urban_Studies_and_Planning_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/urban-studies-planning-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning | 3hrs
+  OR or PLAN 256 | Planning the City: Possibilities, Participants, and Change
+  PLAN 247 | Solving Urban Problems | 3hrs
+  OR or PLAN 257 | Tools for Urbanists
+RULE: Select three additional PLAN courses numbered 100 through 699. 1 9
+NOTE: Students can also choose from PLAN courses at the 700- and 800-levels with instructor permission.
+NOTE: City and Regional Planning (PLAN) course list .

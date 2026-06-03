@@ -1,0 +1,34 @@
+TRACK: Romance_Languages_BA_Portuguese
+URL: https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-portuguese/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Eight courses chosen from among the following: 24
+  PORT 270I | Reimagining Climate Futures in the Lusophone World: Narratives, Data, and Discourse | hrs
+  PORT 296 | Course Correspondent Project in Portuguese | hrs
+  PORT 310 | Advanced Communication in Portuguese: Media & Entertainment | hrs
+  PORT 316 | Brazilian Performance: Capoeira, Resilience and Resistance through Movement, Music and Dance 1 | hrs
+  PORT 323 | Advanced Communication in Portuguese: History, Nature, and Society | hrs
+  PORT 370 | Modern Brazil through Literature and Film in Translation 1 | hrs
+  PORT 375 | Portuguese and Brazilian Fiction in Translation 1 | hrs
+  PORT 382 | Women Writers:  Brazil and Beyond 1 | hrs
+  PORT 385 | Verbal Art, Identities, and Nation in Portuguese-Speaking Africa 1 | hrs
+  PORT 387 | Brazilian Religious Movements through Film and Literature 1 | hrs
+  PORT 388 | Portuguese, Brazilian, and African Identity in Film 1 | hrs
+  PORT 396 | Independent Study in Portuguese | hrs
+  PORT 398 | Undergraduate Seminar in Portuguese | hrs
+  PORT 408 | LAC Recitation 2 | hrs
+  PORT 420 | Portuguese Language and Culture for the Professions | hrs
+  PORT 501 | Survey of Portuguese Literature I | hrs
+  PORT 520 | Climate Change and the Cultural Imagination: Lusophone Interpretations | hrs
+  PORT 521 | Contemporary Portuguese Culture and Contexts | hrs
+  PORT 526 | History of the Portuguese Language | hrs
+  PORT 535 | Brazilian Drama | hrs
+  PORT 540 | Cultural Topics from the Lusophone World | hrs
+  PORT 691H | Honors Thesis | hrs
+NOTE: Taught in English, credit given for PORT major if some or all work is done in Portuguese. What and how much work is done in Portuguese to be determined by a discussion with the instructor based on student’s current level of Portuguese.
+NOTE: This is a one-credit hour, once-a-week course. Students may repeat for credit since this is a rotating topics course.
+NOTE: With the approval of the undergraduate advisor for Portuguese, students majoring in Romance languages with an emphasis in Portuguese may count up to nine hours in related areas in such departments, programs, and curricula as history, art, music, cultural studies, and women’s and gender studies.
+NOTE: Because few entering students have completed coursework in Portuguese prior to enrolling in the University, it is essential that interested students start the language as early as the first year. Completion of PORT 204 or PORT 402 or equivalent is a prerequisite for the major courses taught in Portuguese. Students may begin taking PORT courses taught in English prior to fulfilling this requirement.

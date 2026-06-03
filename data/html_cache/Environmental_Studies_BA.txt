@@ -1,0 +1,344 @@
+TRACK: Environmental_Studies_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/environmental-studies-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The environmental studies program provides two options:
+
+## Environmental Studies Major, B.A.
+### Core Requirements
+  ENEC 201 | Introduction to Environment and Society H, F | 4hrs
+  ENEC 202I | Introduction to the Environmental Sciences | 4hrs
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+RULE: One of the following earth system science courses: 3-4
+  BIOL 104 | Biodiversity H, F | hrs
+  OR or BIOL 103 | How Cells Function
+  EMES 200 | The Solid Earth | hrs
+  OR or EMES 201 | Earth's Surface: Processes, Landforms, and History
+  EMES 202 | Oceanography | hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems 1 | hrs
+RULE: Two courses from one of the following skills categories: 6
+RULE: GIS:
+  ANTH 419 | Anthropological Application of GIS | hrs
+  ENEC 340 | Environmental Applications of Drones 1 | hrs
+  ENEC 479 | Landscape Analysis 1 | hrs
+  GEOG 370 | Geographic Information Science | hrs
+  GEOG 491 | Principles of Geographic Information Systems | hrs
+  GEOG 541 | GIS in Public Health | hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs
+RULE: Remote Sensing:
+  GEOG 370 | Geographic Information Science | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG 577 | Advanced Remote Sensing | hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | hrs
+RULE: Statistics & Analytics:
+  STOR 155 | Introduction to Data Models and Inference H, F | hrs
+  OR or BIOS 600 | Principles of Statistical Inference
+  ECON 400 | Introduction to Data Science and Econometrics H | hrs
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | hrs
+  ENEC 492 | Social Science Research Methods | hrs
+  ENEC 562 | Statistics for Environmental Scientists | hrs
+  ENEC/ENVR 570 | Uncertainty, Decisions, and the Environment | hrs
+  PLCY 460 | Quantitative Analysis for Public Policy H | hrs
+RULE: Five courses chosen from one of the concentrations list below 15-20
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+RULE: Select one of the following options: 3 8
+RULE: CHEM 101 / 101L and CHEM 102 / 102L
+  PHYS 114 & PHYS 115 | General Physics I: For Students of the Life Sciences and General Physics II: For Students of the Life Sciences F | hrs
+  PHYS 118 & PHYS 119 | Introductory Calculus-based Mechanics and Relativity and Introductory Calculus-based Electromagnetism and Quanta H, F | hrs
+RULE: Enough General Education and free electives to accumulate at least 120 credit hours. 2 varies
+NOTE: This course appears on a core requirement list as well as a concentration requirement list, but can only be counted toward one of the two.
+NOTE: Recommended courses are ECON 400 and one of the following PH courses: COMM 375 / ENEC 375 , ENEC 325 , or ENEC 368 / PHIL 368 .
+
+## Agriculture and Health Concentration
+  ANTH/ENEC 238 | Human Ecology of Africa | 3hrs
+  ANTH 252 | Archaeology of Food | 3hrs
+  ANTH 306 | Water and Inequality: Anthropological Perspectives | 3hrs
+  ANTH 319 | Global Health | 3hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | 3hrs
+  ENEC 324 & 324L | Water in Our World: Introduction to Hydrologic Science and Environmental Problems and Water in Our World Laboratory 1 | 4hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | 3-4hrs
+  ENEC 340 | Environmental Applications of Drones 1 | 3hrs
+  ENEC 370 | Agriculture and the Environment H | 3hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 3hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC/ENVR 522 | Environmental Change and Human Health | 3hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  GEOG 334 | Human Ecology of Health and Disease | 3hrs
+  GEOG 457 | Rural Latin America: Agriculture, Environment, and Natural Resources H | 3hrs
+  GEOG 542 | Neighborhoods and Health | 3hrs
+  PLAN/ENEC/ENVR 635 | Energy Modeling for Environment and Public Health | 3hrs
+  PLCY 475 | The Political Economy of Food H | 3hrs
+  PLCY 485 | Poverty, Health, and Human Development in Low Income Countries | 3hrs
+NOTE: This course appears on a core requirement list as well as a concentration requirement list, but can only be counted toward one of the two.
+
+## Ecology and Society Concentration
+  ANTH/ENEC 238 | Human Ecology of Africa | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 439 | Political Ecology | 3hrs
+  ANTH/ENEC 460 | Historical Ecology | 3hrs
+  BIOL 260 | Introduction to Ecology | 3hrs
+  BIOL/ENEC 272 | Local Flora | 3hrs
+  BIOL 277 | Vertebrate Field Zoology | 3hrs
+  BIOL 402 | Infectious Disease in the Developing World | 3hrs
+  BIOL 427 | Human Diversity and Population Genetics | 3hrs
+  BIOL 461 | Fundamentals of Ecology | 4hrs
+  BIOL 463 | Field Ecology | 4hrs
+  BIOL 464 | Global Change Biology | 3hrs
+  BIOL 465 | Global Biodiversity and Macroecology | 3hrs
+  BIOL 469 | Behavioral Ecology | 3hrs
+  BIOL 561 | Ecological Plant Geography | 3hrs
+  BIOL 564 | Population Ecology | 3hrs
+  BIOL 565 | Conservation Biology H | 3hrs
+  BIOL 567 | Evolutionary Ecology | 3hrs
+  BIOL/ENEC 562 | Statistics for Environmental Scientists | 4hrs
+  ENEC/POLI 254 | International Environmental Politics | 3hrs
+  ENEC 259 | Coral Reef Ecology and Management | 3hrs
+  ENEC/GEOG 264 | Conservation of Biodiversity in Theory and Practice | 3hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | 3hrs
+  ENEC 304 | Restoration Ecology | 4hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems 1 | 3hrs
+  ENEC/EMES 352 | Marine Fisheries Ecology | 3hrs
+  ENEC/BIOL 256 | Mountain Biodiversity | 4hrs
+  ENEC 370 | Agriculture and the Environment H | 3hrs
+  ENEC/PLCY 372 | Global Environment: Policy Analysis and Solutions | 3hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 3hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 462 | Ecosystem Management | 3hrs
+  ENEC 479 | Landscape Analysis 1 | 3hrs
+  ENEC 489 | Ecological Processes in Environmental Systems 1 | 4hrs
+  ENEC 491 | Communicating Science in the Anthropocene | 3hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  ENEC/EMES 441 | Marine Physiological Ecology | 3hrs
+  ENEC/EMES 444 | Marine Phytoplankton | 3hrs
+  ENEC/EMES 448 | Coastal and Estuarine Ecology 1 | 4hrs
+  ENEC/EMES 450 | Biogeochemical Processes | 4hrs
+  ENEC/EMES 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC/PLAN 641 | Watershed Planning | 3hrs
+  GEOG 237 | Forest, Environment and Society | 3hrs
+  GEOG 334 | Human Ecology of Health and Disease | 3hrs
+  GEOG 444 | Landscape Biogeography | 3hrs
+  GEOG 470 | Political Ecology: Geographical Perspectives | 3hrs
+  GEOG 597 | Ecological Modeling | 3hrs
+NOTE: This course appears on a core requirement list as well as a concentration requirement list, but can only be counted toward one of the two.
+
+## Environmental Behavior and Decision Making Concentration
+  ANTH 422 | Anthropology, Human Rights, and Humanitarianism | 3hrs
+  ANTH 539 | Environmental Justice | 3hrs
+  BIOL 553 | Mathematical and Computational Models in Biology | 3hrs
+  BUSI 507 | Sustainable Business and Social Enterprise H | 3hrs
+  COMM/ENEC 375 | Environmental Advocacy | 3hrs
+  ENEC/POLI 254 | International Environmental Politics | 3hrs
+  ENEC 305 | Data Analysis and Visualization of Social and Environmental Interactions | 4hrs
+  ENEC 307 | Energy and Material Flows in the Environment and Society | 3hrs
+  ENEC 309 | Environmental Values and Valuation | 3hrs
+  ENEC 312 | Risk-Based International Environmental Decisions | 3hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | 3-4hrs
+  ENEC 350 | Environmental Law and Policy | 3hrs
+  ENEC 351 | Coastal Law and Policy | 3hrs
+  ENEC 352 | Marine Fisheries Ecology | 3hrs
+  ENEC/PLCY 372 | Global Environment: Policy Analysis and Solutions | 3hrs
+  ENEC/PLCY 373 | Confronting Climate Change in the Anthropocene | 3hrs
+  ENEC 380 | Environmental Economics | 3hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 3hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 421 | Textiles: Environmental Impacts, Issues, and Innovations | 3hrs
+  ENEC 432 | Environmental Life Cycle Assessment | 3hrs
+  ENEC 462 | Ecosystem Management | 3hrs
+  ENEC/BUSI 463 | Corporate Environmental Stewardship H | 3hrs
+  ENEC/ENVR 470 | Environmental Risk Assessment | 3hrs
+  ENEC 473 | Business and Finance Fundamentals for Change Makers | 3hrs
+  ENEC 474 | Sustainable Coastal Management | 3hrs
+  ENEC/PLCY 475 | The Political Economy of Food H | 3hrs
+  ENEC 481 | Energy Economics | 3hrs
+  ENEC 485 | Coastal Resource Economics and Policy | 3-4hrs
+  ENEC 491 | Communicating Science in the Anthropocene | 3hrs
+  ENEC 492 | Social Science Research Methods | 3hrs
+  ENEC/PLAN 547 | Energy, Transportation, and Land Use | 3hrs
+  ENEC/MEJO 565 | Environmental Storytelling | 3hrs
+  ENEC/ENVR 570 | Uncertainty, Decisions, and the Environment | 3hrs
+  ENEC 580 | Environmental Markets: Science and Economics | 3hrs
+  ENEC 581 | Water Resource Planning and Policy Analysis | 3hrs
+  ENEC 586 | Water Quality Policies and Planning | 3hrs
+  ENEC/PLAN 641 | Watershed Planning | 3hrs
+  ENEC 675 | Environmental Communication and the Public Sphere | 3hrs
+  ENEC 685 | Environmental and Resource Economics | 3hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  GEOG 237 | Forest, Environment and Society | 3hrs
+  GEOG 435 | Global Environmental Justice | 3hrs
+  GEOG 470 | Political Ecology: Geographical Perspectives | 3hrs
+  PLAN 639 | Complete Streets | 3hrs
+  PLCY/ENEC 371 | Energy Policy | 3hrs
+  PLCY/ENEC 372 | Global Environment: Policy Analysis and Solutions | 3hrs
+  PLCY/ENEC 373 | Confronting Climate Change in the Anthropocene | 3hrs
+
+## Population, Environment, and Development Concentration
+  ANTH/ENEC 238 | Human Ecology of Africa | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 319 | Global Health | 3hrs
+  ANTH 320 | Anthropology of Development | 3hrs
+  ANTH 439 | Political Ecology | 3hrs
+  ANTH 459 | Ecological Anthropology | 3hrs
+  ANTH 539 | Environmental Justice | 3hrs
+  ENEC 266 | Contemporary Africa: Issues in Health, Population, and the Environment | 3hrs
+  ENEC/EMES 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | 3hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | 3-4hrs
+  ENEC 350 | Environmental Law and Policy | 3hrs
+  ENEC 351 | Coastal Law and Policy | 3hrs
+  ENEC 370 | Agriculture and the Environment H | 3hrs
+  ENEC 380 | Environmental Economics | 3hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | 3hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 421 | Textiles: Environmental Impacts, Issues, and Innovations | 3hrs
+  ENEC 485 | Coastal Resource Economics and Policy | 3-4hrs
+  ENEC 491 | Communicating Science in the Anthropocene | 3hrs
+  ENEC 492 | Social Science Research Methods | 3hrs
+  ENEC 580 | Environmental Markets: Science and Economics | 3hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  ENVR 600 | Environmental Health | 3hrs
+  GEOG 222 | Health and Medical Geography | 3hrs
+  GEOG 237 | Forest, Environment and Society | 3hrs
+  GEOG 269 | Human-Environment Interactions in the Galapagos Islands | 3hrs
+  GEOG/ENEC 437 | Social Vulnerability to Climate Change | 3hrs
+  GEOG/ENEC 451 | Population, Development, and the Environment | 3hrs
+  GEOG 452 | Mobile Geographies: The Political Economy of Migration | 3hrs
+  GEOG 457 | Rural Latin America: Agriculture, Environment, and Natural Resources H | 3hrs
+  GEOG 470 | Political Ecology: Geographical Perspectives | 3hrs
+  PLCY/ENEC 372 | Global Environment: Policy Analysis and Solutions | 3hrs
+  PLCY 373 | Confronting Climate Change in the Anthropocene | 3hrs
+  PLCY 475 | The Political Economy of Food H | 3hrs
+
+## Environmental Studies Major, B.A.–Sustainability Track
+NOTE: This major is designed for students who wish to pursue business and policy with an interdisciplinary approach to resiliency and sustainability. This track is appropriate for students wishing to pursue graduate or professional studies in business or policy.
+### Core Requirements
+  ENEC 201 | Introduction to Environment and Society H, F | 4hrs
+  ENEC 307 | Energy and Material Flows in the Environment and Society | 3hrs
+  ENEC 698 | Capstone: Analysis and Solution of Environmental Problems | 3hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+RULE: One course from the following options: 2 3
+  ENEC 330 | Principles of Sustainability H | hrs
+  ENEC/PLCY 373 | Confronting Climate Change in the Anthropocene | hrs
+  ENEC 421 | Textiles: Environmental Impacts, Issues, and Innovations | hrs
+  ENEC 431 | Sustainable Cities: Exploring Ways of Making Cities More Sustainable | hrs
+  ENEC 474 | Sustainable Coastal Management | hrs
+  BUSI 507H | Sustainable Business and Social Enterprise | hrs
+RULE: One course from each of the Pillars of Sustainability, plus one additional course at the 300-level or above in any pillar (4 courses total): 12-15
+### Equity
+  ANTH 306 | Water and Inequality: Anthropological Perspectives | hrs
+  ANTH 439 | Political Ecology | hrs
+  ANTH 539 | Environmental Justice | hrs
+  ENEC 309 | Environmental Values and Valuation | hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+  ENEC 350 | Environmental Law and Policy | hrs
+  ENEC 351 | Coastal Law and Policy | hrs
+  ENEC/GEOG 437 | Social Vulnerability to Climate Change | hrs
+  GEOG 470 | Political Ecology: Geographical Perspectives | hrs
+  GEOG 480 | Liberation Geographies | hrs
+  PHIL/ENEC 368 | Living Things, Wilderness, and Ecosystems: An Introduction to Environmental Ethics H | hrs
+  PLAN 247 | Solving Urban Problems | hrs
+  PLAN 574 | Political Economy of Poverty and Inequality | hrs
+  PLAN 637 | Public Transportation | hrs
+  PLAN 638 | Pedestrian and Bike Transportation | hrs
+  PLAN 639 | Complete Streets | hrs
+  PLCY 373 | Confronting Climate Change in the Anthropocene 2 | hrs
+  SOCI 274 | Advocacy Strategies: Communication Across Movements | hrs
+### Economics
+  BUSI 507 | Sustainable Business and Social Enterprise H | hrs
+  ECON 455 | Environmental Economic Theory | hrs
+  ENEC 380 | Environmental Economics | hrs
+  ENEC/BUSI 463 | Corporate Environmental Stewardship H | hrs
+  ENEC 473 | Business and Finance Fundamentals for Change Makers | hrs
+  ENEC 481 | Energy Economics | hrs
+  ENEC 485 | Coastal Resource Economics and Policy | hrs
+  ENEC 580 | Environmental Markets: Science and Economics | hrs
+  PUBA 787 | Applied Environmental Finance: How to Pay for Environmental Services | hrs
+### Environment
+  ENEC 202I | Introduction to the Environmental Sciences | hrs
+  ENEC/BIOL 256 | Mountain Biodiversity | hrs
+  ENEC/GEOG 264 | Conservation of Biodiversity in Theory and Practice | hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | hrs
+  ENEC 304 | Restoration Ecology | hrs
+  ENEC 324 & 324L | Water in Our World: Introduction to Hydrologic Science and Environmental Problems and Water in Our World Laboratory | hrs
+  ENEC 370 | Agriculture and the Environment H | hrs
+  ENEC 405 | Mountain Preservation | hrs
+  ENEC 420 | Community Design and Green Architecture | hrs
+  ENEC 421 | Textiles: Environmental Impacts, Issues, and Innovations 2 | hrs
+  ENEC 431 | Sustainable Cities: Exploring Ways of Making Cities More Sustainable | hrs
+  ENEC 462 | Ecosystem Management | hrs
+  ENEC 471 | Human Impacts on Estuarine Ecosystems | hrs
+  ENEC 482 | Energy and the Environment: A Coastal Perspective | hrs
+  ENEC 489 | Ecological Processes in Environmental Systems | hrs
+  ENEC/PLAN/ENVR 548 | Sustainable Energy Systems | hrs
+  GEOG 441 | Introduction to Watershed Systems | hrs
+  GEOG/ENEC 451 | Population, Development, and the Environment | hrs
+  EMES/ENEC 433 | Wetland Hydrology | hrs
+  EMES 444/BIOL 456/ENEC 444 | Marine Phytoplankton | hrs
+  EMES/ENEC 448 | Coastal and Estuarine Ecology | hrs
+  PLAN 547 | Energy, Transportation, and Land Use | hrs
+  PLAN 548 | Sustainable Energy Systems | hrs
+RULE: Two courses from one skill area: 6-8
+### Communications and Research
+  COMM/ENEC 375 | Environmental Advocacy | hrs
+  ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates | hrs
+  OR or ENEC 396 | Directed Readings
+  ENEC 491 | Communicating Science in the Anthropocene | hrs
+  ENEC 492 | Social Science Research Methods | hrs
+  ENEC 693H | Honors Research in Environmental Sciences and Studies 1 | hrs
+  OR or ENEC 694H | Honors Project in Environmental Sciences and Studies
+  MEJO 560 | Environmental and Science Journalism H | hrs
+  MEJO 562 | Environmental and Science Documentary Television | hrs
+  MEJO/ENEC 565 | Environmental Storytelling | hrs
+  PLCY 305 | Communicating Under Pressure: Tools for Effective Communication | hrs
+### GIS and Remote Sensing
+  ANTH 419 | Anthropological Application of GIS | hrs
+  ENEC 479 | Landscape Analysis | hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | hrs
+  GEOG 370 | Geographic Information Science | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG 491 | Principles of Geographic Information Systems | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | hrs
+### Analytics
+  BUSI 410 | Business Analytics | hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | hrs
+  ECON 400 | Introduction to Data Science and Econometrics H | hrs
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | hrs
+  ENEC 432 | Environmental Life Cycle Assessment | hrs
+  ENEC 562 | Statistics for Environmental Scientists | hrs
+  PLAN 372 | Introduction to Urban Data Analytics | hrs
+  PLCY 460 | Quantitative Analysis for Public Policy H | hrs
+  STOR 305 | Introduction to Decision Analytics | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+### Programming and Informatics
+  BIOL 222 | Introduction to Programming with Biological Data | hrs
+  COMP 110 | Introduction to Programming H | hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  COMP 210 | Data Structures and Analysis | hrs
+  INLS 161 | Tools for Information Literacy | hrs
+  INLS 382 | Information Systems Analysis and Design | hrs
+  INLS 560 | Introduction to Programming | hrs
+### Additional Requirements
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  MATH 152 | Calculus for Business and Social Sciences F | 3hrs
+  OR or MATH 231 | Calculus of Functions of One Variable I
+  OR or STOR 113 | Decision Models for Business and Economics
+  STOR 120 | Foundations of Statistics and Data Science H, F | 4hrs
+  OR or STOR 155 | Introduction to Data Models and Inference
+  OR or DATA 110 | Introduction to Data Science
+RULE: Enough General Education and free electives to accumulate at least 120 credit hours. 1 varies
+### Total Hours 120
+NOTE: Recommended courses are ENEC 202I , ECON 400 and one of the following courses: ENEC 325 , COMM 375 / ENEC 375 , or PHIL 368 / ENEC 368 .
+NOTE: This course appears on a core requirement list as well as a pillar requirement list, but can only be counted towards one of the two.

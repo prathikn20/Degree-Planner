@@ -1,0 +1,40 @@
+TRACK: Climate_Change_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/climate-change-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  ENVR 275 | Global Climate Change: Interdisciplinary Perspectives (spring semester) | 1hrs
+RULE: One course from the following list: 3
+  GEOG 110 | The Blue Planet: An Introduction to Earth's Environmental Systems H | hrs
+  GEOG 111 | Weather and Climate | hrs
+  ENEC 201 | Introduction to Environment and Society H, F | hrs
+  ENEC 202 | Introduction to the Environmental Sciences | hrs
+RULE: Climate Science and Methods (select two courses from the following list): 6
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | hrs
+  EMES 432 | Paleoclimatology | hrs
+  EMES 434 | Blue Carbon and Coastal Environments | hrs
+  ENEC 530 | Principles of Climate Modeling 1 | hrs
+  GEOG 212 | Environmental Conservation and Global Change | hrs
+  GEOG 410 | Modeling of Environmental Systems | hrs
+  GEOG 412 | Synoptic Meteorology | hrs
+  GEOG 414 | Climate Change | hrs
+  GEOG 416 | Applied Climatology: The Impacts of Climate and Weather on Environmental and Social Systems | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment 1 | hrs
+  PHYS/EMES 108 | Climate and Energy Transitions: Understanding the Forecasts | hrs
+RULE: Human Impacts or Additional Climate Perspectives (select two courses from the following list): 6
+  ENEC/POLI 254 | International Environmental Politics | hrs
+  ENEC 330 | Principles of Sustainability | hrs
+  ENEC 373 | Confronting Climate Change in the Anthropocene | hrs
+  ENEC 471 | Human Impacts on Estuarine Ecosystems 1 | hrs
+  ENVR 575 | Global Climate Change: Science, Impacts, Solutions | hrs
+  GEOG 232 | Agriculture, Food, and Society | hrs
+  GEOG 436 | Governance, Institutions, and Global Environmental Change | hrs
+  GEOG/ENEC 437 | Social Vulnerability to Climate Change | hrs
+  GLBL 413 | Socialist and Decolonial Ecologies 1 | hrs
+  HIST 204 | Global Environmental Histories: People, Climate, and Landscapes | hrs
+  PLAN 655 | Planning for Natural Hazards and Climate Risk | hrs
+  PLAN 656 | Climate Change Impacts and Adaptation | hrs
+  PLCY 373 | Confronting Climate Change in the Anthropocene | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the minor. Please review prerequisite information carefully when planning your course selection.

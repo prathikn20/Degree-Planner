@@ -1,0 +1,45 @@
+TRACK: Persian_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/persian-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The undergraduate minor in Persian consists of four courses. Students may complete either two language courses and two culture courses, or three language courses and one culture course.
+### Core Requirements
+RULE: Two language courses beyond PRSN 203 (the first semester of intermediate Persian), chosen from: 6
+  PRSN 204 | Intermediate Persian II | hrs
+  PRSN 305 | Persian Short Stories | hrs
+  PRSN 306 | Persian Language through Literature and Film | hrs
+RULE: One course chosen from among the following: 3
+  ASIA/PWAD 69 | First-Year Seminar: Wars and Veterans: Iran, Iraq, and Afghanistan | hrs
+  HIST 74 | First-Year Seminar: Emperors, Courts, and Consumption: The Mughals of India | hrs
+  ASIA 124 | Iranian Post-1979 Cinema | hrs
+  ASIA 125I | Transnational Lives: Culture, Film, and Fiction in the Iranian and Indian Diasporas | hrs
+  ASIA 126 | Introduction to Persian Literature | hrs
+  ASIA/WGST 127 | Iranian Women Writers | hrs
+  ASIA/HIST 135 | History of the Indian Subcontinent to 1750 | hrs
+  ASIA/HIST 138 | History of Muslim Societies to 1500 | hrs
+  ASIA/HIST 139 | History of Muslim Societies since 1500 | hrs
+  HIST 163 | Modern Central Asia H | hrs
+  ASIA/RELI 180 | Islam and Muslim Life before 1500 | hrs
+  ASIA/RELI 181 | Islam and Muslim Life since 1500 | hrs
+  ASIA/CMPL 256 | Love in Classical Persian Poetry | hrs
+  ASIA/CMPL 258 | Iranian Prison Literature | hrs
+  ASIA/HIST 276 | The Modern Middle East | hrs
+  ASIA/WGST 329 | Middle East Women Writers | hrs
+  ASIA/CMPL 359 | Literary Diasporas of the Middle East | hrs
+  SOCI 419 | Sociology of the Islamic World | hrs
+  ASIA 431 | Persian Sufi Literature | hrs
+  ASIA 435/CMPL 535/PWAD 435 | The Cinemas of the Middle East and North Africa | hrs
+  ASIA/CMPL 442 | Postcolonial Literature of the Middle East | hrs
+  ASIA/GEOG/WGST 447 | Gender, Space, and Place in the Middle East | hrs
+  ASIA/WGST 471 | Gender and Sexuality in Middle Eastern Literature | hrs
+  RELI 480 | Modern Muslim Literatures | hrs
+  ASIA/HIST 536 | Revolution in the Modern Middle East | hrs
+  ASIA/HIST/WGST 537 | Women in the Middle East | hrs
+  ASIA/HIST 538 | The Middle East and the West | hrs
+  ASIA/RELI 581 | Sufism | hrs
+  ASIA/RELI 582 | Islam and Islamic Art in South Asia | hrs
+  ASIA/RELI 583 | Religion and Culture in Iran, 1500-Present | hrs
+RULE: A fourth course chosen from either the language or culture list above. 3
+NOTE: Placement credit (PL) may not be used to meet minor requirements.

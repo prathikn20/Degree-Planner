@@ -1,0 +1,15 @@
+TRACK: Classical_Humanities_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/classical-humanities-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: One of the following: 3
+  CLAR 244 | Greek Art and Archaeology | hrs
+  CLAR 247 | Roman Art and Archaeology | hrs
+  CLAS 121 | The Greeks H | 3hrs
+  OR or CLAS 122 | The Romans
+  CLAS 131 | Classical Mythology H | 3hrs
+RULE: Two additional courses: any CLAR or CLAS course numbered above 132 or any GREK or LATN course not being used to fulfill the global/foreign language General Education requirement 6
+NOTE: Department of Classics course descriptions include:

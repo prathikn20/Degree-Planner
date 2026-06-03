@@ -1,0 +1,18 @@
+TRACK: Geography_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/geography-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: To minor requires five geography courses.
+### Core Requirements
+RULE: Any two core courses: 6
+  GEOG 110 | The Blue Planet: An Introduction to Earth's Environmental Systems H | hrs
+  GEOG 111 | Weather and Climate | hrs
+  GEOG 120 | World Regional Geography | hrs
+  GEOG 121 | Geographies of Globalization | hrs
+  GEOG 130 | Development and Inequality: Global Perspectives F | hrs
+  GEOG 370 | Introduction to Geographic Information | hrs
+  GEOG 697 | Capstone Seminar in Geographic Research | hrs
+RULE: Three GEOG elective courses 9
+NOTE: Elective courses may be any on the departmental list , but students are encouraged to take higher-numbered courses. Students wishing more information should consult their academic advisor or the geography director of undergraduate studies.

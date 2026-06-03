@@ -1,0 +1,42 @@
+TRACK: Asian_Studies_BA_Korean
+URL: https://catalog.unc.edu/undergraduate/programs-study/asian-studies-major-ba-korean-concentration/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The eight core courses (24 credit hours) consist of two to four language courses and four to six literature and culture courses, as described below.
+### Core Requirements
+RULE: At least two Korean language courses beyond KOR 204 . 1 6-12
+  KOR 305 | Advanced Korean I | hrs
+  KOR 306 | Advanced Korean II | hrs
+  KOR 407 | Modern Korean Literature and Culture | hrs
+  KOR 408 | Changes and Continuities in Korean History | hrs
+  KOR 409 | Korean Through Current Affairs | hrs
+  KOR 490 | Topics in Korean Language and Literature | hrs
+RULE: At least one introductory-level course chosen from the following list: 2 3-6
+  ASIA 72 | First-Year Seminar: Transnational Korea: Literature, Film, and Popular Culture | hrs
+  KOR 150 | History, Memory, and Reality in Contemporary Korea | hrs
+  KOR 151 | Education and Social Changes in Contemporary Korea | hrs
+  KOR 152 | Audiovisual Korea: Music, Art, and Performance from Calligraphy to K-pop | hrs
+RULE: At least two Korean literature and culture courses chosen from the following list: 6-15
+  KOR/CMPL 232 | Imagining the City in Modern Korea: Text, Image, Space | hrs
+  KOR/CMPL/WGST 237 | Rebel, Lover, Martyr: Gender and Sexuality in North and South Korean Screen Cultures | hrs
+  KOR 327 | Global Korea: Migration, Identity, and Community in the Korean Diaspora | hrs
+  KOR 346/CMPL 246 | Body Politics in Modern Korean Literature H | hrs
+  ASIA 350 | Transpacific Narratives: Oral Histories of Asian America | hrs
+  ASIA 427/CMPL 527/PWAD 427 | Cold War Culture in East Asia: Transnational and Intermedial Connections | hrs
+  KOR 447/CMPL 547 | Documenting Diasporas: Korean Diasporas in Films and Documentaries | hrs
+RULE: Other major courses 0-9
+  IDST 123I | Borders and Boundaries | hrs
+  ASIA 229 | Breakdancers, Vocaloids, and Gamers: East Asian Youth Cultures | hrs
+  ASIA 342 | Cultural Productions of East Asia | hrs
+  ASIA/HIST/WGST 418 | Family and Gender in Early Modern China and Korea | hrs
+  ASIA/ECON 469 | Asian Economic Systems | hrs
+  ASIA 692H | Senior Honors Thesis II | hrs
+### Additional Requirements
+RULE: Korean through level 4 4
+NOTE: Students whose initial language placement is above KOR 305 should consult the department.
+NOTE: No more than two introductory courses (6 hours) may count toward the major. It is recommended that students take at least one of these courses either prior to or concurrent with upper-level Korean literature and culture classes.
+NOTE: Approved courses taken in UNC–Chapel Hill-sponsored study abroad programs or taken from another institution may count in the concentration. No more than one first-year seminar may be counted among the eight major courses.
+NOTE: Placement credit (PL) may not be used to meet core requirements for the concentration.
+NOTE: With the approval of the associate chair of Asian and Middle Eastern Studies, a student may count a course in directed readings ( KOR 496 ) in the concentration in Korean studies. To register, a student must obtain the approval of the associate chair and the faculty member who will supervise the project.

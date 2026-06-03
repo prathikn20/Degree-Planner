@@ -1,0 +1,253 @@
+TRACK: Physics_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/physics-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+
+## Physics Major, B.A. – Standard Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+RULE: Nine additional credits chosen from ASTR (202 or numbered above 300) and PHYS (numbered above 200) 3 9
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+  CHEM 101 | General Descriptive Chemistry I H, F | 3hrs
+  CHEM 101L | Quantitative Chemistry Laboratory I | 1hrs
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: Mentored research courses ( PHYS 295 , PHYS 395 , and PHYS 293 ) may only fulfill a maximum of 3 credit hours towards this requirement.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Astronomy (ASTR) and Physics (PHYS) course descriptions .
+
+## Physics Major, B.A. – Astronomy Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+RULE: Six additional credits chosen from ASTR (numbered above 300) 6
+RULE: Three additional credits chosen from: 3
+RULE: ASTR (numbered above 300)
+  PHYS 231 | Physical Computing 2, H | hrs
+  PHYS 295 | Research with Faculty Mentor I | hrs
+  PHYS 395 | Research with Faculty Mentor II | hrs
+  PHYS 691H | Senior Honor Thesis Research I | hrs
+  PHYS 692H | Senior Honor Thesis Research II | hrs
+### Additional Requirements
+RULE: One of the following courses: 3
+  ASTR 100 | Understanding the Universe | hrs
+  OR or ASTR 101 | Introduction to Astronomy:  The Solar System
+  OR or ASTR 102 | Introduction to Astronomy:  Stars, Galaxies & Cosmology
+  OR or ASTR 103 | Alien Life in the Universe
+  ASTR 100L | Astronomy with Skynet: Our Place in Space | 1hrs
+  OR or ASTR 111 | Educational Research in Radio Astronomy
+  ASTR 202 | Introduction to Astrophysics 1 | 3hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Astronomy (ASTR) and Physics (PHYS) course descriptions .
+
+## Physics Major, B.A. – Computational Physics Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 332 | Numerical Techniques for the Sciences II 1 | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+RULE: Three additional credits chosen from: 3
+  PHYS/COMP 447 | Quantum Computing | hrs
+  COMP 301 | Foundations of Programming | hrs
+RULE: Three additional credits chosen from: 3
+  ASTR 202 | Introduction to Astrophysics 1 | hrs
+RULE: ASTR (numbered above 300)
+RULE: PHYS (numbered above 200) 3
+RULE: COMP (numbered above 420)
+  MATH 347 | Linear Algebra for Applications F | hrs
+  OR or MATH 577 | Linear Algebra
+  STOR 435 | Introduction to Probability H | hrs
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+  COMP 110 | Introduction to Programming H | 3hrs
+  COMP 210 | Data Structures and Analysis | 3hrs
+  COMP 283 | Discrete Structures H | 3hrs
+  OR or MATH 381 | Discrete Mathematics
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: PHYS 448 , PHYS 594 , and PHYS 632 are recommended.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy
+NOTE: Astronomy (ASTR) and Physics (PHYS) course descriptions .
+NOTE: Computer Science (COMP) course descriptions .
+
+## Physics Major, B.A. – Energy Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 231 | Physical Computing H | 4hrs
+  OR or PHYS 451 | Electronics I
+  PHYS 381 | Renewable Electric Power Systems | 3hrs
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS 441 | Thermal Physics 1 | 3hrs
+  ENEC 2--- | ENEC 200-Level Elective (One ENEC course numbered 200 or above) | 3hrs
+  ENEC 3--- | ENEC 300-Level Elective (Two ENEC courses numbered 300 or above) 3 | 6hrs
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: ENEC 415 , ENEC 548 , and ENEC 698 are highly recommended. Additionally, PHYS 293 could potentially fulfill one of these course requirements. Please consult with one of our department advisors for confirmation and guidance regarding course selections and requirements.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Physics (PHYS) course descriptions .
+
+## Physics Major, B.A. – Medical and Biological Physics Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS 405 | Biological Physics | 3hrs
+  PHYS 461 | Introduction to Medical Physics | 3hrs
+  OR or PHYS 586 | Introduction to Biomedical Imaging Science
+### Additional Requirements
+  BIOL 101 | Principles of Biology H, F | 3hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 | General Descriptive Chemistry II H, F | 3hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+RULE: Three additional credits chosen from: 3
+RULE: BIOL (numbered above 200)
+  CHEM 261 | Introduction to Organic Chemistry I H | hrs
+  CHEM 262 | Introduction to Organic Chemistry II H | hrs
+  CHEM 430 | Introduction to Biological Chemistry H | hrs
+RULE: PHYS (numbered above 200) 3
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: PHYS 295 and PHYS 395 with research projects in medical and biological physics, and Introduction to Magnetic Resonance ( PHYS 529 ) are recommended.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Biology (BIOL) course descriptions .
+NOTE: Chemistry (CHEM) course descriptions .
+NOTE: Physics (PHYS) course descriptions .
+
+## Physics Major, B.A. – Quantitative Finance Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS/BMME 441 | Thermal Physics 1 | 3hrs
+  OR or CHEM 481 | Physical Chemistry I
+RULE: Three additional credits chosen from the following options 3 3
+  BUSI 407 | Financial Accounting and Analysis 3 | hrs
+  BUSI 410 | Business Analytics | hrs
+  BUSI 584 | Financial Modeling | hrs
+RULE: MATH courses numbered above 200
+RULE: PHYS courses numbered above 200
+RULE: COMP courses numbered above 200
+### Additional Requirements
+  BUSI 408 | Corporate Finance 4 | 3hrs
+  BUSI 580 | Investments H | 3hrs
+  BUSI 588 | Introduction to Derivative Securities and Risk Management 5, H | 1.5hrs
+  BUSI 589 | Fixed Income 5, H | 1.5hrs
+  BUSI 600 | Risk Management 5 | 1.5hrs
+  BUSI 688 | Applied Trading Strategies 5, H | 1.5hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: Students are strongly encouraged to take BUSI 407 .
+NOTE: ECON 101 and one of BUSI 101, BUSI 102 , or BUSI 107 are prerequisites for BUSI 408 , but these prerequisites may be waived for students in the Quantitative Finance program.
+NOTE: Half-semester course.
+NOTE: Students must maintain a minimum cumulative GPA of at least 2.85. Students majoring in the quantitative finance option cannot pursue the minor in business.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Business Administration (BUSI) course descriptions .
+NOTE: Mathematics (MATH) course descriptions .
+NOTE: Physics (PHYS) course descriptions .
+
+## Physics Major, B.A. – Engineering Physics Option
+### Core Requirements
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+  PHYS 281L | Experimental Techniques in Physics | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 201 | Basic Mechanics 2 | 3hrs
+  OR or PHYS 401 | Mechanics I
+  PHYS 211 | Intermediate Electromagnetism 1 | 3hrs
+  OR or PHYS 412 | Electromagnetism II
+  PHYS 231 | Physical Computing H | 4hrs
+  PHYS 421 | Introduction to Quantum Mechanics 2 | 3hrs
+  PHYS 441 | Thermal Physics | 3hrs
+  PHYS 451 | Electronics I | 4hrs
+  PHYS 481L | Advanced Laboratory I | 2hrs
+RULE: Six additional credits chosen from the following options 3 6
+  PHYS 395 | Research with Faculty Mentor II 4 | hrs
+  PHYS 447 | Quantum Computing | hrs
+  PHYS 452 | Electronics II | hrs
+  PHYS 471 | Physics of Solid State Electronic Devices | hrs
+  OR or PHYS 573 | Introductory Solid State Physics
+  PHYS 515 | Optics | hrs
+  OR or APPL 430 | Optoelectronics from Materials to Devices
+  APPL 463 | Bioelectronic Materials | hrs
+  BMME 365 | Systems and Signals | hrs
+  BMME 385 | Bioinstrumentation | hrs
+  BMME 575 | Practical Machine Learning for Biosignal Analysis | hrs
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+NOTE: Fall course.
+NOTE: Spring course.
+NOTE: With at least one PHYS course
+NOTE: With a research project in Engineering Physics
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.
+NOTE: Mathematics (MATH) course descriptions .
+NOTE: Physics (PHYS) course descriptions .

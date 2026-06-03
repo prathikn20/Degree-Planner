@@ -1,0 +1,12 @@
+TRACK: Jewish_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/jewish-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor consists of five courses.
+### Core Requirements
+  JWST 100/RELI 123 | Introduction to Jewish Studies (core course) | 3hrs
+RULE: Four (4) additional Jewish Studies (JWST) elective courses, with at least one course numbered 400 or higher. 12
+NOTE: For students minoring in both Jewish studies and religious studies, only two courses can overlap between the two minors.
+NOTE: Although this minor is housed in the Department of Religious Studies, the director of Jewish studies is responsible for advising all students who minor in Jewish studies.

@@ -1,0 +1,108 @@
+TRACK: Naval_Science_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/naval-science-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: The minor includes 14 hours of coursework selected from among the following courses: 14
+  NAVS 101 | Introduction to Naval Science | hrs
+  NAVS 201 | Naval Leadership and Management | hrs
+  NAVS 202 | Navigation | hrs
+  NAVS 202L | Navigation Laboratory | hrs
+  NAVS 301 | Naval Ships Engineering Systems | hrs
+  NAVS 302 | Naval Weapons Systems | hrs
+  NAVS 311 | Evolution of Warfare | hrs
+  NAVS 401 | Naval Operations | hrs
+  NAVS 402 | Naval Leadership and Ethics | hrs
+  NAVS 411 | Amphibious Warfare | hrs
+  HIST/PWAD 212 | History of Sea Power | hrs
+  PHIL/POLI/PWAD 272 | The Ethics of Peace, War, and Defense | hrs
+
+## NROTC Scholarship Requirements
+NOTE: Navy and Marine National Scholarship students must complete the following requirements:
+### Two English courses from the following options: 6
+  ENGL 100 | Basic Writing | hrs
+  ENGL 105 | English Composition and Rhetoric | hrs
+  ENGL 123 | Introduction to Fiction H | hrs
+  ENGL 124 | Contemporary Literature | hrs
+  ENGL 125 | Introduction to Poetry | hrs
+  ENGL 127 | Writing about Literature | hrs
+  ENGL 130 | Introduction to Fiction Writing | hrs
+  ENGL 131 | Introduction to Poetry Writing | hrs
+  ENGL 138 | Introduction to Creative Nonfiction H | hrs
+  ENGL 149 | Digital Composition | hrs
+  ENGL 213 | Grammar of Current English | hrs
+  ENGL 230 | Milton H | hrs
+  ENGL 283 | Life Writing H | hrs
+  ENGL 301 | Professional Writing in the Arts | hrs
+  ENGL 305 | Advanced Legal Communication | hrs
+  ENGL 402 | Investigations in Academic Writing and Writing Centers | hrs
+### One course in American history or national security policy from the following options: 3
+  ASIA 570 | The Vietnam War | hrs
+  COMM 355 | Terrorism and Political Violence | hrs
+  HIST 128 | American History since 1865 | hrs
+  HIST 140 | The World since 1945 | hrs
+  HIST 242 | United States-Latin American Relations | hrs
+  HIST/PWAD 248 | Guerrillas and Counterinsurgencies in Latin America | hrs
+  HIST/PWAD 266 | Global History of Warfare | hrs
+  HIST 458 | Europe and the World Wars, 1914-1945 | hrs
+  POLI 272 | The Ethics of Peace, War, and Defense | hrs
+  PWAD 213 | Air Power and Modern Warfare | hrs
+  PWAD 250 | Introduction to Peace and Security Studies | hrs
+  PWAD 281 | The Pacific War, 1937-1945: Its Causes and Legacy | hrs
+  PWAD 352 | The History of Intelligence Operations | hrs
+  PWAD 368 | U.S. War and Society to 1920 | hrs
+  PWAD 369 | U.S. War and Society Since 1920 | hrs
+  PWAD 373 | The United States in World War II | hrs
+  PWAD 443 | American Foreign Policy: Formulation and Conduct | hrs
+  PWAD 444 | Terrorism and International Peace | hrs
+  PWAD 457 | International Conflict Processes | hrs
+### One course in world culture and regional studies from the following options: 3
+  AAAD 101 | Introduction to Africa | hrs
+  AAAD 301 | Contemporary China-Africa Relations | hrs
+  AAAD 414 | Senegalese Society and Culture | hrs
+  ANTH 280 | Anthropology of War and Peace | hrs
+  ARAB 150 | Introduction to Arab Cultures | hrs
+  ASIA 131 | Southeast Asia before 1800 through Digital History | hrs
+  ASIA 133 | Introduction to Chinese History | hrs
+  ASIA 134 | Modern East Asia | hrs
+  ASIA 135 | History of the Indian Subcontinent to 1750 | hrs
+  ASIA 136 | History of India, Pakistan, and Bangladesh: South Asia since 1750 | hrs
+  ASIA 138 | History of Muslim Societies to 1500 | hrs
+  ASIA 139 | History of Muslim Societies since 1500 | hrs
+  ASIA 150 | Asia: An Introduction | hrs
+  ASIA 152 | Survey of South Asian Cultural History | hrs
+  ASIA 180 | Islam and Muslim Life before 1500 | hrs
+  ASIA 181 | Islam and Muslim Life since 1500 | hrs
+  ASIA 265 | Eastern Asia | hrs
+  ASIA 267 | South Asia | hrs
+  ASIA 277 | The Conflict over Israel/Palestine | hrs
+  ASIA 282 | China in the World | hrs
+  ASIA 288 | Modern Japan | hrs
+  ASIA 375 | Memory, Massacres, and Monuments in Southeast Asia | hrs
+  ASIA 429 | Culture and Power in Southeast Asia | hrs
+  ASIA 536 | Revolution in the Modern Middle East | hrs
+  CHIN 150 | Introduction to Chinese Civilization | hrs
+  GEOG 448 | Transnational Geographies of Muslim Societies | hrs
+  HIST 130 | Modern African History | hrs
+  HIST 133 | Introduction to Chinese History | hrs
+  HIST 136 | History of India, Pakistan, and Bangladesh: South Asia since 1750 | hrs
+  HIST 138 | History of Muslim Societies to 1500 | hrs
+  HIST 139 | History of Muslim Societies since 1500 | hrs
+  HIST 162 | Russia under the Last Tsars and Soviet Commissars | hrs
+  HIST 203 | Empires and Cultures in the Modern World | hrs
+  HIST 260 | From Kings to Communists: East-Central Europe in the Modern Era H | hrs
+  HIST 276 | The Modern Middle East | hrs
+  JAPN 231 | Ancient and Medieval Japanese History and Culture | hrs
+  JAPN 246 | Early Modern Japanese History and Culture | hrs
+  JAPN 375 | The Culture of Modern, Imperial Japan, 1900-1945 | hrs
+  KOR 150 | History, Memory, and Reality in Contemporary Korea | hrs
+  KOR 151 | Education and Social Changes in Contemporary Korea | hrs
+  POLI 130 | Introduction to Comparative Politics H, F | hrs
+  POLI 237 | The Politics of China | hrs
+  POLI 452 | Africa and International Conflict | hrs
+  RELI 180 | Islam and Muslim Life before 1500 | hrs
+  RELI 181 | Islam and Muslim Life since 1500 | hrs
+  SOCI 419 | Sociology of the Islamic World | hrs
+### Six hours of physics-based calculus and six hours of physics at or above MATH 231 and PHYS 118 12

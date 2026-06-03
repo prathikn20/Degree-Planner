@@ -1,0 +1,47 @@
+TRACK: Heritage_and_Global_Engagement_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/heritage-global-engagement-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Select five (5) courses from the following list. At least one course must involve engaged anthropological research. 1 15
+  ANTH 54 | First-Year Seminar: The Indians' New Worlds: Southeastern Histories from 1200 to 1800 | hrs
+  ANTH 60 | First-Year Seminar: Crisis & Resilience: Past and Future of Human Societies H | hrs
+  ANTH 62 | First-Year Seminar: Indian Country Today | hrs
+  ANTH 63 | First-Year Seminar: The Lives of Others: Exploring Ethnography 1 | hrs
+  ANTH 64 | First-Year Seminar: Public Archaeology in Bronzeville, Chicago's Black Metropolis 1 | hrs
+  ANTH 120 | Anthropology through Expressive Cultures | hrs
+  ANTH 121 | Ancient Cities of the Americas | hrs
+  ANTH 142 | Local Cultures, Global Forces 1, H | hrs
+  ANTH 144 | Archaeology and the Media | hrs
+  ANTH 145 | Introduction to World Prehistory | hrs
+  ANTH 151 | Anthropological Perspectives on Food and Culture | hrs
+  ANTH/ENGL/FOLK 202 | Everyday Cultures: Folklore in America | hrs
+  ANTH 210 | Global Issues and Globalization | hrs
+  ANTH 231 | The Inca and Their Ancestors: The Archaeology of Andean South America | hrs
+  ANTH 232 | Ancestral Maya Civilizations H | hrs
+  ANTH 233 | Archaeology of Ancient Turkey | hrs
+  ANTH 240 | Action Research 1 | hrs
+  ANTH 248 | Anthropology and Public Interest 1 | hrs
+  ANTH 250 | Archaeology of North America H | hrs
+  ANTH 252 | Archaeology of Food | hrs
+  ANTH 259 | Culture and Identity 1 | hrs
+  ANTH 284 | Culture and Consumption 1 | hrs
+  ANTH 330 | Melancholy Japan: Myth, Memory, and Everyday Life | hrs
+  ANTH 331 | The Anthropology of Memory 1 | hrs
+  ANTH 356 | Artisans and Global Culture: Economic, Historical, Experiential, and Cross-Cultural Dimensions 1, H | hrs
+  ANTH 361 | Community in India and South Asia | hrs
+  ANTH 375 | Memory, Massacres, and Monuments in Southeast Asia | hrs
+  ANTH 406 | Native Writers | hrs
+  ANTH 420 | Public Archaeology | hrs
+  ANTH 425 | Public Archaeology Practicum 1 | hrs
+  ANTH 429 | Culture and Power in Southeast Asia | hrs
+  ANTH 445 | Migration and Health 1 | hrs
+  ANTH 452 | The Past in the Present | hrs
+  ANTH 454 | The Archaeology of African Diasporas | hrs
+  ANTH 461 | Colonialism and Postcolonialism: History and Anthropology 1 | hrs
+  ANTH 477 | Visual Anthropology | hrs
+  ANTH 550 | Archaeology of the American South | hrs
+  ANTH 625 | Ethnography and Life Stories 1 | hrs
+  ANTH 674 | Issues in Cultural Heritage 1 | hrs

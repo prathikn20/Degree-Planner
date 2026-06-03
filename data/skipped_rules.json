@@ -22,11 +22,13 @@
   ],
   "Business_Administration_BSBA": [
     "19.5 credit hours of business electives 2, 4, 5, 6",
-    "At least five courses outside the Kenan\u2013Flagler Business School and any additional business or nonbusiness courses needed to complete a minimum of 120 credit hours, including transfer credit, to graduate"
+    "Students must complete at least 15 hours in coursework taken outside the Kenan\u2013Flagler Business School. General Education courses (IDEAs in Action) are specifically excluded from counting toward these 15 hours. Additional coursework may be taken as needed to reach the 120\u2011hour requirement."
   ],
   "Earth_and_Marine_Sciences_BS": [
     "Select three EMES specialization courses numbered 300 and higher",
-    "Six credits of a capstone experience:"
+    "Six credits of a capstone experience:",
+    "Select four EMES specialization courses numbered 300 and higher",
+    "Three credits of a Applied Learning Experience:"
   ],
   "Environmental_Science_BS": [
     "Two courses from one analytical skills option:",
@@ -75,12 +77,11 @@
     "Two courses from one of the following skills categories:",
     "Five courses chosen from one of the concentrations list below",
     "Enough General Education and free electives to accumulate at least 120 credit hours. 2",
-    "Two courses from one skill area and one additional course from a second skill (3 courses total):",
+    "Two courses from one skill area:",
     "Enough General Education and free electives to accumulate at least 120 credit hours. 1"
   ],
   "Peace_War_and_Defense_BA": [
-    "Four courses from one concentration (see course lists below) 1",
-    "Two courses chosen from outside the area of concentration (see course lists below) 1"
+    "Four courses from one concentration (see course lists below) 1"
   ],
   "Communication_Studies_BA": [
     "The 10 courses (30 hours) should also be apportioned in the following ways:",
@@ -166,7 +167,7 @@
     "Three advanced polymer chemistry electives from:"
   ],
   "Civic_Life_and_Leadership_Minor": [
-    "Two electives, from three categories of courses listed below (the two electives must not be from the same category)"
+    "Select one elective course from each of the three categories listed below (three courses total)."
   ],
   "Classics_BA_Classical_Archaeology": [
     "Three courses in one of the following configurations:"
@@ -196,7 +197,7 @@
   ],
   "Environmental_Health_Sciences_BSPH": [
     "Two additional courses from biology, chemistry, computer programming, or phsycis. At least one course from two different categories. A grade of C or better required. See course selection below.",
-    "All students should complete two advanced undergraduate or graduate level courses (400-level or above) that provide in-depth study of environmental health.  Courses should be listed or cross-listed as ENVR courses. ENVR\u00a0400 , ENVR\u00a0403 , ENVR\u00a0430 , ENVR\u00a0593 , ENVR\u00a0600 , ENVR\u00a0601 , ENVR\u00a0695 , ENVR\u00a0691H and ENVR\u00a0692H are excluded."
+    "All students should complete two advanced undergraduate or graduate level courses (400-level or above) that provide in-depth study of environmental health.  Courses should be listed or cross-listed as ENVR courses. ENVR\u00a0400 , ENVR\u00a0403 , ENVR\u00a0430 , ENVR\u00a0593 , ENVR\u00a0600 , ENVR\u00a0601 , ENVR\u00a0695 , ENVR\u00a0691H and ENVR\u00a0692H are excluded. All ENVR special topics courses ( ENVR\u00a0690 , ENVR\u00a0890 ) must be approved to count as an advanced course elective. Please contact the academic coordinator to start the approval process"
   ],
   "Environmental_Justice_Minor": [
     "One elective course from List One (see below)",
@@ -206,7 +207,7 @@
     "Any two core courses:"
   ],
   "Geological_Sciences_BA_Earth_Science": [
-    "At least three geology and/or allied science electives not otherwise required for the major (see below chart)",
+    "At least three EMES and/or allied science electives not otherwise required for the major (see below chart)",
     "STOR --- | any Statistics and Operations Research course STOR\u00a0155 or above"
   ],
   "Germanic_and_Slavic_BA_German_Studies": [
@@ -226,7 +227,7 @@
     "Four courses from the concentration lists or the elective list (see lists below)"
   ],
   "Interdisciplinary_Studies_BA": [
-    "Eight courses chosen from at least three departments and which must be appropriate for juniors and seniors majoring in those departments. 1, 2, 3"
+    "Ten courses chosen from at least three departments and which must be appropriate for juniors and seniors majoring in those departments. 1, 2, 3"
   ],
   "Islamic_and_Middle_Eastern_Studies_Minor": [
     "Three of the five courses in the minor (including the required courses listed above) must be selected from one of two subject categories\u2014either Islamic studies or Middle Eastern studies\u2014as indicated by the two lists of approved courses below."
@@ -240,7 +241,7 @@
     "One course in social sciences or Latina/o communities and cultural space (see list below)"
   ],
   "Media_and_Journalism_BA": [
-    "Students must take one elective MEJO course of their choice to meet the 39-hour MEJO minimum. This can be any course offered by the school (including MEJO\u00a089 and MEJO\u00a0101 ), regardless of area of study, except MEJO\u00a0393 . Students may take additional courses in this category, but doing so will exceed the 39-hour minimum.",
+    "Students must take one elective MEJO course of their choice to meet the 39-hour MEJO minimum. This can be any course offered by the school (including MEJO\u00a089 and MEJO\u00a0101 ), regardless of concentration, except MEJO\u00a0393 . Students may take additional courses in this category, but doing so will exceed the 39-hour minimum.",
     "At least one course 3"
   ],
   "Middle_Eastern_Languages_Minor": [

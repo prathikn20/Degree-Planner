@@ -1,0 +1,161 @@
+TRACK: Data_Science_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/data-science-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Foundations of Data and Information (two courses):
+  DATA 110 | Introduction to Data Science H | 3hrs
+RULE: Select one of the following options: 3
+  DATA 130 | Critical Data Literacy | hrs
+  ENGL 480 | Digital Humanities History and Methods | hrs
+  ENGL 482 | Metadata, Mark-up, and Mapping: Understanding the Rhetoric of Digital Humanities | hrs
+  INLS 201 | Foundations of Information Science | hrs
+  SOCI 318 | Computational Sociology | hrs
+RULE: Responsible Data Science (one course):
+  DATA 120 | Ethics of AI and Societal Decision Making H | 3hrs
+RULE: Computational Thinking (two courses):
+  COMP 110 | Introduction to Programming H | 3hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  DATA 140 | Introduction to Data Structures and Management | 3hrs
+RULE: Mathematical and Statistical Foundations (four courses):
+  MATH 210 | Mathematical Tools for Data Science | 3hrs
+  OR or MATH 347 | Linear Algebra for Applications
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | 4hrs
+  STOR 320 | Methods and Models of Data Science | 3-4hrs
+  OR or STOR 455 | Methods of Data Analysis
+RULE: Communication (select one course from the following options): 3
+  COMM 113 | Public Speaking | hrs
+  COMM 171 | Argumentation and Debate | hrs
+  DATA 150 | Communication for Data Scientists | hrs
+  ENGL 119 | Picture This: Principles of Visual Rhetoric | hrs
+  ENGL 303 | Scientific and Technical Communication | hrs
+  ENGL 411 | Composing for Clients: Technical Communication Practicum | hrs
+  GEOG 115 | Geospatial Technologies, Maps, and Society | hrs
+  GEOG 415 | Communicating Important Ideas | hrs
+  INLS 541 | Information Visualization | hrs
+  MEJO 102 | Future Vision: Exploring the Visual World | hrs
+RULE: Four additional courses from a concentration area (see below) 12
+
+## Concentrations
+
+## Data Journalism
+NOTE: This concentration equips students to understand how to employ data science to find and tell hidden stories that inform the public discourse, civic life and democracy. Students will learn how to acquire, clean, analyze and present data in multiple media simply and clearly for a general audience of citizens. The concentration combines foundational data science competencies with multimedia web development, data visualization and news reporting skills and ethics to prepare students to meet the increasingly complex and quantitative needs required by professional journalists.
+  MEJO 487 | Intermediate Interactive Media 1 | 3hrs
+  MEJO 570 | Data Driven Journalism | 3hrs
+RULE: Select one of the following options: 3
+  GEOG 215 | Introduction to Spatial Data Science | hrs
+  LING 460 | Making Sense of Big Data: Textual Analysis with R | hrs
+  POLI 209 | Analyzing Public Opinion H | hrs
+  STOR 538 | Sports Analytics 1 | hrs
+RULE: Select one of the following options: 3
+  MEJO 459 | Community Journalism 1 | hrs
+  MEJO 553 | Advanced Reporting 1 | hrs
+  MEJO 625 | Media Hub H | hrs
+  MEJO 630 | Business News Wire H | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Economic Analysis
+NOTE: This concentration prepares students for careers in quantitatively focused occupations at the intersection of economics and data science. The courses offer a rigorous foundation for econometric and data-science methodologies commonly used in economic analysis, as well as requiring an understanding of the application of these methods in at least one field within economics.
+  ECON 370 | Economic Applications of Data Science 1 | 3hrs
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | 4hrs
+  ECON 470 | Econometrics 1, H | 3hrs
+RULE: Select one of the following options: 3
+  ECON 423 | Financial Markets and Economic Fluctuations 1, H | hrs
+  ECON 425 | Financial Economics 1 | hrs
+  ECON 445 | Industrial Organization 1 | hrs
+  ECON 450 | Health Economics: Problems and Policy 1 | hrs
+  ECON 480 | Labor Economics 1 | hrs
+  ECON 522 | Macroeconomic Analysis of the Labor Market 1 | hrs
+  ECON 525 | Advanced Financial Economics 1 | hrs
+  ECON 545 | Advanced Industrial Organization 1 | hrs
+  ECON 550 | Advanced Health Econometrics 1 | hrs
+  ECON 551 | Economics of Education 1 | hrs
+  ECON 552 | The Economics of Health Care Markets and Policy 1 | hrs
+  ECON 571 | Advanced Econometrics 1 | hrs
+  ECON 573I | Machine Learning and Econometrics 1 | hrs
+  ECON 575 | Applied Time Series Analysis and Forecasting 1 | hrs
+  ECON 580 | Advanced Labor Economics 1 | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Quantitative Language Science
+NOTE: This concentration explores how data-science methods including statistical, mathematical, and computational methods are applied to study theoretical language science/linguistics, and natural language processing. This courses will familiarize students with linguistic concepts in the context of data-science methodology and help prepare them for jobs or for further study in computational linguistics and AI.
+  LING 401 | Introduction to Computational Linguistics 1 | 3hrs
+  LING 460 | Making Sense of Big Data: Textual Analysis with R | 3hrs
+  LING 540 | Mathematical Linguistics 1 | 3hrs
+RULE: Select one of the following options: 3
+  LING 225 | Busting Language Myths | hrs
+  LING 520 | Linguistic Phonetics | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Urban Data Analytics
+NOTE: This concentration equips students with the skills necessary to apply data science tools for the public good, specifically to improve the quality of life of people in human settlements.
+RULE: Select one of the following options: 3
+  PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning | hrs
+  PLAN 247 | Solving Urban Problems | hrs
+  PLAN 256 | Planning the City: Possibilities, Participants, and Change | hrs
+  PLAN 257 | Tools for Urbanists | hrs
+  PLAN 714 | Urban Spatial Structure 1 | hrs
+  PLAN 562 | Seminar on The Ethics and Politics of New Urban Analytics | 3hrs
+RULE: Select one of the following options: 3
+  PLAN 372 | Introduction to Urban Data Analytics | hrs
+  PLAN 672 | Urban Data Analytics | hrs
+RULE: Select one of the following options: 3
+  PLAN 591 | Applied Issues in Geographic Information Systems | hrs
+  PLAN 635 | Energy Modeling for Environment and Public Health | hrs
+  PLAN 636 | Urban Transportation Planning | hrs
+  PLAN 637 | Public Transportation | hrs
+  PLAN 671 | Development Planning Techniques | hrs
+  PLAN 720 | Planning Methods 1 | hrs
+  PLAN 739 | Transportation Planning Models 1 | hrs
+  PLAN 745 | Development Impact Assessment 1 | hrs
+
+## Sociology
+NOTE: The sociology concentration enables students to understand how data, the analysis of data, and social scientific methodological approaches can be used to study people in society, including interpersonal dynamics, inequality, social structures, and cultural systems.
+  SOCI 251 | Research Methods | 3hrs
+RULE: Select three of the following options: 9
+  SOCI 121 | Population Problems | hrs
+  SOCI 172 | Introduction to Population Health in the United States | hrs
+  SOCI 180 | Introduction to Global Population Health | hrs
+  SOCI 252 | Data Analysis | hrs
+  SOCI 277 | Societies and Genomics H | hrs
+  SOCI 302 | Fieldwork in Entrepreneurship | hrs
+  SOCI 412 | Social Stratification | hrs
+  SOCI 415 | Economy and Society | hrs
+  SOCI 419 | Sociology of the Islamic World | hrs
+  SOCI 420 | Political Sociology | hrs
+  SOCI 427 | The Labor Force | hrs
+  SOCI 429 | Social Research in Religious Settings | hrs
+  SOCI 433 | Immigration in Contemporary America | hrs
+  SOCI 468 | United States Poverty and Public Policy | hrs
+  SOCI 469 | Health and Society | hrs
+
+## Data and Society
+NOTE: This concentration equips students to understand the social, cultural, historical, and political dimensions and impacts of data-driven technologies. Students will learn critical capacities to engage with and evaluate contemporary technologies, understand their histories, and map their social impacts.
+RULE: Select four of the following options: 12
+  COMM 249 | Introduction to Communication Technology, Culture, and Society | hrs
+  COMM 348 | Algorithms and Society | hrs
+  COMM 360 | Social Media and Society | hrs
+  COMM 453 | The History of New Media Technology in Everyday Life | hrs
+  COMP 380 | Technology, Ethics, & Culture H | hrs
+  MEJO 242 | From Gutenberg to Google: A History of Media | hrs
+
+## Geographic Information Science
+NOTE: This concentration equips students to understand fundamentals of GIScience concepts and build expert knowledge in the use of geospatial technologies such as GIS, remote sensing, spatial analysis and modeling, database development and management, programming, Web GIS, and geovisualization.
+  GEOG 215 | Introduction to Spatial Data Science | 3hrs
+  GEOG 370 | Geographic Information Science | 3hrs
+RULE: Select two of the following options: 6
+  GEOG 391 | Quantitative Methods in Geography | hrs
+  GEOG 410 | Modeling of Environmental Systems | hrs
+  GEOG 456 | Geovisualizing Change | hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | hrs
+  GEOG 491 | Principles of Geographic Information Systems | hrs
+  GEOG 541 | GIS in Public Health | hrs
+  GEOG 544 | Geographic Information Systems for Impact Evaluation and Health Studies | hrs
+  GEOG 555 | Cartography of the Global South | hrs
+  GEOG 567 | Geospatial Data Analysis with Google Earth Engine | hrs
+  GEOG 577 | Advanced Remote Sensing | hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | hrs
+  GEOG 592 | Geographic Information Science Programming | hrs

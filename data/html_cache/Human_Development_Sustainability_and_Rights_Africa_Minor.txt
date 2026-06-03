@@ -1,0 +1,28 @@
+TRACK: Human_Development_Sustainability_and_Rights_Africa_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/human-development-sustainability-rights-africa-african-diaspora-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  AAAD 191 | Human Development, Sustainability and Rights in Africa and the African Diaspora | 3hrs
+RULE: Four additional courses from the list below, at least two of which must be AAAD classes: 1 12
+  AAAD 239 | Disaster, Recovery, Resistance in Southern Black History | hrs
+  AAAD 300 | Cultures of Health and Healing in Africa | hrs
+  AAAD 316 | Sustainable Development: Emergence, Debates, and Dynamics in Africa | hrs
+  AAAD 333 | Race and Public Policy in the United States | hrs
+  AAAD 351 | Class, Race, and Inequality in America | hrs
+  AAAD 360 | Black Women's Struggles and Resistance in Latin America and the Caribbean | hrs
+  AAAD 392 | Struggles to Shape the City: Comparative Urbanism and the Politics of Place | hrs
+  AAAD 387 | HIV/AIDS in Africa and the Diaspora | hrs
+  AAAD 403 | Human Rights: Theories and Practices in Africa | hrs
+  AAAD 488 | Human Rights and Democracy in African Diaspora Communities | hrs
+  ANTH 320 | Anthropology of Development | hrs
+  ECON 101 | Introduction to Economics H, F | hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+  GEOG 268 | Geography of Africa | hrs
+  GLBL 489 | Paradigms of Development and Social Change H | hrs
+  HIST 340 | Ethics and Business in Africa H | hrs
+  PLCY/ENEC 475 | The Political Economy of Food H | hrs
+  PLCY 485 | Poverty, Health, and Human Development in Low Income Countries | hrs
+  PLCY 662 | Global Health and Human Rights | hrs
+NOTE: Some courses are four (4) credit hours.

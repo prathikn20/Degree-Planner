@@ -1,0 +1,69 @@
+TRACK: Writing_Editing_and_Digital_Publishing_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/writing-editing-digital-publishing-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor requires 15 hours and may be earned by taking five courses in the minor.
+### Core Requirements
+RULE: At least one (and up to five) of the following courses: 3-15
+  ENGL 300 | Professional Writing and Editing | hrs
+  ENGL 300I | Professional Writing in Health and Medicine (Interdisciplinary) | hrs
+  ENGL 301 | Professional Writing in the Arts | hrs
+  ENGL 302 | Professional Communication for Social Movements | hrs
+  ENGL 303 | Scientific and Technical Communication | hrs
+  ENGL 304 | Advanced Business Communication | hrs
+  ENGL 305 | Advanced Legal Communication | hrs
+  ENGL 312 | Oral Presentations in the Professional World H | hrs
+  ENGL 317 | Writing and Social Networks | hrs
+  ENGL 318 | Multimedia Composition H | hrs
+RULE: Up to four courses from the list of electives to reach the five course total (see list below) 0-12
+
+## Elective Courses
+  ENGL 114 | The Rhetoric of Data | 3hrs
+  ENGL 115 | History of the English Language | 3hrs
+  ENGL 116 | History of Writing: From Pen to Pixel | 3hrs
+  ENGL 117 | Arguing on the Internet: Rhetoric in the Age of Social Media | 3hrs
+  ENGL 118 | Storytelling and Game Development | 3hrs
+  ENGL 119 | Picture This: Principles of Visual Rhetoric | 3hrs
+  ENGL 127 | Writing about Literature | 3hrs
+  ENGL 130 | Introduction to Fiction Writing | 3hrs
+  ENGL 131 | Introduction to Poetry Writing | 3hrs
+  ENGL 132H | First-Year Honors: Introduction to Fiction Writing | 3hrs
+  OR or ENGL 133H | First-Year Honors: Introduction to Poetry Writing
+  ENGL 136 | The Publishing Industry: Editing, Design, and Production | 3hrs
+  ENGL 137 | Digital Literature | 3hrs
+  ENGL 138 | Introduction to Creative Nonfiction H | 3hrs
+  ENGL 149 | Digital Composition | 3hrs
+  ENGL 150 | Introductory Seminar in Literary Studies | 3hrs
+  ENGL 205 | Word, Sound, Image: Multimedia Communication | 3hrs
+  ENGL 213 | Grammar of Current English | 3hrs
+  ENGL 215 | English in the U.S.A. H | 3hrs
+  ENGL 283 | Life Writing H | 3hrs
+  ENGL 295 | Undergraduate Research Seminar H | 3hrs
+  ENGL 300 | Professional Writing and Editing | 3hrs
+  ENGL 300I | Professional Writing in Health and Medicine (Interdisciplinary) | 3hrs
+  ENGL 301 | Professional Writing in the Arts | 3hrs
+  ENGL 302 | Professional Communication for Social Movements | 3hrs
+  ENGL 303 | Scientific and Technical Communication | 3hrs
+  ENGL 304 | Advanced Business Communication | 3hrs
+  ENGL 305 | Advanced Legal Communication | 3hrs
+  ENGL 307 | Studies in Fiction and Poetry: Stylistics | 3hrs
+  ENGL 312 | Oral Presentations in the Professional World H | 3hrs
+  ENGL 317 | Writing and Social Networks | 3hrs
+  ENGL 324 | Creating the Video Essay | 3hrs
+  ENGL 351 | From Manuscript to Press: Writer as Publisher | 3hrs
+  ENGL 384 | Podcasting | 3hrs
+  ENGL 392 | Professional Writing Portfolio Development and Publication | 3hrs
+  ENGL 400 | Advanced Composition for Teachers | 3hrs
+  ENGL 402 | Investigations in Academic Writing and Writing Centers | 3hrs
+  ENGL 403 | Rhetoric in the Museum H | 3hrs
+  ENGL 411 | Composing for Clients: Technical Communication Practicum | 3hrs
+  ENGL 473 | The Changing Coasts of Carolina | 3hrs
+  ENGL 480 | Digital Humanities History and Methods | 3hrs
+  ENGL 482 | Metadata, Mark-up, and Mapping: Understanding the Rhetoric of Digital Humanities | 3hrs
+  ENGL 674 | Digital Literature | 3hrs
+  ENGL 675 | Teaching Online | 3hrs
+  ENGL 676 | Digital Editing and Curation | 3hrs
+
+## Communication Beyond Carolina (CommBeyond) Courses
+NOTE: Students may include one course not listed above as an elective providing it meets the Communication Beyond Carolina requirement (IDEAs in Action curriculum).

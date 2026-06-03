@@ -1,0 +1,103 @@
+TRACK: Applied_Sciences_and_Engineering_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/applied-sciences-engineering-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+
+## Prerequisite Courses
+### Prerequisite Courses
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  COMP 110 | Introduction to Programming H | 3hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+RULE: Select one: 4
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | hrs
+RULE: Select one: 4
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta 1, H, F | hrs
+NOTE: PHYS 119 requires MATH 233 as a pre- or corequisite.
+
+## Core Courses
+NOTE: The minor consists of five courses for a total of 15 credit hours.
+### Core Requirements
+  APPL 101 | Exploring Engineering | 3hrs
+  APPL 110 | Design and Making for Engineers: Developing Your Personal Design Potential F | 3hrs
+RULE: Select one course from the following list: 3-4
+  APPL 240 | Electronics from Sensors to Indicators: Circuits that Interact with the Physical World | hrs
+  APPL 260 | Materials Science and Engineering: Living in a Material World | hrs
+  APPL 285 | Engineering Fundamentals of Force, Motion, and Energy | hrs
+  APPL 385 | Thermodynamics for Engineers | hrs
+  PHYS 231 | Physical Computing H | hrs
+  ENVR 205 | Engineering Tools for Environmental Problem Solving | hrs
+RULE: Select two engineering topic courses from the list below. 6
+
+## Engineering Topic Classes
+### Applied Physical Sciences
+  APPL 350 | Data Science for Applied Science and Engineering | 3hrs
+  APPL 405 | Convergent Engineering: Team-Science Approaches to Discovery and Innovation | 3hrs
+  APPL 412 | Turning Your Entrepreneurial Ideas Into Reality | 3hrs
+  APPL 430 | Optoelectronics from Materials to Devices | 3hrs
+  APPL 435 | Nanophotonics | 3hrs
+  APPL 462 | Engineering Materials: Properties, Selection and Design | 3hrs
+  APPL 463 | Bioelectronic Materials | 3hrs
+  APPL 465 | Engineering of Soft Materials:  SpongeBob Squarepants and Other Squishy Things | 3hrs
+### Biology
+  BIOL 226 | Mathematical Methods for Quantitative Biology | 3hrs
+  BIOL 431/BMME 435/PHYS 405 | Biological Physics | 3hrs
+  BIOL 534/MATH 564 | Mathematical Modeling in the Life Sciences | 3hrs
+  BIOL 537 | Biotechnology and Synthetic Biology | 3hrs
+  BIOL 551 | Comparative Biomechanics | 3hrs
+  BIOL/MATH 553 | Mathematical and Computational Models in Biology | 3hrs
+  BIOL 554 | Introduction to Computational Neuroscience | 3hrs
+### Chemistry
+  CHEM 441 & 441L | Intermediate Analytical Chemistry and Intermediate Analytical Chemistry Laboratory | 5hrs
+  CHEM 445 | Electroanalytical Chemistry | 3hrs
+  CHEM 448 | Mass Spectrometry | 3hrs
+  CHEM 449 | Microfabricated Chemical Measurement Systems | 3hrs
+  CHEM 470 | Fundamentals of Materials Science | 3hrs
+  CHEM/PHYS 472 | Chemistry and Physics of Electronic Materials Processing | 3hrs
+### Computer Science
+  COMP 433 | Mobile Computing Systems | 3hrs
+  COMP/PHYS 447 | Quantum Computing | 3hrs
+  COMP 523 | Software Engineering Laboratory | 4hrs
+  COMP 541 | Digital Logic and Computer Design | 4hrs
+  COMP 560 | Artificial Intelligence | 3hrs
+  COMP 562 | Introduction to Machine Learning H | 3hrs
+  COMP 581 | Introduction to Robotics H | 3hrs
+### Earth, Marine, and Environmental Science
+  EMES 415 | Environmental Systems Modeling | 3hrs
+  EMES 560 | Fluid Dynamics | 3hrs
+  EMES 561 | Time Series and Spatial Data Analysis | 3hrs
+### Environmental Sciences and Engineering
+  ENVR 451 | Introduction to Environmental Modeling | 3hrs
+  ENVR 452/EMES 560/PHYS 660 | Fluid Dynamics | 3hrs
+  ENVR 453 | Groundwater Hydrology | 3hrs
+  ENVR/ENEC 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | 3hrs
+  ENVR/ENEC 470 | Environmental Risk Assessment | 3hrs
+  ENVR 671 | Environmental Physics I | 3hrs
+  ENVR 672 | Environmental Physics II | 3hrs
+### Mathematics
+  MATH 347 | Linear Algebra for Applications F | 3hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | 3hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II | 3hrs
+  MATH/BIOL 553 |  | 3hrs
+  MATH/BIOL 534 | Elements of Modern Algebra | 3hrs
+  MATH 566 | Introduction to Numerical Analysis | 3hrs
+### Neurosciences (restricted to NSCI minors and majors)
+  NSCI 421 | Principles of Brain Circuits | 3hrs
+  NSCI 423 | Cellular and Molecular Neurotechnology | 3hrs
+### Physics
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 332 | Numerical Techniques for the Sciences II | 4hrs
+  PHYS 401 | Mechanics I | 3hrs
+  PHYS 405/BIOL 431/BMME 435 | Biological Physics | 3hrs
+  PHYS/BMME 441 | Thermal Physics | 3hrs
+  PHYS/COMP 447 | Quantum Computing | 3hrs
+  PHYS 461 | Introduction to Medical Physics | 3hrs
+  PHYS/CHEM 472 | Chemistry and Physics of Electronic Materials Processing | 3hrs
+  PHYS 515 | Optics | 3hrs
+  PHYS 529 | Introduction to Magnetic Resonance | 3hrs
+  PHYS 660/ENVR 452/EMES 560 | Fluid Dynamics | 3hrs

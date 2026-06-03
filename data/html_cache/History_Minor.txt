@@ -1,0 +1,11 @@
+TRACK: History_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/history-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Five history (HIST) courses taken in the Department of History 1, 2 15
+NOTE: A maximum of two courses can be numbered below 200.
+NOTE: No more than one course (3 hours) of College Board Advanced Placement or International Baccalaureate credit may count toward the minor.
+NOTE: History (HIST) course descriptions .

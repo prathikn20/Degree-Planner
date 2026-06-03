@@ -1,0 +1,96 @@
+TRACK: Environmental_Health_Sciences_BSPH
+URL: https://catalog.unc.edu/undergraduate/programs-study/environmental-health-sciences-major-bsph/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The major in environmental health sciences includes several concentrations:
+
+## Requirements for All Concentrations
+### Core Requirements
+RULE: Public Health Core Courses:
+  BIOS 600 | Principles of Statistical Inference | 3hrs
+  EPID 600 | Principles of Epidemiology for Public Health | 3hrs
+  SPHG 351 | Foundations of Public Health | 3hrs
+  SPHG 352 | Public Health Systems and Solutions | 4hrs
+RULE: Other Core Courses:
+  ENVR 205 | Engineering Tools for Environmental Problem Solving (fall) | 3hrs
+  ENVR 230 | Environmental Health Issues (spring) | 3hrs
+  ENVR 403 | Environmental Chemistry Processes (spring) | 3hrs
+  ENVR 430 | Health Effects of Environmental Agents (fall) | 3hrs
+RULE: One of the following: 3
+  ENVR 698 | Senior Capstone Course (to be taken in the senior year) | hrs
+  ENVR 593 | Undergraduate Practicum in Environmental Health Sciences (with approval) | hrs
+  ENVR 695 | Environmental Health Majors Undergraduate Research (with approval) | hrs
+  ENVR 692H | Honors Thesis (with approval) | hrs
+### Prerequisite and Additional Requirements †
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  BIOL 103 | How Cells Function F | 3hrs
+  OR or BIOL 104 | Biodiversity
+  BIOL 220 | Molecular Genetics H | 3hrs
+  OR or BIOL 250 | Evolutionary Biology
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  CHEM 261 | Introduction to Organic Chemistry I H | 3hrs
+RULE: One of the following: 3
+  COMP 110 | Introduction to Programming H | hrs
+  COMP 116 | Introduction to Scientific Programming | hrs
+  BIOL/MATH 553 | Mathematical and Computational Models in Biology | hrs
+  GEOG 597 | Ecological Modeling | hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | 4hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity 1,2, H, F | 4hrs
+  OR or PHYS 114 | General Physics I: For Students of the Life Sciences
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta 1,2, H, F | 4hrs
+  OR or PHYS 115 | General Physics II: For Students of the Life Sciences
+NOTE: Preferred.
+NOTE: PHYS 118 and PHYS 119 are required for the environmental chemistry concentration.
+NOTE: Applicants should have earned a grade of C or better from UNC-Chapel Hill in at least one course per group in three of the five prerequisite course groups. See Admissions tab for details.
+
+## General Concentration
+### Environmental Health Electives
+RULE: All students should complete two advanced undergraduate or graduate level courses (400-level or above) that provide in-depth study of environmental health.  Courses should be listed or cross-listed as ENVR courses. ENVR 400 , ENVR 403 , ENVR 430 , ENVR 593 , ENVR 600 , ENVR 601 , ENVR 695 , ENVR 691H and ENVR 692H are excluded. All ENVR special topics courses ( ENVR 690 , ENVR 890 ) must be approved to count as an advanced course elective. Please contact the academic coordinator to start the approval process 6-8
+
+## Environmental Chemistry Concentration
+### Environmental Health Electives
+RULE: All students must complete two advanced (400-level or above) courses selected from: 5-7
+  ENVR 416 | Aerosol Physics and Chemistry | hrs
+  ENVR 419 | Chemical Equilibria in Natural Waters | hrs
+  ENVR 451 | Introduction to Environmental Modeling | hrs
+  ENVR 575 | Global Climate Change: Science, Impacts, Solutions | hrs
+  ENVR 650 | Principles of Chemical Carcinogenesis | hrs
+  ENVR 675 | Air Pollution, Chemistry, and Physics | hrs
+### Additional Requirements
+  CHEM 481 | Physical Chemistry I | 3hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs
+
+## Environmental Health Biology Concentration
+### Environmental Health Electives
+RULE: All students must complete two advanced (400-level or above) courses selected from: 6
+  ENVR 411 | Laboratory Techniques and Field Measurements | hrs
+  ENVR 412 | Ecological Microbiology | hrs
+  ENVR 421 | Environmental Health Microbiology | hrs
+  ENVR 423 | Industrial Toxicology | hrs
+  ENVR 425 | Introduction to Health Physics: Radiation and Radiation Protection | hrs
+  ENVR 432 | Occupational Safety and Ergonomics | hrs
+  ENVR 433 | Health Hazards of Industrial Operation | hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | hrs
+  ENVR 470 | Environmental Risk Assessment | hrs
+  ENVR 610H | Global Environmental Health Equity and Sustainability | hrs
+  ENVR 630 | Systems Biology in Environmental Health | hrs
+  ENVR 640 | Environmental Exposure Assessment | hrs
+
+## Environmental Physics Concentration
+### Environmental Health Electives
+RULE: All students must complete two advanced (400-level or above) courses selected from the following list: 6-7
+  ENVR 416 | Aerosol Physics and Chemistry | hrs
+  ENVR 451 | Introduction to Environmental Modeling | hrs
+  ENVR 453 | Groundwater Hydrology | hrs
+  ENVR 666 | Numerical Methods | hrs
+  ENVR 671 | Environmental Physics I | hrs
+  ENVR 472 | Quantitative Risk Assessment in Environmental Health Microbiology | hrs
+  ENVR 675 | Air Pollution, Chemistry, and Physics | hrs
+### Additional Requirements
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH 383 | First Course in Differential Equations H | 3hrs

@@ -1,0 +1,24 @@
+TRACK: Business_Administration_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/business-administration-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: A maximum of 3 credit hours of online or remote coursework may be applied toward the undergraduate business minor requirements.
+NOTE: 9 credits of minor coursework must be completed at UNC Kenan-Flagler.
+NOTE: Students must successfully complete four specific business core courses and a minimum of two business elective courses (4.5 credit hours) for a total of 15 credit hours. The program can be completed within two to three semesters.
+NOTE: Once admitted as business minors, students will be able to register themselves in the core courses ( BUSI 403 , BUSI 406 , BUSI 408 , and BUSI 411 ) through Connect Carolina. Business minors may take a maximum of six business electives courses (regardless of credit hours) during their academic career.
+### Prerequisite Courses
+  BUSI 100 | Introduction to Business: People, Profits, Planet | 1.5hrs
+  ECON 101 | Introduction to Economics H, F | 4hrs
+RULE: One course from this list: 3
+  STOR 155 | Introduction to Data Models and Inference H, F | hrs
+  DATA 110 | Introduction to Data Science H | hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | hrs
+### Core Courses
+  BUSI 403 | Operations Management | 3hrs
+  BUSI 406 | Marketing | 3hrs
+  BUSI 408 | Corporate Finance | 3hrs
+  BUSI 411 | Strategy I: Competitive Strategy 1 | 1.5hrs
+  BUSI --- | Additional BUSI courses to reach the minimum 15 credit hours | 4.5hrs
+NOTE: We recommend taking BUSI 411 after the successful completion of BUSI 406 and BUSI 408 .

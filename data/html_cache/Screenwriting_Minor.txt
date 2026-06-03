@@ -1,0 +1,42 @@
+TRACK: Screenwriting_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/screenwriting-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: There are two tracks in the Screenwriting Minor: the selective track (by application) and the open track (no application required).
+
+## Selective Track
+NOTE: The selective track is a by-application minor with a cohort structure. Accepted students take 3-4 courses with their cohort during a single academic year. To participate, a student must be on campus for one full year.
+NOTE: Candidates for the selective minor must be first-year, sophomore, or junior students with a 2.4 grade point average or better. Before applying to the selective track, students are required to take the starter course, COMM 330 Introduction to Writing for Film and Television . (In rare cases, a student may be permitted to take COMM 330 as a co-req in their first semester in the selective minor, with permission of the Director.)
+NOTE: An application, due on March 1 of each year, is required for acceptance; please visit the Screenwriting Minor's website to review this process. Continued participation in the minor is based on the student’s work and the recommendation of the program’s instructors.
+### Core Requirements
+  COMM 330 | Introduction to Writing for Film and Television 1 | 3hrs
+  COMM 433 | Intermediate Screenwriting 2 | 3hrs
+  COMM 335 | Film Story Analysis (offered in spring only) 3 | 3hrs
+  COMM 537 | Master Screenwriting 4 | 3hrs
+  COMM 600 | Screenwriting: The Re-Write 5 | 3hrs
+NOTE: Fall of first year in the minor (if not already fulfilled).
+NOTE: Fall of first year in the minor.
+NOTE: Or DRAM 120 . Recommended in the spring of first year in the minor, but can be taken in any semester.
+NOTE: Spring of first year in the minor.
+NOTE: Fall of second year in the minor. Or any approved screenwriting elective (any semester).
+
+## Open Track
+NOTE: The open track version of the minor has no application. Students complete two required courses and three electives.
+### Core Requirements
+  COMM 330 | Introduction to Writing for Film and Television | 3hrs
+  COMM 335 | Film Story Analysis | 3hrs
+RULE: Three electives from the following options: 1 9
+  COMM 337 | Visual Storytelling for Screenwriters | hrs
+  COMM 334 | Writing the One-Hour TV Drama | hrs
+  COMM 331 | Writing the Short Film | hrs
+  COMM 390 | Special Topics in Communication Study 2 | hrs
+  COMM 490 | Special Topics in Communication Studies 2 | hrs
+  COMM 537 | Master Screenwriting | hrs
+  DRAM 120 | Play Analysis H, F | hrs
+  DRAM 135 | Acting for Nonmajors | hrs
+  DRAM 231 | Playwriting I | hrs
+  ENGL 259 | Improvisational Comedy Games for Writers | hrs
+  ENGL 308 | Gram-O-Rama: Grammar in Performance | hrs
+NOTE: At least two courses from the Department of Communication. One course may come from another department.
+NOTE: Screenwriting topic; must be approved by the program director.

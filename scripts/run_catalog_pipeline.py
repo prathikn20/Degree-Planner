@@ -342,6 +342,47 @@ def run_ingestion_pipeline():
                 save_catalog(normalized_catalog)
                 courses_since_checkpoint = 0
 
+    # Post-processing: ensure all I-suffix and IDST courses carry the INTERDISCIPLINARY
+    # attribute.  The catalog page itself is the authoritative marker — no Gen Ed tag is
+    # printed in the course block — so we derive the attribute from the course code here.
+    for cid, cdata in normalized_catalog.items():
+        is_idst = cid.startswith('IDST')
+        is_i_suffix = len(cid) > 1 and cid[-1] == 'I' and cid[-2].isdigit()
+        if is_idst or is_i_suffix:
+            attrs = cdata.setdefault('attributes', [])
+            if 'INTERDISCIPLINARY' not in attrs:
+                attrs.append('INTERDISCIPLINARY')
+
+    # Ensure courses listed on the IDST website that may not have a dedicated
+    # catalog page (GEOG117H, WGST111H, etc.) are present with the attribute.
+    _IDST_WEBSITE_COURSES = {
+        'AMST101I', 'AMST217I', 'ANTH210I', 'ASIA125I', 'ASIA426I', 'ASIA447I',
+        'DATA420I', 'ECON573I', 'EDUC321I', 'ENEC202I', 'ENGL217I', 'EXSS321I',
+        'GEOG117I', 'GEOG117H', 'GEOG210I', 'GEOG447I', 'GERM416I', 'GLBL210I',
+        'GSLL275I', 'HIST210I', 'HIST217I', 'ITAL325I', 'JWST100I', 'LING545I',
+        'LTAM117I', 'LTAM117H', 'MHCH150I', 'MUSC51I', 'PHYS51I', 'PHYS150I',
+        'POLI210I', 'PORT270I', 'RELI123I', 'STOR323I', 'WGST111I', 'WGST111H',
+        'WGST117I', 'WGST117H', 'WGST262I', 'WGST447I',
+    }
+    _H_CROSS = {
+        'GEOG117H': 'GEOG117I', 'LTAM117H': 'LTAM117I',
+        'WGST111H': 'WGST111I', 'WGST117H': 'WGST117I',
+    }
+    for cid in _IDST_WEBSITE_COURSES:
+        if cid not in normalized_catalog:
+            normalized_catalog[cid] = {
+                'name': f'Interdisciplinary Perspectives ({cid})',
+                'credits': 3.0,
+                'prerequisites': [],
+                'corequisites': [],
+                'cross_listed': [_H_CROSS[cid]] if cid in _H_CROSS else [],
+                'attributes': ['INTERDISCIPLINARY'],
+            }
+        else:
+            attrs = normalized_catalog[cid].setdefault('attributes', [])
+            if 'INTERDISCIPLINARY' not in attrs:
+                attrs.append('INTERDISCIPLINARY')
+
     save_catalog(normalized_catalog)
     logger.info("Final catalog saved.")
 

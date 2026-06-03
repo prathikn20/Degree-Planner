@@ -1,0 +1,18 @@
+TRACK: Exercise_and_Sport_Science_General_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/exercise-sport-science-major-ba-general/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  EXSS 155 & EXSS 256 | Human Anatomy and Physiology I and Human Anatomy and Physiology II H, F | 6hrs
+  EXSS 180 | Physical Activity in Contemporary Society | 3hrs
+  EXSS 181 | Sport and Exercise Psychology | 3hrs
+  EXSS 273 | Research in Exercise and Sport Science | 3hrs
+  EXSS 288 | Emergency Care of Athletic Injuries and Illnesses | 3hrs
+  EXSS 376 | Physiological Basis of Human Performance | 4hrs
+  EXSS 380 | Neuromuscular Control and Learning H | 3hrs
+  EXSS 385 | Biomechanics of Sport | 3hrs
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+NOTE: A maximum of 45 hours of EXSS courses may be applied toward the B.A. degree.

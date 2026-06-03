@@ -1,0 +1,82 @@
+TRACK: Studio_Art_BFA
+URL: https://catalog.unc.edu/undergraduate/programs-study/studio-art-major-bfa/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Three Tier 1 studio courses 9
+RULE: Select one 2-D course (see list below)
+RULE: Select one 3-D course (see list below)
+RULE: Select one 4-D course (see list below)
+RULE: Four Tier II studio courses (see list below) 12
+RULE: Five Tier III studio courses (see list below) 15
+RULE: Six studio art elective courses 1,2 18
+RULE: Two art history (ARTH) courses 3 6
+NOTE: Students can include an additional art history course in place of one studio art course. Students can count up to six hours of senior honors thesis credit.
+NOTE: Any ARTS classes, including first-year seminars.
+NOTE: Any ARTH classes, including first-year seminars.
+NOTE: B.F.A. students should be aware that a minimum of 30 credit hours must be completed in coursework outside the Department of Art and Art History.
+NOTE: All General Education requirements must be completed.
+
+## Listing of Studio Art Courses by Tier
+### Tier I Studio Art (Foundation) Courses
+RULE: 2-D Courses
+  ARTS 102 | Two-Dimensional Design | hrs
+  ARTS 104 | Drawing I | hrs
+  ARTS 105 | Photography I H | hrs
+  ARTS 115 | Darkroom Photography I | hrs
+  ARTS 126 | Graphic Design as a Tool for Art-making | hrs
+  ARTS 132 | Collage: Strategies for Thinking and Making | hrs
+  ARTS 202 | Painting I | hrs
+  ARTS 208 | Print I | hrs
+RULE: 3-D Courses
+  ARTS 103 | Sculpture : Introduction I (Object/Body) | hrs
+  ARTS 213 | Ceramic I | hrs
+  ARTS 233 | Wood Sculpture | hrs
+RULE: 4-D (Time-Based) Courses
+  ARTS 106 | Video I | hrs
+  ARTS 107 | Sonic Arts 1 | hrs
+### Tier II Studio Art Courses
+  ARTS 205 | Photography II | 3hrs
+  ARTS 206 | Video II | 3hrs
+  ARTS 207 | Sonic Arts 2 | 3hrs
+  ARTS 209 | 2D Animation | 3hrs
+  ARTS 214 | Life Drawing | 3hrs
+  ARTS 215 | Darkroom Photography II | 3hrs
+  ARTS 221 | Color: Theory and Concept | 3hrs
+  ARTS 238 | Screen Printing | 3hrs
+  ARTS 290 | Special Topics in Studio Art | 3hrs
+  ARTS 302 | Painting II | 3hrs
+  ARTS 313 | Ceramic II | 3hrs
+  ARTS 324 | Drawing II | 3hrs
+  ARTS 352 | Abstract Painting | 3hrs
+  ARTS 358 | Letterpress | 3hrs
+  ARTS 368 | Print II | 3hrs
+### Tier III Studio Art Courses
+  ARTS 322 | Narrative Painting | 3hrs
+  ARTS 323 | Sculpture Garden:  Art in the Public and Projects of Scale | 3hrs
+  ARTS 343 | MAKE: Art in the (New) Age | 3hrs
+  ARTS 353 | Phantasmagoria: Haunted Art, History, and Installation | 3hrs
+  ARTS 355 | The Practice of Representation: Portraiture in Photography | 3hrs
+  ARTS 363 | At the Radical Edge of Life: Art, Space, and Ecology | 3hrs
+  ARTS 364 | The Walking Seminar: A Territorial Investigation | 3hrs
+  ARTS 373 | Art, Rites and Rituals of Pilgrimage | 3hrs
+  ARTS 383 | States of Change | 3hrs
+  ARTS 390 | Special Topics in Studio Art | 3hrs
+  ARTS 402 | Advanced Painting Projects | 3hrs
+  ARTS 409 | Art and Science: Merging Printmaking and Biology H | 3hrs
+  ARTS 413 | Advanced Ceramic Projects | 3hrs
+  ARTS 414 | Performance as Social Practice: Exploring Artistic Expression and Social Change | 3hrs
+  ARTS 415 | Conceptual-Experimental Photography | 3hrs
+  ARTS 416 | Advanced Video | 3hrs
+  ARTS 417 | Advanced Mixed Media Projects | 3hrs
+  ARTS 418 | Advanced Printmaking | 3hrs
+  ARTS 428 | Book Art | 3hrs
+  ARTS 458 | Photo Printmaking | 3hrs
+  ARTS 490 | Advanced Special Topics in Studio Art | 3hrs
+  ARTS 493 | Studio Art Practicum or Internship | 3hrs
+  ARTS 500 | Senior Professional Practices Seminar | 3hrs
+  ARTS 515 | Advanced Topics in Photography | 3hrs
+  ARTS 596 | Independent Study in Studio Art | 3hrs
+  ARTS 657 | Movie Making Machines: Learning About Cinema in the Maker Space | 3hrs

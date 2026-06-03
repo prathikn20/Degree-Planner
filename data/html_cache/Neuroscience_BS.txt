@@ -1,0 +1,170 @@
+TRACK: Neuroscience_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/neuroscience-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  NSCI 175 | Introduction to Neuroscience (with a grade of C or better) H, F | 3hrs
+RULE: Select one statistics course: 3-4
+  PSYC 210 | Statistical Principles of Psychological Research H | hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | hrs
+  STOR 155 | Introduction to Data Models and Inference H, F | hrs
+RULE: Select one research methods course (Neuroscience research method courses NSCI 27* should be prioritized over PSYC 270 ): 3
+  NSCI 270 | Human Neuroscience through Imaging and Data Science | hrs
+  NSCI 271 | Cellular Mechanisms in Addiction Lab | hrs
+  NSCI 272 | Brain Organoid Electrophysiology Lab | hrs
+  NSCI 273 | Brainwaves: Human Electroencephalography Lab | hrs
+  NSCI 274 | Neurophysiology Data Science Lab | hrs
+  NSCI 275 | Neural Circuits & Behavior | hrs
+  NSCI 277 | Obesity in the Brain - Neuroscience qPCR Laboratory | hrs
+  NSCI 278 | Molecular Brain Imaging Lab | hrs
+  NSCI 279 | Microglia Laboratory | hrs
+  PSYC 270 | Research Methods in Psychology (intended for PSYC double majors only) | hrs
+RULE: Select two courses: 6
+  NSCI 221 | Neuropsychopharmacology | hrs
+  NSCI 222 | Learning H | hrs
+  NSCI 225 | Sensation and Perception H | hrs
+RULE: Knowledge Electives (select at least six credit hours from list below) 6
+RULE: Mathematics, Methods, Statistics Electives (select at least six credit hours from list below) 6
+### Additional Requirements (complete with a grade of C or better) 1
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory 1, H, F | 4hrs
+  BIOL 103 | How Cells Function 1, F | 3hrs
+  BIOL 220 | Molecular Genetics 1, H | 3hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I 1, H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II 1, H, F | 4hrs
+  CHEM 241 | Modern Analytical Methods for Separation and Characterization 1, H | 3hrs
+  CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds 1 | 1hrs
+  CHEM 261 | Introduction to Organic Chemistry I 1, H | 3hrs
+  CHEM 262 | Introduction to Organic Chemistry II 1, H | 3hrs
+  CHEM 262L | Laboratory in Organic Chemistry 1 | 1hrs
+  COMP 110 | Introduction to Programming 1, H | 3hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  MATH 231 | Calculus of Functions of One Variable I 1, H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II 1, H, F | 4hrs
+RULE: Select one course: 1 4
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | hrs
+RULE: Select one course: 1 4
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | hrs
+  PSYC 101 | General Psychology 1, F | 3hrs
+NOTE: A grade of C or better is required in all "Additional Requirement" courses for the neuroscience major.
+
+## Knowledge Electives (6 Credit Hours)
+  BIOL 205 | Cellular and Developmental Biology 1, H | 4hrs
+  BIOL 240 | Cell Biology H | 3hrs
+  BIOL 425 | Human Genetics | 3hrs
+  BIOL 431 | Biological Physics | 3hrs
+  BIOL 433 | Introduction to Biochemistry for Majors | 3hrs
+  BIOL 440 | Stem Cell Biology 1 | 3hrs
+  BIOL 450 | Neurobiology 1 | 3hrs
+  BIOL 453 | Molecular Control of Metabolism and Metabolic Disease 1 | 3hrs
+  BIOL 455 | Behavioral Neuroscience 1 | 3hrs
+  BIOL 458 | Herpetology: Biology of Amphibians and Reptiles 1 | 3hrs
+  BIOL 523 | Sex Differences in Human Disease 1 | 3hrs
+  BIOL 542 | Light Microscopy for the Biological Sciences 1 | 3hrs
+  BIOL 544L | Laboratory in Diseases of the Cytoskeleton 1 | 3hrs
+  BIOL 545 | Exploring Brain, Gut, and Immunity 1, H | 3hrs
+  BIOL 547 | Synaptic Plasticity: Analysis of Primary Literature | 3hrs
+  BIOL 552 | Behavioral Endocrinology 1 | 3hrs
+  BIOL 635 | Careers in Biotechnology | 1hrs
+  CHEM 430 | Introduction to Biological Chemistry H | 3hrs
+  COMP 210 | Data Structures and Analysis | 3hrs
+  COMP 211 | Systems Fundamentals 1 | 3hrs
+  COMP 301 | Foundations of Programming 1 | 3hrs
+  COMP 311 | Computer Organization | 3hrs
+  COMP 555 | Bioalgorithms 1 | 3hrs
+  COMP 560 | Artificial Intelligence 1 | 3hrs
+  COMP 562 | Introduction to Machine Learning 1, H | 3hrs
+  COMP 576 | Mathematics for Image Computing 1 | 3hrs
+  COMP 581 | Introduction to Robotics 1, H | 3hrs
+  COMP 631 | Networked and Distributed Systems 1 | 3hrs
+  COMP 633 | Parallel and Distributed Computing 1 | 3hrs
+  COMP 651 | Computational Geometry 1 | 3hrs
+  EXSS 155 | Human Anatomy and Physiology I H, F | 3hrs
+  EXSS 175 | Human Anatomy F | 3hrs
+  EXSS 256 | Human Anatomy and Physiology II 1 | 3hrs
+  EXSS 275L | Human Anatomy Laboratory | 1hrs
+  EXSS 276 | Human Physiology 1 | 3hrs
+  EXSS 380 | Neuromuscular Control and Learning 1, H | 3hrs
+  EXSS 580 | Neuromechanics of Human Movement 1 | 3hrs
+  EXSS 581 | Biopsychosocial Aspects of Sport Injury | 3hrs
+  NDSS 401 | Basic Neurophysiology and Sleep for Clinical Neurophysiology | 3hrs
+  NDSS 420 | Pathophysiology of Sleep, Neurological, and Related Disorders | 3hrs
+RULE: Any course between NSCI 300 - 699, with some exceptions (see footnote) 2
+  PHYS 405 | Biological Physics | 3hrs
+  PHYS 461 | Introduction to Medical Physics | 3hrs
+  PSYC 245 | Psychopathology H | 3hrs
+  PSYC 404 | Clinical Psychopharmacology | 3hrs
+  PSYC 469 | Evolution and Development of Biobehavioral Systems | 3hrs
+  PSYC 517 | Addiction H | 3hrs
+  PSYC 559 | Applied Machine Learning in Psychology 1 | 3hrs
+  PSYC 602 | Evolutionary Psychology | 3hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+NOTE: Any course between NSCI 300 - 699 except NSCI 392 , NSCI 395 , NSCI 405 , NSCI 418 , NSCI 419 , NSCI 423 , NSCI 426 , NSCI 439 , NSCI 440 , NSCI 493 , and NSCI 693H / NSCI 694H
+
+## Mathematics, Methods, and Statistics Electives (6 Credit Hours)
+  APPL 101 | Exploring Engineering | 3hrs
+  APPL 240 | Electronics from Sensors to Indicators: Circuits that Interact with the Physical World | 4hrs
+  APPL 430 | Optoelectronics from Materials to Devices | 3hrs
+  BIOL 224H | The Mathematics of Life | 3hrs
+  BIOL 224L | The Mathematics of Life Laboratory | 1hrs
+  BIOL 226 | Mathematical Methods for Quantitative Biology | 3hrs
+  BIOL 226L | Mathematical Methods for Quantitative Biology Laboratory | 1hrs
+  BIOL 553 | Mathematical and Computational Models in Biology 1 | 3hrs
+  BIOL 554 | Introduction to Computational Neuroscience 1 | 3hrs
+  BMME 207 | Biomedical Electronics 1 | 4hrs
+  BMME 301 | Human Physiology: Electrical Analysis 1 | 4hrs
+  BMME 550 | Medical Imaging I: Ultrasonic, Optical, and Magnetic Resonance Systems 1 | 3hrs
+  COMP 283 | Discrete Structures 2, H | 3hrs
+  MATH 210 | Mathematical Tools for Data Science 1 | 3hrs
+  MATH 233 | Calculus of Functions of Several Variables H | 4hrs
+  MATH/STOR 235 | Mathematics for Data Science | 4hrs
+  MATH 347 | Linear Algebra for Applications F | 3hrs
+  MATH 381 | Discrete Mathematics 2, H | 3hrs
+  MATH 383 | First Course in Differential Equations 1, H | 3hrs
+  MATH 383L | First Course in Differential Equations Laboratory 1 | 1hrs
+  MATH 523 | Functions of a Complex Variable with Applications 1 | 3hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I 1 | 3hrs
+  MATH 528L | Laboratory for Mathematical Methods for the Physical Sciences I 1 | 1hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II 1 | 3hrs
+  MATH 529L | Laboratory for Mathematical Methods for the Physical Sciences II 1 | 1hrs
+  MATH 535 | Introduction to Probability 1 | 3hrs
+  MATH 555 | Introduction to Dynamics 1 | 3hrs
+  MATH 560 | Optimization with Applications in Machine Learning 1 | 3hrs
+  MATH 564 | Mathematical Modeling in the Life Sciences 1 | 3hrs
+  MATH 566 | Introduction to Numerical Analysis 1 | 3hrs
+  MATH 577 | Linear Algebra 1 | 3hrs
+  MATH 594 | Nonlinear Dynamics 1 | 3hrs
+  MATH 661 | Scientific Computation I 1 | 3hrs
+  MATH 662 | Scientific Computation II 1 | 3hrs
+  MATH 668 | Methods of Applied Mathematics I 1 | 3hrs
+  MATH 669 | Methods of Applied Mathematics II 1 | 3hrs
+  NDSS 410 | Intro to Basic Sleep and Neurophysiology Instrumentation and Technology | 4hrs
+  NDSS 430 | Neurological and Sleep Diagnostic and Therapeutic Methods, and Monitoring | 3hrs
+  NSCI 395 | Independent Research 3 | 3hrs
+  NSCI 405 | Advanced Molecular Neuropharmacology | 3hrs
+  NSCI 418 | Glial Neuroscience | 3hrs
+  NSCI 419 | Behavioral Endocrinology | 3hrs
+  NSCI 423 | Cellular and Molecular Neurotechnology | 3hrs
+  NSCI 426 | Computational Methods in Neuroscience Using Python | 3hrs
+  NSCI 439 | Neuroimmunology | 3hrs
+  NSCI 440 | Behavioral Neuroscience and Experimental Methods in Rodents | 3hrs
+  NSCI 493 | Internship in Neuroscience | 3hrs
+  NSCI 693H | Honors in Neuroscience I | 3hrs
+  NSCI 694H | Honors in Neuroscience II | 3hrs
+  PSYC 533 | The General Linear Model in Psychology H | 3hrs
+  STOR 215 | Foundations of Decision Sciences 2 | 3hrs
+  STOR 320 | Methods and Models of Data Science 1 | 4hrs
+  STOR 415 | Introduction to Optimization 1, H | 3hrs
+  STOR 435 | Introduction to Probability 1, H | 3hrs
+  STOR 445 | Stochastic Modeling 1 | 3hrs
+  STOR 455 | Methods of Data Analysis 1, H | 3hrs
+  STOR 535 | Probability for Data Science 1 | 3hrs
+  STOR 555 | Mathematical Statistics 1 | 3hrs
+  STOR 556 | Time Series Data Analysis 1 | 3hrs
+  STOR 565 | Machine Learning 1 | 3hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+NOTE: Students may take one of COMP 283 , MATH 381 , or STOR 215 .
+NOTE: Students may only count NSCI 395 for three (3) hours of credit in the MMS elective.

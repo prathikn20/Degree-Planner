@@ -1,0 +1,52 @@
+TRACK: Latina_o_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/latina-latino-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: Requirements for the five-course minor in Latina/o studies are as follows:
+### Core Requirements
+RULE: One humanities/fine arts course in Latina/o literatures and cultural production (see list below) 3
+RULE: One course in social sciences or Latina/o communities and cultural space (see list below) 3
+RULE: Three elective courses chosen from the two lists below or from AAAD 260 or DRAM 486 . 9
+
+## Humanities/Fine Arts Course in Latina/o Literatures and Cultural Production
+  AAAD 284 | Contemporary Perspectives on the African Diaspora in the Americas | 3hrs
+  DRAM 288 | Theatre for Social Change | 3hrs
+  DRAM 488 | United States Latino/a Theatre | 3hrs
+  ENGL 164 | Introduction to Latina/o Studies H | 3hrs
+  ENGL 265 | Literature and Race, Literature and Ethnicity 1, H | 3hrs
+  ENGL 267 | Growing Up Latina/o | 3hrs
+  ENGL 359 | Latina Feminisms: Civil Rights, Ecofeminism, and Health Studies | 3hrs
+  ENGL 394 | Misbehaving Bodies: Dis/ease, Dis/order, & Dys/topia in Latinx Fiction and Film | 3hrs
+  ENGL 464 | Latinx Hybrid Narrative: Experimental Fiction and Film | 3hrs
+  ENGL 467 | Educating Latinas/os: Preparing SLI Mentors | 3hrs
+  ENGL/WGST 665 | Queer Latina/o Literature, Performance, and Visual Art | 3hrs
+  ENGL/WGST 666 | Queer Latina/o Photography and Literature | 3hrs
+  ENGL 687 | Queer LatinX Environmentalisms | 3hrs
+  HIST 241 | History of Latinos in the United States | 3hrs
+  HIST 237 | Colonial American History to 1763 | 3hrs
+  MUSC 147 | Introduction to the Music of the Américas | 3hrs
+  RELI 245 | Latina/o Religions in the United States-Mexico Borderlands H | 3hrs
+  SPAN 389 | Outside Cuba: Diasporic Literature and Culture | 3hrs
+  SPAN 398 | Undergraduate Seminar in Literature and Culture | 3hrs
+  WGST 211 | Introduction to Latina Feminisms: Literature, Theory, and Activism | 3hrs
+  WGST 233 | Introduction to Latina Literature | 3hrs
+  WGST 465 | Gender, (Im)migration, and Labor in Latina Literature | 3hrs
+NOTE: With approval based on topic.
+
+## Social Sciences or Latina/o Communities and Cultural Space
+  AAAD 278 | Black Caribbeans in the United States | 3hrs
+  AAAD 290 | Topics in African, African American, and Diaspora Studies | 3hrs
+  AAAD 340 | Diaspora Art and Cultural Politics | 3hrs
+  ANTH/FOLK 130 | Anthropology of the Caribbean | 3hrs
+  ENGL 467 | Educating Latinas/os: Preparing SLI Mentors | 3hrs
+  ENGL 687 | Queer LatinX Environmentalisms | 3hrs
+  GEOG 56 | First-Year Seminar: Local Places in a Globalizing World (first-year students only) | 3hrs
+  GEOG 423 | Social Geography | 3hrs
+  GEOG 542 | Neighborhoods and Health | 3hrs
+  MEJO 443 | Latino Media Studies | 3hrs
+  PLCY 349 | Immigration Policy in the 21st Century | 3hrs
+  WGST 211 | Introduction to Latina Feminisms: Literature, Theory, and Activism | 3hrs
+  WGST 233 | Introduction to Latina Literature | 3hrs
+  WGST 465 | Gender, (Im)migration, and Labor in Latina Literature | 3hrs

@@ -1,0 +1,12 @@
+TRACK: Anthropology_General_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/general-anthropology-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Five three-hour anthropology (ANTH) courses taken in the department. 1, 2 15
+NOTE: A maximum of two courses may be numbered below 200.
+NOTE: Credit hours for independent study or independent field research may not count towards the minor, including ANTH 195 , ANTH 196 , ANTH 295 , ANTH 296 , ANTH 393 , ANTH 395 and ANTH 396 .
+NOTE: The Department of Anthropology provides a complete list of of anthropology (ANTH) courses.
+NOTE: Students planning on a minor in anthropology should inform the department’s director of undergraduate studies.

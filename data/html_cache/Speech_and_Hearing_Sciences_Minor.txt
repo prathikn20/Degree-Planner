@@ -1,0 +1,14 @@
+TRACK: Speech_and_Hearing_Sciences_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/speech-hearing-sciences-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  SPHS 510 | Introduction to Communication Disorders (spring only) | 3hrs
+  SPHS 530 | Introduction to Phonetics (fall only) | 3hrs
+  SPHS 570 | Anatomy and Physiology of the Speech, Language, and Hearing Mechanisms (spring only) | 3hrs
+  SPHS 582 | Introductory Audiology I (fall only) | 3hrs
+  SPHS 540 | Speech Science (spring only) | 3hrs
+NOTE: The minor in speech and hearing sciences consists of five courses. Each course is offered only once per year; students interested in the minor are encouraged to enroll in the introductory course ( SPHS 510 ) early in the sequence and in speech science ( SPHS 540 ) last in the sequence.
+NOTE: With permission of the program director, SPHS 520 , SPHS 521 , or SPHS 583 may be substituted for SPHS 510 .

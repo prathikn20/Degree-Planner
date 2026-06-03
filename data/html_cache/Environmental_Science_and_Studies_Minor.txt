@@ -1,0 +1,12 @@
+TRACK: Environmental_Science_and_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/environmental-science-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  ENEC 201 | Introduction to Environment and Society H, F | 4hrs
+  ENEC 202I | Introduction to the Environmental Sciences | 4hrs
+RULE: Three additional ENEC courses (at least one at the 400 level or higher) 9-12
+NOTE: Environment, Ecology, and Energy (ENEC) course descriptions .
+NOTE: Students must see an ENEC advisor to discuss potential courses. Depending on the courses selected, the minor requires between 17 and 20 credit hours.

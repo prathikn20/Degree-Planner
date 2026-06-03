@@ -1,0 +1,43 @@
+TRACK: Dramatic_Art_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/dramatic-art-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  DRAM 120 | Play Analysis 1, H, F | 3hrs
+RULE: Three courses in dramatic literature/theatre history/criticism: 9
+  DRAM 220 | Theatre Histories 2 | hrs
+RULE: And two courses chosen from:
+  DRAM 281 | Theatre History and Literature I | hrs
+  DRAM 282 | Theatre History and Literature II | hrs
+  DRAM 283 | Theatre History and Literature III | hrs
+  DRAM 284 | Studies in Dramatic Theory and Criticism H | hrs
+  DRAM 285 | Modern British Drama H | hrs
+  DRAM 287 | African American Theatre | hrs
+  DRAM 292 | "Corner of the Sky": The American Musical | hrs
+  DRAM 294 | Arts Criticism | hrs
+  DRAM 486 | Latin American Theatre | hrs
+  DRAM 488 | United States Latino/a Theatre | hrs
+  AAAD 334 | Performing African American History | hrs
+  AAAD 344 | African American Theatre: Exploring Legacy and Contemporary Voices | hrs
+  ASIA 163 | Hindi-Urdu Poetry in Performance | hrs
+  ASIA 332 | The Story of Rama in India | hrs
+  ASIA 382 | The Story of Rama in Indian Culture–Experiential | hrs
+  ASIA 383 | The Mahabharata: Remembered and Reimagined–Experiential | hrs
+  CHIN 361 | Chinese Traditional Theater | hrs
+RULE: Three foundational courses in acting, design, and directing:
+  DRAM 150 | Beginning Acting for the Major | 3hrs
+  DRAM 277 | Introduction to Theatrical Design | 3hrs
+  DRAM 300 | Directing | 3hrs
+RULE: One course in technical production or costume production:
+  DRAM 191 | Technical Methods: Scenery | 3hrs
+  OR or DRAM 192 | Technical Methods: Costume
+RULE: Production Practicum:
+  DRAM 193 | Production Practicum (with PlayMakers Repertory Company; transfer credit not allowed.) 3 | 3hrs
+NOTE: Students planning to major in dramatic art should complete DRAM 120 preferably during their first year as it is the pre-requisite for the rest of the major.
+NOTE: DRAM 220 is the pre-requisite for the rest of the dramatic literature/theatre/history/criticism courses.
+NOTE: This course fulfills the High Impact Gen Ed requirement in the IDEAs in Action curriculum and the experiential education Gen Ed requirement in the Making Connections curriculum.
+NOTE: The major provides a broad basis for understanding and appreciating theatre as a cultural entity and as an artistic process. The program also provides opportunities for students to learn and develop basic skills in the various areas of theatre practice. All General Education requirements apply.
+NOTE: Because the College of Arts and Sciences allows a total of 45 credit hours (15 three-hour courses) in a student’s major to count toward graduation, as many as six electives can be selected from the range of offerings in the department. Students may choose to concentrate on an area (or areas) of special interest within the major: acting, directing, voice, movement, technical production, design (scenic, costume, sound, and lighting), costume history, costume construction, dramatic literature and criticism, dramaturgy, stage management, theatre management, and playwriting.
+NOTE: Students majoring in dramatic art cannot pursue the minor in dramatic art.

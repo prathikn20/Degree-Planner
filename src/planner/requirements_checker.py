@@ -95,6 +95,11 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
         for equiv in catalog.get(c, {}).get('cross_listed', []):
             if equiv not in original_completed:
                 virtual_to_real[equiv] = c
+        # Honors variant: MATH232H satisfies anything requiring MATH232
+        if c.endswith('H') and len(c) > 1 and c[-2].isdigit():
+            base = c[:-1]
+            if base not in original_completed and base not in virtual_to_real:
+                virtual_to_real[base] = c
 
     results = {
         "satisfied":          [],
@@ -274,14 +279,23 @@ def build_canonical_catalog(catalog):
     course_to_canon = {}
     macro_bindings = {}
     blacklist = {}
-    
+
     depths = calculate_static_depths(catalog)
+
+    def _honors_equiv(course_id):
+        """Return the H-variant if base, or the base if H-variant, when both exist."""
+        if course_id.endswith('H') and len(course_id) > 1 and course_id[-2].isdigit():
+            base = course_id[:-1]
+            return [base] if base in catalog else []
+        else:
+            h = course_id + 'H'
+            return [h] if h in catalog else []
 
     visited = set()
     for course_id, data in catalog.items():
         if course_id in visited:
             continue
-            
+
         # Handle Co-requisite Macro Binding (Atomic Nodes)
         coreqs = data.get("corequisites", [])
         if coreqs:
@@ -289,29 +303,32 @@ def build_canonical_catalog(catalog):
             macro_bindings[macro_id] = [course_id, coreqs[0]]
             base_canon = macro_id
             visited.add(coreqs[0])
+            members = [course_id]
         else:
-            cross_listed = data.get("cross_listed", [])
-            group = sorted([course_id] + cross_listed)
+            cross_listed = data.get("cross_listed", []) + _honors_equiv(course_id)
+            cross_listed = list(dict.fromkeys(cross_listed))  # dedup, preserve order
+            group = sorted(set([course_id] + cross_listed))
             base_canon = f"CANON_{'_'.join(group)}"
             for c in group:
                 visited.add(c)
-                
+            members = group
+
         # Register anti-requisites
         anti_reqs = data.get("mutually_exclusive", [])
         if anti_reqs:
             blacklist[base_canon] = anti_reqs
 
-        for c in data.get("cross_listed", []) + [course_id]:
+        for c in members:
             course_to_canon[c] = base_canon
-            
+
         canon_catalog[base_canon] = {
-            "original_courses": data.get("cross_listed", []) + [course_id],
+            "original_courses": members,
             "credits": data.get("credits", 3),
             "is_repeatable": data.get("is_repeatable", False) or any(course_id.endswith(str(x)) for x in [93, 95, 99]),
             "prerequisites": data.get("prerequisites", []),
             "depth": depths.get(course_id, 1)
         }
-        
+
     return canon_catalog, course_to_canon, macro_bindings, blacklist
 
 def generate_slots_and_candidates(requirements, catalog, majors_to_check, completed_courses, avoid_courses=None):

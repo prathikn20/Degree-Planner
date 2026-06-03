@@ -1,0 +1,89 @@
+TRACK: Medical_Anthropology_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/medical-anthropology-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Select two foundational courses: 6
+  ANTH 53 | First-Year Seminar: Darwin's Dangerous Idea H | hrs
+  ANTH 56 | First-Year Seminar: The Art of Healing, the Culture of Curing | hrs
+  ANTH 104 | Introduction to Biocultural Medical Anthropology | hrs
+  ANTH 147 | Comparative Healing Systems | hrs
+  ANTH 270 | Living Medicine | hrs
+  ANTH 319 | Global Health | hrs
+RULE: Select one research methods and experience courses (see list below) 3
+RULE: Select six elective courses, apportioned in the following ways: 1 18
+RULE: At least one from the biological/ecological elective list (see below)
+RULE: At least one from the sociocultural elective list (see below)
+RULE: ANY Anthropology (ANTH) course can count for the remaining four electives. No more than two of the six courses can be at the 100-level or below
+NOTE: These courses can be taken at any time during the student's tenure at UNC. Students may count up to two (2) courses from outside the department that relate to the student's area of interest in medical anthropology with approval of the Anthropology Director of Undergraduate Studies (DUS).
+
+## Research Methods and Experiences
+  ANTH 204 | From Ayahuasca to Zoloft: Anthropological Approaches to Drugs and Drug Use | 3hrs
+  ANTH 248 | Anthropology and Public Interest | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 326 | Practicing Medical Anthropology | 3hrs
+  ANTH 341 | Anthropology of Fitness Culture | 3hrs
+  ANTH 389 | Special Topics in Medical Anthropology - Research Methods and Experiences | 3hrs
+  ANTH 393 | Internship in Anthropology 1 | 1-12hrs
+  ANTH 395 | Research in Anthropology H | 1-6hrs
+  ANTH 396 | Independent Reading or Study in Anthropology 1, H | 1-6hrs
+  ANTH 414 | Laboratory Methods: Human Osteology | 3hrs
+  ANTH 419 | Anthropological Application of GIS | 3hrs
+  ANTH 430 | War, Medicine, and the Military | 3hrs
+  ANTH 450 | Ethnographic Research Methods | 3hrs
+  ANTH 582 | Fieldwork with Social Models of Well-Being | 3hrs
+  ANTH 625 | Ethnography and Life Stories | 3hrs
+  ANTH 675 | Ethnographic Method | 3hrs
+  ANTH 676 | Research Methods in Human Biology | 3hrs
+  ANTH 691H | Seniors Honors Project in Anthropology | 3hrs
+NOTE: Must be taken for at least three credit hours.
+
+## Electives in Biological and Ecological Anthropology
+  ANTH 143 | Human Evolution and Adaptation | 3hrs
+  ANTH 148 | Human Origins | 3hrs
+  ANTH 151 | Anthropological Perspectives on Food and Culture | 3hrs
+  ANTH 217 | Human Biology in Comparative Perspective | 3hrs
+  ANTH/ENEC 237 | Food, Environment, and Sustainability | 3hrs
+  ANTH 238 | Human Ecology of Africa | 3hrs
+  ANTH 252 | Archaeology of Food | 3hrs
+  ANTH 298 | Biological Anthropology Theory and Practice | 3hrs
+  ANTH 315 | Human Genetics and Evolution | 3hrs
+  ANTH 437 | Evolutionary Medicine | 3hrs
+  ANTH 446 | Poverty, Inequality, and Health | 3hrs
+  ANTH 471 | Biocultural Perspectives on Maternal and Child Health | 3hrs
+  ANTH 623 | Human Disease Ecology | 3hrs
+
+## Electives in Sociocultural Medical Anthropology
+  ANTH 214 | Medicine in the Arab World | 3hrs
+  ANTH 272/ENGL 264 | Healing in Ethnography and Literature | 3hrs
+  ANTH 277 | Gender and Culture | 3hrs
+  ANTH 278 | Women in Science | 3hrs
+  ANTH/PWAD 280 | Anthropology of War and Peace | 3hrs
+  ANTH 285 | Climate Change and Health | 3hrs
+  ANTH 294 | Anthropological Perspectives on Society and Culture | 3hrs
+  ANTH 320 | Anthropology of Development | 3hrs
+  ANTH 325 | Emotions and Society | 3hrs
+  ANTH 328 | Anthropology of Care | 3hrs
+  ANTH 349 | Histories of Violence | 3hrs
+  ANTH 361 | Community in India and South Asia | 3hrs
+  ANTH 390 | Special Topics in Medical Anthropology | 3hrs
+  ANTH 405 | Mental Health, Psychiatry, and Culture | 3hrs
+  ANTH 422 | Anthropology, Human Rights, and Humanitarianism | 3hrs
+  ANTH 426 | Making Magic | 3hrs
+  ANTH 442 | Health and Gender after Socialism | 3hrs
+  ANTH/WGST 443 | Cultures and Politics of Reproduction | 3hrs
+  ANTH 445 | Migration and Health | 3hrs
+  ANTH 448 | Health and Medicine in the American South | 3hrs
+  ANTH 464 | Life and Violence | 3hrs
+  ANTH 470 | Medicine and Anthropology | 3hrs
+  ANTH 473 | Anthropology of the Body and the Subject | 3hrs
+  ANTH 474 | The Anthropology of Disability | 3hrs
+  ANTH 585 | Anthropology of Science | 3hrs
+  ANTH 624 | Anthropology and Public Health | 3hrs
+  ANTH 649 | Politics of Life and Death | 3hrs
+  AAAD 300 | Cultures of Health and Healing in Africa | 3hrs
+  AAAD 387 | HIV/AIDS in Africa and the Diaspora | 3hrs
+  IDST 112I | Death and Dying | 3hrs
+  IDST 124I | Pandemics: Ethics, Literatures, and Cultures | 3hrs

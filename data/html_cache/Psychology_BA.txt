@@ -1,0 +1,180 @@
+TRACK: Psychology_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/psychology-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Gateway Course
+  PSYC 101 | General Psychology (with a grade of C or better) F | 3hrs
+### Core Requirements
+  PSYC 210 | Statistical Principles of Psychological Research H | 3hrs
+  PSYC 270 | Research Methods in Psychology 1, 2 | 3hrs
+RULE: One course below 400 from four of the five following psychology program areas: 12
+RULE: Behavioral and Integrative Neuroscience:
+  NSCI 221 | Neuropsychopharmacology | hrs
+  NSCI 222 | Learning H | hrs
+  NSCI 225 | Sensation and Perception 3, H | hrs
+  PSYC 220 | Biopsychology H | hrs
+RULE: Clinical:
+  PSYC 242 | Introduction to Clinical Psychology H | hrs
+  PSYC 245 | Psychopathology H | hrs
+RULE: Cognitive:
+  NSCI 225 | Sensation and Perception 3, H | hrs
+  PSYC 230 | Cognitive Psychology H | hrs
+RULE: Developmental:
+  PSYC 250 | Child Development 4, H | hrs
+RULE: Social:
+  PSYC 260 | Social Psychology H | hrs
+RULE: Two additional PSYC and/or NSCI courses numbered between 395 and 699; may not include PSYC 493 or NSCI 493 5 6
+RULE: One additional PSYC and/or NSCI course above 101; may not include PSYC 190 or NSCI 190 . 5 3
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+RULE: One non-Psychology and Neuroscience Department course which comes from the Allied Science list (see below) 3
+RULE: One additional non-Psychology and Neuroscience Department quantitative reasoning course (FC-QUANT) not used to fulfill the FC-QUANT Gen Ed requirement or any other requirement in the psychology major. 3-4
+NOTE: Psychology and Neuroscience double majors may also use any NSCI 27* course to fulfill this requirement.
+NOTE: Psychology and Human Development Family Studies double majors may also use EDUC 408 to fulfill this requirement.
+NOTE: NSCI 225 can meet either the behavioral neuroscience or cognitive requirement, but not both.
+NOTE: Psychology and Human Development Family Studies double majors may also use EDUC 401 to fulfill this requirement.
+NOTE: Up to 3-credit hours of the following may be used to fulfill one core major requirement: PSYC 395 / NSCI 395 , PSYC 693H / NSCI 693H or PSYC 694H / NSCI 694H .
+NOTE: A student may submit a maximum of 45 credit hours from the department (this includes both PSYC and NSCI courses) towards the completion of the B.A. degree.
+NOTE: Students planning to enter graduate programs in psychology are urged to include a research-intensive course such as PSYC 395 , NSCI 395, PSYC 530 , or PSYC 693H and PSYC 694H in their program as well as a course in software programming/coding.
+NOTE: Students interested in medical and/or health careers are strongly encouraged to connect with Pre-professional & Pre-graduate Advising and Health Professions Advising .  Particularly note that medical and/or health professional schools may recommend, though not require, psychology courses.
+
+## Allied Science Electives
+### Anthropology
+  ANTH 143 | Human Evolution and Adaptation | 3hrs
+  ANTH 148 | Human Origins | 3hrs
+  ANTH 217 | Human Biology in Comparative Perspective | 3hrs
+  ANTH 298 | Biological Anthropology Theory and Practice | 3hrs
+  ANTH 315 | Human Genetics and Evolution | 3hrs
+  ANTH 318 | Human Growth and Development | 3hrs
+  ANTH 412 | Paleoanthropology | 3hrs
+  ANTH 413 | Laboratory Methods: Archaeobotany | 3hrs
+  ANTH 414 | Laboratory Methods: Human Osteology | 3hrs
+  ANTH 415 | Laboratory Methods: Zooarchaeology | 3hrs
+  ANTH 416 | Bioarchaeology | 3hrs
+  ANTH 423 | Written in Bone: CSI and the Science of Death Investigation from Skeletal Remains | 3hrs
+  ANTH 437 | Evolutionary Medicine | 3hrs
+  ANTH 471 | Biocultural Perspectives on Maternal and Child Health | 3hrs
+### Astronomy
+  ASTR --- | Any course above ASTR 99 except ASTR 390 | hrs
+### Biochemistry
+  BIOC 107 | Introduction to Biochemistry | 4hrs
+  BIOC 108 | Introduction to Biochemistry | 4hrs
+### Biology
+  BIOL --- | Any course above BIOL 101 , except BIOL 195 , BIOL 290 , BIOL 291 , BIOL 292 , BIOL 293 , BIOL 294 , BIOL 295 , BIOL 296 , BIOL 395 , BIOL 410, BIOL 490 , and BIOL 495 | hrs
+### Biomedical Engineering
+  BMME 150 | Introduction to Materials Science | 3hrs
+  BMME 207 | Biomedical Electronics | 4hrs
+  BMME 301 | Human Physiology: Electrical Analysis | 4hrs
+  BMME 315 | Biotransport | 3hrs
+  BMME 335 | Biomaterials | 3hrs
+  BMME 385 | Bioinstrumentation | 3hrs
+  BMME 405 | Biomechanics of Movement | 3hrs
+  BMME 420 | Introduction to Synthetic Biology | 3hrs
+  BMME 435 | Biological Physics | 3hrs
+  BMME 445 | Systems Neuroscience | 3hrs
+  BMME 455 | Biofluid Mechanics | 3hrs
+  BMME 470 | Analysis of Tissue Engineering Technologies | 3hrs
+  BMME 485 | Biotechnology | 3hrs
+  BMME 505 | Skeletal Biomechanics | 3hrs
+### Biostatistics
+  BIOS --- | Any course above BIOS 500H , except BIOS 540 , BIOS 543, BIOS 690 , BIOS 691 , BIOS 693H , BIOS 694H | hrs
+### Chemistry
+  CHEM --- | Any course above CHEM 101 except CHEM 190 , CHEM 291 , CHEM 395 , CHEM 396 , CHEM 397, CHEM 410 , and CHEM 692H | hrs
+### Computer Science
+  COMP --- | Any course above COMP 116 , except COMP 185 , COMP 190 , COMP 380 , COMP 390 , and COMP 393 | hrs
+### Environment and Ecology
+  ENEC 108 | Our Energy and Climate Crises: Challenges and Opportunities | 4hrs
+  ENEC 202 | Introduction to the Environmental Sciences | 4hrs
+  ENEC 220 | North Carolina Estuaries: Environmental Processes and Problems | 3hrs
+  ENEC 222 | Estuarine and Coastal Marine Science | 4hrs
+  ENEC 256 | Mountain Biodiversity | 4hrs
+  ENEC 304 | Restoration Ecology | 4hrs
+  ENEC 324 | Water in Our World: Introduction to Hydrologic Science and Environmental Problems | 3hrs
+  ENEC 352 | Marine Fisheries Ecology | 3hrs
+  ENEC 403 | Environmental Chemistry Processes | 3hrs
+  ENEC 406 | Atmospheric Processes II | 4hrs
+  ENEC 410 | Earth Processes in Environmental Systems | 4hrs
+  ENEC 411 | Oceanic Processes in Environmental Systems | 4hrs
+  ENEC 415 | Environmental Systems Modeling | 3hrs
+  ENEC 416 | Environmental Meteorology | 3hrs
+  ENEC 431 | Sustainable Cities: Exploring Ways of Making Cities More Sustainable | 3hrs
+  ENEC 450 | Biogeochemical Processes | 4hrs
+  ENEC 462 | Ecosystem Management | 3hrs
+  ENEC 471 | Human Impacts on Estuarine Ecosystems | 4hrs
+  ENEC 479 | Landscape Analysis | 3hrs
+  ENEC 489 | Ecological Processes in Environmental Systems | 4hrs
+  ENEC 530 | Principles of Climate Modeling | 3hrs
+  ENEC 562 | Statistics for Environmental Scientists | 4hrs
+  ENEC 567 | Ecological Analyses and Application | 3hrs
+### Environment Sciences
+  ENVR 205 | Engineering Tools for Environmental Problem Solving | 3hrs
+  ENVR 403 | Environmental Chemistry Processes | 3hrs
+  ENVR 411 | Laboratory Techniques and Field Measurements | 3hrs
+  ENVR 412 | Ecological Microbiology | 3hrs
+  ENVR 413 | Limnology | 3hrs
+  ENVR 416 | Aerosol Physics and Chemistry | 4hrs
+  ENVR 419 | Chemical Equilibria in Natural Waters | 3hrs
+  ENVR 421 | Environmental Health Microbiology | 3hrs
+  ENVR 425 | Introduction to Health Physics: Radiation and Radiation Protection | 3hrs
+  ENVR 430 | Health Effects of Environmental Agents | 3hrs
+  ENVR 442 | Biochemical Toxicology | 3hrs
+  ENVR 451 | Introduction to Environmental Modeling | 3hrs
+  ENVR 453 | Groundwater Hydrology | 3hrs
+  ENVR 468 | Temporal GIS and Space/Time Geostatistics for the Environment and Public Health | 3hrs
+  ENVR 470 | Environmental Risk Assessment | 3hrs
+  ENVR 472 | Quantitative Risk Assessment in Environmental Health Microbiology | 3hrs
+  ENVR 514 | Measurement of NOx, O3, and Volatile Organic Compounds | 3hrs
+  ENVR 575 | Global Climate Change: Science, Impacts, Solutions | 3hrs
+  ENVR 630 | Systems Biology in Environmental Health | 3hrs
+  ENVR 661 | Scientific Computation I | 3hrs
+  ENVR 662 | Scientific Computation II | 3hrs
+  ENVR 666 | Numerical Methods | 3hrs
+  ENVR 668 | Methods of Applied Mathematics I | 3hrs
+  ENVR 669 | Methods of Applied Mathematics II | 3hrs
+  ENVR 671 | Environmental Physics I | 3hrs
+  ENVR 672 | Environmental Physics II | 3hrs
+  ENVR 675 | Air Pollution, Chemistry, and Physics | 3hrs
+### Exercise and Sport Science
+  EXSS 175 | Human Anatomy F | 3hrs
+  EXSS 175 & EXSS 275L | Human Anatomy and Human Anatomy Laboratory F | 4hrs
+  EXSS 276 | Human Physiology | 3hrs
+  EXSS 376 | Physiological Basis of Human Performance | 4hrs
+  EXSS 380 | Neuromuscular Control and Learning | 3hrs
+  EXSS 385 | Biomechanics of Sport | 3hrs
+  EXSS 475 | Functional Anatomy | 3hrs
+  EXSS 576 | Exercise Endocrinology | 3hrs
+  EXSS 580 | Neuromechanics of Human Movement | 3hrs
+### Geography
+  GEOG 110 | The Blue Planet: An Introduction to Earth's Environmental Systems H | 3hrs
+  GEOG 111 | Weather and Climate | 3hrs
+  GEOG 212 | Environmental Conservation and Global Change | 3hrs
+  GEOG 253 | Introduction to Atmospheric Processes | 4hrs
+  GEOG 391 | Quantitative Methods in Geography | 3hrs
+  GEOG 412 | Synoptic Meteorology | 3hrs
+  GEOG 414 | Climate Change | 3hrs
+  GEOG 416 | Applied Climatology: The Impacts of Climate and Weather on Environmental and Social Systems | 3hrs
+  GEOG 440 | Earth Surface Processes | 3hrs
+  GEOG 441 | Introduction to Watershed Systems | 3hrs
+  GEOG 442 | Limnology and Freshwater Ecology | 3hrs
+### Earth, Marine, and Environmental Sciences
+  GEOL --- | Any course above GEOL 100, except GEOL 190, GEOL 390, GEOL 395 , GEOL 396, GEOL 412, GEOL 480, GEOL 590, GEOL 601, GEOL 602, GEOL 691H, GEOL 692H, and GEOL 695 | hrs
+  MASC --- | Any course above MASC 100, except MASC 190, MASC 390, MASC 395, MASC 396, and MASC 490 | hrs
+  EMES --- | Any course above EMES 100, except EMES 190 , EMES 220 , EMES 390 , EMES 395 , EMES 396 , EMES 412 , EMES 490 , EMES 590 , EMES 691H , and EMES 692H | hrs
+### Mathematics
+  MATH --- | Any course above MATH 230 except MATH 290 , 296 , 396 , 410 , 411 , 418 , 515, 691H and 692H . | hrs
+### Microbiology
+  MCRO --- | Any course above MCRO 100 except MCRO 690 | hrs
+### Nutrition
+  NUTR 240 | Introduction to Human Nutrition | 3hrs
+  NUTR 400 | Introduction to Nutritional Biochemistry | 3hrs
+  NUTR 600 | Human Metabolism: Macronutrients | 3hrs
+  NUTR 620 | HUMAN METABOLISM: MICRONUTRIENTS | 3hrs
+### Philosophy
+  PHIL 155 | Truth and Proof: Introduction to Mathematical Logic H | 3hrs
+  PHIL 455 | Symbolic Logic | 3hrs
+### Physics
+  PHYS --- | Any course above PHYS 99 except PHYS 132 , PHYS 295 , PHYS 391 , PHYS 395 , PHYS 410 , PHYS 671L , PHYS 672L , PHYS 691H , and PHYS 692H | hrs
+### Statistics and Operations Research
+  STOR --- | Any course above STOR 100 except STOR 151 or STOR 155 | hrs

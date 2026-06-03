@@ -1,0 +1,19 @@
+TRACK: BEST_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/best-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  EDUC 532 | Human Development and Learning 1 | 3hrs
+  EDUC 615 | Schools and Community Collaboration 1 | 3hrs
+  EDUC 689 | Foundations of Special Education 1 | 3hrs
+  EDUC 760 | Methods and Materials for Teaching Secondary/K-12 Subjects I (fall only) 2 | 3hrs
+  EDUC 746 | Practica Student Internship (spring only) | 9hrs
+  EDUC 747 | Methods and Materials for Teaching Secondary/K-12 Subjects II (spring only) | 3hrs
+NOTE: Must be completed before taking EDUC 746 and EDUC 747 .
+NOTE: Must be completed before starting the internship.
+
+## Additional Requirements
+NOTE: Students are required to take the edTPA for completion of the minor.
+NOTE: Students are required to take the Praxis Exam(s) for completion of the minor.

@@ -1,0 +1,78 @@
+TRACK: Nutrition_BSPH
+URL: https://catalog.unc.edu/undergraduate/programs-study/nutrition-major-bsph/
+
+## Requirements
+NOTE: The nutrition program provides two options:
+
+## Nutrition Major, B.S.P.H.–Nutrition, Health, and Society
+NOTE: In addition to the program requirements listed below, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Courses
+RULE: Public Health Core Courses:
+  BIOS 600 | Principles of Statistical Inference 1 | 3hrs
+  EPID 600 | Principles of Epidemiology for Public Health 1 | 3hrs
+  SPHG 351 | Foundations of Public Health 1 | 3hrs
+  SPHG 352 | Public Health Systems and Solutions 1 | 4hrs
+RULE: Other Core Courses: 2
+  NUTR 175 | Introduction to Food Studies: From Science to Society | 3hrs
+  NUTR 240 | Introduction to Human Nutrition | 3hrs
+  NUTR 245 | Sustainable Local Food Systems:  Intersection of Local Foods and Public Health | 3hrs
+  OR or NUTR 250 | Global Sustainable Food Systems
+  NUTR 405 | Fundamentals of Food and Nutrition Policy in Public Health | 3hrs
+  NUTR 470 | Foundations of Nutrition Interventions | 3hrs
+  NUTR 611 | Food And Your Life Stages | 3hrs
+  NUTR 622 | Nutrition Research Seminar | 1hrs
+  NUTR 630 | Navigating Culture, Technology, and Communication in Nutrition | 3hrs
+RULE: Research and Capstone:
+  NUTR 295 | Undergraduate Research Experience in Nutrition 4 | 3hrs
+### Additional Requirements
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II H, F | 4hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory H | 4hrs
+RULE: 18 hours of elective courses (e.g., 6 courses) from other fields of study 3,5,6 18
+NOTE: Must receive a C (not C-) or better.
+NOTE: All other courses for the nutrition major, including science required courses, must receive a C (not C-) or better.
+NOTE: Possible options include coursework from minors in anthropology; coaching education; cognitive science; composition, rhetoric, and digital literacy; education; exercise and sport science; food studies; global american studies; health and society; medicine, literature and culture; neuroscience; social and economic justice. Other options may be approved by the Director of Undergraduate Studies.
+NOTE: May be taken multiple times during the program for credit but must be done in the final semester as a capstone experience. May be substituted with NUTR 691H or NUTR 692H for students completing a Senior Honors Thesis.
+NOTE: Students who pursue the food studies minor along with the NUTR major will use the core requirement NUTR 175 towards both programs. Students should be aware that at least 51% of credits of the degree must belong only to the food studies minor. Generally, in a 5-class minor, 1 or 2 classes can overlap with the major, depending on how many credits are in each course.
+NOTE: Any additional 18 hours (not including gen ed, core courses for the major, and additional requirements for the major).
+
+## Nutrition Major, B.S.P.H–Nutrition Science and Research
+NOTE: In addition to the program requirements listed below, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Courses
+RULE: Public Health Core Courses:
+  BIOS 600 | Principles of Statistical Inference 1 | 3hrs
+  EPID 600 | Principles of Epidemiology for Public Health 1 | 3hrs
+  SPHG 351 | Foundations of Public Health 1 | 3hrs
+  SPHG 352 | Public Health Systems and Solutions 1 | 4hrs
+RULE: Other Core Courses: 2
+  NUTR 400 | Introduction to Nutritional Biochemistry | 3hrs
+  NUTR 600 | Human Metabolism: Macronutrients | 3hrs
+  NUTR 611 | Food And Your Life Stages | 3hrs
+  NUTR 620 | Human Metabolism: Micronutrients | 3hrs
+  NUTR 622 | Nutrition Research Seminar | 1hrs
+  NUTR 692H | Honors Research in Nutrition (optional) | 3hrs
+RULE: Research and Capstone:
+  NUTR 295 | Undergraduate Research Experience in Nutrition 5 | 3hrs
+### Additional Requirements 2
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory 3, H, F | 4hrs
+  BIOL 103 | How Cells Function 4, F | 3hrs
+  BIOL 252 & 252L | Fundamentals of Human Anatomy and Physiology and Fundamentals of Human Anatomy and Physiology Laboratory 3, H | 4hrs
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I 3, H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II 3, H, F | 4hrs
+  CHEM 241 & 241L | Modern Analytical Methods for Separation and Characterization and Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds H | 4hrs
+  CHEM 261 | Introduction to Organic Chemistry I 3, H | 3hrs
+  CHEM 262 & 262L | Introduction to Organic Chemistry II and Laboratory in Organic Chemistry H | 4hrs
+  MATH 231 | Calculus of Functions of One Variable I 3, H, F | 4hrs
+  NUTR 240 | Introduction to Human Nutrition 3 | 3hrs
+  PHYS 114 | General Physics I: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 118 | Introductory Calculus-based Mechanics and Relativity
+  PHYS 115 | General Physics II: For Students of the Life Sciences F | 4hrs
+  OR or PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta
+NOTE: Must receive a C (not C-) or better.
+NOTE: All other courses for the nutrition major, including science required courses, must receive a C (not C-) or better.
+NOTE: Prerequisite course required for admission to the program.
+NOTE: BIOL 220 (Molecular Genetics) is also recommended for students planning to apply to graduate and medical schools
+NOTE: May be taken multiple times during the program for credit but must be done in the final semester as a capstone experience. May be substituted with NUTR 691H or NUTR 692H for students completing a Senior Honors Thesis.

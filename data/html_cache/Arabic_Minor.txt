@@ -1,0 +1,66 @@
+TRACK: Arabic_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/arabic-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The undergraduate minor in Arabic consists of four courses.
+### Core Requirements
+RULE: Three language courses beyond ARAB 203 9-10
+  ARAB 204 | Intermediate Arabic II | hrs
+  ARAB 300 | Arabic Grammar and Composition | hrs
+  ARAB 305 | Advanced Arabic I | hrs
+  ARAB 306 | Advanced Arabic II | hrs
+  ARAB 407 | Readings in Arabic I | hrs
+  ARAB 408 | Readings in Arabic II | hrs
+  ARAB 409 | Performing Arts in the Arab World | hrs
+  ARAB 410 | Visual Arts in the Arab World | hrs
+RULE: One additional course chosen from among the following: 3
+  GEOG 59 | First-Year Seminar: Space, Identity, and Power in the Middle East | hrs
+  ASIA 73 | First-Year Seminar: Popular Culture in the Arab World | hrs
+  ASIA 74 | First-Year Seminar: Imagining Palestine | hrs
+  ASIA/HIST 138 | History of Muslim Societies to 1500 | hrs
+  ASIA/HIST 139 | History of Muslim Societies since 1500 | hrs
+  ARAB 150 | Introduction to Arab Cultures | hrs
+  ARAB 151 | Arabic Literature through the Ages | hrs
+  ASIA/RELI 180 | Islam and Muslim Life before 1500 | hrs
+  ASIA/RELI 181 | Islam and Muslim Life since 1500 | hrs
+  RELI 185 | Women/Gender/Islam H | hrs
+  ARAB 211 | Arab Comics | hrs
+  ARAB/ANTH 214 | Medicine in the Arab World | hrs
+  ARAB 255 | Arab World Photography | hrs
+  ASIA/HIST 276 | The Modern Middle East | hrs
+  ASIA/HIST/PWAD 277 | The Conflict over Israel/Palestine | hrs
+  RELI/ASIA 279 | Islamic Law, Ethics, and Practice | hrs
+  ASIA/WGST 329 | Middle East Women Writers | hrs
+  ARAB 434 | Modern Arabic Literature in Translation | hrs
+  ARAB 337 | Borders and Walls in the Arab World | hrs
+  ARAB/ANTH 354 | Everyday Lives in the Middle East: Anthropological Perspectives | hrs
+  ASIA/CMPL 359 | Literary Diasporas of the Middle East | hrs
+  ARAB 407 | Readings in Arabic I | hrs
+  ARAB 408 | Readings in Arabic II | hrs
+  ARAB 409 | Performing Arts in the Arab World | hrs
+  ARAB 410 | Visual Arts in the Arab World | hrs
+  SOCI 419 | Sociology of the Islamic World | hrs
+  ASIA/JWST/PWAD 425 | Beyond Hostilities: Israeli-Palestinian Exchanges and Partnerships in Film, Literature, and Music | hrs
+  ARAB/ANTH 432 | Science and Society in the Middle East | hrs
+  ASIA/PWAD 435/CMPL 535 | The Cinemas of the Middle East and North Africa | hrs
+  ASIA/CMPL 442 | Postcolonial Literature of the Middle East | hrs
+  ASIA/GEOG/WGST 447 | Gender, Space, and Place in the Middle East | hrs
+  GEOG 448 | Transnational Geographies of Muslim Societies | hrs
+  ARAB 453 | Film, Nation, and Identity in the Arab World | hrs
+  ASIA/JWST/PWAD 462 | The Arab-Jews: Culture, Community, and Coexistence | hrs
+  ASIA/WGST 471 | Gender and Sexuality in Middle Eastern Literature | hrs
+  RELI 480 | Modern Muslim Literatures | hrs
+  RELI/ASIA 485 | Gender and Sexuality in Islam | hrs
+  RELI/ASIA 486 | Islam and Feminism/Islamic Feminism | hrs
+  ASIA/HIST 536 | Revolution in the Modern Middle East | hrs
+  ASIA/HIST/WGST 537 | Women in the Middle East | hrs
+  ASIA/HIST 538 | The Middle East and the West | hrs
+  ASIA/RELI 581 | Sufism | hrs
+  ASIA/RELI 582 | Islam and Islamic Art in South Asia | hrs
+  ASIA/RELI 584 | The Qur'an as Literature | hrs
+  FREN 617 | Framing Identities: Franco-Arab Transvisual Transcultural Contexts | hrs
+  ARAB/ASIA/RELI 681 | Readings in Islamicate Literatures | hrs
+NOTE: ARAB 308 does not count toward the minor.
+NOTE: Placement credit (PL) may not be used to meet minor requirements.

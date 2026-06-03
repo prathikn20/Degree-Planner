@@ -1,0 +1,56 @@
+TRACK: Music_BMus
+URL: https://catalog.unc.edu/undergraduate/programs-study/music-major-bmus/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Foundations:
+  MUSC 120 | Foundations in Music F | 3hrs
+RULE: Musicianship:
+  MUSC 128 | Improvisation Without Borders | 1hrs
+RULE: Two additional courses (two hours), chosen from: 2
+  MUSC 129 | Aural-based Musicianship | hrs
+  MUSC 130 | Tonal Musicianship Skills I | hrs
+  MUSC 133 | Tonal Musicianship Skills II | hrs
+RULE: Music Theory:
+  MUSC 131 | Tonal Theory I (requires a grade of C or better) H | 3hrs
+RULE: Two courses (six hours), chosen from: 6
+  MUSC 132 | Tonal Theory II (requires a grade of C or better) H | hrs
+  MUSC 135 | Jazz Theory | hrs
+  MUSC 137 | Patterns in Music | hrs
+  MUSC 156 | Beat Making Lab | hrs
+  MUSC 166 | Introduction to Composition | hrs
+  MUSC 232 | Theory III H | hrs
+  MUSC 234 | World Musics in Theory and Practice | hrs
+  MUSC 381 | Inside the Song: Analysis of Songcraft | hrs
+RULE: Critical Approaches to Music:
+  MUSC 270 | Critical Approaches to Music: Object Lessons | 3hrs
+  MUSC 271 | Critical Approaches to Music: Critical Moves | 3hrs
+  MUSC 351 | Critical Approaches to Music: Guided Research | 3hrs
+RULE: Individual Lessons (twelve hours): chosen from MUSC 200 – MUSC 207 taken over six semesters (or the equivalent for students whose primary focus is composition). 1 12
+RULE: Ensemble performance (eight hours) chosen from: 8
+  MUSC 211 | Ensemble I | hrs
+  MUSC 212 | Ensemble II | hrs
+  MUSC 214 | Chamber Music 2, H | hrs
+RULE: Keyboard skills (two hours) chosen from: 2
+  MUSC 135 | Jazz Theory | hrs
+  MUSC 136 | Keyboard Skills I | hrs
+  MUSC 200 | Advanced Individual Lessons in Keyboard 3, H | hrs
+  MUSC 236 | Keyboard Skills II | hrs
+RULE: Senior Presentation 3
+  MUSC 300 | Advanced Keyboard Lessons and Recital | hrs
+  MUSC 302 | Advanced Voice Lessons and Recital H | hrs
+  MUSC 303 | Advanced String Lessons and Recital H | hrs
+  MUSC 304 | Advanced Woodwind Lessons and Recital H | hrs
+  MUSC 305 | Advanced Brass Lessons and Recital H | hrs
+  MUSC 306 | Advanced Percussion Lessons and Recital H | hrs
+  MUSC 307 | Advanced Composition/Recital | hrs
+  MUSC 308 | Intermediate Lessons in Conducting | hrs
+  MUSC 309 | Advanced Lessons in Conducting | hrs
+### Additional Requirements
+RULE: Music electives (fifteen hours) chosen from MUSC courses: students may count no more than six additional hours from MUSC 211 - MUSC 214 towards their music major. They may count as credit hours for graduation, subject to the overall limit on music hours. 15
+NOTE: Students may petition the director of undergraduate studies to count toward this requirement no more than two hours of MUSC 100–MUSC 107. Students wishing to take a seventh semester of individual lessons may use an additional two hours of MUSC 200–MUSC 207 for elective credit.
+NOTE: Pursuant to area needs and preferences, or by approval of the director of undergraduate studies.
+NOTE: With the approval of the director of undergraduate studies.
+NOTE: Students pursuing the B.Mus. must complete at least 64 credit hours in music, which is combined with an additional 56 credit hours for a total of 120 credit hours. Students may receive no more than 66 credit hours in music and must complete a minimum of 54 credit hours of coursework outside music, including all General Education requirements.

@@ -1,0 +1,39 @@
+TRACK: Health_Policy_and_Management_BSPH
+URL: https://catalog.unc.edu/undergraduate/programs-study/health-policy-management-major-bsph/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Public Health Core Courses: 1
+  BIOS 600 | Principles of Statistical Inference | 3hrs
+  OR or ECON 400 | Introduction to Data Science and Econometrics
+  EPID 600 | Principles of Epidemiology for Public Health | 3hrs
+  SPHG 351 | Foundations of Public Health | 3hrs
+  SPHG 352 | Public Health Systems and Solutions | 4hrs
+RULE: Health Policy Management Courses: 1
+  HPM 501 | HPM BSPH Professional Development Seminar | 1hrs
+  HPM 502 | Introduction to the U.S. Health System I | 3hrs
+  HPM 503 | Introduction to the U.S. Health System II | 3hrs
+  HPM 510 | Introduction to Health Law and Ethics | 3hrs
+  HPM 520 | Introduction to Strategic Planning and Marketing in Health Care | 3hrs
+  HPM 530 | Introduction to Health Organization Leadership, Management, and Behavior | 3hrs
+  HPM 540 | Foundations of Health Care Financial Management | 3hrs
+  HPM 541 | Information Systems, Technology, and Tools in Health Care | 3hrs
+  HPM 570 | Politics, Public Health, and Health Policy | 3hrs
+  HPM 593 | Internship in Health Policy and Management (requires a $400.00 field training fee) | 2hrs
+  HPM 697 | Health Policy and Management BSPH Capstone | 3hrs
+### Additional Requirements 2
+  BIOL 101 & 101L | Principles of Biology and Introductory Biology Laboratory H, F | 4hrs
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  STOR 120 | Foundations of Statistics and Data Science H, F | 3-4hrs
+  OR or STOR 155 | Introduction to Data Models and Inference
+RULE: One of the following courses: 3-4
+  MATH 130 | Precalculus Mathematics F | hrs
+  MATH 152 | Calculus for Business and Social Sciences F | hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | hrs
+  MATH 232 | Calculus of Functions of One Variable II H, F | hrs
+  MATH 233 | Calculus of Functions of Several Variables H, F | hrs
+  STOR 113 | Decision Models for Business and Economics | hrs
+NOTE: Requires a grade of C (not C-) or better
+NOTE: Prerequisite courses required for admission.

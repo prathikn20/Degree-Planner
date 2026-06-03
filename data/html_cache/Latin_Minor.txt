@@ -1,0 +1,10 @@
+TRACK: Latin_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/latin-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Four (4) coures in Latin numbered LATN 221 or higher 12
+NOTE: The minor in Latin may not be used as an option for majors in classical archaeology or classical civilization who have chosen that language to fulfill degree requirements in that major.
+NOTE: Latin (LATN) course descriptions .

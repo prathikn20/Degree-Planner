@@ -1,0 +1,13 @@
+TRACK: Greek_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/greek-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements 1
+  GREK 204 | Intermediate Greek II | 3hrs
+  OR or GREK 205 | Introductory Greek New Testament
+RULE: Two (2) additional courses numbered GREK 221 or higher 6
+RULE: One (1) additional course chosen from any CLAR or CLAS course or any GREK or LATN course not being used to fulfill the global/foreign language General Education requirement 3
+NOTE: The minor in Greek may not be used as an option for majors in classical archaeology or classical civilization who have chosen that language to fulfill degree requirements in that major.
+NOTE: Department of Classics course descriptions include:

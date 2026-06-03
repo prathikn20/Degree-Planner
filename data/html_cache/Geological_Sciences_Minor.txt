@@ -1,0 +1,62 @@
+TRACK: Geological_Sciences_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/geological-sciences-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Four EMES courses from the list of options below. 1 12
+NOTE: Only one course may be numbered less than 200.
+  EMES 68 | First-Year Seminar: Soundscape of Our Planet | 3hrs
+  EMES 72H | First-Year Seminar: Field Geology of Eastern California | 3hrs
+  EMES 76 | First-Year Seminar: Energy Resources for a Hungry Planet | 3hrs
+  EMES 77 | First-Year Seminar: Volcanoes and Civilization: An Uneasy Coexistence | 3hrs
+  EMES 79 | First-Year Seminar: Coasts in Crisis | 3hrs
+  EMES 89 | First-Year Seminar: Special Topics 1 | 3hrs
+  EMES 101 & 101L | Planet Earth and Planet Earth Laboratory F | 4hrs
+  EMES 103 & 103L | The Marine Environment and The Marine Environment Laboratory F | 4hrs
+  EMES 105 | Natural Disasters: Hollywood versus Reality | 4hrs
+  EMES 200 | The Solid Earth | 3hrs
+  EMES 201 | Earth's Surface: Processes, Landforms, and History | 3hrs
+  EMES 203 | Data Analysis for Earth, Marine, and Environmental Sciences | 3hrs
+  EMES 301 & 301L | Earth's Critical Mineral Resources and Earth's Critical Mineral Resources - Laboratory | 4hrs
+  EMES 302 | Structural Geology | 4hrs
+  EMES 303 | Sedimentology and Stratigraphy | 4hrs
+  EMES 304 | Petrology and Plate Tectonics | 4hrs
+  EMES 305 | Planetary Geology: Meteorites and Asteroids | 3hrs
+  EMES 306 | Earth and Life through Time | 3hrs
+  EMES 310 | Coastal Environmental Change | 3hrs
+  EMES 314 | Earth Systems in a Changing World | 3hrs
+  EMES 321 | Geology of North America | 3hrs
+  EMES 324 & 324L | Water in Our World: Introduction to Hydrologic Science and Environmental Problems and Water in Our World Laboratory | 4hrs
+  EMES 395 | Undergraduate Research in Earth, Marine, and Environmental Sciences 2 | 1-3hrs
+  OR or EMES 396 | Independent Study in Earth, Marine, and Environmental Sciences
+  EMES 405 | Geochemistry | 3hrs
+  EMES 406 | Introduction to Geophysics | 3hrs
+  EMES 412 | Principles and Methods of Teaching Earth Science | 4hrs
+  EMES/ENEC 417 | Surface Processes and Landscape Evolution | 4hrs
+  EMES/ANTH 421 | Archaeological Geology | 3hrs
+  EMES 425 | Introduction to Field Geology | 3hrs
+  EMES 431 | Major World Rivers and Global Change: From Mountains to the Sea | 3hrs
+  EMES 432 | Ancient Climates: Greenhouse and Icehouse Worlds | 3hrs
+  EMES/ENEC 435 | Groundwater Hydrology | 3hrs
+  EMES 436 | Geochemistry of Natural Waters | 3hrs
+  EMES 438 | Principles of Seismology | 3hrs
+  EMES 483 | GIS and Remote Sensing for Earth and Ocean Sciences | 3hrs
+  EMES 484 | Earth and Marine Sciences Speaker Series | 3hrs
+  EMES 485 | Summer Field Course in Geology | 3hrs
+  EMES 486 | Summer Field Course in Geology | 3hrs
+  EMES 501 | Geological Research Techniques | 3hrs
+  EMES 504 | Advanced Petrology | 3hrs
+  EMES 508 | Global Hydrology | 3hrs
+  EMES/ENEC 511 | Stable Isotopes in the Environment | 3hrs
+  EMES/ENEC 512 | Advanced Coastal Environmental Change | 3hrs
+  EMES 520 | Data Analysis for Earth and Marine Sciences | 3hrs
+  EMES 525 | Modelling in Earth and Marine Sciences | 3hrs
+  EMES/DATA/ENEC/ENVR 546 | Modeling Catastrophe Risk & Resilience | 3hrs
+  EMES 567 | Application of Plasma Mass Spectrometry in Earth and Environmental Sciences | 3hrs
+  EMES 580 | Evolution of Earth's Surface Environment | 3hrs
+  EMES 608 | Continuum Mechanics in the Earth Sciences | 3hrs
+  EMES 655 | Recent Advances in Non-Traditional Stable Isotope Geochemistry | 3hrs
+NOTE: With permission, based on topic.
+NOTE: Student must register for a minimum of 3 credit hours. No more than 3 credit hours may apply towards the minor.

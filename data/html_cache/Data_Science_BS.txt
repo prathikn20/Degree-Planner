@@ -1,0 +1,295 @@
+TRACK: Data_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/data-science-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  DATA 110 | Introduction to Data Science †, H | 3hrs
+  DATA 120 | Ethics of AI and Societal Decision Making H | 3hrs
+RULE: Communications: 3
+  DATA 150 | Communication for Data Scientists | hrs
+RULE: Mathematical and Statistical Foundations (2 courses): 6
+  DATA 441 | Statistical and Mathematical Foundations of Data Science | hrs
+RULE: And select one from the following:
+  BIOS 650 | Basic Elements of Probability and Statistical Inference I | hrs
+  STOR 435/MATH 535 | Introduction to Probability H | hrs
+  STOR 535 | Probability for Data Science | hrs
+  STOR 634 | Probability I | hrs
+RULE: Optimization (select one): 3
+  MATH 560 | Optimization with Applications in Machine Learning | hrs
+  STOR 415 | Introduction to Optimization H | hrs
+  STOR 612 | Foundations of Optimization | hrs
+RULE: Machine Learning and AI (select one): 3
+  BIOS 635 | Introduction to Machine Learning | hrs
+  COMP 560 | Artificial Intelligence | hrs
+  COMP 562 | Introduction to Machine Learning H | hrs
+  DATA 521 | Foundations in Artificial Intelligence | hrs
+  DATA 522 | Practical Deep Learning Systems | hrs
+  STOR 565 | Machine Learning | hrs
+  STOR 566 | Introduction to Deep Learning | hrs
+RULE: Computational Thinking (2 courses): 6
+  DATA 215 | Computational Doing | hrs
+RULE: And select one of the following
+  BIOS 511 | Introduction to Statistical Computing and Data Management | hrs
+  DATA 440 | Computational Methods For Data Science | hrs
+  MATH 566 | Introduction to Numerical Analysis | hrs
+  STOR 520 | Statistical Computing for Data Science | hrs
+  STOR 572 | Simulation for Analytics | hrs
+RULE: Choose four upper-division electives (see list below) OR a four-course concentration. 1 12
+### Additional Requirements
+  MATH 231 | Calculus of Functions of One Variable I †, H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II †, H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables †, H | 4hrs
+  OR or MATH 235 | Mathematics for Data Science
+  MATH 347 | Linear Algebra for Applications †, F | 3hrs
+  MATH 381 | Discrete Mathematics †, H | 3hrs
+  OR or STOR 315 | Discrete Mathematics for Data Science
+  OR or COMP 283 | Discrete Structures
+  STOR 120 | Foundations of Statistics and Data Science †, H, F | 3-4hrs
+  OR or COMP 110 | Introduction to Programming
+  OR or COMP 116 | Introduction to Scientific Programming
+NOTE: Must be completed to apply to the School of Data and Information Sciences.
+NOTE: One course cannot fulfill two core requirements. For example, one course cannot satisfy a competency requirement and an upper-level elective requirement. Students are limited to one DATA 890 as an upper-level elective.
+
+## Upper-Division Electives
+  BIOS 645 | Principles of Experimental Analysis | 3hrs
+  BIOS 664 | Sample Survey Methodology | 4hrs
+  COMP 421 | Files and Databases | 3hrs
+  COMP 488 | Data Science in the Business World | 3hrs
+  COMP 550 | Algorithms and Analysis | 3hrs
+  COMP 560 | Artificial Intelligence | 3hrs
+  COMP 562 | Introduction to Machine Learning H | 3hrs
+  COMP 586 | Natural Language Processing | 3hrs
+  COMP 664 | Deep Learning | 3hrs
+  COMP 683 | Computational Biology | 3hrs
+  DATA 440 | Computational Methods For Data Science | 3hrs
+  DATA 441 | Statistical and Mathematical Foundations of Data Science | 3hrs
+  DATA 442 | System Design and Engineering | 3hrs
+  DATA 481 | Data Science Practicum | 3hrs
+  DATA 493 | Internship in Data Science | 3hrs
+  DATA 495 | Mentored Research in Data Science | 3hrs
+  DATA 496 | Directed Exploration in Data Science | 3hrs
+  DATA 510 | Data Science Methodologies in Biological and Health Sciences | 3hrs
+  DATA 543 | Risk, Data Science and AI | 3hrs
+  DATA 520 | Research-Methods for Socially Responsible AI:  An Ethical Expedition | 3hrs
+  DATA 521 | Foundations in Artificial Intelligence | 3hrs
+  DATA 522 | Practical Deep Learning Systems | 3hrs
+  DATA 523 | Modeling and Data Mining For Artificial Intelligence | 3hrs
+  DATA 590 | Special Topics in Data Science | 3hrs
+  DATA 593 | Internship in Data Science | 12hrs
+  DATA 693H | Honors Thesis in Data Science | 3hrs
+  DATA 694H | Honors Thesis in Data Science | 3hrs
+  DATA 890 | Special Topics in Data Science (one time only, with permission) | 3hrs
+  ENGL 411 | Composing for Clients: Technical Communication Practicum | 3hrs
+  GEOG 415 | Communicating Important Ideas | 3hrs
+  INLS 541 | Information Visualization | 3hrs
+  MATH 521 | Advanced Calculus I H | 3hrs
+  MATH 522 | Advanced Calculus II H | 3hrs
+  MATH 524 | Elementary Differential Equations | 3hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | 3hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II | 3hrs
+  MATH 550 | Topology | 3hrs
+  MATH 560 | Optimization with Applications in Machine Learning | 3hrs
+  MATH 566 | Introduction to Numerical Analysis | 3hrs
+  MATH 577 | Linear Algebra | 3hrs
+  MATH 590 | Topics in Mathematics (approval based on topic) | 3hrs
+  MATH 594 | Nonlinear Dynamics | 3hrs
+  MATH 661 | Scientific Computation I | 3hrs
+  MATH 662 | Scientific Computation II | 3hrs
+  STOR 415 | Introduction to Optimization H | 3hrs
+  STOR 435/MATH 535 | Introduction to Probability H | 3hrs
+  STOR 445 | Stochastic Modeling | 3hrs
+  STOR 455 | Methods of Data Analysis H | 3hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | 3hrs
+  STOR 520 | Statistical Computing for Data Science | 4hrs
+  STOR 535 | Probability for Data Science | 3hrs
+  STOR 538 | Sports Analytics | 3hrs
+  STOR 543 | Dynamic Decision Analytics | 3hrs
+  STOR 545 | Stochastic Models and their Applications | 3hrs
+  STOR 555 | Mathematical Statistics | 3hrs
+  STOR 556 | Time Series Data Analysis | 3hrs
+  STOR 557 | Advanced Methods of Data Analysis | 3hrs
+  STOR 565 | Machine Learning | 3hrs
+  STOR 566 | Introduction to Deep Learning | 3hrs
+  STOR 572 | Simulation for Analytics | 3hrs
+  STOR 590 | Special Topics in Statistics and Operations Research (approval based on topic) | 3hrs
+  STOR 612 | Foundations of Optimization | 3hrs
+  STOR 634 | Probability I | 3hrs
+  STOR 712 | Optimization for Machine Learning and Data Science | 3hrs
+  STOR 893 | Special Topics (approval based on topic) | 1-3hrs
+
+## Economic Analysis Concentration
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | 4hrs
+  ECON 470 | Econometrics 1, H | 3hrs
+RULE: Select one of the following options: 3
+  ECON 571 | Advanced Econometrics 1 | hrs
+  ECON 573I | Machine Learning and Econometrics 1 | hrs
+  ECON 575 | Applied Time Series Analysis and Forecasting 1 | hrs
+RULE: Select one of the following options: 3
+  ECON 522 | Macroeconomic Analysis of the Labor Market 1 | hrs
+  ECON 525 | Advanced Financial Economics 1 | hrs
+  ECON 545 | Advanced Industrial Organization 1 | hrs
+  ECON 550 | Advanced Health Econometrics 1 | hrs
+  ECON 551 | Economics of Education 1 | hrs
+  ECON 552 | The Economics of Health Care Markets and Policy 1 | hrs
+  ECON 580 | Advanced Labor Economics 1 | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Data Science in Politics Concentration
+  POLI 381 | Data in Politics II: Frontiers and Applications 1 | 3hrs
+  POLI 480 | Survey Experiments H | 3hrs
+RULE: Select one of the following options: 3
+  POLI 209 | Analyzing Public Opinion H | hrs
+  POLI 350 | Peace Science Research 1 | hrs
+  POLI 487 | Networks in International Relations | hrs
+  POLI 488 | Game Theory 1 | hrs
+RULE: Select one of the following options: 3
+  POLI 193 | Internship in Political Science 1 | hrs
+  POLI 395 | Mentored Research in Political Science (for 3 credits) | hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Urban Analytics Concentration
+RULE: Select one of the following: 3
+  PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning | hrs
+  PLAN 247 | Solving Urban Problems | hrs
+  PLAN 256 | Planning the City: Possibilities, Participants, and Change | hrs
+  PLAN 257 | Tools for Urbanists | hrs
+  PLAN 714 | Urban Spatial Structure 1 | hrs
+RULE: Select one of the following: 3
+  PLAN 562 | Seminar on The Ethics and Politics of New Urban Analytics | hrs
+RULE: Select one of the following: 3
+  PLAN 672 | Urban Data Analytics | hrs
+RULE: Select one of the following: 3
+  PLAN 591 | Applied Issues in Geographic Information Systems | hrs
+  PLAN 635 | Energy Modeling for Environment and Public Health | hrs
+  PLAN 636 | Urban Transportation Planning | hrs
+  PLAN 637 | Public Transportation | hrs
+  PLAN 671 | Development Planning Techniques | hrs
+  PLAN 720 | Planning Methods 1 | hrs
+  PLAN 745 | Development Impact Assessment 1 | hrs
+  PLAN 739 | Transportation Planning Models 1 | hrs
+NOTE: 700-level courses are listed in the proposal and undergraduates will need special permission to register for courses above 600.
+
+## Sports Analytics Concentration
+  STOR 538 | Sports Analytics | 3hrs
+  STOR 590 | Special Topics in Statistics and Operations Research (For 24-25 Sports Data Analysis Lab) | 3hrs
+RULE: Select two of the following: 6
+  EXSS 221 | Introduction to Sport Administration | hrs
+  EXSS 324 | Finance and Economics of Sport | hrs
+  EXSS 327 | Predictive Analytics in Sport H | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 475 | Healthcare Risk Analytics | hrs
+  STOR 543 | Dynamic Decision Analytics | hrs
+  STOR 555 | Mathematical Statistics | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+  STOR 557 | Advanced Methods of Data Analysis | hrs
+  STOR 565 | Machine Learning | hrs
+  STOR 572 | Simulation for Analytics | hrs
+
+## Quantitative Language Science Concentration
+  COMP 586 | Natural Language Processing 1 | 3hrs
+  LING 401 | Introduction to Computational Linguistics 1 | 3hrs
+  LING 460 | Making Sense of Big Data: Textual Analysis with R | 3hrs
+  LING 540 | Mathematical Linguistics 1 | 3hrs
+NOTE: Course requires a prerequisite(s) not otherwise counting in the major. Please review prerequisite information carefully when planning your course selection.
+
+## Operations Research Concentration
+  STOR 415 | Introduction to Optimization H | 3hrs
+  STOR 445 | Stochastic Modeling | 3hrs
+RULE: Choose two of the following: 6
+  STOR 512 | Optimization for Machine Learning and Neural Networks | hrs
+  STOR 543 | Dynamic Decision Analytics | hrs
+  STOR 545 | Stochastic Models and their Applications | hrs
+  STOR 572 | Simulation for Analytics | hrs
+  STOR 641 | Stochastic Modeling I | hrs
+  STOR 642 | Stochastic Modeling II | hrs
+
+## Mathematical Foundations Concentration
+RULE: Analytical Methods. Choose one of the following: 3
+  MATH 524 | Elementary Differential Equations | hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | hrs
+  MATH 560 | Optimization with Applications in Machine Learning | hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | hrs
+RULE: Algebraic and Computational Techniques. Choose one of the following: 3
+  MATH 533 | Elementary Theory of Numbers | hrs
+  MATH 577 | Linear Algebra | hrs
+  MATH 661 | Scientific Computation I | hrs
+  MATH 662 | Scientific Computation II | hrs
+RULE: Statistical Methods. Choose one of the following: 3
+  STOR 555 | Mathematical Statistics | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+  STOR 557 | Advanced Methods of Data Analysis | hrs
+  STOR 654 | Statistical Theory I | hrs
+RULE: Computational and Stochastic Modeling. Choose one of the following: 3
+  MATH 564 | Mathematical Modeling in the Life Sciences | hrs
+  STOR 445 | Stochastic Modeling | hrs
+  STOR 543 | Dynamic Decision Analytics | hrs
+  STOR 545 | Stochastic Models and their Applications | hrs
+
+## Decision Analytics Concentration
+  STOR 445 | Stochastic Modeling | 3hrs
+  STOR 572 | Simulation for Analytics | 3hrs
+RULE: Choose two of the following: 6
+  COMP 562 | Introduction to Machine Learning H | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 475 | Healthcare Risk Analytics | hrs
+  STOR 512 | Optimization for Machine Learning and Neural Networks | hrs
+  STOR 543 | Dynamic Decision Analytics | hrs
+  STOR 545 | Stochastic Models and their Applications | hrs
+  STOR 555 | Mathematical Statistics | hrs
+  STOR 565 | Machine Learning | hrs
+
+## Statistical Learning and Data Analysis Concentration
+  STOR 555 | Mathematical Statistics | 3hrs
+  STOR 565 | Machine Learning | 3hrs
+RULE: Choose two of the following: 6
+  STOR 512 | Optimization for Machine Learning and Neural Networks | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+  STOR 557 | Advanced Methods of Data Analysis | hrs
+  STOR 566 | Introduction to Deep Learning | hrs
+  STOR 654 | Statistical Theory I | hrs
+  STOR 655 | Statistical Theory II | hrs
+  STOR 664 | Applied Statistics I | hrs
+  STOR 665 | Applied Statistics II | hrs
+
+## Advanced Artificial Intelligence and Machine Learning Concentration
+  DATA 520 | Research-Methods for Socially Responsible AI:  An Ethical Expedition | 3hrs
+RULE: Selection one of the following: 3
+  DATA 521 | Foundations in Artificial Intelligence | hrs
+  COMP 560 | Artificial Intelligence | hrs
+RULE: Selection two of the following courses: 6
+  DATA 522 | Practical Deep Learning Systems | hrs
+  DATA 523 | Modeling and Data Mining For Artificial Intelligence | hrs
+  BIOS 635 | Introduction to Machine Learning | hrs
+  COMP 562 | Introduction to Machine Learning H | hrs
+  MATH 560 | Optimization with Applications in Machine Learning | hrs
+  STOR 565 | Machine Learning | hrs
+  STOR 566 | Introduction to Deep Learning | hrs
+
+## Health Informatics Concentration
+  CHIP 708 | Foundations of Clinical Data Science | 3hrs
+  CHIP 710 | Systems Analysis in Healthcare 1 | 3hrs
+  CHIP 725 | Electronic Health Records 1 | 3hrs
+RULE: Select one of the following elective courses: 3
+  CHIP 690 | Intermediate Selected Topics (Section 295) 2 | hrs
+  CHIP 721 | Healthcare Systems in the US 1 | hrs
+  CHIP 732 | Database Systems in Healthcare 1 | hrs
+  CHIP 793 | Health Informatics Internship (for 3 credits) 1 | hrs
+  DATA 510 | Data Science Methodologies in Biological and Health Sciences | hrs
+  STOR 475 | Healthcare Risk Analytics | hrs
+NOTE: 700-level graduate courses require permission of the instructor for undergraduate students to enroll.
+NOTE: With approval based on the topic.
+
+## Computational Sociology and Data Science
+  SOCI 251 | Research Methods (take first) | 3hrs
+  SOCI 318 | Computational Sociology | 3hrs
+RULE: Take two of the following, with one being at the 400-level: 6
+  SOCI 121 | Population Problems | hrs
+  SOCI 172 | Introduction to Population Health in the United States | hrs
+  SOCI 180 | Introduction to Global Population Health | hrs
+  SOCI 277 | Societies and Genomics H | hrs
+  SOCI 412 | Social Stratification | hrs
+  SOCI 421 | Environmental Sociology | hrs
+  SOCI 468 | United States Poverty and Public Policy | hrs
+  SOCI 469 | Health and Society | hrs

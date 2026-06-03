@@ -1,0 +1,78 @@
+TRACK: Information_Science_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/information-science-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  INLS 560 | Programming for Information Science | 3hrs
+  OR or COMP 110 | Introduction to Programming and Data Science
+  OR or COMP 116 | Introduction to Scientific Programming
+  INLS 382 | Information Systems Analysis and Design | 3hrs
+  INLS 385 | Information Use for Organizational Effectiveness | 3hrs
+  INLS 523 | Introduction to Database Concepts and Applications | 3hrs
+  INLS 697 | Information Science Capstone (taken in the senior year) | 3hrs
+RULE: A coherent set of five or more electives, selected from the list below, equaling 15 credit hours 1 15
+NOTE: Electives should meet the student's objectives/interests/career goals.
+
+## Approved Electives
+  INLS --- | Any INLS course above level 200 that is not a core requirement or prerequisite | 3hrs
+  APPL 101 | Exploring Engineering | 3hrs
+  BIOS 511 | Introduction to Statistical Computing and Data Management | 4hrs
+  BUSI 410 | Business Analytics | 3hrs
+  BUSI 520 | Advanced Spreadsheet Modeling for Business | 3hrs
+  COMM 140 | Introduction to Media History, Theory, and Criticism H, F | 3hrs
+  COMM 150 | Introduction to New Media | 3hrs
+  COMM 431 | Advanced Audio Production | 3hrs
+  COMM 450 | Media and Popular Culture | 3hrs
+  COMM 636 | Interactive Media | 3hrs
+  COMP 126 | Practical Web Design and Development for Everyone | 3hrs
+  COMP 210 | Data Structures and Analysis | 3hrs
+  COMP 211 | Systems Fundamentals | 3hrs
+  COMP 283 | Discrete Structures H | 3hrs
+  COMP 301 | Foundations of Programming | 3hrs
+  COMP 311 | Computer Organization | 3hrs
+  COMP 380 | Technology, Ethics, & Culture H | 3hrs
+  COMP 426 | Modern Web Programming | 3hrs
+  COMP 431 | Internet Services and Protocols | 3hrs
+  ECON 400 | Introduction to Data Science and Econometrics H | 4hrs
+  ECON 470 | Econometrics H | 3hrs
+  ENGL 117 | Arguing on the Internet: Rhetoric in the Age of Social Media | 3hrs
+  ENGL 482 | Metadata, Mark-up, and Mapping: Understanding the Rhetoric of Digital Humanities | 3hrs
+  GEOG 215 | Introduction to Spatial Data Science | 3hrs
+  GEOG 370 | Introduction to Geographic Information | 3hrs
+  GEOG 477 | Introduction to Remote Sensing of the Environment | 3hrs
+  GEOG 491 | Introduction to GIS | 3hrs
+  GEOG 591 | Applied Issues in Geographic Information Systems | 3hrs
+  MATH 381 | Discrete Mathematics H | 3hrs
+  MEJO 182 | Foundations of Graphic Design | 3hrs
+  MEJO 187 | Foundations of Interactive Media | 3hrs
+  MEJO 433 | UX Strategy and Design | 3hrs
+  MEJO 445 | Media Effects on Audiences | 3hrs
+  MEJO 482 | Media Design | 3hrs
+  MEJO 484 | Information Graphics | 3hrs
+  MEJO 487 | Intermediate Interactive Media | 3hrs
+  MEJO 581 | User Experience Design and Usability | 3hrs
+  MEJO 582 | Advanced Documentary Video Storytelling | 3hrs
+  MEJO 583 | Advanced Interactive Media | 3hrs
+  MEJO 585 | 3D Design Studio | 3hrs
+  MUSC 239 | Introduction to Music Technology | 3hrs
+  PHIL 143 | AI and the Future of Humanity: Philosophical Issues about Technology and Human Survival H | 3hrs
+  PHYS 633 | Scientific Programming | 3hrs
+  PLCY 460 | Quantitative Analysis for Public Policy H | 4hrs
+  POLI 281 | Data in Politics I: An Introduction | 3hrs
+  PSYC 180 | Social Media, Technology, and the Adolescent Brain | 3hrs
+  PSYC 210 | Statistical Principles of Psychological Research H | 3hrs
+  PSYC 230 | Cognitive Psychology H | 3hrs
+  PSYC 330 | Introduction to Cognitive Science | 3hrs
+  SOCI 318 | Computational Sociology | 3hrs
+  STOR 120 | Foundations of Statistics and Data Science F | 4hrs
+  STOR 151 | Introduction to Data Analysis | 3hrs
+  STOR 155 | Introduction to Data Models and Inference F | 3hrs
+  STOR 215 | Foundations of Decision Sciences | 3hrs
+  STOR 305 | Introduction to Decision Analytics | 3hrs
+  STOR 320 | Introduction to Data Science | 4hrs
+  STOR 435 | Introduction to Probability | 3hrs
+  STOR 455 | Methods of Data Analysis | 3hrs
+  STOR 565 | Machine Learning | 3hrs
+NOTE: B.S.I.S. students may take additional INLS electives but are encouraged to acquire a broad education in the liberal arts and sciences.

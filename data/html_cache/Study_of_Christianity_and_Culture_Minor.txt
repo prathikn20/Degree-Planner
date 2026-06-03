@@ -1,0 +1,116 @@
+TRACK: Study_of_Christianity_and_Culture_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/study-christianity-culture-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Requirements
+RULE: The minor requires the completion of five courses, including at least one course from each of the following categories.
+RULE: Core course: 3-9
+  RELI 161 | Introduction to the History of Christian Traditions H | hrs
+  RELI 167 | Global Christianity | hrs
+  RELI 209 | Varieties of Early Christianity H | hrs
+  RELI 225 | Christian Cultures | hrs
+  RELI 266 | Medieval and Renaissance Christian Cultures | hrs
+  RELI 332 | The Protestant Tradition H | hrs
+RULE: Ancient, medieval, or early modern Christianity (see list below) 3-9
+RULE: Christianity in the modern world (see list below) 3-9
+NOTE: Students may also petition the Minor Faculty Advisory Committee for permission to count toward their minor requirements other potentially appropriate UNC–Chapel Hill courses, independent study courses, transfer courses, or study abroad courses.
+NOTE: Students also are encouraged to take language courses that relate to the minor in the study of Christianity and culture — such as Latin, Greek, or Hebrew — but language courses do not fulfill minor course requirements.
+NOTE: Although this minor is housed in the Department of Religious Studies, the director of Christianity and culture is responsible for advising all students who minor in the study of Christianity and culture.
+
+## Ancient, Medieval, or Early Modern Christianity
+  ARTH 264 | Medieval Art in Western Europe | 3hrs
+  ARTH 290 | Special Topics in Art History | 3hrs
+  ARTH 365 | Late Medieval Art | 3hrs
+  CLAR/JWST/RELI 110 | The Archaeology of Palestine in the New Testament Period | 3hrs
+  CLAS 259 | Pagans and Christians | 3hrs
+  ENGL 223 | Chaucer H | 3hrs
+  ENGL 224 | Survey of Medieval English Literature, excluding Chaucer H | 3hrs
+  ENGL 227 | Literature of the Earlier Renaissance H | 3hrs
+  ENGL 228 | Literature of the Later Renaissance H | 3hrs
+  GSLL/RELI 218 | Christianity and Islam in the Middle Ages | 3hrs
+  HIST 106 | Ancient History | 3hrs
+  HIST 107 | Medieval History | 3hrs
+  HIST 177H | Honors Seminar in Early European History | 3hrs
+  HIST 428 | The Later Roman Empire, 193 CE-378 CE | 3hrs
+  HIST 431 | The Medieval Church | 3hrs
+  HIST 452 | The Renaissance: Italy, Birthplace of the Renaissance, 1300-1550 | 3hrs
+  HIST/RELI 454 | The Reformation | 3hrs
+  ITAL 357 | Dante, Petrarch, and Boccaccio in English | 3hrs
+  PHIL 215 | Medieval Philosophy | 3hrs
+  RELI 62 | First-Year Seminar: A History of Heresy: Christian Dissent from the Gnostics to the Pentecostals | 3hrs
+  RELI 70 | First-Year Seminar: Jesus in Scholarship and Film | 3hrs
+  RELI 104 | Introduction to the New Testament H | 3hrs
+  RELI 114 | Early Christian Worship, Ritual, and Bodies | 3hrs
+  RELI 163 | Critical Issues in Western Religious Thought | 3hrs
+  RELI 164 | Heresy and Inquisition: Religion, Ethics, Marginalization | 3hrs
+  RELI 201 | Ancient Biblical Interpretation H | 3hrs
+  RELI 207 | Jesus in the Early Christian Gospels | 3hrs
+  RELI 208 | The Birth of Christianity | 3hrs
+  RELI 209 | Varieties of Early Christianity H | 3hrs
+  RELI 217 | Gnosticism H | 3hrs
+  RELI 218 | Christianity and Islam in the Middle Ages | 3hrs
+  RELI 244 | Gender and Sexuality in Western Christianity H | 3hrs
+  RELI 266 | Medieval and Renaissance Christian Cultures | 3hrs
+  RELI 314 | Memory and the Historical Jesus H | 3hrs
+  RELI 315 | Religious Frauds: Lies, Forgeries, and Fake News H | 3hrs
+  RELI 366 | Medieval Religious Texts | 3hrs
+  RELI 367 | The Art of Devotion in Medieval and Early Modern Europe | 3hrs
+  RELI 371 | Women Mystics | 3hrs
+  RELI 413 | Biblical Coptic and Early Egyptian Monasticism | 3hrs
+  RELI 454 | The Reformation | 3hrs
+  RELI 515 | Cultural Histories of the New Testament H | 3hrs
+  RELI 564 | Religion, Race, and Inquisition in the Spanish Empire | 3hrs
+  RELI 603 | The Bible and Its Translation | 3hrs
+  RELI 607 | Problems in Early Christian Literature and History H | 3hrs
+  RELI 608 | The Messiah and the Apocalypse | 3hrs
+  RELI 609 | Christianity and Greco-Roman Culture | 3hrs
+  RELI 610 | Readings in the Apostolic Fathers | 3hrs
+  RELI 614 | The Cult of Saints: Narratives, Materialities, Practices | 3hrs
+  RELI/GERM 227 | Luther and the Bible | 3hrs
+  RELI/WGST 362 | Mary in the Christian Tradition H | 3hrs
+  RELI 368/WGST 370 | Race, Sexuality, and Disability in the History of Western Christianity H | 3hrs
+  RELI 665/WGST 664 | Body and Suffering in Christian Mysticism | 3hrs
+
+## Christianity in the Modern World
+  AAAD 159 | The History of the Black Church and Social Change | 3hrs
+  AAAD 210 | African Belief Systems: Religion and Philosophy in Sub-Saharan Africa | 3hrs
+  AAAD 286 | The African Diaspora in the Colonial Americas, 1450-1800 | 3hrs
+  ANTH/FOLK/RELI 342 | African-American Religious Experience | 3hrs
+  PHIL 134/RELI 126 | Reason, Faith, and God: Philosophy of Western Religion H | 3hrs
+  RELI 72 | First-Year Seminar: Apocalypse Now? Messianic Movements in America | 3hrs
+  RELI 125 | Heaven and Hell | 3hrs
+  RELI 138 | Religious Freedom | 3hrs
+  RELI 140 | Religion in America H | 3hrs
+  RELI 141 | African American Religions H | 3hrs
+  RELI 142 | Catholicism in America | 3hrs
+  RELI 151 | Religion in Latin America | 3hrs
+  RELI 161 | Introduction to the History of Christian Traditions H | 3hrs
+  RELI 162 | Catholicism Today: An Introduction to the Contemporary Catholic Church | 3hrs
+  RELI 215 | Eastern Christian Cultures: Middle East, Asia, Africa, and Eastern Europe | 3hrs
+  RELI 225 | Christian Cultures | 3hrs
+  RELI 236 | Religious Things | 3hrs
+  RELI 241 | Messianic Movements in American History | 3hrs
+  RELI 242 | New Religious Movements in America | 3hrs
+  RELI 245 | Latina/o Religions in the United States-Mexico Borderlands H | 3hrs
+  RELI 332 | The Protestant Tradition H | 3hrs
+  RELI 338 | Religion in American Law | 3hrs
+  RELI 340 | Liberal Tradition in American Religion | 3hrs
+  RELI 352 | Anthropology of Christianity | 3hrs
+  RELI 365 | Studies in Christian Theologies and Theologians | 3hrs
+  RELI 421 | Religion and Science | 3hrs
+  RELI 424 | Gender Theory and the Study of Religion | 3hrs
+  RELI 441 | Religion in Early America H | 3hrs
+  RELI 443 | Evangelicalism in Contemporary America H | 3hrs
+  RELI 446 | Christian-Jewish Relations throughout the Ages | 3hrs
+  RELI 448 | Native and Christian: Indigenous Engagements with Christianity | 3hrs
+  RELI 540 | Mormonism and the American Experience | 3hrs
+  RELI 541 | Evangelicalism from a Global Perspective H | 3hrs
+  RELI 542 | Religion and the Counterculture H | 3hrs
+  RELI 662 | Advanced Seminar in Contemporary Catholicism | 3hrs
+  RELI/SOCI 429 | Religion and Society | 3hrs
+  RELI/WGST 244 | Gender and Sexuality in Western Christianity H | 3hrs
+  RELI/WGST 371 | Women Mystics | 3hrs
+  SOCI 290 | Special Topics in Sociology 1 | 3hrs
+NOTE: With permission, based on topic.

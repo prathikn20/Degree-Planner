@@ -1,0 +1,96 @@
+TRACK: Romance_Languages_BA_French
+URL: https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-french-francophone-studies/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: One of the following courses: 1 3
+  FREN 255 | Conversation I H | hrs
+  FREN 260 | Literature and the French-Speaking World H | hrs
+  FREN 262 | Cultural and Linguistic Variety in the French-Speaking World | hrs
+  FREN 300 | French Composition and Grammar Review | 3hrs
+RULE: Seven additional courses above 204, which must include: 2 21
+RULE: At least one course focused on French and Francophone contexts up to 1789 (see course list below) 3
+RULE: At least one course focused on French and Francophone contexts since 1789 (see course list below) 3
+RULE: At least four courses taught in French (see course lists below)
+NOTE: Students may not take more than two courses from FREN 255 , FREN 260 , and FREN 262 . If a second course is taken, it may be used as one of the seven electives.
+NOTE: Excluding FREN 401 , FREN 402 , FREN 501 , FREN 601 , and FREN 692H . One course may be taken outside the Department of Romance Studies, if applicable and with prior approval by the undergraduate advisor in French. This rule does not affect Study Abroad.
+NOTE: Special topics courses ( FREN 390 , FREN 490 , FREN 590 , FREN 690 ) may fulfill historical distribution requirements, depending on topic, with approval of the Undergraduate Advisor in French.
+  FREN 280 | French "Discoveries" of the Americas in Translation 4 | 3hrs
+  FREN 285 | Sex, Philosophy, and Politics: Revolutionary Literature in Translation 4 | 3hrs
+  FREN 288 | Francophone Caribbean Literature in Translation 4 | 3hrs
+  FREN 305 | Healthcare in France and the Francophone World | 3hrs
+  FREN 310 | Conversation and Composition II | 3hrs
+  FREN 311 | Communication Skills for Cultural Immersion | 3hrs
+  FREN 312 | French University Methodology through Literature | 3hrs
+  FREN 315 | Imposteur!: Faking and False Identities in French and Francophone Drama and Film | 3hrs
+  FREN 320 | Business French | 3hrs
+  FREN 325 | Crime and Literature in French and Francophone Contexts | 3hrs
+  FREN 326 | Cultures of Resistance in the French-Speaking World | 3hrs
+  FREN 330 | Approaches to French and Francophone Studies | 3hrs
+  FREN 342 | The Art and Power of Conversation: The Enlightenment Salon 2 | 3hrs
+  FREN 350 | Current Societal Issues: France and Beyond 3 | 3hrs
+  FREN 351 | Bandes dessinées / Comics and Graphic Novels 3 | 3hrs
+  FREN 353 | Francophone Drama and Multimedia Productions 3 | 3hrs
+  FREN 354 | Francophone Poetry and Slam 3 | 3hrs
+  FREN 355 | Visual Francophone Studies | 3hrs
+  FREN 356 | Littérature et philosophie | 3hrs
+  FREN 357 | Les jeux - Games 3 | 3hrs
+  FREN 365 | Introduction to Translation | 3hrs
+  FREN 369 | Environment, Society, and Public Policy in Southern France 4 | 3hrs
+  FREN 370 | French and Francophone Studies to 1789 2 | 3hrs
+  FREN 372 | French and Francophone Studies since 1789 3 | 3hrs
+  FREN 375 | Francophone Literature and Film 3 | 3hrs
+  FREN 376 | Identity and Nationhood in Québécois Literature 3 | 3hrs
+  FREN 377 | The Evolution of Frenchness since WWII 3 | 3hrs
+  FREN 378 | French and European Transmigrations: Global Contexts | 3hrs
+  FREN 379 | Special Topics in French and Francophone Studies 4 | 3hrs
+  FREN 383 | Franco-Asian Encounters | 3hrs
+  FREN 386 | French New Wave Cinema 4 | 3hrs
+  FREN 387 | Paris/Versailles: The Court and the City in the 17th Century 2 | 3hrs
+  FREN 388 | History of French Cinema I: 1895-1950 4 | 3hrs
+  FREN 389 | History of French Cinema II: 1950 to the Present 4 | 3hrs
+  FREN 390 | Special Topics in French and Francophone Studies 1 | 3hrs
+  FREN 395 | Research for Advanced French Students | 1-3hrs
+  FREN 403 | Advanced Composition | 3hrs
+  FREN 421 | Old French 2 | 3hrs
+  FREN 436 | Currents in Caribbean Literature 3 | 3hrs
+  FREN 437 | Literary and Cultural Theory in France | 3hrs
+  FREN 452 | Muslim Women in France and the United States 3 | 3hrs
+  FREN 489 | 19th-Century Literature and Culture 3 | 3hrs
+  FREN 490 | Special Topics in French and Francophone Studies 1 | 3hrs
+  FREN 500 | Research Methods in French and European Studies 3 | 3hrs
+  FREN 504 | Cultural Wars: French/United States Perspectives 3 | 3hrs
+  FREN 505 | African Francophone Cinema 3 | 3hrs
+  FREN 513 | 20th- and 21st-Century French Literature and Culture 3 | 3hrs
+  FREN 515 | Social Networks: Technology and Community in Modern France 3 | 3hrs
+  FREN 522 | French Middle Ages 2 | 3hrs
+  FREN 530 | Postmodernisms 3 | 3hrs
+  FREN 554 | Writing the Mediterranean 2 | 3hrs
+  FREN 555 | Crossing Gazes: Multidirectional and Conflicting Memories of Algeria 3 | 3hrs
+  FREN 561 | French Renaissance Literature and Culture 2 | 3hrs
+  FREN 562 | Poetry of the French Renaissance 2 | 3hrs
+  FREN 563 | Studies in the Anglo-French Renaissance 4 | 3hrs
+  FREN 564 | History of the French Language 2 | 3hrs
+  FREN 565 | French Phonetics and Phonology | 3hrs
+  FREN 566 | Structure of Modern French | 3hrs
+  FREN 575 | 20th- and 21st-Century Francophone Literature and the Visual Arts 3 | 3hrs
+  FREN 576 | Francophone Cultural Studies 3 | 3hrs
+  FREN 583 | 18th-Century French Literature and Culture 2 | 3hrs
+  FREN 585 | Libertinism and Sexuality 2 | 3hrs
+  FREN 586 | Studies in French Cinema 4 | 3hrs
+  FREN 590 | Special Topics in French and Francophone Studies 1 | 3hrs
+  FREN 611 | Contemporary Novelists from the French-Speaking World 3 | 3hrs
+  FREN 617 | Framing Identities: Franco-Arab Transvisual Transcultural Contexts 3 | 3hrs
+  FREN 670 | 17th-Century French Literature and Culture 2 | 3hrs
+  FREN 675 | Literature and Enlightenment, 17th - 18th Centuries 2 | 3hrs
+  FREN 687 | Diaspora and Transculturalism in Québécois Literature 3 | 3hrs
+  FREN 690 | Special Topics in French and Francophone Studies 1 | 3hrs
+  FREN 691H | Honors Thesis in French | 3hrs
+NOTE: Special topics and independent study courses may fulfill historical distribution requirements, depending on topic, with approval of the undergraduate advisor in French.
+NOTE: Taught in French and focused on French and Francophone contexts up to 1789.
+NOTE: Taught in French and focused on French and Francophone contexts since 1789.
+NOTE: Taught in English.
+NOTE: French (FREN) course descriptions .
+NOTE: We offer a strong emphasis on European and francophone studies as well as the Languages across the Curriculum Program (LAC) , which allows students to participate in one-hour, one-credit discussion sections in French on an array of courses across the College of Arts and Sciences.

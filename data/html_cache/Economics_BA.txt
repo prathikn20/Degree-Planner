@@ -1,0 +1,24 @@
+TRACK: Economics_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/economics-major-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Gateway Course
+  ECON 101 | Introduction to Economics (with a grade of C or better) H, F | 4hrs
+### Core Requirements
+  ECON 400 | Introduction to Data Science and Econometrics (with a grade of C or better) H | 4hrs
+  ECON 410 | Intermediate Microeconomics (with a grade of C or better) H | 4hrs
+  ECON 420 | Intermediate Macroeconomics H | 3hrs
+RULE: Four ECON courses at the 400, 500, or 600 level, with at least one course numbered ECON 500 or higher. 1,3 12
+### Additional Requirements
+RULE: One calculus course chosen from: 2 3-4
+  MATH 152 | Calculus for Business and Social Sciences F | hrs
+  MATH 231 | Calculus of Functions of One Variable I H, F | hrs
+  STOR 113 | Decision Models for Business and Economics | hrs
+NOTE: Note that 200- and 300-level courses do not count toward the major. ECON 493 does not count for 400-level credit. ECON 698 will count for 400-level credit only if ECON 384 has been taken; ECON 698 alone will not count toward the major in economics.
+NOTE: The calculus course is a prerequisite for both ECON 400 and ECON 410 , and ECON 400 and ECON 410 are both prerequisites for economics courses numbered above 420.
+NOTE: Students may not receive credit for both ECON 470 and ECON 570 .
+NOTE: Note: MATH 231 is recommended for students who plan to take the calculus sequence ( MATH 231 , MATH 232 , and MATH 233 ). MATH 116 is not acceptable.
+NOTE: An economics major may apply as many as 15 economics courses, or 45 hours, toward the B.A. degree.
+NOTE: Economics (ECON) course descriptions .

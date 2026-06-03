@@ -1,0 +1,42 @@
+TRACK: Economics_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/economics-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Gateway Course
+  ECON 101 | Introduction to Economics H, F | 4hrs
+### Core Requirements
+RULE: Select at least two courses from the following list: 7-8
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | hrs
+  ECON 410 | Intermediate Microeconomics 1, H | hrs
+  ECON 420 | Intermediate Macroeconomics 1, H | hrs
+RULE: Two additional ECON courses at the 400 level 2 6
+NOTE: Check course description for required prerequisites.
+NOTE: If all three of the core requirement courses ( ECON 400 , ECON 410 , ECON 420 ) are completed, only one additional 400-level course is needed. ECON 493 may not be used in the minor. ECON 495 and ECON 496 may count in the minor, if taken for 3 credit hours.
+
+## Suggested Pathways
+
+## Microeconomics Plan
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | 4hrs
+  ECON 410 | Intermediate Microeconomics 1, H | 4hrs
+RULE: Two 400-level ECON electives in Applied Microeconomics or Microeconomic Theory 6
+NOTE: Check course description for required prerequisites.
+
+## Macroeconomics Plan
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | 4hrs
+  ECON 410 | Intermediate Microeconomics 1, H | 4hrs
+  ECON 420 | Intermediate Macroeconomics 1, H | 3hrs
+RULE: One 400-level ECON elective in Macroeconomics or Time Series Econometrics 3
+NOTE: Check course description for required prerequisites.
+
+## Econometrics Plan
+  ECON 101 | Introduction to Economics H, F | 4hrs
+  ECON 400 | Introduction to Data Science and Econometrics 1, H | 4hrs
+  ECON 410 | Intermediate Microeconomics 1, H | 4hrs
+  OR or ECON 420 | Intermediate Macroeconomics
+  ECON 470 | Econometrics 1, H | 3hrs
+RULE: One 400-level ECON elective in Econometrics or Data Science 3
+NOTE: Check course description for required prerequisites.

@@ -1,0 +1,61 @@
+TRACK: Human_and_Organizational_Leadership_Development_BA
+URL: https://catalog.unc.edu/undergraduate/programs-study/human-org-leadership-ba/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements 1
+  EDUC 257 | Inquiry and Data Applications | 3hrs
+  EDUC 309 | Foundations of Leadership F | 3hrs
+  EDUC 357 | Organizational and Community Development | 3hrs
+  EDUC 472 | System Improvement and Implementation at Scale | 3hrs
+  EDUC 505 | Leadership in Educational/Nonprofit Settings | 3hrs
+  EDUC 508 | Equity, Leadership, and You | 3hrs
+  EDUC 585 | Activating Human and Organizational Leadership Development | 3hrs
+  EDUC 695 | Human and Organizational Leadership Development Capstone | 9hrs
+RULE: At least five elective courses from the list below. 15
+NOTE: Students may count courses completed prior to declaring a HOLD major toward major completion.
+
+## Approved Elective Courses
+  AMST 248 | Intersectionality: Race, Gender, Sexuality, and Social Justice | 3hrs
+  EDUC 375 | Identity and Sexuality | 3hrs
+  EDUC 410 | Families and Communities in Diverse Contexts for Youth | 3hrs
+  EDUC 504 | Learning in the Modern World | 3hrs
+  EDUC 506 | Politics, Policymaking, and America's Schools | 3hrs
+  EDUC 509 | Helping Youth Thrive in K-12 Schools | 3hrs
+  EDUC 510 | Latinx Experience in Education | 3hrs
+  EDUC 521 | Schools, Cultures, and Communities I: Youth | 3hrs
+  EDUC 522 | Schools, Cultures, and Communities II: Schools | 3hrs
+  EDUC 526 | Ethics and Education: From Global Problems to Classroom Dilemmas | 3hrs
+  EDUC 529 | Education in American Society | 3hrs
+  EDUC 532 | Human Development and Learning | 3hrs
+  EDUC 533 | Social Justice in Education | 3hrs
+  EDUC 694H | Honors Thesis in Education | 3hrs
+  BUSI 405 | Leading and Managing: An Introduction to Organizational Behavior | 3hrs
+  BUSI 507H | Sustainable Business and Social Enterprise | 3hrs
+  BUSI 524 | Applied Improvisation for Business Communication | 3hrs
+  COMM 120 | Introduction to Interpersonal and Organizational Communication H, F | 3hrs
+  COMM 325 | Introduction to Organizational Communication H | 3hrs
+  COMM 525 | Organizational Communication | 3hrs
+  ECON 125H | Introduction to Entrepreneurship | 3hrs
+  ECON 327 | Venture-Creation Workshop H | 3hrs
+  HBEH 611 | Philanthropy as a Tool for Social Change | 3hrs
+  MEJO 332 | Public Relations Writing | 3hrs
+  MEJO 424 | Media Management and Policy | 3hrs
+  MNGT/SOCI 131 | Social Relations in the Workplace | 3hrs
+  NSCI 222 | Learning H | 3hrs
+  POLI 209 | Analyzing Public Opinion H | 3hrs
+  PLCY 85H | First-Year Seminar: Reforming America's Schools | 3hrs
+  PLCY 210 | Policy Innovation and Analysis H | 3hrs
+  PLCY 220 | The Politics of Public Policy H | 3hrs
+  PLCY 340 | Justice in Public Policy H | 3hrs
+  PLCY 450 | Internal and Interpersonal Conflict Management | 3hrs
+  PSYC 101 | General Psychology F | 3hrs
+  PSYC 250 | Child Development H | 3hrs
+  PSYC 260 | Social Psychology H | 3hrs
+  SOCI 101 | Sociological Perspectives H, F | 3hrs
+  SOCI 112 | Social Interaction | 3hrs
+  SOCI 251 | Research Methods | 3hrs
+  SOCI 252 | Data Analysis | 3hrs
+  SOCI 410 | Formal Organizations and Bureaucracy | 3hrs
+  SOCI 415 | Economy and Society | 3hrs

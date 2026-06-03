@@ -1,0 +1,42 @@
+TRACK: Chemistry_BS_Polymer_Track
+URL: https://catalog.unc.edu/undergraduate/programs-study/chemistry-major-bs-polymer-track/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: This program meets the requirements of the American Chemical Society for the training of professional chemists.
+### Gateway Course
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I H, F | 4hrs
+### Core Requirements
+  CHEM 102 | General Descriptive Chemistry II H, F | 3hrs
+  OR or CHEM 102H | General Descriptive Chemistry II
+  CHEM 102L | Quantitative Chemistry Laboratory II | 1hrs
+  CHEM 241 | Modern Analytical Methods for Separation and Characterization H | 3hrs
+  CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds | 1hrs
+  OR or CHEM 245L | Honors Laboratory in Separations and Analytical Characterization of Organic and Biological Compound
+  CHEM 251 | Introduction to Inorganic Chemistry | 3hrs
+  CHEM 433 | Introduction to Biochemistry for Majors | 3hrs
+  CHEM 481 | Physical Chemistry I | 3hrs
+  CHEM 481L | Physical Chemistry Laboratory I | 2hrs
+  OR or CHEM 482L | Physical Chemistry Laboratory II
+  CHEM 482 | Physical Chemistry II | 3hrs
+  CHEM 520L | Polymer Chemistry Laboratory | 2hrs
+  CHEM 550L | Synthetic Chemistry Laboratory I | 2hrs
+  CHEM 261 | Introduction to Organic Chemistry I H | 3hrs
+  CHEM 262 | Introduction to Organic Chemistry II H | 3hrs
+  CHEM 262L | Laboratory in Organic Chemistry | 1hrs
+RULE: Three advanced polymer chemistry electives from: 9
+  CHEM 420 | Introduction to Polymers | hrs
+  CHEM 421 | Synthesis of Polymers | hrs
+  CHEM 422 | Physical Chemistry of Polymers | hrs
+  CHEM 423 | Intermediate Polymer Chemistry | hrs
+  CHEM 425 | Polymer Materials | hrs
+RULE: One advanced chemistry elective from CHEM 395 or any chemistry course numbered higher than CHEM 420 (at least three hours) 3
+### Additional Requirements
+  BIOL 101 | Principles of Biology H, F | 3hrs
+  MATH 232 | Calculus of Functions of One Variable II 1, H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables 1, H, F | 4hrs
+  MATH 383 | First Course in Differential Equations 1, H | 3hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta H, F | 4hrs
+NOTE: Placement (PL) credits (zero hours) for MATH 232 , MATH 233 , or MATH 383 do not satisfy chemistry major requirements.

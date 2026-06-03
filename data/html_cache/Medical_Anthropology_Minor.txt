@@ -1,0 +1,72 @@
+TRACK: Medical_Anthropology_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/medical-anthropology-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+RULE: Five three-hour courses taken from the following list: 15
+  AAAD 300 | Cultures of Health and Healing in Africa | hrs
+  AAAD 387 | HIV/AIDS in Africa and the Diaspora | hrs
+  ANTH 53 | First-Year Seminar: Darwin's Dangerous Idea 1, H | hrs
+  ANTH 56 | First-Year Seminar: The Art of Healing, the Culture of Curing 1 | hrs
+  ANTH 104 | Introduction to Biocultural Medical Anthropology | hrs
+  ANTH 143 | Human Evolution and Adaptation | hrs
+  ANTH 147 | Comparative Healing Systems | hrs
+  ANTH 148 | Human Origins | hrs
+  ANTH 151 | Anthropological Perspectives on Food and Culture | hrs
+  ANTH 204 | From Ayahuasca to Zoloft: Anthropological Approaches to Drugs and Drug Use | hrs
+  ANTH 214 | Medicine in the Arab World | hrs
+  ANTH 217 | Human Biology in Comparative Perspective | hrs
+  ANTH 237 | Food, Environment, and Sustainability | hrs
+  ANTH 238 | Human Ecology of Africa | hrs
+  ANTH 252 | Archaeology of Food | hrs
+  ANTH 270 | Living Medicine | hrs
+  ANTH 272 | Healing in Ethnography and Literature | hrs
+  ANTH 277 | Gender and Culture | hrs
+  ANTH 278 | Women in Science | hrs
+  ANTH 280 | Anthropology of War and Peace | hrs
+  ANTH 285 | Climate Change and Health | hrs
+  ANTH 294 | Anthropological Perspectives on Society and Culture | hrs
+  ANTH 298 | Biological Anthropology Theory and Practice | hrs
+  ANTH 315 | Human Genetics and Evolution | hrs
+  ANTH 318 | Human Growth and Development | hrs
+  ANTH 319 | Global Health | hrs
+  ANTH 320 | Anthropology of Development | hrs
+  ANTH 325 | Emotions and Society | hrs
+  ANTH 328 | Anthropology of Care | hrs
+  ANTH 341 | Anthropology of Fitness Culture | hrs
+  ANTH 349 | Histories of Violence | hrs
+  ANTH 361 | Community in India and South Asia | hrs
+  ANTH 389 | Special Topics in Medical Anthropology - Research Methods and Experiences | hrs
+  ANTH 390 | Special Topics in Medical Anthropology | hrs
+  ANTH 405 | Mental Health, Psychiatry, and Culture | hrs
+  ANTH 414 | Laboratory Methods: Human Osteology | hrs
+  ANTH 422 | Anthropology, Human Rights, and Humanitarianism | hrs
+  ANTH 423 | Written in Bone: CSI and the Science of Death Investigation from Skeletal Remains | hrs
+  ANTH 426 | Making Magic | hrs
+  ANTH 430 | War, Medicine, and the Military | hrs
+  ANTH 437 | Evolutionary Medicine | hrs
+  ANTH 439 | Political Ecology | hrs
+  ANTH 441 | The Anthropology of Gender, Health, and Illness | hrs
+  ANTH 442 | Health in Socialist, Liberal, and Illiberal Upheavals | hrs
+  ANTH 443 | Cultures and Politics of Reproduction | hrs
+  ANTH 444 | Medicine, Politics, and Justice | hrs
+  ANTH 445 | Migration and Health | hrs
+  ANTH 446 | Poverty, Inequality, and Health | hrs
+  ANTH 448 | Health and Medicine in the American South | hrs
+  ANTH 470 | Medicine and Anthropology | hrs
+  ANTH 471 | Biocultural Perspectives on Maternal and Child Health | hrs
+  ANTH 473 | Anthropology of the Body and the Subject | hrs
+  ANTH 474 | The Anthropology of Disability | hrs
+  ANTH 535 | The Archaeology of Health and Well-Being | hrs
+  ANTH 538 | Disease and Discrimination in Colonial Atlantic America | hrs
+  ANTH 580 | Practicing Medical Anthropology | hrs
+  ANTH 582 | Fieldwork with Social Models of Well-Being | hrs
+  ANTH 585 | Anthropology of Science | hrs
+  ANTH 623 | Human Disease Ecology | hrs
+  ANTH 624 | Anthropology and Public Health | hrs
+  ANTH 625 | Ethnography and Life Stories | hrs
+  ANTH 649 | Politics of Life and Death | hrs
+NOTE: Restricted to first-year students only.
+NOTE: Students planning on a minor in medical anthropology should inform the department’s director of undergraduate studies. For more information about medical anthropology see the department website .

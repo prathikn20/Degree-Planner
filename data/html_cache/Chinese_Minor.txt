@@ -1,0 +1,64 @@
+TRACK: Chinese_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/chinese-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The undergraduate minor in Chinese consists of five courses. Students whose initial Chinese language placement is above 599 or whose Educational Experience Verification form for Chinese has been approved by the Office of Undergraduate Curricula may complete the minor by replacing the three language courses with culture courses from the list below. These replacements must be approved by the department.
+### Core Requirements
+RULE: At least three courses must be language courses beyond CHIN 203 , chosen from among the following: 9-10
+  CHIN 204 | Intermediate Chinese II | hrs
+  CHIN 212 | Intermediate Written Chinese | hrs
+  CHIN 305 | Advanced Chinese I | hrs
+  CHIN 306 | Advanced Chinese II | hrs
+  CHIN 313 | Advanced Written Chinese | hrs
+  CHIN 407 | Readings in Modern Chinese I | hrs
+  CHIN 408 | Lens on China: Learning Chinese via Films | hrs
+  CHIN 441 | Chinese-English Translation and Interpreting | hrs
+  CHIN 443 | Business Communication in Chinese | hrs
+  CHIN 445 | Chinese Tea Culture and Its Changing Landscape | hrs
+  CHIN 490 | Topics in Chinese Literature and Language | hrs
+  CHIN 510 | Introduction to Classical Chinese | hrs
+  CHIN 520 | Stay Tuned to China | hrs
+  CHIN 521 | Chinese History in Chinese | hrs
+  CHIN 525 | Ancient Philosophers and Their Modern Reincarnation | hrs
+  CHIN 590 | Advanced Topics in Chinese Literature and Language | hrs
+  CHIN 624 | Chinese Internet Literature | hrs
+  CHIN 631 | Writing Chinese (in) America: Advanced Studies of a Foreign Literature from United States Homeland | hrs
+RULE: The other two courses may be chosen from the list above or from among the following: 6
+  ASIA 52 | First-Year Seminar: Food in Chinese Culture 1 | hrs
+  ASIA 55 | First-Year Seminar: Kung-Fu: The Concept of Heroism in Chinese Culture 1 | hrs
+  ASIA/WGST 56 | First-Year Seminar: Writing Women in Modern China 1, H | hrs
+  ASIA 65 | First-Year Seminar: Philosophy on Bamboo: Rethinking Early Chinese Thought 1 | hrs
+  ASIA 75 | First-Year Seminar: Love in China 1 | hrs
+  ASIA 76 | First-Year Seminar: Traveling to China and Traveling from China in the Premodern World 1 | hrs
+  CHIN 150 | Introduction to Chinese Civilization | hrs
+  CHIN/CMPL 238 | From Martial Arts to Street Dance: Rebellion with Chinese Characteristics | hrs
+  CHIN 242 | Chinese Qin Music | hrs
+  CHIN 244 | Introduction to Modern Chinese Culture through Cinema | hrs
+  CHIN/CMPL 247 | Indigenous Spiritualities in Literatures of China and Taiwan H | hrs
+  CHIN 252 | Introduction to Chinese Culture through Narrative | hrs
+  CHIN 253 | Chinese Language and Society | hrs
+  CHIN 255 | Bandit or Hero: Outlawry in Chinese Literature and Films | hrs
+  CHIN/HIST 265 | Imperial China in Global Objects | hrs
+  CHIN 332 | Old, Queer, and Poor: Bad-Aging in Chinese-Speaking Worlds | hrs
+  CHIN 333 | Craft in Chinese History | hrs
+  CHIN 346 | History as Fiction or Fiction as History? Early Chinese History in Film and Literature | hrs
+  CHIN 356 | Chinese Environmental Literature | hrs
+  CHIN 361 | Chinese Traditional Theater | hrs
+  CHIN 367 | Illustration and the Animation of Text | hrs
+  ASIA/HIST/WGST 418 | Family and Gender in Early Modern China and Korea | hrs
+  CHIN/HIST 439 | Environmental China: Premodern Political Ecology | hrs
+  ASIA 453 | Global Shangri-La: Tibet in the Modern World | hrs
+  CHIN 463 | Narrative Ethics in Modern China | hrs
+  CHIN 464 | The City in Modern Chinese Literature and Film | hrs
+  CHIN 475 | Confucianism: Origin, History, and Contemporary Relevance | hrs
+  CHIN 476 | Daoism: Origin, History, and Contemporary Relevance | hrs
+  CHIN/CMPL/WGST 480 | Queering China | hrs
+  CHIN/CMPL 545 | Chinese Science Fiction | hrs
+  CHIN 551 | Chinese Poetry in Translation | hrs
+  CHIN 552 | Chinese Prose in Translation | hrs
+  CHIN 562 | Contemporary Chinese Urban Culture and Arts | hrs
+NOTE: No more than one first-year seminar may be counted toward the minor.
+NOTE: Approved language courses taken in UNC–Chapel Hill-sponsored study abroad programs may count in the minor. However, study abroad courses may not substitute for culture courses, which must be taken in the Department of Asian and Middle Eastern Studies.
+NOTE: Placement credit (PL) may not be used to meet minor requirements.

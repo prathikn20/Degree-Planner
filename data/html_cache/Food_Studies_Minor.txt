@@ -1,0 +1,52 @@
+TRACK: Food_Studies_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/food-studies-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor requires five (5) courses.
+### Core Requirements
+RULE: Select two (2) of the following courses 1 6
+  AMST/NUTR 175 | Introduction to Food Studies: From Science to Society | hrs
+  AMST 375 | Critical Issues in Contemporary Food Studies | hrs
+  ENEC 325 | Water Resource Management for Food, Energy, and Health H | hrs
+RULE: Select three (3) electives from the following list (at least one at the 300 level or higher) 2 9
+  AAAD 188 | African Diaspora Foodways and Culture | hrs
+  AMST 75 | First-Year Seminar: Food and the Media 3 | hrs
+  AMST 220 | On the Question of the Animal: Contemporary Animal Studies | hrs
+  AMST 275 | Food and American Culture | hrs
+  AMST 353 | Southeast Asian North Carolina | hrs
+  ANTH 151 | Anthropological Perspectives on Food and Culture | hrs
+  ANTH 252 | Archaeology of Food | hrs
+  ANTH 459 | Ecological Anthropology | hrs
+  ANTH 551 | Origins of Agriculture in the Ancient World | hrs
+  ASIA 52 | First-Year Seminar: Food in Chinese Culture 3 | hrs
+  BIOL 53 | First-Year Seminar: Biotechnology: Genetically Modified Foods to the Sequence of the Human Genome 3 | hrs
+  BIOL 221 & 221L | Seafood Forensics and Seafood Forensics Laboratory | hrs
+  BIOL 351 & 351L | Frontiers of Fermentation: Microbes and Microbiomes and Frontiers of Fermentation: Microbes and Microbiomes Laboratory | hrs
+  CBPH 243 | The Cellular Agriculture Revolution | hrs
+  COMM 82 | First-Year Seminar: Food Politics from an Organizational Communication Perspective 3 | hrs
+  COMM 625 | Communication and Nonprofits in the Global Context | hrs
+  ENEC/ANTH 237 | Food, Environment, and Sustainability | hrs
+  ENEC 280 | Fungi: Architects of Ecosystems and Sustainable Futures | hrs
+  ENEC 370 | Agriculture and the Environment H | hrs
+  EXSS 360 | Sports Nutrition | hrs
+  FREN 186 | Food for Thought: Cultures of Cuisine in Modern France | hrs
+  GEOG 232 | Agriculture, Food, and Society | hrs
+  GEOG 298 | Freedom Farming | hrs
+  HIST 325 | Food and History | hrs
+  HNRS 330 | Is Dinner "Sustainable" - A Human Dilemma (The Honors Carolina Global Food Program Seminar) | hrs
+  IDST 119I | Food: People, Politics, and Policies | hrs
+  OR or IDST 130I | The Future of Food
+  ITAL 365 | Italian Food and Culture | hrs
+  JAPN 411 | Food and Culture in Japan | hrs
+  NUTR 240 | Introduction to Human Nutrition | hrs
+  NUTR 245 | Sustainable Local Food Systems:  Intersection of Local Foods and Public Health | hrs
+  NUTR 250 | Global Sustainable Food Systems | hrs
+  NUTR 630 | Navigating Culture, Technology, and Communication in Nutrition | hrs
+  PLAN 546 | Harvesting Innovations: Sustainable Food Systems in an Era of Climate Change | hrs
+  PLCY 362 | Ethics and Food Policy | hrs
+  PLCY/ENEC 475 | The Political Economy of Food H | hrs
+  SOCI 430 | Sociology of Food and Food Justice | hrs
+NOTE: Some courses may require a prerequisite(s). See course description for details.
+NOTE: Additional courses can be applied to the requirements with the approval of the program advisor.

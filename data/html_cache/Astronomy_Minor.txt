@@ -1,0 +1,21 @@
+TRACK: Astronomy_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/astronomy-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor in astronomy consists of five courses:
+### Core Requirements
+  ASTR 100 | Understanding the Universe | 3hrs
+  OR or ASTR 101 | Introduction to Astronomy:  The Solar System
+  OR or ASTR 102 | Introduction to Astronomy:  Stars, Galaxies & Cosmology
+  OR or ASTR 103 | Alien Life in the Universe
+  ASTR 100L | Astronomy with Skynet: Our Place in Space | 1hrs
+  OR or ASTR 111 | Educational Research in Radio Astronomy
+  ASTR 202 | Introduction to Astrophysics 1 | 3hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity 2, H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta 3, H, F | 4hrs
+NOTE: Fall course.
+NOTE: Prerequisite, MATH 231 ; pre- or corequisite, MATH 232 ; permission of the instructor for students lacking the prerequisites.
+NOTE: Prerequisites, MATH 232 and PHYS 118 ; pre- or corequisite, MATH 233; permission of the instructor for students lacking the prerequisites.
+NOTE: Due to restrictions on course sharing, students are not allowed to complete both the major in Physics and the minor in Astronomy or to complete minors in both Physics and Astronomy.

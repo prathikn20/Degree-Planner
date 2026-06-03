@@ -1,0 +1,148 @@
+TRACK: Biomedical_Engineering_BS
+URL: https://catalog.unc.edu/undergraduate/programs-study/biomedical-engineering-major-bs/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The first two years of study have many courses in common with the B.S. programs in chemistry, physics, computer science, or mathematical sciences. The curriculum, as for all sciences, is vertically structured, with experience and knowledge from each course serving as a foundation for subsequent courses. Students’ attention to prerequisites is important. The specific requirements are listed below. Students are also encouraged to engage in research in a laboratory at UNC–Chapel Hill or elsewhere, or have an internship experience in industry.
+NOTE: The degree program requires 124 hours.
+NOTE: Students who are admitted to the program may take courses at N.C. State. Most classes designated BMME ### are offered as BMME ### on the UNC campus and BME ### on the N.C. State campus. Other N.C. State course numbers are designated in parentheses.
+NOTE: Students must satisfy all General Education requirements, as outlined elsewhere in this catalog. Some General Education requirements should be met with specific courses as listed below.
+### Core Requirements
+RULE: Students should take the following courses, preferably in their second year:
+  BMME 201 | Computer Methods in Biomedical Engineering 1 | 3hrs
+  BMME 205 | Biomedical Mechanics | 4hrs
+  BMME 209 | Materials Science of Biomaterials | 4hrs
+  BMME 298 | Biomedical Engineering Design and Manufacturing I | 2hrs
+RULE: Students should take the following courses, preferably in their third year:
+  BMME 207 | Biomedical Electronics | 4hrs
+  BMME 301 | Human Physiology: Electrical Analysis | 4hrs
+  BMME 302 | Human Physiology: Mechanical Analysis | 4hrs
+  BMME 398 | Biomedical Engineering Design and Manufacturing II H | 2hrs
+RULE: Take three gateway electives to prepare for specialty electives in one or two areas 9
+  BMME 315 | Biotransport | hrs
+  BMME 325 | Biochemistry for Biomedical Engineers | hrs
+  OR or CHEM 430 | Introduction to Biological Chemistry
+  BMME 335 | Biomaterials | hrs
+  BMME 345 | Biomedical Solid Mechanics | hrs
+  BMME 355 | Biocontrols | hrs
+  BMME 365 | Systems and Signals | hrs
+  BMME 375 | Biomedical Microcontroller Applications | hrs
+  BMME 385 | Bioinstrumentation | hrs
+RULE: STEM elective - see requirements below 3
+RULE: Students should take the following courses, preferably in their final year:
+  BMME 697 | BME Senior Design:  Product Development (BME 451) | 3hrs
+  BMME 698 | Biomedical Engineering Senior Design: Product Implementation and Strategy (BME 452) | 3hrs
+RULE: Four specialty electives - see requirements below 12
+### Additional Requirements
+RULE: Students should take the following courses, preferably in their first two years:
+  BIOL 101 | Principles of Biology (BIO 183) H, F | 3hrs
+  BIOL 101L | Introductory Biology Laboratory | 1hrs
+  OR or BIOL 102L | Introductory Biology Laboratory with Research
+  CHEM 101 & 101L | General Descriptive Chemistry I and Quantitative Chemistry Laboratory I (CH 101 + 102) H, F | 4hrs
+  CHEM 102 & 102L | General Descriptive Chemistry II and Quantitative Chemistry Laboratory II (CH 201 + 202) H, F | 4hrs
+  CHEM 261 | Introduction to Organic Chemistry I (CH 221 + CH 222) H | 3hrs
+  MATH 231 | Calculus of Functions of One Variable I (MA 141) H, F | 4hrs
+  MATH 232 | Calculus of Functions of One Variable II (MA 241) H, F | 4hrs
+  MATH 233 | Calculus of Functions of Several Variables (MA 242) H, F | 4hrs
+  MATH 383 & 383L | First Course in Differential Equations and First Course in Differential Equations Laboratory (MA 331 or MA 341) H | 4hrs
+  PHYS 118 | Introductory Calculus-based Mechanics and Relativity (PY 205 + 206) H, F | 4hrs
+  PHYS 119 | Introductory Calculus-based Electromagnetism and Quanta (PY 208 + 209) H, F | 4hrs
+RULE: Remaining General Education courses and electives to reach 124 hours 28
+NOTE: While BMME 201 is the recommended course, students may take COMP 116 or COMP 210 in place of BMME 201 if they are pursuing a second major or minor which requires one of those courses.
+NOTE: STEM Elective
+NOTE: Students must take an approved upper level (300 or greater) math, science or engineering course. The list below includes courses at UNC. It does not include BME gateway electives or specialization electives, but any of those courses will meet the STEM elective requirement. It must be an extra course and cannot double count for the gateway/specialty electives requirements.
+NOTE: Additional 300 or greater level math and science courses may be approved by the student's advisor to meet this requirement.
+NOTE: If CHEM 430 replaces BMME 325 as a gateway elective, the STEM elective must be an engineering course (additional gateway elective, additional specialty elective, or other approved engineering course).
+  APPL 465 | Engineering of Soft Materials:  SpongeBob Squarepants and Other Squishy Things | 3hrs
+  BIOL 220 | Molecular Genetics H | 3hrs
+  BIOL 443 | Developmental Biology | 3hrs
+  BIOL 451 | Comparative Physiology | 3hrs
+  CHEM 430 | Introduction to Biological Chemistry (GN 311) H | 3hrs
+  ENVR 451 | Introduction to Environmental Modeling | 3hrs
+  EXSS 380 | Neuromuscular Control and Learning H | 3hrs
+  EXSS 385 | Biomechanics of Sport | 3hrs
+  MATH 347 | Linear Algebra for Applications F | 3hrs
+  MATH 381 | Discrete Mathematics H | 3hrs
+  PHYS 331 | Numerical Techniques for the Sciences I | 4hrs
+  PHYS 381 | Renewable Electric Power Systems | 3hrs
+  PHYS 461 | Introduction to Medical Physics | 3hrs
+NOTE: Specialty Electives
+NOTE: Students are required to complete four specialty electives from no more than two of the five specialization areas listed below. Additional specialty electives may be available each semester through BMME 590 Special Topics courses.
+
+## Pharmacoengineering
+### UNC Campus
+  BMME 495 | Undergraduate Research in Biomedical Engineering as a Technical Elective | 3hrs
+  BMME 511 | Genetic Engineering | 3hrs
+  BMME 523 | Biomolecular Engineering | 3hrs
+  BMME 524 | Biomolecular Sensing Technologies | 3hrs
+  BMME 527 | Targeted Photomedicine | 3hrs
+  BMME 585 | Biotechnology | 3hrs
+### N.C. State Campus
+  BME 570 | ImmunoEngineering | 3hrs
+
+## Regenerative Medicine
+### UNC Campus
+  BMME 435/PHYS 405/BIOL 431 | Biological Physics | 3hrs
+  BMME/PHYS 441 | Thermal Physics | 3hrs
+  or MAE 201 | Thermal-Fluid Sciences (NC State) | hrs
+  or MSE 301 | Intro to Thermo (NC State) | hrs
+  BMME 495 | Undergraduate Research in Biomedical Engineering as a Technical Elective | 3hrs
+  BMME 511 | Genetic Engineering | 3hrs
+  BMME 521 | Introduction to Synthetic Biology | 3hrs
+  BMME 555 | Biofluid Mechanics | 3hrs
+  or CE 282 | Hydraulics (NC State) | hrs
+  or MAE 308 | Fluid Mechanics (NC State) | hrs
+  BMME 572 | Analysis of Tissue Engineering Technologies | 3hrs
+### N.C. State Campus
+  BME 429 | Cellular Engineering | 3hrs
+  BME 448 | Functional Tissue Engineering | 3hrs
+  BME 483 & BIT/BEC 3**/4** | Tissue Engineering Technologies & Biotechnology Course | 2+2hrs
+  BME 484 | Fundamentals of Tissue Engineering | 3hrs
+  TE 463 | Polymer Engineering | 3hrs
+
+## Rehabilitation Engineering
+### UNC Campus
+  BMME 495 | Undergraduate Research in Biomedical Engineering as a Technical Elective | 3hrs
+  BMME 543 | Biomechanics of Movement | 3hrs
+### N.C. State Campus
+  BME 418 | Wearable Biosensors | 3hrs
+  BME 425 | Bioelectricity | 3hrs
+  BME 438 | Bone Mechanobiology | 3hrs
+  BME 444 | Orthopedic Biomechanics | 3hrs
+  BME 456 | Rehabilitation Robotics | 3hrs
+
+## Biosignals and Imaging
+### UNC Campus
+  BMME 495 | Undergraduate Research in Biomedical Engineering as a Technical Elective | 3hrs
+  BMME 561 | Introduction to Medical Imaging | 3hrs
+  BMME 568 | Super Resolution-Imaging Beyond Limits | 3hrs
+  BMME 575 | Practical Machine Learning for Biosignal Analysis | 3hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | 3hrs
+  or MA 501 | Adv. Math. for Sci. & Engrs. I (NC State) | hrs
+### N.C. State Campus
+  BME 412 | Biomedical Signal Processing | 3hrs
+  BME 418 | Wearable Biosensors | 3hrs
+  BME 425 | Bioelectricity | 3hrs
+  BME 463 | Biomedical Optics and Lasers | 3hrs
+  BME 464 | Microscopy | 3hrs
+  ECE 456 | Mechatronics | 3hrs
+  ECE 505 | Neural Interface Engineering | 3hrs
+
+## Medical Microdevices
+### UNC Campus
+  BMME/PHYS 441 | Thermal Physics | 3hrs
+  or MAE 201 | Thermal-Fluid Sciences (NC State) | hrs
+  or MSE 301 | Intro to Thermo (NC State) | hrs
+  BMME 495 | Undergraduate Research in Biomedical Engineering as a Technical Elective | 3hrs
+  BMME 555 | Biofluid Mechanics | 3hrs
+  or CE 282 | Hydraulics (NC State) | hrs
+  or MAE 308 | Fluid Mechanics (NC State) | hrs
+  BMME 575 | Practical Machine Learning for Biosignal Analysis | 3hrs
+### N.C. State Campus
+  BME 412 | Biomedical Signal Processing | 3hrs
+  BME 418 | Wearable Biosensors | 3hrs
+  BME 522 | Medical Instrumentation | 3hrs
+  E 304 | Intro to Nano Science and Technology | 3hrs
+  ECE 436 | Digital Control Systems | 3hrs
+  ECE 505 | Neural Interface Engineering | 3hrs

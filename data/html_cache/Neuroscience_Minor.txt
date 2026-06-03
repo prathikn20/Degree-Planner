@@ -1,0 +1,119 @@
+TRACK: Neuroscience_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/neuroscience-minor/
+
+## Requirements
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  NSCI 175 | Introduction to Neuroscience (with a grade of C or better) H, F | 3hrs
+RULE: Four courses distributed over at least three academic departments, selected from the following lists: 12
+### Psychology and Neuroscience:
+  NSCI 221 | Neuropsychopharmacology | hrs
+  NSCI 222 | Learning H | hrs
+  NSCI 225 | Sensation and Perception H | hrs
+RULE: Any NSCI course numbered between 300-699 1
+  PSYC 245 | Psychopathology H | hrs
+  PSYC 404 | Clinical Psychopharmacology | hrs
+  PSYC 469 | Evolution and Development of Biobehavioral Systems | hrs
+  PSYC 517 | Addiction H | hrs
+  PSYC 533 | The General Linear Model in Psychology H | hrs
+  PSYC 535 | Programming for Psychologists: Computational Tools for Psychological Research | hrs
+  PSYC 559 | Applied Machine Learning in Psychology | hrs
+  PSYC 602 | Evolutionary Psychology | hrs
+### Applied Physical Sciences:
+  APPL 101 | Exploring Engineering | hrs
+  APPL 240 | Electronics from Sensors to Indicators: Circuits that Interact with the Physical World | hrs
+  APPL 430 | Optoelectronics from Materials to Devices | hrs
+### Biology:
+  BIOL 205 | Cellular and Developmental Biology H | hrs
+  BIOL 224H & BIOL 224L | The Mathematics of Life and The Mathematics of Life Laboratory | hrs
+  BIOL 226 & 226L | Mathematical Methods for Quantitative Biology and Mathematical Methods for Quantitative Biology Laboratory | hrs
+  BIOL 240 | Cell Biology H | hrs
+  BIOL 425 | Human Genetics | hrs
+  BIOL 431 | Biological Physics | hrs
+  BIOL 440 | Stem Cell Biology | hrs
+  BIOL 450 | Neurobiology | hrs
+  BIOL 451 | Comparative Physiology | hrs
+  BIOL 453 | Molecular Control of Metabolism and Metabolic Disease | hrs
+  BIOL 455 | Behavioral Neuroscience | hrs
+  BIOL 458 | Herpetology: Biology of Amphibians and Reptiles | hrs
+  BIOL 523 | Sex Differences in Human Disease | hrs
+  BIOL 544L | Laboratory in Diseases of the Cytoskeleton | hrs
+  BIOL 545 | Exploring Brain, Gut, and Immunity H | hrs
+  BIOL 547 | Synaptic Plasticity: Analysis of Primary Literature | hrs
+  BIOL 552 | Behavioral Endocrinology | hrs
+  BIOL/MATH 553 | Mathematical and Computational Models in Biology | hrs
+  BIOL 554 | Introduction to Computational Neuroscience | hrs
+  BIOL 542 | Light Microscopy for the Biological Sciences | hrs
+### Biomedical Engineering:
+  BMME 207 | Biomedical Electronics | hrs
+  BMME 301 | Human Physiology: Electrical Analysis | hrs
+  BMME 550 | Medical Imaging I: Ultrasonic, Optical, and Magnetic Resonance Systems | hrs
+### Chemistry:
+  CHEM 430 | Introduction to Biological Chemistry H | hrs
+  CHEM/BIOL 433 | Introduction to Biochemistry for Majors | hrs
+### Computer Science:
+  COMP 110 | Introduction to Programming H | hrs
+  OR or COMP 116 | Introduction to Scientific Programming
+  COMP 210 | Data Structures and Analysis | hrs
+  COMP 211 | Systems Fundamentals | hrs
+  COMP 301 | Foundations of Programming | hrs
+  COMP 311 | Computer Organization | hrs
+  COMP 283 | Discrete Structures H | hrs
+  COMP 555 | Bioalgorithms | hrs
+  COMP 560 | Artificial Intelligence | hrs
+  COMP 562 | Introduction to Machine Learning H | hrs
+  COMP 576 | Mathematics for Image Computing | hrs
+  COMP 581 | Introduction to Robotics H | hrs
+  COMP 631 | Networked and Distributed Systems | hrs
+  COMP 633 | Parallel and Distributed Computing | hrs
+  COMP 651 | Computational Geometry | hrs
+### Exercise and Sport Science:
+  EXSS 155 | Human Anatomy and Physiology I H, F | hrs
+  EXSS 175 | Human Anatomy F | hrs
+  EXSS 256 | Human Anatomy and Physiology II | hrs
+  EXSS 276 | Human Physiology | hrs
+  EXSS 380 | Neuromuscular Control and Learning H | hrs
+  EXSS 580 | Neuromechanics of Human Movement | hrs
+  EXSS 581 | Biopsychosocial Aspects of Sport Injury | hrs
+### Mathematics:
+  MATH 210 | Mathematical Tools for Data Science | hrs
+  MATH 233 | Calculus of Functions of Several Variables H | hrs
+  MATH 235 | Mathematics for Data Science | hrs
+  MATH 347 | Linear Algebra for Applications F | hrs
+  MATH 383 | First Course in Differential Equations H | hrs
+  MATH 523 | Functions of a Complex Variable with Applications | hrs
+  MATH 528 | Mathematical Methods for the Physical Sciences I | hrs
+  MATH 529 | Mathematical Methods for the Physical Sciences II | hrs
+  MATH 535 | Introduction to Probability | hrs
+  MATH 555 | Introduction to Dynamics | hrs
+  MATH 564 | Mathematical Modeling in the Life Sciences | hrs
+  MATH 566 | Introduction to Numerical Analysis | hrs
+  MATH 577 | Linear Algebra | hrs
+  MATH 594 | Nonlinear Dynamics | hrs
+  MATH 661 | Scientific Computation I | hrs
+  MATH 662 | Scientific Computation II | hrs
+  MATH 668 | Methods of Applied Mathematics I | hrs
+  MATH 669 | Methods of Applied Mathematics II | hrs
+### Neurodiagnostics and Sleep Science
+  NDSS 401 | Basic Neurophysiology and Sleep for Clinical Neurophysiology | hrs
+  NDSS 410 | Intro to Basic Sleep and Neurophysiology Instrumentation and Technology | hrs
+  NDSS 420 | Pathophysiology of Sleep, Neurological, and Related Disorders | hrs
+  NDSS 430 | Neurological and Sleep Diagnostic and Therapeutic Methods, and Monitoring | hrs
+### Physics:
+  PHYS 405 | Biological Physics | hrs
+  PHYS 461 | Introduction to Medical Physics | hrs
+### Statistics and Operations Research:
+  STOR 215 | Foundations of Decision Sciences | hrs
+  STOR 235 | Mathematics for Data Science | hrs
+  STOR 320 | Methods and Models of Data Science | hrs
+  STOR 415 | Introduction to Optimization H | hrs
+  STOR 435 | Introduction to Probability H | hrs
+  STOR 445 | Stochastic Modeling | hrs
+  STOR 455 | Methods of Data Analysis H | hrs
+  STOR 535 | Probability for Data Science | hrs
+  STOR 555 | Mathematical Statistics | hrs
+  STOR 556 | Time Series Data Analysis | hrs
+  STOR 565 | Machine Learning | hrs
+NOTE: Except NSCI 391 , NSCI 392 , NSCI 395 , NSCI 493 , NSCI 693H , and NSCI 694H
+NOTE: Many courses in this list require a prerequisite(s). Please review prerequisite information carefully when planning your course selection.

@@ -1,0 +1,11 @@
+TRACK: Romance_Languages_BA_Italian
+URL: https://catalog.unc.edu/undergraduate/programs-study/romance-languages-major-ba-italian/
+
+## Requirements
+NOTE: In addition to the program requirements, students must
+NOTE: For more information, please consult the degree requirements section of the catalog .
+### Core Requirements
+  ITAL 300 | Communicating in Italian:  Media, Culture, and Society | 3hrs
+RULE: Seven additional ITAL courses excluding ITAL 101 , ITAL 102 , ITAL 203 , ITAL 204 , ITAL 401 , ITAL 402 and ITAL 692H . 1 21
+NOTE: With the approval of the undergraduate advisor in Italian, three of the seven elective courses may be substituted with courses in such allied fields as art history, classics, history, geography, music, political science, global studies, or any field in which the course(s) include(s) discussion of any aspect of Italian history, politics or culture.
+NOTE: The prerequisite for ITAL 300 and all content courses taught in Italian is ITAL 204 or ITAL 402 . However the seven electives for the major may include Italian Studies courses taught in English as well, and those may be taken at any time, including during the first and second year, while the student is still enrolled in ITAL 101 - ITAL 204 .

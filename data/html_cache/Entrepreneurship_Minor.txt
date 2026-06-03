@@ -1,0 +1,31 @@
+TRACK: Entrepreneurship_Minor
+URL: https://catalog.unc.edu/undergraduate/programs-study/entrepreneurship-minor/
+
+NOTE: In addition to the program requirements listed below, students must:
+NOTE: For more information, please consult the degree requirements section of the catalog .
+NOTE: The minor consists of five courses:
+### Gateway Course
+RULE: One principles of entrepreneurship course: 3
+  ECON 125 | Introduction to Entrepreneurship (with a grade of C or better) 1, H | hrs
+  ECON 57H | First-Year Seminar: Constructing Your Own Venture (with a grade of C or better) 1 | hrs
+### Core Requirements
+RULE: One principles of economics course: 3-4
+  ECON 101 | Introduction to Economics (with a grade of C or better) H, F | hrs
+  ECON 111 | The Economics of Entrepreneurship and Innovation (with a grade of C or better) 1 | hrs
+RULE: The core course in entrepreneurship: 3
+  ECON 325 | Entrepreneurship: Principles, Concepts, Frameworks, and Fluency 1, H | hrs
+RULE: One track course: 2 3
+  ECON 327 | Venture-Creation Workshop (sections in commercial, arts, science, sports, and media tracks.) 1, H | hrs
+  ENEC 473 | Business and Finance Fundamentals for Change Makers | hrs
+  MEJO 592 | Workroom FashionMash Product Design | hrs
+  PLCY 326 | Social Entrepreneurship H | hrs
+  SPHG 428H | Public Health Entrepreneurship | hrs
+  SOCI 302 | Fieldwork in Entrepreneurship | hrs
+  SOCI 427 | The Labor Force | hrs
+RULE: Capstone course:
+  ECON 393 | Practicum in Entrepreneurship 1, H | 3hrs
+### Additional Requirements
+RULE: Complete a 280-hour internship with a start-up or employer approved by the internship coordinator of the minor.
+NOTE: ECON 57H , ECON 111 , ECON 125 , ECON 325 , ECON 327 , and ECON 393 cannot be counted toward an economics major.
+NOTE: The minor in entrepreneurship anticipates adding additional track courses. For a complete listing of these courses contact the Minor in Entrepreneurship office. One track course must be taken for students to complete the minor. Students are able to take more than one track course for elective credit and hours toward graduation.
+NOTE: It is also possible to complete the entrepreneurship minor through completing one economics course and then a one-semester Shuford Away program in Silicon Valley (California) or London. These are programs run jointly with Honors Carolina. To learn more, contact the Minor in Entrepreneurship office.
