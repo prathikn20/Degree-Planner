@@ -20,6 +20,318 @@ CATALOG_PATH      = "data/course_catalog.json"
 REQUIREMENTS_PATH = "data/degree_requirements.json"
 UNC_MIN_CREDITS   = 120
 
+# ── Presentation-layer label formatter ────────────────────────────────────────
+_PROGRAM_SHORT_LABELS: dict[str, str] = {
+    "UNC_General_Education":                          "Gen Ed",
+    "Computer_Science_BS":                            "CS BS",
+    "Computer_Science_BA":                            "CS BA",
+    "Computer_Science_Minor":                         "CS Minor",
+    "Data_Science_BS":                                "DS BS",
+    "Data_Science_BA":                                "DS BA",
+    "Data_Science_Minor":                             "DS Minor",
+    "Mathematics_BS":                                 "Math BS",
+    "Mathematics_BA":                                 "Math BA",
+    "Mathematics_Minor":                              "Math Minor",
+    "Statistics_and_Analytics_BS":                    "Stats BS",
+    "Statistics_and_Analytics_Minor":                 "Stats Minor",
+    "Economics_BS":                                   "Econ BS",
+    "Economics_BA":                                   "Econ BA",
+    "Economics_Minor":                                "Econ Minor",
+    "Biology_BS":                                     "Bio BS",
+    "Biology_BA":                                     "Bio BA",
+    "Biology_Minor":                                  "Bio Minor",
+    "Biology_BS_Quantitative_Biology_Track":          "Bio BS (QB)",
+    "Chemistry_BS":                                   "Chem BS",
+    "Chemistry_BA":                                   "Chem BA",
+    "Chemistry_Minor":                                "Chem Minor",
+    "Chemistry_BS_Biochemistry_Track":                "Chem BS (Biochem)",
+    "Chemistry_BS_Polymer_Track":                     "Chem BS (Polymer)",
+    "Physics_BS":                                     "Phys BS",
+    "Physics_BS_Astrophysics":                        "Phys BS (Astro)",
+    "Physics_BA":                                     "Phys BA",
+    "Physics_Minor":                                  "Phys Minor",
+    "Neuroscience_BS":                                "Neuro BS",
+    "Neuroscience_Minor":                             "Neuro Minor",
+    "Psychology_BS":                                  "Psych BS",
+    "Psychology_BA":                                  "Psych BA",
+    "Political_Science_BA":                           "Pol Sci BA",
+    "Public_Policy_BA":                               "Pub Pol BA",
+    "Public_Policy_Minor":                            "Pub Pol Minor",
+    "Exercise_and_Sport_Science_BS":                  "ESS BS",
+    "Exercise_and_Sport_Science_Minor":               "ESS Minor",
+    "Exercise_and_Sport_Science_Fitness_Professional_BA": "ESS Fitness BA",
+    "Exercise_and_Sport_Science_General_BA":          "ESS General BA",
+    "Exercise_and_Sport_Science_Sport_Administration_BA": "ESS Sport Admin BA",
+    "Biomedical_Engineering_BS":                      "BME BS",
+    "Business_Administration_Minor":                  "Bus Admin Minor",
+    "Business_Administration_BSBA":                   "Bus Admin BSBA",
+    "Biostatistics_BSPH":                             "Biostat BSPH",
+    "Information_Science_BS":                         "Info Sci BS",
+    "Sociology_BA":                                   "Soc BA",
+    "Anthropology_BA":                                "Anth BA",
+    "Anthropology_General_Minor":                     "Anth Minor",
+    "Medical_Anthropology_BA":                        "Med Anth BA",
+    "Medical_Anthropology_Minor":                     "Med Anth Minor",
+    "Philosophy_BA":                                  "Phil BA",
+    "Philosophy_Minor":                               "Phil Minor",
+    "Philosophy_Politics_and_Economics_Minor":        "PPE Minor",
+    "Linguistics_BA":                                 "Ling BA",
+    "Linguistics_Minor":                              "Ling Minor",
+    "Environmental_Science_BS":                       "Env Sci BS",
+    "Environmental_Studies_BA":                       "Env Stud BA",
+    "Environmental_Science_and_Studies_Minor":        "Env Sci Minor",
+    "Environmental_Health_Sciences_BSPH":             "Env Health BSPH",
+    "Environmental_Justice_Minor":                    "Env Justice Minor",
+    "Global_Studies_BA":                              "Global BA",
+    "Communication_Studies_BA":                       "Comm BA",
+    "Applied_Sciences_BS":                            "App Sci BS",
+    "Applied_Sciences_and_Engineering_Minor":         "App Sci & Eng Minor",
+    "Earth_and_Marine_Sciences_BS":                   "EMS BS",
+    "Marine_Sciences_Minor":                          "Marine Sci Minor",
+    "Neurodiagnostics_and_Sleep_Science_BS":          "NSS BS",
+    "Community_and_Global_Public_Health_BSPH":        "CGPH BSPH",
+    "Health_Policy_and_Management_BSPH":              "HPM BSPH",
+    "Nutrition_BSPH":                                 "Nutr BSPH",
+    "Entrepreneurship_Minor":                         "Entrep Minor",
+    "Business_of_Health_Minor":                       "Bus Health Minor",
+    "Real_Estate_Minor":                              "Real Estate Minor",
+    "Health_and_Society_Minor":                       "Health & Soc Minor",
+    "Sustainability_Studies_Minor":                   "Sustain Minor",
+    "Sports_Medicine_Minor":                          "Sports Med Minor",
+    "Geographic_Information_Sciences_Minor":          "GIS Minor",
+    "Geological_Sciences_Minor":                      "Geol Sci Minor",
+    "Geological_Sciences_BA_Earth_Science":           "Geol Sci BA",
+    "Information_Systems_Minor":                      "Info Sys Minor",
+    "Astronomy_Minor":                                "Astro Minor",
+    "Spanish_for_the_Professions_Minor":              "Spanish Prof Minor",
+    "Management_and_Society_BA":                      "Mgmt & Soc BA",
+    "Peace_War_and_Defense_BA":                       "PWD BA",
+    "Statistics_and_Analytics_BS":                    "Stats BS",
+    "Interdisciplinary_Studies_BA":                   "IDST BA",
+    "History_BA":                                     "History BA",
+    "History_Minor":                                  "History Minor",
+    "Media_and_Journalism_BA":                        "Journalism BA",
+    "Media_and_Journalism_Minor":                     "Journalism Minor",
+    "Dramatic_Art_BA":                                "Dramatic Art BA",
+    "Dramatic_Art_Minor":                             "Dramatic Art Minor",
+    "Music_BA":                                       "Music BA",
+    "Music_BMus":                                     "Music BMus",
+    "Music_Minor":                                    "Music Minor",
+    "Studio_Art_BA":                                  "Studio Art BA",
+    "Studio_Art_BFA":                                 "Studio Art BFA",
+    "Studio_Art_Minor":                               "Studio Art Minor",
+    "Art_History_BA":                                 "Art History BA",
+    "Creative_Writing_Minor":                         "Creative Writing Minor",
+    "Human_and_Organizational_Leadership_Development_BA": "HOLD BA",
+    "Geography_and_Environment_BA":                   "Geog & Env BA",
+    "Geography_Minor":                                "Geog Minor",
+    "Latin_American_Studies_BA":                      "Latin Am BA",
+    "Global_Studies_BA":                              "Global BA",
+    "American_Studies_BA":                            "Am Studies BA",
+    "African_African_American_and_Diaspora_Studies_BA": "AAAD BA",
+    "Womens_and_Gender_Studies_BA":                   "WGS BA",
+    "Womens_and_Gender_Studies_Minor":                "WGS Minor",
+    "Religious_Studies_BA":                           "Rel Studies BA",
+    "Religious_Studies_Minor":                        "Rel Studies Minor",
+    "Philosophy_BA":                                  "Phil BA",
+    "English_and_Comparative_Literature_BA":          "Eng & Comp Lit BA",
+    "English_Minor":                                  "English Minor",
+    "Clinical_Laboratory_Science_BS":                 "CLS BS",
+    "Dental_Hygiene_BS":                              "Dental Hygiene BS",
+    "Radiologic_Science_BS":                          "Rad Sci BS",
+    "Nursing_BSN":                                    "Nursing BSN",
+    "Human_Development_and_Family_Science_BAEd":      "HDFS BAEd",
+}
+
+# ── UNC Gen Ed requirement abbreviations ──────────────────────────────────────
+# Applied to every surface: graduation path, accordions, double-counted cards.
+_GEN_ED_REQ_LABELS: dict[str, str] = {
+    "FY-SEMINAR":        "FY Seminar",
+    "FC-AESTH":          "FC: Aesthetic",
+    "FC-CREATE":         "FC: Creative",
+    "FC-PAST":           "FC: Human Past",
+    "FC-VALUES":         "FC: Ethics",
+    "FC-GLOBAL":         "FC: Global",
+    "FC-NATSCI":         "FC: Nat Sci",
+    "FC-LAB":            "FC: Lab",
+    "FC-POWER":          "FC: Power & Society",
+    "FC-QUANT":          "FC: Quant",
+    "FC-KNOW":           "FC: Ways of Knowing",
+    "RESEARCH":          "Research",
+    "HI-EXP":            "High-Impact Exp",
+    "COMM":              "Comm Beyond Carolina",
+    "LFIT":              "Lifetime Fitness",
+    "FAD":               "FAD",
+    "INTERDISCIPLINARY": "IDST",
+}
+
+def _req_short_desc(req_id: str, raw_desc: str) -> str:
+    """Return the canonical short label for a requirement group.
+    Gen Ed groups get a fixed abbreviation; all others go through _shorten_desc."""
+    if req_id in _GEN_ED_REQ_LABELS:
+        return _GEN_ED_REQ_LABELS[req_id]
+    return _shorten_desc(raw_desc) if raw_desc else (raw_desc or req_id)
+
+
+_DEGREE_SUFFIXES: frozenset[str] = frozenset({
+    "BS", "BA", "Minor", "BSPH", "BSBA", "BMus", "BSN", "BAEd", "BFA",
+})
+_STOP_WORDS: frozenset[str] = frozenset({
+    "and", "the", "of", "for", "in", "unc",
+})
+
+def _program_short_label(program_id: str) -> str:
+    """Convert a track ID like 'Computer_Science_BS' to a concise display label."""
+    if program_id in _PROGRAM_SHORT_LABELS:
+        return _PROGRAM_SHORT_LABELS[program_id]
+    parts = program_id.split("_")
+    suffix = parts[-1] if parts and parts[-1] in _DEGREE_SUFFIXES else ""
+    name_parts = [p for p in (parts[:-1] if suffix else parts) if p.lower() not in _STOP_WORDS]
+    if not name_parts:
+        return program_id.replace("_", " ")
+    short = "".join(p[0].upper() for p in name_parts) if len(name_parts) > 1 else name_parts[0][:6]
+    return f"{short} {suffix}".strip() if suffix else short
+
+
+_WRITTEN_NUMS = (
+    r"(?:one|two|three|four|five|six|seven|eight|nine|ten"
+    r"|eleven|twelve|fifteen|sixteen|twenty)"
+)
+_WORD_NUM_RE = _re.compile(
+    r"^" + _WRITTEN_NUMS + r"(?:\s*\(\d+\))?\s+",
+    _re.IGNORECASE,
+)
+
+
+def _strip_leading_once(d: str) -> str:
+    d = _re.sub(r"^\d+\s+", "", d)
+    d = _WORD_NUM_RE.sub("", d)
+    d = _re.sub(r"^[Aa]\s+(?:choice|coherent\s+set)\s+of\s+", "", d)
+    d = _re.sub(r"^[Aa]n?\s+(?=\w+\s)", "", d)
+    d = _re.sub(r"^(?:first|second|third|fourth|fifth|sixth)\s+", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^(?:And|At\s+least|No\s+more\s+than)\s+", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(
+        r"^(?:additional|optional|other|consider(?:\s+adding\s+optional)?)\s+",
+        "", d, flags=_re.IGNORECASE,
+    )
+    d = _re.sub(r"^to\s+" + _WRITTEN_NUMS + r"\s+", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^of\s+the\s+following\b.*$", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^from\s+among\b.*$", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^[A-Z]\w+\s+requires\b.*$", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^[Ss]tudents?\s+(?:must|should)\b.*$", "Elective", d, flags=_re.IGNORECASE)
+    return d
+
+
+def _sanitize_desc(raw: str) -> str:
+    """Clean a raw requirement description for concise UI display."""
+    if not raw or raw == "Required Course":
+        return raw
+    d = raw.strip()
+    # fix typos and strip footnote/dagger markers
+    d = _re.sub(r"\bdive\b", "div", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*[†]\s*", " ", d).strip()
+    # cascade leading-strip rules (3 passes handles nested cases like "A choice of four additional…")
+    for _ in range(3):
+        prev = d
+        d = _strip_leading_once(d)
+        if d == prev:
+            break
+    # normalize upper-division / upper-level
+    d = _re.sub(r"\bupper[- ]div(?:ision)?\b", "Upper Div", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\bupper[- ]level\b", "Upper Level", d, flags=_re.IGNORECASE)
+    # strip parenthetical dept abbreviations like (ANTH), (HIST), (RUSS)
+    d = _re.sub(r"\s*\([A-Z]{3,8}\)\s*", " ", d)
+    # strip N-hour and N-or-more-credit-hour prefixes
+    d = _re.sub(r"^[\w-]+\s+credit\s+hours?\s+", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"(?:^|\s+)\w+-hour\s+", " ", d, flags=_re.IGNORECASE).strip()
+    # handle "hours of X" → X and "hours can/are" → Credits
+    d = _re.sub(r"^hours?\s+of\s+", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(
+        r"^hours?\s+(?:can\s+come\s+from|are\s+to\s+be\s+taken\s+from\s+(?:other\s+)?).*$",
+        "Credits", d, flags=_re.IGNORECASE,
+    )
+    # handle bare credit patterns
+    d = _re.sub(r"^credit\s+hours?\s*$", "Credits", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^credit\s+hours?\s+(?:of\s+)?", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^credits?\s*$", "Credits", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^credits?\s+(?:from|of)\s+", "", d, flags=_re.IGNORECASE)
+    # strip trailing boilerplate BEFORE course-from rules so they don't leave bare "the X"
+    for _pat in (
+        r"\s+numbered\b.*$",
+        r"\s+at\s+the\s+\d+.*$",
+        r"\s+above\s+(?:\d+|[A-Z]{2,8}\s*\d+).*$",
+        r"\s+beyond\s+[A-Z]{2,8}\s*\d+.*$",
+        r"\s+taken\s+(?:in|from)\s+.*$",
+        r"\s+taken\s*$",
+        r"\s+at\s*$",
+        r"\s+from\s+the\s+(?:list|approved|following|School|Department|College|other)\b.*$",
+        r"\s+from\s+any\s+(?:track|list)\b.*$",
+        r"\s+from\s+among\b.*$",
+        r"\s+from\s+this\s+list\s*$",
+        r"\s+from\s+the\s+list\s+below\b.*$",
+        r"\s+selected\s+from\b.*$",
+        r"\s+outside\s+the\s+.*$",
+        r"\s+must\s+be\s+.*$",
+        r"\s+of\s+the\s+following\b.*$",
+        r"\s+covering\s+any\b.*$",
+        r"\s+representing\s+at\s+least\b.*$",
+        r"\s+from\s+at\s+least\b.*$",
+        r"\s+emphasizing\b.*$",
+        r",\s*two\s+of\s+which\b.*$",
+        r"\s+on\s+the\s+social\b.*$",
+        r"\s+are\s+language\s+courses?\b.*$",
+        r"\s+in\s+BCS,.*$",
+        r"\s+\(at\s+least\b.*$",
+        r"\s+of\s+" + _WRITTEN_NUMS + r"\s*$",
+        r"\s+[-]\s+see\b.*$",
+        r"\s+to\s+reach\b.*$",
+        r"\s+is\s+required\s*$",
+        r"\s+in\s+a\s+(?:field|language)\s+.*$",
+        r"\s+relevant\s+to\s+.*$",
+        r"\s+" + _WRITTEN_NUMS + r"\s*$",
+    ):
+        d = _re.sub(_pat, "", d, flags=_re.IGNORECASE)
+    # strip unclosed parentheses left by _shorten_desc truncation: "(gatew…" → nothing
+    d = _re.sub(r"\s*\([^)]*$", "", d)
+    # "course(s) in/on/from/emphasizing X" → X, then strip residual leading "the"
+    d = _re.sub(
+        r"^courses?\s+(?:in|on|from|emphasizing|each\s+from|at\s+any\s+level\b.*|selected\s+from)\s*",
+        "", d, flags=_re.IGNORECASE,
+    )
+    d = _re.sub(r"^the\s+", "", d, flags=_re.IGNORECASE)
+    # strip remaining parenthetical qualifiers
+    d = _re.sub(r"\s*\(" + _WRITTEN_NUMS + r"\s+(?:hours?|courses?)\)", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(one\s+[^)]+\)", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(two\s+[^)]+\)", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(\d+\s+[^)]+\)", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(and\s+up\s+to\s+[^)]+\)\s*", " ", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(select\s+\w+\)\s*", "", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\s*\(\d+\)\s*", " ", d)
+    # normalize electives (singular and plural, lone and compound)
+    d = _re.sub(r"\belective\s+courses?\b", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\belectives\b", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"\belective\b", "Elective", d, flags=_re.IGNORECASE)
+    # dept code (3+ uppercase letters) + courses → dept Elective
+    d = _re.sub(r"\b([A-Z]{3,8})\s+courses?\s*$", r"\1 Elective", d)
+    # strip bare trailing "courses"/"course"
+    d = _re.sub(r"\s+courses?\s*$", "", d, flags=_re.IGNORECASE)
+    # bare "courses" → Elective; lone written-number → Elective
+    d = _re.sub(r"^courses?\s*$", "Elective", d, flags=_re.IGNORECASE)
+    d = _re.sub(r"^" + _WRITTEN_NUMS + r"\s*$", "Elective", d, flags=_re.IGNORECASE)
+    # strip trailing ellipsis artifact from _shorten_desc truncation
+    d = d.rstrip("…").strip()
+    # final whitespace normalisation, capitalise, strip trailing punctuation
+    d = _re.sub(r"\s+", " ", d).strip().rstrip(".:,-/()")
+    if d:
+        d = d[0].upper() + d[1:]
+    return d or raw
+
+
+def format_fulfillment_label(program_id: str, raw_desc: str) -> str:
+    """Return a clean 'Short Program: Concise Desc' label for the Fulfills column."""
+    clean = _sanitize_desc(raw_desc) if raw_desc else ""
+    return f"{_program_short_label(program_id)}: {clean or 'Elective'}"
+
 # ── Cached data loading ────────────────────────────────────────────────────────
 @st.cache_resource
 def load_static_data():
@@ -215,7 +527,7 @@ def run_pipeline(
         _t, _c = _m["track"], _m["concentration"]
         _base_g = requirements.get(_t, {}).get("base_requirements", {}).get("choice_groups", [])
         _conc_g = requirements.get(_t, {}).get("concentrations", {}).get(_c, {}).get("choice_groups", [])
-        _group_desc_map[_t] = {g["id"]: _shorten_desc(g.get("description") or g["id"]) for g in _base_g + _conc_g}
+        _group_desc_map[_t] = {g["id"]: _req_short_desc(g["id"], g.get("description") or g["id"]) for g in _base_g + _conc_g}
 
     for course, slot_ids in course_to_slots_map.items():
         for slot_id in slot_ids:
@@ -310,6 +622,7 @@ def render_audit(
     planned: list | None = None,
     global_course_usage: dict | None = None,
     req_descriptions: dict | None = None,
+    req_groups_meta: dict | None = None,
 ) -> None:
     satisfied     = results.get("satisfied", [])
     missing       = results.get("missing_courses", {})
@@ -320,11 +633,14 @@ def render_audit(
     catalog       = catalog or {}
     usage         = global_course_usage or {}
     descriptions  = req_descriptions or {}
+    groups_meta   = req_groups_meta or {}
 
     def _spaced(code: str) -> str:
         return _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', code)
 
     def _req_header(req_id: str) -> str:
+        if req_id in _GEN_ED_REQ_LABELS:
+            return f"**{_GEN_ED_REQ_LABELS[req_id]}**"
         name = descriptions.get(req_id, "")
         return f"**{req_id}** — {name}" if name and name != req_id else f"**{req_id}**"
 
@@ -332,17 +648,27 @@ def render_audit(
         if satisfied:
             for req in satisfied:
                 courses_used = satisfied_map.get(req, [])
+                meta         = groups_meta.get(req, {})
+                cr_req       = meta.get("credits_required")
+                co_req       = meta.get("courses_required")
                 if courses_used:
                     chips      = []
                     is_double  = False
                     for c in courses_used:
-                        suffix = " _(planned)_" if c in planned_set else ""
-                        chips.append(f"**{_spaced(c)}**{suffix}")
+                        pl = " _(planned)_" if c in planned_set else ""
+                        chips.append(f"**{_spaced(c)}**{pl}")
                         if usage.get(c, 0) > 1:
                             is_double = True
                     fulfilled = ", ".join(chips)
                     badge     = " &nbsp;🔄 **[Double-Counted]**" if is_double else ""
-                    st.markdown(f"- ✅ {_req_header(req)} — Fulfilled by: {fulfilled}{badge}")
+                    if cr_req:
+                        total_cr   = sum(catalog.get(c, {}).get("credits", 0) for c in courses_used)
+                        pool_badge = f" _({total_cr:.4g}/{cr_req:.4g} cr)_"
+                    elif co_req and co_req > 1:
+                        pool_badge = f" _({len(courses_used)}/{co_req} courses)_"
+                    else:
+                        pool_badge = ""
+                    st.markdown(f"- ✅ {_req_header(req)} — Fulfilled by: {fulfilled}{pool_badge}{badge}")
                 else:
                     st.markdown(f"- ✅ {_req_header(req)}")
         else:
@@ -360,8 +686,28 @@ def render_audit(
                     recommended  = next((o for o in options if o in path_set), None)
                     alternatives = [o for o in options if o != recommended][:3]
 
-                    rec_part = (f" — Recommended: **{_spaced(recommended)}**" if recommended else f" — Need **{needed}** more {suffix}")
-                    alt_part = (f" *(Alternatives: {', '.join(_spaced(o) for o in alternatives)})*" if alternatives and recommended else "")
+                    meta   = groups_meta.get(req_id, {})
+                    cr_req = meta.get("credits_required")
+                    co_req = meta.get("courses_required")
+
+                    if cr_req:
+                        counted = max(0, cr_req - needed)
+                        frac    = (f"partial — {counted:.4g}/{cr_req:.4g} cr"
+                                   if counted > 0 else f"Need {needed:.4g} cr")
+                        rec_part = (f" — Recommended: **{_spaced(recommended)}** ({frac})"
+                                    if recommended else f" — {frac}")
+                    elif co_req and co_req > 1:
+                        counted = max(0, co_req - needed)
+                        frac    = (f"partial — {counted}/{co_req} courses"
+                                   if counted > 0 else f"Need {needed} more course(s)")
+                        rec_part = (f" — Recommended: **{_spaced(recommended)}** ({frac})"
+                                    if recommended else f" — {frac}")
+                    else:
+                        rec_part = (f" — Recommended: **{_spaced(recommended)}**"
+                                    if recommended else f" — Need **{needed}** more {suffix}")
+
+                    alt_part = (f" *(Alternatives: {', '.join(_spaced(o) for o in alternatives)})*"
+                                if alternatives and recommended else "")
                     st.markdown(f"- ❌ {_req_header(req_id)}{rec_part}{alt_part}")
         else:
             st.success("All requirements are satisfied!")
@@ -406,7 +752,7 @@ def build_alternatives_map(
             all_groups = base.get("choice_groups", []) + conc_data.get("choice_groups", [])
 
             for group in all_groups:
-                g_desc = _shorten_desc(group.get("description") or group["id"])
+                g_desc = _req_short_desc(group["id"], group.get("description") or group["id"])
                 if g_desc not in desc_parts:
                     continue
 
@@ -471,6 +817,7 @@ with st.sidebar:
     st.subheader("📖 Minors")
 
     minor1, minor2 = None, None
+    conc_minor1, conc_minor2 = "None", "None"
     add_minor1 = add_minor2 = False
 
     if not minor_tracks:
@@ -479,12 +826,14 @@ with st.sidebar:
         add_minor1 = st.toggle("Add a Minor", key="add_minor1")
         if add_minor1:
             minor1 = st.selectbox("First Minor", options=minor_tracks, format_func=fmt, key="minor1", index=None, placeholder="Choose your minor…", label_visibility="collapsed")
-            second_minor_blocked = dual 
+            conc_minor1 = _concentration_widget(requirements, minor1, key="conc_minor1") if minor1 else "None"
+            second_minor_blocked = dual
             add_minor2_raw = st.toggle("Add Second Minor", key="add_minor2", disabled=second_minor_blocked, help="Requires only 1 major.")
             add_minor2 = add_minor2_raw and not second_minor_blocked
 
             if add_minor2:
                 minor2 = st.selectbox("Second Minor", options=minor_tracks, format_func=fmt, index=None, placeholder="Choose your minor…", key="minor2", label_visibility="collapsed")
+                conc_minor2 = _concentration_widget(requirements, minor2, key="conc_minor2") if minor2 else "None"
                 if minor2 == minor1:
                     st.warning("Both minors are identical — select different programs.")
                     add_minor2, minor2 = False, None
@@ -564,8 +913,8 @@ with st.sidebar:
 majors_to_check: list[dict] = []
 if major1: majors_to_check.append({"track": major1, "concentration": conc1})
 if dual and major2: majors_to_check.append({"track": major2, "concentration": conc2})
-if add_minor1 and minor1: majors_to_check.append({"track": minor1, "concentration": "None"})
-if add_minor2 and minor2: majors_to_check.append({"track": minor2, "concentration": "None"})
+if add_minor1 and minor1: majors_to_check.append({"track": minor1, "concentration": conc_minor1})
+if add_minor2 and minor2: majors_to_check.append({"track": minor2, "concentration": conc_minor2})
 majors_to_check.append({"track": GEN_ED_TRACK, "concentration": "None"})
 
 # ── Main area ──────────────────────────────────────────────────────────────────
@@ -655,7 +1004,7 @@ if uploaded is not None:
     for _m in majors_to_check:
         _tr = _m["track"]
         if _tr not in audit: continue
-        _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
+        _plbl = _program_short_label(_tr)
         _prog_reqs = requirements.get(_tr, {})
         _base_reqs = _prog_reqs.get("base_requirements", {})
         _conc_reqs = _prog_reqs.get("concentrations", {}).get(_m["concentration"], {})
@@ -663,14 +1012,15 @@ if uploaded is not None:
         for _cid in _base_reqs.get("required_courses", []) + _conc_reqs.get("required_courses", []):
             _req_names[_cid] = catalog.get(_cid, {}).get("name", "") or _cid
         for _grp in _base_reqs.get("choice_groups", []) + _conc_reqs.get("choice_groups", []):
-            _req_names[_grp["id"]] = _grp.get("description", "") or _grp["id"]
+            _gid2 = _grp["id"]
+            _req_names[_gid2] = _req_short_desc(_gid2, _grp.get("description") or _gid2)
         for _req_id, _courses_list in audit[_tr]["results"].get("satisfied_map", {}).items():
             _req_label = _req_names.get(_req_id, _req_id)
             for _c in _courses_list:
-                _entry = f"{_plbl}: {_req_label}"
+                _entry = format_fulfillment_label(_tr, _req_label)
                 if _entry not in _completed_satisfies.get(_c, []):
                     _completed_satisfies.setdefault(_c, []).append(_entry)
-        
+
         for _grp in _base_reqs.get("choice_groups", []) + _conc_reqs.get("choice_groups", []):
             _gid = _grp["id"]
             if _gid not in audit[_tr]["results"].get("unsatisfied", []): continue
@@ -688,7 +1038,7 @@ if uploaded is not None:
                 if _counted <= 0: continue
                 for _c in _contributed:
                     _cr = catalog.get(_c, {}).get("credits", 0)
-                    _entry = f"{_plbl}: {_req_label} (partial — {_cr:.4g} cr of {_credits_req:.4g} cr needed)"
+                    _entry = f"{_plbl}: {_sanitize_desc(_req_label)} (partial — {_cr:.4g} cr of {_credits_req:.4g} cr needed)"
                     if _entry not in _completed_satisfies.get(_c, []):
                         _completed_satisfies.setdefault(_c, []).append(_entry)
             elif _courses_req > 1:
@@ -696,7 +1046,7 @@ if uploaded is not None:
                 _counted      = _courses_req - _still_needed
                 if _counted <= 0: continue
                 for _c in _contributed:
-                    _entry = f"{_plbl}: {_req_label} (partial — {_counted}/{_courses_req} courses)"
+                    _entry = f"{_plbl}: {_sanitize_desc(_req_label)} (partial — {_counted}/{_courses_req} courses)"
                     if _entry not in _completed_satisfies.get(_c, []):
                         _completed_satisfies.setdefault(_c, []).append(_entry)
 
@@ -724,10 +1074,12 @@ if uploaded is not None:
         for m in majors_to_check:
             _tr = m["track"]
             if _tr not in audit: continue
-            _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
-            for _c, _desc in audit[_tr].get("fulfillment_map", {}).items():
+            for _c, _raw in audit[_tr].get("fulfillment_map", {}).items():
                 if _c in set(planned):
-                    _planned_impact.setdefault(_c, []).append(f"{_plbl}: {_desc}")
+                    for _part in _raw.split(" · "):
+                        _lbl = format_fulfillment_label(_tr, _part.strip())
+                        if _lbl not in _planned_impact.get(_c, []):
+                            _planned_impact.setdefault(_c, []).append(_lbl)
 
         with st.expander(f"📌 Planned Courses in Path ({len(planned)})", expanded=True):
             _path_planned_set = set(path)
@@ -769,13 +1121,21 @@ if uploaded is not None:
             track_data = audit.get(program["track"])
             if track_data:
                 req_descriptions: dict[str, str] = {}
+                req_groups_meta:  dict[str, dict] = {}
                 _prog = requirements.get(program["track"], {})
                 _base = _prog.get("base_requirements", {})
                 _conc = _prog.get("concentrations", {}).get(program["concentration"], {})
                 for _cid in _base.get("required_courses", []) + _conc.get("required_courses", []):
-                    req_descriptions[_cid] = catalog.get(_cid, {}).get("name", "")
+                    req_descriptions[_cid] = catalog.get(_cid, {}).get("name", "") or ""
                 for _grp in _base.get("choice_groups", []) + _conc.get("choice_groups", []):
-                    req_descriptions[_grp["id"]] = _grp.get("description", "")
+                    _gid = _grp["id"]
+                    req_descriptions[_gid] = _req_short_desc(_gid, _grp.get("description") or _gid)
+                    _gmeta: dict = {}
+                    if _grp.get("credits_required"):
+                        _gmeta["credits_required"] = _grp["credits_required"]
+                    if _grp.get("courses_required", 1) > 1:
+                        _gmeta["courses_required"] = _grp["courses_required"]
+                    req_groups_meta[_gid] = _gmeta
 
                 pct = track_data["results"].get("completion_pct", 0.0)
                 satisfied_n = len(track_data["results"].get("satisfied", []))
@@ -784,7 +1144,10 @@ if uploaded is not None:
                 with pcol1: st.progress(min(pct, 1.0))
                 with pcol2: st.metric("Complete", f"{pct:.0%}")
                 st.caption(f"{satisfied_n} of {total_n} requirements satisfied")
-                render_audit(track_data["results"], path=path, catalog=catalog, planned=planned, global_course_usage=global_course_usage, req_descriptions=req_descriptions)
+                render_audit(track_data["results"], path=path, catalog=catalog, planned=planned,
+                             global_course_usage=global_course_usage,
+                             req_descriptions=req_descriptions,
+                             req_groups_meta=req_groups_meta)
             else:
                 st.warning(f"No audit data found for {fmt(program['track'])}.")
 
@@ -805,10 +1168,12 @@ if uploaded is not None:
         _tr = _m["track"]
         if _tr not in audit:
             continue
-        _plbl = "Gen Ed" if _tr == GEN_ED_TRACK else fmt(_tr)
-        for _c, _desc in audit[_tr].get("fulfillment_map", {}).items():
+        for _c, _raw in audit[_tr].get("fulfillment_map", {}).items():
             if _c in _path_set_dc:
-                _path_dc_raw.setdefault(_c, []).append(f"{_plbl}: {_desc}")
+                for _part in _raw.split(" · "):
+                    _lbl = format_fulfillment_label(_tr, _part.strip())
+                    if _lbl not in _path_dc_raw.get(_c, []):
+                        _path_dc_raw.setdefault(_c, []).append(_lbl)
     for _c, _entries in _path_dc_raw.items():
         if len(_entries) >= 2 and _c not in _dc_map:
             _dc_map[_c] = _entries
@@ -921,10 +1286,12 @@ if uploaded is not None:
         for _m in majors_to_check:
             _track = _m["track"]
             if _track not in audit: continue
-            _plabel = "Gen Ed" if _track == GEN_ED_TRACK else fmt(_track)
-            for _c, _desc in audit[_track].get("fulfillment_map", {}).items():
+            for _c, _raw in audit[_track].get("fulfillment_map", {}).items():
                 if _c in _path_set or _c in _swap_orig_set:
-                    _course_fulfillment.setdefault(_c, []).append(f"{_plabel}: {_desc}")
+                    for _part in _raw.split(" · "):
+                        _lbl = format_fulfillment_label(_track, _part.strip())
+                        if _lbl not in _course_fulfillment.get(_c, []):
+                            _course_fulfillment.setdefault(_c, []).append(_lbl)
 
         _assumed_set = set(completed + in_progress)
         _planned_set = set(planned)
