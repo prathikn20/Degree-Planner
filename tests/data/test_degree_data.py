@@ -2,7 +2,7 @@
 Integration tests against the live test_degree_requirements.json data file.
 
 Covers:
-  1. Structural validity of all 192 degrees (codes, types, required fields)
+  1. Structural validity of all 195 degrees (codes, types, required fields)
   2. requirements_checker never crashes on any degree
   3. Sanity checks: specific degrees produce expected satisfied/unsatisfied sets
   4. New explicit patches (Biology organismal list, WGST minority list, etc.)
@@ -15,7 +15,7 @@ import json
 import re
 import pytest
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from src.planner.requirements_checker import check_requirements
 

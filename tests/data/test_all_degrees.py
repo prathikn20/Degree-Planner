@@ -1,5 +1,5 @@
 """
-Parametrized tests that run against every one of the 194 degrees in
+Parametrized tests that run against every one of the 195 degrees in
 degree_requirements.json. Each test class runs once per degree so failures
 show the exact degree that broke, not just "something in the file is wrong."
 
@@ -17,7 +17,7 @@ import json
 import re
 import pytest
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from src.planner.requirements_checker import check_requirements, get_rule_based_options
 
