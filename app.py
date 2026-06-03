@@ -556,6 +556,7 @@ def run_pipeline(
     return {
         "completed":     completed,
         "in_progress":   in_progress,
+        "course_terms":  parsed.get("course_terms", {}),
         "planned":       planned,
         "audit":         audit,
         "path":          flat_path,
@@ -971,6 +972,7 @@ if uploaded is not None:
 
     completed     = data["completed"]
     in_progress   = data["in_progress"]
+    course_terms  = data.get("course_terms", {})
     planned       = data["planned"]
     audit         = data["audit"]
     path          = data["path"]
@@ -1065,9 +1067,12 @@ if uploaded is not None:
     if in_progress:
         with st.expander(f"📘 In-Progress Courses ({len(in_progress)})", expanded=True):
             for c in in_progress:
-                name = catalog.get(c, {}).get("name", "Unknown course")
-                cr   = catalog.get(c, {}).get("credits", "?")
-                st.markdown(f"- **{c}** — {name} ({cr} cr)")
+                name  = catalog.get(c, {}).get("name", "Unknown course")
+                cr    = catalog.get(c, {}).get("credits", "?")
+                term  = course_terms.get(c)
+                label = f" `{term}`" if term else ""
+                spaced = f"{c[:4]} {c[4:]}" if len(c) > 4 else c
+                st.markdown(f"- **{spaced}**{label} — {name} ({cr} cr)")
 
     if planned:
         _planned_impact: dict[str, list[str]] = {}
