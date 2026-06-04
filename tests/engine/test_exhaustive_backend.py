@@ -19,7 +19,7 @@ import time
 import unittest
 from unittest.mock import patch
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from src.planner.requirements_checker import (
     check_requirements,
@@ -28,7 +28,7 @@ from src.planner.requirements_checker import (
 from src.planner.path_generator import solve_optimal_path
 
 # ── Load real data once ────────────────────────────────────────────────────────
-_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
 
 with open(os.path.join(_DATA_DIR, "course_catalog.json")) as _f:
     CATALOG = json.load(_f)

@@ -9,7 +9,7 @@ import itertools
 import random
 
 # Allow running as `python scripts/run_catalog_pipeline.py` from the project root
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from src.scraper.catalog_scraper import scrape_department
 from src.scraper.llm_catalog_parser import parse_prerequisites_with_llm

@@ -69,11 +69,18 @@ data/
   staging/                          # Working files during catalog refresh
   .cache/                           # Ephemeral scraper caches (safe to delete)
 scripts/
-  run_catalog_pipeline.py           # Scrape UNC course catalog → course_catalog.json
-  run_requirements_pipeline.py      # Scrape UNC degree pages → degree_requirements.json
-  validate_pipeline_output.py       # Data quality validator — run after every pipeline update
+  pipeline/
+    run_catalog_pipeline.py         # Scrape UNC course catalog → course_catalog.json
+    run_requirements_pipeline.py    # Scrape UNC degree pages → degree_requirements.json
+    validate_pipeline_output.py     # Data quality validator — run after every pipeline update
+  data/                             # One-off enrichment and data-fixing utilities
+  diagnostics/                      # Debugging and verification tools
 tests/
-  test_pre_deployment_sweep.py      # 1,290-test QA gauntlet (data + solver + formatting)
+  test_pre_deployment_sweep.py          # 1,290-test QA gauntlet (data + solver + formatting)
+  data/                                 # Degree data quality tests
+  engine/                               # Solver and algorithm tests
+  pipeline/                             # End-to-end and integration tests
+  ui/                                   # UI formatting and state tests
 ```
 
 ### Refreshing data
@@ -82,18 +89,18 @@ tests/
 
 ```bash
 # 1. Re-scrape the course catalog (picks up new departments, updated prereqs)
-python3 scripts/run_catalog_pipeline.py
+python3 scripts/pipeline/run_catalog_pipeline.py
 
 # 2. Re-scrape degree requirements using the local LLM (qwen2.5:14b via Ollama)
 #    Full run — processes all tracks, skips already-present ones:
-python3 scripts/run_requirements_pipeline.py
+python3 scripts/pipeline/run_requirements_pipeline.py
 #    Force re-scrape specific tracks (e.g. after a scraper fix):
-python3 scripts/run_requirements_pipeline.py --tracks Physics_BA Latin_American_Studies_BA --force
+python3 scripts/pipeline/run_requirements_pipeline.py --tracks Physics_BA Latin_American_Studies_BA --force
 #    Skip LLM for a fast regex-only pass (simpler rules only):
-python3 scripts/run_requirements_pipeline.py --no-llm
+python3 scripts/pipeline/run_requirements_pipeline.py --no-llm
 
 # 3. Validate — must show 0 errors before deploying
-python3 scripts/validate_pipeline_output.py --strict
+python3 scripts/pipeline/validate_pipeline_output.py --strict
 
 # 4. Run the QA test suite
 python3 -m pytest tests/test_pre_deployment_sweep.py -q

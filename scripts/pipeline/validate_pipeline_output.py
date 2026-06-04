@@ -20,7 +20,7 @@ import os
 import re
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 CATALOG_PATH = "data/course_catalog.json"
 REQUIREMENTS_PATH = "data/degree_requirements.json"

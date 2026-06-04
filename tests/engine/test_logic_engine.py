@@ -14,7 +14,7 @@ import unittest
 from collections import defaultdict
 from unittest.mock import patch
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from src.planner.requirements_checker import (
     generate_slots_and_candidates,
@@ -24,7 +24,7 @@ from src.planner.requirements_checker import (
 from src.planner.path_generator import solve_optimal_path
 
 # ── Data loaded once for the entire module ─────────────────────────────────────
-_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
 
 with open(os.path.join(_DATA_DIR, "course_catalog.json")) as _f:
     CATALOG = json.load(_f)

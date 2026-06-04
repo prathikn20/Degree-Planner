@@ -8,7 +8,7 @@ from src.planner.path_generator import solve_optimal_path
 
 def load_local_data():
     """Attempt to load the real data, or fail gracefully."""
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     catalog_path = os.path.join(base_dir, "data", "course_catalog.json")
     req_path = os.path.join(base_dir, "data", "degree_requirements.json")
     
