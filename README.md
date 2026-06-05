@@ -106,8 +106,16 @@ python3 scripts/pipeline/validate_pipeline_output.py --strict
 python3 -m pytest tests/test_pre_deployment_sweep.py -q
 ```
 
+## Author
+
+**Prathik Nekkanti**
+* LinkedIn: [www.linkedin.com/in/prathik-nekkanti-a7a436284]
+* GitHub: [@prathikn20](https://github.com/prathikn20)
+
 ---
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+##
