@@ -1,4 +1,4 @@
-# UNC Degree Planner
+# Tar Heel Degree Planner
 
 An interactive degree-planning engine for UNC Chapel Hill that models course prerequisites as a directed graph and uses Iterated Local Search to generate optimized courses to take toward graduation. Given a student's completed coursework via an uploaded Tar Heel Tracker and declared majors or minors, the solver enforces prerequisite chains, concentration rules, and university policies to produce a constraint-satisfying plan in seconds.
 
@@ -70,8 +70,8 @@ data/
   .cache/                           # Ephemeral scraper caches (safe to delete)
 scripts/
   pipeline/
-    run_catalog_pipeline.py         # Scrape UNC course catalog → course_catalog.json
-    run_requirements_pipeline.py    # Scrape UNC degree pages → degree_requirements.json
+    run_catalog_pipeline.py         # Scrape Chapel Hill course catalog → course_catalog.json
+    run_requirements_pipeline.py    # Scrape Chapel Hill degree pages → degree_requirements.json
     validate_pipeline_output.py     # Data quality validator — run after every pipeline update
   data/                             # One-off enrichment and data-fixing utilities
   diagnostics/                      # Debugging and verification tools

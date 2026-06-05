@@ -65,7 +65,7 @@
         },
         {
           "id": "science_1",
-          "description": "Two science courses chosen from approved list",
+          "description": "Two laboratory science courses from approved list",
           "type": "explicit",
           "courses_required": 2,
           "options": [
@@ -89,34 +89,44 @@
             "PHYS451",
             "PHYS452"
           ],
+          "companion_labs": {
+            "ASTR100": "ASTR100L",
+            "ASTR101": "ASTR100L",
+            "ASTR102": "ASTR100L",
+            "ASTR103": "ASTR100L",
+            "BIOL101": "BIOL101L",
+            "CHEM101": "CHEM101L",
+            "CHEM102": "CHEM102L",
+            "EMES101": "EMES101L",
+            "EMES103": "EMES103L"
+          },
           "rule": null,
           "is_core": false
+        },
+        {
+          "id": "comp_electives_1",
+          "description": "Five additional COMP courses numbered 420 or higher (excluding COMP 496 and COMP 692H)",
+          "type": "rule_based",
+          "courses_required": 5,
+          "options": [],
+          "rule": {
+            "department": "COMP",
+            "min_number": 420,
+            "min_credits": 3,
+            "exclude": [
+              "COMP496",
+              "COMP690",
+              "COMP692H"
+            ]
+          },
+          "is_core": true
         }
       ]
     },
     "concentrations": {
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "comp_electives_1",
-            "description": "Five additional COMP courses numbered 420 or higher (excluding COMP 496 and COMP 692H)",
-            "type": "rule_based",
-            "courses_required": 5,
-            "options": [],
-            "rule": {
-              "department": "COMP",
-              "min_number": 420,
-              "min_credits": null,
-              "exclude": [
-                "COMP496",
-                "COMP692H"
-              ]
-            },
-            "is_core": true,
-            "credits_required": null
-          }
-        ]
+        "choice_groups": []
       },
       "Artificial_Intelligence": {
         "required_courses": [],
@@ -425,19 +435,15 @@
             "COMP586",
             "COMP664",
             "COMP683",
-            "DATA440",
-            "DATA442",
             "DATA481",
             "DATA493",
             "DATA495",
             "DATA496",
-            "DATA510",
             "DATA520",
             "DATA521",
             "DATA522",
             "DATA523",
             "DATA543",
-            "DATA590",
             "DATA593",
             "DATA693H",
             "DATA694H",
@@ -1373,8 +1379,7 @@
             "BIOC107",
             "BIOC108",
             "BMME335",
-            "CLAS260",
-            "ENEC202I",
+            "ENEC202",
             "ENEC256",
             "ENEC324",
             "ENEC403",
@@ -1385,8 +1390,8 @@
             "ENEC471",
             "ENEC489",
             "EPID600",
-            "EXSS155",
-            "EXSS256",
+            "EXSS175",
+            "EXSS276",
             "GEOG110",
             "GEOG111",
             "GEOG212",
@@ -1416,7 +1421,10 @@
             "CHEM101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         },
         {
           "id": "CHEM102_1",
@@ -1427,7 +1435,10 @@
             "CHEM102"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM102": "CHEM102L"
+          }
         },
         {
           "id": "CHEM261_1",
@@ -1546,7 +1557,10 @@
             "BIOL101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "MATH232_1",
@@ -1692,6 +1706,7 @@
             "MATH528",
             "MATH529",
             "PHYS231",
+            "PHYS451",
             "PHYS632"
           ],
           "rule": null,
@@ -2183,6 +2198,9 @@
             "PHYS114",
             "PHYS118"
           ],
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          },
           "rule": null,
           "is_core": false
         }
@@ -2263,6 +2281,23 @@
             "POLI691H"
           ],
           "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "poli_electives_1",
+          "description": "Four political science electives at 100 level or above",
+          "type": "rule_based",
+          "courses_required": 4,
+          "options": [],
+          "rule": {
+            "department": "POLI",
+            "min_number": 100,
+            "min_credits": null,
+            "exclude": [
+              "POLI193",
+              "POLI291"
+            ]
+          },
           "is_core": true
         }
       ]
@@ -2473,25 +2508,7 @@
       },
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "poli_electives_1",
-            "description": "Four political science electives at 100 level or above",
-            "type": "rule_based",
-            "courses_required": 4,
-            "options": [],
-            "rule": {
-              "department": "POLI",
-              "min_number": 100,
-              "min_credits": null,
-              "exclude": [
-                "POLI193",
-                "POLI291"
-              ]
-            },
-            "is_core": true
-          }
-        ]
+        "choice_groups": []
       }
     }
   },
@@ -2830,6 +2847,10 @@
             "PHYS119",
             "MATH231"
           ],
+          "companion_labs": {
+            "CHEM101": "CHEM101L",
+            "CHEM102": "CHEM102L"
+          },
           "rule": null,
           "is_core": false
         },
@@ -2918,10 +2939,17 @@
           "id": "bme_gateway_electives",
           "description": "Take three gateway electives to prepare for specialty electives in one or two areas",
           "type": "explicit",
-          "courses_required": 2,
+          "courses_required": 3,
           "options": [
+            "BMME315",
             "BMME325",
-            "CHEM430"
+            "CHEM430",
+            "BMME335",
+            "BMME345",
+            "BMME355",
+            "BMME365",
+            "BMME375",
+            "BMME385"
           ],
           "rule": null,
           "is_core": true
@@ -2932,7 +2960,15 @@
           "type": "explicit",
           "courses_required": 1,
           "options": [
-            "CHEM430"
+            "APPL465",
+            "BIOL220",
+            "BIOL443",
+            "BIOL451",
+            "CHEM430",
+            "MATH347",
+            "MATH381",
+            "PHYS331",
+            "PHYS381"
           ],
           "rule": null,
           "is_core": true
@@ -2948,6 +2984,7 @@
             "BMME495",
             "BMME511",
             "BMME521",
+            "BMME522",
             "BMME523",
             "BMME524",
             "BMME527",
@@ -2972,7 +3009,10 @@
             "CHEM101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         },
         {
           "id": "MATH231_1",
@@ -3027,7 +3067,10 @@
             "CHEM102"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM102": "CHEM102L"
+          }
         },
         {
           "id": "CHEM261_1",
@@ -3166,12 +3209,20 @@
         {
           "id": "comp_upper_1",
           "description": "COMP 311 or COMP courses 420+ (excluding COMP 495, 496, 691H, 692H)",
-          "type": "explicit",
+          "type": "rule_based",
           "courses_required": 1,
-          "options": [
-            "COMP311"
-          ],
-          "rule": null,
+          "options": [],
+          "rule": {
+            "department": "COMP",
+            "min_number": 311,
+            "min_credits": null,
+            "exclude": [
+              "COMP495",
+              "COMP496",
+              "COMP691H",
+              "COMP692H"
+            ]
+          },
           "is_core": true
         },
         {
@@ -4288,7 +4339,10 @@
             "EMES202"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "EMES103": "EMES103L"
+          }
         },
         {
           "id": "emes_marine_1",
@@ -4410,6 +4464,20 @@
         "SOCI252"
       ],
       "choice_groups": [
+        {
+          "id": "soci_upper_1",
+          "description": "Three SOCI electives numbered above 400",
+          "type": "rule_based",
+          "courses_required": 3,
+          "options": [],
+          "rule": {
+            "department": "SOCI",
+            "min_number": 401,
+            "min_credits": null,
+            "exclude": []
+          },
+          "is_core": true
+        },
         {
           "id": "soci_elective_1",
           "description": "Two additional three-hour SOCI courses",
@@ -4576,22 +4644,7 @@
       },
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "soci_upper_1",
-            "description": "Three SOCI electives numbered above 400",
-            "type": "rule_based",
-            "courses_required": 3,
-            "options": [],
-            "rule": {
-              "department": "SOCI",
-              "min_number": 401,
-              "min_credits": null,
-              "exclude": []
-            },
-            "is_core": true
-          }
-        ]
+        "choice_groups": []
       }
     }
   },
@@ -4682,6 +4735,54 @@
           "is_core": false
         },
         {
+          "id": "requirements_group_1",
+          "description": "Three additional courses from either Group A or Group B (see lists below)",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "STOR305",
+            "STOR323",
+            "STOR471",
+            "STOR472",
+            "STOR475",
+            "STOR512",
+            "STOR536",
+            "STOR538",
+            "STOR543",
+            "STOR545",
+            "STOR555",
+            "STOR556",
+            "STOR557",
+            "STOR565",
+            "STOR566",
+            "STOR572",
+            "BIOS664",
+            "BUSI403",
+            "BUSI408",
+            "BUSI410",
+            "BUSI532",
+            "BUSI533",
+            "COMP301",
+            "COMP401",
+            "COMP210",
+            "COMP410",
+            "COMP421",
+            "ECON410",
+            "ECON420",
+            "ECON511",
+            "INLS523",
+            "MATH383",
+            "MATH521",
+            "MATH522",
+            "MATH523",
+            "MATH524",
+            "MATH548",
+            "MATH566"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
           "id": "COMP116_1",
           "description": "COMP116",
           "type": "explicit",
@@ -4741,59 +4842,7 @@
     "concentrations": {
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "requirements_group_1",
-            "description": "Three additional courses from either Group A or Group B (see lists below)",
-            "type": "explicit",
-            "courses_required": 3,
-            "options": [
-              "BIOS664",
-              "BUSI403",
-              "BUSI408",
-              "BUSI410",
-              "BUSI532",
-              "BUSI533",
-              "COMP210",
-              "COMP301",
-              "COMP401",
-              "COMP410",
-              "COMP421",
-              "ECON410",
-              "ECON420",
-              "ECON511",
-              "INLS523",
-              "MATH383",
-              "MATH521",
-              "MATH522",
-              "MATH523",
-              "MATH524",
-              "MATH548",
-              "MATH566",
-              "STOR305",
-              "STOR323I",
-              "STOR470",
-              "STOR471",
-              "STOR472",
-              "STOR473",
-              "STOR475",
-              "STOR512",
-              "STOR536",
-              "STOR538",
-              "STOR543",
-              "STOR545",
-              "STOR555",
-              "STOR556",
-              "STOR557",
-              "STOR565",
-              "STOR566",
-              "STOR572",
-              "STOR697"
-            ],
-            "rule": null,
-            "is_core": true
-          }
-        ]
+        "choice_groups": []
       },
       "Actuarial_Science": {
         "required_courses": [],
@@ -4978,7 +5027,10 @@
             "BIOL101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "MATH347_1",
@@ -4998,6 +5050,7 @@
           "courses_required": 1,
           "options": [
             "BIOS635",
+            "BIOS664",
             "BIOS668",
             "BIOS669"
           ],
@@ -5012,6 +5065,7 @@
           "options": [
             "BIOS392",
             "BIOS540",
+            "BIOS664",
             "BIOS693H"
           ],
           "rule": null,
@@ -5604,13 +5658,17 @@
             "BIOL101",
             "COMP110",
             "COMP116",
+            "MATH232",
             "MATH210",
             "STOR120",
             "PHYS115",
             "PHYS119"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "core_requirements_options_1",
@@ -5618,6 +5676,7 @@
           "type": "explicit",
           "courses_required": 1,
           "options": [
+            "EMES200",
             "EMES103",
             "EMES395",
             "EMES396",
@@ -5625,7 +5684,10 @@
             "ENEC304"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "EMES103": "EMES103L"
+          }
         },
         {
           "id": "core_requirements_lab_2",
@@ -5667,13 +5729,17 @@
             "BIOL101",
             "COMP110",
             "COMP116",
+            "MATH232",
             "MATH210",
             "STOR120",
             "PHYS115",
             "PHYS119"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "emes_lab_1",
@@ -5685,7 +5751,10 @@
             "EMES202"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "EMES103": "EMES103L"
+          }
         },
         {
           "id": "emes_1",
@@ -5746,13 +5815,17 @@
             "BIOL101",
             "COMP110",
             "COMP116",
+            "MATH232",
             "MATH210",
             "STOR120",
             "PHYS115",
             "PHYS119"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         }
       ]
     },
@@ -5847,6 +5920,7 @@
           "type": "explicit",
           "courses_required": 1,
           "options": [
+            "MATH233",
             "MATH383"
           ],
           "rule": null,
@@ -5939,7 +6013,10 @@
             "PHYS115"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "enec_3",
@@ -5974,6 +6051,14 @@
           "type": "explicit",
           "courses_required": 2,
           "options": [
+            "BUSI410",
+            "BUSI520",
+            "INLS161",
+            "INLS382",
+            "INLS523",
+            "INLS541",
+            "STOR215",
+            "STOR305",
             "MATH347",
             "MATH381",
             "MATH383",
@@ -6146,6 +6231,8 @@
           "options": [
             "BIOL101",
             "BIOL104",
+            "CHEM101",
+            "CHEM102",
             "CHEM102L",
             "PHYS114",
             "PHYS115",
@@ -6153,7 +6240,11 @@
             "PHYS119"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L",
+            "CHEM101": "CHEM101L"
+          }
         }
       ]
     },
@@ -6499,7 +6590,10 @@
             "description": "ENEC/EMES 411 | Oceanic Processes in Environmental Systems",
             "type": "explicit",
             "courses_required": 1,
-            "options": [],
+            "options": [
+              "ENEC411",
+              "EMES411"
+            ],
             "rule": null,
             "is_core": true
           },
@@ -6692,7 +6786,10 @@
             "BIOL252"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "chem_intro",
@@ -6704,7 +6801,10 @@
             "BIOC107"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         },
         {
           "id": "math_foundations",
@@ -7192,6 +7292,24 @@
           "is_core": false
         },
         {
+          "id": "comp_electives_1",
+          "description": "Six elective courses: COMP 420-599 (excluding COMP 496) or COMP 600+ (excluding COMP 692H, COMP 790), up to 2 from other departments",
+          "type": "rule_based",
+          "courses_required": 4,
+          "options": [],
+          "rule": {
+            "department": "COMP",
+            "min_number": 420,
+            "min_credits": null,
+            "exclude": [
+              "COMP496",
+              "COMP692H",
+              "COMP790"
+            ]
+          },
+          "is_core": true
+        },
+        {
           "id": "comp_electives_other_1",
           "description": "Up to two elective courses from approved non-COMP departments",
           "type": "explicit",
@@ -7243,25 +7361,7 @@
     "concentrations": {
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "comp_electives_1",
-            "description": "Six elective courses: COMP 420-599 (excluding COMP 496) or COMP 600+ (excluding COMP 692H, COMP 790), up to 2 from other departments",
-            "type": "rule_based",
-            "courses_required": 4,
-            "options": [],
-            "rule": {
-              "department": "COMP",
-              "min_number": 420,
-              "min_credits": null,
-              "exclude": [
-                "COMP496"
-              ]
-            },
-            "is_core": true,
-            "credits_required": null
-          }
-        ]
+        "choice_groups": []
       },
       "Artificial_Intelligence": {
         "required_courses": [],
@@ -8155,8 +8255,7 @@
         "PHYS405",
         "PHYS231",
         "PHYS451",
-        "PHYS481L",
-        "COMP110"
+        "PHYS481L"
       ],
       "choice_groups": [
         {
@@ -8346,6 +8445,17 @@
           "credits_required": 3
         },
         {
+          "id": "COMP110_1",
+          "description": "COMP110",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "COMP110"
+          ],
+          "rule": null,
+          "is_core": false
+        },
+        {
           "id": "COMP210_1",
           "description": "COMP210",
           "type": "explicit",
@@ -8419,7 +8529,10 @@
             "BIOL101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "BIOL101": "BIOL101L"
+          }
         },
         {
           "id": "CHEM102_1",
@@ -8430,7 +8543,10 @@
             "CHEM102"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM102": "CHEM102L"
+          }
         },
         {
           "id": "requirements_electives_2",
@@ -8885,11 +9001,7 @@
             "ANTH474",
             "ANTH585",
             "ANTH624",
-            "ANTH649",
-            "AAAD300",
-            "AAAD387",
-            "IDST112I",
-            "IDST124I"
+            "ANTH649"
           ],
           "rule": null,
           "is_core": true
@@ -8971,6 +9083,104 @@
             "SOCI111",
             "SOCI121",
             "WGST281"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "glbl_thematic_1",
+          "description": "Four courses from one thematic area (International Politics, Global Economics, Global Health, Global Justice, or Transnational Cultures)",
+          "type": "explicit",
+          "courses_required": 4,
+          "options": [
+            "GLBL221",
+            "GLBL401",
+            "GLBL415",
+            "GLBL481",
+            "GLBL487",
+            "GLBL489",
+            "GLBL491H",
+            "POLI252",
+            "POLI253",
+            "POLI255",
+            "POLI430",
+            "POLI431",
+            "POLI433",
+            "POLI435",
+            "POLI442",
+            "POLI444",
+            "POLI448",
+            "POLI457",
+            "ECON434",
+            "ECON450",
+            "ECON460",
+            "ECON461",
+            "ECON465",
+            "GLBL413",
+            "PLAN574",
+            "ANTH319",
+            "ENEC330",
+            "ENEC370",
+            "GEOG222",
+            "GEOG334",
+            "GLBL483",
+            "SOCI469",
+            "GLBL435",
+            "GLBL450",
+            "HIST278",
+            "ANTH102",
+            "ANTH147",
+            "CMPL143",
+            "MUSC258",
+            "RELI121"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "glbl_world_1",
+          "description": "Three courses from one world area (Africa, Asia, Latin America, Middle East, Western Europe, or Russia/Eastern Europe)",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
+            "AAAD101",
+            "AAAD307",
+            "AAAD315",
+            "AAAD316",
+            "HIST130",
+            "POLI431",
+            "ASIA134",
+            "ASIA150",
+            "CHIN150",
+            "HIST134",
+            "HIST136",
+            "HIST288",
+            "JAPN162",
+            "HIST142",
+            "HIST143",
+            "LTAM101",
+            "POLI434",
+            "POLI435",
+            "POLI450",
+            "SPAN344",
+            "ARAB150",
+            "HIST276",
+            "RELI180",
+            "RELI181",
+            "SOCI419",
+            "ECON461",
+            "FREN350",
+            "GERM302",
+            "HIST262",
+            "POLI239",
+            "POLI433",
+            "POLI438",
+            "HIST161",
+            "HIST162",
+            "HIST481",
+            "POLI235",
+            "POLI236",
+            "RUSS270"
           ],
           "rule": null,
           "is_core": true
@@ -11901,106 +12111,7 @@
       },
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "glbl_thematic_1",
-            "description": "Four courses from one thematic area (International Politics, Global Economics, Global Health, Global Justice, or Transnational Cultures)",
-            "type": "explicit",
-            "courses_required": 4,
-            "options": [
-              "GLBL221",
-              "GLBL401",
-              "GLBL415",
-              "GLBL481",
-              "GLBL487",
-              "GLBL489",
-              "GLBL491H",
-              "POLI252",
-              "POLI253",
-              "POLI255",
-              "POLI430",
-              "POLI431",
-              "POLI433",
-              "POLI435",
-              "POLI442",
-              "POLI444",
-              "POLI448",
-              "POLI457",
-              "ECON434",
-              "ECON450",
-              "ECON460",
-              "ECON461",
-              "ECON465",
-              "GLBL413",
-              "PLAN574",
-              "ANTH319",
-              "ENEC330",
-              "ENEC370",
-              "GEOG222",
-              "GEOG334",
-              "GLBL483",
-              "SOCI469",
-              "GLBL435",
-              "GLBL450",
-              "HIST278",
-              "ANTH102",
-              "ANTH147",
-              "CMPL143",
-              "MUSC258",
-              "RELI121"
-            ],
-            "rule": null,
-            "is_core": true
-          },
-          {
-            "id": "glbl_world_1",
-            "description": "Three courses from one world area (Africa, Asia, Latin America, Middle East, Western Europe, or Russia/Eastern Europe)",
-            "type": "explicit",
-            "courses_required": 3,
-            "options": [
-              "AAAD101",
-              "AAAD307",
-              "AAAD315",
-              "AAAD316",
-              "HIST130",
-              "POLI431",
-              "ASIA134",
-              "ASIA150",
-              "CHIN150",
-              "HIST134",
-              "HIST136",
-              "HIST288",
-              "JAPN162",
-              "HIST142",
-              "HIST143",
-              "LTAM101",
-              "POLI434",
-              "POLI435",
-              "POLI450",
-              "SPAN344",
-              "ARAB150",
-              "HIST276",
-              "RELI180",
-              "RELI181",
-              "SOCI419",
-              "ECON461",
-              "FREN350",
-              "GERM302",
-              "HIST262",
-              "POLI239",
-              "POLI433",
-              "POLI438",
-              "HIST161",
-              "HIST162",
-              "HIST481",
-              "POLI235",
-              "POLI236",
-              "RUSS270"
-            ],
-            "rule": null,
-            "is_core": true
-          }
-        ]
+        "choice_groups": []
       }
     }
   },
@@ -12053,8 +12164,10 @@
             "BIOL104",
             "BIOL103",
             "ENEC222",
+            "ENEC489",
             "ENEC448",
             "EMES448",
+            "ENEC324",
             "GEOG412",
             "ENVR413",
             "EMES200",
@@ -12130,7 +12243,11 @@
             "PHYS119"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM101": "CHEM101L",
+            "CHEM102": "CHEM102L"
+          }
         },
         {
           "id": "core_requirements_options_1",
@@ -12141,6 +12258,8 @@
             "ENEC330",
             "ENEC373",
             "PLCY373",
+            "ENEC421",
+            "ENEC431",
             "ENEC698",
             "ENEC694H",
             "BUSI507H"
@@ -12179,6 +12298,7 @@
           "courses_required": 1,
           "options": [
             "ENEC548",
+            "PLAN548",
             "ENVR548"
           ],
           "rule": null,
@@ -12201,7 +12321,10 @@
           "description": "EMES/ENEC 220 | North Carolina Estuaries: Environmental Processes and Problems",
           "type": "explicit",
           "courses_required": 1,
-          "options": [],
+          "options": [
+            "EMES220",
+            "ENEC220"
+          ],
           "rule": null,
           "is_core": true
         },
@@ -12210,7 +12333,10 @@
           "description": "EMES/ENEC 411 | Oceanic Processes in Environmental Systems",
           "type": "explicit",
           "courses_required": 1,
-          "options": [],
+          "options": [
+            "EMES411",
+            "ENEC411"
+          ],
           "rule": null,
           "is_core": true
         },
@@ -12244,7 +12370,8 @@
           "type": "explicit",
           "courses_required": 1,
           "options": [
-            "MATH152"
+            "MATH152",
+            "MATH231"
           ],
           "rule": null,
           "is_core": false
@@ -12301,7 +12428,10 @@
             "description": "ENEC/EMES 324L | Water in Our World Laboratory",
             "type": "explicit",
             "courses_required": 1,
-            "options": [],
+            "options": [
+              "EMES324L",
+              "ENEC324L"
+            ],
             "rule": null,
             "is_core": true
           },
@@ -13507,8 +13637,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "is_core": true,
-          "credits_required": null
+          "is_core": true
         },
         {
           "id": "comm_upper_1",
@@ -13522,8 +13651,7 @@
             "min_credits": null,
             "exclude": []
           },
-          "is_core": true,
-          "credits_required": null
+          "is_core": true
         },
         {
           "id": "comm_elective_1",
@@ -13533,12 +13661,11 @@
           "options": [],
           "rule": {
             "department": "COMM",
-            "min_number": 50,
+            "min_number": null,
             "min_credits": null,
             "exclude": []
           },
-          "is_core": true,
-          "credits_required": null
+          "is_core": true
         }
       ]
     },
@@ -13546,6 +13673,121 @@
       "None": {
         "required_courses": [],
         "choice_groups": []
+      },
+      "Communication_and_Everyday_Life": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "comm_cel_starting_1",
+            "description": "Students should select a minimum of two courses from the following list (Pathway Starting Point Courses)",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMM113",
+              "COMM120",
+              "COMM130",
+              "COMM140",
+              "COMM160",
+              "COMM171",
+              "COMM224",
+              "COMM249",
+              "COMM260",
+              "COMM325"
+            ],
+            "rule": null,
+            "is_core": true
+          }
+        ]
+      },
+      "Media_Art_Performance_and_Critical_Practice": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "comm_map_starting_1",
+            "description": "Students should select a minimum of two courses from the following list (Pathway Starting Point Courses)",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMM130",
+              "COMM140",
+              "COMM150",
+              "COMM160",
+              "COMM224",
+              "COMM260",
+              "COMM263",
+              "COMM330"
+            ],
+            "rule": null,
+            "is_core": true
+          }
+        ]
+      },
+      "Media_Technology_and_Public_Culture": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "comm_mtp_starting_1",
+            "description": "Students should select a minimum of two courses from the list below (Pathway Starting Point Courses)",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMM130",
+              "COMM140",
+              "COMM150",
+              "COMM224",
+              "COMM249",
+              "COMM330"
+            ],
+            "rule": null,
+            "is_core": true
+          }
+        ]
+      },
+      "Organization_Communication_and_Work": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "comm_ocw_starting_1",
+            "description": "Students should select a minimum of two courses from the list below (Pathway Starting Point Courses)",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMM113",
+              "COMM120",
+              "COMM130",
+              "COMM140",
+              "COMM170",
+              "COMM224",
+              "COMM249",
+              "COMM325"
+            ],
+            "rule": null,
+            "is_core": true
+          }
+        ]
+      },
+      "Rhetoric_Activism_and_Advocacy": {
+        "required_courses": [],
+        "choice_groups": [
+          {
+            "id": "comm_raa_starting_1",
+            "description": "Students should select a minimum of two courses from the list below (Pathway Starting Point Courses)",
+            "type": "explicit",
+            "courses_required": 2,
+            "options": [
+              "COMM113",
+              "COMM130",
+              "COMM140",
+              "COMM170",
+              "COMM171",
+              "COMM224",
+              "COMM249",
+              "COMM260"
+            ],
+            "rule": null,
+            "is_core": true
+          }
+        ]
       }
     }
   },
@@ -13610,7 +13852,10 @@
             "CHEM101"
           ],
           "rule": null,
-          "is_core": false
+          "is_core": false,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         }
       ]
     },
@@ -14435,7 +14680,11 @@
             "ENVR546"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "EMES101": "EMES101L",
+            "EMES103": "EMES103L"
+          }
         }
       ]
     },
@@ -14706,6 +14955,7 @@
           "type": "explicit",
           "courses_required": 3,
           "options": [
+            "DRAM193",
             "DRAM277",
             "DRAM365",
             "DRAM460",
@@ -16198,6 +16448,10 @@
             "ANTH354",
             "ASIA359",
             "CMPL359",
+            "ARAB407",
+            "ARAB408",
+            "ARAB409",
+            "ARAB410",
             "SOCI419",
             "ASIA425",
             "JWST425",
@@ -16716,24 +16970,50 @@
           "type": "explicit",
           "courses_required": 2,
           "options": [
+            "ASIA52",
+            "ASIA55",
             "ASIA56",
             "WGST56",
+            "ASIA65",
+            "ASIA75",
+            "ASIA76",
+            "CHIN150",
             "CHIN238",
             "CMPL238",
+            "CHIN242",
+            "CHIN244",
             "CHIN247",
             "CMPL247",
+            "CHIN252",
+            "CHIN253",
+            "CHIN255",
             "CHIN265",
             "HIST265",
+            "CHIN332",
+            "CHIN333",
+            "CHIN346",
+            "CHIN356",
+            "CHIN361",
+            "CHIN367",
             "ASIA418",
             "HIST418",
             "WGST418",
             "CHIN439",
             "HIST439",
+            "ASIA453",
+            "CHIN463",
+            "CHIN464",
+            "CHIN475",
+            "CHIN476",
             "CHIN480",
             "CMPL480",
             "WGST480",
             "CHIN545",
-            "CMPL545"
+            "CMPL545",
+            "CHIN551",
+            "CHIN552",
+            "CHIN562",
+            "ASIA692H"
           ],
           "rule": null,
           "is_core": true,
@@ -16898,6 +17178,7 @@
             "ASIA126",
             "ASIA127",
             "ARAB150",
+            "ASIA150",
             "CHIN150",
             "KOR150",
             "ARAB151",
@@ -19351,7 +19632,10 @@
             "CHEM101"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         },
         {
           "id": "bioc_2",
@@ -19363,7 +19647,10 @@
             "CHEM102"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "CHEM102": "CHEM102L"
+          }
         },
         {
           "id": "requirements_options_1",
@@ -19980,6 +20267,7 @@
             "CMPL520",
             "COMM130",
             "COMM230",
+            "COMM330",
             "COMM331",
             "COMM335",
             "COMM337",
@@ -20210,69 +20498,60 @@
         ]
       },
       "in_Science_Medicine_and_Literature": {
-        "required_courses": [],
+        "required_courses": [
+          "ENGL71",
+          "ENGL161",
+          "ENGL163",
+          "ENGL264",
+          "ENGL266",
+          "ENGL268",
+          "ENGL269",
+          "ENGL300I",
+          "ENGL303",
+          "ENGL370",
+          "ENGL473",
+          "ENGL489",
+          "ENGL593",
+          "ENGL610",
+          "ENGL611",
+          "ENGL695",
+          "AAAD387",
+          "ANTH147",
+          "ANTH204",
+          "ANTH214",
+          "ANTH270",
+          "ANTH278",
+          "ANTH285",
+          "ANTH319",
+          "ANTH328",
+          "ANTH348",
+          "ANTH390",
+          "ANTH405",
+          "ANTH430",
+          "ANTH432",
+          "ANTH442",
+          "ANTH445",
+          "ANTH448",
+          "ANTH443",
+          "ANTH473",
+          "ANTH539",
+          "FREN80",
+          "GEOG222",
+          "HIST329",
+          "MEJO469",
+          "MEJO560",
+          "PHIL150",
+          "PHIL165",
+          "PLCY361",
+          "PLCY661",
+          "RELI220",
+          "SOCI422",
+          "SOCI469",
+          "WGST330",
+          "WGST370",
+          "WGST388"
+        ],
         "choice_groups": [
-          {
-            "id": "conc_pool_1",
-            "description": "Concentration courses (ENGL/CMPL/HIST courses on sci-med topics)",
-            "type": "explicit",
-            "courses_required": 10,
-            "options": [
-              "ENGL71",
-              "ENGL161",
-              "ENGL163",
-              "ENGL264",
-              "ENGL266",
-              "ENGL268",
-              "ENGL269",
-              "ENGL300I",
-              "ENGL303",
-              "ENGL370",
-              "ENGL473",
-              "ENGL489",
-              "ENGL593",
-              "ENGL610",
-              "ENGL611",
-              "ENGL695",
-              "AAAD387",
-              "ANTH147",
-              "ANTH204",
-              "ANTH214",
-              "ANTH270",
-              "ANTH278",
-              "ANTH285",
-              "ANTH319",
-              "ANTH328",
-              "ANTH348",
-              "ANTH390",
-              "ANTH405",
-              "ANTH430",
-              "ANTH432",
-              "ANTH442",
-              "ANTH445",
-              "ANTH448",
-              "ANTH443",
-              "ANTH473",
-              "ANTH539",
-              "FREN80",
-              "GEOG222",
-              "HIST329",
-              "MEJO469",
-              "MEJO560",
-              "PHIL150",
-              "PHIL165",
-              "PLCY361",
-              "PLCY661",
-              "RELI220",
-              "SOCI422",
-              "SOCI469",
-              "WGST330",
-              "WGST370",
-              "WGST388"
-            ],
-            "rule": null,
-            "is_core": true
-          },
           {
             "description": "Select three (3) additional courses from ENGL and/or CMPL 2",
             "type": "rule_based",
@@ -20292,66 +20571,57 @@
         ]
       },
       "in_Social_Justice_and_Literature": {
-        "required_courses": [],
+        "required_courses": [
+          "CMPL180",
+          "CMPL258",
+          "CMPL261",
+          "CMPL262",
+          "CMPL270",
+          "CMPL359",
+          "CMPL442",
+          "ENGL79",
+          "ENGL129",
+          "ENGL140",
+          "ENGL158",
+          "ENGL164",
+          "ENGL193",
+          "ENGL240",
+          "ENGL248",
+          "ENGL263",
+          "ENGL265",
+          "ENGL267",
+          "ENGL269",
+          "ENGL270",
+          "ENGL271",
+          "ENGL272",
+          "ENGL279",
+          "ENGL287",
+          "ENGL289",
+          "ENGL302",
+          "ENGL359",
+          "ENGL360",
+          "ENGL361",
+          "ENGL362",
+          "ENGL363",
+          "ENGL367",
+          "ENGL368",
+          "ENGL369",
+          "ENGL370",
+          "ENGL371",
+          "ENGL385",
+          "ENGL386",
+          "ENGL394",
+          "ENGL403",
+          "ENGL464",
+          "ENGL472",
+          "ENGL488",
+          "ENGL659",
+          "ENGL665",
+          "ENGL666",
+          "ENGL685",
+          "ENGL670"
+        ],
         "choice_groups": [
-          {
-            "id": "conc_pool_1",
-            "description": "Concentration courses (CMPL/ENGL/WGST courses on social justice)",
-            "type": "explicit",
-            "courses_required": 10,
-            "options": [
-              "CMPL180",
-              "CMPL258",
-              "CMPL261",
-              "CMPL262",
-              "CMPL270",
-              "CMPL359",
-              "CMPL442",
-              "ENGL79",
-              "ENGL129",
-              "ENGL140",
-              "ENGL158",
-              "ENGL164",
-              "ENGL193",
-              "ENGL240",
-              "ENGL248",
-              "ENGL263",
-              "ENGL265",
-              "ENGL267",
-              "ENGL269",
-              "ENGL270",
-              "ENGL271",
-              "ENGL272",
-              "ENGL279",
-              "ENGL287",
-              "ENGL289",
-              "ENGL302",
-              "ENGL359",
-              "ENGL360",
-              "ENGL361",
-              "ENGL362",
-              "ENGL363",
-              "ENGL367",
-              "ENGL368",
-              "ENGL369",
-              "ENGL370",
-              "ENGL371",
-              "ENGL385",
-              "ENGL386",
-              "ENGL394",
-              "ENGL403",
-              "ENGL464",
-              "ENGL472",
-              "ENGL488",
-              "ENGL659",
-              "ENGL665",
-              "ENGL666",
-              "ENGL685",
-              "ENGL670"
-            ],
-            "rule": null,
-            "is_core": true
-          },
           {
             "id": "aaad_1",
             "description": "PLCY/AAAD 354 | The Lived Experience of Inequality and Public Policy",
@@ -20383,82 +20653,73 @@
         ]
       },
       "in_Writing_Editing_and_Digital_Publishing": {
-        "required_courses": [],
+        "required_courses": [
+          "CMPL250",
+          "CMPL251",
+          "ENGL113",
+          "ENGL114",
+          "ENGL115",
+          "ENGL117",
+          "ENGL118",
+          "ENGL119",
+          "ENGL127",
+          "ENGL130",
+          "ENGL131",
+          "ENGL136",
+          "ENGL137",
+          "ENGL138",
+          "ENGL149",
+          "ENGL150",
+          "ENGL168",
+          "ENGL205",
+          "ENGL206",
+          "ENGL207",
+          "ENGL208",
+          "ENGL213",
+          "ENGL215",
+          "ENGL257",
+          "ENGL283",
+          "ENGL300",
+          "ENGL300I",
+          "ENGL301",
+          "ENGL302",
+          "ENGL303",
+          "ENGL304",
+          "ENGL305",
+          "ENGL306",
+          "ENGL307",
+          "ENGL308",
+          "ENGL312",
+          "ENGL317",
+          "ENGL318",
+          "ENGL324",
+          "ENGL341",
+          "ENGL378",
+          "ENGL384",
+          "ENGL392",
+          "ENGL400",
+          "ENGL402",
+          "ENGL403",
+          "ENGL406",
+          "ENGL407",
+          "ENGL408",
+          "ENGL409",
+          "ENGL480",
+          "ENGL482",
+          "ENGL487",
+          "ENGL674",
+          "ENGL675",
+          "ENGL676",
+          "AMST475",
+          "BUSI401",
+          "COMM113",
+          "COMM350",
+          "COMM432",
+          "DRAM231",
+          "MEJO153",
+          "WGST695"
+        ],
         "choice_groups": [
-          {
-            "id": "conc_pool_1",
-            "description": "Concentration courses (ENGL/CMPL/COMM writing & editing courses)",
-            "type": "explicit",
-            "courses_required": 10,
-            "options": [
-              "CMPL250",
-              "CMPL251",
-              "ENGL113",
-              "ENGL114",
-              "ENGL115",
-              "ENGL117",
-              "ENGL118",
-              "ENGL119",
-              "ENGL127",
-              "ENGL130",
-              "ENGL131",
-              "ENGL136",
-              "ENGL137",
-              "ENGL138",
-              "ENGL149",
-              "ENGL150",
-              "ENGL168",
-              "ENGL205",
-              "ENGL206",
-              "ENGL207",
-              "ENGL208",
-              "ENGL213",
-              "ENGL215",
-              "ENGL257",
-              "ENGL283",
-              "ENGL300",
-              "ENGL300I",
-              "ENGL301",
-              "ENGL302",
-              "ENGL303",
-              "ENGL304",
-              "ENGL305",
-              "ENGL306",
-              "ENGL307",
-              "ENGL308",
-              "ENGL312",
-              "ENGL317",
-              "ENGL318",
-              "ENGL324",
-              "ENGL341",
-              "ENGL378",
-              "ENGL384",
-              "ENGL392",
-              "ENGL400",
-              "ENGL402",
-              "ENGL403",
-              "ENGL406",
-              "ENGL407",
-              "ENGL408",
-              "ENGL409",
-              "ENGL480",
-              "ENGL482",
-              "ENGL487",
-              "ENGL674",
-              "ENGL675",
-              "ENGL676",
-              "AMST475",
-              "BUSI401",
-              "COMM113",
-              "COMM350",
-              "COMM432",
-              "DRAM231",
-              "MEJO153",
-              "WGST695"
-            ],
-            "rule": null,
-            "is_core": true
-          },
           {
             "id": "concentration_writing_electives_1",
             "description": "Select one (1) course from the following list: 1",
@@ -21136,6 +21397,20 @@
           ],
           "rule": null,
           "is_core": true
+        },
+        {
+          "id": "geog_elective_1",
+          "description": "Four GEOG elective courses (at least 2 at 400+ level)",
+          "type": "rule_based",
+          "courses_required": 4,
+          "options": [],
+          "rule": {
+            "department": "GEOG",
+            "min_number": null,
+            "min_credits": null,
+            "exclude": []
+          },
+          "is_core": true
         }
       ]
     },
@@ -21334,22 +21609,7 @@
       },
       "None": {
         "required_courses": [],
-        "choice_groups": [
-          {
-            "id": "geog_elective_1",
-            "description": "Four GEOG elective courses (at least 2 at 400+ level)",
-            "type": "rule_based",
-            "courses_required": 4,
-            "options": [],
-            "rule": {
-              "department": "GEOG",
-              "min_number": null,
-              "min_credits": null,
-              "exclude": []
-            },
-            "is_core": true
-          }
-        ]
+        "choice_groups": []
       }
     }
   },
@@ -21404,7 +21664,6 @@
         "GEOG441",
         "GEOG444",
         "GEOG477",
-        "EMES101",
         "PHYS101"
       ],
       "choice_groups": [
@@ -21950,7 +22209,283 @@
       "required_courses": [
         "HIST398"
       ],
-      "choice_groups": []
+      "choice_groups": [
+        {
+          "id": "core_requirements_concentration_1",
+          "description": "Four to six courses in a field of concentration (geographical or thematic). See lists below.",
+          "type": "explicit",
+          "courses_required": 4,
+          "options": [
+            "HIST52",
+            "HIST62",
+            "HIST63",
+            "HIST74",
+            "HIST83",
+            "HIST130",
+            "HIST131",
+            "HIST133",
+            "HIST134",
+            "HIST135",
+            "HIST136",
+            "HIST137",
+            "HIST138",
+            "HIST139",
+            "HIST163",
+            "HIST166",
+            "HIST174H",
+            "HIST203",
+            "HIST243",
+            "HIST271",
+            "HIST272",
+            "HIST274",
+            "HIST276",
+            "HIST277",
+            "HIST278",
+            "HIST279",
+            "HIST281",
+            "HIST282",
+            "HIST284",
+            "HIST285",
+            "HIST288",
+            "HIST312",
+            "HIST331",
+            "HIST340",
+            "HIST440",
+            "HIST442",
+            "HIST483",
+            "HIST484",
+            "HIST511",
+            "HIST534",
+            "HIST535",
+            "HIST536",
+            "HIST537",
+            "HIST538",
+            "HIST539",
+            "HIST550",
+            "HIST557",
+            "HIST570",
+            "HIST51",
+            "HIST76",
+            "HIST142",
+            "HIST143",
+            "HIST145",
+            "HIST175H",
+            "HIST240",
+            "HIST242",
+            "HIST248",
+            "HIST280",
+            "HIST315",
+            "HIST526",
+            "HIST531",
+            "HIST532",
+            "HIST64",
+            "HIST161",
+            "HIST162",
+            "HIST176H",
+            "HIST264",
+            "HIST334",
+            "HIST476",
+            "HIST477",
+            "HIST478",
+            "HIST480",
+            "HIST481",
+            "HIST482",
+            "HIST53",
+            "HIST66",
+            "HIST72",
+            "HIST81",
+            "HIST84",
+            "HIST85",
+            "HIST104",
+            "HIST151",
+            "HIST152",
+            "HIST153",
+            "HIST158",
+            "HIST159",
+            "HIST164",
+            "HIST165",
+            "HIST177H",
+            "HIST178H",
+            "HIST205",
+            "HIST206",
+            "HIST251",
+            "HIST252",
+            "HIST254",
+            "HIST255",
+            "HIST256",
+            "HIST257",
+            "HIST258",
+            "HIST259",
+            "HIST260",
+            "HIST261",
+            "HIST262",
+            "HIST269",
+            "HIST306",
+            "HIST307",
+            "HIST308",
+            "HIST309",
+            "HIST310",
+            "HIST320",
+            "HIST325",
+            "HIST332",
+            "HIST347",
+            "HIST348",
+            "HIST353",
+            "HIST354",
+            "HIST452",
+            "HIST453",
+            "HIST454",
+            "HIST458",
+            "HIST462",
+            "HIST463",
+            "HIST466",
+            "HIST468",
+            "HIST469",
+            "HIST474",
+            "HIST485",
+            "HIST486",
+            "HIST500",
+            "HIST508",
+            "HIST510",
+            "HIST516",
+            "HIST517",
+            "HIST70",
+            "HIST79",
+            "HIST102",
+            "HIST110",
+            "HIST120",
+            "HIST121",
+            "HIST124",
+            "HIST125",
+            "HIST127",
+            "HIST128",
+            "HIST144",
+            "HIST179H",
+            "HIST230",
+            "HIST231",
+            "HIST233",
+            "HIST234",
+            "HIST235",
+            "HIST236",
+            "HIST237",
+            "HIST238",
+            "HIST239",
+            "HIST241",
+            "HIST244",
+            "HIST245",
+            "HIST246",
+            "HIST289",
+            "HIST302H",
+            "HIST322",
+            "HIST355",
+            "HIST356",
+            "HIST357",
+            "HIST358",
+            "HIST359",
+            "HIST360",
+            "HIST361",
+            "HIST362",
+            "HIST363",
+            "HIST364",
+            "HIST365",
+            "HIST366",
+            "HIST367",
+            "HIST368",
+            "HIST369",
+            "HIST372",
+            "HIST373",
+            "HIST374",
+            "HIST375",
+            "HIST376",
+            "HIST377",
+            "HIST382",
+            "HIST383",
+            "HIST384",
+            "HIST385",
+            "HIST459",
+            "HIST475",
+            "HIST562",
+            "HIST565",
+            "HIST566",
+            "HIST568",
+            "HIST571",
+            "HIST576",
+            "HIST577",
+            "HIST581",
+            "HIST582",
+            "HIST584",
+            "HIST585",
+            "HIST589",
+            "HIST593",
+            "HIST670",
+            "HIST671",
+            "HIST50",
+            "HIST105",
+            "HIST106",
+            "HIST107",
+            "HIST108",
+            "HIST140",
+            "HIST207",
+            "HIST210",
+            "HIST212",
+            "HIST213",
+            "HIST220",
+            "HIST221",
+            "HIST225",
+            "HIST226",
+            "HIST228",
+            "HIST247",
+            "HIST249",
+            "HIST263",
+            "HIST270",
+            "HIST273",
+            "HIST283",
+            "HIST291",
+            "HIST302",
+            "HIST311",
+            "HIST313",
+            "HIST329",
+            "HIST330",
+            "HIST333",
+            "HIST335",
+            "HIST346",
+            "HIST349",
+            "HIST352",
+            "HIST388",
+            "HIST421",
+            "HIST422",
+            "HIST423",
+            "HIST424",
+            "HIST425",
+            "HIST427",
+            "HIST428",
+            "HIST431",
+            "HIST432",
+            "HIST434",
+            "HIST435",
+            "HIST437",
+            "HIST438",
+            "HIST518",
+            "HIST103",
+            "HIST190",
+            "HIST266",
+            "HIST390",
+            "HIST479",
+            "HIST489",
+            "HIST490",
+            "HIST493",
+            "HIST495",
+            "HIST496",
+            "HIST509",
+            "HIST514",
+            "HIST578",
+            "HIST691H",
+            "HIST692H"
+          ],
+          "rule": null,
+          "is_core": true
+        }
+      ]
     },
     "concentrations": {
       "None": {
@@ -23539,14 +24074,14 @@
         {
           "id": "core_requirements_numbered_1",
           "description": "Select three (3) courses numbered 400 and above (see list below).",
-          "type": "rule_based",
-          "courses_required": 3,
-          "options": [],
-          "rule": {
-            "department": "LTAM",
-            "min_number": 400
-          },
-          "is_core": true
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "LTAM697"
+          ],
+          "rule": null,
+          "is_core": true,
+          "credits_required": 9
         },
         {
           "id": "AAAD57_1",
@@ -24718,12 +25253,28 @@
   "Media_and_Journalism_BA": {
     "base_requirements": {
       "required_courses": [
-        "MEJO121"
+        "MEJO121",
+        "MEJO153",
+        "MEJO340",
+        "MEJO625",
+        "MEJO634",
+        "MEJO644",
+        "MEJO652",
+        "MEJO653",
+        "MEJO669",
+        "MEJO670",
+        "MEJO671",
+        "MEJO673",
+        "MEJO674",
+        "MEJO677",
+        "MEJO690",
+        "MEJO691H",
+        "MEJO692H"
       ],
       "choice_groups": [
         {
           "id": "government_politics_electives_1",
-          "description": "Select one from the following list (Government/Politics requirement):",
+          "description": "Select one from the following list: 4",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -24739,7 +25290,7 @@
         },
         {
           "id": "ethical_civic_electives_1",
-          "description": "Select one from the following list (Ethical and Civic Values requirement):",
+          "description": "Select one from the following list: 4",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -24751,6 +25302,215 @@
           ],
           "rule": null,
           "is_core": true
+        },
+        {
+          "id": "conceptual_courses6_electives_1",
+          "description": "Students must also complete two courses (6 hours) from the following list: 4",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "MEJO137",
+            "MEJO141",
+            "MEJO142",
+            "MEJO144",
+            "MEJO242",
+            "MEJO244",
+            "MEJO245",
+            "MEJO342",
+            "MEJO372",
+            "MEJO373",
+            "MEJO374",
+            "MEJO379",
+            "MEJO424",
+            "MEJO425",
+            "MEJO432",
+            "MEJO435",
+            "MEJO437",
+            "MEJO438",
+            "MEJO439",
+            "MEJO441",
+            "MEJO442",
+            "MEJO445",
+            "MEJO447",
+            "MEJO448",
+            "MEJO466",
+            "MEJO467",
+            "MEJO469",
+            "MEJO475",
+            "MEJO476",
+            "MEJO477",
+            "MEJO479",
+            "MEJO490",
+            "MEJO500",
+            "MEJO531",
+            "MEJO532",
+            "MEJO533",
+            "MEJO544",
+            "MEJO550",
+            "MEJO569",
+            "MEJO571",
+            "MEJO572",
+            "MEJO581",
+            "MEJO588",
+            "MEJO591",
+            "MEJO592",
+            "MEJO594",
+            "MEJO596",
+            "MEJO644",
+            "MEJO652",
+            "MEJO653",
+            "MEJO670",
+            "MEJO671",
+            "MEJO673",
+            "MEJO677",
+            "MEJO691H",
+            "MEJO692H",
+            "MEJO101",
+            "MEJO129",
+            "MEJO157",
+            "MEJO180",
+            "MEJO182",
+            "MEJO187",
+            "MEJO190",
+            "MEJO206",
+            "MEJO252",
+            "MEJO253",
+            "MEJO341",
+            "MEJO393",
+            "MEJO440",
+            "MEJO444",
+            "MEJO471",
+            "MEJO522",
+            "MEJO523",
+            "MEJO557",
+            "MEJO560",
+            "MEJO562",
+            "MEJO565",
+            "MEJO570",
+            "MEJO580",
+            "MEJO582",
+            "MEJO583",
+            "MEJO584",
+            "MEJO585",
+            "MEJO589"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "capstone6_electives_1",
+          "description": "Select one course from the following: 4",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "MEJO625",
+            "MEJO630",
+            "MEJO631",
+            "MEJO644",
+            "MEJO652",
+            "MEJO653",
+            "MEJO656",
+            "MEJO677",
+            "MEJO669",
+            "MEJO681",
+            "MEJO683",
+            "MEJO691H",
+            "MEJO692H"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "conceptual_courses66_electives_1",
+          "description": "Students must also complete two courses (6 hours) from the following list: 4",
+          "type": "explicit",
+          "courses_required": 2,
+          "options": [
+            "MEJO141",
+            "MEJO142",
+            "MEJO144",
+            "MEJO242",
+            "MEJO244",
+            "MEJO245",
+            "MEJO342",
+            "MEJO372",
+            "MEJO373",
+            "MEJO374",
+            "MEJO424",
+            "MEJO425",
+            "MEJO432",
+            "MEJO435",
+            "MEJO437",
+            "MEJO438",
+            "MEJO439",
+            "MEJO441",
+            "MEJO442",
+            "MEJO445",
+            "MEJO447",
+            "MEJO448",
+            "MEJO466",
+            "MEJO467",
+            "MEJO469",
+            "MEJO475",
+            "MEJO476",
+            "MEJO477",
+            "MEJO479",
+            "MEJO490",
+            "MEJO500",
+            "MEJO531",
+            "MEJO532",
+            "MEJO533",
+            "MEJO544",
+            "MEJO550",
+            "MEJO569",
+            "MEJO571",
+            "MEJO572",
+            "MEJO581",
+            "MEJO588",
+            "MEJO591",
+            "MEJO592",
+            "MEJO594",
+            "MEJO596",
+            "MEJO644",
+            "MEJO652",
+            "MEJO653",
+            "MEJO670",
+            "MEJO671",
+            "MEJO673",
+            "MEJO677",
+            "MEJO691H",
+            "MEJO692H",
+            "MEJO101",
+            "MEJO129",
+            "MEJO157",
+            "MEJO180",
+            "MEJO182",
+            "MEJO187",
+            "MEJO190",
+            "MEJO206",
+            "MEJO252",
+            "MEJO253",
+            "MEJO341",
+            "MEJO393",
+            "MEJO440",
+            "MEJO444",
+            "MEJO471",
+            "MEJO522",
+            "MEJO523",
+            "MEJO557",
+            "MEJO560",
+            "MEJO562",
+            "MEJO565",
+            "MEJO570",
+            "MEJO580",
+            "MEJO582",
+            "MEJO583",
+            "MEJO584",
+            "MEJO585",
+            "MEJO589"
+          ],
+          "rule": null,
+          "is_core": true
         }
       ]
     },
@@ -24759,40 +25519,32 @@
         "required_courses": [],
         "choice_groups": []
       },
-      "Journalism": {
-        "required_courses": [
-          "MEJO153",
-          "MEJO340"
-        ],
+      "Concentration6": {
+        "required_courses": [],
         "choice_groups": [
           {
-            "id": "journalism_level1_1",
-            "description": "At least two courses from Level 1:",
+            "id": "concentration6_electives_1",
+            "description": "One course from Level 1",
             "type": "explicit",
-            "courses_required": 2,
+            "courses_required": 1,
             "options": [
-              "MEJO129",
-              "MEJO144",
-              "MEJO180",
-              "MEJO182",
-              "MEJO187",
-              "MEJO190",
-              "MEJO252",
-              "MEJO253"
+              "MEJO137"
             ],
             "rule": null,
+            "credits_required": 3,
             "is_core": true
           },
           {
-            "id": "journalism_level2_1",
-            "description": "At least two courses from Level 2:",
+            "id": "mejo_electives_1",
+            "description": "At least three courses from Level 2. All students are required to take MEJO\u00a0379 .",
             "type": "explicit",
-            "courses_required": 2,
+            "courses_required": 3,
             "options": [
               "MEJO352",
               "MEJO353",
               "MEJO356",
               "MEJO358",
+              "MEJO379",
               "MEJO390",
               "MEJO421",
               "MEJO426",
@@ -24808,147 +25560,15 @@
               "MEJO490"
             ],
             "rule": null,
+            "credits_required": 9,
             "is_core": true
           },
           {
-            "id": "journalism_level3_1",
-            "description": "At least two courses from Level 3:",
+            "id": "concentration6_electives_2",
+            "description": "Two additional courses from the following list: 4",
             "type": "explicit",
             "courses_required": 2,
             "options": [
-              "MEJO500",
-              "MEJO522",
-              "MEJO523",
-              "MEJO541",
-              "MEJO542",
-              "MEJO550",
-              "MEJO553",
-              "MEJO557",
-              "MEJO560",
-              "MEJO562",
-              "MEJO565",
-              "MEJO570",
-              "MEJO580",
-              "MEJO581",
-              "MEJO582",
-              "MEJO583",
-              "MEJO584",
-              "MEJO585",
-              "MEJO588",
-              "MEJO589"
-            ],
-            "rule": null,
-            "is_core": true
-          },
-          {
-            "id": "journalism_conceptual_1",
-            "description": "Students must also complete two courses (6 hours) from the following list (Conceptual Courses):",
-            "type": "explicit",
-            "courses_required": 2,
-            "options": [
-              "MEJO137",
-              "MEJO141",
-              "MEJO142",
-              "MEJO144",
-              "MEJO206",
-              "MEJO242",
-              "MEJO244",
-              "MEJO245",
-              "MEJO342",
-              "MEJO372",
-              "MEJO373",
-              "MEJO374",
-              "MEJO379",
-              "MEJO424",
-              "MEJO425",
-              "MEJO432",
-              "MEJO435",
-              "MEJO437",
-              "MEJO438",
-              "MEJO439",
-              "MEJO440",
-              "MEJO441",
-              "MEJO442",
-              "MEJO444",
-              "MEJO445",
-              "MEJO447",
-              "MEJO448",
-              "MEJO466",
-              "MEJO467",
-              "MEJO469",
-              "MEJO475",
-              "MEJO476",
-              "MEJO477",
-              "MEJO479",
-              "MEJO490",
-              "MEJO500",
-              "MEJO531",
-              "MEJO532",
-              "MEJO533",
-              "MEJO544",
-              "MEJO550",
-              "MEJO569",
-              "MEJO571",
-              "MEJO572",
-              "MEJO581",
-              "MEJO588",
-              "MEJO591",
-              "MEJO592",
-              "MEJO594",
-              "MEJO596",
-              "MEJO644",
-              "MEJO652",
-              "MEJO653",
-              "MEJO670",
-              "MEJO671",
-              "MEJO673",
-              "MEJO677",
-              "MEJO691H",
-              "MEJO692H"
-            ],
-            "rule": null,
-            "is_core": true
-          },
-          {
-            "id": "journalism_capstone_1",
-            "description": "Select one capstone course from the following:",
-            "type": "explicit",
-            "courses_required": 1,
-            "options": [
-              "MEJO625",
-              "MEJO630",
-              "MEJO631",
-              "MEJO644",
-              "MEJO652",
-              "MEJO653",
-              "MEJO656",
-              "MEJO677",
-              "MEJO669",
-              "MEJO681",
-              "MEJO683",
-              "MEJO691H",
-              "MEJO692H"
-            ],
-            "rule": null,
-            "is_core": true
-          }
-        ]
-      },
-      "Advertising_PR": {
-        "required_courses": [
-          "MEJO153",
-          "MEJO341",
-          "MEJO137",
-          "MEJO379"
-        ],
-        "choice_groups": [
-          {
-            "id": "advertising_pr_level2_1",
-            "description": "Two additional courses from Level 2 (beyond MEJO379):",
-            "type": "explicit",
-            "courses_required": 2,
-            "options": [
-              "MEJO206",
               "MEJO332",
               "MEJO333",
               "MEJO334",
@@ -24956,14 +25576,15 @@
               "MEJO372",
               "MEJO373",
               "MEJO374",
+              "MEJO377",
               "MEJO390"
             ],
             "rule": null,
             "is_core": true
           },
           {
-            "id": "advertising_pr_level3_1",
-            "description": "At least two courses from Level 3:",
+            "id": "concentration6_electives_3",
+            "description": "At least two courses from Level 3 4",
             "type": "explicit",
             "courses_required": 2,
             "options": [
@@ -24973,12 +25594,10 @@
               "MEJO437",
               "MEJO438",
               "MEJO439",
-              "MEJO444",
               "MEJO447",
               "MEJO466",
               "MEJO467",
               "MEJO469",
-              "MEJO471",
               "MEJO475",
               "MEJO476",
               "MEJO477",
@@ -25003,99 +25622,7 @@
               "MEJO594"
             ],
             "rule": null,
-            "is_core": true
-          },
-          {
-            "id": "advertising_pr_conceptual_1",
-            "description": "Students must also complete two courses (6 hours) from the following list (Conceptual Courses):",
-            "type": "explicit",
-            "courses_required": 2,
-            "options": [
-              "MEJO137",
-              "MEJO141",
-              "MEJO142",
-              "MEJO144",
-              "MEJO206",
-              "MEJO242",
-              "MEJO244",
-              "MEJO245",
-              "MEJO342",
-              "MEJO372",
-              "MEJO373",
-              "MEJO374",
-              "MEJO379",
-              "MEJO424",
-              "MEJO425",
-              "MEJO432",
-              "MEJO435",
-              "MEJO437",
-              "MEJO438",
-              "MEJO439",
-              "MEJO440",
-              "MEJO441",
-              "MEJO442",
-              "MEJO444",
-              "MEJO445",
-              "MEJO447",
-              "MEJO448",
-              "MEJO466",
-              "MEJO467",
-              "MEJO469",
-              "MEJO475",
-              "MEJO476",
-              "MEJO477",
-              "MEJO479",
-              "MEJO490",
-              "MEJO500",
-              "MEJO531",
-              "MEJO532",
-              "MEJO533",
-              "MEJO544",
-              "MEJO550",
-              "MEJO569",
-              "MEJO571",
-              "MEJO572",
-              "MEJO581",
-              "MEJO588",
-              "MEJO591",
-              "MEJO592",
-              "MEJO594",
-              "MEJO596",
-              "MEJO644",
-              "MEJO652",
-              "MEJO653",
-              "MEJO670",
-              "MEJO671",
-              "MEJO673",
-              "MEJO677",
-              "MEJO691H",
-              "MEJO692H"
-            ],
-            "rule": null,
-            "is_core": true
-          },
-          {
-            "id": "advertising_pr_capstone_1",
-            "description": "At least one capstone course from the following:",
-            "type": "explicit",
-            "courses_required": 1,
-            "options": [
-              "MEJO625",
-              "MEJO634",
-              "MEJO644",
-              "MEJO652",
-              "MEJO653",
-              "MEJO669",
-              "MEJO670",
-              "MEJO671",
-              "MEJO673",
-              "MEJO674",
-              "MEJO677",
-              "MEJO690",
-              "MEJO691H",
-              "MEJO692H"
-            ],
-            "rule": null,
+            "credits_required": 6,
             "is_core": true
           }
         ]
@@ -25104,9 +25631,7 @@
   },
   "Medicine_Literature_and_Culture_Minor": {
     "base_requirements": {
-      "required_courses": [
-        "ENGL268"
-      ],
+      "required_courses": [],
       "choice_groups": [
         {
           "id": "core_requirements_representing_1",
@@ -25670,6 +26195,7 @@
             "MUSC113",
             "MUSC114",
             "MUSC115",
+            "MUSC156",
             "MUSC157",
             "MUSC200",
             "MUSC202",
@@ -25678,7 +26204,8 @@
             "MUSC205",
             "MUSC206",
             "MUSC207",
-            "MUSC266"
+            "MUSC266",
+            "MUSC381"
           ],
           "rule": null,
           "is_core": true
@@ -25836,12 +26363,21 @@
   "Musical_Theatre_Performance_Minor": {
     "base_requirements": {
       "required_courses": [
+        "MUSC102",
+        "MUSC111",
+        "MUSC121",
+        "MUSC202",
         "EXSS10",
         "EXSS11",
         "EXSS12",
         "EXSS20",
         "EXSS22",
-        "EXSS30"
+        "EXSS30",
+        "DRAM154",
+        "DRAM155",
+        "DRAM135",
+        "DRAM140",
+        "DRAM144"
       ],
       "choice_groups": [
         {
@@ -25852,25 +26388,6 @@
           "options": [
             "DRAM151",
             "MUSC151"
-          ],
-          "rule": null,
-          "is_core": true
-        },
-        {
-          "id": "musc_1",
-          "description": "Four semesters of Music/Drama practicum (voice, movement, or acting)",
-          "type": "explicit",
-          "courses_required": 4,
-          "options": [
-            "MUSC102",
-            "MUSC111",
-            "MUSC121",
-            "MUSC202",
-            "DRAM135",
-            "DRAM140",
-            "DRAM144",
-            "DRAM154",
-            "DRAM155"
           ],
           "rule": null,
           "is_core": true
@@ -26254,10 +26771,14 @@
           "type": "explicit",
           "courses_required": 1,
           "options": [
+            "CHEM101",
             "BIOC107"
           ],
           "rule": null,
-          "is_core": true
+          "is_core": true,
+          "companion_labs": {
+            "CHEM101": "CHEM101L"
+          }
         },
         {
           "id": "math_foundations",
@@ -27026,11 +27547,15 @@
   },
   "Romance_Languages_BA_Hispanic_Studies": {
     "base_requirements": {
-      "required_courses": [],
+      "required_courses": [
+        "SPAN360",
+        "SPAN376",
+        "SPAN691H"
+      ],
       "choice_groups": [
         {
-          "id": "span_core_1",
-          "description": "SPAN 300 | Grammar and Structure of Spanish",
+          "id": "span_1",
+          "description": "SPAN\u00a0300 | Grammar and Structure of Spanish 1, H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -27042,110 +27567,62 @@
           "is_core": true
         },
         {
-          "id": "span_electives_1",
-          "description": "Four elective courses numbered SPAN 330 or higher (except SPAN 401-402, 404-405, 414-417, 601, 691H-692H):",
+          "id": "hispanic_literatures_electives_1",
+          "description": "One course from the following list:",
           "type": "explicit",
-          "courses_required": 4,
+          "courses_required": 1,
           "options": [
-            "SPAN300",
-            "SPAN301",
-            "SPAN302",
-            "SPAN308",
-            "SPAN320",
-            "SPAN321",
-            "SPAN323",
-            "SPAN324",
-            "SPAN325",
-            "SPAN328",
-            "SPAN329",
-            "SPAN330",
             "SPAN338",
-            "SPAN339",
             "SPAN340",
             "SPAN344",
-            "SPAN346",
+            "SPAN371",
+            "SPAN373"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "spanish_professions_pairs_1",
+          "description": "Two courses from one of the following pairs:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SPAN320",
+            "SPAN325",
+            "SPAN321",
+            "SPAN328",
+            "SPAN323",
+            "SPAN324",
+            "SPAN329"
+          ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "translation_interpreting_electives_1",
+          "description": "Three courses from the following list:",
+          "type": "explicit",
+          "courses_required": 3,
+          "options": [
             "SPAN351",
             "SPAN352",
-            "SPAN355",
-            "SPAN360",
-            "SPAN361",
-            "SPAN363",
-            "SPAN364",
             "SPAN369",
-            "SPAN370",
-            "SPAN371",
-            "SPAN373",
-            "SPAN375",
-            "SPAN376",
-            "SPAN378",
-            "SPAN379",
-            "SPAN380",
-            "SPAN381",
-            "SPAN382",
-            "SPAN383",
-            "SPAN384",
-            "SPAN385",
-            "SPAN386",
-            "SPAN387",
-            "SPAN388",
-            "SPAN393",
-            "SPAN394",
-            "SPAN395",
-            "SPAN397",
-            "SPAN398",
-            "SPAN399",
-            "SPAN401",
-            "SPAN402",
-            "SPAN404",
-            "SPAN405",
-            "SPAN414",
-            "SPAN415",
-            "SPAN416",
-            "SPAN417",
-            "SPAN597",
-            "SPAN601",
-            "SPAN613",
-            "SPAN614",
-            "SPAN617",
-            "SPAN620",
-            "SPAN621",
-            "SPAN625",
-            "SPAN630",
-            "SPAN634",
-            "SPAN640",
-            "SPAN650",
-            "SPAN661",
-            "SPAN676",
-            "SPAN677",
-            "SPAN678",
-            "SPAN679",
-            "SPAN680",
-            "SPAN681",
-            "SPAN682",
-            "SPAN683",
-            "SPAN684",
-            "SPAN701",
-            "SPAN702",
-            "SPAN709",
-            "SPAN710",
-            "SPAN711",
-            "SPAN712",
-            "SPAN713",
-            "SPAN714",
-            "SPAN715",
-            "SPAN716",
-            "SPAN725",
-            "SPAN737",
-            "SPAN738",
-            "SPAN741",
-            "SPAN742",
-            "SPAN743",
-            "SPAN744",
-            "SPAN745",
-            "SPAN746",
-            "SPAN747",
-            "SPAN750"
+            "SPAN370"
           ],
+          "rule": null,
+          "is_core": true
+        },
+        {
+          "id": "hispanic_linguistics_electives_1",
+          "description": "One course from the following list:",
+          "type": "explicit",
+          "courses_required": 1,
+          "options": [
+            "SPAN375",
+            "SPAN378",
+            "SPAN397"
+          ],
+          "rule": null,
           "is_core": true
         }
       ]
@@ -27159,7 +27636,7 @@
         "required_courses": [],
         "choice_groups": [
           {
-            "id": "hispanic_literatures_electives_1",
+            "id": "conc_hispanic_literatures_electives_1",
             "description": "One course from the following list:",
             "type": "explicit",
             "courses_required": 1,
@@ -27179,7 +27656,7 @@
         "required_courses": [],
         "choice_groups": [
           {
-            "id": "spanish_professions_pairs_1",
+            "id": "conc_spanish_professions_pairs_1",
             "description": "Two courses from one of the following pairs:",
             "type": "explicit",
             "courses_required": 2,
@@ -27201,7 +27678,7 @@
         "required_courses": [],
         "choice_groups": [
           {
-            "id": "translation_interpreting_electives_1",
+            "id": "conc_translation_interpreting_electives_1",
             "description": "Three courses from the following list:",
             "type": "explicit",
             "courses_required": 3,
@@ -27223,7 +27700,7 @@
         ],
         "choice_groups": [
           {
-            "id": "hispanic_linguistics_electives_1",
+            "id": "conc_hispanic_linguistics_electives_1",
             "description": "One course from the following list:",
             "type": "explicit",
             "courses_required": 1,
@@ -27306,6 +27783,7 @@
             "PORT526",
             "PORT535",
             "PORT540",
+            "PORT691H",
             "PORT270I",
             "PORT520",
             "PORT521"
@@ -28044,93 +28522,7 @@
           "description": "Two additional Christianity-related courses",
           "type": "rule_based",
           "courses_required": 2,
-          "options": [
-            "RELI161",
-            "RELI167",
-            "RELI209",
-            "RELI225",
-            "RELI266",
-            "RELI332",
-            "ARTH264",
-            "ARTH290",
-            "ARTH365",
-            "CLAS259",
-            "ENGL223",
-            "ENGL224",
-            "ENGL227",
-            "ENGL228",
-            "GSLL218",
-            "HIST106",
-            "HIST107",
-            "HIST177H",
-            "HIST428",
-            "HIST431",
-            "HIST452",
-            "HIST454",
-            "ITAL357",
-            "PHIL215",
-            "RELI62",
-            "RELI70",
-            "RELI104",
-            "RELI114",
-            "RELI163",
-            "RELI164",
-            "RELI201",
-            "RELI207",
-            "RELI208",
-            "RELI217",
-            "RELI218",
-            "RELI244",
-            "RELI314",
-            "RELI315",
-            "RELI366",
-            "RELI367",
-            "RELI371",
-            "RELI413",
-            "RELI454",
-            "RELI515",
-            "RELI564",
-            "RELI603",
-            "RELI607",
-            "RELI608",
-            "RELI609",
-            "RELI610",
-            "RELI614",
-            "RELI665",
-            "AAAD159",
-            "AAAD210",
-            "AAAD286",
-            "ANTH342",
-            "RELI72",
-            "RELI125",
-            "RELI138",
-            "RELI140",
-            "RELI141",
-            "RELI142",
-            "RELI151",
-            "RELI162",
-            "RELI215",
-            "RELI236",
-            "RELI241",
-            "RELI242",
-            "RELI245",
-            "RELI338",
-            "RELI340",
-            "RELI352",
-            "RELI365",
-            "RELI421",
-            "RELI424",
-            "RELI441",
-            "RELI443",
-            "RELI446",
-            "RELI448",
-            "RELI540",
-            "RELI541",
-            "RELI542",
-            "RELI662",
-            "RELI429",
-            "SOCI290"
-          ],
+          "options": [],
           "rule": {
             "department": "RELI",
             "min_number": null,
@@ -29094,6 +29486,7 @@
             "ASTR503",
             "ASTR504",
             "ASTR505",
+            "ASTR519",
             "ASTR701",
             "MATH528",
             "MATH529",

@@ -451,11 +451,15 @@ def save_json_file(data, filepath):
 def clean_conc_name(header_text: str) -> str:
     """
     'Economics Concentration' → 'Economics'
-    'Machine Learning and AI Concentration' → 'Machine_Learning_and_AI'
+    'Diversity and Justice Pathway' → 'Diversity_and_Justice'
+    'Greek Emphasis' → 'Greek'
     Preserves Title Case so IDs are readable.
     """
     text = re.sub(r'[^A-Za-z0-9\s]', '', header_text)
-    for kw in ('Concentration', 'Plan', 'Option', 'Track'):
+    # Strip all recognised alias keywords (same set as classify_section_type above)
+    for kw in ('Concentration', 'Pathway', 'Emphasis',
+               'Specialization', 'Specialisation', 'Strand',
+               'Plan', 'Option', 'Track'):
         text = re.sub(rf'\b{kw}\b', '', text, flags=re.IGNORECASE)
     text = text.strip()
     return text.replace(' ', '_') if text else 'None'
@@ -742,7 +746,11 @@ def inject_cross_section_pools(sections: list) -> list:
 
 
 _CONC_AREA_RE = re.compile(
-    r'\bfrom\s+a\s+concentration\b|\bconcentration\s+area\b',
+    r'\bfrom\s+a\s+concentration\b|\bconcentration\s+area\b'
+    # Also catch pathway/emphasis-based phrasing used on some catalog pages:
+    # "select a pathway", "choose an area of emphasis", "specialization area"
+    r'|\bselect\s+a\s+pathway\b|\bchoose\s+a\s+pathway\b'
+    r'|\barea\s+of\s+emphasis\b|\bspecialization\s+area\b',
     re.IGNORECASE
 )
 
@@ -784,6 +792,70 @@ def detect_unnamed_concentrations(sections: list) -> list:
         result.append(sec)
 
     return result
+
+
+# Alias keywords that, when found in a section title, suggest it is a
+# concentration sub-block rather than a core requirement.
+_POST_CORE_ALIAS_RE = re.compile(
+    r'\b(pathway|emphasis|specialization|specialisation|strand)\b',
+    re.IGNORECASE
+)
+
+
+def detect_post_core_blocks(sections: list) -> list:
+    """
+    Fallback course-block check: when a section whose title contains a
+    concentration alias keyword (pathway, emphasis, specialization, strand)
+    immediately follows a 'core' section with 0 course rows, the preceding
+    empty section is a named concentration container.
+
+    Renames the alias section to "<container> Concentration" and removes
+    the empty container placeholder, collapsing the two-section pair into
+    a single concentration block.
+
+    Handles the Communication Studies BA pattern:
+      [core 0c] "Communication and Everyday Life"  ← container name
+      [core Nc] "Pathway Starting Point Courses"   ← has alias keyword
+    → [concentration Nc] "Communication and Everyday Life Concentration"
+
+    Must be called AFTER propagate_reference_lists, inject_cross_section_pools,
+    and detect_unnamed_concentrations (all _type fields must be set).
+    """
+    GENERIC_TITLES = {
+        'requirements', 'core requirements', 'additional requirements',
+        'code | title', 'total hours',
+    }
+
+    modified = [dict(s) for s in sections]
+    to_remove: set = set()
+
+    for i, sec in enumerate(modified):
+        if sec.get('_type') not in ('core', 'concentration'):
+            continue
+        if not _POST_CORE_ALIAS_RE.search(sec['title']):
+            continue
+        if i == 0:
+            continue
+        if (i - 1) in to_remove:
+            continue
+
+        prev = modified[i - 1]
+        if prev.get('_type') not in ('core', 'concentration'):
+            continue
+
+        has_courses = any(r['kind'] in ('course', 'or_alternative') for r in prev['rows'])
+        is_generic = prev['title'].strip().lower() in GENERIC_TITLES
+
+        if not has_courses and not is_generic and prev['title'].strip():
+            new_title = prev['title'].strip() + ' Concentration'
+            modified[i] = dict(sec, title=new_title, _type='concentration')
+            to_remove.add(i - 1)
+            logger.info(
+                "  [post-core-blocks] '%s' + '%s' → '%s'",
+                prev['title'], sec['title'], new_title,
+            )
+
+    return [s for j, s in enumerate(modified) if j not in to_remove]
 
 
 def make_cached_rule_parser(req_cache: dict, model_name: str):
@@ -890,6 +962,9 @@ def run_req_pipeline(model_name: str, force: bool = False, no_llm: bool = False,
         # Reclassify core sections that follow a 'concentration area' rule as
         # concentrations (e.g. DS BA where concentration names lack the keyword).
         sections = detect_unnamed_concentrations(sections)
+        # Fallback: collapse (empty container header + alias-keyword section) pairs
+        # into named concentration blocks (e.g. Communication Studies BA pathways).
+        sections = detect_post_core_blocks(sections)
 
         base_core   = {"required_courses": [], "choice_groups": []}
         conc_blocks = []

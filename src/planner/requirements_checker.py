@@ -231,6 +231,21 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 entry["still_needed"] = still_needed
             results["missing_courses"][group["id"]] = entry
 
+        # Report companion labs for science courses that have been taken but whose
+        # lab hasn't been completed yet (applies whether the group is satisfied or not).
+        companion_labs = group.get("companion_labs")
+        if companion_labs and used:
+            missing_labs: list[str] = []
+            seen_labs: set[str] = set()
+            for option, _sat in used:
+                lab = companion_labs.get(option)
+                if lab and lab not in seen_labs:
+                    seen_labs.add(lab)
+                    if not _get_satisfying_course(lab, catalog, original_completed, virtual_to_real):
+                        missing_labs.append(lab)
+            if missing_labs:
+                results.setdefault("companion_labs_needed", {})[group["id"]] = missing_labs
+
     total_items = len(program["required_courses"]) + len(program["choice_groups"])
     results["completion_pct"]     = len(results["satisfied"]) / total_items if total_items else 1.0
     results["total_requirements"] = total_items
@@ -443,5 +458,45 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                         "candidates":   valid_candidates,
                         "credits_needed": 3,
                     })
+
+    # Add companion lab slots for completed science courses whose labs are still missing.
+    # This ensures the path generator schedules labs for already-taken science lectures.
+    seen_companion_lab_slots: set[str] = set()
+    for entry in majors_to_check:
+        program_id = entry if isinstance(entry, str) else entry.get("track", "")
+        concentration_id = entry.get("concentration", "None") if isinstance(entry, dict) else "None"
+        track_data = requirements.get(program_id, {})
+        if not track_data:
+            continue
+
+        base = track_data.get("base_requirements", {})
+        conc = track_data.get("concentrations", {}).get(concentration_id, {})
+        all_groups = base.get("choice_groups", []) + conc.get("choice_groups", [])
+
+        for group in all_groups:
+            companion_labs = group.get("companion_labs")
+            if not companion_labs:
+                continue
+            for completed_course in (completed_courses or []):
+                lab = companion_labs.get(completed_course)
+                if lab is None:
+                    continue
+                lab_canon = course_to_canon.get(lab, lab)
+                if lab_canon in global_satisfied_set:
+                    continue
+                if lab_canon in avoid_canon_set:
+                    continue
+                slot_key = f"{program_id}__{lab_canon}"
+                if slot_key in seen_companion_lab_slots:
+                    continue
+                seen_companion_lab_slots.add(slot_key)
+                slots.append({
+                    "program_id":     program_id,
+                    "slot_id":        f"{program_id}__companion_lab__{lab_canon}",
+                    "is_core":        False,
+                    "type":           "single",
+                    "candidates":     [lab_canon],
+                    "credits_needed": canon_catalog.get(lab_canon, {}).get("credits", 1),
+                })
 
     return slots, canon_catalog, credit_ledger, macro_bindings, blacklist

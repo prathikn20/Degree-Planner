@@ -46,7 +46,7 @@ def print_path(path, catalog):
     print(f"\n  Total remaining credits in path: {total}")
 
 def main():
-    parser = argparse.ArgumentParser(description="UNC Degree Planner")
+    parser = argparse.ArgumentParser(description="Tar Heel Degree Planner")
     parser.add_argument("--tracker", metavar="PDF", help="Path to Tar Heel Tracker PDF")
     args = parser.parse_args()
 

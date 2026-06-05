@@ -625,16 +625,17 @@ def render_audit(
     req_descriptions: dict | None = None,
     req_groups_meta: dict | None = None,
 ) -> None:
-    satisfied     = results.get("satisfied", [])
-    missing       = results.get("missing_courses", {})
-    unsatisfied   = results.get("unsatisfied", [])
-    satisfied_map = results.get("satisfied_map", {})
-    path_set      = set(path or [])
-    planned_set   = set(planned or [])
-    catalog       = catalog or {}
-    usage         = global_course_usage or {}
-    descriptions  = req_descriptions or {}
-    groups_meta   = req_groups_meta or {}
+    satisfied           = results.get("satisfied", [])
+    missing             = results.get("missing_courses", {})
+    unsatisfied         = results.get("unsatisfied", [])
+    satisfied_map       = results.get("satisfied_map", {})
+    companion_labs_map  = results.get("companion_labs_needed", {})
+    path_set            = set(path or [])
+    planned_set         = set(planned or [])
+    catalog             = catalog or {}
+    usage               = global_course_usage or {}
+    descriptions        = req_descriptions or {}
+    groups_meta         = req_groups_meta or {}
 
     def _spaced(code: str) -> str:
         return _re.sub(r'([A-Z]{2,4})(\d{3,4}[A-Z]?)', r'\1 \2', code)
@@ -670,8 +671,16 @@ def render_audit(
                     else:
                         pool_badge = ""
                     st.markdown(f"- ✅ {_req_header(req)} — Fulfilled by: {fulfilled}{pool_badge}{badge}")
+                    labs_needed = companion_labs_map.get(req, [])
+                    if labs_needed:
+                        labs_str = ", ".join(f"**{_spaced(lab)}**" for lab in labs_needed)
+                        st.markdown(f"  - ⚠️ Lab still needed: {labs_str}")
                 else:
                     st.markdown(f"- ✅ {_req_header(req)}")
+                    labs_needed = companion_labs_map.get(req, [])
+                    if labs_needed:
+                        labs_str = ", ".join(f"**{_spaced(lab)}**" for lab in labs_needed)
+                        st.markdown(f"  - ⚠️ Lab still needed: {labs_str}")
         else:
             st.write("No requirements satisfied yet.")
 
@@ -710,6 +719,10 @@ def render_audit(
                     alt_part = (f" *(Alternatives: {', '.join(_spaced(o) for o in alternatives)})*"
                                 if alternatives and recommended else "")
                     st.markdown(f"- ❌ {_req_header(req_id)}{rec_part}{alt_part}")
+                    labs_needed = companion_labs_map.get(req_id, [])
+                    if labs_needed:
+                        labs_str = ", ".join(f"**{_spaced(lab)}**" for lab in labs_needed)
+                        st.markdown(f"  - ⚠️ Lab still needed for completed lecture: {labs_str}")
         else:
             st.success("All requirements are satisfied!")
 
@@ -780,7 +793,7 @@ def build_alternatives_map(
 # ══════════════════════════════════════════════════════════════════════════════
 # App layout
 # ══════════════════════════════════════════════════════════════════════════════
-st.set_page_config(page_title="UNC Tar Heel Tracker Degree Planner", page_icon="🐏", layout="wide")
+st.set_page_config(page_title="Tar Heel Degree Planner", page_icon="🐏", layout="wide")
 
 catalog, requirements, graph = load_static_data()
 
@@ -919,11 +932,11 @@ if add_minor2 and minor2: majors_to_check.append({"track": minor2, "concentratio
 majors_to_check.append({"track": GEN_ED_TRACK, "concentration": "None"})
 
 # ── Main area ──────────────────────────────────────────────────────────────────
-st.title("🐏 UNC Tar Heel Tracker Degree Planner")
+st.title("🐏 Tar Heel Degree Planner")
 _real_majors = [m for m in majors_to_check if m["track"] != GEN_ED_TRACK]
 degree_label = " + ".join(fmt(m["track"]) for m in _real_majors)
 if degree_label:
-    st.caption(f"Auditing: **{degree_label}** + UNC General Education — upload your Tar Heel Tracker PDF below.")
+    st.caption(f"Auditing: **{degree_label}** + Chapel Hill General Education — upload your Tar Heel Tracker PDF below.")
 else:
     st.caption("Select a major in the sidebar to get started.")
 
@@ -1344,7 +1357,8 @@ if uploaded is not None:
         _swappable     = [c for c in path if _alt_map.get(c, {}).get("alternatives")]
         _non_swappable = [c for c in path if not _alt_map.get(c, {}).get("alternatives")]
 
-        with st.expander("🔄 Swap a Course", expanded=False):
+        _swap_expander_open = st.session_state.get("swap_remove_selectbox") is not None
+        with st.expander("🔄 Swap a Course", expanded=_swap_expander_open):
             if not _swappable:
                 st.info("Every course in the current path is required with no valid alternatives.")
             else:
@@ -1425,9 +1439,9 @@ if uploaded is not None:
     with ccol1: st.progress(credit_pct)
     with ccol2: st.metric("Credits", f"{total_projected} / {UNC_MIN_CREDITS}")
     if total_projected < UNC_MIN_CREDITS:
-        st.warning(f"**{UNC_MIN_CREDITS - total_projected} credits short** of the UNC {UNC_MIN_CREDITS}-hour graduation minimum. Complete additional general electives to close the gap.")
+        st.warning(f"**{UNC_MIN_CREDITS - total_projected} credits short** of the Chapel Hill {UNC_MIN_CREDITS}-hour graduation minimum. Complete additional general electives to close the gap.")
     else:
-        st.success(f"✅ Projected total meets the UNC {UNC_MIN_CREDITS}-hour graduation minimum.")
+        st.success(f"✅ Projected total meets the Chapel Hill {UNC_MIN_CREDITS}-hour graduation minimum.")
 
 else:
     st.info("👆 Upload a Tar Heel Tracker PDF above to get started.")

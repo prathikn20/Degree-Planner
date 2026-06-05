@@ -292,6 +292,10 @@ def classify_section_type(title, rows=None):
         'sample plan', 'plan of study',
         'course list',          # "Organismal Structure and Diversity Course List"
         'major courses',        # chemistry/stats sample-plan year listings
+        # Prevent reference-pool sections whose title ends in "Pathway Courses" /
+        # "Pathway List" from being mistaken for concentration sections when 'pathway'
+        # is added to the concentration-keyword list below.
+        'pathway courses', 'pathway list',
     ]
     if any(kw in t for kw in _REF_TITLE):
         return 'reference_list'
@@ -317,7 +321,15 @@ def classify_section_type(title, rows=None):
         return 'reference_list'
 
     # --- Concentration detection ---
-    if any(kw in t for kw in ('concentration', ' plan', ' option', ' track')):
+    # Handled aliases: 'concentration', ' plan', ' option', ' track',
+    # 'pathway'      — e.g. "Diversity and Justice Pathway" (Geography BA)
+    # 'emphasis'     — e.g. "Greek Emphasis" (Classics BA), "Areas of Emphasis" (BSBA)
+    # 'specialization'/'specialisation' — international-spelling variant
+    # ' strand'      — e.g. "Literature Strand"
+    if any(kw in t for kw in (
+        'concentration', 'pathway', 'emphasis', 'specialization', 'specialisation',
+        ' plan', ' option', ' track', ' strand',
+    )):
         return 'concentration'
 
     # --- Content-based fallback ---

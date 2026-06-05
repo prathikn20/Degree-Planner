@@ -1359,6 +1359,9 @@ class TestDataQuality:
             # Physics BA — 7+7 identical group double-capture; needs requirements re-scrape
             # Will resolve after: python scripts/run_requirements_pipeline.py --tracks Physics_BA --force
             "Physics_BA/base/phys_9",
+            # BME gateway electives: 7 of 9 options are also required courses (by design —
+            # required BMME courses count toward the 3-elective gateway quota).
+            "Biomedical_Engineering_BS/base/bme_gateway_electives",
         }
 
         newly_broken = []
