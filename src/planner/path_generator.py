@@ -481,7 +481,10 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                 best_local_cands = current_cands
                 best_local_score = calculate_objective(current_assignment)
 
-                for cand in s.get("candidates", []):
+                _all_cands = s.get("candidates", [])
+                _ils_cands = (rng.sample(_all_cands, 50)
+                              if len(_all_cands) > 50 else _all_cands)
+                for cand in _ils_cands:
                     test_assignment = {k: list(v) for k, v in current_assignment.items()}
 
                     if s["type"] == "single":
@@ -492,7 +495,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                         new_pool = [cand]
                         acc_credits = canon_catalog.get(cand, {}).get("credits", 3)
 
-                        rem_cands = [x for x in s.get("candidates", []) if x != cand]
+                        rem_cands = [x for x in _all_cands if x != cand]
                         for rc in rem_cands:
                             if acc_credits >= pool_credits: break
                             new_pool.append(rc)

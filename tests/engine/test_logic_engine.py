@@ -38,14 +38,16 @@ _REAL_TIME = time.time  # store before any patching
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 def _make_fast_time():
-    """Returns a callable that returns real time on first call, real+10 on all others.
-    This forces the ILS while-loop to exit immediately after its first check."""
+    """Returns a callable that forces the ILS while-loop to exit immediately.
+    First call returns real time (sets ils_start); all subsequent calls return
+    real + 100.0, which exceeds ILS_TIMEOUT (15 s) on the very first condition
+    check so the outer loop body never executes — greedy-only, sub-second."""
     calls = [0]
 
     def _fast():
         calls[0] += 1
         t = _REAL_TIME()
-        return t if calls[0] == 1 else t + 10.0
+        return t if calls[0] == 1 else t + 100.0
 
     return _fast
 

@@ -42,13 +42,15 @@ _REAL_TIME = time.time
 # ── Shared helpers ─────────────────────────────────────────────────────────────
 
 def _make_fast_time():
-    """Patch time.time so the ILS exits after one check (greedy-only, fast)."""
+    """Patch time.time so the ILS exits on its very first condition check.
+    First call returns real time (sets ils_start); all subsequent calls return
+    real + 100.0, which exceeds ILS_TIMEOUT (15 s) immediately — greedy-only."""
     calls = [0]
 
     def _fast():
         calls[0] += 1
         t = _REAL_TIME()
-        return t if calls[0] == 1 else t + 10.0
+        return t if calls[0] == 1 else t + 100.0
 
     return _fast
 
