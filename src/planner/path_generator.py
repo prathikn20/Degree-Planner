@@ -20,9 +20,12 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             pid  = s["program_id"]
             assigned = assignment.get(sid, [])
 
-            # C6 – Slot sufficiency: every slot must be fully satisfied
+            # C6 – Slot sufficiency: every slot must be fully satisfied.
+            # Optional slots (companion labs for future science courses) carry a small
+            # penalty so the ILS fills them when possible but doesn't penalise
+            # students who chose a self-contained FC-LAB science course (e.g. PHYS114).
             if s["type"] == "single" and not assigned:
-                penalties += 10000
+                penalties += 150 if s.get("is_optional") else 10000
             elif s["type"] == "pool":
                 pool_credits = sum(canon_catalog.get(c, {}).get("credits", 3) for c in assigned)
                 if pool_credits < s.get("credits_needed", 3):

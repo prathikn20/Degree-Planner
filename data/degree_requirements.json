@@ -383,7 +383,7 @@
         },
         {
           "id": "math_1",
-          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables \u2020, H, F",
+          "description": "MATH 233 | Calculus of Functions of Several Variables †, H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -395,7 +395,7 @@
         },
         {
           "id": "math_2",
-          "description": "MATH\u00a0381 | Discrete Mathematics \u2020, H",
+          "description": "MATH 381 | Discrete Mathematics †, H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -408,7 +408,7 @@
         },
         {
           "id": "stor_1",
-          "description": "STOR\u00a0120 | Foundations of Statistics and Data Science \u2020, H, F",
+          "description": "STOR 120 | Foundations of Statistics and Data Science †, H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1204,7 +1204,7 @@
       "choice_groups": [
         {
           "id": "math_1",
-          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "description": "MATH 233 | Calculus of Functions of Several Variables H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1488,7 +1488,7 @@
       "choice_groups": [
         {
           "id": "chem_1",
-          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "description": "CHEM 102 | General Descriptive Chemistry II H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1500,7 +1500,7 @@
         },
         {
           "id": "chem_241L_1",
-          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "description": "CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1512,7 +1512,7 @@
         },
         {
           "id": "chem_481L_1",
-          "description": "CHEM\u00a0481L | Physical Chemistry Laboratory I",
+          "description": "CHEM 481L | Physical Chemistry Laboratory I",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1661,7 +1661,7 @@
       "choice_groups": [
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "description": "PHYS 395 | Research with Faculty Mentor II",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -1687,7 +1687,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0395 | Research with Faculty Mentor II",
+          "description": "PHYS 395 | Research with Faculty Mentor II",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -2525,7 +2525,7 @@
       "choice_groups": [
         {
           "id": "plcy_1",
-          "description": "PLCY\u00a0310 | Microeconomic Foundations of Public Policy (formerly PLCY 410)",
+          "description": "PLCY 310 | Microeconomic Foundations of Public Policy (formerly PLCY 410)",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -2537,7 +2537,7 @@
         },
         {
           "id": "plcy_2",
-          "description": "PLCY\u00a0698 | Senior Capstone in Public Policy 2",
+          "description": "PLCY 698 | Senior Capstone in Public Policy 2",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -2888,32 +2888,18 @@
         "BMME301",
         "BMME302",
         "BMME398",
-        "BMME315",
-        "BMME335",
-        "BMME345",
-        "BMME355",
-        "BMME365",
-        "BMME375",
-        "BMME385",
         "BMME697",
         "BMME698",
-        "APPL465",
-        "BIOL220",
-        "BIOL443",
-        "BIOL451",
-        "ENVR451",
-        "EXSS380",
-        "EXSS385",
-        "MATH347",
-        "MATH381",
-        "PHYS331",
-        "PHYS381",
-        "PHYS461"
+        "BMME150",
+        "BMME160",
+        "BMME215L",
+        "BMME217L",
+        "BMME219L"
       ],
       "choice_groups": [
         {
           "id": "bmme_1",
-          "description": "BMME\u00a0325 | Biochemistry for Biomedical Engineers",
+          "description": "BMME 325 | Biochemistry for Biomedical Engineers",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -2925,7 +2911,7 @@
         },
         {
           "id": "biol_101L_1",
-          "description": "BIOL\u00a0101L | Introductory Biology Laboratory",
+          "description": "BIOL 101L | Introductory Biology Laboratory",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -2968,7 +2954,8 @@
             "MATH347",
             "MATH381",
             "PHYS331",
-            "PHYS381"
+            "PHYS381",
+            "PHYS461"
           ],
           "rule": null,
           "is_core": true
@@ -3472,7 +3459,7 @@
         },
         {
           "id": "math_1",
-          "description": "MATH\u00a0233 | Calculus of Functions of Several Variables H, F",
+          "description": "MATH 233 | Calculus of Functions of Several Variables H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -3646,7 +3633,7 @@
       "choice_groups": [
         {
           "id": "chem_1",
-          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "description": "CHEM 102 | General Descriptive Chemistry II H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -3658,7 +3645,7 @@
         },
         {
           "id": "chem_241L_1",
-          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "description": "CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4671,7 +4658,7 @@
         },
         {
           "id": "stor_2",
-          "description": "STOR\u00a0315 | Discrete Mathematics for Data Science",
+          "description": "STOR 315 | Discrete Mathematics for Data Science",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4684,7 +4671,7 @@
         },
         {
           "id": "stor_3",
-          "description": "STOR\u00a0320 | Methods and Models of Data Science",
+          "description": "STOR 320 | Methods and Models of Data Science",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4696,7 +4683,7 @@
         },
         {
           "id": "stor_4",
-          "description": "STOR\u00a0435 | Introduction to Probability H",
+          "description": "STOR 435 | Introduction to Probability H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4724,7 +4711,7 @@
         },
         {
           "id": "stor_5",
-          "description": "STOR\u00a0155 | Introduction to Data Models and Inference H, F",
+          "description": "STOR 155 | Introduction to Data Models and Inference H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4922,7 +4909,7 @@
       "choice_groups": [
         {
           "id": "comp_1",
-          "description": "COMP\u00a0116 | Introduction to Scientific Programming",
+          "description": "COMP 116 | Introduction to Scientific Programming",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4934,7 +4921,7 @@
         },
         {
           "id": "comp_2",
-          "description": "COMP\u00a0110 | Introduction to Programming 1, H",
+          "description": "COMP 110 | Introduction to Programming 1, H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4946,7 +4933,7 @@
         },
         {
           "id": "biol_1",
-          "description": "BIOL\u00a0103 | How Cells Function F",
+          "description": "BIOL 103 | How Cells Function F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4958,7 +4945,7 @@
         },
         {
           "id": "math_1",
-          "description": "MATH\u00a0381 | Discrete Mathematics H",
+          "description": "MATH 381 | Discrete Mathematics H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -4972,7 +4959,7 @@
         },
         {
           "id": "math_2",
-          "description": "MATH\u00a0521 | Advanced Calculus I H",
+          "description": "MATH 521 | Advanced Calculus I H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5097,7 +5084,7 @@
       "choice_groups": [
         {
           "id": "busi_1",
-          "description": "BUSI\u00a0402 | Applied Microeconomics for Business 2",
+          "description": "BUSI 402 | Applied Microeconomics for Business 2",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5511,7 +5498,7 @@
       "choice_groups": [
         {
           "id": "comp_1",
-          "description": "COMP\u00a0110 | Introduction to Programming H",
+          "description": "COMP 110 | Introduction to Programming H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5639,7 +5626,7 @@
         },
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5710,7 +5697,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5743,7 +5730,7 @@
         },
         {
           "id": "emes_lab_1",
-          "description": "EMES\u00a0103 & 103L | The Marine Environment and The Marine Environment Laboratory F",
+          "description": "EMES 103 & 103L | The Marine Environment and The Marine Environment Laboratory F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5758,7 +5745,7 @@
         },
         {
           "id": "emes_1",
-          "description": "EMES\u00a0204 | The Microbial World:  Foundations in Structure, Metabolism, and Ecology",
+          "description": "EMES 204 | The Microbial World:  Foundations in Structure, Metabolism, and Ecology",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5796,7 +5783,7 @@
         },
         {
           "id": "phys_3",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5870,7 +5857,7 @@
       "choice_groups": [
         {
           "id": "enec_1",
-          "description": "ENEC\u00a0203 | Introduction to Environmental Science Problem Solving",
+          "description": "ENEC 203 | Introduction to Environmental Science Problem Solving",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5885,7 +5872,7 @@
         },
         {
           "id": "enec_2",
-          "description": "ENEC\u00a0698 | Capstone: Analysis and Solution of Environmental Problems",
+          "description": "ENEC 698 | Capstone: Analysis and Solution of Environmental Problems",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5975,7 +5962,7 @@
         },
         {
           "id": "comp_1",
-          "description": "COMP\u00a0110 | Introduction to Programming H",
+          "description": "COMP 110 | Introduction to Programming H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -5989,7 +5976,7 @@
         },
         {
           "id": "stor_1",
-          "description": "STOR\u00a0155 | Introduction to Data Models and Inference H, F",
+          "description": "STOR 155 | Introduction to Data Models and Inference H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6020,7 +6007,7 @@
         },
         {
           "id": "enec_3",
-          "description": "ENEC\u00a0203 | Introduction to Environmental Science Problem Solving",
+          "description": "ENEC 203 | Introduction to Environmental Science Problem Solving",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6035,7 +6022,7 @@
         },
         {
           "id": "enec_4",
-          "description": "ENEC\u00a0698 | Capstone: Analysis and Solution of Environmental Problems",
+          "description": "ENEC 698 | Capstone: Analysis and Solution of Environmental Problems",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6199,7 +6186,7 @@
         },
         {
           "id": "comp_2",
-          "description": "COMP\u00a0110 | Introduction to Programming 1, H",
+          "description": "COMP 110 | Introduction to Programming 1, H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6213,7 +6200,7 @@
         },
         {
           "id": "stor_2",
-          "description": "STOR\u00a0155 | Introduction to Data Models and Inference H, F",
+          "description": "STOR 155 | Introduction to Data Models and Inference H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6664,7 +6651,7 @@
       "choice_groups": [
         {
           "id": "inls_1",
-          "description": "INLS\u00a0560 | Programming for Information Science",
+          "description": "INLS 560 | Programming for Information Science",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6980,7 +6967,7 @@
         },
         {
           "id": "bios_1",
-          "description": "BIOS\u00a0600 | Principles of Statistical Inference",
+          "description": "BIOS 600 | Principles of Statistical Inference",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -6992,7 +6979,7 @@
         },
         {
           "id": "stor_1",
-          "description": "STOR\u00a0120 | Foundations of Statistics and Data Science H, F",
+          "description": "STOR 120 | Foundations of Statistics and Data Science H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -7059,7 +7046,7 @@
       "choice_groups": [
         {
           "id": "nutr_1",
-          "description": "NUTR\u00a0245 | Sustainable Local Food Systems:  Intersection of Local Foods and Public Health",
+          "description": "NUTR 245 | Sustainable Local Food Systems:  Intersection of Local Foods and Public Health",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -7071,7 +7058,7 @@
         },
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -7083,7 +7070,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0115 | General Physics II: For Students of the Life Sciences F",
+          "description": "PHYS 115 | General Physics II: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -7975,7 +7962,7 @@
           "is_core": true
         },
         {
-          "description": "Three biology electives (each of three or more credits) numbered above 200 (not including BIOL\u00a0213 , BIOL\u00a0222 , BIOL\u00a0253 , BIOL\u00a0291 , BIOL\u00a0292 , BIOL\u00a0293 , BIOL\u00a0294 , BIOL\u00a0295 , BIOL\u00a0296 , BIOL 353, a second semester of BIOL\u00a0395 , and BIOL\u00a0495 ). At least one course in the major must have a laboratory (not including BIOL\u00a0101L or BIOL\u00a0105L ). 4,5",
+          "description": "Three biology electives (each of three or more credits) numbered above 200 (not including BIOL 213 , BIOL 222 , BIOL 253 , BIOL 291 , BIOL 292 , BIOL 293 , BIOL 294 , BIOL 295 , BIOL 296 , BIOL 353, a second semester of BIOL 395 , and BIOL 495 ). At least one course in the major must have a laboratory (not including BIOL 101L or BIOL 105L ). 4,5",
           "type": "rule_based",
           "courses_required": 3,
           "credits_required": null,
@@ -8103,7 +8090,7 @@
       "choice_groups": [
         {
           "id": "chem_1",
-          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "description": "CHEM 102 | General Descriptive Chemistry II H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8115,7 +8102,7 @@
         },
         {
           "id": "chem_241L_1",
-          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "description": "CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8127,7 +8114,7 @@
         },
         {
           "id": "chem_2",
-          "description": "CHEM\u00a0480 | Introduction to Biophysical Chemistry",
+          "description": "CHEM 480 | Introduction to Biophysical Chemistry",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8186,7 +8173,7 @@
         },
         {
           "id": "chem_241L_2",
-          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "description": "CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8198,7 +8185,7 @@
         },
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences 2, F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences 2, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8210,7 +8197,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0115 | General Physics II: For Students of the Life Sciences 2, F",
+          "description": "PHYS 115 | General Physics II: For Students of the Life Sciences 2, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8222,7 +8209,7 @@
         },
         {
           "id": "chem_3",
-          "description": "CHEM\u00a0480 | Introduction to Biophysical Chemistry",
+          "description": "CHEM 480 | Introduction to Biophysical Chemistry",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8260,7 +8247,7 @@
       "choice_groups": [
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0201 | Basic Mechanics 2",
+          "description": "PHYS 201 | Basic Mechanics 2",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8272,7 +8259,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0211 | Intermediate Electromagnetism 1",
+          "description": "PHYS 211 | Intermediate Electromagnetism 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8468,7 +8455,7 @@
         },
         {
           "id": "comp_1",
-          "description": "COMP\u00a0283 | Discrete Structures H",
+          "description": "COMP 283 | Discrete Structures H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -8479,7 +8466,7 @@
           "is_core": false
         },
         {
-          "description": "ENEC\u00a02--- | ENEC 200-Level Elective (One ENEC course numbered 200 or above)",
+          "description": "ENEC 2--- | ENEC 200-Level Elective (One ENEC course numbered 200 or above)",
           "type": "rule_based",
           "courses_required": 1,
           "credits_required": null,
@@ -8510,7 +8497,7 @@
         },
         {
           "id": "phys_12",
-          "description": "PHYS\u00a0461 | Introduction to Medical Physics",
+          "description": "PHYS 461 | Introduction to Medical Physics",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -12145,7 +12132,7 @@
       "choice_groups": [
         {
           "id": "enec_1",
-          "description": "ENEC\u00a0698 | Capstone: Analysis and Solution of Environmental Problems",
+          "description": "ENEC 698 | Capstone: Analysis and Solution of Environmental Problems",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -12366,7 +12353,7 @@
         },
         {
           "id": "math_1",
-          "description": "MATH\u00a0152 | Calculus for Business and Social Sciences F",
+          "description": "MATH 152 | Calculus for Business and Social Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -12437,7 +12424,7 @@
           },
           {
             "id": "conc_enec_2",
-            "description": "ENEC\u00a0395 | Research in Environmental Sciences and Studies for Undergraduates",
+            "description": "ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -12461,7 +12448,7 @@
           },
           {
             "id": "enec_693H_1",
-            "description": "ENEC\u00a0693H | Honors Research in Environmental Sciences and Studies 1",
+            "description": "ENEC 693H | Honors Research in Environmental Sciences and Studies 1",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -12640,7 +12627,7 @@
           },
           {
             "id": "conc_enec_5",
-            "description": "ENEC\u00a0395 | Research in Environmental Sciences and Studies for Undergraduates",
+            "description": "ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -12652,7 +12639,7 @@
           },
           {
             "id": "enec_693H_1",
-            "description": "ENEC\u00a0693H | Honors Research in Environmental Sciences and Studies 1",
+            "description": "ENEC 693H | Honors Research in Environmental Sciences and Studies 1",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -12821,7 +12808,7 @@
           },
           {
             "id": "conc_enec_2",
-            "description": "ENEC\u00a0395 | Research in Environmental Sciences and Studies for Undergraduates",
+            "description": "ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -12917,7 +12904,7 @@
           },
           {
             "id": "enec_693H_1",
-            "description": "ENEC\u00a0693H | Honors Research in Environmental Sciences and Studies 1",
+            "description": "ENEC 693H | Honors Research in Environmental Sciences and Studies 1",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -13021,7 +13008,7 @@
           },
           {
             "id": "conc_enec_2",
-            "description": "ENEC\u00a0395 | Research in Environmental Sciences and Studies for Undergraduates",
+            "description": "ENEC 395 | Research in Environmental Sciences and Studies for Undergraduates",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -13033,7 +13020,7 @@
           },
           {
             "id": "enec_693H_1",
-            "description": "ENEC\u00a0693H | Honors Research in Environmental Sciences and Studies 1",
+            "description": "ENEC 693H | Honors Research in Environmental Sciences and Studies 1",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -13536,7 +13523,7 @@
         },
         {
           "id": "soci_1",
-          "description": "SOCI\u00a0252 | Data Analysis 1",
+          "description": "SOCI 252 | Data Analysis 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -13806,7 +13793,7 @@
       "choice_groups": [
         {
           "id": "exss_1",
-          "description": "EXSS\u00a0380 | Neuromuscular Control and Learning H",
+          "description": "EXSS 380 | Neuromuscular Control and Learning H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -13818,7 +13805,7 @@
         },
         {
           "id": "exss_2",
-          "description": "EXSS\u00a0408 | Theory and Application of Strength Training and Conditioning for Fitness Professionals",
+          "description": "EXSS 408 | Theory and Application of Strength Training and Conditioning for Fitness Professionals",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -13903,7 +13890,7 @@
       "choice_groups": [
         {
           "id": "stor_1",
-          "description": "STOR\u00a0151 | Introduction to Data Analysis",
+          "description": "STOR 151 | Introduction to Data Analysis",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -13929,7 +13916,7 @@
       "choice_groups": [
         {
           "id": "stor_1",
-          "description": "STOR\u00a0155 | Introduction to Data Models and Inference H, F",
+          "description": "STOR 155 | Introduction to Data Models and Inference H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -13941,7 +13928,7 @@
         },
         {
           "id": "stor_2",
-          "description": "STOR\u00a0305 | Introduction to Decision Analytics 1",
+          "description": "STOR 305 | Introduction to Decision Analytics 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -14179,7 +14166,7 @@
       "choice_groups": [
         {
           "id": "astr_1",
-          "description": "ASTR\u00a0100 | Understanding the Universe",
+          "description": "ASTR 100 | Understanding the Universe",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -14193,7 +14180,7 @@
         },
         {
           "id": "astr_100L_1",
-          "description": "ASTR\u00a0100L | Astronomy with Skynet: Our Place in Space",
+          "description": "ASTR 100L | Astronomy with Skynet: Our Place in Space",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -14939,7 +14926,7 @@
         },
         {
           "id": "dram_1",
-          "description": "DRAM\u00a0191 | Technical Methods: Scenery (related to area of concentration)",
+          "description": "DRAM 191 | Technical Methods: Scenery (related to area of concentration)",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -15259,7 +15246,7 @@
         "choice_groups": [
           {
             "id": "engl_1",
-            "description": "ENGL\u00a0131 | Introduction to Poetry Writing",
+            "description": "ENGL 131 | Introduction to Poetry Writing",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -15402,7 +15389,7 @@
         },
         {
           "id": "mejo_1",
-          "description": "MEJO\u00a0153 | Writing and Reporting 1",
+          "description": "MEJO 153 | Writing and Reporting 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -15414,7 +15401,7 @@
         },
         {
           "id": "mejo_2",
-          "description": "MEJO\u00a0141 | Media Ethics 1",
+          "description": "MEJO 141 | Media Ethics 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -15689,7 +15676,7 @@
       "choice_groups": [
         {
           "id": "plan_1",
-          "description": "PLAN\u00a0246 | Cities of the Past, Present, and Future: Introduction to Planning",
+          "description": "PLAN 246 | Cities of the Past, Present, and Future: Introduction to Planning",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -15701,7 +15688,7 @@
         },
         {
           "id": "plan_2",
-          "description": "PLAN\u00a0247 | Solving Urban Problems",
+          "description": "PLAN 247 | Solving Urban Problems",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -16940,7 +16927,7 @@
       "choice_groups": [
         {
           "id": "chin_language_1",
-          "description": "At least four language courses above CHIN\u00a0204 , chosen from:",
+          "description": "At least four language courses above CHIN 204 , chosen from:",
           "type": "explicit",
           "courses_required": 4,
           "options": [
@@ -17119,7 +17106,7 @@
         },
         {
           "id": "chin_language_2",
-          "description": "At least four language courses above CHIN\u00a0212 , chosen from:",
+          "description": "At least four language courses above CHIN 212 , chosen from:",
           "type": "explicit",
           "courses_required": 4,
           "options": [
@@ -18398,7 +18385,7 @@
       "choice_groups": [
         {
           "id": "chem_1",
-          "description": "CHEM\u00a0102 | General Descriptive Chemistry II H, F",
+          "description": "CHEM 102 | General Descriptive Chemistry II H, F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -18410,7 +18397,7 @@
         },
         {
           "id": "chem_241L_1",
-          "description": "CHEM\u00a0241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
+          "description": "CHEM 241L | Laboratory in Separations and Analytical Characterization of Organic and Biological Compounds",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -18422,7 +18409,7 @@
         },
         {
           "id": "chem_481L_1",
-          "description": "CHEM\u00a0481L | Physical Chemistry Laboratory I",
+          "description": "CHEM 481L | Physical Chemistry Laboratory I",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -18475,7 +18462,7 @@
       "choice_groups": [
         {
           "id": "chin_language_1",
-          "description": "At least three courses must be language courses beyond CHIN\u00a0203 , chosen from among the following:",
+          "description": "At least three courses must be language courses beyond CHIN 203 , chosen from among the following:",
           "type": "explicit",
           "courses_required": 3,
           "options": [
@@ -19612,7 +19599,7 @@
       "choice_groups": [
         {
           "id": "engl_1",
-          "description": "ENGL\u00a0105 | English Composition and Rhetoric",
+          "description": "ENGL 105 | English Composition and Rhetoric",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -19624,7 +19611,7 @@
         },
         {
           "id": "bioc_1",
-          "description": "BIOC\u00a0107 | Introduction to Biochemistry 1",
+          "description": "BIOC 107 | Introduction to Biochemistry 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -19639,7 +19626,7 @@
         },
         {
           "id": "bioc_2",
-          "description": "BIOC\u00a0108 | Introduction to Biochemistry",
+          "description": "BIOC 108 | Introduction to Biochemistry",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -19882,7 +19869,7 @@
       "choice_groups": [
         {
           "id": "phys_1",
-          "description": "PHYS\u00a0114 | General Physics I: For Students of the Life Sciences F",
+          "description": "PHYS 114 | General Physics I: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -19894,7 +19881,7 @@
         },
         {
           "id": "phys_2",
-          "description": "PHYS\u00a0115 | General Physics II: For Students of the Life Sciences F",
+          "description": "PHYS 115 | General Physics II: For Students of the Life Sciences F",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -19906,7 +19893,7 @@
         },
         {
           "id": "comp_1",
-          "description": "COMP\u00a0110 | Introduction to Programming and Data Science H",
+          "description": "COMP 110 | Introduction to Programming and Data Science H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -20744,7 +20731,7 @@
           },
           {
             "id": "engl_132H_1",
-            "description": "ENGL\u00a0132H | First-Year Honors: Introduction to Fiction Writing",
+            "description": "ENGL 132H | First-Year Honors: Introduction to Fiction Writing",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20825,7 +20812,7 @@
         "choice_groups": [
           {
             "id": "engl_1",
-            "description": "ENGL\u00a0130 | Introduction to Fiction Writing",
+            "description": "ENGL 130 | Introduction to Fiction Writing",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20837,7 +20824,7 @@
           },
           {
             "id": "engl_2",
-            "description": "ENGL\u00a0206 | Intermediate Fiction Writing (repeatable for credit with different topics)",
+            "description": "ENGL 206 | Intermediate Fiction Writing (repeatable for credit with different topics)",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20858,7 +20845,7 @@
         "choice_groups": [
           {
             "id": "engl_1",
-            "description": "ENGL\u00a0131 | Introduction to Poetry Writing",
+            "description": "ENGL 131 | Introduction to Poetry Writing",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20870,7 +20857,7 @@
           },
           {
             "id": "engl_2",
-            "description": "ENGL\u00a0207 | Intermediate Poetry Writing (repeatable for credit with different topics)",
+            "description": "ENGL 207 | Intermediate Poetry Writing (repeatable for credit with different topics)",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20908,7 +20895,7 @@
         "choice_groups": [
           {
             "id": "engl_1",
-            "description": "ENGL\u00a0138 | Introduction to Creative Nonfiction H",
+            "description": "ENGL 138 | Introduction to Creative Nonfiction H",
             "type": "explicit",
             "courses_required": 1,
             "options": [
@@ -20954,7 +20941,7 @@
             "is_core": true
           },
           {
-            "description": "Select two (2) to four (4) CMPL or ENGL courses (excluding ENGL\u00a0100 , ENGL\u00a0105 , ENGL\u00a0105I , ENGL\u00a0110 , and ENGL\u00a0191 ). No more than two (2) from ENGL.",
+            "description": "Select two (2) to four (4) CMPL or ENGL courses (excluding ENGL 100 , ENGL 105 , ENGL 105I , ENGL 110 , and ENGL 191 ). No more than two (2) from ENGL.",
             "type": "rule_based",
             "courses_required": 2,
             "credits_required": null,
@@ -21949,7 +21936,7 @@
       "choice_groups": [
         {
           "id": "grek_1",
-          "description": "GREK\u00a0204 | Intermediate Greek II",
+          "description": "GREK 204 | Intermediate Greek II",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -22051,7 +22038,7 @@
       "choice_groups": [
         {
           "id": "hnur_language_1",
-          "description": "Three courses are language courses beyond HNUR\u00a0203 chosen from among the following:",
+          "description": "Three courses are language courses beyond HNUR 203 chosen from among the following:",
           "type": "explicit",
           "courses_required": 3,
           "options": [
@@ -23531,7 +23518,7 @@
       "choice_groups": [
         {
           "id": "reli_1",
-          "description": "RELI\u00a0180 | Introduction to Islamic Civilization 1",
+          "description": "RELI 180 | Introduction to Islamic Civilization 1",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -23959,7 +23946,7 @@
       "choice_groups": [
         {
           "id": "japn_language_1",
-          "description": "Four language courses beyond JAPN\u00a0203 , chosen from among the following:",
+          "description": "Four language courses beyond JAPN 203 , chosen from among the following:",
           "type": "explicit",
           "courses_required": 4,
           "options": [
@@ -24012,7 +23999,7 @@
       "choice_groups": [
         {
           "id": "kor_language_1",
-          "description": "Three courses are language courses beyond KOR\u00a0203 (the first semester of Intermediate Korean), chosen from:",
+          "description": "Three courses are language courses beyond KOR 203 (the first semester of Intermediate Korean), chosen from:",
           "type": "explicit",
           "courses_required": 3,
           "options": [
@@ -25192,7 +25179,7 @@
       "choice_groups": [
         {
           "id": "aaad_electives_1",
-          "description": "Three elective courses chosen from the two lists below or from AAAD\u00a0260 or DRAM\u00a0486 .",
+          "description": "Three elective courses chosen from the two lists below or from AAAD 260 or DRAM 486 .",
           "type": "explicit",
           "courses_required": 2,
           "options": [
@@ -25536,7 +25523,7 @@
           },
           {
             "id": "mejo_electives_1",
-            "description": "At least three courses from Level 2. All students are required to take MEJO\u00a0379 .",
+            "description": "At least three courses from Level 2. All students are required to take MEJO 379 .",
             "type": "explicit",
             "courses_required": 3,
             "options": [
@@ -25739,7 +25726,7 @@
         },
         {
           "id": "mems_elective_1",
-          "description": "Three additional Medieval/Early Modern studies courses (from approved list, \u22653 different subject codes)",
+          "description": "Three additional Medieval/Early Modern studies courses (from approved list, ≥3 different subject codes)",
           "type": "explicit",
           "courses_required": 3,
           "options": [
@@ -26489,7 +26476,7 @@
       "choice_groups": [
         {
           "id": "prsn_language_1",
-          "description": "Two language courses beyond PRSN\u00a0203 (the first semester of intermediate Persian), chosen from:",
+          "description": "Two language courses beyond PRSN 203 (the first semester of intermediate Persian), chosen from:",
           "type": "explicit",
           "courses_required": 2,
           "options": [
@@ -27555,7 +27542,7 @@
       "choice_groups": [
         {
           "id": "span_1",
-          "description": "SPAN\u00a0300 | Grammar and Structure of Spanish 1, H",
+          "description": "SPAN 300 | Grammar and Structure of Spanish 1, H",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -28611,7 +28598,7 @@
         },
         {
           "id": "core_requirements_theory_1",
-          "description": "One course in the theory and practice of women\u2019s and gender studies from the following options:",
+          "description": "One course in the theory and practice of women’s and gender studies from the following options:",
           "type": "explicit",
           "courses_required": 1,
           "options": [
@@ -29319,7 +29306,7 @@
         },
         {
           "id": "FC-LAB",
-          "description": "Empirical Investigation Lab (FC-LAB \u2014 one FC course must include lab)",
+          "description": "Empirical Investigation Lab (FC-LAB — one FC course must include lab)",
           "courses_required": 1,
           "is_core": false,
           "type": "rule_based",

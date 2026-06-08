@@ -355,6 +355,9 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
     for c in (avoid_courses or []):
         avoid_canon_set.add(course_to_canon.get(c, c))
 
+    # Deduplication set for companion lab slots (shared across both loops below)
+    seen_companion_lab_slots: set[str] = set()
+
     # The Credit Ledger (Prevents Transcript Inflation)
     credit_ledger = {}
     global_satisfied_set = set()
@@ -366,6 +369,39 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             credit_ledger[canon_id] = {"earned_credits": 0, "original_codes": []}
         credit_ledger[canon_id]["earned_credits"] += catalog.get(c, {}).get("credits", 3)
         credit_ledger[canon_id]["original_codes"].append(c)
+
+    # C5: FY Foundation XOR — build sets of FY-SEMINAR and FY-LAUNCH canonical IDs,
+    # then determine which type (if any) the student has already completed so we can
+    # purge the opposite type from every choice-group candidate pool.  This prevents
+    # the solver from recommending e.g. an FY-LAUNCH course for FC-QUANT when the
+    # student already has an FY-SEMINAR, and also suppresses the FY-SEMINAR slot when
+    # the student's first-year foundation was satisfied via an FY-LAUNCH course.
+    fy_seminar_canon_ids: set[str] = set()
+    fy_launch_canon_ids:  set[str] = set()
+    for _c, _data in catalog.items():
+        _attrs = _data.get("attributes") or []
+        _cid   = course_to_canon.get(_c, _c)
+        if "FY-SEMINAR" in _attrs:
+            fy_seminar_canon_ids.add(_cid)
+        if "FY-LAUNCH" in _attrs:
+            fy_launch_canon_ids.add(_cid)
+
+    fy_type_completed: str | None = None
+    for _c in (completed_courses or []):
+        _cid = course_to_canon.get(_c, _c)
+        if _cid in fy_seminar_canon_ids:
+            fy_type_completed = "FY-SEMINAR"
+            break
+        if _cid in fy_launch_canon_ids:
+            fy_type_completed = "FY-LAUNCH"
+            break
+
+    # Courses of the opposite FY type to exclude from every choice-group candidate list
+    purge_fy_canon_ids: set[str] = (
+        fy_launch_canon_ids  if fy_type_completed == "FY-SEMINAR" else
+        fy_seminar_canon_ids if fy_type_completed == "FY-LAUNCH"  else
+        set()
+    )
 
     slots = []
 
@@ -414,8 +450,33 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 o for o in options
                 if o not in global_satisfied_set
                 and o not in avoid_canon_set
+                and o not in purge_fy_canon_ids           # C5: FY XOR – purge opposite FY type
                 and canon_catalog.get(o, {}).get("credits", 0) > 0  # exclude 0-credit courses
             ]
+
+            # If this group has companion_labs, exclude candidates that share a companion
+            # lab already claimed by a completed course whose lab is still missing.
+            # This prevents suggesting e.g. ASTR100 as the 2nd science when ASTR103 is
+            # done (both need ASTR100L, so taking ASTR100 wouldn't bring a second lab).
+            companion_labs = group.get("companion_labs")
+            if companion_labs:
+                claimed_labs: set[str] = set()
+                for completed_c in (completed_courses or []):
+                    lab = companion_labs.get(completed_c)
+                    if lab:
+                        lab_canon = course_to_canon.get(lab, lab)
+                        if lab_canon not in global_satisfied_set:
+                            claimed_labs.add(lab)
+                if claimed_labs:
+                    filtered: list[str] = []
+                    for cand_canon in valid_candidates:
+                        raw_names = canon_catalog.get(cand_canon, {}).get("original_courses", [])
+                        raw_name  = raw_names[0] if raw_names else cand_canon
+                        cand_lab  = companion_labs.get(raw_name)
+                        if cand_lab and cand_lab in claimed_labs:
+                            continue  # shares a lab with a completed course — skip
+                        filtered.append(cand_canon)
+                    valid_candidates = filtered
 
             credits_req = group.get("credits_required")
             courses_req = group.get("courses_required", 1)
@@ -449,6 +510,40 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 remaining_needed = max(0, courses_req - already_done)
                 if remaining_needed == 0 or not valid_candidates:
                     continue  # group fully satisfied
+
+                # For groups with companion_labs, also add an optional future-lab slot for
+                # each remaining split so the path generator schedules the companion lab
+                # alongside whichever lecture course gets chosen.  The slot is marked
+                # is_optional so that self-contained FC-LAB courses (e.g. PHYS114) don't
+                # incur a large penalty when no separate lab exists.
+                if companion_labs and remaining_needed > 0:
+                    already_claimed = {companion_labs.get(c) for c in (completed_courses or []) if companion_labs.get(c)}
+                    future_lab_candidates: list[str] = []
+                    seen_future_labs: set[str] = set()
+                    for cand_canon in valid_candidates:
+                        raw_names = canon_catalog.get(cand_canon, {}).get("original_courses", [])
+                        raw_name  = raw_names[0] if raw_names else cand_canon
+                        lab       = companion_labs.get(raw_name)
+                        if lab and lab not in already_claimed and lab not in seen_future_labs:
+                            lab_canon = course_to_canon.get(lab, lab)
+                            if lab_canon not in global_satisfied_set and lab_canon not in avoid_canon_set:
+                                seen_future_labs.add(lab)
+                                future_lab_candidates.append(lab_canon)
+                    if future_lab_candidates:
+                        for j in range(remaining_needed):
+                            fl_key = f"{program_id}__future_science_lab__{group_id}_{j}"
+                            if fl_key not in seen_companion_lab_slots:
+                                seen_companion_lab_slots.add(fl_key)
+                                slots.append({
+                                    "program_id":     program_id,
+                                    "slot_id":        fl_key,
+                                    "is_core":        False,
+                                    "is_optional":    True,
+                                    "type":           "single",
+                                    "candidates":     future_lab_candidates,
+                                    "credits_needed": 1,
+                                })
+
                 for j in range(remaining_needed):
                     slots.append({
                         "program_id":   program_id,
@@ -461,7 +556,6 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
 
     # Add companion lab slots for completed science courses whose labs are still missing.
     # This ensures the path generator schedules labs for already-taken science lectures.
-    seen_companion_lab_slots: set[str] = set()
     for entry in majors_to_check:
         program_id = entry if isinstance(entry, str) else entry.get("track", "")
         concentration_id = entry.get("concentration", "None") if isinstance(entry, dict) else "None"
