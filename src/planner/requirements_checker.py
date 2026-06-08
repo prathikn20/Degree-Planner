@@ -137,6 +137,16 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
 
     required_set = set(program["required_courses"])
 
+    # Pool of courses consumed for required-course slots that may additionally satisfy
+    # one choice group each (e.g. BME concentration courses satisfying the base
+    # specialty-electives group).  Each entry is removed once reused so a single
+    # course can only double-count into at most one choice group.
+    req_satisfied_pool: set[str] = {
+        sat_code
+        for req_id in program["required_courses"]
+        for sat_code in results["satisfied_map"].get(req_id, [])
+    }
+
     fys_consumed:  set[str] = set()
     fad_consumed:  set[str] = set()
     idst_consumed: set[str] = set()
@@ -153,7 +163,14 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
         else:
             options = []
 
-        options = [o for o in options if o not in required_set and o not in avoid_set]
+        # Exclude required courses from option lists UNLESS they were already satisfied
+        # as required courses — in that case allow them to also satisfy this group.
+        options = [
+            o for o in options
+            if o not in avoid_set
+            and (o not in required_set
+                 or _get_satisfying_course(o, catalog, req_satisfied_pool, virtual_to_real) is not None)
+        ]
 
         is_fys  = group["id"] == "FY-SEMINAR"
         is_fc   = group["id"].startswith("FC-")
@@ -176,6 +193,10 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 sat = _get_satisfying_course(option, catalog, idst_consumed, virtual_to_real)
             if not sat and (is_fad or is_idst):
                 sat = _get_satisfying_course(option, catalog, fc_consumed, virtual_to_real)
+            # Fallback: option was taken for a required slot — allow it to satisfy this
+            # choice group too (concentration required courses satisfy base elective groups).
+            if not sat:
+                sat = _get_satisfying_course(option, catalog, req_satisfied_pool, virtual_to_real)
             if not sat:
                 continue
             used.append((option, sat))
@@ -203,6 +224,10 @@ def check_requirements(requirements, catalog, completed, other_majors_courses=No
                 idst_consumed.discard(sat)
             elif sat in fc_consumed:
                 fc_consumed.discard(sat)
+            elif sat in req_satisfied_pool:
+                # Course was already consumed for a required slot; remove from the
+                # reuse pool so it can only satisfy this one choice group.
+                req_satisfied_pool.discard(sat)
             else:
                 available_completed.discard(sat)
                 if is_fys:
@@ -419,6 +444,13 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
         req_courses   = base.get("required_courses", []) + conc.get("required_courses", [])
         choice_groups = base.get("choice_groups",    []) + conc.get("choice_groups",    [])
 
+        # Canonicalised set of all required courses for this program+concentration.
+        # Used below to avoid creating duplicate choice-group slots for courses that
+        # are already planned as required-course slots (prevents double-counting that
+        # inflates credit totals, e.g. BME concentration courses satisfying the base
+        # specialty-electives group).
+        req_courses_canon_set = set(course_to_canon.get(r, r) for r in req_courses)
+
         # Explode Fixed Requirements into Single Slots
         # Required courses are never filtered by avoid_courses — they are mandatory.
         for course in req_courses:
@@ -507,7 +539,15 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                     )
                     already_done = max(already_done, direct_done)
 
-                remaining_needed = max(0, courses_req - already_done)
+                # Subtract options already covered by required-course slots so the
+                # solver doesn't create duplicate slots (e.g. BME concentration courses
+                # that also appear in the base bme_specialty_electives choice group).
+                already_req = sum(
+                    1 for o in options
+                    if o in req_courses_canon_set and o not in global_satisfied_set
+                )
+
+                remaining_needed = max(0, courses_req - already_done - already_req)
                 if remaining_needed == 0 or not valid_candidates:
                     continue  # group fully satisfied
 

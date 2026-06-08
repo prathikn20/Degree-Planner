@@ -129,6 +129,74 @@ os.replace('data/staging/parse_status.json.tmp', 'data/staging/parse_status.json
 
 ---
 
+## CRITICAL: REQUIRED_COURSES vs CHOICE_GROUPS — DOUBLE-COUNTING RULE
+
+**The single most common scraping mistake:** putting the SAME course in both `required_courses[]` AND a choice group's `options[]` for the same program. This forces the planner to count the course twice (once for each slot), inflating credit totals.
+
+### The rule:
+> A course belongs in `required_courses[]` **OR** in a choice group's `options[]` — **never both** for the same program scope (base + same concentration).
+
+### When it happens:
+The UNC catalog often lists gateway/elective pools as "Requirements" sections. The scraper sees both the pool header ("Choose 3 gateway electives") and an all-courses section ("Requirements"), and incorrectly puts every pool option into `required_courses`.
+
+### How to identify it:
+Run this validation after parsing any track:
+```python
+python3 << 'EOF'
+import json
+data = json.load(open('data/degree_requirements.json'))
+TRACK = 'Biomedical_Engineering_BS'   # <-- change per track
+entry = data[TRACK]
+base_req = set(entry['base_requirements'].get('required_courses', []))
+for group in entry['base_requirements'].get('choice_groups', []):
+    overlap = base_req & set(group.get('options', []))
+    if overlap:
+        print(f"OVERLAP in base [{group['id']}] needs {group['courses_required']}: {sorted(overlap)}")
+for cname, cdata in entry.get('concentrations', {}).items():
+    if cname == 'None': continue
+    conc_req = set(cdata.get('required_courses', []))
+    for group in entry['base_requirements'].get('choice_groups', []):
+        overlap = conc_req & set(group.get('options', []))
+        if overlap:
+            print(f"OVERLAP in {cname} vs base [{group['id']}] needs {group['courses_required']}: {sorted(overlap)}")
+EOF
+```
+**Any output = a bug.** Fix it before finalising the parse.
+
+### Fix patterns:
+
+**Pattern A — elective pool wrongly in required_courses:**
+The catalog says "Choose 3 gateway electives from: BMME315, BMME325, …" but the scraper put all 7 into `required_courses`. Fix: remove them from `required_courses`; they already live in the choice group.
+
+**Pattern B — concentration courses overlap with a base elective group:**
+Pharmacoengineering concentration requires BMME511, BMME523, etc. Those courses also appear in the base `bme_specialty_electives` group (choose 4). The algorithm handles this automatically — concentration required courses satisfy the base elective group — but only if the courses are NOT also in base `required_courses`. Do NOT copy concentration required courses into base `required_courses`.
+
+**Pattern C — prerequisite/foundation courses listed twice:**
+Some programs list MATH231 in both `required_courses` and as an option in a "Mathematics requirement" choice group. Fix: keep it in `required_courses` only and remove it from the choice group options (or use `scripts/data/fix_additional_required_courses.py` which moves them the other way for is_core accounting).
+
+---
+
+## BME-SPECIFIC NOTES (Biomedical_Engineering_BS)
+
+The BME program was fixed manually (2026-06) to correct a severe scraping mistake. When re-parsing BME from html_cache, preserve these hard-won corrections:
+
+**required_courses (base)** should contain ONLY the 15 always-required courses:
+```
+BMME150, BMME160, BMME201, BMME205, BMME207, BMME209, BMME215L, BMME217L, BMME219L,
+BMME298, BMME301, BMME302, BMME398, BMME697, BMME698
+```
+(The labs BMME215L/217L/219L pair with the 4-credit courses BMME205/207/209 and are separately required.)
+
+**DO NOT add to required_courses:**
+- BMME315/335/345/355/365/375/385 — these are options in `bme_gateway_electives` (choose 3)
+- APPL465, BIOL220, BIOL443, BIOL451, MATH347, MATH381, PHYS331, PHYS381, PHYS461 — options in `bme_stem_elective` (choose 1)
+- ENVR451, EXSS380, EXSS385 — these appeared in the catalog's "Allied Science" reference list; they are NOT BME requirements
+- Concentration courses (BMME495, BMME511, etc.) — they belong only in concentration `required_courses`, not in base
+
+**Foundation courses** (CHEM101/102/261, MATH231-383, PHYS118/119, BIOL101) live in `choice_groups` as single-option `is_core: False` groups, not in `required_courses`. This is intentional — it keeps them out of the C4 50%-exclusivity core count while still requiring them.
+
+---
+
 ## OUTPUT JSON SCHEMA
 
 ```json
