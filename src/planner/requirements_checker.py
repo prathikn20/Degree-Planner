@@ -466,6 +466,10 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 "credits_needed": canon_catalog.get(canon_id, {}).get("credits", 3),
             })
 
+        # C3 tracking: canon IDs consumed by FC-* slots so the same completed
+        # course can't be counted as already_done for two different FC groups.
+        _fc_used_canons: set[str] = set()
+
         # Choice Groups (Pools vs Explicit Slots)
         for i, group in enumerate(choice_groups):
             group_id = group.get("id", f"group_{i}")
@@ -525,19 +529,50 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                     "credits_needed": credits_req,
                 })
             else:
-                # Subtract courses already completed from this group before creating splits
-                already_done = sum(1 for o in options if o in global_satisfied_set)
+                # Determine if this is an FC-type group (subject to C3 singularity).
+                _is_fc_group = group_id.startswith("FC-")
+
+                # Subtract courses already completed from this group.
+                # For FC groups, exclude courses already consumed by a prior FC slot
+                # so a course with two FC attributes (e.g. FC-AESTH + FC-KNOW) is
+                # only counted once.
+                if _is_fc_group:
+                    already_done = sum(
+                        1 for o in options
+                        if o in global_satisfied_set and o not in _fc_used_canons
+                    )
+                else:
+                    already_done = sum(1 for o in options if o in global_satisfied_set)
 
                 # For rule-based attribute groups, also count completed courses directly
                 # by catalog attribute. This handles cases where a completed course code
                 # doesn't match any catalog key exactly (section variants, leading zeros, etc.)
                 if group.get("type") == "rule_based" and group.get("rule", {}).get("attribute"):
                     attr = group["rule"]["attribute"].lower()
-                    direct_done = sum(
-                        1 for c in (completed_courses or [])
-                        if any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
-                    )
+                    if _is_fc_group:
+                        direct_done = sum(
+                            1 for c in (completed_courses or [])
+                            if course_to_canon.get(c, c) not in _fc_used_canons
+                            and any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
+                        )
+                    else:
+                        direct_done = sum(
+                            1 for c in (completed_courses or [])
+                            if any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
+                        )
                     already_done = max(already_done, direct_done)
+
+                # For FC groups, claim completed courses that contributed to
+                # already_done (in options/catalog order, matching check_requirements)
+                # so subsequent FC slots can't reuse them (C3).
+                if _is_fc_group and already_done > 0:
+                    _to_mark = min(already_done, courses_req)
+                    for _o in options:
+                        if _to_mark <= 0:
+                            break
+                        if _o in global_satisfied_set and _o not in _fc_used_canons:
+                            _fc_used_canons.add(_o)
+                            _to_mark -= 1
 
                 # Subtract options already covered by required-course slots so the
                 # solver doesn't create duplicate slots (e.g. BME concentration courses
