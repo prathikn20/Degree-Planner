@@ -578,8 +578,9 @@ def build_prereq_dot(
         pathways = catalog.get(course, {}).get("prerequisites", [])
         if not pathways:
             continue
+        fully_satisfied = [p for p in pathways if all(c in completed_set for c in p)]
         completed_paths = [p for p in pathways if any(c in completed_set for c in p)]
-        best = min(completed_paths or pathways, key=len)
+        best = min(fully_satisfied or completed_paths or pathways, key=len)
         for prereq in best:
             edges.append((prereq, course))
 
@@ -1317,8 +1318,9 @@ if uploaded is not None:
         for _course in path:
             _pathways = catalog.get(_course, {}).get("prerequisites", [])
             if _pathways:
+                _fully  = [p for p in _pathways if all(c in _assumed_set for c in p)]
                 _cpaths = [p for p in _pathways if any(c in _assumed_set for c in p)]
-                _best   = min(_cpaths or _pathways, key=len)
+                _best   = min(_fully or _cpaths or _pathways, key=len)
                 for _pre in _best:
                     if _pre in _path_set and _pre != _course:
                         _prereq_for.setdefault(_pre, []).append(_course)
@@ -1384,8 +1386,10 @@ if uploaded is not None:
                     _in_prereqs      = catalog.get(_swap_in, {}).get("prerequisites", [])
                     _missing_prereqs: list[str] = []
                     if _in_prereqs:
-                        _best_pp = min(_in_prereqs, key=len)
-                        _missing_prereqs = [p for p in _best_pp if p not in _assumed_set]
+                        _fully_sat = [p for p in _in_prereqs if all(c in _assumed_set for c in p)]
+                        if not _fully_sat:
+                            _best_pp = min(_in_prereqs, key=lambda pp: len([c for c in pp if c not in _assumed_set]))
+                            _missing_prereqs = [p for p in _best_pp if p not in _assumed_set]
 
                     st.info(f"**{_swap_out}** → **{_swap_in}** &nbsp;·&nbsp; Satisfies: *{_req_desc}*{_cr_note}")
                     if _missing_prereqs:
