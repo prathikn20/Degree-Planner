@@ -323,7 +323,16 @@ def run_ingestion_pipeline():
                     time.sleep(2.5)
 
         # 4. COMPILE AST INTO 2D SOLVER MATRIX
-        clean_prereqs = compile_ast_to_2d_array(ast_prereqs) if ast_prereqs else []
+        # The MANUAL_REVIEW_NEEDED sentinel must bypass compile_ast_to_2d_array: its
+        # course-code regex filter would silently drop the token (no digits in it),
+        # collapsing the course to prerequisites=[] and making flag_anomalies' crash
+        # check below unreachable. Keeping it intact instead marks the course as
+        # permanently blocked (the sentinel never matches a completed course) until
+        # a human fixes the raw text and reruns the pipeline.
+        if ast_prereqs == {"operator": "AND", "operands": ["MANUAL_REVIEW_NEEDED"]}:
+            clean_prereqs = [["MANUAL_REVIEW_NEEDED"]]
+        else:
+            clean_prereqs = compile_ast_to_2d_array(ast_prereqs) if ast_prereqs else []
         flag_anomalies(clean_id, clean_prereqs)
 
         normalized_catalog[clean_id] = {
