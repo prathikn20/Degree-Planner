@@ -395,37 +395,11 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
         credit_ledger[canon_id]["earned_credits"] += catalog.get(c, {}).get("credits", 3)
         credit_ledger[canon_id]["original_codes"].append(c)
 
-    # C5: FY Foundation XOR — build sets of FY-SEMINAR and FY-LAUNCH canonical IDs,
-    # then determine which type (if any) the student has already completed so we can
-    # purge the opposite type from every choice-group candidate pool.  This prevents
-    # the solver from recommending e.g. an FY-LAUNCH course for FC-QUANT when the
-    # student already has an FY-SEMINAR, and also suppresses the FY-SEMINAR slot when
-    # the student's first-year foundation was satisfied via an FY-LAUNCH course.
-    fy_seminar_canon_ids: set[str] = set()
-    fy_launch_canon_ids:  set[str] = set()
-    for _c, _data in catalog.items():
-        _attrs = _data.get("attributes") or []
-        _cid   = course_to_canon.get(_c, _c)
-        if "FY-SEMINAR" in _attrs:
-            fy_seminar_canon_ids.add(_cid)
-        if "FY-LAUNCH" in _attrs:
-            fy_launch_canon_ids.add(_cid)
-
-    fy_type_completed: str | None = None
-    for _c in (completed_courses or []):
-        _cid = course_to_canon.get(_c, _c)
-        if _cid in fy_seminar_canon_ids:
-            fy_type_completed = "FY-SEMINAR"
-            break
-        if _cid in fy_launch_canon_ids:
-            fy_type_completed = "FY-LAUNCH"
-            break
-
-    # Courses of the opposite FY type to exclude from every choice-group candidate list
-    purge_fy_canon_ids: set[str] = (
-        fy_launch_canon_ids  if fy_type_completed == "FY-SEMINAR" else
-        fy_seminar_canon_ids if fy_type_completed == "FY-LAUNCH"  else
-        set()
+    # FY exclusivity applies to foundation slots only. FY-tagged mathematics
+    # and other degree courses remain eligible everywhere else.
+    foundation_completed = any(
+        {"FY-SEMINAR", "FY-LAUNCH"}.intersection(catalog.get(c, {}).get("attributes") or [])
+        for c in (completed_courses or [])
     )
 
     slots = []
@@ -473,6 +447,8 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
         # Choice Groups (Pools vs Explicit Slots)
         for i, group in enumerate(choice_groups):
             group_id = group.get("id", f"group_{i}")
+            if group_id in {"FY-SEMINAR", "FY-LAUNCH"} and foundation_completed:
+                continue
             if group.get("options"):
                 raw_options = group["options"]
             elif group.get("type") == "rule_based":
@@ -486,7 +462,6 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 o for o in options
                 if o not in global_satisfied_set
                 and o not in avoid_canon_set
-                and o not in purge_fy_canon_ids           # C5: FY XOR – purge opposite FY type
                 and canon_catalog.get(o, {}).get("credits", 0) > 0  # exclude 0-credit courses
             ]
 
