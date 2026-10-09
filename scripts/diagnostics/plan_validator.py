@@ -1,4 +1,4 @@
-"""Independent catalog/requirement checks. No imports from the planner or app.
+"""Independent catalog/requirement checks. No imports of planner or app logic; only shared policy constants.
 
 Reuse is informational, per Prathik: coverage checks each requirement separately.
 Solver debug evidence is explicitly not an independent requirement oracle.
@@ -6,8 +6,7 @@ Solver debug evidence is explicitly not an independent requirement oracle.
 from collections import Counter, defaultdict
 import re
 
-MIN_NONFINAL_CREDITS = 12
-MAX_SEMESTER_CREDITS = 18
+from src.planner.policy import MIN_NONFINAL_CREDITS, MAX_SEMESTER_CREDITS
 NEAR_EMPTY_COURSES = 2
 COURSE_CODE = re.compile(r"^([A-Z]{2,5})(\d{2,4})([A-Z0-9]*)$")
 
