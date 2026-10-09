@@ -7,6 +7,17 @@ Prerequisite closure and load feasibility are added in the later approved waves.
 
 def build_plan_report(slots, canon_catalog, path, course_to_slots, requirements, programs):
     issues = []
+    sole_options = {}
+    for slot in slots:
+        if not slot.get('is_optional') and slot['type'] == 'single' and len(slot['candidates']) == 1:
+            key = (slot['program_id'], slot['candidates'][0])
+            sole_options.setdefault(key, []).append(slot['slot_id'])
+    for (pid, course), slot_ids in sole_options.items():
+        if len(slot_ids) > 1:
+            issues.append({'type': 'SINGLE_OPTION_DATA_CONFLICT', 'program': pid,
+                           'group': ', '.join(slot_ids), 'slot_ids': slot_ids,
+                           'canonical_course': course,
+                           'reason': 'Separate exclusive requirements have the same sole course option.'})
     for p in programs:
         pid = p['track']
         program = requirements.get(pid, {})

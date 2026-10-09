@@ -1,6 +1,24 @@
 import time
 import random
 from collections import defaultdict
+from src.planner import policy
+
+def _mandatory_gap_cost(slots, canon_catalog, blacklist):
+    """Strict upper bound on all soft costs plus credits in any candidate assignment.
+
+    A single slot contributes at most one candidate; a pool can contain every
+    candidate once. The 50,000 allowance covers depth, preferences, FC/FY and
+    reuse penalties per occurrence (their sum is at most 34,000). Anti-requisites
+    and credit values are bounded separately. This keeps priorities independent
+    of plan size without replacing the existing numeric objective.
+    """
+    bound = 10000 + 3500 * len({s['program_id'] for s in slots}) + 150 * len(slots)
+    for slot in slots:
+        costs = [50000 + max(0, canon_catalog.get(c, {}).get('credits', 3))
+                 + 1000 * len(blacklist.get(c, [])) for c in slot.get('candidates', [])]
+        bound += sum(costs) if slot['type'] == 'pool' else max(costs, default=0)
+    return bound + 1
+
 
 def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blacklist, remaining_semesters=8, debug=False):
     """Phase 1 Greedy + Phase 2 Short ILS Optimization Engine."""
@@ -12,6 +30,8 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                             "pre_filter_courses": [], "dropped_courses": [],
                             "macro_bindings": {}}
         return [], {}
+
+    mandatory_gap_cost = _mandatory_gap_cost(slots, canon_catalog, blacklist)
 
     def calculate_objective(assignment):
         penalties = 0
@@ -31,11 +51,11 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             # penalty so the ILS fills them when possible but doesn't penalise
             # students who chose a self-contained FC-LAB science course (e.g. PHYS114).
             if s["type"] == "single" and not assigned:
-                penalties += 150 if s.get("is_optional") else 10000
+                penalties += 150 if s.get("is_optional") else mandatory_gap_cost
             elif s["type"] == "pool":
                 pool_credits = sum(canon_catalog.get(c, {}).get("credits", 3) for c in assigned)
                 if pool_credits < s.get("credits_needed", 3):
-                    penalties += 10000
+                    penalties += mandatory_gap_cost
 
             for c in assigned:
                 unique_courses.add(c)
@@ -86,10 +106,10 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
 
         # C1 – Intra-program exclusivity: any course may fill only ONE slot per
         # program (cross-program double-counting is still encouraged).
-        # Penalty exceeds C6 (10000) so the ILS never fills an empty slot with a
-        # duplicate course just to avoid the C6 unfilled-slot penalty.
+        # Sole-candidate collisions can be represented for explicit data-conflict
+        # reporting; ordinary reuse is excluded from search by policy.
         for (pid, c), count in prog_course_slots.items():
-            if count > 1:
+            if policy.PROHIBIT_SAME_PROGRAM_REUSE and count > 1:
                 penalties += 11000 * (count - 1)
 
         # C5 – FY Foundation XOR + Singularity:
@@ -230,7 +250,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
             # C1: one slot per program per course
             if pid in prog_assigned_this_c:
                 continue
-            if prog_course_assigned[(pid, c)] > 0:
+            if policy.PROHIBIT_SAME_PROGRAM_REUSE and prog_course_assigned[(pid, c)] > 0:
                 continue
 
             # C3: FC singularity + C5: FY XOR + C5: FY singularity
@@ -279,7 +299,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
 
                 if canon_catalog.get(c, {}).get("depth", 1) > remaining_semesters:
                     continue
-                if prog_course_assigned[(pid, c)] > 0:
+                if policy.PROHIBIT_SAME_PROGRAM_REUSE and prog_course_assigned[(pid, c)] > 0:
                     continue
                 if _is_fc_slot(sid):
                     if c in fc_course_assigned:
@@ -415,7 +435,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                             continue
                         if canon_catalog.get(c, {}).get('depth', 1) > remaining_semesters:
                             continue
-                        if prog_course_assigned[(pid_s, c)] > 0:
+                        if policy.PROHIBIT_SAME_PROGRAM_REUSE and prog_course_assigned[(pid_s, c)] > 0:
                             continue
                         if _is_fc_slot(sid):
                             if c in fc_course_assigned:
@@ -461,6 +481,21 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     elif _pool_credits(sid) >= s.get('credits_needed', 3):
                         filled_slots.add(sid)
 
+    def can_assign(course, slot, assignment):
+        if not policy.PROHIBIT_SAME_PROGRAM_REUSE:
+            return True
+        for other in candidate_to_slots[course]:
+            if other['program_id'] != slot['program_id'] or other['slot_id'] == slot['slot_id']:
+                continue
+            if course not in assignment.get(other['slot_id'], []):
+                continue
+            # Preserve impossible single-option obligations, but report their
+            # collision as data conflict instead of presenting them as feasible.
+            if not (slot['type'] == other['type'] == 'single'
+                    and slot['candidates'] == other['candidates'] == [course]):
+                return False
+        return True
+
     # ─── Phase 2: Short ILS Refinement (15 seconds) ───────────────────────────
     # Start from the greedy solution; the ILS fixes C4 edge cases and makes
     # marginal improvements without the 28-second cold-start cost.
@@ -491,6 +526,8 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                 _ils_cands = (rng.sample(_all_cands, 50)
                               if len(_all_cands) > 50 else _all_cands)
                 for cand in _ils_cands:
+                    if not can_assign(cand, s, current_assignment):
+                        continue
                     test_assignment = {k: list(v) for k, v in current_assignment.items()}
 
                     if s["type"] == "single":
@@ -501,7 +538,7 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                         new_pool = [cand]
                         acc_credits = canon_catalog.get(cand, {}).get("credits", 3)
 
-                        rem_cands = [x for x in _all_cands if x != cand]
+                        rem_cands = [x for x in _all_cands if x != cand and can_assign(x, s, current_assignment)]
                         for rc in rem_cands:
                             if acc_credits >= pool_credits: break
                             new_pool.append(rc)
@@ -592,6 +629,7 @@ def _debug_penalties(assignment, slots, canon_catalog, blacklist, remaining_seme
             i -= 1
         return cu[i:].endswith('93')
 
+    mandatory_gap_cost = _mandatory_gap_cost(slots, canon_catalog, blacklist)
     penalties = 0
     breakdown = defaultdict(float)
     unique_courses: set = set()
@@ -610,13 +648,13 @@ def _debug_penalties(assignment, slots, canon_catalog, blacklist, remaining_seme
         # penalty so the ILS fills them when possible but doesn't penalise
         # students who chose a self-contained FC-LAB science course (e.g. PHYS114).
         if s["type"] == "single" and not assigned:
-            penalties += 150 if s.get("is_optional") else 10000
-            breakdown["slot_sufficiency"] += 150 if s.get("is_optional") else 10000
+            penalties += 150 if s.get("is_optional") else mandatory_gap_cost
+            breakdown["slot_sufficiency"] += 150 if s.get("is_optional") else mandatory_gap_cost
         elif s["type"] == "pool":
             pool_credits = sum(canon_catalog.get(c, {}).get("credits", 3) for c in assigned)
             if pool_credits < s.get("credits_needed", 3):
-                penalties += 10000
-                breakdown["pool_sufficiency"] += 10000
+                penalties += mandatory_gap_cost
+                breakdown["pool_sufficiency"] += mandatory_gap_cost
 
         for c in assigned:
             unique_courses.add(c)
@@ -672,10 +710,9 @@ def _debug_penalties(assignment, slots, canon_catalog, blacklist, remaining_seme
 
     # C1 – Intra-program exclusivity: any course may fill only ONE slot per
     # program (cross-program double-counting is still encouraged).
-    # Penalty exceeds C6 (10000) so the ILS never fills an empty slot with a
-    # duplicate course just to avoid the C6 unfilled-slot penalty.
+    # Replay the sole-candidate collision penalty for debug reporting.
     for (pid, c), count in prog_course_slots.items():
-        if count > 1:
+        if policy.PROHIBIT_SAME_PROGRAM_REUSE and count > 1:
             penalties += 11000 * (count - 1)
             breakdown["intra_program_reuse"] += 11000 * (count - 1)
 
