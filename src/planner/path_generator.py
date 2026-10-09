@@ -2,9 +2,15 @@ import time
 import random
 from collections import defaultdict
 
-def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blacklist, remaining_semesters=8):
+def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blacklist, remaining_semesters=8, debug=False):
     """Phase 1 Greedy + Phase 2 Short ILS Optimization Engine."""
     if not slots:
+        if debug:
+            return [], {}, {"slots": [], "assignment": {}, "unfilled_slots": [],
+                            "penalties": {"by_constraint": {}, "total_penalties": 0,
+                                          "unique_credits": 0, "objective": 0},
+                            "pre_filter_courses": [], "dropped_courses": [],
+                            "macro_bindings": {}}
         return [], {}
 
     def calculate_objective(assignment):
@@ -544,8 +550,190 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
         for data in canon_catalog.values()
         for orig in data.get("original_courses", [])
     }
+    if debug:
+        pre_filter_courses = sorted(final_path_set)
     final_path_set = {c for c in final_path_set if c in valid_codes}
     course_to_slots_map = {c: v for c, v in course_to_slots_map.items() if c in valid_codes}
 
     print(f"[Engine] Greedy+ILS finished. ILS Iterations: {iterations}. Final Score: {best_score}")
+    if debug:
+        unfilled = []
+        for slot in slots:
+            assigned = best_schedule.get(slot["slot_id"], [])
+            credits = sum(canon_catalog.get(c, {}).get("credits", 3) for c in assigned)
+            if (slot["type"] == "single" and not assigned) or (
+                slot["type"] == "pool" and credits < slot.get("credits_needed", 3)
+            ):
+                unfilled.append({"slot_id": slot["slot_id"],
+                                 "optional": bool(slot.get("is_optional")),
+                                 "assigned": list(assigned), "assigned_credits": credits,
+                                 "credits_needed": slot.get("credits_needed")})
+        penalty_report = _debug_penalties(best_schedule, slots, canon_catalog, blacklist, remaining_semesters)
+        assert penalty_report["objective"] == best_score
+        return list(final_path_set), course_to_slots_map, {
+            "slots": slots, "assignment": best_schedule, "unfilled_slots": unfilled,
+            "penalties": penalty_report, "pre_filter_courses": pre_filter_courses,
+            "dropped_courses": sorted(set(pre_filter_courses) - final_path_set),
+            "macro_bindings": macro_bindings,
+        }
     return list(final_path_set), course_to_slots_map
+
+
+# Debug-only replay of objective accounting. Never used to rank or select courses.
+def _debug_penalties(assignment, slots, canon_catalog, blacklist, remaining_semesters):
+    def _is_non_standard(c):
+        """True for internship courses (numeric suffix ends in 93) or honors courses (end in H)."""
+        cu = c.upper().replace(' ', '')
+        if cu.endswith('H'):
+            return True
+        # Strip alphabetic prefix to get numeric suffix
+        i = len(cu)
+        while i > 0 and cu[i - 1].isdigit():
+            i -= 1
+        return cu[i:].endswith('93')
+
+    penalties = 0
+    breakdown = defaultdict(float)
+    unique_courses: set = set()
+    fc_course_slots: dict = {}       # canon_id  -> [slot_ids that are FC/FY slots]
+    prog_course_slots: dict = {}     # (prog_id, canon_id) -> count within that program
+    global_usage: dict = {}          # canon_id -> total slot assignments across all programs
+
+    # ── Pass 1: traverse every slot assignment ────────────────────────────
+    for s in slots:
+        sid  = s["slot_id"]
+        pid  = s["program_id"]
+        assigned = assignment.get(sid, [])
+
+        # C6 – Slot sufficiency: every slot must be fully satisfied.
+        # Optional slots (companion labs for future science courses) carry a small
+        # penalty so the ILS fills them when possible but doesn't penalise
+        # students who chose a self-contained FC-LAB science course (e.g. PHYS114).
+        if s["type"] == "single" and not assigned:
+            penalties += 150 if s.get("is_optional") else 10000
+            breakdown["slot_sufficiency"] += 150 if s.get("is_optional") else 10000
+        elif s["type"] == "pool":
+            pool_credits = sum(canon_catalog.get(c, {}).get("credits", 3) for c in assigned)
+            if pool_credits < s.get("credits_needed", 3):
+                penalties += 10000
+                breakdown["pool_sufficiency"] += 10000
+
+        for c in assigned:
+            unique_courses.add(c)
+            global_usage[c] = global_usage.get(c, 0) + 1
+
+            # Track for C3 – FC Singularity (FC-*, FY-SEMINAR, FY-LAUNCH, FAD, IDST slots)
+            if ("__FC-" in sid or "__FY-SEMINAR" in sid or "__FY-LAUNCH" in sid
+                    or "__FAD" in sid or "__INTERDISCIPLINARY" in sid):
+                fc_course_slots.setdefault(c, []).append(sid)
+
+            # Track for C1 – Intra-program exclusivity
+            key = (pid, c)
+            prog_course_slots[key] = prog_course_slots.get(key, 0) + 1
+
+            # C7 – Longest-path temporal ceiling
+            if canon_catalog.get(c, {}).get("depth", 1) > remaining_semesters:
+                penalties += 1000
+                breakdown["depth"] += 1000
+
+            # C4 – Anti-requisite penalty
+            for anti in blacklist.get(c, []):
+                if anti in unique_courses:
+                    penalties += 1000
+                    breakdown["anti_requisite"] += 1000
+
+        # Low-credit penalty: strongly discourage <3-credit courses when
+        # 3+-credit alternatives exist in the same slot's candidate pool
+        for c in assigned:
+            cr = canon_catalog.get(c, {}).get("credits", 3)
+            if cr < 3:
+                if any(canon_catalog.get(alt, {}).get("credits", 0) >= 3
+                       for alt in s.get("candidates", []) if alt != c):
+                    penalties += 2000
+                    breakdown["low_credit_preference"] += 2000
+
+        # Non-standard relative preference: penalize internships (93) and
+        # honors (H) courses only when a standard alternative exists in the
+        # same slot's original candidate pool.
+        for c in assigned:
+            if _is_non_standard(c):
+                if any(not _is_non_standard(alt)
+                       for alt in s.get("candidates", []) if alt != c):
+                    penalties += 5000
+                    breakdown["nonstandard_preference"] += 5000
+
+    # ── Pass 2: structural constraint penalties ───────────────────────────
+
+    # C3 – FC Singularity: a course may satisfy AT MOST one FC/FY/FAD/IDST slot
+    for c, fc_slots_list in fc_course_slots.items():
+        if len(fc_slots_list) > 1:
+            penalties += 5000 * (len(fc_slots_list) - 1)
+            breakdown["fc_singularity"] += 5000 * (len(fc_slots_list) - 1)
+
+    # C1 – Intra-program exclusivity: any course may fill only ONE slot per
+    # program (cross-program double-counting is still encouraged).
+    # Penalty exceeds C6 (10000) so the ILS never fills an empty slot with a
+    # duplicate course just to avoid the C6 unfilled-slot penalty.
+    for (pid, c), count in prog_course_slots.items():
+        if count > 1:
+            penalties += 11000 * (count - 1)
+            breakdown["intra_program_reuse"] += 11000 * (count - 1)
+
+    # C5 – FY Foundation XOR + Singularity:
+    # (a) plan may not contain both an FY-SEMINAR and an FY-LAUNCH simultaneously
+    # (b) plan may not contain more than 1 FY-SEMINAR course or more than 1 FY-LAUNCH course
+    fy_types_assigned: set = set()
+    fy_seminar_count = 0
+    fy_launch_count = 0
+    for c, fc_slots_list in fc_course_slots.items():
+        for fsl in fc_slots_list:
+            if "__FY-SEMINAR" in fsl:
+                fy_seminar_count += 1
+                fy_types_assigned.add("FY-SEMINAR")
+            elif "__FY-LAUNCH" in fsl:
+                fy_launch_count += 1
+                fy_types_assigned.add("FY-LAUNCH")
+    if len(fy_types_assigned) > 1:
+        penalties += 10000                                      # C5a: XOR
+        breakdown["fy_xor"] += 10000
+    if fy_seminar_count > 1:
+        penalties += 10000 * (fy_seminar_count - 1)            # C5b: singularity
+        breakdown["fy_seminar_singularity"] += 10000 * (fy_seminar_count - 1)
+    if fy_launch_count > 1:
+        penalties += 10000 * (fy_launch_count - 1)             # C5b: singularity
+        breakdown["fy_launch_singularity"] += 10000 * (fy_launch_count - 1)
+
+    # C4 – 50% Program Exclusivity Rule
+    # A core slot is exclusive to P when every assigned course is absent
+    # from every OTHER program's slots (program-aware, not global-count-aware).
+    _all_pids_in_use = {k[0] for k in prog_course_slots}
+    prog_exclusivity: dict = {}
+    for s in slots:
+        pid = s["program_id"]
+        if pid not in prog_exclusivity:
+            prog_exclusivity[pid] = {"core_total": 0, "exclusive": 0}
+        if s.get("is_core") and len(s.get("candidates", [])) > 1:
+            prog_exclusivity[pid]["core_total"] += 1
+            assigned = assignment.get(s["slot_id"], [])
+            if assigned and all(
+                all(prog_course_slots.get((other_pid, c), 0) == 0
+                    for other_pid in _all_pids_in_use if other_pid != pid)
+                for c in assigned
+            ):
+                prog_exclusivity[pid]["exclusive"] += 1
+
+    for pid, stats in prog_exclusivity.items():
+        if stats["core_total"] > 0 and (stats["exclusive"] * 2) <= stats["core_total"]:
+            penalties += 3500
+            breakdown["program_exclusivity"] += 3500
+
+    # ── Objective: total UNIQUE credits ───────────────────────────────────
+    # Courses that cross-count across programs are counted ONCE, so the
+    # solver is naturally rewarded for aggressive double-counting.
+    total_unique_credits = sum(
+        canon_catalog.get(c, {}).get("credits", 3)
+        for c in unique_courses
+    )
+
+    return {"by_constraint": dict(breakdown), "total_penalties": penalties,
+            "unique_credits": total_unique_credits, "objective": total_unique_credits + penalties}
