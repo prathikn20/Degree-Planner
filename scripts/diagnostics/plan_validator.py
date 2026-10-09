@@ -152,6 +152,21 @@ def validate_plan(case, output, catalog, requirements, debug):
              parsed_completed=output['completed'], expected_in_progress=in_progress,
              parsed_in_progress=output['in_progress'])
 
+    # Approved timing exceptions: declared companion pairs, catalog corequisites,
+    # and mutual prerequisite pairs may share a term. Other prerequisites cannot.
+    corequisite_pairs = set()
+    for _, _, group in requirements_for(requirements, case['programs']):
+        for lecture, lab in (group.get('companion_labs') or {}).items():
+            corequisite_pairs.add(frozenset((view.root(lecture), view.root(lab))))
+    prereq_edges = {(view.root(c), view.root(p)) for c, d in catalog.items()
+                    for branch in d.get('prerequisites') or [] for p in branch}
+    for a, b in prereq_edges:
+        if a != b and (b, a) in prereq_edges:
+            corequisite_pairs.add(frozenset((a, b)))
+    for c, d in catalog.items():
+        for coreq in d.get('corequisites') or []:
+            corequisite_pairs.add(frozenset((view.root(c), view.root(coreq))))
+
     semesters = output['semester_path']
     regular = sorted((int(re.fullmatch(r'Semester (\d+)', k)[1]), k, cs)
                      for k, cs in semesters.items() if re.fullmatch(r'Semester (\d+)', k))
@@ -176,6 +191,9 @@ def validate_plan(case, output, catalog, requirements, debug):
                 for pre in branch:
                     if view.root(pre) in earlier:
                         continue
+                    if (frozenset((view.root(code), view.root(pre))) in corequisite_pairs
+                            and any(view.equivalent(pre, c) for c in courses)):
+                        continue
                     if COURSE_CODE.fullmatch(pre):
                         hard.append(pre)
                     else:
@@ -199,6 +217,9 @@ def validate_plan(case, output, catalog, requirements, debug):
     for item in debug.get('unfilled_slots', []):
         emit('UNFILLED_OPTIONAL_SLOT' if item['optional'] else 'UNFILLED_MANDATORY_SLOT',
              'INFO' if item['optional'] else 'HARD', evidence='SOLVER DEBUG / NOT INDEPENDENT', **item)
+    for issue in output.get('plan_report', {}).get('issues', []):
+        if issue['type'] in {'SINGLE_OPTION_DATA_CONFLICT', 'EMPTY_PROGRAM_REQUIREMENTS'}:
+            emit('REQUIREMENT_DATA_CONFLICT', evidence='PLAN REPORT / NOT INDEPENDENT', issue=issue)
     for code in debug.get('dropped_courses', []):
         emit('COURSE_DROPPED_AFTER_ASSIGNMENT', course=code)
     before = {track: data['results']['unsatisfied'] for track, data in output['audit'].items()
