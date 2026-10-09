@@ -1,3 +1,6 @@
+from src.planner.equivalence import CourseEquivalence
+from collections import defaultdict
+
 def kahns_algorithm(course_list, catalog):
     """
     Takes a flat list of courses and organizes them into sequential semesters 
@@ -5,6 +8,11 @@ def kahns_algorithm(course_list, catalog):
     """
     if not course_list:
         return {}
+
+    equivalents = CourseEquivalence(catalog)
+    selected_by_identity = defaultdict(set)
+    for code in course_list:
+        selected_by_identity[equivalents.key(code)].add(code)
 
     # 1. Initialize Graph Data Structures
     in_degree = {c: 0 for c in course_list}
@@ -22,10 +30,12 @@ def kahns_algorithm(course_list, catalog):
                 flat_prereqs.add(p)
 
         # If a prerequisite is also in our planned course list, draw a dependency edge
+        predecessors = set()
         for prereq in flat_prereqs:
-            if prereq in course_list:
-                adj_list[prereq].append(course)
-                in_degree[course] += 1
+            predecessors.update(selected_by_identity[equivalents.key(prereq)])
+        for predecessor in sorted(predecessors):
+            adj_list[predecessor].append(course)
+            in_degree[course] += 1
 
     # 3. Find Initial Courses (0 incoming dependencies)
     queue = [c for c in course_list if in_degree[c] == 0]
