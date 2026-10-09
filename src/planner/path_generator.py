@@ -481,7 +481,25 @@ def solve_optimal_path(slots, canon_catalog, credit_ledger, macro_bindings, blac
                     elif _pool_credits(sid) >= s.get('credits_needed', 3):
                         filled_slots.add(sid)
 
+    def foundation_type(slot):
+        parts = slot['slot_id'].split('__')
+        group = parts[1] if len(parts) > 1 else None
+        return group if group in {'FY-SEMINAR', 'FY-LAUNCH'} else None
+
+    foundation_slots = [s for s in slots if foundation_type(s)]
+
     def can_assign(course, slot, assignment):
+        # Foundation exclusivity is hard, regardless of mandatory-gap priority.
+        # Repeated declarations across programs may refer to the same foundation
+        # course; ordinary degree slots with FY-tagged candidates are unaffected.
+        kind = foundation_type(slot)
+        if kind:
+            for other in foundation_slots:
+                if other['slot_id'] == slot['slot_id']:
+                    continue
+                assigned = assignment.get(other['slot_id'], [])
+                if assigned and (foundation_type(other) != kind or any(c != course for c in assigned)):
+                    return False
         if not policy.PROHIBIT_SAME_PROGRAM_REUSE:
             return True
         for other in candidate_to_slots[course]:
