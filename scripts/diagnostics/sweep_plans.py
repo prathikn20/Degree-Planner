@@ -321,7 +321,7 @@ def self_test():
         pdf = Path(tmp)/'failed.pdf'
         write_transcript(pdf,{'completed':['TEST100'],'failed':['TEST200'],'in_progress':['TEST300']})
         parsed = parse_tarheel_tracker(pdf)
-        assert parsed['completed']==['TEST100','TEST200'] and parsed['in_progress']==['TEST300']
+        assert parsed['completed']==['TEST100'] and parsed['in_progress']==['TEST300']
     # Identical search implementation: debug off only adds an argument, initial branch,
     # and post-search conditional. Search objective and greedy/ILS block unchanged.
     current = (ROOT/'src/planner/path_generator.py').read_text()

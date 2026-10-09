@@ -2,6 +2,7 @@ import re
 from collections import defaultdict
 
 import pdfplumber
+from src.planner import policy
 
 _DEPT_RE = re.compile(r'^[A-Z]{2,4}$')
 _NUM_RE = re.compile(r'^\d{2,4}[A-Z0-9]{0,2}L?$')
@@ -47,7 +48,7 @@ def _classify_row(tokens: list[str]) -> tuple[str | None, str | None, str | None
 
     # Completed course: ends with a grade token
     if _GRADE_RE.match(last):
-        return course_code, "completed", None
+        return course_code, "failed" if last in policy.FAILED_GRADES else "completed", None
 
     # In-progress: ends with a bare season token (Fall / Spr / Win / Sum without session)
     if _TERM_SEASON_RE.match(last):
@@ -77,25 +78,38 @@ def parse_tarheel_tracker(pdf_filepath: str) -> dict:
     Course codes are formatted as DEPT+NUMBER with no space (e.g. "COMP110").
     Placeholder entries like "COMP ----" and "GENR ----" are silently skipped.
     Duplicate appearances (courses listed in multiple requirement sections) are
-    deduplicated; the first occurrence wins.
+    deduplicated. A passing attempt supersedes a failed attempt, regardless of
+    the PDF requirement-section display order. Failed-only courses earn no credit.
     """
     completed: list[str] = []
     in_progress: list[str] = []
     course_terms: dict[str, str] = {}
+    failed: list[str] = []
     seen: set[str] = set()
 
     with pdfplumber.open(pdf_filepath) as pdf:
         for page in pdf.pages:
             for tokens in _column_rows(page):
                 course_code, status, term_label = _classify_row(tokens)
-                if course_code is None or course_code in seen:
+                if course_code is None:
+                    continue
+                if course_code in seen and not policy.PASSING_SUPERSEDES_FAILURE:
                     continue
                 seen.add(course_code)
-                if status == "completed":
-                    completed.append(course_code)
-                elif status == "in_progress":
-                    in_progress.append(course_code)
-                    if term_label:
-                        course_terms[course_code] = term_label
+                if status == "failed":
+                    if course_code not in failed:
+                        failed.append(course_code)
+                elif status == "completed":
+                    if course_code not in completed:
+                        completed.append(course_code)
+                    if course_code in in_progress:
+                        in_progress.remove(course_code)
+                        course_terms.pop(course_code, None)
+                elif status == "in_progress" and course_code not in completed:
+                    if course_code not in in_progress:
+                        in_progress.append(course_code)
+                        if term_label:
+                            course_terms[course_code] = term_label
 
-    return {"completed": completed, "in_progress": in_progress, "course_terms": course_terms}
+    return {"completed": completed, "in_progress": in_progress, "course_terms": course_terms,
+            "failed": [c for c in failed if c not in completed]}

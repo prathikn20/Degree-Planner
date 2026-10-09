@@ -146,7 +146,7 @@ def validate_plan(case, output, catalog, requirements, debug):
         if code in output['completed'] and not any(view.equivalent(code, p) for p in passed):
             emit('FAILED_GRADE_TREATED_COMPLETED', course=code,
                  rescheduled=any(view.equivalent(code, p) for p in path))
-    expected_completed = set(passed) | set(failed)  # Observed parser contract, not passing credit.
+    expected_completed = set(passed)  # Failed attempts do not confer completion credit.
     if set(output['completed']) != expected_completed or set(output['in_progress']) != set(in_progress):
         emit('TRANSCRIPT_PARSE_MISMATCH', expected_completed=sorted(expected_completed),
              parsed_completed=output['completed'], expected_in_progress=in_progress,
