@@ -27,6 +27,7 @@ from scripts.diagnostics.plan_validator import (CatalogView, coverage, requireme
     validate_plan, MAX_SEMESTER_CREDITS, MIN_NONFINAL_CREDITS, NEAR_EMPTY_COURSES)
 from src.planner.graph import build_graph
 from src.planner.path_generator import solve_optimal_path
+from src.planner.plan_status import build_plan_report
 from src.planner.requirements_checker import check_requirements, generate_slots_and_candidates
 from src.planner.topological_sort import kahns_algorithm
 from src.planner.transcript_parser import parse_tarheel_tracker
@@ -59,7 +60,7 @@ def load_pipeline(solver):
             nodes.append(node)
         elif isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == '_GEN_ED_REQ_LABELS' for t in node.targets):
             nodes.append(node)
-    ns = {'_re': re, 'parse_tarheel_tracker': parse_tarheel_tracker,
+    ns = {'_re': re, 'build_plan_report': build_plan_report, 'parse_tarheel_tracker': parse_tarheel_tracker,
           'check_requirements': check_requirements, 'generate_slots_and_candidates': generate_slots_and_candidates,
           'solve_optimal_path': solver, 'kahns_algorithm': kahns_algorithm}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), str(ROOT / 'app.py'), 'exec'), ns)

@@ -493,8 +493,6 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             courses_req = group.get("courses_required", 1)
 
             if credits_req:
-                if not valid_candidates:
-                    continue  # pool fully satisfied by completed courses
                 slots.append({
                     "program_id":   program_id,
                     "slot_id":      f"{program_id}__{group_id}__POOL",
@@ -558,7 +556,7 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 )
 
                 remaining_needed = max(0, courses_req - already_done - already_req)
-                if remaining_needed == 0 or not valid_candidates:
+                if remaining_needed == 0:
                     continue  # group fully satisfied
 
                 # For groups with companion_labs, also add an optional future-lab slot for

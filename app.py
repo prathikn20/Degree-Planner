@@ -12,6 +12,7 @@ import streamlit as st
 
 from src.planner.graph import build_graph, load_catalog, load_requirements
 from src.planner.path_generator import solve_optimal_path
+from src.planner.plan_status import build_plan_report
 from src.planner.topological_sort import kahns_algorithm
 from src.planner.requirements_checker import check_requirements, get_rule_based_options, generate_slots_and_candidates
 from src.planner.transcript_parser import parse_tarheel_tracker
@@ -548,6 +549,8 @@ def run_pipeline(
                     elif desc not in existing:
                         audit[program_id]["fulfillment_map"][course] += f" · {desc}"
 
+    plan_report = build_plan_report(slots, canon_catalog, best_path, course_to_slots_map,
+                                    requirements, majors_to_check)
     semester_path = kahns_algorithm(best_path, catalog)
     flat_path: list[str] = []
     for _sem_courses in semester_path.values():
@@ -561,6 +564,7 @@ def run_pipeline(
         "audit":         audit,
         "path":          flat_path,
         "semester_path": semester_path,
+        "plan_report":   plan_report,
     }
 
 # ── Prerequisite graph builder ────────────────────────────────────────────────
@@ -1292,6 +1296,11 @@ if uploaded is not None:
             st.markdown("")  # breathing room
 
     st.subheader("📅 Suggested Graduation Path")
+    _plan_issues = data.get("plan_report", {}).get("issues", [])
+    if _plan_issues:
+        st.warning("This is a partial requirement plan. The following requirements could not be resolved:")
+        for _issue in _plan_issues:
+            st.write(f"- {_issue['program']}: {_issue.get('slot_id') or _issue.get('group') or 'program requirements'} — {_issue.get('reason') or _issue.get('message') or _issue['type']}")
 
     path_credits    = sum(catalog.get(c, {}).get("credits", 3) for c in path)
     total_projected = total_parsed_credits + path_credits
@@ -1434,7 +1443,10 @@ if uploaded is not None:
                 st.warning(f"⚠️ Prerequisite graph could not be rendered: {_graph_err}")
                 st.caption("This can happen when the path contains courses with no prerequisite connections. The course list above is still accurate.")
     else:
-        st.success("No remaining required courses — all requirements are covered by your transcript!")
+        if _plan_issues or any(a["results"].get("unsatisfied") for a in audit.values()):
+            st.warning("No courses were selected, but unresolved requirements remain. Review the requirement report above.")
+        else:
+            st.info("No remaining requirement courses were found. Review credit progress and graduation requirements before relying on this result.")
 
     st.divider()
     st.subheader("🎓 Credit Progress")
