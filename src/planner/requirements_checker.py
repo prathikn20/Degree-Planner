@@ -493,6 +493,16 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             courses_req = group.get("courses_required", 1)
 
             if credits_req:
+                # Use actual earned credits, once per equivalent identity. The shared
+                # allocator will govern between-group reuse in Wave 2.
+                earned = sum(
+                    max((catalog.get(c, {}).get("credits", 0)
+                         for c in credit_ledger.get(o, {}).get("original_codes", [])), default=0)
+                    for o in options if o in global_satisfied_set
+                )
+                credits_req = max(0, credits_req - earned)
+                if credits_req == 0:
+                    continue
                 slots.append({
                     "program_id":   program_id,
                     "slot_id":      f"{program_id}__{group_id}__POOL",
