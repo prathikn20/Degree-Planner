@@ -1,8 +1,8 @@
 """Editable planning policy; all PROVISIONAL rules live here.
 
 Change settings here without editing planning algorithms. These values are
-Prathik's interim decisions, not independently verified UNC policy. The allocator
-(Wave 2) and load scheduler (Wave 4) will consume the settings reserved for them.
+Prathik's interim decisions, not independently verified UNC policy. The shared completed-work allocator consumes the reuse settings. Load
+scheduling consumes the reserved load settings in Wave 4.
 """
 # PROVISIONAL: final semesters are exempt from this minimum.
 MIN_NONFINAL_CREDITS = 12

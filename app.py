@@ -14,7 +14,7 @@ from src.planner.graph import build_graph, load_catalog, load_requirements
 from src.planner.path_generator import solve_optimal_path
 from src.planner.plan_status import build_plan_report
 from src.planner.topological_sort import kahns_algorithm
-from src.planner.requirements_checker import check_requirements, get_rule_based_options, generate_slots_and_candidates
+from src.planner.requirements_checker import check_requirements, get_rule_based_options, generate_slots_and_candidates, allocate_completed_work
 from src.planner.transcript_parser import parse_tarheel_tracker
 
 CATALOG_PATH      = "data/course_catalog.json"
@@ -482,7 +482,7 @@ def run_pipeline(
     avoid    = list(avoid_courses   or [])
     assumed  = list(dict.fromkeys(completed + in_progress))
 
-    _selection_avoid = list(set(assumed + avoid))
+    completed_allocation = allocate_completed_work(requirements, catalog, majors_to_check, assumed, avoid)
 
     # --- PASS 1: The Audit ---
     results_by_track: dict[str, dict] = {}
@@ -491,7 +491,7 @@ def run_pipeline(
         results_by_track[track] = check_requirements(
             requirements, catalog, assumed,
             avoid_courses=avoid,
-            track_id=track, concentration_id=conc,
+            track_id=track, concentration_id=conc, completed_allocation=completed_allocation,
         )
 
     # --- PASS 2: The New CSP Solver ---
@@ -500,7 +500,8 @@ def run_pipeline(
         catalog=catalog,
         majors_to_check=majors_to_check,
         completed_courses=assumed,
-        avoid_courses=_selection_avoid,
+        avoid_courses=avoid,
+        completed_allocation=completed_allocation,
     )
     
     best_path, course_to_slots_map = solve_optimal_path(

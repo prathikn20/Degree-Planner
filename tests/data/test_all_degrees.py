@@ -220,16 +220,24 @@ class TestCheckerSmokePerDegree:
         cg   = base.get("choice_groups", [])
         if not req and not cg:
             pytest.skip(f"{track_id} has no requirements")
+        # Build actual distinct completed courses: two cross-list spellings are
+        # not two earned courses. This fixture previously depended on that bug.
+        from scripts.diagnostics.plan_validator import CatalogView
+        view = CatalogView(catalog)
         completed = list(req)
         for g in cg:
-            cr   = g.get("courses_required", 1)
-            opts = g.get("options") or []
-            if g.get("type") == "explicit":
-                completed.extend(opts[:cr])
-            elif g.get("type") == "rule_based":
-                # Resolve from catalog so rule_based-only degrees also get courses
-                rule_opts = get_rule_based_options(g.get("rule") or {}, catalog)
-                completed.extend(rule_opts[:cr])
+            options = g.get("options") or []
+            if not options and g.get("type") == "rule_based":
+                options = get_rule_based_options(g.get("rule") or {}, catalog)
+            selected = []
+            credits = 0
+            for course in view.distinct(options):
+                selected.append(course)
+                credits += catalog[course].get('credits', 0)
+                if ((g.get('credits_required') and credits >= g['credits_required']) or
+                    (not g.get('credits_required') and len(selected) >= g.get('courses_required', 1))):
+                    break
+            completed.extend(selected)
         r = check_requirements(reqs, catalog, completed,
                                track_id=track_id, concentration_id="None")
         assert r["completion_pct"] > 0.0, \

@@ -1,4 +1,7 @@
 import copy
+from src.planner import policy
+from src.planner.completed_allocator import allocate_completed
+from src.planner.equivalence import CourseEquivalence
 
 
 def _split_course_id(course_id: str) -> tuple[str, str]:
@@ -83,199 +86,93 @@ def get_rule_based_options(rule, catalog, virtual_courses=None):
     return valid
 
 
+def allocate_completed_work(requirements, catalog, majors_to_check, completed_courses, avoid_courses=None):
+    """Normalize selected programs once and allocate completed work for both callers."""
+    equivalence = CourseEquivalence(catalog)
+    avoided = {equivalence.key(c) for c in avoid_courses or []}
+    virtual = set(completed_courses)
+    for c in completed_courses:
+        virtual.update(catalog.get(c, {}).get('cross_listed') or [])
+        if c.endswith('H') and c[-2:-1].isdigit():
+            virtual.add(c[:-1])
+    groups = []
+    for entry in majors_to_check:
+        pid = entry if isinstance(entry, str) else entry['track']
+        conc = 'None' if isinstance(entry, str) else entry.get('concentration', 'None')
+        track = requirements.get(pid, {})
+        base = track.get('base_requirements', {})
+        concentration = track.get('concentrations', {}).get(conc, {})
+        required = base.get('required_courses', []) + concentration.get('required_courses', [])
+        choices = base.get('choice_groups', []) + concentration.get('choice_groups', [])
+        for i, course in enumerate(required):
+            groups.append({'program': (pid, conc), 'section': 'required', 'index': i,
+                           'id': course, 'kind': 'required', 'options': [course],
+                           'unit': 'courses', 'target': 1})
+        for i, group in enumerate(choices):
+            gid = group.get('id', f'group_{i}')
+            options = list(group.get('options') or [])
+            if not options and group.get('type') == 'rule_based':
+                options = get_rule_based_options(group.get('rule') or {}, catalog, sorted(virtual))
+            # Preserve Wave 1's foundation completion interpretation in both consumers.
+            if gid in {'FY-SEMINAR', 'FY-LAUNCH'}:
+                options += [c for c in completed_courses
+                            if {'FY-SEMINAR', 'FY-LAUNCH'}.intersection(catalog.get(c, {}).get('attributes') or [])]
+            options = list(dict.fromkeys(c for c in options if equivalence.key(c) not in avoided))
+            kind = 'FC' if gid.startswith('FC-') else gid
+            groups.append({'program': (pid, conc), 'section': 'choice', 'index': i,
+                           'id': gid, 'kind': kind, 'options': options,
+                           'unit': 'credits' if group.get('credits_required') else 'courses',
+                           'target': group.get('credits_required') or group.get('courses_required', 1)})
+    return allocate_completed(groups, catalog, completed_courses)
+
+
 def check_requirements(requirements, catalog, completed, other_majors_courses=None,
                         other_required_courses=None, avoid_courses=None,
-                        track_id="COMP_BS", concentration_id="None"):
-    avoid_set = set(avoid_courses) if avoid_courses else set()
-    available_completed = set(completed)
-    original_completed  = set(completed)
-
-    virtual_to_real: dict[str, str] = {}
-    for c in original_completed:
-        for equiv in (catalog.get(c, {}).get('cross_listed') or []):
-            if equiv not in original_completed:
-                virtual_to_real[equiv] = c
-        # Honors variant: MATH232H satisfies anything requiring MATH232
-        if c.endswith('H') and len(c) > 1 and c[-2].isdigit():
-            base = c[:-1]
-            if base not in original_completed and base not in virtual_to_real:
-                virtual_to_real[base] = c
-
-    results = {
-        "satisfied":          [],
-        "unsatisfied":        [],
-        "missing_courses":    {},
-        "courses_used":       set(),
-        "completion_pct":     0.0,
-        "satisfied_map":      {},
-        "total_requirements": 0,
-        "total_satisfied":    0,
-    }
-
-    track_data = requirements.get(track_id, {})
-    if not track_data:
+                        track_id="COMP_BS", concentration_id="None", completed_allocation=None):
+    results = {'satisfied': [], 'unsatisfied': [], 'missing_courses': {},
+               'courses_used': set(), 'completion_pct': 0.0, 'satisfied_map': {},
+               'total_requirements': 0, 'total_satisfied': 0,
+               'completed_allocation': []}
+    if track_id not in requirements:
         return results
-
-    base = track_data.get("base_requirements", {})
-    conc = track_data.get("concentrations", {}).get(concentration_id, {})
-
-    program = {
-        "required_courses": base.get("required_courses", []) + conc.get("required_courses", []),
-        "choice_groups":    base.get("choice_groups",    []) + conc.get("choice_groups",    []),
-    }
-
-    for course in program["required_courses"]:
-        sat = _get_satisfying_course(course, catalog, available_completed, virtual_to_real)
-        if sat:
-            available_completed.discard(sat)
-            results["courses_used"].add(sat)
-            results["satisfied"].append(course)
-            results["satisfied_map"][course] = [sat]
-        else:
-            results["unsatisfied"].append(course)
-            results["missing_courses"][course] = [course]
-
-    required_set = set(program["required_courses"])
-
-    # Pool of courses consumed for required-course slots that may additionally satisfy
-    # one choice group each (e.g. BME concentration courses satisfying the base
-    # specialty-electives group).  Each entry is removed once reused so a single
-    # course can only double-count into at most one choice group.
-    req_satisfied_pool: set[str] = {
-        sat_code
-        for req_id in program["required_courses"]
-        for sat_code in results["satisfied_map"].get(req_id, [])
-    }
-
-    fys_consumed:  set[str] = set()
-    fad_consumed:  set[str] = set()
-    idst_consumed: set[str] = set()
-    fc_consumed:   set[str] = set()
-
-    for group in program["choice_groups"]:
-        if group.get("options"):
-            options = list(group["options"])
-        elif group.get("type") == "rule_based":
-            options = get_rule_based_options(
-                group.get("rule") or {}, catalog,
-                virtual_courses=list(virtual_to_real.keys()),
-            )
-        else:
-            options = []
-
-        # Exclude required courses from option lists UNLESS they were already satisfied
-        # as required courses — in that case allow them to also satisfy this group.
-        options = [
-            o for o in options
-            if o not in avoid_set
-            and (o not in required_set
-                 or _get_satisfying_course(o, catalog, req_satisfied_pool, virtual_to_real) is not None)
-        ]
-
-        is_fys  = group["id"] == "FY-SEMINAR"
-        is_fc   = group["id"].startswith("FC-")
-        is_fad  = group["id"] == "FAD"
-        is_idst = group["id"] == "INTERDISCIPLINARY"
-
-        courses_needed = group.get("courses_required", 1)
-        credits_needed = group.get("credits_required")
-
-        used: list[tuple[str, str]] = []
-        current_credits = 0
-
-        for option in options:
-            sat = _get_satisfying_course(option, catalog, available_completed, virtual_to_real)
-            if not sat and is_fc:
-                sat = _get_satisfying_course(option, catalog, fys_consumed, virtual_to_real)
-            if not sat and is_fc:
-                sat = _get_satisfying_course(option, catalog, fad_consumed, virtual_to_real)
-            if not sat and is_fc:
-                sat = _get_satisfying_course(option, catalog, idst_consumed, virtual_to_real)
-            if not sat and (is_fad or is_idst):
-                sat = _get_satisfying_course(option, catalog, fc_consumed, virtual_to_real)
-            # Fallback: option was taken for a required slot — allow it to satisfy this
-            # choice group too (concentration required courses satisfy base elective groups).
-            if not sat:
-                sat = _get_satisfying_course(option, catalog, req_satisfied_pool, virtual_to_real)
-            if not sat:
-                continue
-            used.append((option, sat))
-            if credits_needed:
-                current_credits += catalog.get(sat, {}).get("credits", 3)
-                if current_credits >= credits_needed:
-                    break
+    if completed_allocation is None:
+        completed_allocation = allocate_completed_work(
+            requirements, catalog, [{'track': track_id, 'concentration': concentration_id}], completed, avoid_courses)
+    rows = [r for r in completed_allocation if r['program'] == (track_id, concentration_id)]
+    equivalence = CourseEquivalence(catalog)
+    completed_roots = {equivalence.key(c) for c in completed}
+    track = requirements[track_id]
+    base = track.get('base_requirements', {})
+    conc = track.get('concentrations', {}).get(concentration_id, {})
+    choices = base.get('choice_groups', []) + conc.get('choice_groups', [])
+    for row in rows:
+        rid, assigned = row['id'], row['assigned']
+        results['completed_allocation'].append(row)
+        results['courses_used'].update(assigned)
+        if row['remaining'] == 0:
+            results['satisfied'].append(rid)
+            if row['section'] == 'required':
+                results['satisfied_map'][rid] = assigned
             else:
-                if len(used) >= courses_needed:
-                    break
-
-        if credits_needed:
-            satisfied    = current_credits >= credits_needed
-            still_needed = max(0, credits_needed - current_credits)
+                results['satisfied_map'][rid] = [next((o for o in row['options'] if equivalence.equivalent(o,c)), c) for c in assigned]
         else:
-            satisfied    = len(used) >= courses_needed
-            still_needed = max(0, courses_needed - len(used))
-
-        for _, sat in used:
-            if sat in fys_consumed:
-                fys_consumed.discard(sat)
-            elif sat in fad_consumed:
-                fad_consumed.discard(sat)
-            elif sat in idst_consumed:
-                idst_consumed.discard(sat)
-            elif sat in fc_consumed:
-                fc_consumed.discard(sat)
-            elif sat in req_satisfied_pool:
-                # Course was already consumed for a required slot; remove from the
-                # reuse pool so it can only satisfy this one choice group.
-                req_satisfied_pool.discard(sat)
+            results['unsatisfied'].append(rid)
+            if row['section'] == 'required':
+                results['missing_courses'][rid] = [rid]
             else:
-                available_completed.discard(sat)
-                if is_fys:
-                    fys_consumed.add(sat)
-                elif is_fad:
-                    fad_consumed.add(sat)
-                elif is_idst:
-                    idst_consumed.add(sat)
-                elif is_fc:
-                    fc_consumed.add(sat)
-            results["courses_used"].add(sat)
-
-        if satisfied:
-            results["satisfied"].append(group["id"])
-            results["satisfied_map"][group["id"]] = [opt for opt, _ in used]
-        else:
-            results["unsatisfied"].append(group["id"])
-            remaining_options = [
-                o for o in options
-                if not _get_satisfying_course(o, catalog, original_completed, virtual_to_real)
-            ]
-            entry: dict = {"options": remaining_options}
-            if credits_needed:
-                entry["credits_still_needed"] = still_needed
-            else:
-                entry["still_needed"] = still_needed
-            results["missing_courses"][group["id"]] = entry
-
-        # Report companion labs for science courses that have been taken but whose
-        # lab hasn't been completed yet (applies whether the group is satisfied or not).
-        companion_labs = group.get("companion_labs")
-        if companion_labs and used:
-            missing_labs: list[str] = []
-            seen_labs: set[str] = set()
-            for option, _sat in used:
-                lab = companion_labs.get(option)
-                if lab and lab not in seen_labs:
-                    seen_labs.add(lab)
-                    if not _get_satisfying_course(lab, catalog, original_completed, virtual_to_real):
-                        missing_labs.append(lab)
-            if missing_labs:
-                results.setdefault("companion_labs_needed", {})[group["id"]] = missing_labs
-
-    total_items = len(program["required_courses"]) + len(program["choice_groups"])
-    results["completion_pct"]     = len(results["satisfied"]) / total_items if total_items else 1.0
-    results["total_requirements"] = total_items
-    results["total_satisfied"]    = len(results["satisfied"])
-
+                results['missing_courses'][rid] = {
+                    'options': [o for o in row['options'] if equivalence.key(o) not in completed_roots],
+                    'credits_still_needed' if row['unit'] == 'credits' else 'still_needed': row['remaining']}
+        if row['section'] == 'choice':
+            labs = choices[row['index']].get('companion_labs') or {}
+            missing = list(dict.fromkeys(lab for lecture, lab in labs.items()
+                           if any(equivalence.equivalent(lecture, c) for c in assigned)
+                           and equivalence.key(lab) not in completed_roots))
+            if missing:
+                results.setdefault('companion_labs_needed', {})[rid] = missing
+    results['total_requirements'] = len(rows)
+    results['total_satisfied'] = len(results['satisfied'])
+    results['completion_pct'] = len(results['satisfied']) / len(rows) if rows else 1.0
     return results
 
 
@@ -371,14 +268,21 @@ def build_canonical_catalog(catalog):
 
     return canon_catalog, course_to_canon, macro_bindings, blacklist
 
-def generate_slots_and_candidates(requirements, catalog, majors_to_check, completed_courses, avoid_courses=None):
+def generate_slots_and_candidates(requirements, catalog, majors_to_check, completed_courses, avoid_courses=None, completed_allocation=None):
     """Phase 2: Resilient Slot Materialization and Credit Ledger."""
     canon_catalog, course_to_canon, macro_bindings, blacklist = build_canonical_catalog(catalog)
+    if completed_allocation is None:
+        completed_allocation = allocate_completed_work(requirements, catalog, majors_to_check,
+                                                       completed_courses or [], avoid_courses)
+    allocation = {(r['program'], r['section'], r['index']): r for r in completed_allocation}
 
     # Build the avoid set (canonicalized)
     avoid_canon_set = set()
     for c in (avoid_courses or []):
         avoid_canon_set.add(course_to_canon.get(c, c))
+
+    equivalence = CourseEquivalence(catalog)
+    completed_roots = {equivalence.key(c) for c in completed_courses or []}
 
     # Deduplication set for companion lab slots (shared across both loops below)
     seen_companion_lab_slots: set[str] = set()
@@ -395,12 +299,11 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
         credit_ledger[canon_id]["earned_credits"] += catalog.get(c, {}).get("credits", 3)
         credit_ledger[canon_id]["original_codes"].append(c)
 
-    # FY exclusivity applies to foundation slots only. FY-tagged mathematics
-    # and other degree courses remain eligible everywhere else.
-    foundation_completed = any(
-        {"FY-SEMINAR", "FY-LAUNCH"}.intersection(catalog.get(c, {}).get("attributes") or [])
-        for c in (completed_courses or [])
-    )
+    # Keep already-earned equivalents out of search even when legacy canonical
+    # groups do not include a transitive alias recognized by the shared allocator.
+    global_satisfied_set.update(canon for canon, data in canon_catalog.items()
+                                if any(equivalence.key(c) in completed_roots
+                                       for c in data.get('original_courses', [])))
 
     slots = []
 
@@ -427,28 +330,24 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
 
         # Explode Fixed Requirements into Single Slots
         # Required courses are never filtered by avoid_courses — they are mandatory.
-        for course in req_courses:
+        for required_index, course in enumerate(req_courses):
             canon_id = course_to_canon.get(course, course)
-            if canon_id in global_satisfied_set:
+            completed_row = allocation[((program_id, concentration_id), 'required', required_index)]
+            if completed_row['remaining'] == 0:
                 continue
             slots.append({
                 "program_id":   program_id,
                 "slot_id":      f"{program_id}__req__{canon_id}",
                 "is_core":      True,
                 "type":         "single",
-                "candidates":   [canon_id],
+                "candidates":   [] if canon_id in global_satisfied_set else [canon_id],
                 "credits_needed": canon_catalog.get(canon_id, {}).get("credits", 3),
             })
-
-        # C3 tracking: canon IDs consumed by FC-* slots so the same completed
-        # course can't be counted as already_done for two different FC groups.
-        _fc_used_canons: set[str] = set()
 
         # Choice Groups (Pools vs Explicit Slots)
         for i, group in enumerate(choice_groups):
             group_id = group.get("id", f"group_{i}")
-            if group_id in {"FY-SEMINAR", "FY-LAUNCH"} and foundation_completed:
-                continue
+            completed_row = allocation[((program_id, concentration_id), 'choice', i)]
             if group.get("options"):
                 raw_options = group["options"]
             elif group.get("type") == "rule_based":
@@ -493,14 +392,7 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
             courses_req = group.get("courses_required", 1)
 
             if credits_req:
-                # Use actual earned credits, once per equivalent identity. The shared
-                # allocator will govern between-group reuse in Wave 2.
-                earned = sum(
-                    max((catalog.get(c, {}).get("credits", 0)
-                         for c in credit_ledger.get(o, {}).get("original_codes", [])), default=0)
-                    for o in options if o in global_satisfied_set
-                )
-                credits_req = max(0, credits_req - earned)
+                credits_req = completed_row['remaining']
                 if credits_req == 0:
                     continue
                 slots.append({
@@ -512,50 +404,7 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                     "credits_needed": credits_req,
                 })
             else:
-                # Determine if this is an FC-type group (subject to C3 singularity).
-                _is_fc_group = group_id.startswith("FC-")
-
-                # Subtract courses already completed from this group.
-                # For FC groups, exclude courses already consumed by a prior FC slot
-                # so a course with two FC attributes (e.g. FC-AESTH + FC-KNOW) is
-                # only counted once.
-                if _is_fc_group:
-                    already_done = sum(
-                        1 for o in options
-                        if o in global_satisfied_set and o not in _fc_used_canons
-                    )
-                else:
-                    already_done = sum(1 for o in options if o in global_satisfied_set)
-
-                # For rule-based attribute groups, also count completed courses directly
-                # by catalog attribute. This handles cases where a completed course code
-                # doesn't match any catalog key exactly (section variants, leading zeros, etc.)
-                if group.get("type") == "rule_based" and group.get("rule", {}).get("attribute"):
-                    attr = group["rule"]["attribute"].lower()
-                    if _is_fc_group:
-                        direct_done = sum(
-                            1 for c in (completed_courses or [])
-                            if course_to_canon.get(c, c) not in _fc_used_canons
-                            and any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
-                        )
-                    else:
-                        direct_done = sum(
-                            1 for c in (completed_courses or [])
-                            if any(attr in a.lower() for a in catalog.get(c, {}).get("attributes", []))
-                        )
-                    already_done = max(already_done, direct_done)
-
-                # For FC groups, claim completed courses that contributed to
-                # already_done (in options/catalog order, matching check_requirements)
-                # so subsequent FC slots can't reuse them (C3).
-                if _is_fc_group and already_done > 0:
-                    _to_mark = min(already_done, courses_req)
-                    for _o in options:
-                        if _to_mark <= 0:
-                            break
-                        if _o in global_satisfied_set and _o not in _fc_used_canons:
-                            _fc_used_canons.add(_o)
-                            _to_mark -= 1
+                already_done = courses_req - completed_row['remaining']
 
                 # Subtract options already covered by required-course slots so the
                 # solver doesn't create duplicate slots (e.g. BME concentration courses
@@ -563,7 +412,7 @@ def generate_slots_and_candidates(requirements, catalog, majors_to_check, comple
                 already_req = sum(
                     1 for o in options
                     if o in req_courses_canon_set and o not in global_satisfied_set
-                )
+                ) if 'choice' in policy.COMPLETED_REUSE_POOLS.get('required', ()) else 0
 
                 remaining_needed = max(0, courses_req - already_done - already_req)
                 if remaining_needed == 0:

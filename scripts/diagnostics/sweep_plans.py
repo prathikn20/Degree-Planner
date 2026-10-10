@@ -28,7 +28,7 @@ from scripts.diagnostics.plan_validator import (CatalogView, coverage, requireme
 from src.planner.graph import build_graph
 from src.planner.path_generator import solve_optimal_path
 from src.planner.plan_status import build_plan_report
-from src.planner.requirements_checker import check_requirements, generate_slots_and_candidates
+from src.planner.requirements_checker import check_requirements, generate_slots_and_candidates, allocate_completed_work
 from src.planner.topological_sort import kahns_algorithm
 from src.planner.transcript_parser import parse_tarheel_tracker
 
@@ -60,7 +60,7 @@ def load_pipeline(solver):
             nodes.append(node)
         elif isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == '_GEN_ED_REQ_LABELS' for t in node.targets):
             nodes.append(node)
-    ns = {'_re': re, 'build_plan_report': build_plan_report, 'parse_tarheel_tracker': parse_tarheel_tracker,
+    ns = {'_re': re, 'allocate_completed_work': allocate_completed_work, 'build_plan_report': build_plan_report, 'parse_tarheel_tracker': parse_tarheel_tracker,
           'check_requirements': check_requirements, 'generate_slots_and_candidates': generate_slots_and_candidates,
           'solve_optimal_path': solver, 'kahns_algorithm': kahns_algorithm}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), str(ROOT / 'app.py'), 'exec'), ns)
@@ -352,6 +352,7 @@ def main():
     files = ['app.py','src/planner/path_generator.py','src/planner/requirements_checker.py',
              'src/planner/topological_sort.py','src/planner/transcript_parser.py',
              'src/planner/policy.py','src/planner/equivalence.py','src/planner/plan_status.py',
+             'src/planner/completed_allocator.py',
              'data/course_catalog.json','data/degree_requirements.json',
              'scripts/diagnostics/plan_validator.py','scripts/diagnostics/sweep_plans.py']
     write_json(args.output/'manifest.json',{'source_sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files},
