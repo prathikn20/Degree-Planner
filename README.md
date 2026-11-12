@@ -2,7 +2,7 @@
 
 An interactive degree-planning engine for UNC Chapel Hill that models course prerequisites as a directed graph and uses Iterated Local Search to generate optimized courses to take toward graduation. Given a student's completed coursework via an uploaded Tar Heel Tracker and declared majors or minors, the solver enforces prerequisite chains, concentration rules, and university policies to produce a constraint-satisfying plan in seconds.
 
-> **Live app:** [[unc-degree-planner.streamlit.app](https://unc-degree-planner.streamlit.app/) ](https://tar-heel-degree-planner.streamlit.app/)
+> **Live app:** (https://tar-heel-degree-planner.streamlit.app/)
 
 ## Future Features to be Implemented
 
